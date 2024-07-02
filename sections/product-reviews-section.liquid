@@ -1,0 +1,68 @@
+<!-- reviews -->
+
+<div
+  class="container-980 product-reviews-widget"
+  data-aos="fade-up"
+  data-aos-duration="2000"
+>
+  <div data-oke-reviews-widget data-oke-reviews-product-id="shopify-{{ product.id }}"></div>
+</div>
+{% comment %} Bottom Full width Image Content Section {% endcomment %}
+{% if product.metafields.full_width_image_section.title != blank %}
+  <div class="pdp-full-width-image-section">
+    {% assign bgImage = product.metafields.full_width_image_section.background_image_desktop | first %}
+    {% assign bgImageMobille = product.metafields.full_width_image_section.background_image_mobile | first %}
+    {% if bgImage != blank %}
+      <div class="image-section">
+        <picture>
+          <source
+            media="(max-width: 480px)"
+            srcset="{% if bgImageMobille != blank %}{{ bgImageMobille.cloudinary_src }} {%else %} {{ bgImage.cloudinary_src }} {% endif %}"
+          >
+          <img src="{{ bgImage.cloudinary_src}}" alt="{{bgImage.alt }}">
+        </picture>
+      </div>
+    {% endif %}
+    <div
+      class="container-1340 left--align"
+      data-aos="fade-up"
+      data-aos-duration="2000"
+    >
+      <div class="content">
+        <h2 class="h1">
+          {{ product.metafields.full_width_image_section.title }}
+        </h2>
+
+        {% if product.metafields.full_width_image_section.description != blank %}
+          {{ product.metafields.full_width_image_section.description }}
+        {% endif %}
+        {% if product.metafields.full_width_image_section.button_text != blank
+          and product.metafields.accentuate.button_link != blank
+        %}
+          <div class="buttons">
+            <a
+              href="{{ product.metafields.accentuate.button_link }}"
+              title="Read More About {{ product.metafields.full_width_image_section.button_text }}"
+              aria-label="Read More About {{ product.metafields.full_width_image_section.button_text}}"
+              class="btn--secondary"
+            >
+              {{- product.metafields.full_width_image_section.button_text -}}
+            </a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Product Reviews Section",
+
+  "presets": [
+    {
+      "name": "Product Reviews Section"
+    }
+  ]
+}
+{% endschema %}

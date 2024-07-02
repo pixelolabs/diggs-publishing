@@ -1,0 +1,58 @@
+.error-page {
+    position: relative;
+    background: $color-black;
+    display: flex;
+    align-items: center;
+    padding-bottom: 113px;
+    padding-top: 154px;
+    height: calc(100vh - 40px);
+    max-height: 810px;
+    @include MQ(MQ-980) {
+        padding: 115px 0;
+        padding-left: 0;
+    }
+    @include MQ(MQ-600) {
+        height: auto;
+        padding: 115px 0 292px;
+        align-items: flex-start;
+    }
+    .image-section {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 0
+    }
+    img {
+        @include img-object-cover;
+    }
+    .inner {
+        max-width: 611px;
+    }
+    &::before {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        content: "";
+        left: 0;
+        top: 0;
+        z-index: 2;
+        background-blend-mode: multiply;
+        background-image: linear-gradient(to bottom, rgba(46, 88, 140, 0.5), rgba(46, 88, 140, 0.5));
+    }
+    .container-1240 {
+        position: relative;
+        z-index: 3;
+    }
+    .pre-title {
+        margin-bottom: 8px;
+        color: $color-white;
+    }
+    h1 {
+        color: $color-white;
+    }
+    .btn--primary {
+        margin-top: 30px;
+    }
+}

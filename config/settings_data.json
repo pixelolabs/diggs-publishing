@@ -1,0 +1,350 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "current": {
+    "fontScript": "<link rel=\"preconnect\" href=\"https:\/\/fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https:\/\/fonts.gstatic.com\" crossorigin=\"\">\n<link href=\"https:\/\/fonts.googleapis.com\/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Prata&amp;display=swap\" rel=\"stylesheet\">",
+    "bodyFontCode": "\"Poppins\", sans-serif;",
+    "headingFontCode": "\"Prata\", serif;",
+    "subheadingFontCode": "\"Poppins\", sans-serif;",
+    "buttonFontCode": "\"Poppins\", sans-serif;",
+    "buttons_border_thickness": 2,
+    "buttons_radius": 0,
+    "heading1fontsize": 46,
+    "heading2mobilefontsize": 25,
+    "tag1": "best seller",
+    "tagLabel1": "best seller",
+    "tagColor1": "#fcefef",
+    "tag2": "",
+    "tag3": "",
+    "freqBoughtTitle": "YOU MAY ALSO LIKE",
+    "product_1": "product-1",
+    "product_2": "product-2",
+    "freeShippingThresholdValue": "75",
+    "freeShippingMsg": "You're eligible for free shipping",
+    "freeProduct1": "free-gift",
+    "number": "1-888-819-4640",
+    "emailAddress": "shop@store.com",
+    "social_facebook_link": "#",
+    "social_twitter_link": "#",
+    "social_instagram_link": "#",
+    "social_tiktok_link": "#",
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "copy_link": true,
+    "favicon": "shopify:\/\/shop_images\/pixe_Verse_Black.png",
+    "type_body_font": "poppins_n4",
+    "sections": {
+      "404": {
+        "type": "404",
+        "settings": {
+          "backgroundImage": "shopify:\/\/shop_images\/mens-fashion-man-in-shirt-and-jeans-leaning-on-bicycle.jpg",
+          "backgroundImageMobile": "shopify:\/\/shop_images\/creamy-cold-drink-sits-on-a-wooden-table.jpg",
+          "pretitle": "404 Pre Title",
+          "title": "404 Title",
+          "buttonText": "Button Text",
+          "buttonUrl": "\/"
+        }
+      },
+      "announcement": {
+        "type": "announcement",
+        "blocks": {
+          "announcement_xECiKt": {
+            "type": "announcement",
+            "settings": {
+              "header_text": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<\/p>",
+              "announcement_link": "#",
+              "announcement_link_text": "Link Text"
+            }
+          },
+          "announcement_H6YRCw": {
+            "type": "announcement",
+            "settings": {
+              "header_text": "<p>Lorem Ipsum is simply dummy text<\/p>",
+              "announcement_link": "",
+              "announcement_link_text": ""
+            }
+          }
+        },
+        "block_order": [
+          "announcement_xECiKt",
+          "announcement_H6YRCw"
+        ],
+        "settings": {
+          "show_announcement": true
+        }
+      },
+      "header": {
+        "type": "header",
+        "blocks": {
+          "block_G7L6Lw": {
+            "type": "block",
+            "settings": {
+              "category": "Products",
+              "title": "Featured Product Title 1",
+              "linkText": "Link Text",
+              "link": "#",
+              "content_alignment": "center"
+            }
+          },
+          "block_RbVnmP": {
+            "type": "block",
+            "settings": {
+              "category": "Products",
+              "title": "Featured Product Title 2",
+              "linkText": "Link Text",
+              "link": "#",
+              "content_alignment": "left"
+            }
+          },
+          "block_BYz8Wi": {
+            "type": "block",
+            "settings": {
+              "category": "Discover",
+              "title": "Title 1",
+              "linkText": "Link Text",
+              "link": "#",
+              "content_alignment": "right"
+            }
+          },
+          "block_GTHCfc": {
+            "type": "block",
+            "settings": {
+              "category": "Discover",
+              "title": "Title 2",
+              "linkText": "Link Text",
+              "link": "#",
+              "content_alignment": "left"
+            }
+          },
+          "block_PVhHTB": {
+            "type": "block",
+            "settings": {
+              "category": "Discover",
+              "title": "Title 3",
+              "linkText": "Link Text",
+              "link": "#",
+              "content_alignment": "left"
+            }
+          },
+          "block_Tm3YQp": {
+            "type": "block",
+            "settings": {
+              "category": "Discover",
+              "title": "Title 4",
+              "linkText": "Link Text",
+              "link": "#",
+              "content_alignment": "center"
+            }
+          },
+          "block_i4NV8w": {
+            "type": "block",
+            "settings": {
+              "category": "Get Started",
+              "title": "Title 1",
+              "linkText": "Link Text",
+              "link": "#",
+              "content_alignment": "right"
+            }
+          },
+          "block_NwTAf6": {
+            "type": "block",
+            "settings": {
+              "category": "Get Started",
+              "title": "Title 2",
+              "linkText": "Link Text",
+              "link": "#",
+              "content_alignment": "right"
+            }
+          },
+          "block_PgTyMp": {
+            "type": "block",
+            "settings": {
+              "category": "Get Started",
+              "title": "Title 3",
+              "linkText": "Link Text",
+              "link": "#",
+              "content_alignment": "right"
+            }
+          },
+          "block_GmnyLt": {
+            "type": "block",
+            "settings": {
+              "category": "Get Started",
+              "title": "Title 4",
+              "linkText": "Link Text",
+              "link": "#",
+              "content_alignment": "right"
+            }
+          }
+        },
+        "block_order": [
+          "block_G7L6Lw",
+          "block_RbVnmP",
+          "block_BYz8Wi",
+          "block_GTHCfc",
+          "block_PVhHTB",
+          "block_Tm3YQp",
+          "block_i4NV8w",
+          "block_NwTAf6",
+          "block_PgTyMp",
+          "block_GmnyLt"
+        ],
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/pixe_Verse_Black.png",
+          "whiteLogo": "shopify:\/\/shop_images\/Pixel_Verse.png",
+          "nav_menu": "main-menu",
+          "loginMenu": "login-menu",
+          "bottommobileMenu": "mobile-menu-bottom"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "topDescription": "<p>Loream ipsum dummy Annoucement text here<\/p>",
+          "newsTitle": "Newsletter",
+          "footerMenu": "footer",
+          "copyright": "Copyright Pixel Verse",
+          "description": ""
+        }
+      },
+      "product": {
+        "type": "product",
+        "settings": {
+          "product_quantity_enable": false,
+          "enable_payment_button": true,
+          "onetimeText": "",
+          "subscribeText": ""
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "title": ""
+        }
+      },
+      "blog-template": {
+        "type": "blog-template",
+        "settings": {
+          "title": "Blog List Title",
+          "show_featured_article": true,
+          "featured_article": "news\/id-semper-risus-in-hendrerit-gravida-rutrum-quisque-non",
+          "blogItems": 3
+        }
+      },
+      "article-template": {
+        "type": "article-template",
+        "settings": {
+          "blog_show_date": true,
+          "show_share_buttons": true,
+          "recommendedHeading": "Recommended Blogs"
+        }
+      },
+      "inner-hero-section": {
+        "type": "inner-hero-section",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/laptop-in-empty-room.jpg",
+          "mobileImage": "shopify:\/\/shop_images\/milk-swirling-as-poured-in-coffee.jpg",
+          "title": "Title",
+          "description": "<p>Description<\/p>",
+          "buttonText1": "Button Text 1",
+          "buttonLink1": "shopify:\/\/pages\/generic",
+          "buttonText2": "Button Text 2",
+          "buttonLink2": "shopify:\/\/pages\/swym-wishlist",
+          "content_alignment": "center",
+          "smallHeight": true,
+          "pageBanner": true,
+          "gradient": false
+        }
+      },
+      "contact-section": {
+        "type": "contact-section",
+        "settings": {
+          "title": "Contact Title",
+          "description": "<p><strong>Lorem Ipsum<\/strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it<\/p>"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ],
+    "blocks": {
+      "5946647744298494267": {
+        "type": "shopify:\/\/apps\/wishlist-plus\/blocks\/wishlist-app-embed\/80c3b1fc-3a8f-407e-8367-ffdeebb8b612",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "4318962865815008709": {
+        "type": "shopify:\/\/apps\/boost-ai-search-discovery\/blocks\/boost-sd\/7fc998ae-a150-4367-bab8-505d8a4503f7",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    },
+    "color_schemes": {
+      "scheme-1": {
+        "settings": {
+          "background": "rgba(0,0,0,0)",
+          "background_gradient": "",
+          "text": "#ffffff",
+          "button": "#233107",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#1a1b1b",
+          "shadow": "#1a1b1b"
+        }
+      },
+      "scheme-2": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "text": "#000000",
+          "button": "#000000",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#000000",
+          "shadow": "#000000"
+        }
+      },
+      "scheme-3": {
+        "settings": {
+          "background": "#242833",
+          "background_gradient": "",
+          "text": "#ffffff",
+          "button": "#000000",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#000000",
+          "shadow": "#000000"
+        }
+      },
+      "scheme-4": {
+        "settings": {
+          "background": "#1a1b1b",
+          "background_gradient": "",
+          "text": "#ffffff",
+          "button": "#ffffff",
+          "button_label": "#1a1b1b",
+          "secondary_button_label": "#ffffff",
+          "shadow": "#1a1b1b"
+        }
+      },
+      "scheme-5": {
+        "settings": {
+          "background": "#233107",
+          "background_gradient": "",
+          "text": "#ffffff",
+          "button": "rgba(0,0,0,0)",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#ffffff",
+          "shadow": "rgba(0,0,0,0)"
+        }
+      }
+    }
+  }
+}

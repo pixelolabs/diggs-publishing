@@ -1,0 +1,231 @@
+{% if template != 'cart' %}
+  <div id="CartSidebar" class="cart-sidebar">
+    <!-- header -->
+    <div class="cart-sidebar__header">
+      <div class="flex-space-between">
+        <h5 class="flex-align-center">
+          <a href="javascript:void(0)" title="Close" class="icon-close" id="js__cart-close">
+            close cart
+            {% include 'icon-mobile-menu-close' %}
+          </a>
+
+          YOUR Cart
+        </h5>
+        <a href="/cart" class="link--primary" title="Cart">View Cart</a>
+      </div>
+      <div class="free-shipping js__progressbar_visiblity hide" style="display:none">
+        <!-- Free Shipping Values from Schema -->
+        <span class="hide js__free-shipping-limit">{{ settings.freeShippingThresholdValue }} </span>
+        <!-- Free Shipping Message (When the value is reached) -->
+        <p>
+          <span class="js__free-shipping-message" style="display: none;">{{ settings.freeShippingMsg }}</span
+          ><span
+            class="js__free-shipping-limit-message"
+            style="display: none;"
+          >
+            You are
+            <strong
+              class="js__free-shipping-remaning-amount"
+            ></strong>
+            away from free shipping.</span
+          >
+        </p>
+        <div class="free-shipping__progress-bar js__free-shipping__progress-bar"><span></span></div>
+      </div>
+
+      <div class="shipping-details js__progressbar_visiblity hide">
+        <span class="hide js__free-shipping-limit">{{ settings.freeShippingThresholdValue }} </span>
+        <span class=" title js__free-shipping-message" style="display: none;">{{ settings.freeShippingMsg }}</span>
+        <span class="title js__free-shipping-limit-message"
+          >You are
+          <b
+            ><span
+              class="js__free-shipping-remaning-amount"
+              >$40</span
+            >
+            away</b
+          >
+          from free shipping</span
+        >
+        <ul class="flex ">
+          <span class="dark-bar js__grandtotal-shipping" data-percentage="0"></span>
+          <li>
+            <div class="icon car js__free-shipping__icon">
+              <img src="{{ 'icon-car.webp' | asset_url }}" alt="icon-car">
+            </div>
+            <span>Free Shipping</span>
+            <div class="free-shipping__progress-bar js__free-shipping__progress-bar"><span></span></div>
+          </li>
+          {% if settings.freeProduct1 != blank %}
+            <li>
+              <div class="icon js__free-gift-1__icon">
+                <img src="{{ 'icon-gift.webp' | asset_url }}" alt="icon-gift">
+              </div>
+              <span>Free Gift</span>
+              <div class="free-shipping__progress-bar js__free__gift-1__progress-bar"><span></span></div>
+            </li>
+          {% endif %}
+          {% if settings.freeProduct2 != blank %}
+            <li>
+              <div class="icon js__free-gift-2__icon">
+                <img src="{{ 'icon-gift.webp' | asset_url }}">
+              </div>
+              <span>Free Gift</span>
+              <div class="free-shipping__progress-bar js__free__gift-2__progress-bar"><span></span></div>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+
+    <!-- Items List -->
+    <div class="cart-sidebar__middle">
+      <ul class="added-products js__ajax-products-bind">
+        <!-- Looping of items -->
+        {% for item in cart.items %}
+          <li class="flex-wrap">
+            <div class="image-section">
+              <a href="{{item.url}}" alt="{{item.title}}">
+                <img
+                  class="lazyload"
+                  data-src="{{ item.product.featured_image.src | product_img_url: 'master' }}"
+                  alt="{{item.title}}"
+                >
+              </a>
+            </div>
+            <div class="content">
+              <h5>
+                <a href="{{item.url}}" title="{{item.title}}">{{ item.title }}</a>
+                <div
+                  class="remove js__cart-item-remove"
+                  onclick="removeCartItem(this)"
+                  data-cart-remove-variant="{{item.id}}"
+                  data-cart-item-count=""
+                >
+                  Remove
+                </div>
+              </h5>
+              <div class="flex-space-between mobile-none">
+                <div class="cart-quantity-outer">
+                  <a class="minus-qty" onclick="minusQuantity(this)" data-variant-id="{{item.id}}">minus</a>
+                  <input
+                    type="text"
+                    class="cart__quantity-selector"
+                    name="updates[]"
+                    value="{{item.quantity}}"
+                    maxlength="3"
+                    size="3"
+                  >
+                  <a class="plus-qty" onclick="plusQuantity(this)" data-variant-id="{{item.id}}">plus</a>
+                </div>
+                <div class="text-right">
+                  <p>{{ item.price }}</p>
+                </div>
+              </div>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+      {% render 'gift-product-cart' %}
+
+      <!-- Frequently Bought Together Product List -->
+      <div class="freq-product-list js__freq-bought-products">
+        <span class="title uppercase text-center">{{ settings.freqBoughtTitle }}</span>
+        <ul class="js__top-cart-addons">
+          {% assign product1 = all_products[settings.product_1] %}
+          {%- assign current_variant1 = product1.selected_or_first_available_variant -%}
+          <li class="flex" data-handler="{{settings.product_1}}" data-attr-variantid="{{current_variant1.id}}">
+            <div class="image-section">
+              <a href="{{product1.url}}" title="{{product1.title}}">
+                product image
+                <img
+                  class="lazyload"
+                  data-src="{{ product1.featured_image.src | product_img_url: 'master' }}"
+                  alt="{{product1.title}}"
+                >
+              </a>
+            </div>
+            <div class="content">
+              <h5>
+                <a href="{{product1.url}}" title="{{product1.title}}">{{ product1.title }}</a>
+              </h5>
+              <p>{{ product1.price | money }}</p>
+            </div>
+            <div class="add-link">
+              <a title="Add" data-attr-variantid="{{current_variant1.id}}" class="freq-add js__addon-add-to-cart ">
+                {% render 'icon-cart-with-bg' %}
+              </a>
+            </div>
+          </li>
+          {% assign product2 = all_products[settings.product_2] %}
+          {%- assign current_variant2 = product2.selected_or_first_available_variant -%}
+          <li class="flex" data-handler="{{settings.product_2}}" data-attr-variantid="{{current_variant2.id}}">
+            <div class="image-section">
+              <a href="{{product2.url}}" title="{{product2.title}}">
+                product image
+                <img
+                  class="lazyload"
+                  data-src="{{ product2.featured_image.src | product_img_url: 'master' }}"
+                  alt="{{product2.title}}"
+                >
+              </a>
+            </div>
+            <div class="content">
+              <h5>
+                <a href="{{product2.url}}" title="{{product2.title}}">{{ product2.title }}</a>
+              </h5>
+              <p>{{ product2.price | money }}</p>
+            </div>
+            <div class="add-link">
+              <a title="Add" data-attr-variantid="{{current_variant2.id}}" class="freq-add js__addon-add-to-cart ">
+                {% render 'icon-cart-with-bg' %}
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Footer Actions -->
+    <div class="cart-sidebar__footer js__top-cart-form-actions">
+      <div class="cart-total">
+        <div class=" cart-subtotal flex-space-between">
+          <span>subtotal</span>
+          <span class="subtotal js__ajax-cart-total"></span>
+        </div>
+        <div class="flex-space-between js__cartSubtotalDiscountWraper hide total-discount">
+          <span>You Saved</span><span class="js__cart-total-saved"></span>
+        </div>
+        {% comment %}
+          <div class="flex-space-between js__free-shipping-message shiipin-msg hide">
+            <span>Shipping</span>
+            <b class="">Free!</b>
+          </div>
+        {% endcomment %}
+        <div class="flex-space-between js__free-shipping-message tax">
+          <p>Taxes & Shipping</p>
+          <p>Calculated at checkout</p>
+        </div>
+      </div>
+
+      <!-- Footer Actions -->
+      <div class="js__top-cart-form-actions width-100">
+        <form action="/cart" method="post" class="">
+          <button class="btn--primary width-100" type="submit" id="checkout" name="checkout">Checkout Now</button>
+        </form>
+        {% comment %} <a href="/cart" class="btn-black-border width-100" title="View Cart">VIEW MY CART</a> {% endcomment %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+<script>
+  var cartAjaxItems = [
+    {% if cart.item_count > 1 %}
+  {% for item in cart.items %}
+  {
+    "id": "{{ item.id }}",
+      "addons": "{{ item.product.metafields.addon.product_handle}}"
+  } {% unless forloop.last %}, {% endunless %}
+  {% endfor %}
+  {% endif %}
+  ];
+</script>

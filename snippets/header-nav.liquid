@@ -1,0 +1,25 @@
+<div class="header__nav">
+  <nav>
+    <ul class="d-flex list-reset">
+      {% for link in linklists[nav].links %}
+      <li {% if link.links != blank %}class="has-children"{% endif %}>
+        <a href="{{ link.url }}">
+          {{ link.title }}
+        </a>
+
+				{% if link.links != blank %}
+					<ul class="list-reset sub-menu sub-menu--1">
+            {% for child_link in link.links %}
+              <li>
+                <a href="{{ child_link.url }}">
+                  {{ child_link.title }}
+                </a>
+              </li>
+            {% endfor%}
+          </ul>
+				{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</div>

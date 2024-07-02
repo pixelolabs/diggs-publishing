@@ -1,0 +1,130 @@
+.three-column-video-card {
+  padding: 120px 0 44px 0;
+  position: relative;
+  @include MQ(MQ-480) {
+    padding: 80px 0 42px 0;
+  }
+  .container-1300 {
+    @include MQ(MQ-480) {
+      padding: 0 20px;
+    }
+  }
+
+  h2 {
+    max-width: 465px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 56px;
+    position: relative;
+    z-index: 5;
+    line-height: normal;
+    span {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .btn--primary {
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+  ul {
+    width: calc(100% + 20px);
+    margin-left: -20px;
+    position: relative;
+    z-index: 5;
+    // border-bottom: 2px solid $color-border;
+    @include MQ(MQ-600) {
+      width: 100%;
+      margin-left: 0;
+    }
+    li {
+      width: calc(33.333% - 20px);
+      margin-left: 20px;
+      margin-bottom: 60px;
+      display: none;
+      position: inherit;
+      &:nth-child(-n + 6) {
+        display: block;
+      }
+      .image-section {
+        width: 100%;
+        height: 312px;
+        position: relative;
+        img {
+          @include img-object-cover;
+          border-radius: 10px;
+        }
+        @include MQ(MQ-1280) {
+          height: 21.666vw;
+          max-height: 312px;
+        }
+        @include MQ(MQ-980) {
+          height: 35vw;
+        }
+        @include MQ(MQ-600) {
+          height: 53vw;
+        }
+        @include MQ(MQ-480) {
+          height: 260px;
+        }
+        &.video {
+          &::before {
+            content: "";
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: calc(50% - 20px);
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            background: url("icon-play.webp") no-repeat center/ 40px;
+            z-index: 20;
+          }
+        }
+      }
+      .content {
+        text-align: center;
+        padding: 20px 10px 0 10px;
+        h3 {
+          margin-bottom: 10px;
+          line-height: 1.38;
+        }
+        .full-format p {
+          padding-bottom: 0;
+        }
+        p {
+          line-height: 1.29;
+        }
+        .link--primary {
+          margin: 0 auto;
+          margin-top: 10px;
+          @include MQ(MQ-768) {
+            margin-top: 20px;
+          }
+          &::after {
+            display: block;
+          }
+        }
+      }
+      @include MQ(MQ-980) {
+        width: calc(50% - 20px);
+      }
+      @include MQ(MQ-600) {
+        width: 100%;
+        margin-left: 0;
+      }
+      .full-link {
+        display: block;
+      }
+      a::after {
+        display: none;
+      }
+    }
+  }
+  h2,
+        h3,
+        p {
+          color: rgba(var(--color-foreground),1);
+        }
+ 
+}

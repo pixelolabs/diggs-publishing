@@ -1,0 +1,15 @@
+<script defer>
+  function swymCallbackFn2(swat) {
+    // your API calls go here
+
+    document.addEventListener('swym:collections-loaded', function () {
+      swat.initializeActionButtons('.collection-popup');
+    });
+  }
+
+  if (!window.SwymCallbacks) {
+    window.SwymCallbacks = [];
+  }
+
+  window.SwymCallbacks.push(swymCallbackFn2);
+</script>

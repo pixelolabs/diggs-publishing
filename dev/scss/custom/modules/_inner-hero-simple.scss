@@ -1,0 +1,58 @@
+.inner-hero-simple {
+    padding: 75px 0 70px 0;
+    background-color: $color-white;
+    @include MQ(MQ-480) {
+        padding-top: 45px;
+    }
+    &.small {
+        padding-bottom: 45px;
+        @include MQ(MQ-480) {
+            padding-bottom: 60px;
+        }
+    }
+    .container-1340 {
+        @include MQ(MQ-480) {
+            padding: 0 40px;
+        }
+    .content  {
+        max-width: 818px;
+        margin: 0 auto;
+        h1 {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+    &.left--align {
+        .content {
+            margin: 0;
+            h1 {
+                text-align: left;
+            }
+            p  {
+                text-align: left;
+                margin: 0;
+            }
+        }
+    }
+    &.right--align {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        .content {
+            margin: 0;
+            h1 {
+                text-align: right;
+            }
+            p  {
+                text-align: right;
+                margin: 0;
+            }
+
+        }
+    }
+    }
+}

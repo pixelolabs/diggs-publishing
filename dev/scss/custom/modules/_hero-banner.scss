@@ -1,0 +1,281 @@
+.hero-banner-slider {
+  position: relative;
+  overflow: hidden;
+  .hero-banner {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 113px;
+    padding-top: 154px;
+    height: calc(100vh - 40px);
+    max-height: 810px;
+    display: flex;
+    align-items: center;
+    background-color: $color-black;
+    @include MQ(MQ-768) {
+      height: 699px;
+      padding-top: 115px !important;
+      align-items: flex-start;
+    }
+    .full-link {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 8;
+      height: 100%;
+    }
+    .image-section {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: $color-black;
+      height: 100%;
+      img {
+        @include img-object-cover;
+        position: relative;
+      }
+      &::before {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        content: "";
+        left: 0;
+        top: 0;
+        z-index: 2;
+        background-blend-mode: multiply;
+        background-image: linear-gradient(
+          to right,
+          #94b7d8 19%,
+          rgba(217, 217, 217, 0) 117%
+        );
+        // background-image: linear-gradient(to bottom, rgba(46, 88, 140, 0.5), rgba(46, 88, 140, 0.5));
+      }
+      &.gradient-none {
+        &:before {
+          display: none;
+        }
+      }
+    }
+    .video-section {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgba(17, 18, 19, 0.5);
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
+      .video-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        padding-top: 0%;
+        pointer-events: none;
+      }
+      iframe,
+      video {
+        min-height: 0;
+        height: calc(100vh - 40px);
+        @include iframe-bg();
+        min-width: 150vw;
+        @include MQ(MQ-1024) {
+          min-width: 180vw;
+        }
+        @include MQ(MQ-980) {
+          // min-width: 250vw;
+          // min-height: 250vw;
+          height: 100%;
+        }
+        @include MQ(MQ-480) {
+          min-width: 350vw;
+          // min-height: 350vw;
+          height: 100%;
+        }
+      }
+    }
+    .container-1340 {
+      position: relative;
+      z-index: 3;
+      @include MQ(MQ-768) {
+        justify-content: center !important;
+      }
+      .content {
+        // max-width: 666px;
+        max-width: 712px;
+        margin: 0 auto;
+        opacity: 0 !important;
+        transition-property: opacity, -webkit-transform !important;
+        transition-property: opacity, transform !important;
+        transition-property: opacity, transform, -webkit-transform !important;
+        transition-duration: 3s;
+        @include MQ(MQ-768) {
+          max-width: 500px;
+          margin-left: 0 !important;
+        }
+        @include MQ(MQ-600) {
+          max-width: 450px;
+          // margin-left: 0 !important;
+        }
+        @include MQ(MQ-480) {
+          max-width: 300px;
+        }
+        &.animate {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+        // @include MQ(MQ-768) {
+        //   margin: 0 auto;
+        //   text-align: center;
+        //   .btn--primary {
+        //     margin-left: auto;
+        //     margin-right: auto;
+        //   }
+        // }
+        h1 {
+          @include MQ(MQ-480) {
+            font-size: 25px;
+          }
+        }
+        .pre-title {
+          margin-bottom: 8px;
+          font-weight: bold;
+        }
+        h1,
+        p {
+          line-height: 1.35;
+          margin-bottom: 10px;
+        }
+        .btn--primary {
+          margin-top: 30px;
+          @include MQ(MQ-480) {
+            margin-top: 30px !important;
+          }
+        }
+        .pre-title,
+        h1,
+        p {
+          color: rgba(var(--color-foreground),1);
+        }
+
+        
+      }
+    }
+    &.left-align {
+      .container-1340 {
+        .content {
+          margin: 0;
+          // @include MQ(MQ-768) {
+          //   margin: 0 auto;
+          //   text-align: center;
+          //   .btn--primary {
+          //     margin-left: auto;
+          //     margin-right: auto;
+          //   }
+          // }
+        }
+      }
+    }
+    &.right-align {
+      .container-1340 {
+        display: flex;
+        justify-content: flex-end;
+        .content {
+          margin: 0;
+          // @include MQ(MQ-768) {
+          //   margin: 0 auto;
+          //   text-align: center;
+          //   .btn--primary {
+          //     margin-left: auto;
+          //     margin-right: auto;
+          //   }
+          // }
+        }
+      }
+    }
+    &:hover {
+      .btn--primary {
+        color: $color-black !important;
+        -webkit-transition: 0.6s ease all;
+        transition: 0.6s ease all;
+        -webkit-box-shadow: inset 0 -3.25em 0 0 $color-white;
+        box-shadow: inset 0 -3.25em $color-white;
+      }
+    }
+  }
+
+  .swiper-button-prev-hero-banner,
+  .swiper-button-next-hero-banner {
+    width: 50px;
+    height: 50px;
+    left: 60px;
+    position: absolute;
+    top: calc(50% - 20px);
+    z-index: 12;
+    cursor: pointer;
+    @include MQ(MQ-1200) {
+      left: 20px;
+    }
+    @include MQ(MQ-768) {
+      display: none;
+    }
+  }
+  .swiper-button-next-hero-banner {
+    right: 60px;
+    left: auto;
+    @include MQ(MQ-1200) {
+      right: 20px;
+    }
+  }
+  .swiper-button-next-hero-banner {
+    svg {
+      circle {
+        fill: $color-white;
+      }
+      path {
+        fill: $color-dark-blue;
+        // stroke: $color-dark-blue;
+      }
+      .line {
+        fill: $color-dark-blue;
+        stroke: $color-dark-blue;
+      }
+    }
+  }
+  svg circle,
+  path,
+  line {
+    transition: 0.5s;
+  }
+  svg:hover {
+    circle {
+      fill: $color-dark-blue;
+    }
+    path {
+      fill: $color-white;
+      // stroke: $color-white;
+    }
+    .line,
+    line {
+      stroke: $color-white;
+      fill: $color-white;
+    }
+  }
+  .padding-left-right {
+    padding: 0 100px;
+    @include MQ(MQ-1200) {
+      padding: 0 60px;
+    }
+    @include MQ(MQ-768) {
+      padding: 0;
+    }
+  }
+}

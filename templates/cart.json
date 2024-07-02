@@ -1,0 +1,18 @@
+{
+  "sections": {
+    "cart_QyDYjf": {
+      "type": "cart",
+      "settings": {
+      }
+    },
+    "cart_product_section_RBtzwJ": {
+      "type": "cart-product-section",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "cart_QyDYjf",
+    "cart_product_section_RBtzwJ"
+  ]
+}

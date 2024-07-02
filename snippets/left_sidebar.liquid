@@ -1,0 +1,22 @@
+{% if section.settings.title != blank %}
+  <div class="left-sidebar">
+    {% if section.settings.icon != blank %}
+      <div class="icon-section">
+        <img src="{{ section.settings.icon | img_url: '40x40' }}" alt="{{section.settings.title}}">
+      </div>
+    {% endif %}
+    {% if section.settings.title != blank %}
+      <h2>{{ section.settings.title }}</h2>
+    {% endif %}
+    {% if section.settings.more_info != blank %}
+      <div class="full-format description  ">
+        {{ section.settings.more_info }}
+      </div>
+    {% endif %}
+    {% if section.settings.image != blank %}
+      <div class="image-section">
+        <img src="{{ section.settings.image | img_url: '800x534' }}" alt="{{section.settings.title}}">
+      </div>
+    {% endif %}
+  </div>
+{% endif %}

@@ -1,0 +1,263 @@
+<!-- Header -->
+<header>
+    <div class="main-header js__main-header">
+        <div class="container-1324 flex-align-center">
+            <ul class="block-980">
+                 <!-- To be visible from ipad-->
+                 <li class="mobile-hamburger block-980">
+                    <button id="hamburger" type="button">
+                        <span class="hamburger">{% include 'icon-hamburger' %}</span>
+                        <span class="close">{% include 'icon-mobile-menu-close' %}</span>
+                    </button>
+                </li>
+            </ul>
+                <div class="header-logo relative">
+                    <a href="{{ routes.root_url }}" itemprop="url" alt="{{shop.name}}">
+                        {% if section.settings.logo != blank %}
+                        <img src="{{section.settings.logo | img_url: 'master' }}" class="logo" alt="{{shop.name}} Logo"
+                            loading="lazy">
+                            <img src="{{section.settings.whiteLogo | img_url: 'master' }}" class="whitelogo" alt="{{shop.name}} Logo"
+                                loading="lazy">
+                        {%else%}
+                        {{shop.name}}
+                        {%endif%}
+                    </a>
+                </div>
+                <div class="middle-menu flex-align-center">
+                    <!-- Main Nav -->
+                    <div class="navbar-collapse" id="navbarNavDropdown">
+                        {% assign mainMenu = linklists[section.settings.nav_menu]%}
+                        {% assign bottoMenu = linklists[section.settings.bottommobileMenu]%}
+                        
+                        <div class=" search-li block-980">
+                            <div class="header-search-section js__header-search-section">
+                                <div class="container-696">
+                                <a href="javascript:;" class="js__search toggle-icon"> {% include 'icon-search' %}</a>
+        
+                                <form method="get" action="/search" class="flex-align-center relative" data-form-type="">
+                                    <input type="hidden" name="type" value="product">
+        
+                                    <input class="search" type="search" placeholder="Search Products" aria-label="Search" name="q">
+                                    
+                                    
+                                </form>
+                            </div>
+                            
+                            </div>
+                       
+                        </div> 
+                        <nav class="main-menu">
+                            {% include 'site-nav_main' with mainMenu %}
+                            {%if section.settings.bottommobileMenu != blank%}
+                             <ul class="bottom-links block-980">
+                                {% comment %} <li>
+                                    <a href="/account/login" title="Log In" class="user">
+                                        My Account
+                                    </a>
+                                </li> {% endcomment %}
+                                {% for link in bottoMenu.links %}
+                                
+                                <li class="{% if link.levels == 1 %}has-sub-nav{%endif%}">
+                                    
+                                    {% if link.levels == 1 %}
+                                        <p class="accordion-toggle"> {{ link.title | escape }}</p>
+                                        {%else%}
+                                        <a href="{{ link.url }}" title="{{ link.title | escape }}">
+                                            {{ link.title | escape }}
+                                            </a>
+                                    {%endif%}
+                                    {% if link.levels == 1 %}
+                                        <div class="sub-nav accordion-content">
+                                            <ul class="sub-nav-links">    
+                                                {% for childlink in link.links %}
+                                                <li>
+                                                    <a href="{{ childlink.url }}" title="{{ link.title | escape }}">
+                                                        {{ childlink.title | escape }}
+                                                    </a>
+                                                    
+                                                </li>    
+                                                {%endfor%}
+                                            </ul>
+                                        </div>
+                                    {%endif%}
+                                </li>
+                                
+                                {%endfor%}
+                            </ul> 
+                            {%endif%}
+                        </nav>
+                    </div>
+                </div>
+         
+           
+                
+               
+               
+                <!-- Logo -->
+                <!-- Account, Cart -->
+                <ul class="right-nav flex-align-center">
+                    <li class="none-980"> 
+                        <a href="#swym-wishlist" class="swym-wishlist user" title="wishlist">
+                            {% include "icon-heart" %}
+                        </a>
+                    </li>
+                    <li class="none-980 has-sub-nav has-sub-nav-account">
+                        {% if customer %}
+                        <a href="/account" title="My Account" class="user site-nav__link">
+                            {% include
+                            "icon-account" %}
+                            {%else%}
+                            <a href="/account/login" title="Log In" class="user site-nav__link">
+                                {% include
+                                "icon-account" %}
+                                {%endif%}
+                            </a>
+                            <div class="sub-nav accordion-content">
+                                <ul class="sub-nav-links">
+                                    {% assign LoginMenu = linklists[section.settings.loginMenu]%}
+                                    {% for link in LoginMenu.links %}
+                                    <li>
+                                        <a href="{{ link.url }}" title="{{ link.title | escape }}">
+                                            {{ link.title | escape }}
+                                        </a>
+                                        {%if link.levels == 1%}
+                                        <ul class="inner-sub-nav">
+                                            {% for childlink in link.links %}
+                                            <li>
+                                                <a href="{{ childlink.url }}" title="{{ link.title | escape }}">
+                                                    {{ childlink.title | escape }}
+                                                </a>
+                                            </li>    
+                                            {%endfor%}
+                                        </ul>
+                                        {%endif%}
+                                    </li>    
+                                    {%endfor%}
+                                </ul>
+                            </div>
+                    </li>
+                    
+                    <li class=" search-li none-980">
+                        <a href="javascript:;" class="js__search search-icon" title="Search">{% include 'icon-search' %}
+                        </a>
+    
+                        
+                        <div class="header-search-section js__header-search-section">
+                            <div class="container-696">
+                            <a href="javascript:;" class=" toggle-icon"> {% include 'icon-search' %}</a>
+    
+                            <form method="get" action="/search" class="flex-align-center relative" data-form-type="">
+                                <input type="hidden" name="type" value="product">
+    
+                                <input class="search" type="search" placeholder="Search Products" aria-label="Search" name="q">
+                                <input type="submit" aria-label="Submit" class="submit btn--primary" value="Search" />
+                                
+                            </form>
+                        </div>
+                        
+                        </div>
+                   
+                    </li> 
+                
+                    
+                    <li>
+                        <a class="js__cart-expand js__update-cart-icon cart" href="javascript:;" title="cart">{% include
+                        "icon-cart" %}
+                            <span class="js__ajax-cart-count cart-count">
+                                {{ cart.item_count }}</span>
+                        </a>
+                    </li>
+                </ul>
+            
+        </div>
+    </div>
+    <!-- Mini Cart -->
+    <div id="cart_overlay"></div>
+   {% include "cart_drawer" %} 
+</header>
+{% schema %}
+{
+"name": {
+"en": "Header"
+},
+"settings": [
+{
+"type": "image_picker",
+"id": "logo",
+"label": {
+"en": "Logo"
+},
+"info": {
+"en": "188 x 40px Recommended"
+}
+},
+{
+"type": "image_picker",
+"id": "whiteLogo",
+"label": {
+"en": "White Logo"
+}
+},
+{
+"type": "link_list",
+"id": "nav_menu",
+"label": "Main Menu"
+},
+{
+"type": "link_list",
+"id": "loginMenu",
+"label": "Login Menu"
+},
+{
+"type": "link_list",
+"id": "bottommobileMenu",
+"label": "Mobile Bottom Menu"
+}
+],
+"blocks": [
+    {
+      "type": "block",
+      "name": "Featured Product",
+      "settings": [
+        {
+            "type": "text",
+            "id": "category",
+            "label": "Menu Title",
+            "info": "Text will need to be same as main menu title under which Featured Product needs to be added"
+          },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+            "type": "text",
+            "id": "linkText",
+            "label": "Link Text"
+          },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+            "type": "select",
+            "id": "content_alignment",
+            "options": [
+              { "value": "right", "label": "Right" },
+              { "value": "left", "label": "Left" },
+              { "value": "center", "label": "Center" }
+            ],
+            "label": "Content Alignment",
+            "info": "By default it is right aligned."
+          }
+      ]
+    }
+  ]
+}
+{% endschema %}

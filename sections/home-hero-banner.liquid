@@ -1,0 +1,221 @@
+{% if section.blocks.size > 0 %}
+  <div class="slider hero-banner-slider   {% if section.blocks.size > 1 %} js__hero-banner-slider  padding-left-right {% endif %} color-{{ section.settings.color_scheme }}">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        {% if block.settings.backgroundImage != blank or block.settings.videobanner != blank %}
+          <div
+            class="
+              slide swiper-slide
+              hero-banner {% if block.settings.content_alignment == "center" %} center-align{% endif %} {% if block.settings.content_alignment == "right" %} right-align{% endif %}
+              {% if block.settings.content_alignment == "left" %} left-align{% endif %} {% if section.blocks.size > 1 %} padding-left-right {% endif %}
+            "
+          >
+            {% if block.settings.buttonLink != blank and block.settings.buttonText != blank %}
+              <a
+                href="{{ block.settings.buttonLink }}"
+                title="Read More About {{ block.settings.title }}"
+                aria-label="Read More About {{ block.settings.title }}"
+                class="full-link"
+              ></a>
+            {% endif %}
+            {%- if block.settings.videobanner -%}
+              <div class="video-section">
+                <div class="video-wrapper">
+                  {% if block.settings.video contains '.mp4' %}
+                    <video muted loop autoplay>
+                      <source src="{{ block.settings.video }}" type="video/mp4">
+                    </video>
+                  {% else %}
+                    {% if block.settings.video != blank %}
+                      {% assign videoId = block.settings.video | split: 'vimeo.com/' %}
+                      <iframe
+                        src="https://player.vimeo.com/video/{{ videoId[1] }}?loop=1&autoplay=1&muted=1"
+                        frameborder="0"
+                        allow="fullscreen"
+                        allowfullscreen
+                        loading="lazy"
+                      ></iframe>
+                    {% endif %}
+                  {% endif %}
+                </div>
+              </div>
+            {% else %}
+              <div class="image-section {%if block.settings.gradient == true%} gradient-none{%endif%}">
+                <picture>
+                  <source
+                    media="(max-width: 600px)"
+                    srcset="{% if block.settings.backgroundImageMobile != blank %}{{ block.settings.backgroundImageMobile | img_url: '750x1400' }}{%endif%}"
+                  >
+                  <img
+                    src="{{ block.settings.backgroundImage | img_url: '2880x1620' }}"
+                    alt="{{ block.settings.backgroundImage.alt}}"
+                  >
+                </picture>
+              </div>
+            {% endif %}
+            <div class="container-1340">
+              <div
+                class="content"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+              >
+                {% if block.settings.pretitle != blank %}
+                  <span class="pre-title">{{ block.settings.pretitle }}</span>
+                {% endif %}
+                {% if block.settings.title != blank %}
+                  {% if section.blocks.size > 1 %}
+                    <p class="h1">{{ block.settings.title }}</p>
+                  {% else %}
+                    <h1>{{ block.settings.title }}</h1>
+                  {% endif %}
+                {% endif %}
+                {% if block.settings.description != blank %}
+                  {{ block.settings.description }}
+                {% endif %}
+                {% if block.settings.buttonText != blank %}
+                  <span
+                    class="btn--primary"
+                  >
+                    {{- block.settings.buttonText -}}
+                  </span>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    {% if section.blocks.size > 1 %}
+      <div class="swiper-button-arrow swiper-button-prev-hero-banner">
+        {% include 'icon-arrow-slide-white' %}
+      </div>
+      <div class="swiper-button-arrow swiper-button-next-hero-banner">
+        {% comment %}
+          {% include 'icon-arrow-slide-white' %}
+        {% endcomment %}
+        {% include 'icon-arrow-slide' %}
+      </div>
+    {% endif %}
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Hero Banner",
+  "settings": [
+  {
+    "type": "color_scheme",
+    "id": "color_scheme",
+    "label": "t:sections.all.colors.label",
+    "default": "scheme-1"
+  },
+  {
+    "type": "style.spacing_panel",
+    "id": "spacing",
+    "label": "Spacing",
+    "default": {
+      "padding": "16px 2px",
+      "margin": "0px"
+    }
+  }
+  
+],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "backgroundImage",
+          "label": "Background Image (Desktop)",
+          "info": {
+            "en": "2880 x 1620px Recommended"
+          }
+        },
+        {
+          "type": "image_picker",
+          "id": "backgroundImageMobile",
+          "label": "Background Image (Mobile)",
+          "info": {
+            "en": "750 x 1400px Recommended"
+          }
+        },
+       
+        {
+          "type": "url",
+          "id": "video",
+          "label": "Background Video",
+          "info": "Add video type as video/mp4 or vimeo"
+        },
+        {
+          "type": "checkbox",
+          "id": "videobanner",
+          "label": "Video Banner",
+          "default": false
+        },
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "text",
+          "id": "pretitle",
+          "label": "Pre Title"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "buttonText",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "buttonLink",
+          "label": "Button Link"
+        },
+        {
+          "type": "header",
+          "content": "Extra Settings",
+          "info": "Recommened to be used by the developer only"
+        },
+
+        {
+          "type": "checkbox",
+          "id": "gradient",
+          "label": "Switch off Gradient",
+          "info": "By default Gradient is On"
+        },
+
+        {
+          "type": "select",
+          "id": "content_alignment",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "right", "label": "Right" },
+            { "value": "center", "label": "Center" }
+          ],
+          "label": "Image Alignment",
+          "info": "By default it is center aligned.",
+          "default": "center"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Banner"
+    }
+  ]
+}
+{% endschema %}

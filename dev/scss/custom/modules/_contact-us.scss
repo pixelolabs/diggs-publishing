@@ -1,0 +1,12 @@
+.contact-us {
+    background-color: $color-white;
+    padding: 40px 0 85px 0;
+    @include MQ(MQ-480) {
+        padding: 40px 0;
+    }
+    .container-1340 {
+        @include MQ(MQ-1024) {
+            flex-direction: column;
+        }
+    }
+}

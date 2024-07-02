@@ -1,0 +1,29 @@
+{%- layout none -%}
+{ "items":[
+{%- for item in cart.items -%}
+  { "product_title":
+  {% if item.product.metafields.product.display_name != blank -%}
+    {{- item.product.metafields.product.display_name | json -}}
+  {%- else -%}
+    {{- item.title | json -}}
+  {%- endif -%}
+  ,
+  {% if item.variant.compare_at_price != blank %}
+    "comparePrice": {{ item.variant.compare_at_price }},
+  {% endif %}
+
+  "id": {{ item.id | json }}, "quantity": {{ item.quantity | json }},
+  {% if item.product.selling_plan_groups[0].selling_plans %}
+    "product_recharge":"True",
+    {% for selling_plan in item.product.selling_plan_groups[0].selling_plans %}
+      "product_rechargeID":"{{ selling_plan.id }}", "product_rechargeName":"{{ selling_plan.name }}"
+    {% endfor %}
+
+  {% else %}
+    "product_recharge":"false"
+  {% endif %}
+
+  }
+  {% unless forloop.last %},{% endunless %}
+{%- endfor -%}
+] }

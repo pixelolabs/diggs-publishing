@@ -1,0 +1,25 @@
+.default-page-content {
+    padding: 55px 0 157px;
+    background: $color-white;
+    @include MQ(MQ-980) {
+        padding: 40px 0 60px;
+    }
+    h1 {
+        margin-bottom: 75px;
+        @include MQ(MQ-768) {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.shopify-policy__container {
+    max-width: 1020px !important;
+    width: 100%;
+    padding: 55px 30px 157px;
+    margin: 0 auto;
+    .shopify-policy__title {
+        h1 {
+            margin-bottom: 75px;
+        }
+    }
+}

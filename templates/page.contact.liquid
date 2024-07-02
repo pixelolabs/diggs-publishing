@@ -1,0 +1,18 @@
+{% section 'inner-hero-section' %}
+{% section 'contact-section' %}
+
+<script>
+  jQuery(function () {
+    if (window.location.href.indexOf('?contact') > -1) {
+      setTimeout(function () {
+        var target = $('.form-section');
+        $('html, body').animate(
+          {
+            scrollTop: target.offset().top - 100,
+          },
+          500
+        );
+      }, 2000);
+    }
+  });
+</script>

@@ -1,0 +1,156 @@
+.faq-section-with-category,
+.faq-section {
+  padding-top: 82px;
+  padding-bottom: 100px;
+  &.pdp-faq {
+    padding: 0;
+  }
+  @include MQ(MQ-768) {
+    padding-top: 0;
+    margin-top: 30px;
+    padding-bottom: 60px;
+  }
+  .container-1380 {
+    @include MQ(MQ-768) {
+      flex-direction: column;
+    }
+  }
+  .left-content {
+    padding-left: 30px;
+    padding-right: 60px;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    width: 35.15%;
+    display: flex;
+    @include MQ(MQ-768) {
+      padding: 30px 20px 40px 20px !important;
+      border-top: 1px solid $color-black;
+      border-bottom: 1px solid $color-black;
+      max-width: 100% !important;
+      margin-right: 0;
+      width: 100%;
+    }
+    @include MQ(MQ-1024) {
+      padding-left: 0;
+      padding-right: 50px;
+      max-width: 300px;
+      width: 100%;
+    }
+    .inner {
+      max-width: 300px;
+      width: 100%;
+      @include MQ(MQ-768) {
+        max-width: 100%;
+        h2 {
+          width: 90%;
+        }
+      }
+    }
+    .h3 {
+      line-height: 1.15;
+      margin-bottom: 10px;
+      @include MQ(MQ-480) {
+        font-size: 30px;
+        line-height: 1.13;
+      }
+    }
+    .link--primary {
+      margin-top: 17px;
+      display: inline-block;
+      @include MQ(MQ-768) {
+        margin-top: 20px;
+      }
+    }
+  }
+  .container-669 {
+    width: 100%;
+    max-width: 669px;
+    // padding-left:px;
+    @include MQ(MQ-768) {
+      padding-top: 79px;
+      padding-left: 0 !important;
+      max-width: 100%;
+    }
+  }
+  .accordian {
+    padding-top: 17px;
+    @include MQ(MQ-768) {
+      padding-top: 0;
+    }
+    li {
+      border-bottom: 1px solid $color-black;
+      padding: 26px 0 25px;
+      position: relative;
+      @include MQ(MQ-768) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      &.heading {
+        padding-top: 69px;
+        padding-bottom: 6px;
+        @include MQ(MQ-768) {
+          padding-top: 60px;
+        }
+        @include MQ(MQ-768) {
+          padding-left: 0px;
+          padding-right: 0px;
+        }
+        &:nth-child(1) {
+          padding-top: 0;
+        }
+      }
+      .icon-plus {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 29px;
+        cursor: pointer;
+      }
+      .icon-minus {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 29px;
+        cursor: pointer;
+      }
+      &.active {
+        .icon-plus {
+          display: none;
+        }
+        .icon-minus {
+          display: block;
+          top: 35px;
+        }
+        .h5 {
+          font-weight: bold;
+          font-family: var(--font-family-primary);
+        }
+        .content {
+          display: block;
+        }
+      }
+      .h5 {
+        font-size: 16px;
+        line-height: 1.38;
+        font-family: var(--font-family-primary);
+        font-weight: normal;
+        padding-left: 39px;
+        z-index: 1;
+        position: relative;
+        cursor: pointer;
+        @include MQ(MQ-768) {
+          padding-left: 22px;
+        }
+      }
+      .content {
+        line-height: 1.5;
+        padding-top: 12px;
+        padding-left: 39px;
+        display: none;
+        @include MQ(MQ-768) {
+          padding-left: 22px;
+        }
+      }
+    }
+  }
+}
