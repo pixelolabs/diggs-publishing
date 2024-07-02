@@ -210,8 +210,8 @@
         "type": "range",
         "id": "buttonfontsize",
         "min": 10,
-        "max": 150,
-        "step": 2,
+        "max": 100,
+        "step": 1,
         "unit": "px",
         "label": "Font Size ",
         "default": 16
