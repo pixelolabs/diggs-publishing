@@ -1,10 +1,19 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "current": {
-    "fontScript": "<link rel=\"preconnect\" href=\"https:\/\/fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https:\/\/fonts.gstatic.com\" crossorigin=\"\">\n<link href=\"https:\/\/fonts.googleapis.com\/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Prata&amp;display=swap\" rel=\"stylesheet\">",
-    "bodyFontCode": "\"Poppins\", sans-serif;",
-    "headingFontCode": "\"Prata\", serif;",
-    "subheadingFontCode": "\"Poppins\", sans-serif;",
-    "buttonFontCode": "\"Poppins\", sans-serif;",
+    "fontScript": "<link rel=\"preconnect\" href=\"https:\/\/fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https:\/\/fonts.gstatic.com\" crossorigin=\"\">\n<link href=\"https:\/\/fonts.googleapis.com\/css2?family=Over+the+Rainbow&amp;display=swap\" rel=\"stylesheet\">\n<link href=\"https:\/\/fonts.googleapis.com\/css2?family=Luckiest+Guy&amp;display=swap\" rel=\"stylesheet\">\n<link href=\"https:\/\/fonts.googleapis.com\/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap\" rel=\"stylesheet\">",
+    "bodyFontCode": "\"Roboto\", sans-serif;",
+    "headingFontCode": "\"Luckiest Guy\", cursive;",
+    "subheadingFontCode": "\"Over the Rainbow\", cursive;",
+    "buttonFontCode": "\"ReallyBetter\", sans-serif;",
     "buttons_border_thickness": 2,
     "buttons_radius": 0,
     "heading2mobilefontsize": 25,
@@ -36,8 +45,6 @@
       "404": {
         "type": "404",
         "settings": {
-          "backgroundImage": "shopify:\/\/shop_images\/mens-fashion-man-in-shirt-and-jeans-leaning-on-bicycle.jpg",
-          "backgroundImageMobile": "shopify:\/\/shop_images\/creamy-cold-drink-sits-on-a-wooden-table.jpg",
           "pretitle": "404 Pre Title",
           "title": "404 Title",
           "buttonText": "Button Text",
@@ -189,11 +196,9 @@
           "block_GmnyLt"
         ],
         "settings": {
-          "logo": "shopify:\/\/shop_images\/pixe_Verse_Black.png",
-          "whiteLogo": "shopify:\/\/shop_images\/Pixel_Verse.png",
           "nav_menu": "main-menu",
-          "loginMenu": "login-menu",
-          "bottommobileMenu": "mobile-menu-bottom"
+          "loginMenu": "",
+          "bottommobileMenu": ""
         }
       },
       "footer": {
@@ -263,7 +268,9 @@
         }
       }
     },
-    "content_for_index": [],
+    "content_for_index": [
+
+    ],
     "color_schemes": {
       "scheme-1": {
         "settings": {
