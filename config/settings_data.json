@@ -38,6 +38,8 @@
     "heading3lineheight": "1",
     "heading3letterspacing": "0.36px",
     "heading3texttransform": "uppercase",
+    "paralineheight": "1.56",
+    "paraletterspacing": "0.32px",
     "heading2mobilefontsize": 25,
     "tag1": "best seller",
     "tagLabel1": "best seller",
