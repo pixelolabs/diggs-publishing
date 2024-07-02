@@ -210,8 +210,8 @@
         "type": "range",
         "id": "buttonfontsize",
         "min": 10,
-        "max": 150,
-        "step": 2,
+        "max": 100,
+        "step": 1,
         "unit": "px",
         "label": "Font Size ",
         "default": 16
@@ -369,7 +369,70 @@
         "label": "Text Transform",
         "default": "capitalize"
       },
-      
+      {
+        "type": "header",
+        "content": "H1 Font"
+      },
+      {
+        "type": "range",
+        "id": "heading1fontsize",
+        "min": 10,
+        "max": 150,
+        "step": 2,
+        "unit": "px",
+       "label": "Font Size ",
+        "default": 30
+      },
+      {
+        "type": "text",
+        "id": "heading1lineheight",
+        "label": "Line Height",
+        "default": "normal"
+      },
+      {
+        "type": "text",
+        "id": "heading1letterspacing",
+        "label": "Letter Spacing",
+        "default": "normal"
+      },
+      {
+        "type": "select",
+        "id": "heading1fontweight",
+        "options": [
+          { "value": "100", "label": "100" },
+          { "value": "200", "label": "200" },
+          { "value": "300", "label": "300" },
+          { "value": "400", "label": "400" },
+          { "value": "500", "label": "500" },
+          { "value": "600", "label": "600" },
+          { "value": "700", "label": "700" },
+          { "value": "800", "label": "800" },
+          { "value": "900", "label": "900" }
+        ],
+        "label": "Font Weight",
+        "default": "400"
+      },
+      {
+        "type": "select",
+        "id": "heading1fontstyle",
+        "options": [
+          { "value": "normal", "label": "normal" },
+          { "value": "italic", "label": "italic" }
+        ],
+        "label": "Font Style",
+        "default": "normal"
+      },
+      {
+        "type": "select",
+        "id": "heading1texttransform",
+        "options": [
+          { "value": "capitalize", "label": "capitalize" },
+          { "value": "uppercase", "label": "uppercase" },
+          { "value": "lowercase", "label": "lowercase" }
+        ],
+        "label": "Text Transform",
+        "default": "capitalize"
+      },
       
 
       {
@@ -428,6 +491,136 @@
       {
         "type": "select",
         "id": "heading2texttransform",
+        "options": [
+          { "value": "capitalize", "label": "capitalize" },
+          { "value": "uppercase", "label": "uppercase" },
+          { "value": "lowercase", "label": "lowercase" }
+        ],
+        "label": "Text Transform",
+        "default": "capitalize"
+      },
+      
+      {
+        "type": "header",
+        "content": "H2 Medium Font"
+      },
+      {
+        "type": "range",
+        "id": "heading2mediumfontsize",
+        "min": 10,
+        "max": 150,
+        "step": 2,
+        "unit": "px",
+       "label": "Font Size ",
+        "default": 30
+      },
+      {
+        "type": "text",
+        "id": "heading2mediumlineheight",
+        "label": "Line Height",
+        "default": "normal"
+      },
+      {
+        "type": "text",
+        "id": "heading2mediumletterspacing",
+        "label": "Letter Spacing",
+        "default": "normal"
+      },
+      {
+        "type": "select",
+        "id": "heading2mediumfontweight",
+        "options": [
+          { "value": "100", "label": "100" },
+          { "value": "200", "label": "200" },
+          { "value": "300", "label": "300" },
+          { "value": "400", "label": "400" },
+          { "value": "500", "label": "500" },
+          { "value": "600", "label": "600" },
+          { "value": "700", "label": "700" },
+          { "value": "800", "label": "800" },
+          { "value": "900", "label": "900" }
+        ],
+        "label": "Font Weight",
+        "default": "400"
+      },
+      {
+        "type": "select",
+        "id": "heading2mediumfontstyle",
+        "options": [
+          { "value": "normal", "label": "normal" },
+          { "value": "italic", "label": "italic" }
+        ],
+        "label": "Font Style",
+        "default": "normal"
+      },
+      {
+        "type": "select",
+        "id": "heading2mediumtexttransform",
+        "options": [
+          { "value": "capitalize", "label": "capitalize" },
+          { "value": "uppercase", "label": "uppercase" },
+          { "value": "lowercase", "label": "lowercase" }
+        ],
+        "label": "Text Transform",
+        "default": "capitalize"
+      },
+      
+      {
+        "type": "header",
+        "content": "H2 Small Font"
+      },
+      {
+        "type": "range",
+        "id": "heading2smallfontsize",
+        "min": 10,
+        "max": 150,
+        "step": 2,
+        "unit": "px",
+       "label": "Font Size ",
+        "default": 30
+      },
+      {
+        "type": "text",
+        "id": "heading2smalllineheight",
+        "label": "Line Height",
+        "default": "normal"
+      },
+      {
+        "type": "text",
+        "id": "heading2smallletterspacing",
+        "label": "Letter Spacing",
+        "default": "normal"
+      },
+      {
+        "type": "select",
+        "id": "heading2smallfontweight",
+        "options": [
+          { "value": "100", "label": "100" },
+          { "value": "200", "label": "200" },
+          { "value": "300", "label": "300" },
+          { "value": "400", "label": "400" },
+          { "value": "500", "label": "500" },
+          { "value": "600", "label": "600" },
+          { "value": "700", "label": "700" },
+          { "value": "800", "label": "800" },
+          { "value": "900", "label": "900" }
+        ],
+        "label": "Font Weight",
+        "default": "400"
+      },
+      {
+        "type": "select",
+        "id": "heading2smallfontstyle",
+        "options": [
+          { "value": "normal", "label": "normal" },
+          { "value": "italic", "label": "italic" }
+        ],
+        "label": "Font Style",
+        "default": "normal"
+      },
+      {
+        "type": "select",
+        "id": "heading2smalltexttransform",
         "options": [
           { "value": "capitalize", "label": "capitalize" },
           { "value": "uppercase", "label": "uppercase" },
@@ -758,6 +951,198 @@
       },
       {
         "type": "header",
+        "content": "Para Medium Font"
+      },
+      {
+        "type": "range",
+        "id": "paramediumfontsize",
+        "min": 10,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Font Size ",
+        "default": 16
+      },
+      {
+        "type": "text",
+        "id": "paramediumlineheight",
+        "label": "Line Height",
+        "default": "normal"
+      },
+      {
+        "type": "text",
+        "id": "paramediumletterspacing",
+        "label": "Letter Spacing",
+        "default": "normal"
+      },
+      {
+        "type": "select",
+        "id": "paramediumfontweight",
+        "options": [
+          { "value": "100", "label": "100" },
+          { "value": "200", "label": "200" },
+          { "value": "300", "label": "300" },
+          { "value": "400", "label": "400" },
+          { "value": "500", "label": "500" },
+          { "value": "600", "label": "600" },
+          { "value": "700", "label": "700" },
+          { "value": "800", "label": "800" },
+          { "value": "900", "label": "900" }
+        ],
+        "label": "Font Weight",
+        "default": "400"
+      },
+      {
+        "type": "select",
+        "id": "paramediumfontstyle",
+        "options": [
+          { "value": "normal", "label": "normal" },
+          { "value": "italic", "label": "italic" }
+        ],
+        "label": "Font Style",
+        "default": "normal"
+      },
+      {
+        "type": "select",
+        "id": "paramediumtexttransform",
+        "options": [
+          { "value": "capitalize", "label": "capitalize" },
+          { "value": "uppercase", "label": "uppercase" },
+          { "value": "lowercase", "label": "lowercase" }
+        ],
+        "label": "Text Transform",
+        "default": "capitalize"
+      },
+      {
+        "type": "header",
+        "content": "Para Small Font"
+      },
+      {
+        "type": "range",
+        "id": "parasmallfontsize",
+        "min": 10,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Font Size ",
+        "default": 16
+      },
+      {
+        "type": "text",
+        "id": "parasmalllineheight",
+        "label": "Line Height",
+        "default": "normal"
+      },
+      {
+        "type": "text",
+        "id": "parasmallletterspacing",
+        "label": "Letter Spacing",
+        "default": "normal"
+      },
+      {
+        "type": "select",
+        "id": "parasmallfontweight",
+        "options": [
+          { "value": "100", "label": "100" },
+          { "value": "200", "label": "200" },
+          { "value": "300", "label": "300" },
+          { "value": "400", "label": "400" },
+          { "value": "500", "label": "500" },
+          { "value": "600", "label": "600" },
+          { "value": "700", "label": "700" },
+          { "value": "800", "label": "800" },
+          { "value": "900", "label": "900" }
+        ],
+        "label": "Font Weight",
+        "default": "400"
+      },
+      {
+        "type": "select",
+        "id": "parasmallfontstyle",
+        "options": [
+          { "value": "normal", "label": "normal" },
+          { "value": "italic", "label": "italic" }
+        ],
+        "label": "Font Style",
+        "default": "normal"
+      },
+      {
+        "type": "select",
+        "id": "parasmalltexttransform",
+        "options": [
+          { "value": "capitalize", "label": "capitalize" },
+          { "value": "uppercase", "label": "uppercase" },
+          { "value": "lowercase", "label": "lowercase" }
+        ],
+        "label": "Text Transform",
+        "default": "capitalize"
+      },
+      {
+        "type": "header",
+        "content": "Para X-Small Font"
+      },
+      {
+        "type": "range",
+        "id": "paraxsmallfontsize",
+        "min": 10,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Font Size ",
+        "default": 16
+      },
+      {
+        "type": "text",
+        "id": "paraxsmalllineheight",
+        "label": "Line Height",
+        "default": "normal"
+      },
+      {
+        "type": "text",
+        "id": "paraxsmallletterspacing",
+        "label": "Letter Spacing",
+        "default": "normal"
+      },
+      {
+        "type": "select",
+        "id": "paraxsmallfontweight",
+        "options": [
+          { "value": "100", "label": "100" },
+          { "value": "200", "label": "200" },
+          { "value": "300", "label": "300" },
+          { "value": "400", "label": "400" },
+          { "value": "500", "label": "500" },
+          { "value": "600", "label": "600" },
+          { "value": "700", "label": "700" },
+          { "value": "800", "label": "800" },
+          { "value": "900", "label": "900" }
+        ],
+        "label": "Font Weight",
+        "default": "400"
+      },
+      {
+        "type": "select",
+        "id": "paraxsmallfontstyle",
+        "options": [
+          { "value": "normal", "label": "normal" },
+          { "value": "italic", "label": "italic" }
+        ],
+        "label": "Font Style",
+        "default": "normal"
+      },
+      {
+        "type": "select",
+        "id": "paraxsmalltexttransform",
+        "options": [
+          { "value": "capitalize", "label": "capitalize" },
+          { "value": "uppercase", "label": "uppercase" },
+          { "value": "lowercase", "label": "lowercase" }
+        ],
+        "label": "Text Transform",
+        "default": "capitalize"
+      },
+      {
+        "type": "header",
         "content": "Pretitle Mobile Font"
       },
       {
@@ -832,6 +1217,58 @@
       {
         "type": "text",
         "id": "heading2mobileletterspacing",
+        "label": "Letter Spacing",
+        "default": "normal"
+      },
+      {
+        "type": "header",
+        "content": "H2 Medium Mobile Font"
+      },
+      {
+        "type": "range",
+        "id": "heading2mediummobilefontsize",
+        "min": 10,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Font Size ",
+        "default": 24
+      },
+      {
+        "type": "text",
+        "id": "heading2mediummobilelineheight",
+        "label": "Line Height",
+        "default": "normal"
+      },
+      {
+        "type": "text",
+        "id": "heading2mediummobileletterspacing",
+        "label": "Letter Spacing",
+        "default": "normal"
+      },
+      {
+        "type": "header",
+        "content": "H2 Small Mobile Font"
+      },
+      {
+        "type": "range",
+        "id": "heading2smallmobilefontsize",
+        "min": 10,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Font Size ",
+        "default": 24
+      },
+      {
+        "type": "text",
+        "id": "heading2smallmobilelineheight",
+        "label": "Line Height",
+        "default": "normal"
+      },
+      {
+        "type": "text",
+        "id": "heading2smallmobileletterspacing",
         "label": "Letter Spacing",
         "default": "normal"
       },

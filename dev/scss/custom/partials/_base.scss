@@ -109,29 +109,74 @@ li {
 // para link
 p {
   font-size: var(--para-desktop-fontsize);
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.02px;
+  line-height: var(--para-desktop-lineheight);
+  letter-spacing: var(--para-desktop-letterspacing);
+  text-transform: var(--para-desktop-texttransform);
+  font-weight: var(--para-desktop-fontweight);
+  font-style: var(--para-desktop-fontstyle);
+
   @include MQ(MQ-480) {
     font-size: var(--para-mobile-fontsize);
-   
+    line-height: var(--para-mobile-lineheight);
+    letter-spacing: var(--para-mobile-letterspacing);
   }
-  &.small {
-    font-size: 14px;
-    line-height: 1.57;
-
-    a {
-      font-size: 14px;
-      line-height: 1.57;
-    }
-  }
-
   a {
     color: $color-black;
     text-decoration: none !important;
     font-weight: 700;
     position: relative;
   }
+ 
+  &.medium {
+    font-size: var(--paramedium-desktop-fontsize);
+  line-height: var(--paramedium-desktop-lineheight);
+  letter-spacing: var(--paramedium-desktop-letterspacing);
+  text-transform: var(--paramedium-desktop-texttransform);
+  font-weight: var(--paramedium-desktop-fontweight);
+  font-style: var(--paramedium-desktop-fontstyle);
+
+    a {
+      font-size: var(--paramedium-desktop-fontsize);
+      line-height: var(--paramedium-desktop-lineheight);
+      letter-spacing: var(--paramedium-desktop-letterspacing);
+      text-transform: var(--paramedium-desktop-texttransform);
+      font-style: var(--paramedium-desktop-fontstyle);
+    }
+  }
+  &.small {
+    font-size: var(--parasmall-desktop-fontsize);
+    line-height: var(--parasmall-desktop-lineheight);
+    letter-spacing: var(--parasmall-desktop-letterspacing);
+    text-transform: var(--parasmall-desktop-texttransform);
+    font-weight: var(--parasmall-desktop-fontweight);
+    font-style: var(--parasmall-desktop-fontstyle);
+  
+      a {
+        font-size: var(--parasmall-desktop-fontsize);
+        line-height: var(--parasmall-desktop-lineheight);
+        letter-spacing: var(--parasmall-desktop-letterspacing);
+        text-transform: var(--parasmall-desktop-texttransform);
+        font-style: var(--parasmall-desktop-fontstyle);
+      }
+  }
+  &.xsmall {
+    font-size: var(--paraxsmall-desktop-fontsize);
+    line-height: var(--paraxsmall-desktop-lineheight);
+    letter-spacing: var(--paraxsmall-desktop-letterspacing);
+    text-transform: var(--paraxsmall-desktop-texttransform);
+    font-weight: var(--paraxsmall-desktop-fontweight);
+    font-style: var(--paraxsmall-desktop-fontstyle);
+  
+      a {
+        font-size: var(--paraxsmall-desktop-fontsize);
+        line-height: var(--paraxsmall-desktop-lineheight);
+        letter-spacing: var(--paraxsmall-desktop-letterspacing);
+        text-transform: var(--paraxsmall-desktop-texttransform);
+        font-style: var(--paraxsmall-desktop-fontstyle);
+      }
+  }
+
+  
 }
 
 // Heading links
@@ -238,13 +283,6 @@ h2,
   text-transform: var(--h2-desktop-texttransform);
   font-weight: var(--h2-desktop-fontweight);
   font-style: var(--h2-desktop-fontstyle);
-
-  @include MQ(MQ-480) {
-    font-size: var(--h2-desktop-fontsize);
-    line-height: var(--h2-desktop-lineheight);
-    letter-spacing: var(--h2-desktop-letterspacing);
-  }
-
   a {
     font-size: var(--h2-desktop-fontsize);
     line-height: var(--h2-desktop-lineheight);
@@ -261,6 +299,56 @@ h2,
       line-height: var(--h2-mobile-lineheight);
       letter-spacing: var(--h2-mobile-letterspacing);
     }
+  }
+  &.medium{
+    font-size: var(--h2-medium-desktop-fontsize);
+    line-height: var(--h2-medium-desktop-lineheight);
+    letter-spacing: var(--h2-medium-desktop-letterspacing);
+    text-transform: var(--h2-medium-desktop-texttransform);
+    font-weight: var(--h2-medium-desktop-fontweight);
+    font-style: var(--h2-medium-desktop-fontstyle);
+    a {
+      font-size: var(--h2-medium-desktop-fontsize);
+      line-height: var(--h2-medium-desktop-lineheight);
+      letter-spacing: var(--h2-medium-desktop-letterspacing);
+    }
+  
+    @include MQ(MQ-480) {
+      font-size: var(--h2-medium-mobile-fontsize);
+      line-height: var(--h2-medium-mobile-lineheight);
+      letter-spacing: var(--h2-medium-mobile-letterspacing);
+  
+      a {
+        font-size: var(--h2-medium-mobile-fontsize);
+        line-height: var(--h2-medium-mobile-lineheight);
+        letter-spacing: var(--h2-medium-mobile-letterspacing);
+      }
+    }
+  }
+  &.small{
+    font-size: var(--h2-small-desktop-fontsize);
+  line-height: var(--h2-small-desktop-lineheight);
+  letter-spacing: var(--h2-small-desktop-letterspacing);
+  text-transform: var(--h2-small-desktop-texttransform);
+  font-weight: var(--h2-small-desktop-fontweight);
+  font-style: var(--h2-small-desktop-fontstyle);
+  a {
+    font-size: var(--h2-small-desktop-fontsize);
+    line-height: var(--h2-small-desktop-lineheight);
+    letter-spacing: var(--h2-small-desktop-letterspacing);
+  }
+
+  @include MQ(MQ-480) {
+    font-size: var(--h2-small-mobile-fontsize);
+    line-height: var(--h2-small-mobile-lineheight);
+    letter-spacing: var(--h2-small-mobile-letterspacing);
+
+    a {
+      font-size: var(--h2-small-mobile-fontsize);
+      line-height: var(--h2-small-mobile-lineheight);
+      letter-spacing: var(--h2-small-mobile-letterspacing);
+    }
+  }
   }
 }
 
