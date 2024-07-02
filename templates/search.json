@@ -1,42 +1,33 @@
 {
-    "sections": {
-        "main": {
-            "type": "main-search",
-            "disabled": true,
-            "settings": {
-                "columns_desktop": 4,
-                "image_ratio": "adapt",
-                "image_shape": "default",
-                "show_secondary_image": false,
-                "show_vendor": false,
-                "show_rating": false,
-                "enable_filtering": true,
-                "filter_type": "horizontal",
-                "enable_sorting": true,
-                "article_show_date": true,
-                "article_show_author": false,
-                "columns_mobile": "2",
-                "padding_top": 36,
-                "padding_bottom": 36
-            }
-        },
-        "35ab9d00-1f34-4be1-b536-e5a1bf5e265f": {
-            "type": "apps",
-            "blocks": {
-                "45ed3c34-301e-4757-8c96-81e8e25e6e17": {
-                    "type": "shopify:\/\/apps\/boost-ai-search-discovery\/blocks\/product-filter\/7fc998ae-a150-4367-bab8-505d8a4503f7",
-                    "settings": {}
-                }
-            },
-            "block_order": [
-                "45ed3c34-301e-4757-8c96-81e8e25e6e17"
-            ],
-            "settings": {}
-        }
+  "sections": {
+    "main": {
+      "type": "main-search",
+      "disabled": true,
+      "settings": {
+        "columns_desktop": 4,
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "article_show_date": true,
+        "article_show_author": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     },
-    "order": [
-        "35ab9d00-1f34-4be1-b536-e5a1bf5e265f",
-        "main"
-    ],
-    "wrapper": ".boost-sd__product-filter-fallback"
+    "35ab9d00-1f34-4be1-b536-e5a1bf5e265f": {
+      "type": "apps",
+      "settings": {}
+    }
+  },
+  "order": [
+    "35ab9d00-1f34-4be1-b536-e5a1bf5e265f",
+    "main"
+  ],
+  "wrapper": ".boost-sd__product-filter-fallback"
 }
