@@ -40,20 +40,25 @@
                 </div>
               </div>
             {% else %}
+             
+            {% endif %}
+            <div class="container-1260">
+              {%- if block.settings.videobanner == false -%}
+              {% if block.settings.backgroundImage != blank or block.settings.videobanner != blank %}
               <div class="image-section {%if block.settings.gradient == true%} gradient-none{%endif%}">
                 <picture>
                   <source
                     media="(max-width: 600px)"
-                    srcset="{% if block.settings.backgroundImageMobile != blank %}{{ block.settings.backgroundImageMobile | img_url: '750x1400' }}{%endif%}"
+                    srcset="{% if block.settings.backgroundImageMobile != blank %}{{ block.settings.backgroundImageMobile | img_url: '600x600' }}{%endif%}"
                   >
                   <img
-                    src="{{ block.settings.backgroundImage | img_url: '2880x1620' }}"
+                    src="{{ block.settings.backgroundImage | img_url: '1028x1028' }}"
                     alt="{{ block.settings.backgroundImage.alt}}"
                   >
                 </picture>
               </div>
             {% endif %}
-            <div class="container-1260">
+            {% endif %}
               <div
                 class="content"
                 data-aos="fade-up"
