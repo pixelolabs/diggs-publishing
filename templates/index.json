@@ -34,6 +34,11 @@
         "color_scheme": ""
       }
     },
+    "content_banner_maXcHf": {
+      "type": "content-banner",
+      "settings": {
+      }
+    },
     "four_column_product_slider_z8x6r7": {
       "type": "four-column-product-slider",
       "blocks": {
@@ -74,36 +79,11 @@
         "buttonText": "Shop all",
         "buttonLink": "shopify:\/\/collections"
       }
-    },
-    "three_column_card_AEBCHA": {
-      "type": "three-column-card",
-      "blocks": {
-        "image_mpAzcm": {
-          "type": "image",
-          "settings": {
-            "title": "Title Goes Here",
-            "table": "<p>Content goes in here<\/p>",
-            "bg_color": "#1773b0"
-          }
-        }
-      },
-      "block_order": [
-        "image_mpAzcm"
-      ],
-      "settings": {
-        "title1": "Black",
-        "title2": "Grey",
-        "description": "<p>What drives the pace of aging is no longer a mystery. <br\/>But healthcare is slow to absorb what science already knows.<br\/>Welcome to InfiniWell. We are here to close the gap, systematically.<\/p>",
-        "paddingtop": 0,
-        "paddingtopmobile": 0,
-        "paddingbottom": 0,
-        "paddingbottommobile": 0
-      }
     }
   },
   "order": [
     "HeroBanner",
-    "four_column_product_slider_z8x6r7",
-    "three_column_card_AEBCHA"
+    "content_banner_maXcHf",
+    "four_column_product_slider_z8x6r7"
   ]
 }
