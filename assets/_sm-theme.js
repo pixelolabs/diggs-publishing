@@ -1042,8 +1042,8 @@ jQuery(function () {
     }
   });
   var customProductSlider = new Swiper(".js__product-slider", {
-    slidesPerView: "auto",
-    spaceBetween: 20,
+    slidesPerView: 3,
+    spaceBetween: 39,
     grabCursor: false,
     loop: true,
     // loopedSlides: 100,
