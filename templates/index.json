@@ -81,10 +81,10 @@
         "product_WCmKJP"
       ],
       "settings": {
-        "pretitle": "",
-        "title": "",
-        "buttonText": "",
-        "buttonLink": ""
+        "pretitle": "Best Deals",
+        "title": "Latest Books Collection",
+        "buttonText": "VIEW ALL",
+        "buttonLink": "shopify:\/\/collections"
       }
     }
   },
