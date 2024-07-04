@@ -1084,7 +1084,7 @@ jQuery(function () {
         spaceBetween: 20
       },
       1440: {
-        slidesPerView: "auto",
+        slidesPerView: 3,
         spaceBetween: 20
       }
     },
