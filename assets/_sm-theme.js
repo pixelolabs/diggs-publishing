@@ -1077,7 +1077,7 @@ jQuery(function () {
       },
       1440: {
         slidesPerView: 3,
-        spaceBetween: 20
+        spaceBetween: 39
       }
     },
     navigation: {
