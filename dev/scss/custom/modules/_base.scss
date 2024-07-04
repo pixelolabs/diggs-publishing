@@ -100,8 +100,8 @@
         .swym-button {
             svg {
                 path {
-                    stroke: $color-blue !important;
-                    fill: $color-blue !important;
+                    stroke: $color-black !important;
+                    fill: $color-black !important;
                 }
                 display: none !important;
                 &.icon-heart {
@@ -342,8 +342,8 @@
             svg {
                 margin-right: 6px !important;
                 path {
-                    stroke: $color-blue !important;
-                    fill: $color-blue !important;
+                    stroke: $color-black !important;
+                    fill: $color-black !important;
                 }
             }
             padding: 0 !important;
@@ -353,7 +353,7 @@
             font-weight: 500 !important;
             line-height: normal !important;
             letter-spacing: 0.01px !important;
-            color: $color-blue !important;
+            color: $color-black !important;
             text-transform: capitalize !important;
             &.swym-added {
                 svg {

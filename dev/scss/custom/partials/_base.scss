@@ -581,49 +581,19 @@ button {
 /****** LINKS ******/
 
 .link--primary {
-  font-size: 14px;
-  font-weight: 500;
+  font-family: var(--font-family-secondary);
+  font-size: 16px;
+  font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
-  letter-spacing: 0.01px;
-  text-align: center;
-  color: $color-blue;
+  letter-spacing: 2px;
+  text-align: left;
+  color: $color-black;
   position: relative;
-  text-transform: capitalize;
-  padding-bottom: 5px;
-
-  &:after,
-  &:before {
-    position: absolute;
-    content: "";
-    left: auto;
-    right: 0;
-    bottom: 0px;
-    height: 1px;
-    width: 100%;
-    background: $color-blue;
-    transition: 0.4s ease-in-out;
-  }
-
-  &:before {
-    width: 0;
-    left: 0;
-    right: auto;
-    transition: 0.6s ease-in-out;
-  }
-
-  &:hover {
-    &:after {
-      width: 0;
-      transition: 0.4s ease-in-out;
-    }
-
-    &:before {
-      width: 100%;
-      transition: 0.6s ease-in-out;
-    }
-  }
+  text-transform: uppercase;
+  background:  url("icon-right-arrow.webp") no-repeat right center/ 13.5px;
+  padding-right: 21.5px;
 }
 
 .link--secondary {
@@ -652,7 +622,7 @@ button {
   
   
   &.blue {
-    color: $color-blue !important;
+    color: $color-black !important;
   }
 }
 
@@ -1137,209 +1107,12 @@ button {
   padding: 0 30px;
   margin: 0 auto;
 }
-
-.container-1390 {
-  max-width: 1390px;
+.container-1260 {
+  max-width: 1260px;
   width: 100%;
   padding: 0 40px;
   margin: 0 auto;
 }
-
-.container-1380 {
-  max-width: 1380px;
-  width: 100%;
-  padding: 0 30px;
-  margin: 0 auto;
-}
-
-.container-1360 {
-  max-width: 1360px;
-  width: 100%;
-  padding: 0 20px;
-  margin: 0 auto;
-}
-
-.container-1340 {
-  max-width: 1340px;
-  width: 100%;
-  padding: 0 30px;
-  margin: 0 auto;
-}
-
-.container-1330 {
-  max-width: 1330px;
-  width: 100%;
-  padding: 0 30px;
-  margin: 0 auto;
-}
-
-.container-1326 {
-  max-width: 1236px;
-  width: 100%;
-  padding: 0 23px;
-  margin: 0 auto;
-}
-
-.container-1320 {
-  max-width: 1320px;
-  width: 100%;
-  padding: 0 30px;
-  margin: 0 auto;
-}
-
-.container-1300 {
-  max-width: 1300px;
-  width: 100%;
-  padding: 0 30px;
-  margin: 0 auto;
-}
-
-.container-1280 {
-  max-width: 1280px;
-  width: 100%;
-  padding: 0 20px;
-  margin: 0 auto;
-}
-
-.container-1260 {
-  max-width: 1260px;
-  width: 100%;
-  padding: 0 30px;
-  margin: 0 auto;
-}
-
-.container-1265 {
-  max-width: 1265px;
-  width: 100%;
-  padding: 0 20px;
-  margin: 0 auto;
-}
-
-.container-1246 {
-  max-width: 1246px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.container-1238 {
-  max-width: 1238px;
-  width: 100%;
-  padding: 0 14px;
-  margin: 0 auto;
-}
-
-.container-1222 {
-  max-width: 1222px;
-  width: 100%;
-  padding: 0 30px;
-  margin: 0 auto;
-}
-
-.container-1235 {
-  max-width: 1235px;
-  width: 100%;
-  padding: 0 30px;
-  margin: 0 auto;
-}
-
-.container-1210 {
-  max-width: 1210px;
-  width: 100%;
-  padding: 0 30px;
-  margin: 0 auto;
-}
-.container-1200 {
-  max-width: 1200px;
-  width: 100%;
-  padding: 0 30px;
-  margin: 0 auto;
-}
-
-.container-1180 {
-  max-width: 1180px;
-  width: 100%;
-  padding: 0 30px;
-  margin: 0 auto;
-}
-
-.container-1160 {
-  max-width: 1160px;
-  width: 100%;
-  padding: 0 30px;
-  margin: 0 auto;
-}
-
-.container-1040 {
-  max-width: 1040px;
-  width: 100%;
-  padding: 0 30px;
-  margin: 0 auto;
-}
-
-.container-1020 {
-  max-width: 1020px;
-  width: 100%;
-  padding: 0 30px;
-  margin: 0 auto;
-}
-
-.container-1010 {
-  max-width: 1010px;
-  width: 100%;
-  padding: 0 30px;
-  margin: 0 auto;
-}
-
-.container-1000 {
-  max-width: 1000px;
-  width: 100%;
-  padding: 0 30px;
-  margin: 0 auto;
-}
-
-.container-980 {
-  max-width: 980px;
-  width: 100%;
-  padding: 0 30px;
-  margin: 0 auto;
-}
-
-.container-993 {
-  max-width: 993px;
-  width: 100%;
-  padding: 0 20px;
-  margin: 0 auto;
-}
-
-.container-910 {
-  max-width: 910px;
-  width: 100%;
-  padding: 0 30px;
-  margin: 0 auto;
-}
-
-.container-880 {
-  max-width: 880px;
-  width: 100%;
-  padding: 0 30px;
-  margin: 0 auto;
-}
-
-.container-860 {
-  max-width: 860px;
-  width: 100%;
-  padding: 0 30px;
-  margin: 0 auto;
-}
-
-.container-852 {
-  max-width: 852px;
-  width: 100%;
-  padding: 0 30px;
-  margin: 0 auto;
-}
-
 .container-540 {
   max-width: 540px;
   width: 100%;

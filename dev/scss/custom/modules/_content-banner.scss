@@ -1,0 +1,130 @@
+.content-banner{
+   
+    position: relative;
+    background: $color-off-white;
+    >img{
+        width: 100%;
+        margin-top: -87px;
+        z-index: 2;
+        position: relative;
+    }
+    .box{
+        max-width: 1030px;
+      
+        z-index: 4;
+        width: 100%;
+        
+        margin: 0 auto;
+        margin-top: -133px;
+        border-radius: 30px;
+        border: solid 3px $color-yellow;
+        background:  url("cloud.webp") no-repeat center bottom / 100% $color-sky-blue;
+        padding: 0px 194px 0px 22px;
+        display: flex;
+        position: relative;
+        align-items: flex-end;
+       
+        &::before{
+            width: 97.8px;
+            height: 67.3px;
+            content: '';
+            position: absolute;
+            left: 276px;
+            z-index: 1;
+            top: -34px;
+            background: url("planet.webp") no-repeat center / 100%;
+        }
+        &::after{
+            width: 82px;
+            height: 81px;
+            content: '';
+            position: absolute;
+            right: 224px;
+            z-index: 1;
+            bottom: -31px;
+            background: url("ufo.webp") no-repeat center / 100%;
+        }
+
+       
+    }
+    .content{
+        text-align: center;
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 85px;
+        padding-bottom: 65px;
+        z-index: 2;
+        h2{
+            color: $color-pink;
+            margin-bottom: 8.3px;
+        }
+        &::after{
+            width: 14.3px;
+            height: 18px;
+            content: '';
+            position: absolute;
+            right: 180px;
+            z-index: 1;
+            top: 34px;
+            background: url("icon-vector.webp") no-repeat center / 100%;
+        }
+    }
+    .left-image{
+        width: 171px;
+        height: 170px;
+        flex: none;
+        position: relative;
+        img{
+            @include img-object-contain;
+        }
+        &::before{
+            width: 20.6px;
+            height: 25px;
+            content: '';
+            position: absolute;
+            right: -41px;
+            z-index: 1;
+            bottom: 45.5px;
+            background: url("star.webp") no-repeat center / 100%;
+        }
+        &::after{
+            width: 14.3px;
+            height: 18px;
+            content: '';
+            position: absolute;
+            left: 46px;
+            z-index: 1;
+            top: -3px;
+            background: url("icon-vector.webp") no-repeat center / 100%;
+        }
+
+       
+    }
+    .right-image{
+        width: 132px;
+        height: 204px;
+        flex: none;
+        position: absolute;
+        top: 21px;
+        right: 45.5px;
+        img{
+            @include img-object-contain;
+        }
+        margin-bottom: 8.4px;
+        margin-left: 16px;
+        &::before{
+            width: 23.2px;
+            height: 190.7px;
+            content: '';
+            position: absolute;
+            left: -4.4px;
+            z-index: 3;
+            bottom: 36px;
+            background: url("rope.webp") no-repeat center / 100%;
+        }
+       
+    }
+}

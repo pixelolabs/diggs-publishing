@@ -40,20 +40,25 @@
                 </div>
               </div>
             {% else %}
+             
+            {% endif %}
+            <div class="container-1260 flex-wrap">
+              {%- if block.settings.videobanner == false -%}
+              {% if block.settings.backgroundImage != blank or block.settings.videobanner != blank %}
               <div class="image-section {%if block.settings.gradient == true%} gradient-none{%endif%}">
                 <picture>
                   <source
                     media="(max-width: 600px)"
-                    srcset="{% if block.settings.backgroundImageMobile != blank %}{{ block.settings.backgroundImageMobile | img_url: '750x1400' }}{%endif%}"
+                    srcset="{% if block.settings.backgroundImageMobile != blank %}{{ block.settings.backgroundImageMobile | img_url: '600x600' }}{%endif%}"
                   >
                   <img
-                    src="{{ block.settings.backgroundImage | img_url: '2880x1620' }}"
+                    src="{{ block.settings.backgroundImage | img_url: '1028x1028' }}"
                     alt="{{ block.settings.backgroundImage.alt}}"
                   >
                 </picture>
               </div>
             {% endif %}
-            <div class="container-1340">
+            {% endif %}
               <div
                 class="content"
                 data-aos="fade-up"
@@ -109,17 +114,7 @@
     "id": "color_scheme",
     "label": "t:sections.all.colors.label",
     "default": "scheme-1"
-  },
-  {
-    "type": "style.spacing_panel",
-    "id": "spacing",
-    "label": "Spacing",
-    "default": {
-      "padding": "16px 2px",
-      "margin": "0px"
-    }
   }
-  
 ],
   "blocks": [
     {
@@ -131,7 +126,7 @@
           "id": "backgroundImage",
           "label": "Background Image (Desktop)",
           "info": {
-            "en": "2880 x 1620px Recommended"
+            "en": "1028px x 1028px Recommended"
           }
         },
         {
@@ -189,25 +184,16 @@
           "content": "Extra Settings",
           "info": "Recommened to be used by the developer only"
         },
-
-        {
-          "type": "checkbox",
-          "id": "gradient",
-          "label": "Switch off Gradient",
-          "info": "By default Gradient is On"
-        },
-
         {
           "type": "select",
           "id": "content_alignment",
           "options": [
             { "value": "left", "label": "Left" },
-            { "value": "right", "label": "Right" },
-            { "value": "center", "label": "Center" }
+            { "value": "right", "label": "Right" }
           ],
           "label": "Image Alignment",
-          "info": "By default it is center aligned.",
-          "default": "center"
+          "info": "By default it is left aligned.",
+          "default": "left"
         }
       ]
     }

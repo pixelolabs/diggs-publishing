@@ -16,7 +16,7 @@
         a {
           &.active,
           &:hover {
-            border-bottom: 2px solid $color-light-blue;
+            border-bottom: 2px solid $color-black;
           }
         }
       }
@@ -598,7 +598,7 @@
               height: 100%;
               left: 0;
               top: 0;
-              background: $color-blue;
+              background: $color-black;
               border-radius: 5px;
             }
 
@@ -760,7 +760,7 @@
                 line-height: 1.5;
                 letter-spacing: 0.02px;
                 text-align: left;
-                color: $color-blue;
+                color: $color-black;
                 text-decoration: underline;
               }
             }

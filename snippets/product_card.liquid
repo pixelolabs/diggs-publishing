@@ -39,7 +39,8 @@
         {% endif %}
       </span>
     {% endif %}
-
+    
+    {% if show_fav %}
     <!-- Swym Wishlist Plus EPI Button -->
     <button
       data-with-epi="true"
@@ -52,6 +53,7 @@
       {% include 'icon-heart' -%}
       {%- include 'icon-heart-filled' %}
     </button>
+  {% endif %}
   </div>
 
   <div class="content">
@@ -60,7 +62,7 @@
     </div>
 
     {% if show_title %}
-      <h3 class="h5 product-card__product-title uppercase">
+      <h3 class="h5 product-card__product-title">
         <a href="{{productRelated.url}}">
           {% if productRelated.metafields.productInfo.product_name != blank %}
             {{ productRelated.metafields.prodctInfo.product_name }}
@@ -88,6 +90,8 @@
         {% endif %}
       </span>
     {% endif %}
+    {% if show_secondary_button %}
+    
     <a
       class="btn--primary js__quick-view-click"
       title="{{ productRelated.title }}"
@@ -99,5 +103,6 @@
       data-var_images="{%- for var in productRelated.variants -%}{{- var.image | img_url: '150x150' -}}|{%- endfor -%}"
       >Quick View</a
     >
+    {% endif %}
   </div>
 </div>

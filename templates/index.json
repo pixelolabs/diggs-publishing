@@ -3,6 +3,7 @@
     "HeroBanner": {
       "type": "home-hero-banner",
       "blocks": {
+
         "d96d2ebe-b86c-4725-886e-21c6b9472a39": {
           "type": "slide",
           "settings": {
@@ -17,6 +18,7 @@
             "content_alignment": "left"
           }
         },
+
         "b1c4ec73-ff39-42b2-a07e-8cb1425f5b23": {
           "type": "slide",
           "settings": {
@@ -80,56 +82,6 @@
         "buttonLink": "shopify:\/\/collections"
       }
     },
-    "two_column_blog_slider_eiLWTi": {
-      "type": "two-column-blog-slider",
-      "blocks": {
-        "block_KQJqff": {
-          "type": "block",
-          "settings": {
-            "article": "news\/duis-aute-irure-dolor"
-          }
-        },
-        "block_Prniqy": {
-          "type": "block",
-          "settings": {
-            "article": "news\/lorem-ipsum-dolor-sit-amet"
-          }
-        }
-      },
-      "block_order": [
-        "block_KQJqff",
-        "block_Prniqy"
-      ],
-      "settings": {
-        "title1": "",
-        "title2": "",
-        "buttonText": "",
-        "buttonLink": ""
-      }
-    },
-    "half_image_half_content_cUGj9q": {
-      "type": "half-image-half-content",
-      "blocks": {
-        "image_4CLVwN": {
-          "type": "image",
-          "settings": {
-            "title1": "Title Goes Here",
-            "title2": "Another Title",
-            "description": "<p>Some Description Goes in here..<\/p>",
-            "buttonText": "Button",
-            "buttonLink": "",
-            "fontSize": false,
-            "center": false
-          }
-        }
-      },
-      "block_order": [
-        "image_4CLVwN"
-      ],
-      "settings": {
-        "bg": false
-      }
-    },
     "three_column_card_AEBCHA": {
       "type": "three-column-card",
       "blocks": {
@@ -155,50 +107,11 @@
         "paddingbottommobile": 0
       }
     },
-    "three_columns_steps_kUDTzX": {
-      "type": "three-columns-steps",
-      "blocks": {
-        "image_TdDAzN": {
-          "type": "image",
-          "settings": {
-            "title": "Title",
-            "description": "<p>Content..<\/p>"
-          }
-        },
-        "image_WVKpQ4": {
-          "type": "image",
-          "settings": {
-            "title": "Title",
-            "description": "<p>Content<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "image_TdDAzN",
-        "image_WVKpQ4"
-      ],
-      "settings": {
-        "title1": "Title Goes in here",
-        "title2": "Another Title",
-        "buttonText": "Button",
-        "buttonLink": ""
-      }
-    },
-    "three_column_video_card_i8eK96": {
-      "type": "three-column-video-card",
-      "settings": {
-        "title1": "",
-        "title2": ""
-      }
-    }
+   
   },
   "order": [
     "HeroBanner",
     "four_column_product_slider_z8x6r7",
-    "two_column_blog_slider_eiLWTi",
-    "half_image_half_content_cUGj9q",
     "three_column_card_AEBCHA",
-    "three_columns_steps_kUDTzX",
-    "three_column_video_card_i8eK96"
   ]
 }

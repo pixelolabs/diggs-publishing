@@ -1,0 +1,197 @@
+{% if section.blocks.size > 0 %}
+  {% for block in section.blocks %}
+    <div class="half-image-half-content {%if section.settings.bg == true%}bg-brown{%endif%}">
+      <div class="container-1260 flex">
+        <div
+          class="full-format flex-justify-column-center content {% if block.settings.image == blank and block.settings.video == blank %} full {% endif %} {%if block.settings.center == true%}center{%endif%}"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
+          {% if block.settings.pretitle != blank %}
+            <span>{{ block.settings.pretitle }}</span>
+          {% endif %}
+          {% if block.settings.title != blank %}
+            <h2 class="w-250 {% if block.settings.fontSize == true %} size {% endif %}">
+              {{ block.settings.title1 }}
+            </h2>
+          {% endif %}
+          {% if block.settings.description != blank %}
+            {{ block.settings.description }}
+          {% endif %}
+          {% if block.settings.buttonText != blank %}
+            <a
+              href="{{ block.settings.buttonLink }}"
+              title="Read More About {{ block.settings.buttonText }}"
+              aria-label="Read More About {{ block.settings.buttonText }}"
+              class="btn--primary m-t-15"
+            >
+              {{ block.settings.buttonText }}
+            </a>
+          {% endif %}
+        </div>
+
+        {% if block.settings.showVideo == true %}
+          {% if block.settings.videoPopup == true %}
+            {% if block.settings.video != blank %}
+              <a class="video-section " data-lity href="{{block.settings.video}}">
+                {{ block.settings.image | image_url: width: 1262 | image_tag: loading: 'lazy', widths: '1262x1000' }}
+                <div class="play-icon"></div>
+              </a>
+            {% endif %}
+          {% else %}
+            <div class="video-section" data-aos="fade-up" data-aos-duration="2000">
+              <div class="video-wrapper">
+                {% if block.settings.video contains '.mp4' %}
+                  <video controls loop class="video">
+                    <source src="{{ block.settings.video }}" type="video/mp4">
+                  </video>
+                  <div class="play-icon"></div>
+                {% else %}
+                  {% if block.settings.video != blank %}
+                    {% assign videoId = block.settings.video | split: 'vimeo.com/' %}
+                    <iframe
+                      src="https://player.vimeo.com/video/{{ videoId[1] }}?"
+                      frameborder="0"
+                      allow="fullscreen"
+                      allowfullscreen
+                      loading="lazy"
+                      class="video"
+                    ></iframe>
+                    <div id="playIcon" class="play-icon"></div>
+                  {% endif %}
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+
+        {% else %}
+          {% if block.settings.image != blank %}
+            <div
+              class="image-section"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              {{ block.settings.image | image_url: width: 1262 | image_tag: loading: 'lazy', widths: '1262x1000' }}
+            </div>
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+{% endif %}
+
+{% schema %}
+{
+  "name": "Half Image Half Content",
+
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Section",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "showVideo",
+          "label": "Show Video"
+        },
+        {
+          "type": "url",
+          "id": "video",
+          "label": "Video"
+        },
+        {
+          "type": "checkbox",
+          "id": "videoPopup",
+          "label": "Open Video in Popup"
+        },
+        {
+          "type": "text",
+          "id": "pretitle",
+          "label": "Pre Title"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "buttonText",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "buttonLink",
+          "label": "Button Link"
+        },
+        {
+          "type": "header",
+          "content": "Extra Settings",
+          "info": "Recommened to be used by the developer only"
+        },
+        {
+          "type": "checkbox",
+          "id": "fontSize",
+          "label": "Do you want the title to be bigger?"
+        },
+        {
+          "type": "header",
+          "content": "Mobile Settings"
+        },
+        {
+          "type": "checkbox",
+          "id": "center",
+          "label": "Center align the content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Half Image Half Content"
+    }
+  ]
+}
+{% endschema %}
+<script>
+  jQuery(function () {
+    document.addEventListener('DOMContentLoaded', function () {
+      var video = document.querySelector('.video');
+      var playIcon = document.querySelector('.play-icon');
+
+      // Hide play icon when video starts playing
+      video.addEventListener('play', function () {
+        playIcon.style.display = 'none';
+      });
+
+      // Show play icon when video pauses
+      video.addEventListener('pause', function () {
+        playIcon.style.display = 'block';
+      });
+
+      // Show play icon when video ends
+      video.addEventListener('ended', function () {
+        playIcon.style.display = 'block';
+      });
+
+      // Play video when play icon is clicked
+      playIcon.addEventListener('click', function () {
+        video.play();
+      });
+    });
+  });
+</script>

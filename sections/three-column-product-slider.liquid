@@ -1,63 +1,64 @@
 <div
-  class="four-column-product-slider"
+  class="three-column-product-slider"
   data-aos="fade-up"
   data-aos-duration="2000"
 >
+  <div class="container-1260 flex-wrap">
   <div class="top-section flex">
-    {% if section.settings.title1 != blank %}
-      <h2 class="h1">
-        {{ section.settings.title1 }}
-        {% if section.settings.title2 != blank %}
-          <span class="color-grey h1">{{ section.settings.title2 }}</span>
-        {% endif %}
+    <div class="heading">
+    {% if section.settings.pretitle != blank %}
+      <span class="pre-title">
+        {{ section.settings.pretitle }}
+      </span>
+    {% endif %}
+    {% if section.settings.title != blank %}
+      <h2>
+        {{ section.settings.title }}
       </h2>
     {% endif %}
+    </div>
     {% if section.settings.buttonText != blank and section.settings.buttonLink != blank %}
       <a
         href="{{ section.settings.buttonLink }}"
         title="Read More About {{ section.settings.buttonText }}"
         aria-label="Read More About {{ section.settings.buttonText }}"
-        class="btn-fourth "
+        class="link--primary "
         data-button-text="{{- section.settings.buttonText -}}"
       >
-        <span>
+        
           {{- section.settings.buttonText -}}
-        </span>
-      </a>
-      <a
-        href="{{ section.settings.buttonLink }}"
-        title="Read More About {{ section.settings.buttonText }}"
-        aria-label="Read More About {{ section.settings.buttonText }}"
-        class="link--primary"
-      >
-        {{- section.settings.buttonText -}}
+       
       </a>
     {% endif %}
   </div>
   <div
     class="inner"
   >
+    <div class="slider-outer">
     <div class="slider js__product-slider">
       <div class="swiper-wrapper">
-        {%- assign collection = collections[section.settings.collection] -%}
-
+       
         {%- for block in section.blocks -%}
           {% assign productRelated = all_products[block.settings.product] %}
+          {% if productRelated != empty %}
           <div class="product-card swiper-slide slide ">
-            {% include 'product_Card'  with  productRelated: productRelated , show_price: true, show_tags: true, show_auto_tags: true, show_title: true, show_fav: false, show_secondary_button: false %}
+            {% include 'product_Card'  with  productRelated: productRelated , show_price: true, show_tags: false, show_auto_tags: false, show_title: true, show_fav: false, show_secondary_button: false %}
           </div>
+        {% endif %}
         {% endfor %}
       </div>
-      <div class="swiper-button-prev-product-slider">
-        {% include 'icon-arrow-slide-white' %}
-      </div>
-      <div class="swiper-button-next-product-slider">
-        {% include 'icon-arrow-slide' %}
-      </div>
+      
+    </div>
+    </div>
+    <div class="swiper-button-prev-product-slider">
+      {% include 'icon-arrow-slide-black' %}
+    </div>
+    <div class="swiper-button-next-product-slider">
+      {% include 'icon-arrow-slide-black' %}
     </div>
   </div>
 </div>
-
+</div>
 {% if section.blocks.size > 0 %}
   {% for block in section.blocks %}
     {% assign productRelated = all_products[block.settings.product] %}
@@ -67,17 +68,17 @@
 
 {% schema %}
 {
-  "name": "Four Col Product Slider",
+  "name": "Three Col Product Slider",
   "settings": [
     {
       "type": "text",
-      "id": "title1",
-      "label": "Title (Primary)"
+      "id": "pretitle",
+      "label": "Pretitle"
     },
     {
       "type": "text",
-      "id": "title2",
-      "label": "Title (Secondary)"
+      "id": "title",
+      "label": "Title"
     },
     {
       "type": "text",
@@ -106,7 +107,7 @@
 
   "presets": [
     {
-      "name": "Four Column Product Slider"
+      "name": "Three Column Product Slider"
     }
   ]
 }

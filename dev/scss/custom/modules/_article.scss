@@ -64,12 +64,12 @@
             }
           }
           padding: 8px 17px 8px 15px;
-          background-color: $color-sky-blue-2;
+          background-color: $color-black;
           border-radius: 30px;
           display: inline-block;
           margin-bottom: 16px;
           line-height: normal;
-          border: 1px solid $color-sky-blue-2;
+          border: 1px solid $color-black;
           margin-right: 10px;
           &:hover {
             background-color: transparent;
@@ -300,11 +300,11 @@
       text-transform: capitalize;
     }
     .tag {
-      color: $color-blue;
+      color: $color-black;
     }
     .spacer {
       margin-left: -4px;
-      color: $color-blue;
+      color: $color-black;
       &:last-child {
         display: none;
       }
@@ -385,14 +385,14 @@
         letter-spacing: normal;
         text-align: left;
         text-transform: capitalize;
-        color: $color-blue;
+        color: $color-black;
         &.title {
           color: $color-black;
         }
       }
       .spacer {
         margin-left: -4px;
-        color: $color-blue;
+        color: $color-black;
         &:last-child {
           display: none;
         }

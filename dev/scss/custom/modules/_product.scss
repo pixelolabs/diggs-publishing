@@ -786,7 +786,7 @@
           text-align: left;
           font-family: var(--font-family-secondary);
           &.active {
-            border-bottom: 1px solid $color-blue;
+            border-bottom: 1px solid $color-black;
             font-weight: 700;
           }
         }
@@ -1618,7 +1618,7 @@
   .okeReviews-review-reviewer-profile-status--verified,
 .okeReviews.okeReviews--theme
   .okeReviews-review-reviewer-profile-status--verified {
-  color: $color-blue !important;
+  color: $color-black !important;
 }
 
 .okeReviews {
@@ -1648,7 +1648,7 @@
 
 .okeReviews--theme .okeReviews-badge--recommended,
 .okeReviews.okeReviews--theme .okeReviews-barGraph-layer--foreground {
-  background-color: $color-blue !important;
+  background-color: $color-black !important;
 }
 
 .price__wrapper {

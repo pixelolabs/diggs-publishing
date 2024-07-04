@@ -10,7 +10,7 @@
     max-height: 810px;
     display: flex;
     align-items: center;
-    background-color: $color-black;
+    background-image: linear-gradient(117deg, #5ebe55 2%, #a8d24e 50%, #5abe50 98%);
     @include MQ(MQ-768) {
       height: 699px;
       padding-top: 115px !important;
@@ -24,39 +24,7 @@
       z-index: 8;
       height: 100%;
     }
-    .image-section {
-      width: 100%;
-      position: absolute;
-      left: 0;
-      top: 0;
-      background: $color-black;
-      height: 100%;
-      img {
-        @include img-object-cover;
-        position: relative;
-      }
-      &::before {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        content: "";
-        left: 0;
-        top: 0;
-        z-index: 2;
-        background-blend-mode: multiply;
-        background-image: linear-gradient(
-          to right,
-          #94b7d8 19%,
-          rgba(217, 217, 217, 0) 117%
-        );
-        // background-image: linear-gradient(to bottom, rgba(46, 88, 140, 0.5), rgba(46, 88, 140, 0.5));
-      }
-      &.gradient-none {
-        &:before {
-          display: none;
-        }
-      }
-    }
+   
     .video-section {
       width: 100%;
       height: 100%;
@@ -102,56 +70,35 @@
         }
       }
     }
-    .container-1340 {
+
+    .image-section {
+      width: calc(50% - 36px);
+      margin-left: 36px;
+      max-width: 514px;
+      order: 2;
+      img {
+        @include img-object-cover;
+        position: relative;
+      }
+    }
+    .container-1260 {
       position: relative;
+      
       z-index: 3;
       @include MQ(MQ-768) {
         justify-content: center !important;
       }
       .content {
-        // max-width: 666px;
-        max-width: 712px;
-        margin: 0 auto;
-        opacity: 0 !important;
-        transition-property: opacity, -webkit-transform !important;
-        transition-property: opacity, transform !important;
-        transition-property: opacity, transform, -webkit-transform !important;
-        transition-duration: 3s;
-        @include MQ(MQ-768) {
-          max-width: 500px;
-          margin-left: 0 !important;
-        }
-        @include MQ(MQ-600) {
-          max-width: 450px;
-          // margin-left: 0 !important;
-        }
-        @include MQ(MQ-480) {
-          max-width: 300px;
-        }
-        &.animate {
-          opacity: 1 !important;
-          transform: none !important;
-        }
-        // @include MQ(MQ-768) {
-        //   margin: 0 auto;
-        //   text-align: center;
-        //   .btn--primary {
-        //     margin-left: auto;
-        //     margin-right: auto;
-        //   }
-        // }
-        h1 {
-          @include MQ(MQ-480) {
-            font-size: 25px;
-          }
-        }
+       width: 50%;
+       padding-right: 40px;
+       
         .pre-title {
           margin-bottom: 8px;
           font-weight: bold;
         }
         h1,
         p {
-          line-height: 1.35;
+          
           margin-bottom: 10px;
         }
         .btn--primary {
@@ -170,7 +117,7 @@
       }
     }
     &.left-align {
-      .container-1340 {
+      .container-1260 {
         .content {
           margin: 0;
           // @include MQ(MQ-768) {
@@ -185,7 +132,7 @@
       }
     }
     &.right-align {
-      .container-1340 {
+      .container-1260 {
         display: flex;
         justify-content: flex-end;
         .content {
@@ -241,12 +188,12 @@
         fill: $color-white;
       }
       path {
-        fill: $color-dark-blue;
-        // stroke: $color-dark-blue;
+        fill: $color-black;
+        // stroke: $color-black;
       }
       .line {
-        fill: $color-dark-blue;
-        stroke: $color-dark-blue;
+        fill: $color-black;
+        stroke: $color-black;
       }
     }
   }
@@ -257,7 +204,7 @@
   }
   svg:hover {
     circle {
-      fill: $color-dark-blue;
+      fill: $color-black;
     }
     path {
       fill: $color-white;

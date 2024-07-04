@@ -14,7 +14,7 @@ footer {
 
   .footer-top-bar {
     padding: 22px 0 18px;
-    background-color: $color-light-blue;
+    background-color: $color-black;
 
     * {
       color: $color-white;
@@ -114,7 +114,7 @@ footer {
         width: calc(100% + 80px);
         margin-left: -40px;
         padding: 0 40px 31px;
-        border-bottom: 1px solid $color-dark-blue;
+        border-bottom: 1px solid $color-black;
 
         form {
           max-width: 400px;

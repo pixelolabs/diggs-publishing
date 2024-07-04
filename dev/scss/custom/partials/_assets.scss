@@ -368,6 +368,27 @@ textarea.input--error {
       letter-spacing: 0.09px !important;
     }
   }
+  &__product-title a{
+    font-size: 16px;
+    font-family: var(--font-family-primary);
+    line-height: 1.44;
+    letter-spacing: normal;
+    font-weight: 600;
+    margin-bottom: 25px;
+  }
+  padding-right: 12px;
+  padding-top: 12px;
+  position: relative;
+  &::before{
+    width: calc(100% - 12px);
+    height:calc(100% - 12px);
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    border: 2px solid $color-pink;
+  }
   .okeReviews
     .okeReviews-starRating--small
     .okeReviews-starRating-indicator-layer {
@@ -379,6 +400,8 @@ textarea.input--error {
     &::after {
       display: none;
     }
+    z-index: 2;
+    position: relative;
     &:hover {
       .image-section {
         img {
@@ -400,14 +423,13 @@ textarea.input--error {
   .image-section {
     overflow: hidden !important;
     position: relative !important;
-    height: 320px;
+    height: 304px;
     width: 100%;
-    margin-bottom: 20px !important;
+   
     img {
-      @include img-object-contain;
+      @include img-object-cover;
       visibility: visible !important;
       // display: none;
-      border-radius: 20px;
       display: none;
       &:first-child {
         display: block;
@@ -418,7 +440,7 @@ textarea.input--error {
     }
     .product-card__tags-automatic-status {
       .tag {
-        background: $color-light-sky-blue;
+        background: $color-black;
         padding: 8px 16px;
         color: $color-white !important;
         border-radius: 50px;
@@ -428,10 +450,14 @@ textarea.input--error {
       }
     }
   }
-  text-align: center;
-  h3 {
-    margin-bottom: 2px;
+  .content{
+    background-image: linear-gradient(178deg, #d51f91 2%, #ee35a9 98%);
+    *{
+      color: $color-white;
+    }
+    padding: 35px 24px 50px;
   }
+  text-align: center;
   &__collection-title {
     a {
       font-weight: 600;
@@ -445,7 +471,7 @@ textarea.input--error {
     .tag {
       display: inline-block;
       margin-right: 10px;
-      background: $color-light-sky-blue !important;
+      background: $color-black !important;
       color: $color-black !important;
       font-size: 12px;
       font-weight: bold;
@@ -465,8 +491,8 @@ textarea.input--error {
     }
   }
   &__price {
-    margin-top: 10px;
-    font-weight: 700;
+   
+   
     display: flex;
     color: $color-black;
     display: flex !important;
@@ -479,9 +505,11 @@ textarea.input--error {
     }
     span,
     s {
-      font-size: 14px;
-      letter-spacing: 0.11px;
-      line-height: normal;
+      font-weight: 700;
+    font-size: 16px;
+    font-family: var(--font-family-primary);
+    line-height: normal;
+    letter-spacing: normal;
       // text-transform: capitalize;
       text-align: center;
       margin-right: 5px;
@@ -588,8 +616,8 @@ textarea.input--error {
     a {
       &:hover {
         span {
-          color: $color-blue;
-          border-bottom: 1.8px solid $color-blue;
+          color: $color-black;
+          border-bottom: 1.8px solid $color-black;
         }
       }
     }
@@ -604,8 +632,8 @@ textarea.input--error {
       letter-spacing: 0.01px;
       text-align: left;
       &.current {
-        color: $color-blue;
-        border-bottom: 1.8px solid $color-blue;
+        color: $color-black;
+        border-bottom: 1.8px solid $color-black;
       }
     }
   }
@@ -888,7 +916,7 @@ textarea.input--error {
     position: relative;
     height: 4px;
     width: 100%;
-    background-color: $color-light-sky-blue;
+    background-color: $color-black;
     border-radius: 4px;
     span {
       transition: width 2s;
@@ -896,7 +924,7 @@ textarea.input--error {
       height: 4px;
       display: block;
       border-radius: 4px;
-      background-color: $color-blue;
+      background-color: $color-black;
     }
   }
 }

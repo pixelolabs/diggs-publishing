@@ -1,0 +1,91 @@
+.three-column-product-slider {
+  background: $color-off-white;
+  padding: 80px 0 180px 0;
+  transform: translate3d(0, 50px, 0) !important;
+  &.aos-animate {
+    transform: none !important;
+  }
+  @include MQ(MQ-480) {
+    padding: 60px 0 76px 0;
+  }
+  .top-section {
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 0 60px;
+    align-items: flex-end;
+    position: relative;
+    &::before{
+      width: 130px;
+      height: 37px;
+      content: '';
+      position: absolute;
+      right: 0px;
+      left: 0;
+      margin: 0 auto;
+      z-index: 1;
+      top: 12px;
+      background: url("star-big.webp") no-repeat center right / 30px;
+  }
+  
+    @include MQ(MQ-768) {
+      margin: 0 0 60px;
+    }
+    .link--primary {
+       height: 16px;
+    }
+    .pre-title{
+      margin-bottom: 22px;
+      color: $color-orange;
+    }
+    @include MQ(MQ-768) {
+      justify-content: center;
+      flex-direction: column;
+      
+    }
+  }
+  .inner {
+    width: 100%;
+    .slider-outer{
+      width: 100%;
+      overflow: hidden;
+    }
+    position: relative;
+  
+    @include MQ(MQ-480) {
+    }
+    .slider {
+      position: relative;
+      overflow: hidden;
+      
+    }
+   
+    .swiper-slide {
+     
+      .content {
+      
+      }
+    }
+    .swiper-button-prev-product-slider,
+    .swiper-button-next-product-slider {
+     
+      position: absolute;
+      width: 19px;
+      height: 30px;
+      right: -54px;
+      top: calc(50% - 9.5px);
+      z-index: 10;
+      cursor: pointer;
+      @include MQ(MQ-600) {
+        display: none;
+      }
+      
+     
+    }
+    .swiper-button-prev-product-slider {
+       transform: rotate(180deg);
+      left: -54px;
+    }
+    
+  }
+
+}
