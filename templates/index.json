@@ -86,11 +86,36 @@
         "buttonText": "VIEW ALL",
         "buttonLink": "shopify:\/\/collections"
       }
+    },
+    "half_image_half_content_MaYr7A": {
+      "type": "half-image-half-content",
+      "blocks": {
+        "image_U6JiFN": {
+          "type": "image",
+          "settings": {
+            "showVideo": false,
+            "video": "",
+            "videoPopup": false,
+            "pretitle": "Krystaelynne Sanders Diggs",
+            "description": "",
+            "buttonText": "",
+            "buttonLink": "",
+            "fontSize": false,
+            "center": false
+          }
+        }
+      },
+      "block_order": [
+        "image_U6JiFN"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "HeroBanner",
     "content_banner_maXcHf",
-    "three_column_product_slider_KnYRxa"
+    "three_column_product_slider_KnYRxa",
+    "half_image_half_content_MaYr7A"
   ]
 }
