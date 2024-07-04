@@ -10,14 +10,9 @@
           {% if block.settings.pretitle != blank %}
             <span>{{ block.settings.pretitle }}</span>
           {% endif %}
-          {% if block.settings.title1 != blank %}
+          {% if block.settings.title != blank %}
             <h2 class="w-250 {% if block.settings.fontSize == true %} size {% endif %}">
               {{ block.settings.title1 }}
-              {% if block.settings.title2 != blank %}
-                <span class="color-grey h2 {% if block.settings.breakTheNextTitle == true %} displayBlock{% endif %}">
-                  {{- block.settings.title2 -}}
-                </span>
-              {% endif %}
             </h2>
           {% endif %}
           {% if block.settings.description != blank %}
@@ -125,18 +120,8 @@
         },
         {
           "type": "text",
-          "id": "title1",
-          "label": "Title (Primary)"
-        },
-        {
-          "type": "text",
-          "id": "title2",
-          "label": "Title (Secondary)"
-        },
-        {
-          "type": "checkbox",
-          "id": "breakTheNextTitle",
-          "label": "Break The Second Title"
+          "id": "title",
+          "label": "Title"
         },
         {
           "type": "richtext",
