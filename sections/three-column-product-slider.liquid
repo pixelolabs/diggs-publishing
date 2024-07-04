@@ -36,11 +36,10 @@
   >
     <div class="slider js__product-slider">
       <div class="swiper-wrapper">
-        {%- assign collection = collections[section.settings.collection] -%}
-
+       
         {%- for block in section.blocks -%}
           {% assign productRelated = all_products[block.settings.product] %}
-          
+
           <div class="product-card swiper-slide slide ">
             {% include 'product_Card'  with  productRelated: productRelated , show_price: true, show_tags: false, show_auto_tags: false, show_title: true, show_fav: false, show_secondary_button: false %}
           </div>
