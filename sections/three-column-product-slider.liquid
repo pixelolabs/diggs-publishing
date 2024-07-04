@@ -3,6 +3,7 @@
   data-aos="fade-up"
   data-aos-duration="2000"
 >
+  <div class="container-1260 flex-wrap">
   <div class="top-section flex">
     {% if section.settings.pretitle != blank %}
       <h2>
@@ -51,7 +52,7 @@
     </div>
   </div>
 </div>
-
+</div>
 {% if section.blocks.size > 0 %}
   {% for block in section.blocks %}
     {% assign productRelated = all_products[block.settings.product] %}
