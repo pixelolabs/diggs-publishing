@@ -4,12 +4,14 @@
   data-aos-duration="2000"
 >
   <div class="top-section flex">
+    {% if section.settings.pretitle != blank %}
+      <h2>
+        {{ section.settings.title }}
+      </h2>
+    {% endif %}
     {% if section.settings.title1 != blank %}
-      <h2 class="h1">
-        {{ section.settings.title1 }}
-        {% if section.settings.title2 != blank %}
-          <span class="color-grey h1">{{ section.settings.title2 }}</span>
-        {% endif %}
+      <h2>
+        {{ section.settings.title }}
       </h2>
     {% endif %}
     {% if section.settings.buttonText != blank and section.settings.buttonLink != blank %}
@@ -17,12 +19,12 @@
         href="{{ section.settings.buttonLink }}"
         title="Read More About {{ section.settings.buttonText }}"
         aria-label="Read More About {{ section.settings.buttonText }}"
-        class="btn-fourth "
+        class="link--primary "
         data-button-text="{{- section.settings.buttonText -}}"
       >
-        <span>
+        
           {{- section.settings.buttonText -}}
-        </span>
+       
       </a>
       <a
         href="{{ section.settings.buttonLink }}"
