@@ -1,7 +1,6 @@
-{% if section.blocks.size > 0 %}
-  {% for block in section.blocks %}
-    <div class="half-image-half-content {%if section.settings.bg == true%}bg-brown{%endif%}">
-      <div class="container-1260 flex">
+
+    <div class="half-image-half-content">
+      <div class="container-1440 flex">
         <div
           class="full-format flex-justify-column-center content {% if block.settings.image == blank and block.settings.video == blank %} full {% endif %} {%if block.settings.center == true%}center{%endif%}"
           data-aos="fade-up"
@@ -82,8 +81,7 @@
         {% endif %}
       </div>
     </div>
-  {% endfor %}
-{% endif %}
+  
 
 {% schema %}
 {
@@ -182,31 +180,4 @@
   ]
 }
 {% endschema %}
-<script>
-  jQuery(function () {
-    document.addEventListener('DOMContentLoaded', function () {
-      var video = document.querySelector('.video');
-      var playIcon = document.querySelector('.play-icon');
 
-      // Hide play icon when video starts playing
-      video.addEventListener('play', function () {
-        playIcon.style.display = 'none';
-      });
-
-      // Show play icon when video pauses
-      video.addEventListener('pause', function () {
-        playIcon.style.display = 'block';
-      });
-
-      // Show play icon when video ends
-      video.addEventListener('ended', function () {
-        playIcon.style.display = 'block';
-      });
-
-      // Play video when play icon is clicked
-      playIcon.addEventListener('click', function () {
-        video.play();
-      });
-    });
-  });
-</script>
