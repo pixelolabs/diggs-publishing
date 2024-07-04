@@ -90,6 +90,8 @@
         {% endif %}
       </span>
     {% endif %}
+    {% if show_secondary_button %}
+    
     <a
       class="btn--primary js__quick-view-click"
       title="{{ productRelated.title }}"
@@ -101,5 +103,6 @@
       data-var_images="{%- for var in productRelated.variants -%}{{- var.image | img_url: '150x150' -}}|{%- endfor -%}"
       >Quick View</a
     >
+    {% endif %}
   </div>
 </div>
