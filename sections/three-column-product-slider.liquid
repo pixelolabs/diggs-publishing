@@ -39,10 +39,11 @@
        
         {%- for block in section.blocks -%}
           {% assign productRelated = all_products[block.settings.product] %}
-
+          {% if productRelated != empty %}
           <div class="product-card swiper-slide slide ">
             {% include 'product_Card'  with  productRelated: productRelated , show_price: true, show_tags: false, show_auto_tags: false, show_title: true, show_fav: false, show_secondary_button: false %}
           </div>
+        {% endif %}
         {% endfor %}
       </div>
       <div class="swiper-button-prev-product-slider">
