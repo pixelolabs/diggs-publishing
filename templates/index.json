@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "HeroBanner": {
@@ -7,111 +16,109 @@
         "d96d2ebe-b86c-4725-886e-21c6b9472a39": {
           "type": "slide",
           "settings": {
+            "backgroundImage": "shopify:\/\/shop_images\/hero-baby.webp",
             "video": "",
             "videobanner": false,
-            "pretitle": "Pre Title",
-            "title": "Title",
-            "description": "<p>What drives the pace of aging is no longer a mystery. <br\/>But healthcare is slow to absorb what science already knows.<br\/>Welcome to InfiniWell. We are here to close the gap, systematically.<\/p>",
-            "buttonText": "Available Now",
-            "buttonLink": "shopify:\/\/collections\/custom-collection",
-            "gradient": false,
-            "content_alignment": "left"
-          }
-        },
-
-        "b1c4ec73-ff39-42b2-a07e-8cb1425f5b23": {
-          "type": "slide",
-          "settings": {
-            "video": "https:\/\/vimeo.com\/894089995",
-            "videobanner": true,
-            "pretitle": "Pre Title",
-            "title": "Title",
-            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad.<\/p>",
-            "buttonText": "shop now",
+            "pretitle": "Welcome to Diggs Publishing",
+            "title": "Diverse Children’s Books collections",
+            "description": "<p>In a word filled with countless stories, Diggs Publishing celebrates the unique tales that often go untold.<\/p>",
+            "buttonText": "Order Now",
             "buttonLink": "shopify:\/\/collections",
-            "gradient": true,
-            "content_alignment": "center"
+            "content_alignment": "left"
           }
         }
       },
       "block_order": [
-        "d96d2ebe-b86c-4725-886e-21c6b9472a39",
-        "b1c4ec73-ff39-42b2-a07e-8cb1425f5b23"
+        "d96d2ebe-b86c-4725-886e-21c6b9472a39"
       ],
+      "settings": {
+        "color_scheme": ""
+      }
+    },
+    "content_banner_maXcHf": {
+      "type": "content-banner",
       "settings": {
       }
     },
-    "four_column_product_slider_z8x6r7": {
-      "type": "four-column-product-slider",
+    "three_column_product_slider_KnYRxa": {
+      "type": "three-column-product-slider",
       "blocks": {
-        "product_nppPXL": {
+        "product_QdJg9b": {
           "type": "product",
           "settings": {
-            "product": "dummy-product"
+            "product": "always-there-a-childrens-book-about-healing-from-grief"
           }
         },
-        "product_PGJEc4": {
+        "product_kqjaAK": {
           "type": "product",
           "settings": {
-            "product": "dummy-product-1"
+            "product": "bebe-de-piel-morena"
           }
         },
-        "product_KrTa76": {
+        "product_7w7YGy": {
           "type": "product",
           "settings": {
-            "product": "product-1"
+            "product": "donation-where-hands-go-the-power-of-no"
           }
         },
-        "product_HkNp6M": {
+        "product_RbJU3i": {
           "type": "product",
           "settings": {
-            "product": "product-2"
+            "product": "a-girl-named-rainbow"
+          }
+        },
+        "product_WCmKJP": {
+          "type": "product",
+          "settings": {
+            "product": "rainbow-ebook"
           }
         }
       },
       "block_order": [
-        "product_nppPXL",
-        "product_PGJEc4",
-        "product_KrTa76",
-        "product_HkNp6M"
+        "product_QdJg9b",
+        "product_kqjaAK",
+        "product_7w7YGy",
+        "product_RbJU3i",
+        "product_WCmKJP"
       ],
       "settings": {
-        "title1": "Four Column",
-        "title2": "Product Slider",
-        "buttonText": "Shop all",
+        "pretitle": "Best Deals",
+        "title": "Latest Books Collection",
+        "buttonText": "VIEW ALL",
         "buttonLink": "shopify:\/\/collections"
       }
     },
-    "three_column_card_AEBCHA": {
-      "type": "three-column-card",
+    "half_image_half_content_MaYr7A": {
+      "type": "half-image-half-content",
       "blocks": {
-        "image_mpAzcm": {
+        "image_U6JiFN": {
           "type": "image",
           "settings": {
-            "title": "Title Goes Here",
-            "table": "<p>Content goes in here<\/p>",
-            "bg_color": "#1773b0"
+            "image": "shopify:\/\/shop_images\/dummy.webp",
+            "showVideo": false,
+            "video": "https:\/\/www.youtube.com\/watch?v=9xwazD5SyVg",
+            "videoPopup": true,
+            "pretitle": "Krystaelynne Sanders Diggs",
+            "title": "My Mission is to prevent child sexual abuse",
+            "description": "<p>In a world filled with countless stories, Diggs Publishing celebrates the unique tales that often go untold. Dive into our universe, where each page brings to life characters that truly reflect the world’s diverse tapestry.<\/p>",
+            "buttonText": "Read More",
+            "buttonLink": "#",
+            "fontSize": false,
+            "center": false
           }
         }
       },
       "block_order": [
-        "image_mpAzcm"
+        "image_U6JiFN"
       ],
       "settings": {
-        "title1": "Black",
-        "title2": "Grey",
-        "description": "<p>What drives the pace of aging is no longer a mystery. <br\/>But healthcare is slow to absorb what science already knows.<br\/>Welcome to InfiniWell. We are here to close the gap, systematically.<\/p>",
-        "paddingtop": 0,
-        "paddingtopmobile": 0,
-        "paddingbottom": 0,
-        "paddingbottommobile": 0
       }
-    },
-   
+    }
   },
   "order": [
     "HeroBanner",
-    "four_column_product_slider_z8x6r7",
-    "three_column_card_AEBCHA",
+    "content_banner_maXcHf",
+    "three_column_product_slider_KnYRxa",
+    "half_image_half_content_MaYr7A"
   ]
 }
