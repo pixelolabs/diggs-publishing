@@ -39,7 +39,8 @@
         {% endif %}
       </span>
     {% endif %}
-
+    
+    {% if show_fav %}
     <!-- Swym Wishlist Plus EPI Button -->
     <button
       data-with-epi="true"
@@ -52,6 +53,7 @@
       {% include 'icon-heart' -%}
       {%- include 'icon-heart-filled' %}
     </button>
+  {% endif %}
   </div>
 
   <div class="content">
