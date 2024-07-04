@@ -39,51 +39,58 @@
       "settings": {
       }
     },
-    "four_column_product_slider_z8x6r7": {
-      "type": "four-column-product-slider",
+    "three_column_product_slider_KnYRxa": {
+      "type": "three-column-product-slider",
       "blocks": {
-        "product_nppPXL": {
+        "product_QdJg9b": {
           "type": "product",
           "settings": {
-            "product": "dummy-product"
+            "product": "always-there-a-childrens-book-about-healing-from-grief"
           }
         },
-        "product_PGJEc4": {
+        "product_kqjaAK": {
           "type": "product",
           "settings": {
-            "product": "dummy-product-1"
+            "product": "bebe-de-piel-morena"
           }
         },
-        "product_KrTa76": {
+        "product_7w7YGy": {
           "type": "product",
           "settings": {
-            "product": "product-1"
+            "product": "donation-where-hands-go-the-power-of-no"
           }
         },
-        "product_HkNp6M": {
+        "product_RbJU3i": {
           "type": "product",
           "settings": {
-            "product": "product-2"
+            "product": "a-girl-named-rainbow"
+          }
+        },
+        "product_WCmKJP": {
+          "type": "product",
+          "settings": {
+            "product": "rainbow-ebook"
           }
         }
       },
       "block_order": [
-        "product_nppPXL",
-        "product_PGJEc4",
-        "product_KrTa76",
-        "product_HkNp6M"
+        "product_QdJg9b",
+        "product_kqjaAK",
+        "product_7w7YGy",
+        "product_RbJU3i",
+        "product_WCmKJP"
       ],
       "settings": {
-        "title1": "Four Column",
-        "title2": "Product Slider",
-        "buttonText": "Shop all",
-        "buttonLink": "shopify:\/\/collections"
+        "pretitle": "",
+        "title": "",
+        "buttonText": "",
+        "buttonLink": ""
       }
     }
   },
   "order": [
     "HeroBanner",
     "content_banner_maXcHf",
-    "four_column_product_slider_z8x6r7"
+    "three_column_product_slider_KnYRxa"
   ]
 }
