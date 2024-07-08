@@ -962,7 +962,7 @@ jQuery(function () {
 
   var logoSlider = new Swiper('.js_logo-slider', {
     slidesPerView: 4,
-    spaceBetween: 20,
+    spaceBetween: 148,
     freeMode: true,
     watchSlidesProgress: true,
     clickable: true,
