@@ -163,6 +163,14 @@
       "settings": {
         "title": "Charities Krystaelynne Works With and Supports"
       }
+    },
+    "full_width_content_section_4eMcgt": {
+      "type": "full-width-content-section",
+      "settings": {
+        "title": "Every writer starts as a storyteller. Explore the journey of author Krystaelynne Sanders Diggs",
+        "buttonText": "Read More",
+        "buttonLink": "#"
+      }
     }
   },
   "order": [
@@ -171,6 +179,7 @@
     "three_column_product_slider_KnYRxa",
     "half_image_half_content_MaYr7A",
     "review_slider_with_image_EptAbU",
-    "logo_slider_UUChAJ"
+    "logo_slider_UUChAJ",
+    "full_width_content_section_4eMcgt"
   ]
 }
