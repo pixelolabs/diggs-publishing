@@ -2,6 +2,7 @@
   {% for block in section.blocks %}
     <div class="half-image-half-content {%if section.settings.bg == true%}bg-brown{%endif%}">
       <div class="container-1440 flex">
+        <div class="image-wrapper">
         {% if block.settings.showVideo == true %}
           {% if block.settings.videoPopup == true %}
             {% if block.settings.video != blank %}
@@ -47,6 +48,7 @@
             </div>
           {% endif %}
         {% endif %}
+        </div>
         <div
           class="full-format flex-justify-column-center content {% if block.settings.image == blank and block.settings.video == blank %} full {% endif %} {%if block.settings.center == true%}center{%endif%}"
           data-aos="fade-up"
