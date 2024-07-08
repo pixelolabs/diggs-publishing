@@ -12,7 +12,6 @@
     "HeroBanner": {
       "type": "home-hero-banner",
       "blocks": {
-
         "d96d2ebe-b86c-4725-886e-21c6b9472a39": {
           "type": "slide",
           "settings": {
@@ -113,12 +112,24 @@
       ],
       "settings": {
       }
+    },
+    "review_slider_with_image_EptAbU": {
+      "type": "review-slider-with-image",
+      "settings": {
+      }
+    },
+    "logo_section_wEaqxG": {
+      "type": "logo-section",
+      "settings": {
+      }
     }
   },
   "order": [
     "HeroBanner",
     "content_banner_maXcHf",
     "three_column_product_slider_KnYRxa",
-    "half_image_half_content_MaYr7A"
+    "half_image_half_content_MaYr7A",
+    "review_slider_with_image_EptAbU",
+    "logo_section_wEaqxG"
   ]
 }
