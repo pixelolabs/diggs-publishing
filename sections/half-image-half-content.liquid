@@ -1,7 +1,7 @@
 {% if section.blocks.size > 0 %}
   {% for block in section.blocks %}
     <div class="half-image-half-content {%if section.settings.bg == true%}bg-brown{%endif%}">
-      <div class="container-1260 flex">
+      <div class="container-1440 flex">
         {% if block.settings.showVideo == true %}
           {% if block.settings.videoPopup == true %}
             {% if block.settings.video != blank %}
@@ -52,6 +52,7 @@
           data-aos="fade-up"
           data-aos-duration="2000"
         >
+          <div class="inner">
           {% if block.settings.pretitle != blank %}
             <span>{{ block.settings.pretitle }}</span>
           {% endif %}
@@ -73,6 +74,7 @@
               {{ block.settings.buttonText }}
             </a>
           {% endif %}
+          </div>
         </div>
 
        
