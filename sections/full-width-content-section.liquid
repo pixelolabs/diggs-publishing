@@ -1,3 +1,23 @@
+
+
+{% if section.settings.title != blank %}
+<div class="full-width-content-section">
+    <div class="container-840">
+     
+        <h2>
+          {{ section.settings.title }}
+        </h2>
+        {% if section.settings.buttonLink != blank and section.settings.buttonText != blank %}
+            <a
+              href="{{ section.settings.buttonLink }}"
+              title="Read More About {{ section.settings.title }}"
+              aria-label="Read More About {{ section.settings.title }}"
+              class="btn--primary yellow"
+            ></a>
+          {% endif %}
+        </div>
+        </div>
+    {% endif %}
 {% schema %}
 {
   "name": "Full width content",
