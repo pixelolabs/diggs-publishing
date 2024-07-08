@@ -969,14 +969,14 @@ jQuery(function () {
     resistance: false,
     shortSwipes: false,
     loop: true,
-    grabCursor: false,
-    // threshold: 1,
-    speed: 4000,
-    autoplay: {
-      delay: 1,
-      disableOnInteraction: false // reverseDirection: true,
+    grabCursor: false // threshold: 1,
+    // speed: 4000,
+    // autoplay: {
+    //  delay: 1,
+    // disableOnInteraction: false,
+    // reverseDirection: true,
+    //  },
 
-    }
     /* breakpoints: {
          0: {
              slidesPerView: 2,
