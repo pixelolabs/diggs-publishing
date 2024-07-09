@@ -957,8 +957,8 @@ jQuery(function () {
     // scrollOverflowOptions: null,
     // loopedSlidesLimit: false,
     navigation: {
-      nextEl: ".swiper-button-next-review-section",
-      prevEl: ".swiper-button-prev-review-section"
+      nextEl: ".swiper-button-next-review-slider",
+      prevEl: ".swiper-button-prev-review-slider"
     },
     breakpoints: {
       0: {
