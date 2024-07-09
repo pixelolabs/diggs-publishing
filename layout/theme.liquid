@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=0 ">
 
-    {% comment %} {% include 'head' %} {% endcomment %}
-    {% comment %} {% include 'sm-og-data' %} {% endcomment %}
-    {% comment %} {% include 'scripts_head' %} {% endcomment %}
+    {% include 'head' %}
+    {% include 'sm-og-data' %}
+    {% include 'scripts_head' %}
 
-    {% comment %} {% render 'boost-sd-fallback' %} {% endcomment %}
+    {% render 'boost-sd-fallback' %}
     {{ content_for_header }}
     {% comment %}
       <!-- Extra Apps Per Theme-->
@@ -22,8 +22,8 @@
   </head>
 
   <body class="template-{{ request.page_type | handle }} ">
-    {% comment %} {% section 'announcement' %} {% endcomment %}
-    {% comment %} {% section 'header' %} {% endcomment %}
+    {% section 'announcement' %}
+    {% section 'header' %}
     <div class="page-container drawer-page-content" id="PageContainer">
       <main class="main-content js-focus-hidden js__main-content" id="MainContent" role="main" tabindex="-1">
         {{ content_for_layout }}
