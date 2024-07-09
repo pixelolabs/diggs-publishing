@@ -253,11 +253,67 @@
               "instaImage": "shopify:\/\/shop_images\/IMG-4342.png",
               "InstaLink": ""
             }
+          },
+          "instagram_kAVe3h": {
+            "type": "instagram",
+            "settings": {
+              "instaImage": "shopify:\/\/shop_images\/ALWAYSTherePRINT_Page_11.jpg",
+              "InstaLink": ""
+            }
+          },
+          "instagram_M86iVh": {
+            "type": "instagram",
+            "settings": {
+              "instaImage": "shopify:\/\/shop_images\/IMG-4342.png",
+              "InstaLink": ""
+            }
+          },
+          "instagram_CFgEd7": {
+            "type": "instagram",
+            "settings": {
+              "instaImage": "shopify:\/\/shop_images\/ALWAYSTherePRINT_Page_15.jpg",
+              "InstaLink": ""
+            }
+          },
+          "instagram_t6cUQ8": {
+            "type": "instagram",
+            "settings": {
+              "instaImage": "shopify:\/\/shop_images\/NewDon_tEatIt_Page_20.jpg",
+              "InstaLink": ""
+            }
+          },
+          "instagram_dVVM6M": {
+            "type": "instagram",
+            "settings": {
+              "instaImage": "shopify:\/\/shop_images\/BoyWebsiteColoringbook-2_424d2823-9065-4c16-9c2a-583ab7977929.jpg",
+              "InstaLink": ""
+            }
+          },
+          "instagram_qMcDzm": {
+            "type": "instagram",
+            "settings": {
+              "instaImage": "shopify:\/\/shop_images\/WhereHandsGo-ColoringBook-2_Page_01.jpg",
+              "InstaLink": ""
+            }
+          },
+          "instagram_jFACKp": {
+            "type": "instagram",
+            "settings": {
+              "instaImage": "shopify:\/\/shop_images\/boxset.png",
+              "InstaLink": ""
+            }
           }
         },
         "block_order": [
           "instagram_mwYEkL",
-          "instagram_UbPi9L"
+          "instagram_UbPi9L",
+          "instagram_kAVe3h",
+          "instagram_M86iVh",
+          "instagram_CFgEd7",
+          "instagram_t6cUQ8",
+          "instagram_dVVM6M",
+          "instagram_qMcDzm",
+          "instagram_jFACKp"
         ],
         "settings": {
           "newsTitle": "Newsletter",
