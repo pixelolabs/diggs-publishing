@@ -996,7 +996,7 @@ jQuery(function () {
   }); // logo Slider
 
   var logoSlider = new Swiper('.js_logo-slider', {
-    slidesPerView: 4,
+    slidesPerView: "auto",
     spaceBetween: 148,
     freeMode: true,
     watchSlidesProgress: true,
