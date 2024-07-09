@@ -68,6 +68,13 @@
             {% if section.settings.newsTitle != blank %}
               <span class="newsletter-title uppercase">{{ section.settings.newsTitle }}</span>
             {% endif %}
+
+            {% if section.settings.description != blank %}
+              <div class="description ">
+                {{ section.settings.description }}
+              </div>
+            {% endif %}
+
             <div class="newsletter-form">
               <form action="">
                 <input type="email" name="Email" id="email" placeholder="Enter Email Address">
@@ -75,15 +82,6 @@
               </form>
             </div>
           </div>
-          {% comment %}
-            <div class="none-980">
-              {% if section.settings.description != blank %}
-                <div class="description ">
-                  {{ section.settings.description }}
-                </div>
-              {% endif %}
-            </div>
-          {% endcomment %}
         </div>
         {% comment %}
           <div class=" block-980">
