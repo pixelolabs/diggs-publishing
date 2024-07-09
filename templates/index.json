@@ -38,10 +38,148 @@
       "type": "content-banner",
       "settings": {
       }
+    },
+    "three_column_product_slider_KnYRxa": {
+      "type": "three-column-product-slider",
+      "blocks": {
+        "product_QdJg9b": {
+          "type": "product",
+          "settings": {
+            "product": "always-there-a-childrens-book-about-healing-from-grief"
+          }
+        },
+        "product_kqjaAK": {
+          "type": "product",
+          "settings": {
+            "product": "bebe-de-piel-morena"
+          }
+        },
+        "product_7w7YGy": {
+          "type": "product",
+          "settings": {
+            "product": "donation-where-hands-go-the-power-of-no"
+          }
+        },
+        "product_RbJU3i": {
+          "type": "product",
+          "settings": {
+            "product": "a-girl-named-rainbow"
+          }
+        },
+        "product_WCmKJP": {
+          "type": "product",
+          "settings": {
+            "product": "rainbow-ebook"
+          }
+        }
+      },
+      "block_order": [
+        "product_QdJg9b",
+        "product_kqjaAK",
+        "product_7w7YGy",
+        "product_RbJU3i",
+        "product_WCmKJP"
+      ],
+      "settings": {
+        "pretitle": "Best Deals",
+        "title": "Latest Books Collection",
+        "buttonText": "VIEW ALL",
+        "buttonLink": "shopify:\/\/collections"
+      }
+    },
+    "half_image_half_content_MaYr7A": {
+      "type": "half-image-half-content",
+      "blocks": {
+        "image_U6JiFN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dummy.webp",
+            "showVideo": false,
+            "video": "https:\/\/www.youtube.com\/watch?v=9xwazD5SyVg",
+            "videoPopup": true,
+            "pretitle": "Krystaelynne Sanders Diggs",
+            "title": "My Mission is to prevent child sexual abuse",
+            "description": "<p>In a world filled with countless stories, Diggs Publishing celebrates the unique tales that often go untold. Dive into our universe, where each page brings to life characters that truly reflect the world’s diverse tapestry.<\/p>",
+            "buttonText": "Read More",
+            "buttonLink": "#",
+            "fontSize": false,
+            "center": false
+          }
+        }
+      },
+      "block_order": [
+        "image_U6JiFN"
+      ],
+      "settings": {
+      }
+    },
+    "review_slider_with_image_EptAbU": {
+      "type": "review-slider-with-image",
+      "settings": {
+      }
+    },
+    "logo_slider_UUChAJ": {
+      "type": "logo-slider",
+      "blocks": {
+        "logo_hAHcqH": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dummy-logo.webp",
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_qmTtnb": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dummy-logo.webp",
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_nfBUJE": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dummy-logo.webp",
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_8icidq": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dummy-logo.webp",
+            "link": "",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_hAHcqH",
+        "logo_qmTtnb",
+        "logo_nfBUJE",
+        "logo_8icidq"
+      ],
+      "settings": {
+        "title": "Charities Krystaelynne Works With and Supports"
+      }
+    },
+    "full_width_content_section_4eMcgt": {
+      "type": "full-width-content-section",
+      "settings": {
+        "title": "Every writer starts as a storyteller. Explore the journey of author Krystaelynne Sanders Diggs",
+        "buttonText": "Read More",
+        "buttonLink": "#"
+      }
     }
   },
   "order": [
     "HeroBanner",
-    "content_banner_maXcHf"
+    "content_banner_maXcHf",
+    "three_column_product_slider_KnYRxa",
+    "half_image_half_content_MaYr7A",
+    "review_slider_with_image_EptAbU",
+    "logo_slider_UUChAJ",
+    "full_width_content_section_4eMcgt"
   ]
 }
