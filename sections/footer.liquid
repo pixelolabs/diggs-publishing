@@ -3,7 +3,7 @@
     <div class="container-1306">
       <div class="top-section">
         <ul class="left-insta">
-          {%- for insta in section.blocks limit: 6 %}
+          {%- for block in section.blocks limit: 6 %}
             <li>
               <a href="{{ block.settings.InstaLink }}" target="_blank" class="image-section">
                 {{
@@ -19,7 +19,7 @@
           <span>Hello</span>
         </div>
         <ul class="rigt-insta">
-          {% for insta in section.blocks limit: 6 offset: continue %}
+          {% for block in section.blocks limit: 6 offset: continue %}
             <li>
               <a href="{{ block.settings.InstaLink }}" target="_blank" class="image-section">
                 {{
