@@ -3,7 +3,7 @@
     <div class="container-1306">
       <div class="top-section">
         <ul class="left-insta">
-          {%- for block in section.blocks %}
+          {%- for block in section.blocks limit: 6 %}
             <li>
               <a href="{{ block.settings.InstaLink }}" target="_blank" class="image-section">
                 {{
@@ -15,9 +15,21 @@
             </li>
           {% endfor %}
         </ul>
-        <div class="middle-section"></div>
+        <div class="middle-section">
+          <span>Hello</span>
+        </div>
         <ul class="rigt-insta">
-          <li></li>
+          {% for item in array limit: 6 offset: continue %}
+            <li>
+              <a href="{{ block.settings.InstaLink }}" target="_blank" class="image-section">
+                {{
+                  block.settings.instaImage
+                  | image_url: width: 1262
+                  | image_tag: loading: 'lazy', widths: '1262x1000'
+                }}
+              </a>
+            </li>
+          {% endfor %}
         </ul>
       </div>
       <div class="main-footer__middle flex">
