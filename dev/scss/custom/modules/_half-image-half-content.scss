@@ -2,19 +2,19 @@
   position: relative;
 
   &::before{
-    background: url("wave-sky-blue.webp") repeat left / 1440px;
-    height: 188px;
+    background: url("wave-sky-blue.webp") repeat left / 1452px;
+    height: 85px;
     width: 100%;
     position: absolute;
     left: 0;
-    top: -88px;
+    top: -85px;
     content: '';
   }
 }
 .half-image-half-content {
   position: relative;
   z-index: 1;
-  padding: 0px 0 40px;
+  padding: 0px 0 118px;
   background-color: $color-sky-blue;
   
   &:first-child {

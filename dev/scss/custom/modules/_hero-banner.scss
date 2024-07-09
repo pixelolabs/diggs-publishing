@@ -4,12 +4,32 @@
   .hero-banner {
     position: relative;
     overflow: hidden;
-    padding-bottom: 113px;
+    padding-bottom: 118px;
     padding-top: 154px;
-    height: calc(100vh - 40px);
     max-height: 810px;
     display: flex;
     align-items: center;
+    &::before{
+      width: 367.6px;
+      height: 87.8px;
+      content: '';
+      position: absolute;
+      left:0px;
+      z-index: 1;
+      bottom: 168px;
+      background: url("thread-hero-white.webp") no-repeat center / 100%;
+  }
+  &::after{
+    width: 130px;
+    height: 406px;
+    content: '';
+    position: absolute;
+    right:0px;
+    z-index: 1;
+    top: 87px;
+    background: url("thread-hero-white-2.webp") no-repeat center / 100%;
+}
+    
     background-image: linear-gradient(117deg, #5ebe55 2%, #a8d24e 50%, #5abe50 98%);
     @include MQ(MQ-768) {
       height: 699px;
@@ -76,6 +96,16 @@
       margin-left: 36px;
       max-width: 514px;
       order: 2;
+      &::after{
+        width: 82px;
+        height: 85px;
+        content: '';
+        position: absolute;
+        right: -70px;
+        z-index: 1;
+        bottom: 8px;
+        background: url("rocket.webp") no-repeat center / 100%;
+    }
       img {
         @include img-object-cover;
         position: relative;
@@ -83,31 +113,67 @@
     }
     .container-1260 {
       position: relative;
-      
+      &::before{
+        width: 63.9px;
+        height: 51px;
+        content: '';
+        position: absolute;
+        top: -40px;
+        z-index: 1;
+        right: 450px;
+        background: url("icon-cloud.webp") no-repeat center / 100%;
+    }
+    &::after{
+      width: 42.6px;
+     height: 51.3px;
+      content: '';
+      position: absolute;
+      right: 120px;
+      z-index: 1;
+      top: 50px;
+      background: url("star-large.webp") no-repeat center / 100%;
+  }
       z-index: 3;
       @include MQ(MQ-768) {
         justify-content: center !important;
       }
       .content {
        width: 50%;
-       padding-right: 40px;
-       
+       padding-right: 33px;
+       padding-top: 76px;
+       position: relative;
+       &::before{
+        width: 89px;
+        height: 118px;
+        content: '';
+        position: absolute;
+        right: 37px;
+        z-index: 1;
+        top: -27px;
+        background: url("kite.webp") no-repeat center / 100%;
+    }
+    &::after{
+      width: 36px;
+  height: 43.7px;
+      content: '';
+      position: absolute;
+      right: 230px;
+      z-index: 1;
+      bottom: 124px;
+      background: url("star-large-white.webp") no-repeat center / 100%;
+  }
         .pre-title {
-          margin-bottom: 8px;
-          font-weight: bold;
+          margin-bottom: 20px;
+         color: $color-pink;
         }
-        h1,
-        p {
-          
-          margin-bottom: 10px;
+        h1{
+          margin-bottom: 8.3px;
         }
         .btn--primary {
-          margin-top: 30px;
-          @include MQ(MQ-480) {
-            margin-top: 30px !important;
-          }
+          margin-top: 28.7px;
+         
         }
-        .pre-title,
+       
         h1,
         p {
           color: rgba(var(--color-foreground),1);

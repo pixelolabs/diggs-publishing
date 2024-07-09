@@ -2,11 +2,16 @@
    
     position: relative;
     background: $color-off-white;
-    >img{
+    &::before{
+        background: url("yellow-wave.webp") repeat left / 1327px;
+        height: 156.5px;
         width: 100%;
-        margin-top: -87px;
+        position: absolute;
+        left: 0;
+        top: 42px;
+        content: "";
         z-index: 2;
-        position: relative;
+       
     }
     .box{
         max-width: 1030px;
@@ -88,7 +93,7 @@
             right: -41px;
             z-index: 1;
             bottom: 45.5px;
-            background: url("star.webp") no-repeat center / 100%;
+            background: url("star-large.webp") no-repeat center / 100%;
         }
         &::after{
             width: 14.3px;

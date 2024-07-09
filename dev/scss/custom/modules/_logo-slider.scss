@@ -1,45 +1,42 @@
 .logo-slider {
   position: relative;
-  padding: 38px 0 46px;
-  overflow: hidden;
-  background-color: $color-white;
-  @include MQ(MQ-600) {
-    padding: 20px 0;
-  }
-  @include MQ(MQ-480) {
-    padding: 20px 0;
-  }
-  .swiper-wrapper {
-    transition-timing-function: linear !important;
-    margin-left: -52px;
-    width: calc(100% + 52px);
-    align-items: center;
-    @include MQ(MQ-1200) {
-      margin-left: -40px;
-      width: calc(100% + 40px);
-    }
-  }
-  .swiper-slide {
-    width: 12.5% !important;
-    padding-left: 52px;
+  padding: 0px 0 111px;
+  background-color: $color-off-white;
+  position: relative;
+  &::before{
+    position: absolute;
+    content: '';
+    left: 22px;
+    top: 98px;
+    background: url("star-large.webp") repeat center / 100%;
+    width: 33px;
+    height: 39px;
 
-    margin-right: 0 !important;
-    @include MQ(MQ-1200) {
-      width: 16.7% !important;
-      padding-left: 40px;
+  }
+  h2{
+    max-width: 411px;
+    width: 100%;
+    position: relative;
+    &::after{
+      position: absolute;
+      content: '';
+      right: -150px;
+      top: -36px;
+      background: url("rocket.webp") repeat center / 100%;
+      width: 82px;
+      height: 85px;
     }
-    @include MQ(MQ-1025) {
-      width: 20% !important;
-      padding-left: 40px;
-    }
-    @include MQ(MQ-980) {
-      width: 25% !important;
-      padding-left: 40px;
-    }
-    @include MQ(MQ-480) {
-      width: 33.33% !important;
-      padding-left: 40px;
-    }
+
+  }
+  .slider{
+    overflow: hidden;
+    margin-top: 55px;
+  }
+ 
+  .swiper-slide {
+   width: 151px;
+   position: relative;
+   height: 100px;
 
     .image-section {
       width: 100%;
