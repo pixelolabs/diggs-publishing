@@ -61,8 +61,8 @@ jQuery(function() {
 
     // logo Slider
     var logoSlider = new Swiper('.js_logo-slider', {
-        slidesPerView: 'auto',
-        spaceBetween: 20,
+        slidesPerView: 4,
+        spaceBetween: 148,
         freeMode: true,
         watchSlidesProgress: true,
         clickable: true,
@@ -73,12 +73,12 @@ jQuery(function() {
 
 
         // threshold: 1,
-        speed: 4000,
-        autoplay: {
-            delay: 1,
-            disableOnInteraction: false,
+       // speed: 4000,
+       // autoplay: {
+          //  delay: 1,
+           // disableOnInteraction: false,
             // reverseDirection: true,
-        },
+      //  },
 
         /* breakpoints: {
              0: {

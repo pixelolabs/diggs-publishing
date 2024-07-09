@@ -1,5 +1,11 @@
 {% if section.blocks.size > 0 %}
   <div class="logo-slider ">
+    <div class="container-1260">
+      {% if section.settings.title != blank %}
+        <h2>
+          {{ section.settings.title }}
+        </h2>
+      {% endif %}
     <div class="slider js_logo-slider ">
       <div class="swiper-wrapper flex">
         {% for block in section.blocks %}
@@ -20,14 +26,20 @@
         {% endfor %}
       </div>
     </div>
-
+</div>
   </div>
 {% endif %}
 
 {% schema %}
   {
     "name": "Logo Slider",
-    "settings": [],
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      }
+    ],
     "blocks": [
       {
         "type": "logo",
