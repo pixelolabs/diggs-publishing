@@ -937,7 +937,7 @@ jQuery(function () {
         slidesPerView: 1
       },
       769: {
-        slidesPerView: 3
+        slidesPerView: 2
       },
       1440: {
         slidesPerView: 3,
