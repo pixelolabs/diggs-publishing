@@ -65,16 +65,17 @@
         </div>
         <div class="right-section">
           <div class="main-footer__newsletter">
-            {% if section.settings.newsTitle != blank %}
-              <span class="newsletter-title uppercase">{{ section.settings.newsTitle }}</span>
-            {% endif %}
+            <div class="news-content">
+              {% if section.settings.newsTitle != blank %}
+                <span class="newsletter-title uppercase">{{ section.settings.newsTitle }}</span>
+              {% endif %}
 
-            {% if section.settings.description != blank %}
-              <div class="description ">
-                {{ section.settings.description }}
-              </div>
-            {% endif %}
-
+              {% if section.settings.description != blank %}
+                <div class="description ">
+                  {{ section.settings.description }}
+                </div>
+              {% endif %}
+            </div>
             <div class="newsletter-form">
               <form action="">
                 <input type="email" name="Email" id="email" placeholder="Enter Email Address">
