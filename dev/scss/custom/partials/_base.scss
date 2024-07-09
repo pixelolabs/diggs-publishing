@@ -48,9 +48,8 @@ body {
   font-size: var(--para-desktop-fontsize);
   @include MQ(MQ-480) {
     font-size: var(--para-mobile-fontsize);
-   
   }
- 
+
   font-weight: 500;
   line-height: 1.63;
   letter-spacing: 0.02px;
@@ -126,14 +125,16 @@ p {
     font-weight: 700;
     position: relative;
   }
- 
+
   &.medium {
+
     font-size: var(--para-medium-desktop-fontsize);
   line-height: var(--para-medium-desktop-lineheight);
   letter-spacing: var(--para-medium-desktop-letterspacing);
   text-transform: var(--para-medium-desktop-texttransform);
   font-weight: var(--par-amedium-desktop-fontweight);
   font-style: var(--para-medium-desktop-fontstyle);
+
 
     a {
       font-size: var(--para-medium-desktop-fontsize);
@@ -145,6 +146,7 @@ p {
     }
   }
   &.small {
+
     font-size: var(--para-small-desktop-fontsize);
     line-height: var(--para-small-desktop-lineheight);
     letter-spacing: var(--para-small-desktop-letterspacing);
@@ -179,7 +181,6 @@ p {
       }
   }
 
-  
 }
 
 // Heading links
@@ -303,7 +304,7 @@ h2,
       letter-spacing: var(--h2-mobile-letterspacing);
     }
   }
-  &.medium{
+  &.medium {
     font-size: var(--h2-medium-desktop-fontsize);
     line-height: var(--h2-medium-desktop-lineheight);
     letter-spacing: var(--h2-medium-desktop-letterspacing);
@@ -315,12 +316,12 @@ h2,
       line-height: var(--h2-medium-desktop-lineheight);
       letter-spacing: var(--h2-medium-desktop-letterspacing);
     }
-  
+
     @include MQ(MQ-480) {
       font-size: var(--h2-medium-mobile-fontsize);
       line-height: var(--h2-medium-mobile-lineheight);
       letter-spacing: var(--h2-medium-mobile-letterspacing);
-  
+
       a {
         font-size: var(--h2-medium-mobile-fontsize);
         line-height: var(--h2-medium-mobile-lineheight);
@@ -328,30 +329,30 @@ h2,
       }
     }
   }
-  &.small{
-    font-size: var(--h2-small-desktop-fontsize);
-  line-height: var(--h2-small-desktop-lineheight);
-  letter-spacing: var(--h2-small-desktop-letterspacing);
-  text-transform: var(--h2-small-desktop-texttransform);
-  font-weight: var(--h2-small-desktop-fontweight);
-  font-style: var(--h2-small-desktop-fontstyle);
-  a {
+  &.small {
     font-size: var(--h2-small-desktop-fontsize);
     line-height: var(--h2-small-desktop-lineheight);
     letter-spacing: var(--h2-small-desktop-letterspacing);
-  }
-
-  @include MQ(MQ-480) {
-    font-size: var(--h2-small-mobile-fontsize);
-    line-height: var(--h2-small-mobile-lineheight);
-    letter-spacing: var(--h2-small-mobile-letterspacing);
-
+    text-transform: var(--h2-small-desktop-texttransform);
+    font-weight: var(--h2-small-desktop-fontweight);
+    font-style: var(--h2-small-desktop-fontstyle);
     a {
+      font-size: var(--h2-small-desktop-fontsize);
+      line-height: var(--h2-small-desktop-lineheight);
+      letter-spacing: var(--h2-small-desktop-letterspacing);
+    }
+
+    @include MQ(MQ-480) {
       font-size: var(--h2-small-mobile-fontsize);
       line-height: var(--h2-small-mobile-lineheight);
       letter-spacing: var(--h2-small-mobile-letterspacing);
+
+      a {
+        font-size: var(--h2-small-mobile-fontsize);
+        line-height: var(--h2-small-mobile-lineheight);
+        letter-spacing: var(--h2-small-mobile-letterspacing);
+      }
     }
-  }
   }
 }
 
@@ -377,8 +378,7 @@ h3,
       line-height: var(--h3-mobile-lineheight);
       letter-spacing: var(--h3-mobile-letterspacing);
     }
-  
-}
+  }
 }
 
 h4,
@@ -485,10 +485,8 @@ button {
       display: none;
     }
 
-    
     // background-color: $color-black;
     transition: 0.6s ease all;
-    
   }
 }
 .btn--primary.yellow {
@@ -502,12 +500,11 @@ button {
   background: url("Isolation_mode-orange.webp") no-repeat center / 100%;
 }
 
-
 .btn--secondary {
   @include px-button;
-  border-color: rgba(var(--color-button-text),1);
-  color: rgba(var(--color-button),1);
-  background: rgba(var(--color-button-text),1);
+  border-color: rgba(var(--color-button-text), 1);
+  color: rgba(var(--color-button), 1);
+  background: rgba(var(--color-button-text), 1);
   transition: 0.6s ease all;
 
   &:hover {
@@ -606,7 +603,7 @@ button {
   color: $color-black;
   position: relative;
   text-transform: uppercase;
-  background:  url("icon-right-arrow.webp") no-repeat right center/ 13.5px;
+  background: url("icon-right-arrow.webp") no-repeat right center/ 13.5px;
   padding-right: 21.5px;
 }
 
@@ -633,8 +630,7 @@ button {
     line-height: var(--pretitle-mobile-lineheight);
     letter-spacing: var(--pretitle-mobile-letterspacing);
   }
-  
-  
+
   &.blue {
     color: $color-black !important;
   }
@@ -1119,6 +1115,12 @@ button {
   max-width: 1400px;
   width: 100%;
   padding: 0 30px;
+  margin: 0 auto;
+}
+.container-1306 {
+  max-width: 1300px;
+  width: 100%;
+  padding: 0 20px;
   margin: 0 auto;
 }
 .container-1260 {

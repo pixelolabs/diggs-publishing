@@ -152,13 +152,22 @@
             "link": "",
             "title": ""
           }
+        },
+        "logo_jCikGR": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dummy-logo.webp",
+            "link": "",
+            "title": ""
+          }
         }
       },
       "block_order": [
         "logo_hAHcqH",
         "logo_qmTtnb",
         "logo_nfBUJE",
-        "logo_8icidq"
+        "logo_8icidq",
+        "logo_jCikGR"
       ],
       "settings": {
         "title": "Charities Krystaelynne Works With and Supports"

@@ -2,7 +2,7 @@
   <div class="main-footer">
     <div class="container-1306">
       <div class="top-section">
-        <ul class="left-insta">
+        <ul class="left-insta insta-list">
           {%- for block in section.blocks limit: 6 %}
             <li>
               <a href="{{ block.settings.InstaLink }}" target="_blank" class="image-section">
@@ -16,49 +16,34 @@
           {% endfor %}
         </ul>
         <div class="middle-section">
-          <span>Hello</span>
-        </div>
-        {% comment %}
-          <ul class="rigt-insta">
-            {% for block in section.blocks %}
-              <li>
-                <a href="{{ block.settings.InstaLink }}" target="_blank" class="image-section">
-                  {{
-                    block.settings.instaImage
-                    | image_url: width: 1262
-                    | image_tag: loading: 'lazy', widths: '1262x1000'
-                  }}
-                </a>
-              </li>
-            {% endfor %}
-          </ul>
-        {% endcomment %}
-      </div>
-      <div class="main-footer__middle flex">
-        <div class="left-section">
-          <div class="main-footer__newsletter">
-            {% if section.settings.newsTitle != blank %}
-              <span class="newsletter-title uppercase">{{ section.settings.newsTitle }}</span>
-            {% endif %}
-            <div class="newsletter-form">
-              <form action="">
-                <input type="email" name="Email" id="email" placeholder="Enter Email Address">
-                <button type="submit" class="btn-submit" value="Subscribe">Subscribe</button>
-              </form>
+          {% if section.settings.sstext != blank %}
+            <span>{{ section.settings.sstext }}</span>
+          {% endif %}
+          {% if section.settings.logo != blank %}
+            <div class="footer-logo">
+              {{ section.settings.logo | image_url: width: 200 | image_tag: loading: 'lazy', widths: '200x200' }}
             </div>
-          </div>
-          <div class="none-980">
-            <div class="social-icons">
-              {% include 'social-icons' %}
-            </div>
-            {% if section.settings.description != blank %}
-              <div class="description ">
-                {{ section.settings.description }}
-              </div>
-            {% endif %}
+          {% endif %}
+          <div class="social-icons">
+            {% include 'social-icons' %}
           </div>
         </div>
 
+        <ul class="rigt-insta insta-list">
+          {% for block in section.blocks offset: 6 %}
+            <li>
+              <a href="{{ block.settings.InstaLink }}" target="_blank" class="image-section">
+                {{
+                  block.settings.instaImage
+                  | image_url: width: 1262
+                  | image_tag: loading: 'lazy', widths: '1262x1000'
+                }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="main-footer__middle flex">
         <!-- Footer Menu -->
         <div class="main-footer__nav flex-wrap">
           {% assign fotterMenu = linklists[section.settings.footerMenu] %}
@@ -78,27 +63,44 @@
             </div>
           {% endfor %}
         </div>
-        <div class=" block-980">
-          {% if section.settings.description != blank %}
-            <div class="description">
-              {{ section.settings.description }}
+        <div class="right-section">
+          <div class="main-footer__newsletter">
+            <div class="news-content">
+              {% if section.settings.newsTitle != blank %}
+                <span class="newsletter-title uppercase">{{ section.settings.newsTitle }}</span>
+              {% endif %}
+
+              {% if section.settings.description != blank %}
+                <div class="description ">
+                  {{ section.settings.description }}
+                </div>
+              {% endif %}
             </div>
-          {% endif %}
-          <div class="social-icons">
-            {% include 'social-icons' %}
+            <div class="newsletter-form">
+              <form action="">
+                <input type="email" name="Email" id="email" placeholder="Enter Email Address">
+                <button type="submit" class="btn-submit" value="Subscribe">Subscribe</button>
+              </form>
+            </div>
           </div>
         </div>
+        {% comment %}
+          <div class=" block-980">
+            {% if section.settings.description != blank %}
+              <div class="description">
+                {{ section.settings.description }}
+              </div>
+            {% endif %}
+
+          </div>
+        {% endcomment %}
       </div>
       <div class="main-footer__bottom">
         <!-- Copyright -->
         <div class="copyright">
           <div class="copyright-section flex-wrap">
-            {% if section.settings.copyright != blank %}
-              <p>
-                © {{ 'now' | date: '%Y' }}
-                {{ section.settings.copyright }}
-              </p>
-            {% endif %}
+            <p>© {{ 'now' | date: '%Y' }} All Rights Reserved by Diggs Publishing</p>
+            <a href="">Designed by PixeloLabs</a>
           </div>
         </div>
       </div>
@@ -111,12 +113,17 @@
   "settings": [
     {
       "type": "header",
-      "content": "Instagram"
-    },
-
-    {
-      "type": "header",
       "content": "Footer Info"
+    },
+    {
+      "type": "text",
+      "id": "sstext",
+      "label": "Social Link Heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
     },
     {
       "type": "text",
