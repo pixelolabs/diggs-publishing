@@ -912,8 +912,8 @@ jQuery(function () {
     }
   });
   var productSectionSlider = new Swiper(".js__product-section-slider", {
-    slidesPerView: 4,
-    spaceBetween: 10,
+    slidesPerView: 3,
+    spaceBetween: 39,
     // centeredSlides: true,
     // resistance: false,
     loop: true,
@@ -939,8 +939,9 @@ jQuery(function () {
       769: {
         slidesPerView: 3
       },
-      1100: {
-        slidesPerView: 4
+      1440: {
+        slidesPerView: 3,
+        spaceBetween: 39
       }
     }
   });
