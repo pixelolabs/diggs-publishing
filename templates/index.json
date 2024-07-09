@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "HeroBanner": {
@@ -27,7 +36,8 @@
     },
     "content_banner_maXcHf": {
       "type": "content-banner",
-      "settings": {}
+      "settings": {
+      }
     },
     "three_column_product_slider_KnYRxa": {
       "type": "three-column-product-slider",
@@ -100,11 +110,13 @@
       "block_order": [
         "image_U6JiFN"
       ],
-      "settings": {}
+      "settings": {
+      }
     },
     "review_slider_with_image_EptAbU": {
       "type": "review-slider-with-image",
-      "settings": {}
+      "settings": {
+      }
     },
     "logo_slider_UUChAJ": {
       "type": "logo-slider",
@@ -140,13 +152,22 @@
             "link": "",
             "title": ""
           }
+        },
+        "logo_jCikGR": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dummy-logo.webp",
+            "link": "",
+            "title": ""
+          }
         }
       },
       "block_order": [
         "logo_hAHcqH",
         "logo_qmTtnb",
         "logo_nfBUJE",
-        "logo_8icidq"
+        "logo_8icidq",
+        "logo_jCikGR"
       ],
       "settings": {
         "title": "Charities Krystaelynne Works With and Supports"
