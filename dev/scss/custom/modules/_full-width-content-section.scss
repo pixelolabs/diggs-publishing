@@ -1,10 +1,106 @@
 
 
 .full-width-content-section{
-    padding: 240px 0 255px;
+   position: relative;
+   
+   &::before{
+    width: 620px;
+    height: 773px;
+    content: '';
+    position: absolute;
+    left: 0px;
+    z-index: 0;
+    bottom: 0px;
+    background: url("thread-multi-white.webp") no-repeat center / 100%;
+}
+    .container-1440{
+        padding: 240px 0 314px;
+        position: relative;
+        &::before{
+            width: 114px;
+            height: 91px;
+            content: '';
+            position: absolute;
+            left: 131px;
+            z-index: 1;
+            top: 210px;
+            background: url("icon-cloud.webp") no-repeat center / 100%;
+        }
+        &::after{
+            width: 173px;
+            height: 120px;
+            content: '';
+            position: absolute;
+            right: 70px;
+            z-index: 1;
+            top: 60px;
+            background: url("planet.webp") no-repeat center / 100%;
+        }
+
+    }
+    .container-840{
+        position: relative;
+        &::before{
+            width: 137px;
+            height: 137px;
+            content: '';
+            position: absolute;
+            left: -45px;
+            z-index: 1;
+            bottom: -150px;
+            background: url("ufo.webp") no-repeat center / 100%;
+        }
+        &::after{
+            width: 31px;
+            height: 44px;
+            content: '';
+            position: absolute;
+            left: 145px;
+            z-index: 1;
+            bottom: -13px;
+            background: url("star-large.webp") no-repeat center / 100%;
+        }
+
+    }
+    .kids-images{
+        position: absolute;
+        right: 72px;
+        width: 532px;
+        height: 330px;
+
+        img{
+            @include img-object-contain;
+        }
+        bottom: 0px;
+        z-index: 0;
+    }
     text-align: center;
     background: url("full-width-bg-green.jpg") repeat center / 100%;
     h2{
         margin-bottom: 20px;
+        position: relative;
+        &::before{
+            width: 90px;
+            height: 119px;
+            content: '';
+            position: absolute;
+            left: 158px;
+            z-index: 1;
+            top: -180px;
+            background: url("kite.webp") no-repeat center / 100%;
+        }
+        &::after{
+            width: 63.9px;
+            height: 51px;
+            content: '';
+            position: absolute;
+            top: -132px;
+            z-index: 1;
+            right: 150px;
+            background: url("icon-cloud.webp") no-repeat center / 100%;
+        }
+    }
+    .btn--primary{
+        margin: 0 auto;
     }
 }

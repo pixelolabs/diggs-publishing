@@ -214,15 +214,7 @@
         }
       }
     }
-    &:hover {
-      .btn--primary {
-        color: $color-black !important;
-        -webkit-transition: 0.6s ease all;
-        transition: 0.6s ease all;
-        -webkit-box-shadow: inset 0 -3.25em 0 0 $color-white;
-        box-shadow: inset 0 -3.25em $color-white;
-      }
-    }
+   
   }
 
   .swiper-button-prev-hero-banner,
