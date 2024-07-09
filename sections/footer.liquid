@@ -1,20 +1,37 @@
 <footer>
-  {% if section.settings.topDescription != blank %}
-    <div class="footer-top-bar">
-      <div class="container-1390">
-        <div class=" slider">
-          <div class="swiper-wrapper">
-            <div class="slide swiper-slide">
-              {{ section.settings.topDescription }}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  {% endif %}
-
   <div class="main-footer">
-    <div class="container-1390">
+    <div class="container-1306">
+      <div class="top-section">
+        <ul class="left-insta">
+          {%- for insta in section.blocks limit: 6 %}
+            <li>
+              <a href="{{ block.settings.InstaLink }}" target="_blank" class="image-section">
+                {{
+                  block.settings.instaImage
+                  | image_url: width: 1262
+                  | image_tag: loading: 'lazy', widths: '1262x1000'
+                }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+        <div class="middle-section">
+          <span>Hello</span>
+        </div>
+        <ul class="rigt-insta">
+          {% for insta in section.block limit: 6 offset: continue %}
+            <li>
+              <a href="{{ block.settings.InstaLink }}" target="_blank" class="image-section">
+                {{
+                  block.settings.instaImage
+                  | image_url: width: 1262
+                  | image_tag: loading: 'lazy', widths: '1262x1000'
+                }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
       <div class="main-footer__middle flex">
         <div class="left-section">
           <div class="main-footer__newsletter">
@@ -88,26 +105,16 @@
 </footer>
 {% schema %}
 {
-  "name": {
-    "en": "Footer"
-  },
+  "name": "Footer",
   "settings": [
     {
       "type": "header",
-      "content": {
-        "en": "Footer Annoucement"
-      }
+      "content": "Instagram"
     },
-    {
-      "type": "richtext",
-      "id": "topDescription",
-      "label": "Footer Annoucement Description"
-    },
+
     {
       "type": "header",
-      "content": {
-        "en": "Footer Info"
-      }
+      "content": "Footer Info"
     },
     {
       "type": "text",
@@ -118,9 +125,7 @@
     {
       "type": "link_list",
       "id": "footerMenu",
-      "label": {
-        "en": "Footer Menu"
-      }
+      "label": "Footer Menu"
     },
     {
       "type": "text",
@@ -131,6 +136,24 @@
       "type": "richtext",
       "id": "description",
       "label": "Description"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "instagram",
+      "name": "Instagram Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "instaImage",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "InstaLink",
+          "label": "Link"
+        }
+      ]
     }
   ]
 }

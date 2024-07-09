@@ -12,7 +12,6 @@
     "HeroBanner": {
       "type": "home-hero-banner",
       "blocks": {
-
         "d96d2ebe-b86c-4725-886e-21c6b9472a39": {
           "type": "slide",
           "settings": {
@@ -113,12 +112,74 @@
       ],
       "settings": {
       }
+    },
+    "review_slider_with_image_EptAbU": {
+      "type": "review-slider-with-image",
+      "settings": {
+      }
+    },
+    "logo_slider_UUChAJ": {
+      "type": "logo-slider",
+      "blocks": {
+        "logo_hAHcqH": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dummy-logo.webp",
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_qmTtnb": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dummy-logo.webp",
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_nfBUJE": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dummy-logo.webp",
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_8icidq": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dummy-logo.webp",
+            "link": "",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_hAHcqH",
+        "logo_qmTtnb",
+        "logo_nfBUJE",
+        "logo_8icidq"
+      ],
+      "settings": {
+        "title": "Charities Krystaelynne Works With and Supports"
+      }
+    },
+    "full_width_content_section_4eMcgt": {
+      "type": "full-width-content-section",
+      "settings": {
+        "title": "Every writer starts as a storyteller. Explore the journey of author Krystaelynne Sanders Diggs",
+        "buttonText": "Read More",
+        "buttonLink": "#"
+      }
     }
   },
   "order": [
     "HeroBanner",
     "content_banner_maXcHf",
     "three_column_product_slider_KnYRxa",
-    "half_image_half_content_MaYr7A"
+    "half_image_half_content_MaYr7A",
+    "review_slider_with_image_EptAbU",
+    "logo_slider_UUChAJ",
+    "full_width_content_section_4eMcgt"
   ]
 }
