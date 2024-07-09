@@ -44,27 +44,6 @@
         </ul>
       </div>
       <div class="main-footer__middle flex">
-        <div class="left-section">
-          <div class="main-footer__newsletter">
-            {% if section.settings.newsTitle != blank %}
-              <span class="newsletter-title uppercase">{{ section.settings.newsTitle }}</span>
-            {% endif %}
-            <div class="newsletter-form">
-              <form action="">
-                <input type="email" name="Email" id="email" placeholder="Enter Email Address">
-                <button type="submit" class="btn-submit" value="Subscribe">Subscribe</button>
-              </form>
-            </div>
-          </div>
-          <div class="none-980">
-            {% if section.settings.description != blank %}
-              <div class="description ">
-                {{ section.settings.description }}
-              </div>
-            {% endif %}
-          </div>
-        </div>
-
         <!-- Footer Menu -->
         <div class="main-footer__nav flex-wrap">
           {% assign fotterMenu = linklists[section.settings.footerMenu] %}
@@ -84,16 +63,38 @@
             </div>
           {% endfor %}
         </div>
-        <div class=" block-980">
-          {% if section.settings.description != blank %}
-            <div class="description">
-              {{ section.settings.description }}
+        <div class="left-section">
+          <div class="main-footer__newsletter">
+            {% if section.settings.newsTitle != blank %}
+              <span class="newsletter-title uppercase">{{ section.settings.newsTitle }}</span>
+            {% endif %}
+            <div class="newsletter-form">
+              <form action="">
+                <input type="email" name="Email" id="email" placeholder="Enter Email Address">
+                <button type="submit" class="btn-submit" value="Subscribe">Subscribe</button>
+              </form>
             </div>
-          {% endif %}
-          <div class="social-icons">
-            {% include 'social-icons' %}
           </div>
+          {% comment %}
+            <div class="none-980">
+              {% if section.settings.description != blank %}
+                <div class="description ">
+                  {{ section.settings.description }}
+                </div>
+              {% endif %}
+            </div>
+          {% endcomment %}
         </div>
+        {% comment %}
+          <div class=" block-980">
+            {% if section.settings.description != blank %}
+              <div class="description">
+                {{ section.settings.description }}
+              </div>
+            {% endif %}
+
+          </div>
+        {% endcomment %}
       </div>
       <div class="main-footer__bottom">
         <!-- Copyright -->
