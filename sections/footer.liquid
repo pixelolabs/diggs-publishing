@@ -18,19 +18,21 @@
         <div class="middle-section">
           <span>Hello</span>
         </div>
-        <ul class="rigt-insta">
-          {% for block in section.blocks %}
-            <li>
-              <a href="{{ block.settings.InstaLink }}" target="_blank" class="image-section">
-                {{
-                  block.settings.instaImage
-                  | image_url: width: 1262
-                  | image_tag: loading: 'lazy', widths: '1262x1000'
-                }}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
+        {% comment %}
+          <ul class="rigt-insta">
+            {% for block in section.blocks %}
+              <li>
+                <a href="{{ block.settings.InstaLink }}" target="_blank" class="image-section">
+                  {{
+                    block.settings.instaImage
+                    | image_url: width: 1262
+                    | image_tag: loading: 'lazy', widths: '1262x1000'
+                  }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endcomment %}
       </div>
       <div class="main-footer__middle flex">
         <div class="left-section">
