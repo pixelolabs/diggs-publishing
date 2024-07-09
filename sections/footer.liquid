@@ -16,8 +16,14 @@
           {% endfor %}
         </ul>
         <div class="middle-section">
-          <span>FOLLOW US</span>
-          <div class="footer-logo"></div>
+          {% if section.settings.sstext != blank %}
+            <span>{{ section.settings.sstext }}</span>
+          {% endif %}
+          {% if section.settings.logo != blank %}
+            <div class="footer-logo">
+              {{ section.settings.logo | image_url: width: 200 | image_tag: loading: 'lazy', widths: '200x200' }}
+            </div>
+          {% endif %}
           <div class="social-icons">
             {% include 'social-icons' %}
           </div>
@@ -115,7 +121,7 @@
     },
     {
       "type": "text",
-      "id": "text",
+      "id": "sstext",
       "label": "Social Link Heading"
     },
     {
