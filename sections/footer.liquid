@@ -19,7 +19,7 @@
           <span>Hello</span>
         </div>
         <ul class="rigt-insta">
-          {% for insta in section.block limit: 6 offset: continue %}
+          {% for insta in section.blocks limit: 6 offset: continue %}
             <li>
               <a href="{{ block.settings.InstaLink }}" target="_blank" class="image-section">
                 {{
@@ -140,7 +140,7 @@
   ],
   "blocks": [
     {
-      "type": "instagram",
+      "type": "insta",
       "name": "Instagram Image",
       "settings": [
         {
