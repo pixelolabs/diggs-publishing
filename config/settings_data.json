@@ -239,8 +239,27 @@
       },
       "footer": {
         "type": "footer",
+        "blocks": {
+          "instagram_mwYEkL": {
+            "type": "instagram",
+            "settings": {
+              "instaImage": "shopify:\/\/shop_images\/ALWAYSTherePRINT_Page_14.jpg",
+              "InstaLink": ""
+            }
+          },
+          "instagram_UbPi9L": {
+            "type": "instagram",
+            "settings": {
+              "instaImage": "shopify:\/\/shop_images\/IMG-4342.png",
+              "InstaLink": ""
+            }
+          }
+        },
+        "block_order": [
+          "instagram_mwYEkL",
+          "instagram_UbPi9L"
+        ],
         "settings": {
-          "topDescription": "<p>Loream ipsum dummy Annoucement text here<\/p>",
           "newsTitle": "Newsletter",
           "footerMenu": "footer",
           "copyright": "Copyright Pixel Verse",
