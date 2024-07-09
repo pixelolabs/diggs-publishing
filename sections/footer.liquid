@@ -16,11 +16,13 @@
           {% endfor %}
         </ul>
         <div class="middle-section">
-          <span>Hello</span>
+          <div class="social-icons">
+            {% include 'social-icons' %}
+          </div>
         </div>
 
         <ul class="rigt-insta">
-          {% for block in section.blocks %}
+          {% for block in section.blocks offset: 6 %}
             <li>
               <a href="{{ block.settings.InstaLink }}" target="_blank" class="image-section">
                 {{
@@ -47,9 +49,6 @@
             </div>
           </div>
           <div class="none-980">
-            <div class="social-icons">
-              {% include 'social-icons' %}
-            </div>
             {% if section.settings.description != blank %}
               <div class="description ">
                 {{ section.settings.description }}
