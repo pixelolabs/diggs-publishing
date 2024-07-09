@@ -167,6 +167,34 @@
               "instaImage": "shopify:\/\/shop_images\/ISeeMe_Page_38.jpg",
               "InstaLink": ""
             }
+          },
+          "insta_n8iNif": {
+            "type": "insta",
+            "settings": {
+              "instaImage": "shopify:\/\/shop_images\/BoyWebsiteColoringbook-2_424d2823-9065-4c16-9c2a-583ab7977929.jpg",
+              "InstaLink": ""
+            }
+          },
+          "insta_EXa3qB": {
+            "type": "insta",
+            "settings": {
+              "instaImage": "shopify:\/\/shop_images\/GirlWebsiteColoringbook.jpg",
+              "InstaLink": ""
+            }
+          },
+          "insta_cNTiyc": {
+            "type": "insta",
+            "settings": {
+              "instaImage": "shopify:\/\/shop_images\/WhereHandsGo-ColoringBook-2_Page_01.jpg",
+              "InstaLink": ""
+            }
+          },
+          "insta_eqML8U": {
+            "type": "insta",
+            "settings": {
+              "instaImage": "shopify:\/\/shop_images\/FullSizeRender_6bf56b31-ce32-4463-9baa-2a487da683ee.jpg",
+              "InstaLink": ""
+            }
           }
         },
         "block_order": [
@@ -177,7 +205,11 @@
           "insta_an7yTi",
           "insta_nFYkEG",
           "insta_cbGhVx",
-          "insta_PrVN3U"
+          "insta_PrVN3U",
+          "insta_n8iNif",
+          "insta_EXa3qB",
+          "insta_cNTiyc",
+          "insta_eqML8U"
         ],
         "settings": {
           "newsTitle": "Newsletter",
