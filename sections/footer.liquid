@@ -3,8 +3,16 @@
     <div class="container-1306">
       <div class="top-section">
         <ul class="left-insta">
-          {%- for block in section['blocks-'] %}
-            <li></li>
+          {%- for block in section.blocks %}
+            <li>
+              <a href="{{ block.settings.InstaLink }}" target="_blank" class="image-section">
+                {{
+                  block.settings.instaImage
+                  | image_url: width: 1262
+                  | image_tag: loading: 'lazy', widths: '1262x1000'
+                }}
+              </a>
+            </li>
           {% endfor %}
         </ul>
         <div class="middle-section"></div>
