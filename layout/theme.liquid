@@ -22,8 +22,8 @@
   </head>
 
   <body class="template-{{ request.page_type | handle }} ">
-    {% section 'announcement' %}
-    {% section 'header' %}
+    {% comment %} {% section 'announcement' %} {% endcomment %}
+    {% comment %} {% section 'header' %} {% endcomment %}
     <div class="page-container drawer-page-content" id="PageContainer">
       <main class="main-content js-focus-hidden js__main-content" id="MainContent" role="main" tabindex="-1">
         {{ content_for_layout }}
