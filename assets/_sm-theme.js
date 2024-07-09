@@ -945,6 +945,40 @@ jQuery(function () {
       }
     }
   });
+  var productSectionSlider = new Swiper(".js__review-slider", {
+    slidesPerView: 2,
+    spaceBetween: 28,
+    // centeredSlides: true,
+    // resistance: false,
+    loop: true,
+    resistance: false,
+    shortSwipes: true,
+    longSwipes: false,
+    // scrollOverflowOptions: null,
+    // loopedSlidesLimit: false,
+    navigation: {
+      nextEl: ".swiper-button-next-review-section",
+      prevEl: ".swiper-button-prev-review-section"
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1
+      },
+      376: {
+        slidesPerView: 1
+      },
+      481: {
+        slidesPerView: 1
+      },
+      769: {
+        slidesPerView: 2
+      },
+      1440: {
+        slidesPerView: 2,
+        spaceBetween: 28
+      }
+    }
+  });
   /* Hero Banner SLider */
 
   var heroSlider = new Swiper(".js__hero-banner-slider", {
