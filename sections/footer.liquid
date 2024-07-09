@@ -2,7 +2,7 @@
   <div class="main-footer">
     <div class="container-1306">
       <div class="top-section">
-        <ul class="left-insta">
+        <ul class="left-insta insta-list">
           {%- for block in section.blocks limit: 6 %}
             <li>
               <a href="{{ block.settings.InstaLink }}" target="_blank" class="image-section">
@@ -21,7 +21,7 @@
           </div>
         </div>
 
-        <ul class="rigt-insta">
+        <ul class="rigt-insta insta-list">
           {% for block in section.blocks offset: 6 %}
             <li>
               <a href="{{ block.settings.InstaLink }}" target="_blank" class="image-section">
