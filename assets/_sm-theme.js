@@ -945,7 +945,7 @@ jQuery(function () {
       }
     }
   });
-  var productSectionSlider = new Swiper(".js__review-slider", {
+  var reviewSectionSlider = new Swiper(".js__review-slider", {
     slidesPerView: 2,
     spaceBetween: 28,
     // centeredSlides: true,
