@@ -71,6 +71,7 @@
     "social_twitter_link": "#",
     "social_instagram_link": "#",
     "social_tiktok_link": "#",
+    "social_youtube_link": "#",
     "share_facebook": true,
     "share_twitter": true,
     "share_pinterest": true,
@@ -111,6 +112,17 @@
       },
       "footer": {
         "type": "footer",
+        "blocks": {
+          "insta_7dMYGF": {
+            "type": "insta",
+            "settings": {
+              "InstaLink": ""
+            }
+          }
+        },
+        "block_order": [
+          "insta_7dMYGF"
+        ],
         "settings": {
           "sstext": "Follow Us",
           "logo": "shopify:\/\/shop_images\/KsDiggs_Logo.png",
