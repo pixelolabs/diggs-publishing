@@ -102,7 +102,7 @@
           "announcement_wHQAmg": {
             "type": "announcement",
             "settings": {
-              "header_text": "<p>Free Shipping on all orders over $50.<\/p>",
+              "header_text": "<p>Free Shipping on all orders over $50. Shop Now<\/p>",
               "announcement_link": "",
               "announcement_link_text": "#"
             }
