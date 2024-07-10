@@ -4,15 +4,17 @@
       <div class="top-section">
         <ul class="left-insta insta-list">
           {%- for block in section.blocks limit: 6 %}
-            <li>
-              <a href="{{ block.settings.InstaLink }}" target="_blank" class="image-section">
-                {{
-                  block.settings.instaImage
-                  | image_url: width: 1262
-                  | image_tag: loading: 'lazy', widths: '1262x1000'
-                }}
-              </a>
-            </li>
+            {% if block.settings.instaImage != blank %}
+              <li>
+                <a href="{{ block.settings.InstaLink }}" target="_blank" class="image-section">
+                  {{
+                    block.settings.instaImage
+                    | image_url: width: 1262
+                    | image_tag: loading: 'lazy', widths: '1262x1000'
+                  }}
+                </a>
+              </li>
+            {% endif %}
           {% endfor %}
         </ul>
         <div class="middle-section">
@@ -31,26 +33,28 @@
 
         <ul class="rigt-insta insta-list">
           {% for block in section.blocks offset: 6 %}
-            <li>
-              <a href="{{ block.settings.InstaLink }}" target="_blank" class="image-section">
-                {{
-                  block.settings.instaImage
-                  | image_url: width: 1262
-                  | image_tag: loading: 'lazy', widths: '1262x1000'
-                }}
-              </a>
-            </li>
+            {% if block.settings.instaImage != blank %}
+              <li>
+                <a href="{{ block.settings.InstaLink }}" target="_blank" class="image-section">
+                  {{
+                    block.settings.instaImage
+                    | image_url: width: 1262
+                    | image_tag: loading: 'lazy', widths: '1262x1000'
+                  }}
+                </a>
+              </li>
+            {% endif %}
           {% endfor %}
         </ul>
       </div>
       <div class="main-footer__middle flex">
         <!-- Footer Menu -->
-        <div class="main-footer__nav flex-wrap">
+        <div class="main-footer__nav flex">
           {% assign fotterMenu = linklists[section.settings.footerMenu] %}
           {% for link in fotterMenu.links %}
             {% assign linkTitle = link.title | downcase | remove: ' ' %}
             <div class="footer-links">
-              <p class="accordion-toggle">
+              <p class="title">
                 <a href="javascript:;" title="{{ link.title | escape }}"> {{ link.title | escape }}</a>
               </p>
               <ul class="accordion-content">
@@ -96,12 +100,25 @@
         {% endcomment %}
       </div>
       <div class="main-footer__bottom">
+        {% assign legalMenu = linklists[section.settings.legalMenu] %}
+        {% if legalMenu != blank %}
+          <div class="legal-menu">
+            {% for link in legalMenu.links %}
+              <span>
+                <a href="{{ link.url }}" title="{{ link.title | escape }}">{{ link.title | escape }}</a></span
+              >
+            {% endfor %}
+          </div>
+        {% endif %}
         <!-- Copyright -->
         <div class="copyright">
           <div class="copyright-section flex-wrap">
             <p>© {{ 'now' | date: '%Y' }} All Rights Reserved by Diggs Publishing</p>
             <a href="">Designed by PixeloLabs</a>
           </div>
+        </div>
+        <div class="footer-cartoon">
+          <img src="{{ "Footer-cartoon.jpg" |asset_url}}" alt="">
         </div>
       </div>
     </div>
@@ -132,19 +149,19 @@
       "default": "Newsletter"
     },
     {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
       "type": "link_list",
       "id": "footerMenu",
       "label": "Footer Menu"
     },
     {
-      "type": "text",
-      "id": "copyright",
-      "label": "Copyright"
-    },
-    {
-      "type": "richtext",
-      "id": "description",
-      "label": "Description"
+      "type": "link_list",
+      "id": "legalMenu",
+      "label": "Legal Menu"
     }
   ],
   "blocks": [

@@ -368,7 +368,7 @@ textarea.input--error {
       letter-spacing: 0.09px !important;
     }
   }
-  &__product-title a{
+  &__product-title a {
     font-size: 16px;
     font-family: var(--font-family-primary);
     line-height: 1.44;
@@ -379,10 +379,10 @@ textarea.input--error {
   padding-right: 12px;
   padding-top: 12px;
   position: relative;
-  &::before{
+  &::before {
     width: calc(100% - 12px);
-    height:calc(100% - 12px);
-    content: '';
+    height: calc(100% - 12px);
+    content: "";
     position: absolute;
     right: 0;
     top: 0;
@@ -425,7 +425,7 @@ textarea.input--error {
     position: relative !important;
     height: 304px;
     width: 100%;
-   
+
     img {
       @include img-object-cover;
       visibility: visible !important;
@@ -450,9 +450,9 @@ textarea.input--error {
       }
     }
   }
-  .content{
+  .content {
     background-image: linear-gradient(178deg, #d51f91 2%, #ee35a9 98%);
-    *{
+    * {
       color: $color-white;
     }
     padding: 35px 24px 50px;
@@ -491,8 +491,6 @@ textarea.input--error {
     }
   }
   &__price {
-   
-   
     display: flex;
     color: $color-black;
     display: flex !important;
@@ -506,10 +504,10 @@ textarea.input--error {
     span,
     s {
       font-weight: 700;
-    font-size: 16px;
-    font-family: var(--font-family-primary);
-    line-height: normal;
-    letter-spacing: normal;
+      font-size: 16px;
+      font-family: var(--font-family-primary);
+      line-height: normal;
+      letter-spacing: normal;
       // text-transform: capitalize;
       text-align: center;
       margin-right: 5px;
@@ -759,7 +757,7 @@ textarea.input--error {
 .newsletter-form {
   .klaviyo-form,
   form {
-    margin: 20px 0 0;
+    // margin: 20px 0 0;
     position: relative;
   }
   div {
@@ -787,10 +785,10 @@ textarea.input--error {
       margin-bottom: 0 !important;
     }
     input {
-      border: none !important;
+      border: 2px solid $color-black !important;
       background-color: transparent !important;
       padding: 0px !important;
-      border-radius: 0 !important;
+
       font-size: 14px !important;
       font-weight: 500 !important;
       font-stretch: normal !important;
@@ -799,7 +797,7 @@ textarea.input--error {
       letter-spacing: normal !important;
       color: $color-original-black !important;
       -webkit-appearance: none;
-      border-right: none !important;
+
       font-family: var(--font-family-primary) !important;
       width: 100%;
       max-width: 100% !important;
@@ -808,7 +806,7 @@ textarea.input--error {
       max-width: 100% !important;
       padding: 17px 90px 17px 20px !important;
       border-radius: 40px !important;
-      background: $color-white !important;
+      background: transparent !important;
       @include MQ(MQ-480) {
         padding: 17px 80px 17px 10px !important;
       }
@@ -840,9 +838,9 @@ textarea.input--error {
     button,
     .btn-submit {
       border: none !important;
-      border-radius: 0 !important;
+      border-radius: 30px !important;
       color: $color-black !important;
-      font-size: 14px !important;
+      font-size: 0 !important;
       font-family: var(--font-family-primary) !important;
       font-weight: bold !important;
       line-height: 16px !important;
@@ -850,12 +848,23 @@ textarea.input--error {
       text-align: center !important;
       position: absolute;
       right: 20px;
-      width: 70px;
-      top: 19px;
+      width: 52px;
+      height: 36px;
+      background: white;
+      top: 8px;
       cursor: pointer;
-      background: transparent !important;
-      height: auto !important;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+
       padding: 0 !important;
+      &:before {
+        position: absolute;
+        content: "";
+        background: url("icon-mail.png") no-repeat center/22px;
+        width: 22px;
+        height: 22px;
+      }
       @include MQ(MQ-480) {
         right: 10px;
       }

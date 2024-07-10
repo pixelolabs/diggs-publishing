@@ -1,6 +1,7 @@
 footer {
   // overflow: hidden;
   position: relative;
+  overflow-x: clip;
   background-color: $color-yellow;
   &:before {
     background: url(graphic-yellow-wave.png) repeat-x top/100%;
@@ -27,10 +28,23 @@ footer {
       top: -34px;
     }
   }
+  &:after {
+    position: absolute;
+    content: "";
+    width: 111px;
+    height: 85px;
+    background: url(icon-cloud.webp) no-repeat center / 100%;
+    top: -70px;
+    left: 25%;
+    background-size: contain;
+  }
   .top-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include MQ(MQ-768) {
+      flex-direction: column;
+    }
     ul.insta-list {
       display: flex;
       flex-wrap: wrap;
@@ -40,6 +54,11 @@ footer {
       @include MQ(MQ-1200) {
         margin-left: -8px;
         width: calc(100% + 8px);
+      }
+      @include MQ(MQ-768) {
+        margin-top: 32px;
+        padding-left: 0;
+        justify-content: center;
       }
 
       li {
@@ -53,6 +72,10 @@ footer {
           height: 120px;
           margin-bottom: 8px;
         }
+        @include MQ(MQ-1024) {
+          width: 100px;
+          height: 100px;
+        }
         .image-section {
           width: 100%;
           height: 100%;
@@ -64,10 +87,20 @@ footer {
         }
       }
     }
+    .left-insta {
+      padding-right: 20px;
+      @include MQ(MQ-768) {
+        display: none !important;
+      }
+    }
     .rigt-insta {
       justify-content: end;
+      padding-left: 20px;
     }
     .middle-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       span {
         font-family: var(--font-family-secondary);
         font-size: 30px;
@@ -79,11 +112,14 @@ footer {
         text-align: center;
         margin-bottom: 29px;
         display: block;
+        @include MQ(MQ-768) {
+          margin-bottom: 12px;
+        }
       }
       .footer-logo {
         width: 113px;
         height: 76px;
-        margin-bottom: 25px;
+        // margin-bottom: 25px;
         img {
           width: 100%;
           height: 100%;
@@ -92,11 +128,11 @@ footer {
       }
       .social-icons {
         display: flex;
-        margin-top: 21px;
+        margin-top: 25px;
 
         @include MQ(MQ-980) {
           justify-content: center;
-          margin-top: 30px;
+          margin-top: 26px;
         }
 
         ul {
@@ -134,7 +170,28 @@ footer {
       display: none;
     }
   }
-
+  .main-footer {
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      width: 60px;
+      height: 45px;
+      background: url(icon-cloud.webp) no-repeat center / 100%;
+      top: -30px;
+      right: 18%;
+      background-size: contain;
+    }
+    &:before {
+      position: absolute;
+      content: "";
+      left: 35.7px;
+      top: 93px;
+      background: url(star-large-white.webp) no-repeat center / 100%;
+      width: 27.2px;
+      height: 41.9px;
+    }
+  }
   // .footer-top-bar {
   //   padding: 22px 0 18px;
   //   // background-color: $color-black;
@@ -174,38 +231,146 @@ footer {
     // background: $color-navy;
 
     @include MQ(MQ-980) {
-      padding: 41px 0 46px;
+      padding: 41px 0 0px;
     }
 
     &__middle {
       // padding-left: 35px;
       padding-top: 92px;
-
+      max-width: 1098px;
+      width: 100%;
+      margin: 0 auto;
+      justify-content: space-between;
+      position: relative;
+      &:before {
+        position: absolute;
+        content: "";
+        right: -68px;
+        top: 160px;
+        background: url(star-large-white.webp) no-repeat center / 100%;
+        width: 27.2px;
+        height: 41.9px;
+      }
       @include MQ(MQ-1280) {
         justify-content: space-between;
       }
 
       @include MQ(MQ-980) {
+        // flex-direction: column;
+        // align-items: center;
+        padding-top: 30px;
+      }
+      @include MQ(MQ-768) {
         flex-direction: column;
-        align-items: center;
       }
     }
 
     &__bottom {
-      padding-top: 70px;
+      // padding-top: 70px;
       z-index: 5;
-      position: relative;
+      // position: relative;
       margin-top: 40px;
-      &:before {
+      max-width: 1098px;
+      width: 100%;
+      margin: 0 auto;
+      // margin-top: 88px;
+
+      .footer-cartoon {
+        width: 100%;
+        max-width: 886px;
+        height: 23vw;
+        max-height: 454px;
         position: absolute;
-        content: "";
-        width: 276px;
-        height: 29px;
-        left: 0;
-        top: 0;
-        z-index: 6;
-        background: url(graphic-dotted-border.png) no-repeat center / 276px;
+        bottom: 0;
+        right: 0;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          object-position: right bottom;
+        }
+        @include MQ(MQ-768) {
+          left: 0;
+          position: relative;
+          // margin-top: 30px;
+          height: 48vw;
+          img {
+            object-position: left bottom;
+          }
+        }
       }
+      .legal-menu {
+        // margin-left: 80px;
+        margin-top: 29px;
+        @include MQ(MQ-768) {
+          margin-top: 39px;
+        }
+        // @include MQ(MQ-1225) {
+        //   margin-left: 50px;
+        // }
+
+        a {
+          font-size: 12px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.67;
+          letter-spacing: normal;
+          position: relative;
+        }
+        span {
+          position: relative;
+          margin-right: 20px;
+          &::before {
+            position: absolute;
+            content: "";
+            background: #3b2900;
+            right: -10px;
+            top: 6px;
+            width: 1px;
+            height: 60%;
+          }
+          &:last-child {
+            margin-right: 0;
+            &::before {
+              display: none;
+            }
+          }
+        }
+      }
+      .copyright {
+        position: relative;
+        padding-top: 61px;
+        margin-top: 88px;
+        @include MQ(MQ-980) {
+          margin-top: 60px;
+        }
+        @include MQ(MQ-768) {
+          margin-top: 45px;
+        }
+        &:before {
+          position: absolute;
+          content: "";
+          width: 276px;
+          height: 29px;
+          left: 0;
+          top: 0;
+          z-index: 6;
+          background: url(graphic-dotted-border.png) no-repeat center / 276px;
+        }
+      }
+      // &:after {
+      //   position: absolute;
+      //   content: "";
+      //   width: 100%;
+      //   max-width: 886px;
+      //   height: 20vw;
+      //   right: 0;
+      //   bottom: 0;
+      //   max-height: 473px;
+      //   background: url(Footer-cartoon.jpg) no-repeat;
+      // }
+
       a {
         font-size: 12px;
         font-weight: normal;
@@ -221,7 +386,6 @@ footer {
       }
 
       @include MQ(MQ-980) {
-        text-align: center;
         margin-top: 30px;
       }
 
@@ -238,7 +402,9 @@ footer {
     &__newsletter {
       width: 100%;
       display: flex;
-
+      @include MQ(MQ-980) {
+        flex-direction: column;
+      }
       .newsletter-title {
         font-size: 18px;
         font-weight: normal;
@@ -249,24 +415,19 @@ footer {
         display: block;
         width: 100%;
         font-family: var(--font-family-secondary);
-
-        @include MQ(MQ-980) {
-          text-align: center;
-          margin-bottom: 21px;
+        @include MQ(MQ-480) {
+          font-size: 15px;
         }
       }
 
       @include MQ(MQ-600) {
         position: relative;
-        width: calc(100% + 80px);
-        margin-left: -40px;
-        padding: 0 40px 31px;
-        border-bottom: 1px solid $color-black;
+
+        // border-bottom: 1px solid $color-black;
 
         form {
           max-width: 400px;
           margin: 0 auto;
-          margin-top: 11px;
         }
       }
     }
@@ -274,8 +435,8 @@ footer {
 
   .right-section {
     display: flex;
-    width: 678px;
-    padding-left: 85px;
+    width: 622px;
+    padding-left: 30px;
     margin-right: 0 !important;
 
     @include MQ(MQ-1280) {
@@ -292,20 +453,35 @@ footer {
     //   margin-right: 0px;
     // }
 
-    @include MQ(MQ-600) {
-      width: 100%;
+    @include MQ(MQ-980) {
+      // margin-top: 22px;
+      width: 350px;
+      padding-left: 30px;
+    }
+    @include MQ(MQ-768) {
+      padding-left: 0;
+      margin-top: 22px;
     }
   }
   .news-content {
     max-width: 272px;
     width: 100%;
+    @include MQ(MQ-980) {
+      margin-bottom: 20px;
+    }
   }
   .newsletter-form {
     width: 100%;
     max-width: 320px;
+    @include MQ(MQ-480) {
+      max-width: 280px;
+    }
   }
   .description {
     margin-top: 21px;
+    @include MQ(MQ-768) {
+      margin-top: 9px;
+    }
 
     p {
       font-size: 14px;
@@ -316,14 +492,14 @@ footer {
       letter-spacing: 0.01px;
     }
 
-    @include MQ(MQ-980) {
-      margin-top: 56px;
-    }
+    // @include MQ(MQ-980) {
+    //   margin-top: 56px;
+    // }
   }
 
   .main-footer__nav {
-    width: calc(100% - 693px);
-    margin-left: -89px;
+    width: calc(100% - 542px);
+    margin-left: -80px;
 
     @include MQ(MQ-1225) {
       width: calc(100% - 500px);
@@ -331,19 +507,23 @@ footer {
       // justify-content: space-between;
     }
 
-    // @include MQ(MQ-768) {
-    //   width: calc(100% + 20px);
-    //   margin-left: -20px;
-    // }
-    @include MQ(MQ-600) {
-      width: 100%;
-      margin-left: 0px;
-      margin-top: 32px;
+    @include MQ(MQ-980) {
+      width: calc(100% - 300px);
+      margin-left: -30px;
     }
+    @include MQ(MQ-768) {
+      margin-left: -58px;
+      width: calc(100% + 58px);
+    }
+    // @include MQ(MQ-600) {
+    //   width: 100%;
+    //   margin-left: 0px;
+    //   margin-top: 32px;
+    // }
 
     .footer-links {
       width: fit-content;
-      margin-left: 89px;
+      margin-left: 80px;
 
       @include MQ(MQ-1225) {
         margin-left: 50px;
@@ -352,21 +532,16 @@ footer {
       // @include MQ(MQ-768) {
       //   padding-left: 20px;
       // }
-
-      @include MQ(MQ-600) {
-        width: 100%;
-        max-width: 100%;
-        padding: 0;
-        margin-bottom: 40px;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
+      @include MQ(MQ-980) {
+        margin-left: 30px;
+      }
+      @include MQ(MQ-768) {
+        margin-left: 58px;
       }
 
       p {
         font-family: var(--font-family-secondary);
-        font-size: 18px;
+
         font-weight: normal;
         line-height: 1.39;
         letter-spacing: 1px;
@@ -382,40 +557,43 @@ footer {
           letter-spacing: 1px;
           text-align: left;
           text-transform: uppercase;
-        }
-
-        @include MQ(MQ-600) {
-          margin: 0;
-          pointer-events: all;
-          cursor: pointer;
-          padding: 0;
-          position: relative;
-
-          &::before {
-            width: 13px;
-            height: 13px;
-            position: absolute;
-            content: "";
-            top: 3px;
-            right: 0;
-            filter: brightness(0) invert(1);
-            background: url("icon-plus.webp") no-repeat center / 13px;
-          }
-
-          &.active {
-            &::before {
-              background: url("icon-minus.webp") no-repeat center / 13px;
-            }
+          @include MQ(MQ-480) {
+            font-size: 15px;
           }
         }
+
+        // @include MQ(MQ-600) {
+        //   margin: 0;
+        //   pointer-events: all;
+        //   cursor: pointer;
+        //   padding: 0;
+        //   position: relative;
+
+        //   &::before {
+        //     width: 13px;
+        //     height: 13px;
+        //     position: absolute;
+        //     content: "";
+        //     top: 3px;
+        //     right: 0;
+        //     filter: brightness(0) invert(1);
+        //     background: url("icon-plus.webp") no-repeat center / 13px;
+        //   }
+
+        //   &.active {
+        //     &::before {
+        //       background: url("icon-minus.webp") no-repeat center / 13px;
+        //     }
+        //   }
+        // }
       }
 
       ul {
         li {
           margin-bottom: 20px;
 
-          @include MQ(MQ-600) {
-            margin-bottom: 30px;
+          @include MQ(MQ-768) {
+            margin-bottom: 15px;
           }
 
           &:last-child {
@@ -425,10 +603,10 @@ footer {
       }
 
       .accordion-content {
-        display: none;
+        // display: none;
 
         @include MQ(MQ-600) {
-          margin: 29px 0 0px;
+          margin: 10px 0 0px;
         }
 
         a {
