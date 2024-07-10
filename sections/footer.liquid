@@ -100,18 +100,18 @@
         {% endcomment %}
       </div>
       <div class="main-footer__bottom">
+        {% assign legalMenu = linklists[section.settings.legalMenu] %}
+        {% if legalMenu != blank %}
+          <div class="legal-menu">
+            {% for link in legalMenu.links %}
+              <span>
+                <a href="{{ link.url }}" title="{{ link.title | escape }}">{{ link.title | escape }}</a></span
+              >
+            {% endfor %}
+          </div>
+        {% endif %}
         <!-- Copyright -->
         <div class="copyright">
-          {% assign legalMenu = linklists[section.settings.legalMenu] %}
-          {% if legalMenu != blank %}
-            <div class="legal-menu">
-              {% for link in legalMenu.links %}
-                <span>
-                  <a href="{{ link.url }}" title="{{ link.title | escape }}">{{ link.title | escape }}</a></span
-                >
-              {% endfor %}
-            </div>
-          {% endif %}
           <div class="copyright-section flex-wrap">
             <p>© {{ 'now' | date: '%Y' }} All Rights Reserved by Diggs Publishing</p>
             <a href="">Designed by PixeloLabs</a>
