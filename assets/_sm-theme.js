@@ -925,24 +925,6 @@ jQuery(function () {
     navigation: {
       nextEl: ".swiper-button-next-product-section",
       prevEl: ".swiper-button-prev-product-section"
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1
-      },
-      376: {
-        slidesPerView: 1
-      },
-      481: {
-        slidesPerView: 1
-      },
-      769: {
-        slidesPerView: 2
-      },
-      1440: {
-        slidesPerView: 3,
-        spaceBetween: 39
-      }
     }
   });
   var reviewSectionSlider = new Swiper(".js__review-slider", {
