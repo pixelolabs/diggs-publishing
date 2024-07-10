@@ -96,11 +96,11 @@
                 <!-- Logo -->
                 <!-- Account, Cart -->
                 <ul class="right-nav flex-align-center">
-                    <li class="none-980"> 
+                    {% comment %} <li class="none-980"> 
                         <a href="#swym-wishlist" class="swym-wishlist user" title="wishlist">
                             {% include "icon-heart" %}
                         </a>
-                    </li>
+                    </li> {% endcomment %}
                     <li class="none-980 has-sub-nav has-sub-nav-account">
                         {% if customer %}
                         <a href="/account" title="My Account" class="user site-nav__link">
