@@ -101,6 +101,27 @@
                             {% include "icon-heart" %}
                         </a>
                     </li> {% endcomment %}
+                    <li class=" search-li none-980">
+                        <a href="javascript:;" class="js__search search-icon" title="Search">{% include 'icon-search' %}
+                        </a>
+    
+                        
+                        <div class="header-search-section js__header-search-section">
+                            <div class="container-696">
+                            <a href="javascript:;" class=" toggle-icon"> {% include 'icon-search' %}</a>
+    
+                            <form method="get" action="/search" class="flex-align-center relative" data-form-type="">
+                                <input type="hidden" name="type" value="product">
+    
+                                <input class="search" type="search" placeholder="Search Products" aria-label="Search" name="q">
+                                <input type="submit" aria-label="Submit" class="submit btn--primary" value="Search" />
+                                
+                            </form>
+                        </div>
+                        
+                        </div>
+                   
+                    </li> 
                     <li class="none-980 has-sub-nav has-sub-nav-account">
                         {% if customer %}
                         <a href="/account" title="My Account" class="user site-nav__link">
@@ -137,27 +158,7 @@
                             </div>
                     </li>
                     
-                    <li class=" search-li none-980">
-                        <a href="javascript:;" class="js__search search-icon" title="Search">{% include 'icon-search' %}
-                        </a>
-    
-                        
-                        <div class="header-search-section js__header-search-section">
-                            <div class="container-696">
-                            <a href="javascript:;" class=" toggle-icon"> {% include 'icon-search' %}</a>
-    
-                            <form method="get" action="/search" class="flex-align-center relative" data-form-type="">
-                                <input type="hidden" name="type" value="product">
-    
-                                <input class="search" type="search" placeholder="Search Products" aria-label="Search" name="q">
-                                <input type="submit" aria-label="Submit" class="submit btn--primary" value="Search" />
-                                
-                            </form>
-                        </div>
-                        
-                        </div>
-                   
-                    </li> 
+                    
                 
                     
                     <li>
