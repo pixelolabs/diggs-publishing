@@ -4,15 +4,17 @@
       <div class="top-section">
         <ul class="left-insta insta-list">
           {%- for block in section.blocks limit: 6 %}
-            <li>
-              <a href="{{ block.settings.InstaLink }}" target="_blank" class="image-section">
-                {{
-                  block.settings.instaImage
-                  | image_url: width: 1262
-                  | image_tag: loading: 'lazy', widths: '1262x1000'
-                }}
-              </a>
-            </li>
+            {% if block.settings.instaImage != blank %}
+              <li>
+                <a href="{{ block.settings.InstaLink }}" target="_blank" class="image-section">
+                  {{
+                    block.settings.instaImage
+                    | image_url: width: 1262
+                    | image_tag: loading: 'lazy', widths: '1262x1000'
+                  }}
+                </a>
+              </li>
+            {% endif %}
           {% endfor %}
         </ul>
         <div class="middle-section">
