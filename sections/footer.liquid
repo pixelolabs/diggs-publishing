@@ -70,7 +70,9 @@
           {% if legalMenu != blank %}
             <div class="legal-menu">
               {% for link in legalMenu.links %}
-                <a href="{{ link.url }}" title="{{ link.title | escape }}">{{ link.title | escape }}</a>
+                <span>
+                  <a href="{{ link.url }}" title="{{ link.title | escape }}">{{ link.title | escape }}</a></span
+                >
               {% endfor %}
             </div>
           {% endif %}
