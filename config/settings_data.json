@@ -19,6 +19,8 @@
     "buttons_radius": 0,
     "buttonfontsize": 23,
     "buttonletterspacing": "0.69px",
+    "buttonmobilefontsize": 20,
+    "buttonmobileletterspacing": "0.6px",
     "pretitlefontsize": 30,
     "pretitlelineheight": "1",
     "pretitleletterspacing": "0.6px",
@@ -53,7 +55,23 @@
     "paraxsmalllineheight": "1.5",
     "paraxsmallletterspacing": "1px",
     "paraxsmalltexttransform": "uppercase",
-    "heading2mobilefontsize": 25,
+    "pretitlemobilefontsize": 18,
+    "pretitlemobilelineheight": "1.11",
+    "pretitlemobileletterspacing": "0.36px",
+    "heading1mobilelineheight": "1",
+    "heading1mobileletterspacing": "0.6px",
+    "heading2mobilefontsize": 23,
+    "heading2mobilelineheight": "1.13",
+    "heading2mobileletterspacing": "0.46px",
+    "heading2mediummobilefontsize": 18,
+    "heading2mediummobilelineheight": "1.11",
+    "heading2mediummobileletterspacing": "0.36px",
+    "heading3mobilefontsize": 18,
+    "heading3mobilelineheight": "1",
+    "heading3mobileletterspacing": "0.36px",
+    "paramobilefontsize": 14,
+    "paramobilelineheight": "1.57",
+    "paramobileletterspacing": "normal",
     "tag1": "best seller",
     "tagLabel1": "best seller",
     "tagColor1": "#fcefef",
@@ -98,6 +116,19 @@
       },
       "announcement": {
         "type": "announcement",
+        "blocks": {
+          "announcement_wHQAmg": {
+            "type": "announcement",
+            "settings": {
+              "header_text": "<p>Free Shipping on all orders over $50. Shop Now<\/p>",
+              "announcement_link": "",
+              "announcement_link_text": "#"
+            }
+          }
+        },
+        "block_order": [
+          "announcement_wHQAmg"
+        ],
         "settings": {
           "show_announcement": true
         }
@@ -105,7 +136,8 @@
       "header": {
         "type": "header",
         "settings": {
-          "nav_menu": "",
+          "logo": "shopify:\/\/shop_images\/diggs-logo.png",
+          "nav_menu": "main-menu-2-0",
           "loginMenu": "",
           "bottommobileMenu": ""
         }
@@ -117,7 +149,7 @@
             "type": "insta",
             "settings": {
               "instaImage": "shopify:\/\/shop_images\/insta1.png",
-              "InstaLink": ""
+              "InstaLink": "https:\/\/www.instagram.com\/reel\/C80yLRQRcrK\/"
             }
           },
           "insta_chghia": {
