@@ -911,7 +911,7 @@ jQuery(function () {
       $(".top-banner").removeClass("active");
     }
   });
-  var productSectionSlider = new Swiper(".js__product-section-slider", {
+  var productSectionSlider = new Swiper(".js__product-slider", {
     slidesPerView: 3,
     spaceBetween: 39,
     // centeredSlides: true,
