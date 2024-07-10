@@ -922,10 +922,6 @@ jQuery(function () {
     longSwipes: false,
     // scrollOverflowOptions: null,
     // loopedSlidesLimit: false,
-    navigation: {
-      nextEl: ".swiper-button-next-product-section",
-      prevEl: ".swiper-button-prev-product-section"
-    },
     breakpoints: {
       0: {
         slidesPerView: 1
@@ -936,6 +932,10 @@ jQuery(function () {
       1025: {
         slidesPerView: 3
       }
+    },
+    navigation: {
+      nextEl: ".swiper-button-next-product-section",
+      prevEl: ".swiper-button-prev-product-section"
     }
   });
   var reviewSectionSlider = new Swiper(".js__review-slider", {
