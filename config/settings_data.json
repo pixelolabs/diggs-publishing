@@ -94,6 +94,31 @@
           "show_share_buttons": true,
           "recommendedHeading": "Recommended Blogs"
         }
+      },
+      "announcement": {
+        "type": "announcement",
+        "settings": {
+          "show_announcement": true
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "nav_menu": "",
+          "loginMenu": "",
+          "bottommobileMenu": ""
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "sstext": "Follow Us",
+          "logo": "shopify:\/\/shop_images\/KsDiggs_Logo.png",
+          "newsTitle": "Our Newsletter",
+          "footerMenu": "footer-2-0",
+          "copyright": "",
+          "description": "<p>Sign up for the latest Ice offers and exclusives.<\/p>"
+        }
       }
     },
     "content_for_index": [
