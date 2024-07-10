@@ -216,9 +216,9 @@
           "sstext": "Follow Us",
           "logo": "shopify:\/\/shop_images\/KsDiggs_Logo.png",
           "newsTitle": "Our Newsletter",
+          "description": "<p>Sign up for the latest Ice offers and exclusives.<\/p>",
           "footerMenu": "footer-2-0",
-          "copyright": "",
-          "description": "<p>Sign up for the latest Ice offers and exclusives.<\/p>"
+          "legalMenu": "footer-legal-menu-2-0"
         }
       }
     },
