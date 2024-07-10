@@ -66,16 +66,6 @@
               </ul>
             </div>
           {% endfor %}
-          {% assign legalMenu = linklists[section.settings.legalMenu] %}
-          {% if legalMenu != blank %}
-            <div class="legal-menu">
-              {% for link in legalMenu.links %}
-                <span>
-                  <a href="{{ link.url }}" title="{{ link.title | escape }}">{{ link.title | escape }}</a></span
-                >
-              {% endfor %}
-            </div>
-          {% endif %}
         </div>
         <div class="right-section">
           <div class="main-footer__newsletter">
@@ -112,6 +102,16 @@
       <div class="main-footer__bottom">
         <!-- Copyright -->
         <div class="copyright">
+          {% assign legalMenu = linklists[section.settings.legalMenu] %}
+          {% if legalMenu != blank %}
+            <div class="legal-menu">
+              {% for link in legalMenu.links %}
+                <span>
+                  <a href="{{ link.url }}" title="{{ link.title | escape }}">{{ link.title | escape }}</a></span
+                >
+              {% endfor %}
+            </div>
+          {% endif %}
           <div class="copyright-section flex-wrap">
             <p>© {{ 'now' | date: '%Y' }} All Rights Reserved by Diggs Publishing</p>
             <a href="">Designed by PixeloLabs</a>
