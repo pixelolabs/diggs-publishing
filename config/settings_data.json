@@ -71,6 +71,7 @@
     "social_twitter_link": "#",
     "social_instagram_link": "#",
     "social_tiktok_link": "#",
+    "social_youtube_link": "#",
     "share_facebook": true,
     "share_twitter": true,
     "share_pinterest": true,
@@ -93,6 +94,131 @@
           "blog_show_date": true,
           "show_share_buttons": true,
           "recommendedHeading": "Recommended Blogs"
+        }
+      },
+      "announcement": {
+        "type": "announcement",
+        "settings": {
+          "show_announcement": true
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "nav_menu": "",
+          "loginMenu": "",
+          "bottommobileMenu": ""
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "insta_7dMYGF": {
+            "type": "insta",
+            "settings": {
+              "instaImage": "shopify:\/\/shop_images\/insta1.png",
+              "InstaLink": ""
+            }
+          },
+          "insta_chghia": {
+            "type": "insta",
+            "settings": {
+              "instaImage": "shopify:\/\/shop_images\/insta2.png",
+              "InstaLink": ""
+            }
+          },
+          "insta_T8ye9F": {
+            "type": "insta",
+            "settings": {
+              "instaImage": "shopify:\/\/shop_images\/insta3.png",
+              "InstaLink": ""
+            }
+          },
+          "insta_c4q4h6": {
+            "type": "insta",
+            "settings": {
+              "instaImage": "shopify:\/\/shop_images\/insta4.png",
+              "InstaLink": ""
+            }
+          },
+          "insta_hyjYMk": {
+            "type": "insta",
+            "settings": {
+              "instaImage": "shopify:\/\/shop_images\/insta5.png",
+              "InstaLink": ""
+            }
+          },
+          "insta_TqpBnJ": {
+            "type": "insta",
+            "settings": {
+              "instaImage": "shopify:\/\/shop_images\/insta6.png",
+              "InstaLink": ""
+            }
+          },
+          "insta_Kg6wp8": {
+            "type": "insta",
+            "settings": {
+              "instaImage": "shopify:\/\/shop_images\/insta7.png",
+              "InstaLink": ""
+            }
+          },
+          "insta_3WPgLg": {
+            "type": "insta",
+            "settings": {
+              "instaImage": "shopify:\/\/shop_images\/insta8.png",
+              "InstaLink": ""
+            }
+          },
+          "insta_96VQ9Y": {
+            "type": "insta",
+            "settings": {
+              "instaImage": "shopify:\/\/shop_images\/insta9.png",
+              "InstaLink": ""
+            }
+          },
+          "insta_X3fLCU": {
+            "type": "insta",
+            "settings": {
+              "instaImage": "shopify:\/\/shop_images\/insta10.png",
+              "InstaLink": ""
+            }
+          },
+          "insta_4UjNKX": {
+            "type": "insta",
+            "settings": {
+              "instaImage": "shopify:\/\/shop_images\/insta11.png",
+              "InstaLink": ""
+            }
+          },
+          "insta_Vf9pAm": {
+            "type": "insta",
+            "settings": {
+              "instaImage": "shopify:\/\/shop_images\/insta12.png",
+              "InstaLink": ""
+            }
+          }
+        },
+        "block_order": [
+          "insta_7dMYGF",
+          "insta_chghia",
+          "insta_T8ye9F",
+          "insta_c4q4h6",
+          "insta_hyjYMk",
+          "insta_TqpBnJ",
+          "insta_Kg6wp8",
+          "insta_3WPgLg",
+          "insta_96VQ9Y",
+          "insta_X3fLCU",
+          "insta_4UjNKX",
+          "insta_Vf9pAm"
+        ],
+        "settings": {
+          "sstext": "Follow Us",
+          "logo": "shopify:\/\/shop_images\/KsDiggs_Logo.png",
+          "newsTitle": "Our Newsletter",
+          "description": "<p>Sign up for the latest Ice offers and exclusives.<\/p>",
+          "footerMenu": "footer-2-0",
+          "legalMenu": "footer-legal-menu-2-0"
         }
       }
     },
