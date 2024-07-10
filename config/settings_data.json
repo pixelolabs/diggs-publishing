@@ -98,6 +98,19 @@
       },
       "announcement": {
         "type": "announcement",
+        "blocks": {
+          "announcement_wHQAmg": {
+            "type": "announcement",
+            "settings": {
+              "header_text": "<p>Free Shipping on all orders over $50.<\/p>",
+              "announcement_link": "",
+              "announcement_link_text": "#"
+            }
+          }
+        },
+        "block_order": [
+          "announcement_wHQAmg"
+        ],
         "settings": {
           "show_announcement": true
         }
