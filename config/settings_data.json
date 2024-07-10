@@ -118,7 +118,8 @@
       "header": {
         "type": "header",
         "settings": {
-          "nav_menu": "",
+          "logo": "shopify:\/\/shop_images\/diggs-logo.png",
+          "nav_menu": "main-menu-2-0",
           "loginMenu": "",
           "bottommobileMenu": ""
         }
@@ -130,7 +131,7 @@
             "type": "insta",
             "settings": {
               "instaImage": "shopify:\/\/shop_images\/insta1.png",
-              "InstaLink": ""
+              "InstaLink": "https:\/\/www.instagram.com\/reel\/C80yLRQRcrK\/"
             }
           },
           "insta_chghia": {
