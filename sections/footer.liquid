@@ -66,6 +66,8 @@
               </ul>
             </div>
           {% endfor %}
+          {% assign legalMenu = linklists[section.settings.legalMenu] %}
+          <div class="legal-menu"></div>
         </div>
         <div class="right-section">
           <div class="main-footer__newsletter">
@@ -139,19 +141,19 @@
       "default": "Newsletter"
     },
     {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
       "type": "link_list",
       "id": "footerMenu",
       "label": "Footer Menu"
     },
     {
-      "type": "text",
-      "id": "copyright",
-      "label": "Copyright"
-    },
-    {
-      "type": "richtext",
-      "id": "description",
-      "label": "Description"
+      "type": "link_list",
+      "id": "legalMenu",
+      "label": "Legal Menu"
     }
   ],
   "blocks": [
