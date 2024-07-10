@@ -54,7 +54,7 @@
           {% for link in fotterMenu.links %}
             {% assign linkTitle = link.title | downcase | remove: ' ' %}
             <div class="footer-links">
-              <p class="accordion-toggle">
+              <p class="title">
                 <a href="javascript:;" title="{{ link.title | escape }}"> {{ link.title | escape }}</a>
               </p>
               <ul class="accordion-content">
