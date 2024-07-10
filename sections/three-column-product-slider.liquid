@@ -57,6 +57,7 @@
       {% include 'icon-arrow-slide-black' %}
     </div>
   </div>
+  <div class="text-center">
   {% if section.settings.buttonText != blank and section.settings.buttonLink != blank %}
     <a 
       href="{{ section.settings.buttonLink }}"
@@ -70,6 +71,7 @@
      
     </a>
   {% endif %}
+  </div>
 </div>
 </div>
 {% if section.blocks.size > 0 %}
