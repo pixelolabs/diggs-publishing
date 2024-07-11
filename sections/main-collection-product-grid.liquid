@@ -155,6 +155,9 @@
                     style="--animation-order: {{ forloop.index }};"
                   {% endif %}
                 >
+                  {% include 'product_Card'  with  productRelated: productRelated , show_price: true, show_tags: false, show_auto_tags: false, show_title: true, show_fav: false, show_secondary_button: false %}
+    
+                {% comment %}
                   {% render 'card-product',
                     card_product: product,
                     media_aspect_ratio: section.settings.image_ratio,
@@ -166,6 +169,7 @@
                     show_quick_add: section.settings.enable_quick_add,
                     section_id: section.id
                   %}
+                      {% endcomment %}
                 </li>
               {%- endfor -%}
             </ul>
