@@ -2266,6 +2266,7 @@ jQuery(function () {
 jQuery(function () {
   var newsHeight = $('.announcement-bar').height();
   $('.header-logo').css("top", '-' + (newsHeight + 10) + 'px');
+  $('.navbar-collapse').css("top", +(newsHeight + 54 + 25) + 'px');
 });
 $(window).scroll(function () {
   var sticky = $("header"),
