@@ -16,7 +16,7 @@
                         {% if section.settings.logo != blank %}
                         <img src="{{section.settings.logo | img_url: 'master' }}" class="logo" alt="{{shop.name}} Logo"
                             loading="lazy">
-                            <img src="{{section.settings.whiteLogo | img_url: 'master' }}" class="whitelogo" alt="{{shop.name}} Logo"
+                            <img src="{{section.settings.logo | img_url: 'master' }}" class="whitelogo" alt="{{shop.name}} Logo"
                                 loading="lazy">
                         {%else%}
                         {{shop.name}}
