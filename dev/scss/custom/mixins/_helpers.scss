@@ -26,6 +26,7 @@ $MQ-1100: 1100px;
 $MQ-1200: 1200px;
 $MQ-1225: 1225px;
 $MQ-1280: 1280px;
+$MQ-1330: 1330px;
 $MQ-1380: 1380px;
 $MQ-1440: 1440px;
 $MQ-1550: 1550px;
@@ -106,6 +107,10 @@ $MQ-1920: 1920px;
     }
   } @else if $canvas==MQ-1380 {
     @media only screen and (max-width: $MQ-1380) {
+      @content;
+    }
+  } @else if $canvas==MQ-1330 {
+    @media only screen and (max-width: $MQ-1330) {
       @content;
     }
   } @else if $canvas==MQ-1440 {
