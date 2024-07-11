@@ -126,29 +126,31 @@
               {% include 'icon-account' %}
             </a>
           {% endif %}
-          <div class="sub-nav accordion-content">
-            <ul class="sub-nav-links">
-              {% assign LoginMenu = linklists[section.settings.loginMenu] %}
-              {% for link in LoginMenu.links %}
-                <li>
-                  <a href="{{ link.url }}" title="{{ link.title | escape }}">
-                    {{ link.title | escape }}
-                  </a>
-                  {% if link.levels == 1 %}
-                    <ul class="inner-sub-nav">
-                      {% for childlink in link.links %}
-                        <li>
-                          <a href="{{ childlink.url }}" title="{{ link.title | escape }}">
-                            {{ childlink.title | escape }}
-                          </a>
-                        </li>
-                      {% endfor %}
-                    </ul>
-                  {% endif %}
-                </li>
-              {% endfor %}
-            </ul>
-          </div>
+          {% comment %}
+            <div class="sub-nav accordion-content">
+              <ul class="sub-nav-links">
+                {% assign LoginMenu = linklists[section.settings.loginMenu] %}
+                {% for link in LoginMenu.links %}
+                  <li>
+                    <a href="{{ link.url }}" title="{{ link.title | escape }}">
+                      {{ link.title | escape }}
+                    </a>
+                    {% if link.levels == 1 %}
+                      <ul class="inner-sub-nav">
+                        {% for childlink in link.links %}
+                          <li>
+                            <a href="{{ childlink.url }}" title="{{ link.title | escape }}">
+                              {{ childlink.title | escape }}
+                            </a>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endcomment %}
         </li>
 
         <li>
