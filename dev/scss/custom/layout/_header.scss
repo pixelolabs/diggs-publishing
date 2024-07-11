@@ -5,7 +5,15 @@
 */
 
 /****** Announcement Bar ******/
-
+.announcement-visible .header-logo {
+  top: -56px;
+  @include MQ(MQ-1280) {
+    top: -63px;
+  }
+  @include MQ(MQ-980) {
+    top: -47px;
+  }
+}
 .announcement-bar {
   background-color: $color-yellow;
   position: relative;
@@ -35,14 +43,24 @@
       height: auto !important;
       width: 100% !important;
       padding: 19px 0px 19px;
+      @include MQ(MQ-980) {
+        padding: 11.6px 0;
+      }
       * {
-        color: $color-white;
+        color: $color-black;
         text-align: center;
+        @include MQ(MQ-768) {
+          text-align: left;
+        }
       }
     }
   }
   .swiper-initialized {
     overflow: hidden;
+    padding-left: 170px;
+    @include MQ(MQ-768) {
+      padding-left: 110px;
+    }
     .swiper-slide {
       display: flex !important;
     }
@@ -51,7 +69,7 @@
     position: absolute;
     color: $color-black;
     right: 20px;
-    top: 8px;
+    top: calc(50% - 12px);
     @include MQ(MQ-768) {
       right: 9px;
     }
@@ -66,62 +84,68 @@
       height: 20px;
       position: relative;
       top: 2px;
+      @include MQ(MQ-480) {
+        width: 16px;
+        height: 16px;
+      }
     }
   }
   p {
     text-align: center;
-    color: $color-white;
     font-size: 14px;
     font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    text-align: center;
+
     display: inline;
 
     @include MQ(MQ-480) {
-      font-size: 12px;
+      font-size: 10px;
     }
     a {
       font-size: 14px;
-      font-weight: bold !important;
+      font-weight: 900 !important;
       line-height: normal;
       letter-spacing: normal;
       // padding: 12px 0px 12px;
       display: inline;
-      // text-transform: uppercase;
+      text-transform: uppercase;
       position: relative;
+      text-decoration: none;
       // text-decoration: underline !important;
       @include MQ(MQ-480) {
-        font-size: 12px;
+        font-size: 10px;
       }
-      &:before {
+      // &:before {
+      //   content: "";
+      //   position: absolute;
+      //   top: 100%;
+      //   left: 0;
+      //   bottom: 5px;
+      //   background-color: $color-black;
+      //   height: 1px;
+      //   width: 100%;
+      //   transition: 0.4s ease-in;
+      // }
+      &:after {
         content: "";
         position: absolute;
         top: 100%;
         left: 0;
         bottom: 5px;
-        background-color: $color-white;
-        height: 1px;
-        width: 100%;
-        transition: 0.4s ease-in;
-      }
-      &:after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        right: 0;
-        bottom: 5px;
-        background-color: $color-white;
+        background-color: $color-black;
         height: 1px;
         width: 0;
         transition: 0.6s ease-in;
       }
       &:hover {
         // color: $color-white !important;
-        &:before {
-          width: 0;
-          transition: 0.4s ease-in;
-        }
+        // &:before {
+        //   width: 0;
+        //   transition: 0.4s ease-in;
+        // }
         &:after {
           width: 100%;
           transition: 0.6s ease-in;
@@ -136,34 +160,36 @@
   a {
     color: $color-black;
     font-size: 14px;
-    font-weight: bold !important;
+    font-weight: 900 !important;
     line-height: normal;
+    text-transform: uppercase;
+    text-decoration: none;
     letter-spacing: normal;
     // padding: 12px 0px 12px;
     display: inline;
 
     position: relative;
     @include MQ(MQ-480) {
-      font-size: 12px;
+      font-size: 10px;
     }
-    &:before {
+    // &:before {
+    //   content: "";
+    //   position: absolute;
+    //   top: 100%;
+    //   left: 0;
+    //   bottom: 5px;
+    //   background-color: $color-white;
+    //   height: 1px;
+    //   width: 100%;
+    //   transition: 0.8s ease-in;
+    // }
+    &:after {
       content: "";
       position: absolute;
       top: 100%;
       left: 0;
       bottom: 5px;
-      background-color: $color-white;
-      height: 1px;
-      width: 100%;
-      transition: 0.8s ease-in;
-    }
-    &:after {
-      content: "";
-      position: absolute;
-      top: 100%;
-      right: 0;
-      bottom: 5px;
-      background-color: $color-white;
+      background-color: $color-black;
       height: 1px;
       width: 0;
       transition: 0.6s ease-in;
@@ -224,9 +250,17 @@ header {
   z-index: 9;
   // transition: 0.4s ease-in all;
   width: 100%;
+  .container-1400 {
+    padding-left: 0;
+  }
   &.fixed {
     // transition: 0.4s ease-in all;
-    background-color: $color-white;
+    background-image: linear-gradient(
+      113deg,
+      #5ebe55 27%,
+      #a8d24e 62%,
+      #5abe50 97%
+    );
   }
   .search-li {
     // position: relative;
@@ -274,9 +308,9 @@ header {
       margin: 0 auto;
       padding: 0 20px;
       position: relative;
-      @include MQ(MQ-980) {
-        padding: 0 30px;
-      }
+      // @include MQ(MQ-980) {
+      //   padding: 0 30px;
+      // }
     }
     &.active {
       transition: 0.3s ease all;
@@ -343,6 +377,8 @@ header {
       background-color: transparent;
       @include MQ(MQ-980) {
         max-width: 100%;
+        padding: 10px 52px 10px 16px;
+        border: 1px solid $color-black !important;
       }
       &::placeholder {
         font-size: 14px;
@@ -456,8 +492,15 @@ header {
   // background: $color-white;
 
   .header-logo {
-    width: 180px;
-    height: 40px;
+    width: 256px;
+    position: absolute;
+    height: 156px;
+    left: -1px;
+    top: 0;
+    @include MQ(MQ-1280) {
+      width: 200px;
+      height: 136px;
+    }
 
     img {
       @include img-object-contain;
@@ -474,8 +517,8 @@ header {
       margin: 0 auto;
     }
     @include MQ(MQ-768) {
-      width: 159px;
-      height: 34.9px;
+      width: 130px;
+      height: 94px;
     }
   }
 
@@ -499,7 +542,6 @@ header {
             stroke: $color-black;
           }
           position: relative;
-          top: 3px;
         }
       }
       .close {
@@ -548,8 +590,10 @@ header {
 .fixed-header {
   header {
     .header-logo {
-      width: 146px;
-      height: 32px;
+      top: -7px;
+      height: 106px;
+      width: 190px;
+      left: -9px;
     }
     @include MQ(MQ-980) {
       .main-header {
@@ -563,8 +607,8 @@ header {
 }
 
 /****** HOME PAGE TRANSPARENT HEADER ******/
-.main-content.active {
-  margin-top: -79.8px;
+.main-content {
+  margin-top: -81.8px;
   @include MQ(MQ-980) {
     margin-top: -60.5px;
   }
@@ -578,28 +622,25 @@ header {
     }
   }
 
-  .main-content {
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    overflow: hidden;
-    // &:active {
-    //   border-top-right-radius: 0px;
-    //   border-top-left-radius: 0px;
-    // }
-  }
-  .page-container {
-    position: relative;
-    &:before {
-      width: 100%;
-      height: 31px;
-      background-color: $color-black;
-      left: 0;
-      top: -1px;
-      z-index: -1;
-      position: absolute;
-      content: "";
-    }
-  }
+  // .main-content {
+  //   border-top-right-radius: 20px;
+  //   border-top-left-radius: 20px;
+  //   overflow: hidden;
+
+  // }
+  // .page-container {
+  //   position: relative;
+  //   &:before {
+  //     width: 100%;
+  //     height: 31px;
+  //     background-color: $color-black;
+  //     left: 0;
+  //     top: -1px;
+  //     z-index: -1;
+  //     position: absolute;
+  //     content: "";
+  //   }
+  // }
 }
 // body {
 //   .main-content {

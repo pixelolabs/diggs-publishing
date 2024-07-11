@@ -127,41 +127,38 @@ p {
   }
 
   &.medium {
-
     font-size: var(--para-medium-desktop-fontsize);
-  line-height: var(--para-medium-desktop-lineheight);
-  letter-spacing: var(--para-medium-desktop-letterspacing);
-  text-transform: var(--para-medium-desktop-texttransform);
-  font-weight: var(--par-amedium-desktop-fontweight);
-  font-style: var(--para-medium-desktop-fontstyle);
-
+    line-height: var(--para-medium-desktop-lineheight);
+    letter-spacing: var(--para-medium-desktop-letterspacing);
+    text-transform: var(--para-medium-desktop-texttransform);
+    font-weight: var(--par-amedium-desktop-fontweight);
+    font-style: var(--para-medium-desktop-fontstyle);
 
     a {
       font-size: var(--para-medium-desktop-fontsize);
-  line-height: var(--para-medium-desktop-lineheight);
-  letter-spacing: var(--para-medium-desktop-letterspacing);
-  text-transform: var(--para-medium-desktop-texttransform);
-  font-weight: var(--par-amedium-desktop-fontweight);
-  font-style: var(--para-medium-desktop-fontstyle);
+      line-height: var(--para-medium-desktop-lineheight);
+      letter-spacing: var(--para-medium-desktop-letterspacing);
+      text-transform: var(--para-medium-desktop-texttransform);
+      font-weight: var(--par-amedium-desktop-fontweight);
+      font-style: var(--para-medium-desktop-fontstyle);
     }
   }
   &.small {
-
     font-size: var(--para-small-desktop-fontsize);
     line-height: var(--para-small-desktop-lineheight);
     letter-spacing: var(--para-small-desktop-letterspacing);
     text-transform: var(--para-small-desktop-texttransform);
     font-weight: var(--para-small-desktop-fontweight);
     font-style: var(--para-small-desktop-fontstyle);
-  
-      a {
-        font-size: var(--para-small-desktop-fontsize);
-    line-height: var(--para-small-desktop-lineheight);
-    letter-spacing: var(--para-small-desktop-letterspacing);
-    text-transform: var(--para-small-desktop-texttransform);
-    font-weight: var(--para-small-desktop-fontweight);
-    font-style: var(--para-small-desktop-fontstyle);
-      }
+
+    a {
+      font-size: var(--para-small-desktop-fontsize);
+      line-height: var(--para-small-desktop-lineheight);
+      letter-spacing: var(--para-small-desktop-letterspacing);
+      text-transform: var(--para-small-desktop-texttransform);
+      font-weight: var(--para-small-desktop-fontweight);
+      font-style: var(--para-small-desktop-fontstyle);
+    }
   }
   &.xsmall {
     font-size: var(--para-xsmall-desktop-fontsize);
@@ -170,17 +167,16 @@ p {
     text-transform: var(--para-xsmall-desktop-texttransform);
     font-weight: var(--para-xsmall-desktop-fontweight);
     font-style: var(--para-xsmall-desktop-fontstyle);
-  
-      a {
-        font-size: var(--para-xsmall-desktop-fontsize);
-        line-height: var(--para-xsmall-desktop-lineheight);
-        letter-spacing: var(--para-xsmall-desktop-letterspacing);
-        text-transform: var(--para-xsmall-desktop-texttransform);
-        font-weight: var(--para-xsmall-desktop-fontweight);
-        font-style: var(--para-xsmall-desktop-fontstyle);
-      }
-  }
 
+    a {
+      font-size: var(--para-xsmall-desktop-fontsize);
+      line-height: var(--para-xsmall-desktop-lineheight);
+      letter-spacing: var(--para-xsmall-desktop-letterspacing);
+      text-transform: var(--para-xsmall-desktop-texttransform);
+      font-weight: var(--para-xsmall-desktop-fontweight);
+      font-style: var(--para-xsmall-desktop-fontstyle);
+    }
+  }
 }
 
 // Heading links
@@ -1116,7 +1112,7 @@ button {
 .container-1400 {
   max-width: 1400px;
   width: 100%;
-  padding: 0 30px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 .container-1306 {

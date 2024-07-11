@@ -18,13 +18,13 @@ jQuery(function() {
         $("body").removeClass("announcement-visible")
 
     });
-    if($("div").hasClass("hero-banner") || $("div").hasClass("error-page") || $("div").hasClass("inner-hero-section") ){
-        $("body").addClass("transparent-header");
-        $(".js__main-content").addClass("active");
-      } else {
-        $("body").removeClass("transparent-header");
-        $(".js__main-content").removeClass("active");
-    }
+    // if($("div").hasClass("hero-banner") || $("div").hasClass("error-page") || $("div").hasClass("inner-hero-section") ){
+    //     $("body").addClass("transparent-header");
+    //     $(".js__main-content").addClass("active");
+    //   } else {
+    //     $("body").removeClass("transparent-header");
+    //     $(".js__main-content").removeClass("active");
+    // }
 
     /* MEGAMENU
       active link while submenu open */
@@ -39,9 +39,9 @@ jQuery(function() {
                 $(this).children(".sub-nav").css("opacity", "1");
                 $(this).children(".sub-nav").css("z-index", "1");
                 $(this).children(".sub-nav").addClass("active");
-                $("body").removeClass("transparent-header");
-                $(".main-header").addClass("active");
-                // Remove transparent header from index page when sub menu open
+                //$("body").removeClass("transparent-header");
+                // main-header").addClass("active");
+                // /$("./ Remove transparent header from index page when sub menu open
                 $(".template-index").addClass("remove-transparent-header");
                 if($(".js__search ").hasClass("active") == true){
                     $(".js__header-search-section").removeClass("active");
@@ -71,29 +71,29 @@ jQuery(function() {
                     $(".main-header").removeClass("active");  
                 }
                 // $(".main-header").removeClass("active");
-                if ($("body").hasClass("fixed-header")) {
-                    $("body").removeClass("transparent-header");
-                } 
-                else{
-                    // $("body").addClass("transparent-header");
-                    if($(".main-header").hasClass("active")){
-                      $("body").removeClass("transparent-header");
-                    }else{
-                      if($("div").hasClass("hero-banner") || $("div").hasClass("error-page")  || $("div").hasClass("inner-hero-section") ){
-                        $("body").addClass("transparent-header");
-                      }
-                      else{
-                        if ($("div").hasClass("white-bg") === true) {
-                            $("body").removeClass("transparent-header");
-                            $("body").removeClass("template-index");
-                        }
-                        $("body").removeClass("transparent-header");
-                      }
-                    }
+                // if ($("body").hasClass("fixed-header")) {
+                //     $("body").removeClass("transparent-header");
+                // } 
+                // else{
+                //     // $("body").addClass("transparent-header");
+                //     // if($(".main-header").hasClass("active")){
+                //     //   $("body").removeClass("transparent-header");
+                //     // }else{
+                //     //   if($("div").hasClass("hero-banner") || $("div").hasClass("error-page")  || $("div").hasClass("inner-hero-section") ){
+                //     //     $("body").addClass("transparent-header");
+                //     //   }
+                //     //   else{
+                //     //     if ($("div").hasClass("white-bg") === true) {
+                //     //         $("body").removeClass("transparent-header");
+                //     //         $("body").removeClass("template-index");
+                //     //     }
+                //     //     $("body").removeClass("transparent-header");
+                //     //   }
+                //     // }
                     
-                  }
+                //   }
 
-                $("body").removeClass("remove-transparent-header");
+                // $("body").removeClass("remove-transparent-header");
                 // Add transparent header from index page when sub menu open
                 // $(".template-index").addClass("transparent-header");
 
@@ -108,7 +108,7 @@ jQuery(function() {
             $(this).children(".big-nav").css("opacity", "1");
             $(this).children(".big-nav").addClass("active");
             // Remove transparent header from index page when big nav menu open
-            $("body").removeClass("transparent-header");
+            // $("body").removeClass("transparent-header");
             $(".main-header").addClass("active");
             if($(".js__search").hasClass("active") == true){
                 $(".js__header-search-section").removeClass("active");
@@ -132,27 +132,27 @@ jQuery(function() {
             }
             
             // Add transparent header from index page when sub menu open
-            if ($("body").hasClass("fixed-header")) {
-                $("body").removeClass("transparent-header");
-            } 
-            else{
-                // $("body").addClass("transparent-header");
-                if($(".main-header").hasClass("active")){
-                  $("body").removeClass("transparent-header");
-                }else{
-                  if($("div").hasClass("hero-banner") || $("div").hasClass("error-page")  || $("div").hasClass("inner-hero-section") ){
-                    $("body").addClass("transparent-header");
-                  }
-                  else{
-                    if ($("div").hasClass("white-bg") === true) {
-                        $("body").removeClass("transparent-header");
-                        $("body").removeClass("template-index");
-                    }
-                    $("body").removeClass("transparent-header");
-                  }
-                }
+            // if ($("body").hasClass("fixed-header")) {
+            //     $("body").removeClass("transparent-header");
+            // } 
+            // else{
+            //     // $("body").addClass("transparent-header");
+            //     if($(".main-header").hasClass("active")){
+            //       $("body").removeClass("transparent-header");
+            //     }else{
+            //       if($("div").hasClass("hero-banner") || $("div").hasClass("error-page")  || $("div").hasClass("inner-hero-section") ){
+            //         $("body").addClass("transparent-header");
+            //       }
+            //       else{
+            //         if ($("div").hasClass("white-bg") === true) {
+            //             $("body").removeClass("transparent-header");
+            //             $("body").removeClass("template-index");
+            //         }
+            //         $("body").removeClass("transparent-header");
+            //       }
+            //     }
                 
-              }
+            //   }
             // $(".template-index").addClass("transparent-header");
 
         });
@@ -243,17 +243,17 @@ jQuery(function() {
                 $("body .boost-pfs-search-suggestion").css("display","none");
                 $("body #boost-sd__search-widget-init-wrapper-1").css("display","none");
                 
-                if ($("div").hasClass("inner-hero-section")  || $("div").hasClass("error-page") || $("div").hasClass("hero-banner-slider")) {
-                    if($(".js__main-header").hasClass("active") === true){
-                        $("body").removeClass("transparent-header");
-                    }
+                // if ($("div").hasClass("inner-hero-section")  || $("div").hasClass("error-page") || $("div").hasClass("hero-banner-slider")) {
+                //     if($(".js__main-header").hasClass("active") === true){
+                //         $("body").removeClass("transparent-header");
+                //     }
                     
                     
                     
-                }
-                else{
-                    $("body").removeClass("transparent-header");
-                }
+                // }
+                // else{
+                //     $("body").removeClass("transparent-header");
+                // }
                 
             }
         
@@ -270,31 +270,31 @@ jQuery(function() {
             $(".boost-pfs-search-box").focus();
             $(this).toggleClass("active");
             $(".js__main-header").toggleClass("active");
-            $("body").toggleClass("transparent-header");
-            if ($("body").hasClass("fixed-header")) {
-                $("body").removeClass("transparent-header");
-            }
-            if ($("div").hasClass("inner-hero-section")===false || $("div").hasClass(".hero-banner-slider")===false ){
-                $("body").removeClass("transparent-header");
-            }
-            if ($("div").hasClass("inner-hero-section")  || $("div").hasClass("error-page") || $("div").hasClass("hero-banner-slider")) {
-                if($(".js__main-header").hasClass("active") === true){
-                    $("body").removeClass("transparent-header");
-                }
-                else{
-                    if ($("body").hasClass("fixed-header")) {
-                        $("body").removeClass("transparent-header");
-                    }
-                    else{
-                        $("body").addClass("transparent-header"); 
-                    }
+            // $("body").toggleClass("transparent-header");
+            // if ($("body").hasClass("fixed-header")) {
+            //     $("body").removeClass("transparent-header");
+            // }
+            // if ($("div").hasClass("inner-hero-section")===false || $("div").hasClass(".hero-banner-slider")===false ){
+            //     $("body").removeClass("transparent-header");
+            // }
+            // if ($("div").hasClass("inner-hero-section")  || $("div").hasClass("error-page") || $("div").hasClass("hero-banner-slider")) {
+            //     if($(".js__main-header").hasClass("active") === true){
+            //         $("body").removeClass("transparent-header");
+            //     }
+            //     else{
+            //         if ($("body").hasClass("fixed-header")) {
+            //             $("body").removeClass("transparent-header");
+            //         }
+            //         else{
+            //             $("body").addClass("transparent-header"); 
+            //         }
                     
-                }
+            //     }
                 
                 
-                // $("body").addClass("transparent-header");
-                // $("body").addClass("template-index");
-            }
+            //     // $("body").addClass("transparent-header");
+            //     // $("body").addClass("template-index");
+            // }
 
 
            
@@ -304,6 +304,13 @@ jQuery(function() {
 });
 
 /** Fix Header on Scroll **/
+jQuery(function() {
+var newsHeight = $('.announcement-bar').height();
+$('.header-logo').css("top", '-' + (newsHeight + 10) + 'px');
+$('.navbar-collapse').css("top",  + (newsHeight + 54 + 12) + 'px');
+
+});
+
 $(window).scroll(function() {
     var sticky = $("header"),
         scroll = $(window).scrollTop();
@@ -312,6 +319,7 @@ $(window).scroll(function() {
 
         $("body").addClass("fixed-header");
         $(".fixed-header").removeClass("transparent-header");
+        
        
 
     } else {
@@ -320,32 +328,33 @@ $(window).scroll(function() {
         
         if ($("#navbarNavDropdown").hasClass("active")) {
 
-            $("body").removeClass("transparent-header");
+            // $("body").removeClass("transparent-header");
             $(".main-header").addClass("active");
             
-        } else {
-            if($("div").hasClass("hero-banner") || $("div").hasClass("error-page")  || $("div").hasClass("inner-hero-section") ){
-                $("body").addClass("transparent-header");
-              }
+        } 
+        // else {
+        //     if($("div").hasClass("hero-banner") || $("div").hasClass("error-page")  || $("div").hasClass("inner-hero-section") ){
+        //         $("body").addClass("transparent-header");
+        //       }
               
               
-             else{$("body").removeClass("transparent-header");}
+        //      else{$("body").removeClass("transparent-header");}
                 
               
-        }
+        // }
         
-        if($(".js__main-header").hasClass("active") === true){
-            $("body").removeClass("transparent-header");
-        }
-        else{
-            if($("div").hasClass("hero-banner") || $("div").hasClass("error-page") || $("div").hasClass("inner-hero-section") ){
-                $("body").addClass("transparent-header");
-              }
-              else{
-                $("body").removeClass("transparent-header");
-              }
-            //   $("body").removeClass("transparent-header");
-        }
+        // if($(".js__main-header").hasClass("active") === true){
+        //     $("body").removeClass("transparent-header");
+        // }
+        // else{
+        //     if($("div").hasClass("hero-banner") || $("div").hasClass("error-page") || $("div").hasClass("inner-hero-section") ){
+        //         $("body").addClass("transparent-header");
+        //       }
+        //       else{
+        //         $("body").removeClass("transparent-header");
+        //       }
+        //     //   $("body").removeClass("transparent-header");
+        // }
         
        
     }
@@ -370,16 +379,16 @@ $(window).scroll(function() {
                 $(".js__mobile-announcement-text").toggleClass("active");
                 $(".main-header").toggleClass("active");
                 // $(".announcement-bar").toggleClass("active");
-                $("body").removeClass("transparent-header");
+                // $("body").removeClass("transparent-header");
 
 
-                if ($("body").hasClass("transparent-header")) {
-                    $("body").removeClass("transparent-header");
-                }
+                // if ($("body").hasClass("transparent-header")) {
+                //     $("body").removeClass("transparent-header");
+                // }
 
                 if ($("#navbarNavDropdown").hasClass("active")) {
                     $(".js__logo").addClass("active");
-                    $(".template-index").removeClass("transparent-header");
+                    // $(".template-index").removeClass("transparent-header");
                     $(".main-header").addClass("active");
                     if ($(window).width() < 980) {
                         $("html").css("overflow", "hidden");
@@ -392,11 +401,11 @@ $(window).scroll(function() {
                 } else {
                     $(".js__logo").toggleClass("active");
                     $(".main-header").removeClass("active");
-                    if ($("body").hasClass("fixed-header")) {
-                        $(".template-index").removeClass("transparent-header");
-                    } else {
-                        $(".template-index").addClass("transparent-header");
-                    }
+                    // if ($("body").hasClass("fixed-header")) {
+                    //     $(".template-index").removeClass("transparent-header");
+                    // } else {
+                    //     $(".template-index").addClass("transparent-header");
+                    // }
                     $("html").css("overflow-y", "scroll");
                     $("body .boost-pfs-search-suggestion-group").css("display","none");
 
@@ -412,10 +421,10 @@ $(window).scroll(function() {
                     $(".js__mobile-announcement-text").toggleClass("active");
                     if ($("#navbarNavDropdown").hasClass("active")) {
                         $(".js__logo").addClass("active");
-                        $(".template-index").removeClass("transparent-header");
+                        // $(".template-index").removeClass("transparent-header");
                     } else {
                         $(".js__logo").toggleClass("active");
-                        $(".template-index").addClass("transparent-header");
+                        //$(".template-index").addClass("transparent-header");
                     }
                 }
             });
