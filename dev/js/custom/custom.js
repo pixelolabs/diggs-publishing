@@ -103,7 +103,14 @@ jQuery(function() {
         shortSwipes: false,
         loop: true,
         grabCursor: false,
-
+        breakpoints: {
+            0: {
+                spaceBetween: 90
+            },
+            601: {
+                spaceBetween: 148
+            }
+        }
 
         // threshold: 1,
        // speed: 4000,
