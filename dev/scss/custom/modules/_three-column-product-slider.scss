@@ -1,13 +1,14 @@
 .three-column-product-slider {
   background: $color-off-white;
-  padding: 80px 0 180px 0;
+  padding: 80px 40px 180px;
   transform: translate3d(0, 50px, 0) !important;
+  @include MQ(MQ-480) {
+    padding: 50px 0px 100px;
+  }
   &.aos-animate {
     transform: none !important;
   }
-  @include MQ(MQ-480) {
-    padding: 60px 0 76px 0;
-  }
+ 
   .top-section {
     width: 100%;
     justify-content: space-between;
@@ -25,24 +26,42 @@
       z-index: 1;
       top: 12px;
       background: url("star-large.webp") no-repeat center right / 30px;
+      @include MQ(MQ-480) {
+        width: 25px;
+        height: 30px;
+        left: auto;
+        margin: 0;
+        top: 0px;
+        background: url("star-large.webp") no-repeat center right / 25px;
+      }
   }
   
-    @include MQ(MQ-768) {
-      margin: 0 0 60px;
+    @include MQ(MQ-480) {
+      margin: 0 0 30px;
     }
     .link--primary {
        height: 16px;
+       @include MQ(MQ-768) {
+        margin-top: 22px;
+       }
     }
+    
     .pre-title{
       margin-bottom: 22px;
       color: $color-orange;
+      @include MQ(MQ-480) {
+        margin-bottom: 15px;
+      }
     }
-    @include MQ(MQ-768) {
-      justify-content: center;
-      flex-direction: column;
-      
-    }
+   
   }
+  .link--primary {
+    height: 16px;
+    @include MQ(MQ-768) {
+      margin: 0 auto;
+     margin-top: 22px;
+    }
+ }
   .inner {
     width: 100%;
     .slider-outer{
@@ -61,6 +80,7 @@
    
     .swiper-slide {
      z-index: 3;
+     height: auto;
       .content {
       
       }

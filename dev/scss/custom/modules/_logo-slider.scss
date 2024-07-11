@@ -1,6 +1,6 @@
 .logo-slider {
   position: relative;
-  padding: 0px 0 111px;
+  padding: 0px 0 58px;
   background-color: $color-off-white;
   position: relative;
   &::before{
@@ -13,6 +13,18 @@
     height: 39px;
 
   }
+  &::after{
+    background: url("shape.svg") repeat left / 1452px;
+    height: 101px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -53px;
+    z-index: 2;
+    content: '';
+  }
+ 
+ 
   h2{
     max-width: 411px;
     width: 100%;

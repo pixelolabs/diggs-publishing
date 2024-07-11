@@ -2,6 +2,10 @@
    
     position: relative;
     background: $color-off-white;
+    padding: 0 20px;
+    @include MQ(MQ-480) {
+        padding: 0 12px;
+    }
     &::before{
         background: url("yellow-wave.webp") repeat left / 1327px;
         height: 156.5px;
@@ -21,6 +25,9 @@
         
         margin: 0 auto;
         margin-top: -133px;
+        @include MQ(MQ-480) {
+            margin-top: -55px;
+        }
         border-radius: 30px;
         border: solid 3px $color-yellow;
         background:  url("cloud.webp") no-repeat center bottom / 100% $color-sky-blue;
@@ -28,7 +35,12 @@
         display: flex;
         position: relative;
         align-items: flex-end;
-       
+        @include MQ(MQ-768) {
+            padding: 0px 80px 0px 10px;
+        }
+        @include MQ(MQ-350) {
+            padding: 0px 20px;
+        }
         &::before{
             width: 97.8px;
             height: 67.3px;
@@ -38,6 +50,13 @@
             z-index: 1;
             top: -34px;
             background: url("planet.webp") no-repeat center / 100%;
+            @include MQ(MQ-768) {
+                width: 60px;
+                height: 40px;
+                left: 36px;
+                z-index: 1;
+                top: -20px;
+            }
         }
         &::after{
             width: 82px;
@@ -48,6 +67,12 @@
             z-index: 1;
             bottom: -31px;
             background: url("ufo.webp") no-repeat center / 100%;
+            @include MQ(MQ-768) {
+                width: 57px;
+                height: 56px;
+                right: 48px;
+                bottom: -24px;
+            }
         }
 
        
@@ -62,9 +87,21 @@
         padding-top: 85px;
         padding-bottom: 65px;
         z-index: 2;
+        @include MQ(MQ-768) {
+            padding-top: 36px;
+            padding-bottom: 30px;
+        }
         h2{
             color: $color-pink;
             margin-bottom: 8.3px;
+            @include MQ(MQ-480) {
+                margin-bottom: 3px;
+            }
+        }
+        p{
+            @include MQ(MQ-480) {
+                padding: 0 23px;
+            }
         }
         &::after{
             width: 14.3px;
@@ -75,6 +112,9 @@
             z-index: 1;
             top: 34px;
             background: url("icon-vector.webp") no-repeat center / 100%;
+            @include MQ(MQ-768) {
+                display: none;
+            }
         }
     }
     .left-image{
@@ -82,6 +122,17 @@
         height: 170px;
         flex: none;
         position: relative;
+        @include MQ(MQ-350) {
+            display: none;
+        }
+        @include MQ(MQ-768) {
+            width: 93px;
+            height: 91px;
+        }
+        @include MQ(MQ-480) {
+            margin-right: -45px;
+        }
+
         img{
             @include img-object-contain;
         }
@@ -94,6 +145,9 @@
             z-index: 1;
             bottom: 45.5px;
             background: url("star-large.webp") no-repeat center / 100%;
+            @include MQ(MQ-768) {
+                display: none;
+            }
         }
         &::after{
             width: 14.3px;
@@ -104,6 +158,9 @@
             z-index: 1;
             top: -3px;
             background: url("icon-vector.webp") no-repeat center / 100%;
+            @include MQ(MQ-768) {
+                display: none;
+            }
         }
 
        
@@ -115,6 +172,14 @@
         position: absolute;
         top: 21px;
         right: 45.5px;
+        @include MQ(MQ-768) {
+            width: 60px;
+            height: 93px;
+            right: 10px;
+        }
+        @include MQ(MQ-350) {
+            display: none;
+        }
         img{
             @include img-object-contain;
         }
@@ -129,6 +194,10 @@
             z-index: 3;
             bottom: 36px;
             background: url("rope.webp") no-repeat center / 100%;
+            @include MQ(MQ-768) {
+                width: 10px;
+                height: 80px;
+            }
         }
        
     }

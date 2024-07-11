@@ -23,6 +23,7 @@
   }
 
   .container-1440 {
+    overflow: hidden;
     @include MQ(MQ-768) {
       flex-direction: column;
       align-items: center;

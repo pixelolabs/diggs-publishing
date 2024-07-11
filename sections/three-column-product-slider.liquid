@@ -18,11 +18,11 @@
     {% endif %}
     </div>
     {% if section.settings.buttonText != blank and section.settings.buttonLink != blank %}
-      <a
+      <a 
         href="{{ section.settings.buttonLink }}"
         title="Read More About {{ section.settings.buttonText }}"
         aria-label="Read More About {{ section.settings.buttonText }}"
-        class="link--primary "
+        class="link--primary ipad-none"
         data-button-text="{{- section.settings.buttonText -}}"
       >
         
@@ -56,6 +56,21 @@
     <div class="swiper-button-next-product-slider">
       {% include 'icon-arrow-slide-black' %}
     </div>
+  </div>
+  <div class="text-center width-100">
+  {% if section.settings.buttonText != blank and section.settings.buttonLink != blank %}
+    <a 
+      href="{{ section.settings.buttonLink }}"
+      title="Read More About {{ section.settings.buttonText }}"
+      aria-label="Read More About {{ section.settings.buttonText }}"
+      class="link--primary ipad-block"
+      data-button-text="{{- section.settings.buttonText -}}"
+    >
+      
+        {{- section.settings.buttonText -}}
+     
+    </a>
+  {% endif %}
   </div>
 </div>
 </div>

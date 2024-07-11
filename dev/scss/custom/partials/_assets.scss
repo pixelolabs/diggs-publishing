@@ -389,6 +389,8 @@ textarea.input--error {
     z-index: 1;
     border: 2px solid $color-pink;
   }
+
+ 
   .okeReviews
     .okeReviews-starRating--small
     .okeReviews-starRating-indicator-layer {
@@ -396,6 +398,8 @@ textarea.input--error {
   }
   .product-wrapper {
     display: block;
+    height: 100%;
+    background-image: linear-gradient(178deg, #d51f91 2%, #ee35a9 98%);
     &::before,
     &::after {
       display: none;
@@ -420,12 +424,30 @@ textarea.input--error {
       }
     }
   }
+  &:nth-child(2n){
+    &::before {
+      border: 2px solid $color-orange;
+    }
+    .product-wrapper {
+      background-image: linear-gradient(178deg, #ff6520 2%, #ff6520 98%);
+    }
+  }
+  &:nth-child(3n){
+    &::before {
+      border: 2px solid $color-green;
+    }
+    .product-wrapper {
+      background-image: linear-gradient(178deg, #5fbf50 2%, #5fbf50 98%);
+    }
+  }
   .image-section {
     overflow: hidden !important;
     position: relative !important;
     height: 304px;
     width: 100%;
-
+    @include MQ(MQ-480) {
+      height: 266px;
+    }
     img {
       @include img-object-cover;
       visibility: visible !important;
@@ -451,7 +473,7 @@ textarea.input--error {
     }
   }
   .content {
-    background-image: linear-gradient(178deg, #d51f91 2%, #ee35a9 98%);
+    
     * {
       color: $color-white;
     }

@@ -6,9 +6,13 @@
     overflow: hidden;
     padding-bottom: 118px;
     padding-top: 154px;
-    max-height: 810px;
+   
     display: flex;
     align-items: center;
+    @include MQ(MQ-480) {
+      padding-bottom: 45px;
+      padding-top: 98px;
+    }
     &::before{
       width: 367.6px;
       height: 87.8px;
@@ -18,6 +22,9 @@
       z-index: 1;
       bottom: 168px;
       background: url("thread-hero-white.webp") no-repeat center / 100%;
+      @include MQ(MQ-480) {
+        display: none;
+      }
   }
   &::after{
     width: 130px;
@@ -28,14 +35,13 @@
     z-index: 1;
     top: 87px;
     background: url("thread-hero-white-2.webp") no-repeat center / 100%;
+    @include MQ(MQ-480) {
+      top: 167px;
+    }
 }
     
     background-image: linear-gradient(117deg, #5ebe55 2%, #a8d24e 50%, #5abe50 98%);
-    @include MQ(MQ-768) {
-      height: 699px;
-      padding-top: 115px !important;
-      align-items: flex-start;
-    }
+   
     .full-link {
       width: 100%;
       position: absolute;
@@ -96,6 +102,21 @@
       margin-left: 36px;
       max-width: 514px;
       order: 2;
+      @include MQ(MQ-1200) {
+        max-width: 450px;
+      }
+      @include MQ(MQ-1024) {
+        width: 450px;
+        height: 450px;
+        margin: 0 auto;
+    
+
+      }
+      @include MQ(MQ-480) {
+        width: 243px;
+        height: 243px;
+        margin-top: 10px;
+      }
       &::after{
         width: 82px;
         height: 85px;
@@ -107,12 +128,19 @@
         background: url("rocket.webp") no-repeat center / 100%;
     }
       img {
-        @include img-object-cover;
+        @include img-object-contain;
+        object-position: bottom;
         position: relative;
       }
     }
     .container-1260 {
       position: relative;
+      
+    @include MQ(MQ-1024) {
+flex-direction: column;
+align-items: center;
+
+    }
       &::before{
         width: 63.9px;
         height: 51px;
@@ -122,7 +150,14 @@
         z-index: 1;
         right: 450px;
         background: url("icon-cloud.webp") no-repeat center / 100%;
+        @include MQ(MQ-480) {
+       
+          top: auto;
+          bottom: 270px;
+          right: 25px;
+        }
     }
+   
     &::after{
       width: 42.6px;
      height: 51.3px;
@@ -132,6 +167,17 @@
       z-index: 1;
       top: 50px;
       background: url("star-large.webp") no-repeat center / 100%;
+      @include MQ(MQ-1024) {
+        top: auto;
+        bottom: 200px;
+        right: 60px;
+      }
+      @include MQ(MQ-480) {
+        width: 26px;
+        height: 31px;
+        bottom: 160px;
+        right: 30px;
+      }
   }
       z-index: 3;
       @include MQ(MQ-768) {
@@ -141,7 +187,25 @@
        width: 50%;
        padding-right: 33px;
        padding-top: 76px;
+       @include MQ(MQ-1024) {
+        width: 100%;
+        padding-bottom: 20px;
+       }
+       *{
+        position: relative;
+        z-index: 3;
+       }
+      
        position: relative;
+       @include MQ(MQ-1100) {
+        padding-bottom: 50px;
+      }
+      @include MQ(MQ-1024) {
+        padding-bottom: 0px;
+      }
+      @include MQ(MQ-480) {
+        padding-top: 0px;
+      }
        &::before{
         width: 89px;
         height: 118px;
@@ -151,6 +215,12 @@
         z-index: 1;
         top: -27px;
         background: url("kite.webp") no-repeat center / 100%;
+        @include MQ(MQ-480) {
+          width: 54px;
+          height: 70px;
+          top: -29px;
+          right: -10px;
+        }
     }
     &::after{
       width: 36px;
@@ -160,17 +230,36 @@
       right: 230px;
       z-index: 1;
       bottom: 124px;
+      @include MQ(MQ-1200) {
+        bottom: 50px;
+      }
+      @include MQ(MQ-480) {
+        width: 20px;
+        height: 25px;
+        left: 7px;
+        bottom: -46px;
+        right: auto;
+      }
       background: url("star-large-white.webp") no-repeat center / 100%;
   }
         .pre-title {
           margin-bottom: 20px;
          color: $color-pink;
+         @include MQ(MQ-480) {
+          margin-bottom: 10px;
+        }
         }
         h1{
           margin-bottom: 8.3px;
+          @include MQ(MQ-480) {
+            margin-bottom: 1.5px;
+          }
         }
         .btn--primary {
           margin-top: 28.7px;
+          @include MQ(MQ-480) {
+            margin-top:12px;
+          }
          
         }
        
@@ -182,38 +271,7 @@
         
       }
     }
-    &.left-align {
-      .container-1260 {
-        .content {
-          margin: 0;
-          // @include MQ(MQ-768) {
-          //   margin: 0 auto;
-          //   text-align: center;
-          //   .btn--primary {
-          //     margin-left: auto;
-          //     margin-right: auto;
-          //   }
-          // }
-        }
-      }
-    }
-    &.right-align {
-      .container-1260 {
-        display: flex;
-        justify-content: flex-end;
-        .content {
-          margin: 0;
-          // @include MQ(MQ-768) {
-          //   margin: 0 auto;
-          //   text-align: center;
-          //   .btn--primary {
-          //     margin-left: auto;
-          //     margin-right: auto;
-          //   }
-          // }
-        }
-      }
-    }
+ 
    
   }
 
