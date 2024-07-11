@@ -2270,7 +2270,7 @@ jQuery(function () {
 
 jQuery(function () {
   var newsHeight = $('.announcement-bar').height();
-  $('.announcement-visible .header-logo').css("top", '-' + newsHeight + 'px');
+  $('.announcement-visible .header-logo').css("top", '-' + (newsHeight + 10) + 'px');
 });
 $(window).scroll(function () {
   var sticky = $("header"),
