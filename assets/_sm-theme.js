@@ -2268,6 +2268,10 @@ jQuery(function () {
 });
 /** Fix Header on Scroll **/
 
+jQuery(function () {
+  var newsHeight = $('.announcement-bar').height();
+  $('.announcement-visible .header-logo').css("top", '-' + newsHeight + 'px');
+});
 $(window).scroll(function () {
   var sticky = $("header"),
       scroll = $(window).scrollTop();
@@ -2276,8 +2280,6 @@ $(window).scroll(function () {
     sticky.addClass("fixed");
     $("body").addClass("fixed-header");
     $(".fixed-header").removeClass("transparent-header");
-    var newsHeight = $('.announcement-bar').height();
-    $('.announcement-visible .header-logo').css("top", '-' + newsHeight + 'px');
   } else {
     sticky.removeClass("fixed");
     $("body").removeClass("fixed-header");
