@@ -997,7 +997,15 @@ jQuery(function () {
     resistance: false,
     shortSwipes: false,
     loop: true,
-    grabCursor: false // threshold: 1,
+    grabCursor: false,
+    breakpoints: {
+      0: {
+        spaceBetween: 90
+      },
+      601: {
+        spaceBetween: 148
+      }
+    } // threshold: 1,
     // speed: 4000,
     // autoplay: {
     //  delay: 1,
