@@ -12,9 +12,18 @@
     z-index: 0;
     bottom: 0px;
     background: url("thread-multi-white.webp") no-repeat center / 100%;
+    @include MQ(MQ-768) {
+        display: none;
+    }
 }
     .container-1440{
         padding: 293px 0 314px;
+        @include MQ(MQ-1200) {
+            padding-bottom: 360px;
+        }
+        @include MQ(MQ-768) {
+            padding: 110px 0 150px;
+        }
         position: relative;
         &::before{
             width: 114px;
@@ -25,6 +34,9 @@
             z-index: 1;
             top: 210px;
             background: url("icon-cloud.webp") no-repeat center / 100%;
+            @include MQ(MQ-768) {
+                display: none;
+            }
         }
         &::after{
             width: 173px;
@@ -35,11 +47,19 @@
             z-index: 1;
             top: 60px;
             background: url("planet-green.webp") no-repeat center / 100%;
+            @include MQ(MQ-768) {
+                width: 57px;
+                height: 40px;
+                top: 40px;
+            }
         }
 
     }
     .container-840{
         position: relative;
+        @include MQ(MQ-350) {
+            padding: 0 30px;
+        }
         &::before{
             width: 137px;
             height: 137px;
@@ -49,6 +69,12 @@
             z-index: 1;
             bottom: -150px;
             background: url("ufo.webp") no-repeat center / 100%;
+            @include MQ(MQ-768) {
+                width: 60px;
+                height: 60px;
+                left: 23px;
+                bottom: -66px;
+            }
         }
         &::after{
             width: 31px;
@@ -59,6 +85,9 @@
             z-index: 1;
             bottom: -13px;
             background: url("star-large.webp") no-repeat center / 100%;
+            @include MQ(MQ-768) {
+                display: none;
+            }
         }
 
     }
@@ -67,7 +96,11 @@
         right: 72px;
         width: 532px;
         height: 330px;
-
+        @include MQ(MQ-768) {
+        width: 205.7px;
+        height: 127.7px;
+        right: 15px;
+        }
         img{
             @include img-object-contain;
         }
@@ -88,6 +121,12 @@
             z-index: 1;
             top: -180px;
             background: url("kite.webp") no-repeat center / 100%;
+            @include MQ(MQ-768) {
+                width: 49px;
+                height: 64px;
+                left: 18px;
+                top: -63px;
+            }
         }
         &::after{
             width: 63.9px;
@@ -98,6 +137,9 @@
             z-index: 1;
             right: 150px;
             background: url("icon-cloud.webp") no-repeat center / 100%;
+            @include MQ(MQ-768) {
+                display: none;
+            }
         }
     }
     .btn--primary{
