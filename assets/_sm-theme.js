@@ -997,15 +997,7 @@ jQuery(function () {
     resistance: false,
     shortSwipes: false,
     loop: true,
-    grabCursor: false,
-    breakpoints: {
-      0: {
-        spaceBetween: 90
-      },
-      601: {
-        spaceBetween: 148
-      }
-    } // threshold: 1,
+    grabCursor: false // threshold: 1,
     // speed: 4000,
     // autoplay: {
     //  delay: 1,
@@ -2284,6 +2276,7 @@ $(window).scroll(function () {
     sticky.addClass("fixed");
     $("body").addClass("fixed-header");
     $(".fixed-header").removeClass("transparent-header");
+    var newsHeight = $('.announcement-bar').height();
   } else {
     sticky.removeClass("fixed");
     $("body").removeClass("fixed-header");
