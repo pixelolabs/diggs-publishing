@@ -997,15 +997,7 @@ jQuery(function () {
     resistance: false,
     shortSwipes: false,
     loop: true,
-    grabCursor: false,
-    breakpoints: {
-      0: {
-        spaceBetween: 90
-      },
-      601: {
-        spaceBetween: 148
-      }
-    } // threshold: 1,
+    grabCursor: false // threshold: 1,
     // speed: 4000,
     // autoplay: {
     //  delay: 1,
@@ -2276,6 +2268,10 @@ jQuery(function () {
 });
 /** Fix Header on Scroll **/
 
+jQuery(function () {
+  var newsHeight = $('.announcement-bar').height();
+  $('.header-logo').css("top", '-' + (newsHeight + 10) + 'px');
+});
 $(window).scroll(function () {
   var sticky = $("header"),
       scroll = $(window).scrollTop();
