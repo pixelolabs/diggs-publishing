@@ -2277,6 +2277,7 @@ $(window).scroll(function () {
     $("body").addClass("fixed-header");
     $(".fixed-header").removeClass("transparent-header");
     var newsHeight = $('.announcement-bar').height();
+    $('.announcement-visible .header-logo').css("top", '-' + newsHeight + 'px');
   } else {
     sticky.removeClass("fixed");
     $("body").removeClass("fixed-header");
