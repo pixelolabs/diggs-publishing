@@ -18,7 +18,6 @@
         "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
-        "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
         "enable_quick_add": false,
@@ -39,6 +38,5 @@
     "9425029b-9fe9-48fd-b299-329133a4e6fd",
     "banner",
     "product-grid"
-  ],
-  "wrapper": ".boost-sd__product-filter-fallback"
+  ]
 }
