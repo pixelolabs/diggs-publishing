@@ -986,8 +986,10 @@ header {
               margin-left: 3px;
             }
             &.block-980 {
-              display: flex !important;
-              width: fit-content;
+              @include MQ(MQ-980) {
+                display: flex !important;
+                width: fit-content;
+              }
             }
             &.active {
               svg {
@@ -1200,7 +1202,7 @@ header {
       // padding: 24px 30px;
       padding-bottom: 30px;
 
-      background: $color-white;
+      background: $color-off-white;
       z-index: -1;
       &.active {
         transform: translateX(0);
