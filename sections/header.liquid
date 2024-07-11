@@ -2,15 +2,6 @@
 <header>
   <div class="main-header js__main-header">
     <div class="container-1400 flex-align-center">
-      <ul class="block-980">
-        <!-- To be visible from ipad -->
-        <li class="mobile-hamburger block-980">
-          <button id="hamburger" type="button">
-            <span class="hamburger">{% include 'icon-hamburger' %}</span>
-            <span class="close">{% include 'icon-mobile-menu-close' %}</span>
-          </button>
-        </li>
-      </ul>
       <div class="header-logo relative">
         <a href="{{ routes.root_url }}" itemprop="url" alt="{{shop.name}}">
           {% if section.settings.logo != blank %}
@@ -113,7 +104,7 @@
               <span class="js__ajax-cart-count cart-count"> {{ cart.item_count }}</span>
             </a>
           </li>
-          <li class=" has-sub-nav has-sub-nav-account">
+          <li class="account">
             {% if customer %}
               <a href="/account" title="My Account" class="user site-nav__link">
                 {% include 'icon-account' %}
@@ -122,6 +113,15 @@
                 {% include 'icon-account' %}
               </a>
             {% endif %}
+          </li>
+        </ul>
+        <ul class="block-980">
+          <!-- To be visible from ipad -->
+          <li class="mobile-hamburger block-980">
+            <button id="hamburger" type="button">
+              <span class="hamburger">{% include 'icon-hamburger' %}</span>
+              <span class="close">{% include 'icon-mobile-menu-close' %}</span>
+            </button>
           </li>
         </ul>
       </div>
