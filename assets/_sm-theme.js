@@ -2276,10 +2276,6 @@ jQuery(function () {
 });
 /** Fix Header on Scroll **/
 
-jQuery(function () {
-  var newsHeight = $('.announcement-bar').height();
-  $('.announcement-visible .header-logo').css("top", '-' + (newsHeight + 10) + 'px');
-});
 $(window).scroll(function () {
   var sticky = $("header"),
       scroll = $(window).scrollTop();
