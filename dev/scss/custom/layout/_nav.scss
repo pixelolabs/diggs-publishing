@@ -209,9 +209,9 @@ header {
   .main-header {
     position: relative;
     background-color: $color-white;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    border-bottom: 1px solid #efefef;
+    // border-top-right-radius: 20px;
+    // border-top-left-radius: 20px;
+    // border-bottom: 1px solid #efefef;
     transition: 0.3s ease all;
     @include MQ(MQ-980) {
       border-bottom: 0;
