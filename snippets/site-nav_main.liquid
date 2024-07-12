@@ -118,35 +118,45 @@
 
                 <div class="two-column-product-section none-980">
                   <ul class="flex-wrap">
-                    {% for block in section.blocks -%}
-                      {% assign linkTitlecat = block.settings.category | downcase | remove: ' ' %}
-                      {% if linkTitle contains linkTitlecat %}
-                        {% if block.settings.title != blank %}
-                          <li
-                            class="
-                              featured-card {% if block.settings.content_alignment == "center" %} center-align{%endif%} {% if block.settings.content_alignment == "right" %} right-align{%endif%}{% if
-                              block.settings.content_alignment == "left" %} left-align{%endif%}
-                            "
-                          >
-                            <a
-                              href="{{block.settings.link}}"
-                              title="{{block.settings.linkText}}"
-                              class="inner-wrapper"
-                            >
-                              <div class="image-section">
-                                <img src="{{ block.settings.image | img_url: '360x200' }}" alt="">
-                              </div>
-                              <div class="content">
-                                <span class="title">{{ block.settings.title }}</span>
-                                <span class="link--primary">
-                                  {{- block.settings.linkText -}}
-                                </span>
-                              </div>
-                            </a>
-                          </li>
-                        {% endif %}
+                    {%- for block in section.blocks -%}
+                      {% assign productRelated = all_products[block.settings.product] %}
+                      {% if productRelated != empty %}
+                        <div class="product-card swiper-slide slide ">
+                          {% include 'product_Card'  with  productRelated: productRelated , show_price:false, show_tags: false, show_auto_tags: false, show_title: true, show_fav: false, show_secondary_button: false %}
+                        </div>
                       {% endif %}
-                    {%- endfor %}
+                    {% endfor %}
+                    {% comment %}
+                      {% for block in section.blocks -%}
+                        {% assign linkTitlecat = block.settings.category | downcase | remove: ' ' %}
+                        {% if linkTitle contains linkTitlecat %}
+                          {% if block.settings.title != blank %}
+                            <li
+                              class="
+                                featured-card {% if block.settings.content_alignment == "center" %} center-align{%endif%} {% if block.settings.content_alignment == "right" %} right-align{%endif%}{% if
+                                block.settings.content_alignment == "left" %} left-align{%endif%}
+                              "
+                            >
+                              <a
+                                href="{{block.settings.link}}"
+                                title="{{block.settings.linkText}}"
+                                class="inner-wrapper"
+                              >
+                                <div class="image-section">
+                                  <img src="{{ block.settings.image | img_url: '360x200' }}" alt="">
+                                </div>
+                                <div class="content">
+                                  <span class="title">{{ block.settings.title }}</span>
+                                  <span class="link--primary">
+                                    {{- block.settings.linkText -}}
+                                  </span>
+                                </div>
+                              </a>
+                            </li>
+                          {% endif %}
+                        {% endif %}
+                      {%- endfor %}
+                    {% endcomment %}
                   </ul>
                 </div>
               </div>
