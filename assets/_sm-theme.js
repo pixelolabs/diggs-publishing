@@ -2014,7 +2014,7 @@ jQuery(function () {
   $("#announcement-close").on("click", function () {
     $(".announcement-bar").hide();
     $("body").removeClass("announcement-visible");
-    $("body").removeClass("announcement-hide");
+    $("body").addClass("announcement-hide");
   }); // if($("div").hasClass("hero-banner") || $("div").hasClass("error-page") || $("div").hasClass("inner-hero-section") ){
   //     $("body").addClass("transparent-header");
   //     $(".js__main-content").addClass("active");
