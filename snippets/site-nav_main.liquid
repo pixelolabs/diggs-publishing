@@ -117,7 +117,7 @@
                 {% endif %}
 
                 <div class="two-column-product-section none-980">
-                  <div class="flex">
+                  <div class="flex inner-wrapper">
                     {%- for block in section.blocks limit: 2 -%}
                       {% assign productRelated = all_products[block.settings.product] %}
                       {% if productRelated != empty %}
