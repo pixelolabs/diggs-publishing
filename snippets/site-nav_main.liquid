@@ -49,67 +49,86 @@
               <div class="flex">
                 {% if linkTitle contains 'shop' %}
                   <div class="big-nav-menu flex product-icon-links">
-                    {% for childlink in link.links %}
-                      {% if childlink.links != blank %}
-                        {% assign childlinkTitle = childlink.title | downcase | remove: ' ' %}
+                    {% comment %}
+                      {% for childlink in link.links %}
+                        {% if childlink.links != blank %}
+                          {% assign childlinkTitle = childlink.title | downcase | remove: ' ' %}
 
-                        <div class="big-nav-links icon-link">
-                          <a
-                            href="{{childlink.url}}"
-                            title=" {{ childlink.title | escape }}"
-                            class="none-980 sub-link pre-title border"
+                          <div class="big-nav-links icon-link">
+                            <a
+                              href="{{childlink.url}}"
+                              title=" {{ childlink.title | escape }}"
+                              class="none-980 sub-link pre-title border"
 
-                            aria-controls="MenuParent-{{ child_index }}"
-                            aria-expanded="false"
-                          >
-                            {{ childlink.title }}
-                          </a>
-                          <p class="accordion-toggle-inner block-980">
-                            {{ childlink.title | escape }}
-                          </p>
+                              aria-controls="MenuParent-{{ child_index }}"
+                              aria-expanded="false"
+                            >
+                              {{ childlink.title }}
+                            </a>
+                            <p class="accordion-toggle-inner block-980">
+                              {{ childlink.title | escape }}
+                            </p>
 
-                          <ul class="accordion-content-inner product-inner">
-                            {% for subChildlink in childlink.links %}
-                              {% assign subChildlinkTitle = subChildlink.title | downcase | remove: ' ' %}
-                              <li class="flex">
-                                {% assign _object = subChildlink.object %}
+                            <ul class="accordion-content-inner product-inner">
+                              {% for subChildlink in childlink.links %}
+                                {% assign subChildlinkTitle = subChildlink.title | downcase | remove: ' ' %}
+                                <li class="flex">
+                                  {% assign _object = subChildlink.object %}
 
-                                {% if childlinkTitle contains 'shopbyhealth' %}
-                                  {% if _object.metafields.menu.icons != blank %}
-                                    {% assign pageImage = _object.metafields.menu.icons | first %}
-                                    <img loading="lazy" src="{{ pageImage.cloudinary_src}}" class="none-980">
+                                  {% if childlinkTitle contains 'shopbyhealth' %}
+                                    {% if _object.metafields.menu.icons != blank %}
+                                      {% assign pageImage = _object.metafields.menu.icons | first %}
+                                      <img loading="lazy" src="{{ pageImage.cloudinary_src}}" class="none-980">
+                                    {% endif %}
+                                    <a
+                                      href="{{ _object.url }}"
+
+                                      data-meganav-type="parent"
+                                      aria-controls="MenuParent-{{ parent_index }}"
+                                      aria-expanded="false"
+                                      {% unless request.page_type == 'index' %}
+                                        {%- if subChildlink.active %}aria-current="page" {% endif -%}
+                                      {% endunless %}
+                                    >
+                                      {{ subChildlink.title | escape }}
+                                    </a>
+                                  {% else %}
+                                    <a
+                                      href="{{ subChildlink.url }}"
+                                      data-meganav-type="parent"
+                                      aria-controls="MenuParent-{{ parent_index }}"
+                                      aria-expanded="false"
+                                      {% unless request.page_type == 'index' %}
+                                        {%- if subChildlink.active %}aria-current="page" {% endif -%}
+                                      {% endunless %}
+                                    >
+                                      {{ subChildlink.title | escape }}
+                                    </a>
                                   {% endif %}
-                                  <a
-                                    href="{{ _object.url }}"
-
-                                    data-meganav-type="parent"
-                                    aria-controls="MenuParent-{{ parent_index }}"
-                                    aria-expanded="false"
-                                    {% unless request.page_type == 'index' %}
-                                      {%- if subChildlink.active %}aria-current="page" {% endif -%}
-                                    {% endunless %}
-                                  >
-                                    {{ subChildlink.title | escape }}
-                                  </a>
-                                {% else %}
-                                  <a
-                                    href="{{ subChildlink.url }}"
-                                    data-meganav-type="parent"
-                                    aria-controls="MenuParent-{{ parent_index }}"
-                                    aria-expanded="false"
-                                    {% unless request.page_type == 'index' %}
-                                      {%- if subChildlink.active %}aria-current="page" {% endif -%}
-                                    {% endunless %}
-                                  >
-                                    {{ subChildlink.title | escape }}
-                                  </a>
-                                {% endif %}
-                              </li>
-                            {% endfor %}
-                          </ul>
-                        </div>
-                      {% endif %}
-                    {% endfor %}
+                                </li>
+                              {% endfor %}
+                            </ul>
+                          </div>
+                        {% endif %}
+                      {% endfor %}
+                    {% endcomment %}
+                    <ul class="sub-nav-links">
+                      {% for childlink in link.links %}
+                        <li>
+                          <a
+                            href="{{ childlink.url }}"
+                            title="{{ childlink.title | escape }}"
+                            aria-controls="MenuChildren-{{ parent_index }}-{{ child_index }}"
+                            data-meganav-type="parent"
+                            {% unless request.page_type == 'index' %}
+                              {%- if childlink.active %}aria-current="page" {% endif -%}
+                            {% endunless %}
+                          >
+                            {{ childlink.title | escape -}}
+                          </a>
+                        </li>
+                      {% endfor %}
+                    </ul>
                   </div>
                 {% else %}
                   <div class="big-nav-menu flex">
