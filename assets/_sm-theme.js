@@ -2235,7 +2235,7 @@ jQuery(function () {
       // }
     }
   });
-  $(".search-close").on("click", function (e) {
+  $("#search-close").on("click", function (e) {
     $(".js__header-search-section").removeClass("active");
     $(".js__search").removeClass("active");
     $("body .boost-pfs-search-suggestion").css("display", "none");
