@@ -6,7 +6,7 @@
       {% assign linkTitle = link.title | downcase | remove: ' ' %}
 
       <li
-        class="{% if link.levels ==  2 %}has-big-nav{%else%}has-sub-nav{%endif%}"
+        class="{% if link.levels ==  2 or linkTitle contains 'shop'%}has-big-nav{%else%}has-sub-nav{%endif%}"
         aria-haspopup="true"
       >
         {% comment %} href=" {{ link.url}}" {% endcomment %}
