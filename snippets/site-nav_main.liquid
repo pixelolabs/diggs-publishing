@@ -116,7 +116,7 @@
                   </div>
                 {% endif %}
 
-                <div class="two-column-product-section none-980 {% if linkTitle contains 'products' %} one-column-product{%endif%}">
+                <div class="two-column-product-section none-980">
                   <ul class="flex-wrap">
                     {% for block in section.blocks -%}
                       {% assign linkTitlecat = block.settings.category | downcase | remove: ' ' %}
