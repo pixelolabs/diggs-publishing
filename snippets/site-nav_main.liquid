@@ -118,10 +118,10 @@
 
                 <div class="two-column-product-section none-980">
                   <ul class="flex-wrap">
-                    {%- for block in section.blocks -%}
+                    {%- for block in section.blocks limit: 2 -%}
                       {% assign productRelated = all_products[block.settings.product] %}
                       {% if productRelated != empty %}
-                        <div class="product-card swiper-slide slide ">
+                        <div class="product-card">
                           {% include 'product_Card'  with  productRelated: productRelated , show_price:false, show_tags: false, show_auto_tags: false, show_title: true, show_fav: false, show_secondary_button: false %}
                         </div>
                       {% endif %}
