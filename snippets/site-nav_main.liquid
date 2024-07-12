@@ -43,98 +43,55 @@
         </p>
         {% comment %} BIG NAV {% endcomment %}
 
-        {% if link.levels == 2 %}
-          {% if linkTitle contains 'shop' %}
-            <div class="big-nav accordion-content">
-              <div class="container-1360">
-                <div class="flex">
-                  {% if linkTitle contains 'products' %}
-                    <div class="big-nav-menu flex product-icon-links">
-                      {% for childlink in link.links %}
-                        {% if childlink.links != blank %}
-                          {% assign childlinkTitle = childlink.title | downcase | remove: ' ' %}
+        {% if linkTitle contains 'shop' or link.levels == 2 %}
+          <div class="big-nav accordion-content">
+            <div class="container-1360">
+              <div class="flex">
+                {% if linkTitle contains 'products' %}
+                  <div class="big-nav-menu flex product-icon-links">
+                    {% for childlink in link.links %}
+                      {% if childlink.links != blank %}
+                        {% assign childlinkTitle = childlink.title | downcase | remove: ' ' %}
 
-                          <div class="big-nav-links icon-link">
-                            <a
-                              href="{{childlink.url}}"
-                              title=" {{ childlink.title | escape }}"
-                              class="none-980 sub-link pre-title border"
+                        <div class="big-nav-links icon-link">
+                          <a
+                            href="{{childlink.url}}"
+                            title=" {{ childlink.title | escape }}"
+                            class="none-980 sub-link pre-title border"
 
-                              aria-controls="MenuParent-{{ child_index }}"
-                              aria-expanded="false"
-                            >
-                              {{ childlink.title }}
-                            </a>
-                            <p class="accordion-toggle-inner block-980">
-                              {{ childlink.title | escape }}
-                            </p>
+                            aria-controls="MenuParent-{{ child_index }}"
+                            aria-expanded="false"
+                          >
+                            {{ childlink.title }}
+                          </a>
+                          <p class="accordion-toggle-inner block-980">
+                            {{ childlink.title | escape }}
+                          </p>
 
-                            <ul class="accordion-content-inner product-inner">
-                              {% for subChildlink in childlink.links %}
-                                {% assign subChildlinkTitle = subChildlink.title | downcase | remove: ' ' %}
-                                <li class="flex">
-                                  {% assign _object = subChildlink.object %}
+                          <ul class="accordion-content-inner product-inner">
+                            {% for subChildlink in childlink.links %}
+                              {% assign subChildlinkTitle = subChildlink.title | downcase | remove: ' ' %}
+                              <li class="flex">
+                                {% assign _object = subChildlink.object %}
 
-                                  {% if childlinkTitle contains 'shopbyhealth' %}
-                                    {% if _object.metafields.menu.icons != blank %}
-                                      {% assign pageImage = _object.metafields.menu.icons | first %}
-                                      <img loading="lazy" src="{{ pageImage.cloudinary_src}}" class="none-980">
-                                    {% endif %}
-                                    <a
-                                      href="{{ _object.url }}"
-
-                                      data-meganav-type="parent"
-                                      aria-controls="MenuParent-{{ parent_index }}"
-                                      aria-expanded="false"
-                                      {% unless request.page_type == 'index' %}
-                                        {%- if subChildlink.active %}aria-current="page" {% endif -%}
-                                      {% endunless %}
-                                    >
-                                      {{ subChildlink.title | escape }}
-                                    </a>
-                                  {% else %}
-                                    <a
-                                      href="{{ subChildlink.url }}"
-                                      data-meganav-type="parent"
-                                      aria-controls="MenuParent-{{ parent_index }}"
-                                      aria-expanded="false"
-                                      {% unless request.page_type == 'index' %}
-                                        {%- if subChildlink.active %}aria-current="page" {% endif -%}
-                                      {% endunless %}
-                                    >
-                                      {{ subChildlink.title | escape }}
-                                    </a>
+                                {% if childlinkTitle contains 'shopbyhealth' %}
+                                  {% if _object.metafields.menu.icons != blank %}
+                                    {% assign pageImage = _object.metafields.menu.icons | first %}
+                                    <img loading="lazy" src="{{ pageImage.cloudinary_src}}" class="none-980">
                                   {% endif %}
-                                </li>
-                              {% endfor %}
-                            </ul>
-                          </div>
-                        {% endif %}
-                      {% endfor %}
-                    </div>
-                  {% else %}
-                    <div class="big-nav-menu flex">
-                      {% for childlink in link.links %}
-                        {% if childlink.links != blank %}
-                          {% assign childlinkTitle = childlink.title | downcase | remove: ' ' %}
+                                  <a
+                                    href="{{ _object.url }}"
 
-                          <div class="big-nav-links">
-                            <a
-                              href="{{childlink.url}}"
-                              title=" {{ childlink.title | escape }}"
-                              class="none-980 sub-link pre-title border"
-
-                              aria-controls="MenuParent-{{ child_index }}"
-                              aria-expanded="false"
-                            >
-                              {{ childlink.title }}
-                            </a>
-                            <p class="accordion-toggle-inner block-980">
-                              {{ childlink.title | escape }}
-                            </p>
-                            <ul class="accordion-content-inner">
-                              {% for subChildlink in childlink.links %}
-                                <li>
+                                    data-meganav-type="parent"
+                                    aria-controls="MenuParent-{{ parent_index }}"
+                                    aria-expanded="false"
+                                    {% unless request.page_type == 'index' %}
+                                      {%- if subChildlink.active %}aria-current="page" {% endif -%}
+                                    {% endunless %}
+                                  >
+                                    {{ subChildlink.title | escape }}
+                                  </a>
+                                {% else %}
                                   <a
                                     href="{{ subChildlink.url }}"
                                     data-meganav-type="parent"
@@ -146,52 +103,94 @@
                                   >
                                     {{ subChildlink.title | escape }}
                                   </a>
-                                </li>
-                              {% endfor %}
-                            </ul>
-                          </div>
-                        {% endif %}
-                      {% endfor %}
-                    </div>
-                  {% endif %}
-
-                  <div class="two-column-product-section none-980 {% if linkTitle contains 'products' %} one-column-product{%endif%}">
-                    <ul class="flex-wrap">
-                      {% for block in section.blocks -%}
-                        {% assign linkTitlecat = block.settings.category | downcase | remove: ' ' %}
-                        {% if linkTitle contains linkTitlecat %}
-                          {% if block.settings.title != blank %}
-                            <li
-                              class="
-                                featured-card {% if block.settings.content_alignment == "center" %} center-align{%endif%} {% if block.settings.content_alignment == "right" %} right-align{%endif%}{% if
-                                block.settings.content_alignment == "left" %} left-align{%endif%}
-                              "
-                            >
-                              <a
-                                href="{{block.settings.link}}"
-                                title="{{block.settings.linkText}}"
-                                class="inner-wrapper"
-                              >
-                                <div class="image-section">
-                                  <img src="{{ block.settings.image | img_url: '360x200' }}" alt="">
-                                </div>
-                                <div class="content">
-                                  <span class="title">{{ block.settings.title }}</span>
-                                  <span class="link--primary">
-                                    {{- block.settings.linkText -}}
-                                  </span>
-                                </div>
-                              </a>
-                            </li>
-                          {% endif %}
-                        {% endif %}
-                      {%- endfor %}
-                    </ul>
+                                {% endif %}
+                              </li>
+                            {% endfor %}
+                          </ul>
+                        </div>
+                      {% endif %}
+                    {% endfor %}
                   </div>
+                {% else %}
+                  <div class="big-nav-menu flex">
+                    {% for childlink in link.links %}
+                      {% if childlink.links != blank %}
+                        {% assign childlinkTitle = childlink.title | downcase | remove: ' ' %}
+
+                        <div class="big-nav-links">
+                          <a
+                            href="{{childlink.url}}"
+                            title=" {{ childlink.title | escape }}"
+                            class="none-980 sub-link pre-title border"
+
+                            aria-controls="MenuParent-{{ child_index }}"
+                            aria-expanded="false"
+                          >
+                            {{ childlink.title }}
+                          </a>
+                          <p class="accordion-toggle-inner block-980">
+                            {{ childlink.title | escape }}
+                          </p>
+                          <ul class="accordion-content-inner">
+                            {% for subChildlink in childlink.links %}
+                              <li>
+                                <a
+                                  href="{{ subChildlink.url }}"
+                                  data-meganav-type="parent"
+                                  aria-controls="MenuParent-{{ parent_index }}"
+                                  aria-expanded="false"
+                                  {% unless request.page_type == 'index' %}
+                                    {%- if subChildlink.active %}aria-current="page" {% endif -%}
+                                  {% endunless %}
+                                >
+                                  {{ subChildlink.title | escape }}
+                                </a>
+                              </li>
+                            {% endfor %}
+                          </ul>
+                        </div>
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                {% endif %}
+
+                <div class="two-column-product-section none-980 {% if linkTitle contains 'products' %} one-column-product{%endif%}">
+                  <ul class="flex-wrap">
+                    {% for block in section.blocks -%}
+                      {% assign linkTitlecat = block.settings.category | downcase | remove: ' ' %}
+                      {% if linkTitle contains linkTitlecat %}
+                        {% if block.settings.title != blank %}
+                          <li
+                            class="
+                              featured-card {% if block.settings.content_alignment == "center" %} center-align{%endif%} {% if block.settings.content_alignment == "right" %} right-align{%endif%}{% if
+                              block.settings.content_alignment == "left" %} left-align{%endif%}
+                            "
+                          >
+                            <a
+                              href="{{block.settings.link}}"
+                              title="{{block.settings.linkText}}"
+                              class="inner-wrapper"
+                            >
+                              <div class="image-section">
+                                <img src="{{ block.settings.image | img_url: '360x200' }}" alt="">
+                              </div>
+                              <div class="content">
+                                <span class="title">{{ block.settings.title }}</span>
+                                <span class="link--primary">
+                                  {{- block.settings.linkText -}}
+                                </span>
+                              </div>
+                            </a>
+                          </li>
+                        {% endif %}
+                      {% endif %}
+                    {%- endfor %}
+                  </ul>
                 </div>
               </div>
             </div>
-          {% endif %}
+          </div>
+
         {% else %}
           {% comment %} SUB NAV {% endcomment %}
           {% if link.levels == 1 %}
