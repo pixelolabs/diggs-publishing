@@ -2278,7 +2278,7 @@ jQuery(function () {
 
 jQuery(function () {
   var newsHeight = $('.announcement-bar').height();
-  $('.header-logo').css("top", '-' + (newsHeight + 10) + 'px');
+  $('.header-logo').css("top", '-' + newsHeight + 'px');
   $('.navbar-collapse').css("top", +(newsHeight + 54 + 4) + 'px');
 });
 $(window).scroll(function () {
