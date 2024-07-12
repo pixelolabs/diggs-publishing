@@ -14,6 +14,23 @@
     top: -47px;
   }
 }
+.announcement-visible {
+  .header-search-section {
+    top: -55px !important;
+    @include MQ(MQ-980) {
+      top: 0 !important;
+    }
+  }
+}
+.announcement-hide {
+  .header-logo {
+    top: 0px !important;
+  }
+  .navbar-collapse {
+    top: 74px !important;
+    height: calc(100vh - 70px);
+  }
+}
 .announcement-bar {
   background-color: $color-yellow;
   position: relative;
@@ -260,7 +277,7 @@ header {
       #5ebe55 27%,
       #a8d24e 62%,
       #5abe50 97%
-    );
+    ) !important;
   }
   .search-li {
     // position: relative;
@@ -299,11 +316,19 @@ header {
     width: 100%;
     display: none;
     // padding: 39px 0 76px;
-    padding: 69px 0 76px;
-    background: $color-white;
+    padding: 63px 0 71px;
+    background-image: linear-gradient(to bottom, #fff8e3, #fff8e1);
     left: 0;
-    .container-696 {
-      max-width: 696px;
+    z-index: 999;
+    .close {
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      right: 30px;
+      top: 21px;
+    }
+    .container-830 {
+      max-width: 830px;
       width: 100%;
       margin: 0 auto;
       padding: 0 20px;
@@ -335,8 +360,9 @@ header {
     // height: 36px;
     transition: 0.3s ease all;
 
-    // top: 78px;
-    top: 50px;
+    // top: 66px;
+    // top: -55px;
+    top: 0;
 
     form {
       width: 100%;
@@ -348,6 +374,7 @@ header {
       display: block;
       padding-top: 15px;
       top: 0;
+      background: transparent !important;
     }
     .search-form-section {
       align-items: center;
@@ -360,9 +387,9 @@ header {
     input[type="text"],
     input[type="search"] {
       border: 1px solid $color-border;
-      border-radius: 40px;
+      border-radius: 30px;
       width: 100%;
-      max-width: 538px;
+      max-width: 100%;
       appearance: none;
       -moz-appearance: none;
       -webkit-appearance: none;
@@ -372,13 +399,16 @@ header {
       line-height: normal;
       letter-spacing: 0.01px;
       color: $color-black;
-      height: 40px;
-      padding: 12px 0px 12px 32px;
+      height: 55px;
+      padding: 18px 98px 17px 30px;
       background-color: transparent;
+      border: 2px solid $color-black !important;
       @include MQ(MQ-980) {
         max-width: 100%;
         padding: 10px 52px 10px 16px;
         border: 1px solid $color-black !important;
+        height: 40px;
+        background-color: transparent !important;
       }
       &::placeholder {
         font-size: 14px;
@@ -389,55 +419,64 @@ header {
 
         color: $color-black;
         @include MQ(MQ-980) {
-          color: #575757;
+          font-size: 12px;
+          color: $color-black !important;
         }
       }
       @include MQ(MQ-980) {
-        border: 1px solid #dddd;
         width: 100%;
         // border-radius: 0;
         // background-color: #fcfbf7;
-        padding: 14px 40.6px 13px;
+        padding: 14px 52px 13px 16px;
         font-size: 14px;
-        height: 45.8px;
+
         line-height: normal;
-        color: #575757;
-        background-color: $color-off-white;
       }
     }
-    .submit.btn--primary {
-      min-width: 100px;
-      margin-left: 18px;
+    .submit.btn-submit {
+      background-color: $color-yellow;
+      font-size: 12px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 1px;
+      text-align: center;
+      border-radius: 30px;
+      font-family: var(--font-family-primary);
+      position: absolute;
+      height: 45px;
+      width: 98px;
+      border: 0;
+      right: 5.1px;
+      top: 4.5px;
+      text-transform: uppercase;
+      cursor: pointer;
     }
     a {
-      position: absolute !important;
-      left: 36px;
-      width: 12px;
-      top: 14.5px;
-      height: 12px;
-      display: flex !important;
-
-      svg {
-        width: 11px;
-        height: 11px;
-      }
-      &:after {
-        display: none;
-      }
       @include MQ(MQ-980) {
-        left: 50.6px;
-        top: 17.5px;
-        width: 14px;
-        height: 14px;
+        right: 27px;
+        background: $color-yellow;
+        width: 52px;
+        height: 31px;
+        // top: 17.5px;
+        // width: 14px;
+        // height: 14px;
+        border-radius: 30px;
+        position: absolute;
+        left: auto;
+        top: 4px;
         z-index: 1;
-        display: flex;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
 
         svg {
-          width: 14px;
-          height: 14px;
-          path {
-            fill: #1a1b1b80;
-          }
+          width: 22px;
+          height: 22px;
+          // path {
+          //   fill: #1a1b1b80;
+          // }
         }
         // &.close-search {
         //   width: 15px;
@@ -497,13 +536,14 @@ header {
     height: 156px;
     left: -1px;
     top: 0;
+    z-index: 999;
     @include MQ(MQ-1280) {
       width: 200px;
       height: 136px;
     }
 
     img {
-      @include img-object-contain;
+      @include img-object-cover;
 
       display: none;
       &.logo {
@@ -517,7 +557,7 @@ header {
       margin: 0 auto;
     }
     @include MQ(MQ-768) {
-      width: 130px;
+      width: 148px;
       height: 94px;
     }
   }
@@ -590,16 +630,20 @@ header {
 .fixed-header {
   header {
     .header-logo {
-      top: -7px;
+      top: -7px !important;
       height: 106px;
       width: 190px;
       left: -9px;
+      @include MQ(MQ-768) {
+        width: 130px;
+        height: 82px;
+      }
     }
     @include MQ(MQ-980) {
       .main-header {
         .navbar-collapse {
-          top: 58px;
-          height: calc(100vh - 58px);
+          top: 53px !important;
+          height: calc(100vh - 53px);
         }
       }
     }
