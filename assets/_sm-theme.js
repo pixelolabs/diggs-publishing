@@ -2038,8 +2038,7 @@ jQuery(function () {
       $(this).children(".sub-nav").addClass("active"); //$("body").removeClass("transparent-header");
       // main-header").addClass("active");
       // /$("./ Remove transparent header from index page when sub menu open
-
-      $(".template-index").addClass("remove-transparent-header");
+      // $(".template-index").addClass("remove-transparent-header");
 
       if ($(".js__search ").hasClass("active") == true) {
         $(".js__header-search-section").removeClass("active");
@@ -2282,8 +2281,7 @@ $(window).scroll(function () {
 
   if (scroll >= 30) {
     sticky.addClass("fixed");
-    $("body").addClass("fixed-header");
-    $(".fixed-header").removeClass("transparent-header");
+    $("body").addClass("fixed-header"); // $(".fixed-header").removeClass("transparent-header");
   } else {
     sticky.removeClass("fixed");
     $("body").removeClass("fixed-header");
