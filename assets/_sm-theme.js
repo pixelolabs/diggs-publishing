@@ -940,7 +940,7 @@ jQuery(function () {
   });
   var reviewSectionSlider = new Swiper(".js__review-slider", {
     slidesPerView: 2,
-    spaceBetween: 28,
+    spaceBetween: 14,
     // centeredSlides: true,
     // resistance: false,
     loop: true,
@@ -963,7 +963,7 @@ jQuery(function () {
       481: {
         slidesPerView: 1
       },
-      769: {
+      601: {
         slidesPerView: 2
       },
       1440: {
