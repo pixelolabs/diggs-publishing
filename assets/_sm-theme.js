@@ -963,7 +963,7 @@ jQuery(function () {
       481: {
         slidesPerView: 1
       },
-      601: {
+      769: {
         slidesPerView: 2
       },
       1440: {
