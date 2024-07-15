@@ -14,7 +14,7 @@
 .half-image-half-content {
   position: relative;
   z-index: 1;
-  padding: 0px 0 118px;
+  padding: 0px 0 160px;
   background-color: $color-sky-blue;
   
   &:first-child {
@@ -22,16 +22,14 @@
    
   }
 
-  .container-1440 {
-    overflow: hidden;
-    @include MQ(MQ-768) {
+  .container-1260 {
+  
+    @include MQ(MQ-980) {
       flex-direction: column;
       align-items: center;
       justify-content: center;
     }
-    @include MQ(MQ-480) {
-      padding: 0 20px;
-    }
+    
     position: relative;
     &::after{
       position: absolute;
@@ -41,6 +39,9 @@
       background: url("star-large-white.webp") repeat center / 100%;
       width: 31.4px;
       height: 38.2px;
+      @include MQ(MQ-980) {
+       display: none;
+      }
     }
 
     &::before{
@@ -52,6 +53,9 @@
       width: 284px;
       height: 642px;
       z-index: 1;
+      @include MQ(MQ-980) {
+        display: none;
+       }
     }
    
 
@@ -89,23 +93,67 @@
   .image-wrapper{
     width: 722px;
     margin-right: 139px;
+    margin-left: -190px;
+    @include MQ(MQ-1280) {
+      margin-right: 70px;
+     
+    }
+    @include MQ(MQ-1100) {
+      margin-left: -250px;
+     
+    }
+    @include MQ(MQ-980) {
+      width: 100%;
+      max-width: 722px;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
     flex: none;
     position: relative;
+   
     &::after{
       position: absolute;
       content: '';
-      right: -201.4px;
-      top: 22px;
-      background: url("icon-cloud.webp") repeat center / 100%;
-      width: 65px;
-      height: 52px;
+      right: -290px;
+      bottom: 16px;
+      background: url("thread-blue.webp") no-repeat center / 100%;
+      width: 352px;
+      height: 81px;
+      @include MQ(MQ-980) {
+        position: absolute;
+        content: '';
+        right: 0px;
+        top: -72px;
+        background: url("icon-cloud.webp") no-repeat center / 100%;
+        width: 65px;
+        height: 52px;
+      }
+      @include MQ(MQ-480) {
+        position: absolute;
+        content: '';
+       
+        top: -42px;
+        width: 47px;
+        height: 38px;
+      }
     }
+   
+    
     &::before{
       width: 726px;
       height: 617px;
+      @include MQ(MQ-768) {
+        width: 500px;
+        height: 424px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+      
       aspect-ratio: 1;
-    -webkit-mask-image: url(left-shape.svg);
-    mask-image: url(left-shape.svg);
+    -webkit-mask-image: url(yellow-shape-left.svg);
+    mask-image: url(yellow-shape-left.svg);
     -webkit-mask-position: center;
     mask-position: center;
     -webkit-mask-size: cover;
@@ -113,10 +161,31 @@
       position: absolute;
       content: '';
       left: 0;
-      top: 0;
+      top: 70px;
+      @include MQ(MQ-600) {
+        width: 350px;
+        height: 296px;
+        top: 40px;
+      }
+      @include MQ(MQ-480) {
+        width: 320px;
+        height: 273px;
+       
+      }
+      @include MQ(MQ-400) {
+        width: 280px;
+        height: 239px;
+        left: 21px;
+        top: 30px;
+      }
+      @include MQ(MQ-350) {
+        width: 260px;
+        height: 221px;
+       
+      }
       background: $color-yellow;
       opacity: 1;
-      transform: rotate(20deg);
+      
       z-index: 1;
     }
   }
@@ -124,6 +193,30 @@
   .video-section {
     width: 722px;
     height: 654px;
+    @include MQ(MQ-768) {
+      width: 500px;
+      height: 454px;
+     }
+     @include MQ(MQ-600) {
+      width: 350px;
+      height: 318px;
+     
+    }
+    @include MQ(MQ-480) {
+      width: 325px;
+      height: 294px;
+     
+    }
+    @include MQ(MQ-400) {
+      width: 280px;
+      height: 254px;
+     
+    }
+    @include MQ(MQ-350) {
+      width: 260px;
+      height: 236px;
+     
+    }
     aspect-ratio: 1;
     -webkit-mask-image: url(left-shape.svg);
     mask-image: url(left-shape.svg);
@@ -145,10 +238,13 @@
   .content {
    
     width: 100%;
-    padding-right: 30px;
+    padding-right: 0px;
    display: flex;
    align-items: center;
    position: relative;
+   @include MQ(MQ-980) {
+    margin-top: 80px;
+   }
    &::after{
     position: absolute;
     content: '';
@@ -157,6 +253,21 @@
     background: url("star-large.webp") repeat center / 100%;
     width: 42px;
     height: 51px;
+    @include MQ(MQ-980) {
+      display: none;
+     }
+  }
+  &::before{
+    position: absolute;
+    content: '';
+    left: 0px;
+    top: 20px;
+    background: url("icon-cloud.webp") repeat center / 100%;
+    width: 65px;
+    height: 52px;
+    @include MQ(MQ-980) {
+      display: none;
+     }
   }
   .inner{
     max-width: 544px;
@@ -198,9 +309,7 @@
       margin-top: 30px;
     }
   
-    @include MQ(MQ-480) {
-      padding: 40px 10px 0 20px;
-    }
+   
   }
   &:nth-child(even) {
     // padding-top: 0;
