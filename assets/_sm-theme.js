@@ -2014,6 +2014,7 @@ jQuery(function () {
   $("#announcement-close").on("click", function () {
     $(".announcement-bar").hide();
     $("body").removeClass("announcement-visible");
+    $("body").addClass("announcement-hide");
   }); // if($("div").hasClass("hero-banner") || $("div").hasClass("error-page") || $("div").hasClass("inner-hero-section") ){
   //     $("body").addClass("transparent-header");
   //     $(".js__main-content").addClass("active");
@@ -2038,8 +2039,7 @@ jQuery(function () {
       $(this).children(".sub-nav").addClass("active"); //$("body").removeClass("transparent-header");
       // main-header").addClass("active");
       // /$("./ Remove transparent header from index page when sub menu open
-
-      $(".template-index").addClass("remove-transparent-header");
+      // $(".template-index").addClass("remove-transparent-header");
 
       if ($(".js__search ").hasClass("active") == true) {
         $(".js__header-search-section").removeClass("active");
@@ -2236,6 +2236,12 @@ jQuery(function () {
       // }
     }
   });
+  $("#search-close").on("click", function (e) {
+    $(".js__header-search-section").removeClass("active");
+    $(".js__search").removeClass("active");
+    $("body .boost-pfs-search-suggestion").css("display", "none");
+    $("body #boost-sd__search-widget-init-wrapper-1").css("display", "none");
+  });
   $(".js__search").on("click", function (e) {
     e.preventDefault();
     $(".js__header-search-section").toggleClass("active");
@@ -2273,8 +2279,8 @@ jQuery(function () {
 
 jQuery(function () {
   var newsHeight = $('.announcement-bar').height();
-  $('.header-logo').css("top", '-' + (newsHeight + 10) + 'px');
-  $('.navbar-collapse').css("top", +(newsHeight + 54 + 12) + 'px');
+  $('.header-logo').css("top", '-' + newsHeight + 'px');
+  $('.navbar-collapse').css("top", +(newsHeight + 54 + 4) + 'px');
 });
 $(window).scroll(function () {
   var sticky = $("header"),
@@ -2282,8 +2288,7 @@ $(window).scroll(function () {
 
   if (scroll >= 30) {
     sticky.addClass("fixed");
-    $("body").addClass("fixed-header");
-    $(".fixed-header").removeClass("transparent-header");
+    $("body").addClass("fixed-header"); // $(".fixed-header").removeClass("transparent-header");
   } else {
     sticky.removeClass("fixed");
     $("body").removeClass("fixed-header");

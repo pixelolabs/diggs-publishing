@@ -135,6 +135,24 @@
       },
       "header": {
         "type": "header",
+        "blocks": {
+          "product_CVqcjx": {
+            "type": "product",
+            "settings": {
+              "product": "body-safety-box-set-i-three-book-set-spanish"
+            }
+          },
+          "product_FnVzGG": {
+            "type": "product",
+            "settings": {
+              "product": "body-safety-box-set-ii-three-book-set-spanish"
+            }
+          }
+        },
+        "block_order": [
+          "product_CVqcjx",
+          "product_FnVzGG"
+        ],
         "settings": {
           "logo": "shopify:\/\/shop_images\/diggs-logo.png",
           "nav_menu": "main-menu-2-0",

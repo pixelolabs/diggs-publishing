@@ -5,8 +5,8 @@
 //var(--font-family-primary): "Poppins", sans-serif;
 //var(--font-family-secondary): "Prata", serif;
 @font-face {
-    font-family: 'ReallyBetter';
-    src: url('ReallyBetter.otf') format('opentype');
+  font-family: "ReallyBetter";
+  src: url("ReallyBetter.otf") format("opentype");
 }
 
 /* Colors */
@@ -15,7 +15,11 @@ $color-original-black: #000000;
 $color-black: #3b2900;
 $color-white: #ffffff;
 $color-off-white: #fff6dc;
+
 $color-off-white2: #fffcf3;
+
+$color-off-white-light: #fffcf3;
+
 $color-orange: #ff6520;
 $color-yellow: #ffc82b;
 $color-pink: #d51f91;
