@@ -1,19 +1,21 @@
 {% if section.settings.title != blank %}
   <div class="error-page">
-    {% if section.settings.backgroundImage != blank %}
-      <div class="image-section">
-        <picture>
-          <source
-            media="(max-width: 600px)"
-            srcset="{% if section.settings.backgroundImageMobile != blank %}{{ section.settings.backgroundImageMobile | img_url: '750x1400' }}{%endif%}"
-          >
-          <img
-            src="{{ section.settings.backgroundImage | img_url: '2880x1620' }}"
-            alt="{{ section.settings.backgroundImage.alt}}"
-          >
-        </picture>
-      </div>
-    {% endif %}
+    {% comment %}
+      {% if section.settings.backgroundImage != blank %}
+        <div class="image-section">
+          <picture>
+            <source
+              media="(max-width: 600px)"
+              srcset="{% if section.settings.backgroundImageMobile != blank %}{{ section.settings.backgroundImageMobile | img_url: '750x1400' }}{%endif%}"
+            >
+            <img
+              src="{{ section.settings.backgroundImage | img_url: '2880x1620' }}"
+              alt="{{ section.settings.backgroundImage.alt}}"
+            >
+          </picture>
+        </div>
+      {% endif %}
+    {% endcomment %}
 
     <div class="container-1240">
       <div class="inner">
@@ -45,15 +47,14 @@
   "settings": [
     {
       "type": "text",
-      "id": "pretitle",
-      "label": "Pre Title"
-    },
-    {
-      "type": "text",
       "id": "title",
       "label": "Title"
     },
-
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Sub Title"
+    },
     {
       "type": "text",
       "id": "buttonText",
