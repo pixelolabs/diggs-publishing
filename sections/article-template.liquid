@@ -95,8 +95,6 @@
 <div class="article-template">
   <div class="container-1240 content">
     <div class="tags">
-      <time>{{- article.published_at | time_tag: format: 'date' -}}</time>
-      <span>-</span>
       {% for tag in article.tags %}
         <a href="{{blog.url}}/tagged/{{ tag | handleize }}" class="tag">{{ tag }}</a>
         <span class="spacer">,</span>
