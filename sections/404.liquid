@@ -19,13 +19,12 @@
 
     <div class="container-1240">
       <div class="inner">
-        {% if section.settings.pretitle != blank %}
-          <p class="pre-title">{{ section.settings.pretitle }}</p>
-        {% endif %}
         {% if section.settings.title != blank %}
           <h1 class="normal">{{ section.settings.title }}</h1>
         {% endif %}
-
+        {% if section.settings.pretitle != blank %}
+          <p class="pre-title">{{ section.settings.pretitle }}</p>
+        {% endif %}
         {% if section.settings.buttonText != blank %}
           <a
             class="btn--primary"
