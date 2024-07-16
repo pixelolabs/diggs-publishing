@@ -12,6 +12,32 @@
     >
       <div class="container-1260">
         <div class="collection-filter-section flex">
+        
+          <div class="item--count">
+            {% assign currentOffset = paginate.current_offset | to_i %}
+            {% assign items = paginate.items %}
+            {% assign currentPage = paginate.current_page | to_i %}
+
+            {% assign currentPageStart = currentOffset | plus: 1 %}
+
+            {% assign totalshowItems = currentOffset | plus: limit %}
+
+            {% if paginate.current_page == 1 %}
+              {% if paginate.current_page == paginate.pages %}
+                Showing 1 - {{ collection.products_count }} of {{ collection.products_count }} items
+              {% else %}
+                Showing 1 - {{ limit }} of {{ collection.products_count }} items
+              {% endif %}
+            {% else %}
+              {% if paginate.current_page == paginate.pages %}
+                {% assign lastPageItem = items | to_i | minus: currentOffset | to_i %}
+                Showing {{ currentPageStart }} - {{ collection.products_count }} of
+                {{ collection.products_count }} items
+              {% else %}
+                Showing {{ currentPageStart }} - {{ totalshowItems }} of {{ collection.products_count }} items
+              {% endif %}
+            {% endif %}
+          </div>
           {% if section.settings.sort_enable %}
             <div class="sort-by">
               {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
@@ -40,31 +66,6 @@
               </select>
             </div>
           {% endif %}
-          <div class="item--count">
-            {% assign currentOffset = paginate.current_offset | to_i %}
-            {% assign items = paginate.items %}
-            {% assign currentPage = paginate.current_page | to_i %}
-
-            {% assign currentPageStart = currentOffset | plus: 1 %}
-
-            {% assign totalshowItems = currentOffset | plus: limit %}
-
-            {% if paginate.current_page == 1 %}
-              {% if paginate.current_page == paginate.pages %}
-                Showing 1 - {{ collection.products_count }} of {{ collection.products_count }} items
-              {% else %}
-                Showing 1 - {{ limit }} of {{ collection.products_count }} items
-              {% endif %}
-            {% else %}
-              {% if paginate.current_page == paginate.pages %}
-                {% assign lastPageItem = items | to_i | minus: currentOffset | to_i %}
-                Showing {{ currentPageStart }} - {{ collection.products_count }} of
-                {{ collection.products_count }} items
-              {% else %}
-                Showing {{ currentPageStart }} - {{ totalshowItems }} of {{ collection.products_count }} items
-              {% endif %}
-            {% endif %}
-          </div>
         </div>
         <ul class="collection__product-list flex">
           {% for productRelated in collection.products %}
