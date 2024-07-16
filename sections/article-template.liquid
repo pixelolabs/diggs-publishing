@@ -66,31 +66,6 @@
       {% if section.settings.description != blank %}
         {{ section.settings.description }}
       {% endif %}
-
-      <div class="buttons">
-        {% if section.settings.buttonText1 != blank %}
-          <a
-            href="{{ section.settings.buttonLink1 }}"
-            title="Read More About {{ section.settings.buttonText1 }}"
-            aria-label="Read More About {{ section.settings.buttonText}}"
-            class="btn--secondary"
-            title="{{ section.settings.buttonText1 }}"
-          >
-            {{- section.settings.buttonText1 -}}
-          </a>
-        {% endif %}
-        {% if section.settings.buttonText2 != blank %}
-          <a
-            href="{{ section.settings.buttonLink2 }}"
-            title="Read More About {{ section.settings.buttonText2 }}"
-            aria-label="Read More About {{ section.settings.buttonText2 }}"
-            class="btn--secondary"
-            title="{{ section.settings.buttonText2 }}"
-          >
-            {{- section.settings.buttonText2 -}}
-          </a>
-        {% endif %}
-      </div>
     </div>
   </div>
 </div>
