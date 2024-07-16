@@ -36,30 +36,29 @@
 </script>
 
 <div class="article-hero-banner-section inner-hero-section">
-  <div class="image-section {% if section.settings.gradient == true %} gradient{%endif%}">
-    <picture>
-      <source
-        media="(max-width: 480px)"
-        srcset="{% if section.settings.mobileImage != blank %}{{ section.settings.mobileImage | img_url: '750x1400' }}   {% endif %}"
+  <div class="container-993">
+    <div class="image-section">
+      {%- assign img_url = article.image | img_url: 'master' -%}
+      <img
+        id="{{ img_id }}"
+        src="{{ img_url }}"
+        class="lazyload"
+        data-src="{{ img_url }}"
+        data-widths="[180, 360, 540, 720, 905, 1090, 1296, 1512, 1728, 2048]"
+        data-aspectratio="{{ article.image.aspect_ratio }}"
+        data-sizes="auto"
+        alt="{{ article.title }}"
       >
-      {{ section.settings.image | image_url: width: 2880 | image_tag: loading: 'lazy', widths: '2880x1620' }}
-    </picture>
-  </div>
-
-  <div
-    class="
-      container-1240 {% if section.settings.content_alignment == "center" %} center--align {% endif %} {% if section.settings.content_alignment == "right" %} right--align {% endif %}{% if
-      section.settings.content_alignment == "left" %} left--align {% endif %}
-    "
-  >
-    <div class="content">
-      <h1>
-        {{ article.title }}
-      </h1>
-
-      {% if section.settings.description != blank %}
-        {{ section.settings.description }}
-      {% endif %}
+    </div>
+    <div
+      class="
+        container-1240 {% if section.settings.content_alignment == "center" %} center--align {% endif %} {% if section.settings.content_alignment == "right" %} right--align {% endif %}{% if
+        section.settings.content_alignment == "left" %} left--align {% endif %}
+      "
+    >
+      <div class="content">
+        <h1>{{ article.title }}</h1>
+      </div>
     </div>
   </div>
 </div>
@@ -208,18 +207,24 @@
 </script>
 {% schema %}
 {
-  "name": "Posts",
+  "name": {
+    "en": "Posts"
+  },
   "settings": [
     {
       "type": "checkbox",
       "id": "blog_show_date",
-      "label": "Show date",
+      "label": {
+        "en": "Show date"
+      },
       "default": true
     },
     {
       "type": "checkbox",
       "id": "show_share_buttons",
-      "label": "Show social sharing buttons",
+      "label": {
+        "en": "Show social sharing buttons"
+      },
       "default": true
     },
     {
