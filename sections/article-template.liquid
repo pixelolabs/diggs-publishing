@@ -98,6 +98,9 @@
       </svg>
       <time>{{- article.published_at | time_tag: format: 'date' -}}</time>
     </div>
+    <div class="author">
+      <span>{{ article.author }}</span>
+    </div>
     <div class="article-content  full-format article-content-{{ article.id }} js__article-content">
       {% include 'shortcode', load: article.content %}
     </div>
