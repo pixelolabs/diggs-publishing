@@ -97,7 +97,6 @@
     <div class="tags">
       {% for tag in article.tags %}
         <a href="{{blog.url}}/tagged/{{ tag | handleize }}" class="tag">{{ tag }}</a>
-        <span class="spacer">,</span>
       {% endfor %}
     </div>
     <div class="artical-date-author">
