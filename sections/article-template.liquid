@@ -53,15 +53,9 @@
     "
   >
     <div class="content">
-      {% if section.settings.pageBanner == true %}
-        <h1>
-          {{ section.settings.title }}
-        </h1>
-      {% else %}
-        <h2 class="h1">
-          {{ section.settings.title }}
-        </h2>
-      {% endif %}
+      <h1>
+        {{ article.title }}
+      </h1>
 
       {% if section.settings.description != blank %}
         {{ section.settings.description }}
