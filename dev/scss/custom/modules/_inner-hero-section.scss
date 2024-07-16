@@ -1,86 +1,136 @@
-.inner-hero-section{
-  padding: 193px 0 170px;
-  background-image: linear-gradient(109deg, #5ebe55 2%, #a8d24e 51%, #5abe50 100%);
+.inner-hero-section {
+  // padding: 193px 0 170px;
+  // background-image: linear-gradient(
+  //   109deg,
+  //   #5ebe55 2%,
+  //   #a8d24e 51%,
+  //   #5abe50 100%
+  // );
+  padding-top: 180px !important;
+  padding-bottom: 108px !important;
+  min-height: 550px;
   position: relative;
-  .container-1260{
-    position: relative;
+  display: flex;
+  // align-items: center;
+  @include MQ(MQ-768) {
+    padding-top: 119px !important;
+    padding-bottom: 100px !important;
+    min-height: 360px;
   }
-  .image-section{
-    width: 246px;
-    height: 418px;
-    bottom:0;
-    right: 250px;
+
+  .image-section {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     position: absolute;
-    margin-bottom:-232px;
-    img{
-      @include img-object-contain;
+    img {
+      @include img-object-cover;
     }
   }
-  &::before{
+  &::before {
     width: 367.6px;
     height: 87.8px;
-    content: '';
+    content: "";
     position: absolute;
-    left:0px;
-    z-index: 1;
-    bottom: 74px;
+    left: 0px;
+    z-index: 2;
+    bottom: 100px;
     background: url("thread-hero-white.webp") no-repeat center / 100%;
     @include MQ(MQ-480) {
       display: none;
     }
-}
-&::after{
-  width: 130px;
-  height: 406px;
-  content: '';
-  position: absolute;
-  right:0px;
-  z-index: 1;
-  top: 87px;
-  background: url("thread-hero-white-2.webp") no-repeat center / 100%;
-  @include MQ(MQ-480) {
-    top: 167px;
   }
-}
-.content{
-  max-width: 455px;
-  width: 100%;
-  position: relative;
-  &::before{
-    width: 89px;
-    height: 118px;
-    content: '';
+  // &:after {
+  //   background: url(graphic-yellow-wave.png) repeat-x top / 100%;
+  //   height: 114px;
+  //   width: 100%;
+  //   position: absolute;
+  //   left: 0;
+  //   bottom: -46px;
+  //   content: "";
+  //   z-index: 2;
+  //   background-repeat: repeat-x;
+  //   filter: brightness(0) saturate(100%) invert(100%) sepia(15%) saturate(4732%)
+  //     hue-rotate(312deg) brightness(111%) contrast(116%);
+  // }
+  &::after {
+    width: 130px;
+    height: 406px;
+    content: "";
     position: absolute;
-    right: -82px;
+    right: 0px;
     z-index: 1;
-    top: -88px;
-    background: url("kite.webp") no-repeat center / 100%;
+    top: 167px;
+    background: url("thread-hero-white-2.webp") no-repeat center / 100%;
     @include MQ(MQ-480) {
-      
+      top: 167px;
     }
-}
-&::after{
-  width: 63.9px;
-  height: 51px;
-  content: '';
-  position: absolute;
-  bottom: 29px;
-  z-index: 1;
-  right: -184px;
-  background: url("icon-cloud.webp") no-repeat center / 100%;
-  @include MQ(MQ-480) {
- 
-    top: auto;
-    bottom: 270px;
-    right: 25px;
   }
-}
-  *{
-    color:#ffffff;
+  .container-1240 {
+    position: relative;
+    z-index: 1;
+    &::after {
+      width: 60.4px;
+      height: 46.2px;
+      content: "";
+      position: absolute;
+      top: -90px;
+      z-index: 1;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      background: url("icon-off-white-cloud.png") no-repeat center / 100%;
+      @include MQ(MQ-768) {
+        top: -20px;
+        left: auto;
+        right: 20px;
+        width: 53px;
+        height: 70px;
+        background: url("kite.webp") no-repeat center / 100%;
+      }
+    }
+    &:before {
+      background: url(icon-tilt-star.png) no-repeat center/42px;
+      width: 42.6px;
+      height: 51.3px;
+      right: 56px;
+      top: 0;
+      position: absolute;
+      content: "";
+      @include MQ(MQ-768) {
+        top: auto;
+        bottom: -55px;
+        left: 30px;
+        right: auto;
+        width: 16px;
+        height: 22px;
+        background: url(star-large-white.webp) no-repeat center/100%;
+      }
+    }
   }
-  h1{
-    margin:0 0 16px;
-  }
+  .content {
+    max-width: 490px;
+    width: 100%;
+    position: relative;
+    @include MQ(MQ-768) {
+      max-width: 300px;
+    }
 
-}
+    * {
+      color: #ffffff;
+    }
+    h1 {
+      margin: 0 0 16px;
+      font-size: 40px;
+      font-weight: normal;
+      line-height: 1;
+      letter-spacing: 0.8px;
+      text-align: left;
+      @include MQ(MQ-480) {
+        font-size: 30px;
+        margin-bottom: 7px;
+      }
+    }
+  }
 }

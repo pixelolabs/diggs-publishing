@@ -1,58 +1,208 @@
 .error-page {
-    position: relative;
-    background: $color-black;
-    display: flex;
-    align-items: center;
-    padding-bottom: 113px;
-    padding-top: 154px;
-    height: calc(100vh - 40px);
-    max-height: 810px;
-    @include MQ(MQ-980) {
-        padding: 115px 0;
-        padding-left: 0;
-    }
+  position: relative;
+  background-image: linear-gradient(
+    125deg,
+    #535fbb 2%,
+    #7886ed 50%,
+    #535fbb 97%
+  );
+  display: flex;
+
+  padding-bottom: 113px;
+  padding-top: 251px;
+  height: calc(100vh - 20px);
+  min-height: 752px;
+  @include MQ(MQ-980) {
+    padding: 160px 0;
+    padding-left: 0;
+  }
+  @include MQ(MQ-600) {
+    height: auto;
+    padding: 140px 0;
+    align-items: flex-start;
+    min-height: 580px;
+    max-height: 600px;
+  }
+  &:after {
+    width: 130px;
+    height: 406px;
+    content: "";
+    position: absolute;
+    right: 0;
+    z-index: 0;
+    top: 142px;
+    background: url(thread-hero-white-2.webp) no-repeat center / 100%;
     @include MQ(MQ-600) {
-        height: auto;
-        padding: 115px 0 292px;
-        align-items: flex-start;
+      width: 87px;
+      height: 280px;
     }
-    .image-section {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        left: 0;
-        right: 0;
-        top: 0
+  }
+  &:before {
+    width: 282.6px;
+    height: 68.8px;
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 0;
+    bottom: 168px;
+    background: url(thread-hero-white.webp) no-repeat center / 100%;
+    @include MQ(MQ-600) {
+      width: 200px;
+      bottom: 80px;
     }
-    img {
-        @include img-object-cover;
+  }
+  .image-section {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+  img {
+    @include img-object-cover;
+  }
+  .outer-wrapper {
+    width: 100%;
+    position: relative;
+    &:before {
+      width: 82px;
+      height: 81px;
+      content: "";
+      position: absolute;
+      left: 211px;
+      z-index: 0;
+      top: 80px;
+      background: url(ufo.webp) no-repeat center / 100%;
+      @include MQ(MQ-980) {
+        width: 62px;
+        height: 61px;
+        left: 100px;
+      }
+      @include MQ(MQ-768) {
+        left: 50px;
+      }
+      @include MQ(MQ-600) {
+        left: 20px;
+      }
     }
-    .inner {
-        max-width: 611px;
+  }
+  .inner {
+    // max-width: 611px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      left: 190px;
+      bottom: 0px;
+      background: url(star-large-white.webp) no-repeat center / 100%;
+      width: 31.4px;
+      height: 41.6px;
+      z-index: -1;
+      @include MQ(MQ-980) {
+        left: 90px;
+
+        width: 21.4px;
+        height: 31.6px;
+      }
+      @include MQ(MQ-600) {
+        left: 30px;
+      }
     }
-    &::before {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        content: "";
-        left: 0;
-        top: 0;
-        z-index: 2;
-        background-blend-mode: multiply;
-        background-image: linear-gradient(to bottom, rgba(46, 88, 140, 0.5), rgba(46, 88, 140, 0.5));
+    &:before {
+      width: 31px;
+      height: 44px;
+      content: "";
+      position: absolute;
+      right: 0px;
+      z-index: -1;
+      top: -44px;
+      transform: rotate(13deg);
+      background: url(star-large.webp) no-repeat center / 100%;
     }
-    .container-1240 {
-        position: relative;
-        z-index: 3;
+  }
+
+  .container-1240 {
+    position: relative;
+    z-index: 3;
+    &:before {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      top: -110px;
+      background: url(icon-cloud.webp) no-repeat center / 100%;
+      width: 60.4px;
+      height: 46.2px;
+      z-index: -1;
+      @include MQ(MQ-980) {
+        width: 50.4px;
+        height: 36.2px;
+        top: -80px;
+      }
+      @include MQ(MQ-600) {
+        top: -50px;
+      }
     }
-    .pre-title {
-        margin-bottom: 8px;
-        color: $color-white;
+    &:after {
+      position: absolute;
+      content: "";
+      right: 0px;
+      bottom: 36px;
+      background: url(rocket.webp) no-repeat center / 100%;
+      width: 81px;
+      height: 84px;
+      z-index: -1;
+      @include MQ(MQ-980) {
+        width: 60px;
+        height: 64px;
+        right: 50px;
+      }
+      @include MQ(MQ-600) {
+        width: 40px;
+        height: 44px;
+        right: 20px;
+        z-index: -1;
+      }
     }
-    h1 {
-        color: $color-white;
+  }
+  .pre-title {
+    color: $color-white;
+    font-size: 30px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 0.6px;
+    text-align: left;
+    font-family: var(--font-family-secondary);
+    text-transform: uppercase;
+    text-align: center;
+    @include MQ(MQ-768) {
+      font-size: 25px;
     }
-    .btn--primary {
-        margin-top: 30px;
+    @include MQ(MQ-480) {
+      font-size: 23px;
     }
+  }
+  h1 {
+    color: $color-white;
+    font-size: 173px;
+    margin-bottom: 22px;
+    @include MQ(MQ-768) {
+      font-size: 130px;
+    }
+    @include MQ(MQ-480) {
+      font-size: 90px;
+    }
+  }
+  .btn--primary {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

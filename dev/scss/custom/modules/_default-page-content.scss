@@ -1,25 +1,71 @@
 .default-page-content {
-    padding: 55px 0 157px;
-    background: $color-white;
-    @include MQ(MQ-980) {
-        padding: 40px 0 60px;
+  padding: 73px 0 0;
+  position: relative;
+  &:before {
+    background: url(yellow-wave.webp) repeat-x top / 100%;
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -125px;
+    content: "";
+    background-size: contain;
+    z-index: 1;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(56%) saturate(587%)
+      hue-rotate(316deg) brightness(105%) contrast(114%);
+    @include MQ(MQ-1440) {
+      height: 114px;
+      top: -97px;
+      background-size: cover;
     }
-    h1 {
-        margin-bottom: 75px;
-        @include MQ(MQ-768) {
-            margin-bottom: 30px;
-        }
+    @include MQ(MQ-768) {
+      height: 88px;
+      top: -54px;
+      background-size: cover;
     }
+  }
+  &:after {
+    width: 82px;
+    height: 81px;
+    content: "";
+    position: absolute;
+    left: 37%;
+    z-index: 10;
+    top: -127px;
+    background: url(ufo.webp) no-repeat center / 100%;
+    @include MQ(MQ-480) {
+      display: none;
+    }
+  }
+  @include MQ(MQ-980) {
+    padding: 60px 0 0px;
+  }
+  .container-1240 {
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      right: 22%;
+      top: -126px;
+      background: url(icon-cloud.webp) no-repeat center / 100%;
+      width: 65px;
+      height: 52px;
+      z-index: 1;
+      @include MQ(MQ-480) {
+        display: none;
+      }
+    }
+  }
 }
 
 .shopify-policy__container {
-    max-width: 1020px !important;
-    width: 100%;
-    padding: 55px 30px 157px;
-    margin: 0 auto;
-    .shopify-policy__title {
-        h1 {
-            margin-bottom: 75px;
-        }
+  max-width: 1020px !important;
+  width: 100%;
+  padding: 55px 30px 157px;
+  margin: 0 auto;
+  .shopify-policy__title {
+    h1 {
+      margin-bottom: 75px;
     }
+  }
 }
