@@ -116,21 +116,22 @@
     <div class="article-content  full-format article-content-{{ article.id }} js__article-content">
       {% include 'shortcode', load: article.content %}
     </div>
-
-    {% if section.settings.show_share_buttons %}
-      <div class="social-sharing-link flex-wrap">
-        <div class="social-icons">
-          {% if settings.share_facebook or settings.share_pinterest or settings.share_twitter or settings.print %}
-            <p class="share">Share</p>
-          {% endif %}
-          {% include 'social-sharing',
-            share_title: article.title,
-            share_permalink: article.url,
-            share_image: article.image
-          %}
+    <div class="article-social-share-with-date">
+      {% if section.settings.show_share_buttons %}
+        <div class="social-sharing-link flex-wrap">
+          <div class="social-icons">
+            {% if settings.share_facebook or settings.share_pinterest or settings.share_twitter or settings.print %}
+              <p class="share">Share</p>
+            {% endif %}
+            {% include 'social-sharing',
+              share_title: article.title,
+              share_permalink: article.url,
+              share_image: article.image
+            %}
+          </div>
         </div>
-      </div>
-    {% endif %}
+      {% endif %}
+    </div>
     {% comment %}
       <div class="article-pagination flex">
         <div class="prev-article">
