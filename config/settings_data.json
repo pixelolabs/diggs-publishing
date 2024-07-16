@@ -100,8 +100,8 @@
       "404": {
         "type": "404",
         "settings": {
-          "pretitle": "404 Pre Title",
-          "title": "404 Title",
+          "title": "404",
+          "subtitle": "Page not found",
           "buttonText": "Button Text",
           "buttonUrl": "\/"
         }
