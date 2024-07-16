@@ -35,21 +35,62 @@
     });
 </script>
 
-<div class="article-hero-banner-section">
-  <div class="container-993">
-    <h1>{{ article.title }}</h1>
-    <div class="image-section">
-      {%- assign img_url = article.image | img_url: 'master' -%}
-      <img
-        id="{{ img_id }}"
-        src="{{ img_url }}"
-        class="lazyload"
-        data-src="{{ img_url }}"
-        data-widths="[180, 360, 540, 720, 905, 1090, 1296, 1512, 1728, 2048]"
-        data-aspectratio="{{ article.image.aspect_ratio }}"
-        data-sizes="auto"
-        alt="{{ article.title }}"
+<div class="article-hero-banner-section inner-hero-section">
+  <div class="image-section {% if section.settings.gradient == true %} gradient{%endif%}">
+    <picture>
+      <source
+        media="(max-width: 480px)"
+        srcset="{% if section.settings.mobileImage != blank %}{{ section.settings.mobileImage | img_url: '750x1400' }}   {% endif %}"
       >
+      {{ section.settings.image | image_url: width: 2880 | image_tag: loading: 'lazy', widths: '2880x1620' }}
+    </picture>
+  </div>
+
+  <div
+    class="
+      container-1240 {% if section.settings.content_alignment == "center" %} center--align {% endif %} {% if section.settings.content_alignment == "right" %} right--align {% endif %}{% if
+      section.settings.content_alignment == "left" %} left--align {% endif %}
+    "
+  >
+    <div class="content">
+      {% if section.settings.pageBanner == true %}
+        <h1>
+          {{ section.settings.title }}
+        </h1>
+      {% else %}
+        <h2 class="h1">
+          {{ section.settings.title }}
+        </h2>
+      {% endif %}
+
+      {% if section.settings.description != blank %}
+        {{ section.settings.description }}
+      {% endif %}
+
+      <div class="buttons">
+        {% if section.settings.buttonText1 != blank %}
+          <a
+            href="{{ section.settings.buttonLink1 }}"
+            title="Read More About {{ section.settings.buttonText1 }}"
+            aria-label="Read More About {{ section.settings.buttonText}}"
+            class="btn--secondary"
+            title="{{ section.settings.buttonText1 }}"
+          >
+            {{- section.settings.buttonText1 -}}
+          </a>
+        {% endif %}
+        {% if section.settings.buttonText2 != blank %}
+          <a
+            href="{{ section.settings.buttonLink2 }}"
+            title="Read More About {{ section.settings.buttonText2 }}"
+            aria-label="Read More About {{ section.settings.buttonText2 }}"
+            class="btn--secondary"
+            title="{{ section.settings.buttonText2 }}"
+          >
+            {{- section.settings.buttonText2 -}}
+          </a>
+        {% endif %}
+      </div>
     </div>
   </div>
 </div>
