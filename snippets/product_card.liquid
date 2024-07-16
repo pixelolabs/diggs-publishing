@@ -91,6 +91,7 @@
       </span>
     {% endif %}
     {% if show_secondary_button %}
+      <div class="btn--wrapper flex">
       <a
         class="btn--atc js__quick-view-click"
         title="{{ productRelated.title }}"
@@ -109,7 +110,7 @@
       data-slider_thumb="{%- for img in productRelated.images -%}{{- img | img_url: '150x150' -}}|{%- endfor -%}"
       data-var_images="{%- for var in productRelated.variants -%}{{- var.image | img_url: '150x150' -}}|{%- endfor -%}"
       ></a
-    >
+    ></div>
     {% endif %}
   </div>
 </div>
