@@ -78,23 +78,21 @@
     </div>
 
     <div class="article-social-share-with-date">
-      <div class="container-1240">
-        <div class="inner-wrapper">
-          {% if section.settings.show_share_buttons %}
-            <div class="social-sharing-link flex-wrap">
-              <div class="social-icons flex">
-                {% if settings.share_facebook or settings.share_pinterest or settings.share_twitter or settings.print %}
-                  <p class="share">Share</p>
-                {% endif %}
-                {% include 'social-sharing',
-                  share_title: article.title,
-                  share_permalink: article.url,
-                  share_image: article.image
-                %}
-              </div>
+      <div class="inner-wrapper">
+        {% if section.settings.show_share_buttons %}
+          <div class="social-sharing-link flex-wrap">
+            <div class="social-icons flex">
+              {% if settings.share_facebook or settings.share_pinterest or settings.share_twitter or settings.print %}
+                <p class="share">Share</p>
+              {% endif %}
+              {% include 'social-sharing',
+                share_title: article.title,
+                share_permalink: article.url,
+                share_image: article.image
+              %}
             </div>
-          {% endif %}
-        </div>
+          </div>
+        {% endif %}
       </div>
     </div>
     {% comment %}
