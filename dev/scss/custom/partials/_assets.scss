@@ -281,16 +281,16 @@ textarea.input--error {
   -webkit-appearance: none;
   width: 100%;
   height: 40px;
-  border: 1px solid $color-border;
+  border: 1px solid $color-black;
   font-family: var(--font-family-primary);
   font-size: 14px;
-  font-weight: 500;
+  font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.71;
+  line-height: normal;
   color: $color-black;
   letter-spacing: 0.01px;
-  border-radius: 50px;
+  border-radius: 30px;
   background: transparent;
   opacity: 1;
   text-transform: uppercase;
@@ -374,14 +374,20 @@ textarea.input--error {
     line-height: 1.44;
     letter-spacing: normal;
     font-weight: 600;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+  }
+  .btn--wrapper{
+    margin-top: 22px;
+    .btn--quick-view{
+      margin-left: 21px;
+    }
   }
   padding-right: 12px;
   padding-top: 12px;
   position: relative;
   &::before {
-    width: calc(100% - 12px);
-    height: calc(100% - 12px);
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
     content: "";
     position: absolute;
     right: 0;
@@ -399,7 +405,9 @@ textarea.input--error {
   .product-wrapper {
     display: block;
     height: 100%;
-    background-image: linear-gradient(178deg, #d51f91 2%, #ee35a9 98%);
+    border: solid 1px rgba(255, 200, 43, 0.36);
+    background-image: linear-gradient(to bottom, #fff8e3, #fff8e1);
+  padding: 18px 18px 35px;
     &::before,
     &::after {
       display: none;
@@ -428,23 +436,22 @@ textarea.input--error {
     &::before {
       border: 2px solid $color-orange;
     }
-    .product-wrapper {
-      background-image: linear-gradient(178deg, #ff6520 2%, #ff6520 98%);
-    }
+    
   }
   &:nth-child(3n){
     &::before {
       border: 2px solid $color-green;
     }
-    .product-wrapper {
-      background-image: linear-gradient(178deg, #5fbf50 2%, #5fbf50 98%);
-    }
   }
   .image-section {
     overflow: hidden !important;
     position: relative !important;
-    height: 304px;
+    height: 277px;
     width: 100%;
+    a{
+      width: 100%;
+      height: 100%;
+    }
     @include MQ(MQ-480) {
       height: 266px;
     }
@@ -475,11 +482,11 @@ textarea.input--error {
   .content {
     
     * {
-      color: $color-white;
+      color: $color-black;
     }
-    padding: 35px 24px 50px;
+    padding: 30px 13px 0px;
   }
-  text-align: center;
+  text-align: left;
   &__collection-title {
     a {
       font-weight: 600;
@@ -517,12 +524,7 @@ textarea.input--error {
     color: $color-black;
     display: flex !important;
     align-items: center;
-    justify-content: center;
-    .starting,
-    .price-from {
-      font-weight: normal !important;
-      margin-right: 4px;
-    }
+    
     span,
     s {
       font-weight: 700;
