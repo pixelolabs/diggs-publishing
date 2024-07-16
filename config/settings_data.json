@@ -270,6 +270,31 @@
           "footerMenu": "footer-2-0",
           "legalMenu": "footer-legal-menu-2-0"
         }
+      },
+      "inner-hero-section": {
+        "type": "inner-hero-section",
+        "settings": {
+          "color_scheme": "scheme-4",
+          "image": "shopify:\/\/shop_images\/Rectangle_2871_2x_eacc4feb-c9e9-4a3f-8407-2438914e3621.webp",
+          "mobileImage": "shopify:\/\/shop_images\/Rectangle_2871_2x_eacc4feb-c9e9-4a3f-8407-2438914e3621.webp",
+          "video": "",
+          "videoMobile": "",
+          "videobanner": false,
+          "title": "",
+          "description": "<p>This Privacy Policy describes how ksdiggs.myshopify.com (the “Site” or “we”) collects, uses, and discloses your Personal Information when you visit or make a purchase from the Site.<\/p>",
+          "buttonText1": "",
+          "buttonLink1": "",
+          "buttonText2": "",
+          "buttonLink2": "",
+          "content_alignment": "left",
+          "smallHeight": false,
+          "paddingtop": 0,
+          "paddingtopmobile": 0,
+          "paddingbottom": 0,
+          "paddingbottomMobile": 0,
+          "pageBanner": true,
+          "gradient": false
+        }
       }
     },
     "content_for_index": [
