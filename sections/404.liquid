@@ -1,23 +1,25 @@
 {% if section.settings.title != blank %}
   <div class="error-page">
-    <div class="container-1240">
-      <div class="inner">
-        {% if section.settings.title != blank %}
-          <h1 class="normal">{{ section.settings.title }}</h1>
-        {% endif %}
-        {% if section.settings.subtitle != blank %}
-          <p class="pre-title">{{ section.settings.subtitle }}</p>
-        {% endif %}
-        {% if section.settings.buttonText != blank %}
-          <a
-            class="btn--primary"
-            href="{{ section.settings.buttonUrl }}"
-            title="{{ section.settings.title }}"
-            aria-label="Read More About {{ section.settings.title }}"
-          >
-            {{ section.settings.buttonText }}
-          </a>
-        {% endif %}
+    <div class="outer-wrapper">
+      <div class="container-1240">
+        <div class="inner">
+          {% if section.settings.title != blank %}
+            <h1 class="normal">{{ section.settings.title }}</h1>
+          {% endif %}
+          {% if section.settings.subtitle != blank %}
+            <p class="pre-title">{{ section.settings.subtitle }}</p>
+          {% endif %}
+          {% if section.settings.buttonText != blank %}
+            <a
+              class="btn--primary"
+              href="{{ section.settings.buttonUrl }}"
+              title="{{ section.settings.title }}"
+              aria-label="Read More About {{ section.settings.title }}"
+            >
+              {{ section.settings.buttonText }}
+            </a>
+          {% endif %}
+        </div>
       </div>
     </div>
   </div>
