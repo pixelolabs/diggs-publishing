@@ -92,6 +92,14 @@
 
 <div class="article-template">
   <div class="container-1240 content">
+    <div class="date-category-section">
+      <time>{{- article.published_at | time_tag: format: 'date' -}}</time>
+      <span>-</span>
+      {% for tag in article.tags %}
+        <a href="{{blog.url}}/tagged/{{ tag | handleize }}" class="tag">{{ tag }}</a>
+        <span class="spacer">,</span>
+      {% endfor %}
+    </div>
     <div class="article-content  full-format article-content-{{ article.id }} js__article-content">
       {% include 'shortcode', load: article.content %}
     </div>
