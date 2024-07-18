@@ -57,11 +57,26 @@
             "title": "what is this?",
             "faqAnswer": ""
           }
+        },
+        "list_zRnAaE": {
+          "type": "list",
+          "settings": {
+            "heading": "Category 2"
+          }
+        },
+        "question_7YmQJU": {
+          "type": "question",
+          "settings": {
+            "title": "How is this possible?",
+            "faqAnswer": ""
+          }
         }
       },
       "block_order": [
         "list_anUH39",
-        "question_te3VP6"
+        "question_te3VP6",
+        "list_zRnAaE",
+        "question_7YmQJU"
       ],
       "settings": {
         "title": "",
