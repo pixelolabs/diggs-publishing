@@ -3,67 +3,69 @@
     <div class="container-1280 flex">
       {% render 'left-sidebar' %}
       <div class="container-880">
-        <div class="top-section">
-          <div class="search-section">
-            {% if section.settings.searchTitle != blank %}
-              <h2 class="h3">{{ section.settings.searchTitle }}</h2>
-            {% endif %}
-            <div class="full-format small">
-              {{ section.settings.searchDescription }}
-            </div>
+        {% comment %}
+          <div class="top-section">
+            <div class="search-section">
+              {% if section.settings.searchTitle != blank %}
+                <h2 class="h3">{{ section.settings.searchTitle }}</h2>
+              {% endif %}
+              <div class="full-format small">
+                {{ section.settings.searchDescription }}
+              </div>
 
-            <form
-              class="search-bar flex"
+              <form
+                class="search-bar flex"
 
-              data-np-autofill-form-type="other"
-              data-np-checked="1"
-              data-np-watching="1"
-            >
-              {% include 'icon-search' %}
-              <input
-                type="text"
-                placeholder="I need help with"
-                onkeydown="return (event.keyCode!=13);"
-                id="txt-faq-search"
+                data-np-autofill-form-type="other"
+                data-np-checked="1"
+                data-np-watching="1"
               >
-              <a class="btn--primary js__btn-faq-search">Search</a>
-            </form>
-          </div>
-          <div class="filter-section category-section">
-            <h2 class="h3 ipad-none">Or select from the following FAQ topics:</h2>
-            <ul class="flex-wrap ipad-none">
-              {% for block in section.blocks %}
-                {%- case block.type -%}
-                  {%- when 'category' -%}
-                    {% if block.settings.title != blank %}
-                      <li>
-                        <a
-                          class="tab-link btn--tertiary"
-                          title="{{block.settings.title}}"
-                          data-attr="tab-{{block.settings.title | downcase | remove: ' ' }}"
-                        >
+                {% include 'icon-search' %}
+                <input
+                  type="text"
+                  placeholder="I need help with"
+                  onkeydown="return (event.keyCode!=13);"
+                  id="txt-faq-search"
+                >
+                <a class="btn--primary js__btn-faq-search">Search</a>
+              </form>
+            </div>
+            <div class="filter-section category-section">
+              <h2 class="h3 ipad-none">Or select from the following FAQ topics:</h2>
+              <ul class="flex-wrap ipad-none">
+                {% for block in section.blocks %}
+                  {%- case block.type -%}
+                    {%- when 'category' -%}
+                      {% if block.settings.title != blank %}
+                        <li>
+                          <a
+                            class="tab-link btn--tertiary"
+                            title="{{block.settings.title}}"
+                            data-attr="tab-{{block.settings.title | downcase | remove: ' ' }}"
+                          >
+                            {{ block.settings.title }}
+                          </a>
+                        </li>
+                      {% endif %}
+                  {% endcase %}
+                {% endfor %}
+              </ul>
+              <select class="custom-dropdown-select dropdown-select ipad-block">
+                <option value="all">All FAQS</option>
+                {% for block in section.blocks %}
+                  {%- case block.type -%}
+                    {%- when 'category' -%}
+                      {% if block.settings.title != blank %}
+                        <option value="{{block.settings.title | downcase | remove: ' ' }}">
                           {{ block.settings.title }}
-                        </a>
-                      </li>
-                    {% endif %}
-                {% endcase %}
-              {% endfor %}
-            </ul>
-            <select class="custom-dropdown-select dropdown-select ipad-block">
-              <option value="all">All FAQS</option>
-              {% for block in section.blocks %}
-                {%- case block.type -%}
-                  {%- when 'category' -%}
-                    {% if block.settings.title != blank %}
-                      <option value="{{block.settings.title | downcase | remove: ' ' }}">
-                        {{ block.settings.title }}
-                      </option>
-                    {% endif %}
-                {% endcase %}
-              {% endfor %}
-            </select>
+                        </option>
+                      {% endif %}
+                  {% endcase %}
+                {% endfor %}
+              </select>
+            </div>
           </div>
-        </div>
+        {% endcomment %}
 
         <div class="result-section js__faq-tab">
           {%- for block in section.blocks -%}
