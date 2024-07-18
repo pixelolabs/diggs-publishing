@@ -52,7 +52,14 @@
                 {% assign category = category | replace: '--', '-' %}
                 {% assign category = category | replace: '---', '-' %}
                 {% assign category = category | downcase %}
-                <option value="#{{category}}">{{ block.settings.title }}</option>
+                <option
+                  value="
+                    #{{block.settings.heading | remove: ',' | remove: '-' | remove: ' ' | remove: '&' | remove: "'" | remove: '
+                    (' | remove: ')' }}
+                  "
+                >
+                  {{ block.settings.title }}
+                </option>
             {%- endcase -%}
           {%- endfor -%}
         </select>
