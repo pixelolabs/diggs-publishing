@@ -196,12 +196,12 @@
           <div class="swiper-wrapper">
             {% for tag in article.tags %}
               {% assign counter = 0 %}
-              {% assign skip_articles = article.handle | split: '.....' %}
+              {% assign skip_articles = article.handle %}
               {% for related_article in blog.articles %}
                 {% if related_article.tags contains tag and counter < 1 %}
                   {% unless skip_articles contains related_article.handle %}
                     {% assign counter = counter | plus: 1 %}
-                    {% assign temp = related_article.handle | split: '.....' %}
+                    {% assign temp = related_article.handle %}
                     {% assign skip_articles = skip_articles | concat: temp %}
                     <div class="articlecard--outer swiper-slide slide" data-article-id="{{related_article.id}}">
                       {%
