@@ -87,34 +87,6 @@
           <span>{{ article.author }}</span>
         </div>
       </div>
-      {%- if show_tags -%}
-        <ul class="tags-wrapper">
-          {% assign split_1 = articleRelated.url | split: '/blogs/' %}
-          {% assign split_2 = split_1[1] | split: '/' %}
-          {% assign blog_handle = split_2[0] | strip %}
-          {% assign article_blog = blogs[blog_handle] %}
-
-          {% for tag in articleRelated.tags %}
-            <li class="tags">
-              <a href="{{article_blog.url}}/tagged/{{ tag | handleize }}" title="{{tag}}" class="tag">{{ tag }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      {% endif %}
-      {%- if show_tags_with_limits -%}
-        <ul class="tags-wrapper">
-          {% assign split_1 = articleRelated.url | split: '/blogs/' %}
-          {% assign split_2 = split_1[1] | split: '/' %}
-          {% assign blog_handle = split_2[0] | strip %}
-          {% assign article_blog = blogs[blog_handle] %}
-
-          {% for tag in articleRelated.tags limit: 2 %}
-            <li class="tags">
-              <a href="{{article_blog.url}}/tagged/{{ tag | handleize }}" title="{{tag}}" class="tag">{{ tag }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      {% endif %}
 
       {% comment %}
         {%- if show_time -%}
