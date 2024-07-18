@@ -1262,6 +1262,15 @@ jQuery(function () {
     }
   });
 });
+/*FAQ Drop down*/
+
+$(".js__faq-dropdown").change(function () {
+  var sectionID = this.value;
+  var target = $(sectionID);
+  $("html, body").animate({
+    scrollTop: target.offset().top - 200
+  }, 500);
+});
 /** Dropdown **/
 
 jQuery(function ($) {

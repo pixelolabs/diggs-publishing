@@ -47,11 +47,6 @@
           {%- for block in section.blocks -%}
             {%- case block.type -%}
               {%- when 'list' -%}
-                {% assign category = block.settings.title | replace: ' ', '-' %}
-                {% assign category = category | replace: "'", '-' %}
-                {% assign category = category | replace: '--', '-' %}
-                {% assign category = category | replace: '---', '-' %}
-                {% assign category = category | downcase %}
                 <option
                   value="
                     #{{block.settings.heading | remove: ',' | remove: '-' | remove: ' ' | remove: '&' | remove: "'" | remove: '
