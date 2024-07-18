@@ -21,28 +21,7 @@
           {%- endcase -%}
         {%- endfor -%}
       </ul>
-      <div class="dropdown ipad-block">
-        {% comment %} <p class="js__dropdown_result selected capitalize">Select Category</p> {% endcomment %}
-        {% comment %}
-          <ul class="js__dropdown">
-            {%- for block in section.blocks -%}
-              {%- case block.type -%}
-                {%- when 'list' -%}
-                  <li>
-                    <a
-                      title="{{block.settings.heading}}"
-                      href="
-                        #{{block.settings.heading | remove: ',' | remove: '-' | remove: ' ' | remove: '&' | remove: "'" | remove: '
-                        (' | remove: ')' }}
-                      "
-                    >
-                      {{- block.settings.heading -}}
-                    </a>
-                  </li>
-              {%- endcase -%}
-            {%- endfor -%}
-          </ul>
-        {% endcomment %}
+      <div class="select-faq-category ipad-block">
         <div class="drop-down-outer">
           <h5 class="text-center">Select FAQ Category</h5>
           <select class="js__faq-dropdown">
