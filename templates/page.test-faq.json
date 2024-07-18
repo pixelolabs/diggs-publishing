@@ -1,0 +1,161 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "faq_accordion_simple_zkHQEp": {
+      "type": "faq-accordion-simple",
+      "blocks": {
+        "question_hrnFqx": {
+          "type": "question",
+          "settings": {
+            "title": "Question",
+            "faqAnswer": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <\/p>"
+          }
+        },
+        "question_Mi34Bi": {
+          "type": "question",
+          "settings": {
+            "title": "Question",
+            "faqAnswer": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_hrnFqx",
+        "question_Mi34Bi"
+      ],
+      "settings": {
+        "title": "FAQ",
+        "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>",
+        "linkText": "Link Text",
+        "textLink": "shopify:\/\/pages\/contact"
+      }
+    },
+    "faq_accordion_with_category_WVAQbz": {
+      "type": "faq-accordion-with-category",
+      "blocks": {
+        "list_3hYAGg": {
+          "type": "list",
+          "settings": {
+            "heading": "Product Care & General Information"
+          }
+        },
+        "question_AMJJmg": {
+          "type": "question",
+          "settings": {
+            "title": "What is terra cotta and does it break?",
+            "faqAnswer": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+          }
+        },
+        "question_j7GLwe": {
+          "type": "question",
+          "settings": {
+            "title": "What is thermal shock?",
+            "faqAnswer": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+          }
+        },
+        "list_gV3Ugm": {
+          "type": "list",
+          "settings": {
+            "heading": "Shipping & Exchanges"
+          }
+        },
+        "question_9TQL4d": {
+          "type": "question",
+          "settings": {
+            "title": "How long does shipping take?",
+            "faqAnswer": "<p>Online orders are processed and dispatched within two-three business days. We are currently unable to send packages to P.O. Boxes.<\/p>"
+          }
+        },
+        "question_zdaU6U": {
+          "type": "question",
+          "settings": {
+            "title": "How can I track my order?",
+            "faqAnswer": "<p>We’ll email the tracking number to the email address on file once a shipping label is generated.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "list_3hYAGg",
+        "question_AMJJmg",
+        "question_j7GLwe",
+        "list_gV3Ugm",
+        "question_9TQL4d",
+        "question_zdaU6U"
+      ],
+      "settings": {
+        "title": "Left Half Content Heading",
+        "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>",
+        "linkText": "Link Text",
+        "textLink": "shopify:\/\/pages\/contact"
+      }
+    },
+    "faq_accordian_section_mLBbic": {
+      "type": "faq-accordian-section",
+      "blocks": {
+        "category_QaV3w9": {
+          "type": "category",
+          "settings": {
+            "title": "Category 1"
+          }
+        },
+        "list_yTDmyq": {
+          "type": "list",
+          "settings": {
+            "categoryFAQ": "Category 1",
+            "title": "Title\/Question",
+            "faqAnswer": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+          }
+        },
+        "list_aLyjrg": {
+          "type": "list",
+          "settings": {
+            "categoryFAQ": "Category 1",
+            "title": "Title\/Question",
+            "faqAnswer": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+          }
+        },
+        "category_HrRbCq": {
+          "type": "category",
+          "settings": {
+            "title": "Category 2"
+          }
+        },
+        "list_aXPW9g": {
+          "type": "list",
+          "settings": {
+            "categoryFAQ": "Category 2",
+            "title": "Title\/Question",
+            "faqAnswer": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "category_QaV3w9",
+        "list_yTDmyq",
+        "list_aLyjrg",
+        "category_HrRbCq",
+        "list_aXPW9g"
+      ],
+      "settings": {
+        "title": "Title",
+        "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>",
+        "page_Menu": "login-menu",
+        "searchTitle": "Search Box Title",
+        "searchDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>"
+      }
+    }
+  },
+  "order": [
+    "faq_accordion_simple_zkHQEp",
+    "faq_accordion_with_category_WVAQbz",
+    "faq_accordian_section_mLBbic"
+  ]
+}
