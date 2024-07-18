@@ -108,7 +108,7 @@
             {%- if articleRelated.excerpt.size > 0 -%}
               {{ articleRelated.excerpt }}
             {%- else -%}
-              {{ articleRelated.content | strip_html | truncate: 200 }}
+              {{ articleRelated.content | strip_html | truncate: 20 }}
             {%- endif -%}
           </p>
         </div>
