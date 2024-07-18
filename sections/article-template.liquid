@@ -227,31 +227,33 @@
   </div>
 </div>
 
-<script>
-  /** Hide blogs if they are gettings repeated **/
-  var relatedList = $('.js__realated-articles').children('.slide'),
-    relatedListArray = [];
-  /* If no posts - then hide the section */
-  if (relatedList.length === 0) {
-    $('.related-posts').hide();
-  }
-  /* get the current postID */
-  var currentArticleID = $('article').attr('data-article-id');
-  /* go through the loop of the postArray List */
-  $(relatedList).each(function () {
-    var articleID = $(this).attr('data-article-id');
-    /* if the current article ID matches anyone in the loop - then remove it */
-    if (currentArticleID == articleID) {
-      $(this).remove();
-    } else {
-      relatedListArray.indexOf(articleID) == -1 ? relatedListArray.push(articleID) : $(this).remove();
+{% comment %}
+  <script>
+    /** Hide blogs if they are gettings repeated **/
+    var relatedList = $('.js__realated-articles').children('.slide'),
+      relatedListArray = [];
+    /* If no posts - then hide the section */
+    if (relatedList.length === 0) {
+      $('.related-posts').hide();
     }
-  });
-  /* if you had just one in array and too matched - then hide the section */
-  if (relatedListArray.length === 0) {
-    $('.related-posts').hide();
-  }
-</script>
+    /* get the current postID */
+    var currentArticleID = $('article').attr('data-article-id');
+    /* go through the loop of the postArray List */
+    $(relatedList).each(function () {
+      var articleID = $(this).attr('data-article-id');
+      /* if the current article ID matches anyone in the loop - then remove it */
+      if (currentArticleID == articleID) {
+        $(this).remove();
+      } else {
+        relatedListArray.indexOf(articleID) == -1 ? relatedListArray.push(articleID) : $(this).remove();
+      }
+    });
+    /* if you had just one in array and too matched - then hide the section */
+    if (relatedListArray.length === 0) {
+      $('.related-posts').hide();
+    }
+  </script>
+{% endcomment %}
 {% schema %}
 {
   "name": "Posts",
