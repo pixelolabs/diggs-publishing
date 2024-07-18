@@ -12,6 +12,14 @@
     "innerBanner": {
       "type": "inner-hero-section",
       "settings": {
+        "color_scheme": "",
+        "image": "shopify:\/\/shop_images\/Rectangle_2871_2x_eacc4feb-c9e9-4a3f-8407-2438914e3621.webp",
+        "video": "",
+        "videoMobile": "",
+        "videobanner": false,
+        "title": "",
+        "description": "",
+        "content_alignment": "center"
       }
     }
   },

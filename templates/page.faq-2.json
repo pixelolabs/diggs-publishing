@@ -13,21 +13,14 @@
       "type": "inner-hero-section",
       "settings": {
         "color_scheme": "",
-        "image": "shopify:\/\/shop_images\/10821160_2x_3ba3213c-239b-46e9-b44a-a8dfcccdc7fd.webp",
+        "image": "shopify:\/\/shop_images\/faq-banner-image.png",
+        "mobileImage": "shopify:\/\/shop_images\/Group_482562.png",
         "video": "",
         "videoMobile": "",
         "videobanner": false,
         "title": "FAQ",
         "description": "",
-        "buttonText1": "",
-        "buttonLink1": "",
-        "buttonText2": "",
-        "buttonLink2": "",
-        "content_alignment": "center",
-        "paddingtop": 0,
-        "paddingtopmobile": 0,
-        "paddingbottom": 0,
-        "paddingbottomMobile": 0
+        "content_alignment": "left"
       }
     },
     "faq_accordion_simple_zkHQEp": {

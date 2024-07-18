@@ -282,15 +282,7 @@
           "videobanner": false,
           "title": "Privacy Policy",
           "description": "<p>This Privacy Policy describes how ksdiggs.myshopify.com (the “Site” or “we”) collects, uses, and discloses your Personal Information when you visit or make a purchase from the Site.<\/p>",
-          "buttonText1": "",
-          "buttonLink1": "",
-          "buttonText2": "",
-          "buttonLink2": "",
-          "content_alignment": "left",
-          "paddingtop": 0,
-          "paddingtopmobile": 0,
-          "paddingbottom": 0,
-          "paddingbottomMobile": 0
+          "content_alignment": "left"
         }
       }
     },
