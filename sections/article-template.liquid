@@ -200,11 +200,17 @@
               {% assign counter = counter | plus: 1 %}
               {% assign temp = related_article.handle | split: '.....' %}
               {% assign skip_articles = skip_articles | concat: temp %}
-              <div class="articlecard--outer slide" data-article-id="{{related_article.id}}">
-                {%
-                  include 'article_Card' with articleRelated: related_article, show_tags: true, show_shortdescription: true, show_readMore:
-                  true
-                %}
+              <div class="slider-outer">
+                <div class="slider js__product-slider">
+                  <div class="swiper-wrapper">
+                    <div class="articlecard--outer slide" data-article-id="{{related_article.id}}">
+                      {%
+                        include 'article_Card' with articleRelated: related_article, show_tags: true, show_shortdescription: true, show_readMore:
+                        true
+                      %}
+                    </div>
+                  </div>
+                </div>
               </div>
             {% endunless %}
           {% endif %}
