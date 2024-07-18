@@ -7,7 +7,7 @@
   Usage:
   {% include 'pagination', paginate: paginate %}
 {% endcomment %}
-
+<div class="pagination-outer">
 <ul class="pagination flex-align-center">
   {% unless paginate.previous.is_link %}
     <li aria-hidden="true" class="prev">
@@ -64,3 +64,4 @@
     </li>
   {% endunless %}
 </ul>
+</div>
