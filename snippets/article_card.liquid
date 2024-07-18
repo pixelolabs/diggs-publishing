@@ -109,7 +109,7 @@
               {{ articleRelated.excerpt }}
             {%- else -%}
           {% endcomment %}
-          {{ articleRelated.content | strip_html | truncate: 20 }}
+          {{ articleRelated.content | strip_html | truncate: 100 }}
           {% comment %} {%- endif -%} {% endcomment %}
         </div>
       {%- endif -%}
