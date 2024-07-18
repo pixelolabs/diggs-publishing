@@ -23,24 +23,39 @@
       </ul>
       <div class="dropdown ipad-block">
         <p class="js__dropdown_result selected capitalize">Select Category</p>
-        <ul class="js__dropdown">
+        {% comment %}
+          <ul class="js__dropdown">
+            {%- for block in section.blocks -%}
+              {%- case block.type -%}
+                {%- when 'list' -%}
+                  <li>
+                    <a
+                      title="{{block.settings.heading}}"
+                      href="
+                        #{{block.settings.heading | remove: ',' | remove: '-' | remove: ' ' | remove: '&' | remove: "'" | remove: '
+                        (' | remove: ')' }}
+                      "
+                    >
+                      {{- block.settings.heading -}}
+                    </a>
+                  </li>
+              {%- endcase -%}
+            {%- endfor -%}
+          </ul>
+        {% endcomment %}
+        <select class="js__faq-dropdown">
           {%- for block in section.blocks -%}
             {%- case block.type -%}
               {%- when 'list' -%}
-                <li>
-                  <a
-                    title="{{block.settings.heading}}"
-                    href="
-                      #{{block.settings.heading | remove: ',' | remove: '-' | remove: ' ' | remove: '&' | remove: "'" | remove: '
-                      (' | remove: ')' }}
-                    "
-                  >
-                    {{- block.settings.heading -}}
-                  </a>
-                </li>
+                {% assign category = block.settings.title | replace: ' ', '-' %}
+                {% assign category = category | replace: "'", '-' %}
+                {% assign category = category | replace: '--', '-' %}
+                {% assign category = category | replace: '---', '-' %}
+                {% assign category = category | downcase %}
+                <option value="#{{category}}">{{ block.settings.title }}</option>
             {%- endcase -%}
           {%- endfor -%}
-        </ul>
+        </select>
       </div>
     </div>
     <ul class="accordian js__accordian">
