@@ -12,6 +12,25 @@
     "innerBanner": {
       "type": "inner-hero-section",
       "settings": {
+        "color_scheme": "",
+        "image": "shopify:\/\/shop_images\/10821160_2x_3ba3213c-239b-46e9-b44a-a8dfcccdc7fd.webp",
+        "video": "",
+        "videoMobile": "",
+        "videobanner": false,
+        "title": "FAQ",
+        "description": "",
+        "buttonText1": "",
+        "buttonLink1": "",
+        "buttonText2": "",
+        "buttonLink2": "",
+        "content_alignment": "center",
+        "smallHeight": false,
+        "paddingtop": 0,
+        "paddingtopmobile": 0,
+        "paddingbottom": 0,
+        "paddingbottomMobile": 0,
+        "pageBanner": true,
+        "gradient": false
       }
     },
     "faq_accordion_simple_zkHQEp": {
@@ -152,7 +171,7 @@
       "settings": {
         "title": "Title",
         "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>",
-        "page_Menu": "login-menu",
+        "page_Menu": "",
         "searchTitle": "Search Box Title",
         "searchDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>"
       }
