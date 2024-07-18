@@ -199,7 +199,7 @@
               {% assign counter = 0 %}
               {% assign skip_articles = article.handle | split: '.....' %}
               {% for related_article in blog.articles %}
-                {% if related_article.tags contains tag and counter < 3 %}
+                {% if related_article.tags contains tag and counter < 5 %}
                   {% unless skip_articles contains related_article.handle %}
                     {% assign counter = counter | plus: 1 %}
                     {% assign temp = related_article.handle | split: '.....' %}
