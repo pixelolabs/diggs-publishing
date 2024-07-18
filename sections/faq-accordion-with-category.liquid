@@ -11,11 +11,7 @@
               {% assign category = category | replace: '--', '-' %}
               {% assign category = category | replace: '---', '-' %}
               <li>
-                <a
-                  class="faq-btn"
-                  title="{{block.settings.heading}}"
-                  href="#{{ category }}"
-                >
+                <a class="faq-btn" title="{{block.settings.heading}}" href="#{{ category }}">
                   {{- block.settings.heading -}}
                 </a>
               </li>
