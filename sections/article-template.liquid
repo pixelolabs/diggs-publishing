@@ -195,7 +195,7 @@
         <div class="slider js__article-slider">
           <div class="swiper-wrapper">
             {% assign skip_articles = article.handle | split: '.....' %}
-            {% for tag in article.tags limit: 5 %}
+            {% for tag in article.tags %}
               {% assign counter = 0 %}
               {% assign skip_articles = article.handle | split: '.....' %}
               {% for related_article in blog.articles %}
