@@ -184,7 +184,7 @@
 {% comment %} Related Posts {% endcomment %}
 
 <div class="related-posts">
-  <div class="container-1243">
+  <div class="container-1260">
     <div class="heading flex">
       <div class="left-side">
         <span class="pre-title">Recent Blogs</span>
@@ -209,7 +209,7 @@
                     {% assign skip_articles = skip_articles | concat: temp %}
                     <div class="articlecard--outer swiper-slide slide" data-article-id="{{related_article.id}}">
                       {%
-                        include 'article_Card' with articleRelated: related_article, show_tags: true, show_shortdescription: true, show_readMore:
+                        include 'article_Card' with articleRelated: related_article, show_tags: true, show_description: true, show_readMore:
                         true
                       %}
                     </div>
@@ -219,10 +219,10 @@
             {% endfor %}
           </div>
         </div>
-        <div class="swiper-button-prev-article-slider">
+        <div class="swiper-button-prev-article-section">
           {% include 'icon-arrow-slide-black' %}
         </div>
-        <div class="swiper-button-next--slider">
+        <div class="swiper-button-next-article-section">
           {% include 'icon-arrow-slide-black' %}
         </div>
       </div>
