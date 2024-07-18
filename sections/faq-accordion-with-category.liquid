@@ -45,9 +45,7 @@
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'list' -%}
-            <li
-              class="heading"
-            >
+            <li class="heading">
               <h3
                 class="h4"
                 id="{{ block.settings.heading }}"
@@ -68,9 +66,7 @@
                 </h4>
               {%- endif -%}
 
-              <div
-                class="content full-format"
-              >
+              <div class="content full-format">
                 <p>{{ block.settings.faqAnswer }}</p>
               </div>
             </li>
