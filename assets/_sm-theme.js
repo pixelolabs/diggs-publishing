@@ -937,6 +937,34 @@ jQuery(function () {
       nextEl: ".swiper-button-next-product-section",
       prevEl: ".swiper-button-prev-product-section"
     }
+  }); //RElated Article slider
+
+  var productSectionSlider = new Swiper(".js__article-slider", {
+    slidesPerView: 3,
+    spaceBetween: 32,
+    // centeredSlides: true,
+    // resistance: false,
+    loop: true,
+    resistance: false,
+    shortSwipes: true,
+    longSwipes: false,
+    // scrollOverflowOptions: null,
+    // loopedSlidesLimit: false,
+    breakpoints: {
+      0: {
+        slidesPerView: 1
+      },
+      769: {
+        slidesPerView: 2
+      },
+      1025: {
+        slidesPerView: 3
+      }
+    },
+    navigation: {
+      nextEl: ".swiper-button-next-article-section",
+      prevEl: ".swiper-button-prev-article-section"
+    }
   });
   var reviewSectionSlider = new Swiper(".js__review-slider", {
     slidesPerView: 2,

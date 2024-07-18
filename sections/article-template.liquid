@@ -186,79 +186,91 @@
 <div class="related-posts">
   <div class="container-1243">
     <div class="heading flex">
-      <h2>You May <span class="color-grey">Also Like</span></h2>
-      <a href="" class="link--primary">View All Articles</a>
+      <div class="left-side">
+        <span class="pre-title">Recent Blogs</span>
+        <h2>Latest Blogs</h2>
+      </div>
+      <a href="" class="link--primary">VIEW ALL</a>
     </div>
 
     <div class="inner-wrapper flex js__realated-articles">
-      {% for tag in article.tags limit: 2 %}
-        {% assign counter = 0 %}
-        {% assign skip_articles = article.handle | split: '.....' %}
-        {% for related_article in blog.articles %}
-          {% if related_article.tags contains tag and counter < 1 %}
-            {% unless skip_articles contains related_article.handle %}
-              {% assign counter = counter | plus: 1 %}
-              {% assign temp = related_article.handle | split: '.....' %}
-              {% assign skip_articles = skip_articles | concat: temp %}
-              <div class="articlecard--outer slide" data-article-id="{{related_article.id}}">
-                {%
-                  include 'article_Card' with articleRelated: related_article, show_tags: true, show_shortdescription: true, show_readMore:
-                  true
-                %}
-              </div>
-            {% endunless %}
-          {% endif %}
-        {% endfor %}
-      {% endfor %}
+      <div class="slider-outer">
+        <div class="slider js__article-slider">
+          <div class="swiper-wrapper">
+            {% assign skip_articles = article.handle | split: '.....' %}
+            {% for tag in article.tags %}
+              {% assign counter = 0 %}
+              {% assign skip_articles = article.handle | split: '.....' %}
+              {% for related_article in blog.articles %}
+                {% if related_article.tags contains tag and counter < 5 %}
+                  {% unless skip_articles contains related_article.handle %}
+                    {% assign counter = counter | plus: 1 %}
+                    {% assign temp = related_article.handle | split: '.....' %}
+                    {% assign skip_articles = skip_articles | concat: temp %}
+                    <div class="articlecard--outer swiper-slide slide" data-article-id="{{related_article.id}}">
+                      {%
+                        include 'article_Card' with articleRelated: related_article, show_tags: true, show_shortdescription: true, show_readMore:
+                        true
+                      %}
+                    </div>
+                  {% endunless %}
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </div>
+        </div>
+        <div class="swiper-button-prev-article-slider">
+          {% include 'icon-arrow-slide-black' %}
+        </div>
+        <div class="swiper-button-next--slider">
+          {% include 'icon-arrow-slide-black' %}
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-<script>
-  /** Hide blogs if they are gettings repeated **/
-  var relatedList = $('.js__realated-articles').children('.slide'),
-    relatedListArray = [];
-  /* If no posts - then hide the section */
-  if (relatedList.length === 0) {
-    $('.related-posts').hide();
-  }
-  /* get the current postID */
-  var currentArticleID = $('article').attr('data-article-id');
-  /* go through the loop of the postArray List */
-  $(relatedList).each(function () {
-    var articleID = $(this).attr('data-article-id');
-    /* if the current article ID matches anyone in the loop - then remove it */
-    if (currentArticleID == articleID) {
-      $(this).remove();
-    } else {
-      relatedListArray.indexOf(articleID) == -1 ? relatedListArray.push(articleID) : $(this).remove();
+{% comment %}
+  <script>
+    /** Hide blogs if they are gettings repeated **/
+    var relatedList = $('.js__realated-articles').children('.slide'),
+      relatedListArray = [];
+    /* If no posts - then hide the section */
+    if (relatedList.length === 0) {
+      $('.related-posts').hide();
     }
-  });
-  /* if you had just one in array and too matched - then hide the section */
-  if (relatedListArray.length === 0) {
-    $('.related-posts').hide();
-  }
-</script>
+    /* get the current postID */
+    var currentArticleID = $('article').attr('data-article-id');
+    /* go through the loop of the postArray List */
+    $(relatedList).each(function () {
+      var articleID = $(this).attr('data-article-id');
+      /* if the current article ID matches anyone in the loop - then remove it */
+      if (currentArticleID == articleID) {
+        $(this).remove();
+      } else {
+        relatedListArray.indexOf(articleID) == -1 ? relatedListArray.push(articleID) : $(this).remove();
+      }
+    });
+    /* if you had just one in array and too matched - then hide the section */
+    if (relatedListArray.length === 0) {
+      $('.related-posts').hide();
+    }
+  </script>
+{% endcomment %}
 {% schema %}
 {
-  "name": {
-    "en": "Posts"
-  },
+  "name": "Posts",
   "settings": [
     {
       "type": "checkbox",
       "id": "blog_show_date",
-      "label": {
-        "en": "Show date"
-      },
+      "label": "Show date",
       "default": true
     },
     {
       "type": "checkbox",
       "id": "show_share_buttons",
-      "label": {
-        "en": "Show social sharing buttons"
-      },
+      "label": "Show social sharing buttons",
       "default": true
     },
     {

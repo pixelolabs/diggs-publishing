@@ -51,12 +51,10 @@
           {%- when 'question' -%}
             <li>
               {% if block.settings.title != blank %}
-                {% include 'icon-minus' %}
-                {% include 'icon-plus' %}
-                <h4
-                  class="h5"
-                >
+                <h4 class="h5">
                   {{ block.settings.title }}
+                  {% include 'icon-minus' %}
+                  {% include 'icon-plus' %}
                 </h4>
               {%- endif -%}
 
