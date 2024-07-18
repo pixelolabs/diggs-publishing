@@ -1,5 +1,19 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
+    "innerBanner": {
+      "type": "inner-hero-section",
+      "settings": {
+      }
+    },
     "faq_accordion_simple_zkHQEp": {
       "type": "faq-accordion-simple",
       "blocks": {
@@ -145,6 +159,7 @@
     }
   },
   "order": [
+    "innerBanner",
     "faq_accordion_simple_zkHQEp",
     "faq_accordion_with_category_WVAQbz",
     "faq_accordian_section_mLBbic"
