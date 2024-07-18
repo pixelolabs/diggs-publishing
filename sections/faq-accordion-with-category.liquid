@@ -4,39 +4,28 @@
   <div
     class="container-944 flex"
   >
-    {% if section.settings.title != blank %}
-      <div
-        class="top-content"
-      >
-        <div
-          class="inner"
-        >
-          <h2
-            class="h3"
-          >
-            {{ section.settings.title }}
-          </h2>
-          {% if section.settings.description != blank %}
-            {{ section.settings.description }}
-          {% endif %}
-          {% if section.settings.textLink != blank %}
-            <a
-              class="link--primary"
-              href="{{section.settings.textLink}}"
-              title="Read more about {{section.settings.linkText}}"
-            >
-              {{- section.settings.linkText -}}
-            </a>
-          {% endif %}
-        </div>
-      </div>
-    {% endif %}
-
-    <div
-      class="container-669"
-    >
-      <div class="js__faq-category-side-panel">
-        <ul class="text-center faq-category-sidepanel ipad-none">
+    <div class="js__faq-category-side-panel">
+      <ul class="text-center faq-category-sidepanel ipad-none">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'list' -%}
+              <li>
+                <a
+                  title="{{block.settings.heading}}"
+                  href="
+                    #{{block.settings.heading | remove: ',' | remove: '-' | remove: ' ' | remove: '&' | remove: "'" | remove: '
+                    (' | remove: ')' }}
+                  "
+                >
+                  {{- block.settings.heading -}}
+                </a>
+              </li>
+          {%- endcase -%}
+        {%- endfor -%}
+      </ul>
+      <div class="dropdown ipad-block">
+        <p class="js__dropdown_result selected capitalize">Select Category</p>
+        <ul class="js__dropdown">
           {%- for block in section.blocks -%}
             {%- case block.type -%}
               {%- when 'list' -%}
@@ -54,67 +43,46 @@
             {%- endcase -%}
           {%- endfor -%}
         </ul>
-        <div class="dropdown ipad-block">
-          <p class="js__dropdown_result selected capitalize">Select Category</p>
-          <ul class="js__dropdown">
-            {%- for block in section.blocks -%}
-              {%- case block.type -%}
-                {%- when 'list' -%}
-                  <li>
-                    <a
-                      title="{{block.settings.heading}}"
-                      href="
-                        #{{block.settings.heading | remove: ',' | remove: '-' | remove: ' ' | remove: '&' | remove: "'" | remove: '
-                        (' | remove: ')' }}
-                      "
-                    >
-                      {{- block.settings.heading -}}
-                    </a>
-                  </li>
-              {%- endcase -%}
-            {%- endfor -%}
-          </ul>
-        </div>
       </div>
-      <ul
-        class="accordian js__accordian"
-      >
-        {%- for block in section.blocks -%}
-          {%- case block.type -%}
-            {%- when 'list' -%}
-              <li
-                class="heading"
-              >
-                <h3
-                  class="h4"
-                  id="{{ block.settings.heading }}"
-                >
-                  {{ block.settings.heading }}
-                </h3>
-              </li>
-
-            {%- when 'question' -%}
-              <li>
-                {% if block.settings.title != blank %}
-                  {% include 'icon-minus' %}
-                  {% include 'icon-plus' %}
-                  <h4
-                    class="h5"
-                  >
-                    {{ block.settings.title }}
-                  </h4>
-                {%- endif -%}
-
-                <div
-                  class="content full-format"
-                >
-                  <p>{{ block.settings.faqAnswer }}</p>
-                </div>
-              </li>
-          {%- endcase -%}
-        {%- endfor -%}
-      </ul>
     </div>
+    <ul
+      class="accordian js__accordian"
+    >
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'list' -%}
+            <li
+              class="heading"
+            >
+              <h3
+                class="h4"
+                id="{{ block.settings.heading }}"
+              >
+                {{ block.settings.heading }}
+              </h3>
+            </li>
+
+          {%- when 'question' -%}
+            <li>
+              {% if block.settings.title != blank %}
+                {% include 'icon-minus' %}
+                {% include 'icon-plus' %}
+                <h4
+                  class="h5"
+                >
+                  {{ block.settings.title }}
+                </h4>
+              {%- endif -%}
+
+              <div
+                class="content full-format"
+              >
+                <p>{{ block.settings.faqAnswer }}</p>
+              </div>
+            </li>
+        {%- endcase -%}
+      {%- endfor -%}
+    </ul>
   </div>
 </div>
 
