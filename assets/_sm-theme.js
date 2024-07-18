@@ -1264,6 +1264,11 @@ jQuery(function () {
 });
 /*FAQ Drop down*/
 
+$(".drop-down-outer select option").each(function () {
+  if (this.value === path) {
+    this.setAttribute("selected", true);
+  }
+});
 $(".js__faq-dropdown").change(function () {
   var sectionID = this.value;
   var target = $(sectionID);
