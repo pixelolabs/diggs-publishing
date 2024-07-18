@@ -63,7 +63,6 @@
         "list_anUH39",
         "question_te3VP6"
       ],
-      "disabled": true,
       "settings": {
         "title": "",
         "description": "",
@@ -118,6 +117,7 @@
         "category_Nayin9",
         "list_rQmJT8"
       ],
+      "disabled": true,
       "settings": {
         "title": "Title",
         "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>",
