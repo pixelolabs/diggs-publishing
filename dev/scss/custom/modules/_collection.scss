@@ -1,9 +1,190 @@
 
-.collection {
-  padding: 0px 0 55px;
-  @include MQ(MQ-480) {
-    padding-bottom: 60px;
+.collection-hero-section{
+  padding: 193px 0 170px;
+  background-image: linear-gradient(109deg, #5ebe55 2%, #a8d24e 51%, #5abe50 100%);
+  position: relative;
+  .container-1260{
+    position: relative;
   }
+  .image-section{
+    width: 246px;
+    height: 418px;
+    bottom:0;
+    right: 250px;
+    position: absolute;
+    margin-bottom: -187px;
+    img{
+      @include img-object-contain;
+    }
+    &::after{
+      width: 43px;
+      height: 52px;
+      content: '';
+      position: absolute;
+      right: -100px;
+      z-index: 1;
+      top: 110px;
+      background: url("star-large.webp") no-repeat center / 100%;
+     
+  }
+  }
+  &::before{
+    width: 367.6px;
+    height: 87.8px;
+    content: '';
+    position: absolute;
+    left:0px;
+    z-index: 1;
+    bottom: 74px;
+    background: url("thread-hero-white.webp") no-repeat center / 100%;
+    @include MQ(MQ-480) {
+      display: none;
+    }
+}
+&::after{
+  width: 130px;
+  height: 406px;
+  content: '';
+  position: absolute;
+  right:0px;
+  z-index: 1;
+  top: 87px;
+  background: url("thread-hero-white-2.webp") no-repeat center / 100%;
+  @include MQ(MQ-480) {
+    top: 167px;
+  }
+}
+.content{
+  max-width: 455px;
+  width: 100%;
+  position: relative;
+  &::before{
+    width: 89px;
+    height: 118px;
+    content: '';
+    position: absolute;
+    right: -82px;
+    z-index: 1;
+    top: -88px;
+    background: url("kite.webp") no-repeat center / 100%;
+    @include MQ(MQ-480) {
+      
+    }
+}
+&::after{
+  width: 63.9px;
+  height: 51px;
+  content: '';
+  position: absolute;
+  bottom: 29px;
+  z-index: 1;
+  right: -184px;
+  background: url("icon-cloud.webp") no-repeat center / 100%;
+  @include MQ(MQ-480) {
+ 
+    top: auto;
+    bottom: 270px;
+    right: 25px;
+  }
+}
+  *{
+    color:#ffffff;
+  }
+  h1{
+    margin:0 0 16px;
+  }
+
+}
+}
+
+.collection-filter-section {
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  z-index: 4;
+  @include MQ(MQ-768) {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0px;
+  }
+  .sort-by {
+    display: flex;
+    align-items: center;
+    flex: none;
+    margin-right: 20px;
+    @include MQ(MQ-768) {
+      margin-right: 0;
+    }
+    label {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $color-black;
+      flex: none;
+      margin-right: 13px;
+      @include MQ(MQ-480) {
+        display: none;
+      }
+    }
+    select {
+      width: 260px;
+      max-width: 100%;
+    }
+  }
+  .item--count {
+    display: flex;
+    width: 100%;
+    padding-bottom: 7px;
+    @include MQ(MQ-768) {
+      border-bottom: none;
+      justify-content: center;
+    }
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 1px;
+    
+  }
+}
+
+.collection {
+  padding: 60px 0 0px;
+  position: relative;
+  background: $color-off-white;
+  z-index: 3;
+  &::before{
+    background: url("yellow-wave.webp") repeat left / 1327px;
+    height: 156.5px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -90px;
+    content: "";
+    z-index: 2;
+  }
+  &::after{
+    width: 82px;
+    height: 81px;
+    content: '';
+    position: absolute;
+    right: 0;
+    left:0 ;
+    margin: 0 auto;
+    z-index: 2;
+    top: -90px;
+    background: url("ufo.webp") no-repeat center / 100%;
+    @include MQ(MQ-768) {
+        width: 57px;
+        height: 56px;
+        right: 48px;
+        bottom: -24px;
+    }
+}
+
+
   .full-content {
     margin-top: 43px;
     @include MQ(MQ-767) {
@@ -22,50 +203,26 @@
     }
   }
   &__product-list {
-    margin-left: 0px !important;
+    width: calc(100% + 39px) !important;
+    margin-left: -39px;
+    margin-top: 34px;
     display: flex !important;
     flex-wrap: wrap !important;
-    width: 100%;
     @include MQ(MQ-767) {
       margin-left: 0px !important;
       width: 100% !important;
     }
     .product-card {
-      width: calc(33.333% - 19px) !important;
-      margin-left: 19px;
-      margin-bottom: 46px !important;
+      width: calc(33.333% - 39px) !important;
+      margin-left: 39px;
+      margin-bottom: 39px !important;
       @include MQ(MQ-480) {
         margin-bottom: 30px !important;
       }
-      padding: 0px;
-      .boost-pfs-quickview-btn {
-        display: none !important;
-      }
-      .boost-pfs-addtocart-product-form {
-        width: 100% !important;
-      }
-      .boost-pfs-addtocart-btn {
-        position: absolute;
-        bottom: 12px;
-        left: 12px;
-        @include MQ(MQ-480) {
-          display: none !important;
-        }
-        svg {
-          display: none !important;
-        }
-        padding: 6px 14px !important;
-        border-radius: 20px !important;
-        background: $color-black !important;
-        font-size: 16px !important;
-        font-weight: 600 !important;
-        line-height: 1.5 !important;
-        text-align: center !important;
-        color: $color-white !important;
-        width: auto;
-      }
+     
+     
       .image-section {
-        height: 320px !important;
+        height: 277px !important;
         @include MQ(MQ-980) {
           height: calc(50vw - 189px) !important;
         }
@@ -390,3 +547,26 @@
   }
 }
 
+
+.btn--atc{
+  padding: 11.5px 35px 9.5px 12.5px;
+  border: solid 1px $color-yellow;
+  background-color: $color-white;
+  font-family: var(--font-family-primary);
+  font-size: 12px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-black);
+}
+
+.btn--quick-view{
+  width: 42px;
+  height: 37px;
+  border: solid 1px $color-yellow;
+  background: $color-white
+}

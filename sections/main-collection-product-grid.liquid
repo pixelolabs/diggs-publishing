@@ -1,62 +1,187 @@
-{%- assign limit = 5 -%}
+{%- assign limit = 12 -%}
 {% paginate collection.products by limit %}
-<div
-  class="collection-section"
-  id="CollectionSection"
-  data-section-id="{{ section.id }}"
-  data-section-type="collection-template"
-  data-sort-enabled="{{ section.settings.sort_enable }}"
->
-  <div class="container-1260 flex">
-    <ul class="collection__product-list flex {% if collection.products == blank %} empty-collection{%endif %}">
-      {% for productRelated in collection.products %}
-        <li class="product-card">
-          {% include 'product_Card'  with  productRelated: productRelated , show_price: true, show_tags: false, show_auto_tags: false, show_title: true, show_fav: false, show_secondary_button: false %}
-            </li>
-      {% else %}
-        {% comment %}
-          Add default products to help with onboarding for collections/all only.
-          The onboarding styles and products are only loaded if the
-          store has no products.
-        {% endcomment %}
-        {% if collection.handle == 'all' and collection.all_vendors.size == 0 and collection.all_types.size == 0 %}
-          <li class="grid__item product-card 22">
-            <div class="grid grid--uniform">
-              {% for i in (1..limit) %}
-                <div class="grid__item">
-                  <div class="grid-view-item">
-                    <a href="#" class="grid-view-item__link">
-                      <div class="grid-view-item__image">
-                        {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
-                        {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
-                      </div>
-                      <div class="h4 grid-view-item__title">{{ 'homepage.onboarding.product_title' | t }}</div>
-                      <div class="grid-view-item__meta">
-                        <span class="product-price__price">$19.99</span>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              {% endfor %}
-            </div>
-          </li>
-        {% else %}
-          {%- assign is_empty_collection = true -%}
-        {% endif %}
-      {% endfor %}
-    </ul>
+  <div class="collection" data-section-id="{{ section.id }}" data-section-type="collection-template">
+   
 
-    {% if is_empty_collection %}
-      <div class="grid__item small--text-center">
-        <p class="text-center">{{ 'collections.general.no_matches' | t }}</p>
+    <div
+      class="collection-section"
+      id="CollectionSection"
+      data-section-id="{{ section.id }}"
+      data-section-type="collection-template"
+      data-sort-enabled="{{ section.settings.sort_enable }}"
+    >
+      <div class="container-1260">
+        <div class="collection-filter-section flex">
+        
+          <div class="item--count">
+            {% assign currentOffset = paginate.current_offset | to_i %}
+            {% assign items = paginate.items %}
+            {% assign currentPage = paginate.current_page | to_i %}
+
+            {% assign currentPageStart = currentOffset | plus: 1 %}
+
+            {% assign totalshowItems = currentOffset | plus: limit %}
+
+            {% if paginate.current_page == 1 %}
+              {% if paginate.current_page == paginate.pages %}
+                Showing 1 - {{ collection.products_count }} of {{ collection.products_count }} items
+              {% else %}
+                Showing 1 - {{ limit }} of {{ collection.products_count }} items
+              {% endif %}
+            {% else %}
+              {% if paginate.current_page == paginate.pages %}
+                {% assign lastPageItem = items | to_i | minus: currentOffset | to_i %}
+                Showing {{ currentPageStart }} - {{ collection.products_count }} of
+                {{ collection.products_count }} items
+              {% else %}
+                Showing {{ currentPageStart }} - {{ totalshowItems }} of {{ collection.products_count }} items
+              {% endif %}
+            {% endif %}
+          </div>
+          {% if section.settings.sort_enable %}
+            <div class="sort-by">
+              {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+              <label class="filters-toolbar__label select-label" for="SortBy">
+                Sort By
+              </label>
+
+              <select
+                name="sort_by"
+                id="SortBy"
+                class="filters-toolbar__input hidden custom-dropdown-select"
+                aria-describedby="a11y-refresh-page-message a11y-selection-message"
+                data-default-sortby="{{ collection.default_sort_by }}"
+                data-select-input
+              >
+                {%- for option in collection.sort_options -%}
+                  <option
+                    value="{{ option.value }}"
+                    {% if option.value == sort_by %}
+                      selected="selected"
+                    {% endif %}
+                  >
+                    {{ option.name }}
+                  </option>
+                {%- endfor -%}
+              </select>
+            </div>
+          {% endif %}
+        </div>
+        <ul class="collection__product-list flex">
+          {% for productRelated in collection.products %}
+            <li class="product-card">
+              {% include 'product_Card'  with  productRelated: productRelated , show_price: true, show_tags: false, show_auto_tags: false, show_title: true, show_fav: false, show_secondary_button: true %}
+            </li>
+          {% else %}
+            {% comment %}
+              Add default products to help with onboarding for collections/all only.
+              The onboarding styles and products are only loaded if the
+              store has no products.
+            {% endcomment %}
+            {% if collection.handle == 'all' and collection.all_vendors.size == 0 and collection.all_types.size == 0 %}
+              <li class="grid__item product-card 22">
+                <div class="grid grid--uniform">
+                  {% for i in (1..limit) %}
+                    <div class="grid__item">
+                      <div class="grid-view-item">
+                        <a href="#" class="grid-view-item__link">
+                          <div class="grid-view-item__image">
+                            {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+                            {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+                          </div>
+                          <div class="h4 grid-view-item__title">{{ 'homepage.onboarding.product_title' | t }}</div>
+                          <div class="grid-view-item__meta">
+                            <span class="product-price__price">$19.99</span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  {% endfor %}
+                </div>
+              </li>
+            {% else %}
+              {%- assign is_empty_collection = true -%}
+            {% endif %}
+          {% endfor %}
+        </ul>
+
+        {% if is_empty_collection %}
+          <div class="grid__item small--text-center">
+            <p class="text-center">{{ 'collections.general.no_matches' | t }}</p>
+          </div>
+        {% endif %}
       </div>
-    {% endif %}
-  </div>
-  {%- if paginate.pages > 1 -%}
-    <div class="container-1380">
-      {% include 'pagination', paginate: paginate %}
+      {%- if paginate.pages > 1 -%}
+        <div class="container-1380">
+          {% include 'pagination', paginate: paginate %}
+        </div>
+      {%- endif -%}
     </div>
-  {%- endif -%}
-</div>
-</div>
+  </div>
 {% endpaginate %}
+
+{% schema %}
+{
+  "name": {
+    "en": "Collection pages"
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "subTitle",
+      "label": "SubTitle for Collection All"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image for Collection All"
+    },
+    {
+      "type": "range",
+      "id": "grid",
+      "label": {
+        "en": "Products per row (grid only)"
+      },
+      "default": 4,
+      "min": 2,
+      "max": 5,
+      "step": 1
+    },
+    {
+      "type": "range",
+      "id": "rows",
+      "label": {
+        "en": "Rows per page (grid only)"
+      },
+      "default": 2,
+      "min": 2,
+      "max": 8,
+      "step": 1
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": {
+        "en": "Show product vendors"
+      },
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "sort_enable",
+      "label": {
+        "en": "Enable sorting"
+      },
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "tags_enable",
+      "label": {
+        "en": "Enable tag filtering"
+      },
+      "default": true
+    }
+  ]
+}
+{% endschema %}
