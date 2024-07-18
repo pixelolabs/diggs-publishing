@@ -1,21 +1,66 @@
-{% if section.settings.image != blank %}
-  {%- style -%}
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.paddingtop | round: 0 }}px;
-      padding-bottom: {{ section.settings.paddingbottom | round: 0 }}px;
-    }
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.paddingtop | round: 0 }}px;
+    padding-bottom: {{ section.settings.paddingbottom | round: 0 }}px;
+  }
 
-    @media screen and (max-width: 768px) {
-      .section-{{ section.id }}-padding {
-        padding-top: {{ section.settings.paddingtopmobile | round: 0 }}px;
-        padding-bottom: {{ section.settings.paddingbottomMobile | round: 0 }}px;
-      }
+  @media screen and (max-width: 768px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.paddingtopmobile | round: 0 }}px;
+      padding-bottom: {{ section.settings.paddingbottomMobile | round: 0 }}px;
     }
-  {%- endstyle -%}
-  <div class="inner-hero-section {% if section.settings.smallHeight == true %} small {% endif %} section-{{ section.id }}-padding color-{{ section.settings.color_scheme }}">
-    {%- if section.settings.videobanner -%}
-      <div class="video-section {% if section.settings.gradient == true %} gradient{%endif%}">
-        <div class="video-wrapper none-980">
+  }
+{%- endstyle -%}
+<div class="inner-hero-section {% if section.settings.smallHeight == true %} small {% endif %} section-{{ section.id }}-padding color-{{ section.settings.color_scheme }}">
+  {%- if section.settings.videobanner -%}
+    <div class="video-section {% if section.settings.gradient == true %} gradient{%endif%}">
+      <div class="video-wrapper none-980">
+        {% if section.settings.video contains '.mp4' %}
+          <video
+            muted
+            loop
+            autoplay
+          >
+            <source src="{{ section.settings.video }}" type="video/mp4">
+          </video>
+        {% else %}
+          {% if section.settings.video != blank %}
+            {% assign videoId = section.settings.video | split: 'vimeo.com/' %}
+            <iframe
+              src="https://player.vimeo.com/video/{{ videoId[1] }}?loop=1&autoplay=1&muted=1"
+              frameborder="0"
+              allow="fullscreen"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          {% endif %}
+        {% endif %}
+      </div>
+      {% if section.settings.videoMobile != blank %}
+        <div class="video-wrapper block-980">
+          {% if section.settings.videoMobile contains '.mp4' %}
+            <video
+              muted
+              loop
+              autoplay
+            >
+              <source src="{{ section.settings.videoMobile }}" type="video/mp4">
+            </video>
+          {% else %}
+            {% if section.settings.videoMobile != blank %}
+              {% assign videoId = section.settings.videoMobile | split: 'vimeo.com/' %}
+              <iframe
+                src="https://player.vimeo.com/video/{{ videoId[1] }}?loop=1&autoplay=1&muted=1"
+                frameborder="0"
+                allow="fullscreen"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            {% endif %}
+          {% endif %}
+        </div>
+      {% else %}
+        <div class="video-wrapper block-980">
           {% if section.settings.video contains '.mp4' %}
             <video
               muted
@@ -37,114 +82,67 @@
             {% endif %}
           {% endif %}
         </div>
-        {% if section.settings.videoMobile != blank %}
-          <div class="video-wrapper block-980">
-            {% if section.settings.videoMobile contains '.mp4' %}
-              <video
-                muted
-                loop
-                autoplay
-              >
-                <source src="{{ section.settings.videoMobile }}" type="video/mp4">
-              </video>
-            {% else %}
-              {% if section.settings.videoMobile != blank %}
-                {% assign videoId = section.settings.videoMobile | split: 'vimeo.com/' %}
-                <iframe
-                  src="https://player.vimeo.com/video/{{ videoId[1] }}?loop=1&autoplay=1&muted=1"
-                  frameborder="0"
-                  allow="fullscreen"
-                  allowfullscreen
-                  loading="lazy"
-                ></iframe>
-              {% endif %}
-            {% endif %}
-          </div>
-        {% else %}
-          <div class="video-wrapper block-980">
-            {% if section.settings.video contains '.mp4' %}
-              <video
-                muted
-                loop
-                autoplay
-              >
-                <source src="{{ section.settings.video }}" type="video/mp4">
-              </video>
-            {% else %}
-              {% if section.settings.video != blank %}
-                {% assign videoId = section.settings.video | split: 'vimeo.com/' %}
-                <iframe
-                  src="https://player.vimeo.com/video/{{ videoId[1] }}?loop=1&autoplay=1&muted=1"
-                  frameborder="0"
-                  allow="fullscreen"
-                  allowfullscreen
-                  loading="lazy"
-                ></iframe>
-              {% endif %}
-            {% endif %}
-          </div>
-        {% endif %}
-      </div>
-    {% else %}
-      <div class="image-section {% if section.settings.gradient == true %} gradient{%endif%}">
-        <picture>
-          <source
-            media="(max-width: 480px)"
-            srcset="{% if section.settings.mobileImage != blank %}{{ section.settings.mobileImage | img_url: '750x1400' }}   {% endif %}"
+      {% endif %}
+    </div>
+  {% else %}
+    <div class="image-section {% if section.settings.gradient == true %} gradient{%endif%}">
+      <picture>
+        <source
+          media="(max-width: 480px)"
+          srcset="{% if section.settings.mobileImage != blank %}{{ section.settings.mobileImage | img_url: '750x1400' }}   {% endif %}"
+        >
+        {{ section.settings.image | image_url: width: 2880 | image_tag: loading: 'lazy', widths: '2880x1620' }}
+      </picture>
+    </div>
+  {% endif %}
+  <div
+    class="
+      container-1240 {% if section.settings.content_alignment == "center" %} center--align {% endif %} {% if section.settings.content_alignment == "right" %} right--align {% endif %}{% if
+      section.settings.content_alignment == "left" %} left--align {% endif %}
+    "
+  >
+    <div class="content">
+      {% if section.settings.title == true %}
+        <h1>
+          {{ section.settings.title }}
+        </h1>
+      {% else %}
+        <h2 class="h1">
+          {{ page.title }}
+        </h2>
+      {% endif %}
+
+      {% if section.settings.description != blank %}
+        {{ section.settings.description }}
+      {% endif %}
+
+      <div class="buttons">
+        {% if section.settings.buttonText1 != blank %}
+          <a
+            href="{{ section.settings.buttonLink1 }}"
+            title="Read More About {{ section.settings.buttonText1 }}"
+            aria-label="Read More About {{ section.settings.buttonText}}"
+            class="btn--secondary"
+            title="{{ section.settings.buttonText1 }}"
           >
-          {{ section.settings.image | image_url: width: 2880 | image_tag: loading: 'lazy', widths: '2880x1620' }}
-        </picture>
-      </div>
-    {% endif %}
-    <div
-      class="
-        container-1240 {% if section.settings.content_alignment == "center" %} center--align {% endif %} {% if section.settings.content_alignment == "right" %} right--align {% endif %}{% if
-        section.settings.content_alignment == "left" %} left--align {% endif %}
-      "
-    >
-      <div class="content">
-        {% if section.settings.pageBanner == true %}
-          <h1>
-            {{ section.settings.title }}
-          </h1>
-        {% else %}
-          <h2 class="h1">
-            {{ page.title }}
-          </h2>
+            {{- section.settings.buttonText1 -}}
+          </a>
         {% endif %}
-
-        {% if section.settings.description != blank %}
-          {{ section.settings.description }}
+        {% if section.settings.buttonText2 != blank %}
+          <a
+            href="{{ section.settings.buttonLink2 }}"
+            title="Read More About {{ section.settings.buttonText2 }}"
+            aria-label="Read More About {{ section.settings.buttonText2 }}"
+            class="btn--secondary"
+            title="{{ section.settings.buttonText2 }}"
+          >
+            {{- section.settings.buttonText2 -}}
+          </a>
         {% endif %}
-
-        <div class="buttons">
-          {% if section.settings.buttonText1 != blank %}
-            <a
-              href="{{ section.settings.buttonLink1 }}"
-              title="Read More About {{ section.settings.buttonText1 }}"
-              aria-label="Read More About {{ section.settings.buttonText}}"
-              class="btn--secondary"
-              title="{{ section.settings.buttonText1 }}"
-            >
-              {{- section.settings.buttonText1 -}}
-            </a>
-          {% endif %}
-          {% if section.settings.buttonText2 != blank %}
-            <a
-              href="{{ section.settings.buttonLink2 }}"
-              title="Read More About {{ section.settings.buttonText2 }}"
-              aria-label="Read More About {{ section.settings.buttonText2 }}"
-              class="btn--secondary"
-              title="{{ section.settings.buttonText2 }}"
-            >
-              {{- section.settings.buttonText2 -}}
-            </a>
-          {% endif %}
-        </div>
       </div>
     </div>
   </div>
-{% endif %}
+</div>
 
 {% schema %}
 {
