@@ -21,23 +21,22 @@
           {%- endcase -%}
         {%- endfor -%}
       </ul>
-      <div class="select-faq-category ipad-block">
-        <div class="drop-down-outer">
-          <h5 class="text-center">Select FAQ Category</h5>
-          <select class="js__faq-dropdown">
-            {%- for block in section.blocks -%}
-              {%- case block.type -%}
-                {%- when 'list' -%}
-                  {% assign category = block.settings.heading | replace: ' ', '-' %}
-                  {% assign category = category | replace: "'", '-' %}
-                  {% assign category = category | replace: '--', '-' %}
-                  {% assign category = category | replace: '---', '-' %}
 
-                  <option value="#{{category}}">{{ block.settings.heading }}</option>
-              {%- endcase -%}
-            {%- endfor -%}
-          </select>
-        </div>
+      <div class="drop-down-outer ipad-block">
+        <h5 class="text-center">Select FAQ Category</h5>
+        <select class="js__faq-dropdown">
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'list' -%}
+                {% assign category = block.settings.heading | replace: ' ', '-' %}
+                {% assign category = category | replace: "'", '-' %}
+                {% assign category = category | replace: '--', '-' %}
+                {% assign category = category | replace: '---', '-' %}
+
+                <option value="#{{category}}">{{ block.settings.heading }}</option>
+            {%- endcase -%}
+          {%- endfor -%}
+        </select>
       </div>
     </div>
     <ul class="accordian js__accordian">
