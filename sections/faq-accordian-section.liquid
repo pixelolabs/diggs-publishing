@@ -71,7 +71,7 @@
           {%- for block in section.blocks -%}
             {%- case block.type -%}
               {%- when 'category' -%}
-                <div class="js__tab-content" id="tab-{{ block.settings.title | downcase | remove: ' ' }}">
+                <div class="tab-content js__tab-content" id="tab-{{ block.settings.title | downcase | remove: ' ' }}">
                   <h2 class="h3 ipad-none">{{ block.settings.title }}</h2>
                   {% assign category = block.settings.title | downcase | remove: ' ' %}
                   <div class="accordian-section">
