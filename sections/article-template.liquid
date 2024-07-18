@@ -201,7 +201,7 @@
               {% assign temp = related_article.handle | split: '.....' %}
               {% assign skip_articles = skip_articles | concat: temp %}
               <div class="slider-outer">
-                <div class="slider js__product-slider">
+                <div class="slider js__article-slider">
                   <div class="swiper-wrapper">
                     <div class="articlecard--outer slide" data-article-id="{{related_article.id}}">
                       {%
@@ -210,6 +210,12 @@
                       %}
                     </div>
                   </div>
+                </div>
+                <div class="swiper-button-prev-product-slider">
+                  {% include 'icon-arrow-slide-black' %}
+                </div>
+                <div class="swiper-button-next-product-slider">
+                  {% include 'icon-arrow-slide-black' %}
                 </div>
               </div>
             {% endunless %}
