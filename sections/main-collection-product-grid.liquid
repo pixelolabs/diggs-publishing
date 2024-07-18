@@ -11,6 +11,43 @@
       data-sort-enabled="{{ section.settings.sort_enable }}"
     >
       <div class="container-1260">
+
+        <div class="collection-top-section">
+          <ul>
+          <li class="active">
+            <a>
+             
+          <div class="icon">
+            <img src="{{ 'Books.png' | asset_url }}" /> </div>
+            <span>Books</span>
+          </a>
+          </li>
+          <li>
+            <a>
+             
+          <div class="icon">
+            <img src="{{ 'bulk-order.png' | asset_url }}" /> </div>
+            <span>Bulk Order</span>
+          </a>
+          </li>
+          <li>
+            <a>
+             
+          <div class="icon">
+            <img src="{{ 'Bundles.png' | asset_url }}" /> </div>
+            <span>Bundles</span>
+          </a>
+          </li>
+          <li>
+            <a>
+             
+          <div class="icon">
+            <img src="{{ 'Daily-deals.png' | asset_url }}" /> </div>
+            <span>Daily Deals</span>
+          </a>
+          </li>
+          </ul>
+          </div>
         <div class="collection-filter-section flex">
         
           <div class="item--count">
@@ -112,7 +149,8 @@
         {% endif %}
       </div>
       {%- if paginate.pages > 1 -%}
-        <div class="container-1380">
+        <div class="container-1260 text-center">
+      
           {% include 'pagination', paginate: paginate %}
         </div>
       {%- endif -%}

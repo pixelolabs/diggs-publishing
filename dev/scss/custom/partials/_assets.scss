@@ -294,8 +294,8 @@ textarea.input--error {
   background: transparent;
   opacity: 1;
   text-transform: uppercase;
-  padding: 7.5px 45px 8.5px 25px;
-  background: url("icon-arrow-down.webp") no-repeat right 25px center / 13px
+  padding: 7.5px 40px 8.5px 17px;
+  background: url("dropdown.svg") no-repeat right 20px center / 11px
     $color-white;
 }
 
@@ -609,12 +609,8 @@ textarea.input--error {
 /* pagination */
 
 .pagination-wrapper {
-  padding: 16px 40px 14px;
-  background: $color-white;
-  border-radius: 10px;
-  @include MQ(MQ-768) {
-    padding: 10px 10px;
-  }
+ 
+ display: inline-block;
 }
 
 .pagination {
@@ -630,78 +626,61 @@ textarea.input--error {
     height: auto;
   }
   .pagination-text {
-    font-size: 14px;
-    font-weight: 800;
-    line-height: normal;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    a {
-      &:hover {
-        span {
-          color: $color-black;
-          border-bottom: 1.8px solid $color-black;
-        }
-      }
-    }
-    span {
-      font-size: 14px;
-      padding: 2px 2px 0px 2px;
-      margin-right: 14px;
-      font-weight: bold;
+       font-size: 16px;
+      font-weight: 600;
       font-stretch: normal;
       font-style: normal;
       line-height: normal;
-      letter-spacing: 0.01px;
-      text-align: left;
+      letter-spacing: normal;
+      text-align: center;
+
+      
+    
+    span {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      margin-right: 16px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      border: 1px solid $color-black;
       &.current {
-        color: $color-black;
-        border-bottom: 1.8px solid $color-black;
+        background: #e0ffda;
       }
     }
   }
   .prev,
   .next {
     border: none;
-    width: 30px;
-    height: 30px;
-    // background: url(icon-arrow-dropdown-black.webp) no-repeat center / 25px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid $color-black;
+    background: url(left-arrow.svg) no-repeat center / 8px;
     // transform: rotate(-90deg);
-    svg {
-      border-radius: 100%;
-      border: 1px solid $color-border;
-    }
+    
     a {
       display: block;
-      width: 30px;
-      height: 30px;
-      span {
-        font-size: 14px;
-        font-weight: bold;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: 0.01px;
-        text-align: left;
-      }
-      &::before,
-      &::after {
-        display: none;
-      }
+      width: 40px;
+      height: 40px;
     }
     .disabled {
       opacity: 0.5;
-      svg {
-        border-radius: 100%;
-        border: 0 !important;
-      }
     }
   }
   .prev {
-    margin-right: 47px;
-    // transform: rotate(90deg);
+    margin-right: 16px;
+   
   }
   .next {
-    margin-left: 47px;
+    margin-left: 0px;
+    transform: rotate(180deg);
   }
 }
 

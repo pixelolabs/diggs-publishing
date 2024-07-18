@@ -129,7 +129,7 @@
       }
     }
     select {
-      width: 260px;
+      width: 205px;
       max-width: 100%;
     }
   }
@@ -551,7 +551,7 @@
 .btn--atc{
   padding: 11.5px 35px 9.5px 12.5px;
   border: solid 1px $color-yellow;
-  background-color: $color-white;
+  background: url("shopping-bag.svg") no-repeat right 15.6px center / 15px $color-white;
   font-family: var(--font-family-primary);
   font-size: 12px;
   font-weight: 500;
@@ -568,5 +568,53 @@
   width: 42px;
   height: 37px;
   border: solid 1px $color-yellow;
-  background: $color-white
+  background: $color-white;
+  background: url("eye.svg") no-repeat center / 15px $color-white
+}
+
+.collection-top-section{
+padding-bottom: 33px;
+text-align: center;
+position: relative;
+
+z-index: 5;
+ul{
+  li{
+    width: 111px;
+    height: 71px;
+    display: inline-block;
+    background: $color-white;
+    border: 1px solid #ffe69f;
+    &.active{
+      background: #fbe195;
+    }
+    a{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 10px;
+      .icon{
+        width: 32px;
+        height: 32.5px;
+        position: relative;
+        margin-bottom: 6px;
+        img{
+          @include img-object-cover;
+        }
+      }
+      span{
+        font-size: 10.5px;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.29;
+        letter-spacing: 0.75px;
+      }
+    }
+    margin-right: 30px;
+    &:last-child{
+      margin-right: 0px;
+    }
+  }
+}
 }
