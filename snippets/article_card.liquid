@@ -104,13 +104,13 @@
 
       {%- if show_description -%}
         <div class="full-format small">
-          <p>
+          {% comment %}
             {%- if articleRelated.excerpt.size > 0 -%}
               {{ articleRelated.excerpt }}
             {%- else -%}
-              {{ articleRelated.content | strip_html | truncate: 20 }}
-            {%- endif -%}
-          </p>
+          {% endcomment %}
+          {{ articleRelated.content | strip_html | truncate: 20 }}
+          {% comment %} {%- endif -%} {% endcomment %}
         </div>
       {%- endif -%}
 
