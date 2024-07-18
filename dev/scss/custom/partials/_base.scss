@@ -452,7 +452,48 @@ h6,
     }
   }
 }
+/****** Main Wave Class ******/
 
+.main-page-wave {
+  position: relative;
+  &:after {
+    width: 82px;
+    height: 81px;
+    content: "";
+    position: absolute;
+    left: 37%;
+    z-index: 10;
+    top: -111px;
+    background: url(ufo.webp) no-repeat center / 100%;
+    @include MQ(MQ-480) {
+      display: none;
+    }
+  }
+  &:before {
+    background: url(yellow-wave.webp) repeat-x top / 100%;
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -125px;
+    content: "";
+    background-size: contain;
+    z-index: 1;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(56%) saturate(587%)
+      hue-rotate(316deg) brightness(105%) contrast(114%);
+    @include MQ(MQ-1440) {
+      height: 114px;
+      top: -97px;
+      background-size: cover;
+    }
+    @include MQ(MQ-768) {
+      height: 80px;
+      top: -86px;
+      background-size: cover;
+      background-position-x: right;
+    }
+  }
+}
 /****** BUTTONS ******/
 
 button {
@@ -1230,6 +1271,12 @@ button {
   max-width: 840px;
   width: 100%;
   padding: 0 40px;
+  margin: 0 auto;
+}
+.container-944 {
+  max-width: 944px;
+  width: 100%;
+  padding: 0 30px;
   margin: 0 auto;
 }
 

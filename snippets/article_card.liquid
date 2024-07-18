@@ -1,5 +1,36 @@
-{% include 'article_img-script' %}
+{% comment %} {% include 'article_img-script' %} {% endcomment %}
+<script>
+    $(document).ready(function() {
 
+  // To save all images in an array named img_array
+      var img_array = $('.article-content-{{ articleRelated.id }} img').map(function() {
+        return $(this).attr("src");
+      });
+      var img_arr = $('.article-excerpt-{{ articleRelated.id }} img').map(function() {
+        return $(this).attr("src");
+      });
+      var firstexcerptImage = img_arr[0];
+
+      var firstImage = img_array[0];
+
+      var excerptImage = img_arr[0];{% if articleRelated.image %}
+      {% else %}
+
+      //$(".custom-article-image-{{ articleRelated.id }} img").parent("a").parent(".image-section").addClass("no-image");
+        if (img_array.length > 0) {
+          $(".custom-article-image-{{ articleRelated.id }} img").attr("src", firstImage);
+          $(".custom-article-image-{{ articleRelated.id }} img").parent("a").parent(".image-section").removeClass("no-image");
+        } else {
+          if (img_arr.length > 0) {
+            $(".custom-article-image-{{ articleRelated.id }} img").parent("a").parent(".image-section").removeClass("no-image");
+            $(".custom-article-image-{{ articleRelated.id }} img").attr("src", firstexcerptImage);
+          }
+
+        }
+
+      {% endif %}
+    });
+</script>
 <div class="article-card">
   <div class="inner-section flex">
     {% capture img_id %}ArticleImage-{{ articleRelated.image.id }}{% endcapture %}
@@ -22,6 +53,20 @@
           data-sizes="auto"
           alt="{{ articleRelated.title }}"
         >
+        {%- if show_tags_with_limits -%}
+          <ul class="tags-wrapper">
+            {% assign split_1 = articleRelated.url | split: '/blogs/' %}
+            {% assign split_2 = split_1[1] | split: '/' %}
+            {% assign blog_handle = split_2[0] | strip %}
+            {% assign article_blog = blogs[blog_handle] %}
+
+            {% for tag in articleRelated.tags limit: 2 %}
+              <li class="tags">
+                <a href="{{article_blog.url}}/tagged/{{ tag | handleize }}" title="{{tag}}" class="tag">{{ tag }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
       </a>
     {% endif %}
     <noscript>
@@ -33,35 +78,6 @@
     </noscript>
 
     <div class="content">
-      {%- if show_tags -%}
-        <ul class="tags-wrapper">
-          {% assign split_1 = articleRelated.url | split: '/blogs/' %}
-          {% assign split_2 = split_1[1] | split: '/' %}
-          {% assign blog_handle = split_2[0] | strip %}
-          {% assign article_blog = blogs[blog_handle] %}
-
-          {% for tag in articleRelated.tags %}
-            <li class="tags">
-              <a href="{{article_blog.url}}/tagged/{{ tag | handleize }}" title="{{tag}}" class="tag">{{ tag }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      {% endif %}
-      {%- if show_tags_with_limits -%}
-        <ul class="tags-wrapper">
-          {% assign split_1 = articleRelated.url | split: '/blogs/' %}
-          {% assign split_2 = split_1[1] | split: '/' %}
-          {% assign blog_handle = split_2[0] | strip %}
-          {% assign article_blog = blogs[blog_handle] %}
-
-          {% for tag in articleRelated.tags limit: 2 %}
-            <li class="tags">
-              <a href="{{article_blog.url}}/tagged/{{ tag | handleize }}" title="{{tag}}" class="tag">{{ tag }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      {% endif %}
-
       <h3>
         <a
           aria-label="Read More About {{ articleRelated.title }}"
@@ -71,66 +87,42 @@
           {{ articleRelated.title | strip_html | truncate: 73 }}
         </a>
       </h3>
-      {% comment %}
-        {%- if show_time -%}
-          <time>{{ articleRelated.published_at | date: '%d/%m/%Y' }}</time>
-        {% endif %}
-      {% endcomment %}
+      <div class="artical-date-author">
+        <div class="date-category-section">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+            <path d="M12.867 3.189h-10.5a1.5 1.5 0 0 0-1.5 1.5v10.5a1.5 1.5 0 0 0 1.5 1.5h10.5a1.5 1.5 0 0 0 1.5-1.5v-10.5a1.5 1.5 0 0 0-1.5-1.5zM10.615 1.689v3M4.617 1.689v3M.867 7.689h13.5" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          {{- article.published_at | time_tag: format: 'date' -}}
+        </div>
+        <div class="author">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+            <path d="M14.59 16.189v-1.667a3.333 3.333 0 0 0-3.334-3.333H4.589a3.333 3.333 0 0 0-3.333 3.333v1.667M7.921 7.855a3.333 3.333 0 1 0 0-6.666 3.333 3.333 0 0 0 0 6.666z" stroke="#000" stroke-width="1.765" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>{{ article.author }}</span>
+        </div>
+      </div>
 
       {%- if show_description -%}
-        <div class="full-format small">
-          <p>
-            {%- if articleRelated.excerpt.size > 0 -%}
-              {{ articleRelated.excerpt }}
-            {%- else -%}
-              {{ articleRelated.content | strip_html | truncate: 500 }}
-            {%- endif -%}
-          </p>
-        </div>
-      {%- endif -%}
-      {%- if show_shortdescription -%}
         <div class="description">
-          <p>
+          {% comment %}
             {%- if articleRelated.excerpt.size > 0 -%}
               {{ articleRelated.excerpt }}
             {%- else -%}
-              {{ articleRelated.content | strip_html | truncate: 160 }}
-            {%- endif -%}
-          </p>
-        </div>
-      {%- endif -%}
-      {%- if show_moreshortdescription -%}
-        <div class="description">
-          <p>
-            {%- if articleRelated.excerpt.size > 0 -%}
-              {{ articleRelated.excerpt }}
-            {%- else -%}
-              {{ articleRelated.content | strip_html | truncate: 60 }}
-            {%- endif -%}
-          </p>
+          {% endcomment %}
+          {{ articleRelated.content | strip_html | truncate: 100 }}
+          {% comment %} {%- endif -%} {% endcomment %}
         </div>
       {%- endif -%}
 
       {%- if show_readMore -%}
-        {% if articleRelated.metafields.accentuate.read_more_button_text != blank %}
-          <a
-            href="{{ articleRelated.url }}"
-            class="link--primary"
-            aria-label="Read More About {{ articleRelated.title }}"
-            title="Read More About {{ articleRelated.title }}"
-          >
-            {{- articleRelated.metafields.accentuate.read_more_button_text -}}
-          </a>
-        {% else %}
-          <a
-            href="{{ articleRelated.url }}"
-            class="link--primary"
-            aria-label="Read More About {{ articleRelated.title }}"
-            title="Read More About {{ articleRelated.title }}"
-            >Read More</a
-          >
-        {%- endif -%}
-      {% endif %}
+        <a
+          href="{{ articleRelated.url }}"
+          class="more-btn"
+          aria-label="Read More About {{ articleRelated.title }}"
+          title="Read More About {{ articleRelated.title }}"
+          >Read More</a
+        >
+      {%- endif -%}
     </div>
   </div>
 </div>

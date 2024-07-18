@@ -1,95 +1,137 @@
-.faq-section-with-category,
-.faq-section {
-  padding-top: 82px;
-  padding-bottom: 100px;
-  &.pdp-faq {
-    padding: 0;
+.faq-section-with-category {
+  padding-top: 76.9px;
+  // padding-bottom: 100px;
+  position: relative;
+  &:after {
+    background: url(graphic-faq-page.svg) no-repeat top / 192px;
+    width: 192px;
+    height: 671px;
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 10%;
+    z-index: -1;
+    @include MQ(MQ-768) {
+      display: none;
+    }
+  }
+  &:before {
+    width: 25px;
+    height: 34px;
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 98px;
+    margin: 0 auto;
+    z-index: 1;
+    top: -20px;
+    background: url(star-large.webp) no-repeat center right / 25px;
+    @include MQ(MQ-768) {
+      display: none;
+    }
   }
   @include MQ(MQ-768) {
     padding-top: 0;
     margin-top: 30px;
-    padding-bottom: 60px;
+    // padding-bottom: 60px;
   }
-  .container-1380 {
-    @include MQ(MQ-768) {
-      flex-direction: column;
-    }
-  }
-  .left-content {
-    padding-left: 30px;
-    padding-right: 60px;
-    -webkit-box-pack: start;
-    justify-content: flex-start;
-    width: 35.15%;
-    display: flex;
-    @include MQ(MQ-768) {
-      padding: 30px 20px 40px 20px !important;
-      border-top: 1px solid $color-black;
-      border-bottom: 1px solid $color-black;
-      max-width: 100% !important;
-      margin-right: 0;
-      width: 100%;
-    }
-    @include MQ(MQ-1024) {
-      padding-left: 0;
-      padding-right: 50px;
-      max-width: 300px;
-      width: 100%;
-    }
-    .inner {
-      max-width: 300px;
-      width: 100%;
-      @include MQ(MQ-768) {
-        max-width: 100%;
-        h2 {
-          width: 90%;
+  .faq-scroll-btns {
+    margin-bottom: 41.6px;
+    .faq-category-sidepanel {
+      margin-left: -25px;
+      width: calc(100% - 25px);
+      flex-wrap: wrap;
+      display: flex !important;
+      li {
+        margin-left: 25px;
+        min-width: 118px;
+        width: fit-content;
+        .faq-btn {
+          display: block;
+          width: 100%;
+          padding: 16.3px 29.9px 14.3px;
+          border: solid 1px rgba(255, 200, 43, 0.36);
+          background-image: linear-gradient(
+            to bottom,
+            #fff8e3 0%,
+            #fff8e1 100%
+          );
+          font-family: var(--font-family-primary);
+          font-size: 14px;
+          font-weight: 900;
+          line-height: 1.29;
+          letter-spacing: 1px;
+          text-align: center;
+          text-transform: uppercase;
         }
       }
-    }
-    .h3 {
-      line-height: 1.15;
-      margin-bottom: 10px;
-      @include MQ(MQ-480) {
-        font-size: 30px;
-        line-height: 1.13;
-      }
-    }
-    .link--primary {
-      margin-top: 17px;
-      display: inline-block;
       @include MQ(MQ-768) {
-        margin-top: 20px;
+        display: none !important;
       }
     }
-  }
-  .container-669 {
-    width: 100%;
-    max-width: 669px;
-    // padding-left:px;
-    @include MQ(MQ-768) {
-      padding-top: 79px;
-      padding-left: 0 !important;
-      max-width: 100%;
+    .faq-dropdown {
+      display: none;
+      width: 100%;
+      @include MQ(MQ-768) {
+        display: block;
+      }
+      select {
+        padding: 15px 24px;
+        border: solid 1px rgba(255, 200, 43, 0.36);
+        background-image: linear-gradient(to bottom, #fff8e3 0%, #fff8e1 100%);
+        font-family: var(--font-family-primary);
+        font-size: 14px;
+        font-weight: 900;
+        line-height: 1.29;
+        letter-spacing: 1px;
+        width: 100%;
+        text-transform: uppercase;
+        appearance: none;
+        background: url(dropdown-arrow.svg) no-repeat right 20px center/12px,
+          linear-gradient(to bottom, #fff8e3, #fff8e1);
+        cursor: pointer;
+      }
     }
   }
   .accordian {
     padding-top: 17px;
+    position: relative;
+    &::before {
+      width: 81px;
+      height: 84px;
+      content: "";
+      position: absolute;
+      right: -110px;
+      z-index: 1;
+      top: 37%;
+      background: url(rocket.webp) no-repeat center / 100%;
+      @include MQ(MQ-768) {
+        display: none;
+      }
+    }
     @include MQ(MQ-768) {
       padding-top: 0;
     }
     li {
-      border-bottom: 1px solid $color-black;
-      padding: 26px 0 25px;
+      border: 1px solid $color-black;
+      padding: 22px 0px 22px;
+      margin-bottom: 20px;
       position: relative;
+      background: $color-white;
       @include MQ(MQ-768) {
-        padding-left: 20px;
-        padding-right: 20px;
+        margin-bottom: 15px;
+        padding: 13px 0px 10px;
       }
       &.heading {
-        padding-top: 69px;
-        padding-bottom: 6px;
+        padding-top: 20px;
+        padding-bottom: 0px;
+        border: 0;
+        margin-bottom: 15.8px;
+        background: transparent;
         @include MQ(MQ-768) {
-          padding-top: 60px;
+          margin-bottom: 11.3px;
+          padding-top: 17px;
+          padding: 13px 0px 10px;
         }
         @include MQ(MQ-768) {
           padding-left: 0px;
@@ -102,16 +144,22 @@
       .icon-plus {
         display: block;
         position: absolute;
-        left: 0;
+        right: 18px;
         top: 29px;
         cursor: pointer;
+        @include MQ(MQ-768) {
+          top: calc(50% - 7.5px);
+        }
       }
       .icon-minus {
         display: none;
         position: absolute;
-        left: 0;
+        right: 18px;
         top: 29px;
         cursor: pointer;
+        @include MQ(MQ-768) {
+          top: calc(50%);
+        }
       }
       &.active {
         .icon-plus {
@@ -120,6 +168,9 @@
         .icon-minus {
           display: block;
           top: 35px;
+          @include MQ(MQ-768) {
+            top: 27px;
+          }
         }
         .h5 {
           font-weight: bold;
@@ -130,26 +181,52 @@
         }
       }
       .h5 {
-        font-size: 16px;
-        line-height: 1.38;
+        font-size: 14px;
+        line-height: 1.57;
         font-family: var(--font-family-primary);
         font-weight: normal;
-        padding-left: 39px;
+        padding-right: 18px;
+        padding-left: 28px;
         z-index: 1;
         position: relative;
         cursor: pointer;
         @include MQ(MQ-768) {
-          padding-left: 22px;
+          padding-left: 20px;
+          padding-right: 35px;
         }
       }
       .content {
         line-height: 1.5;
-        padding-top: 12px;
-        padding-left: 39px;
+        padding-top: 13px;
+        padding-left: 28px;
+        padding-right: 18px;
+        border-top: 1px solid $color-black;
+        margin-top: 20px;
+
         display: none;
         @include MQ(MQ-768) {
           padding-left: 22px;
         }
+        p {
+          font-size: 14px;
+          line-height: 1.57;
+        }
+      }
+    }
+  }
+  .container-944 {
+    position: relative;
+    &:before {
+      position: absolute;
+      content: "";
+      left: 112px;
+      top: -82px;
+      background: url(star-large-white.webp) no-repeat center / 100%;
+      width: 31.1px;
+      height: 41.6px;
+      z-index: 2;
+      @include MQ(MQ-768) {
+        display: none;
       }
     }
   }

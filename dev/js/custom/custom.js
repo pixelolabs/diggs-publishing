@@ -39,6 +39,39 @@ jQuery(function() {
         
     });
 
+//RElated Article slider
+var productSectionSlider = new Swiper(".js__article-slider", {
+    slidesPerView: 3,
+    spaceBetween: 32,
+    // centeredSlides: true,
+    // resistance: false,
+    loop:true,
+    resistance: false,
+    shortSwipes: true,
+    longSwipes: false,
+    // scrollOverflowOptions: null,
+    // loopedSlidesLimit: false,
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        769: {
+            slidesPerView: 2,
+        },
+        1025: {
+            slidesPerView: 3,
+           
+        },
+    },
+    navigation: {
+        nextEl: ".swiper-button-next-article-section",
+        prevEl: ".swiper-button-prev-article-section",
+    }
+    
+});
+
+
+
     var reviewSectionSlider = new Swiper(".js__review-slider", {
         slidesPerView: 2,
         spaceBetween: 14,
@@ -441,6 +474,27 @@ jQuery(function() {
 
 /** Dropdown **/
 jQuery(function($) {
+/*FAQ Drop down*/
+$(".drop-down-outer select option").each(function() {
+    if (this.value === path) {
+        this.setAttribute("selected", true);
+    }
+});
+
+$(".js__faq-dropdown").change(function() {
+    var sectionID = this.value;
+    var target = $(sectionID);
+    $("html, body").animate({
+            scrollTop: target.offset().top - 200,
+        },
+        500
+    );
+});
+
+
+
+
+
     $(".js__cate-accordian .togglebtn h3").on("click", function() {
 
         if ($(".js__cate-accordian").children(".rem").css("display") == "none") {

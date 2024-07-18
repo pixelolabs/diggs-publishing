@@ -1,5 +1,11 @@
 {
   "sections": {
+    "innerBanner": {
+      "type": "inner-hero-section",
+      "settings": {
+        
+      }
+    },
     "faq_accordion_simple_zkHQEp": {
       "type": "faq-accordion-simple",
       "blocks": {
@@ -145,6 +151,7 @@
     }
   },
   "order": [
+    "innerBanner",
     "faq_accordion_simple_zkHQEp",
     "faq_accordion_with_category_WVAQbz",
     "faq_accordian_section_mLBbic"
