@@ -47,14 +47,12 @@
           {%- for block in section.blocks -%}
             {%- case block.type -%}
               {%- when 'list' -%}
-                <option
-                  value="
-                    #{{block.settings.heading | remove: ',' | remove: '-' | remove: ' ' | remove: '&' | remove: "'" | remove: '
-                    (' | remove: ')' }}
-                  "
-                >
-                  {{ block.settings.heading }}
-                </option>
+                {% assign category = block.settings.heading | replace: ' ', '-' %}
+                {% assign category = category | replace: "'", '-' %}
+                {% assign category = category | replace: '--', '-' %}
+                {% assign category = category | replace: '---', '-' %}
+                {% assign category = category | downcase %}
+                <option value="#{{category}}">{{ block.settings.heading }}</option>
             {%- endcase -%}
           {%- endfor -%}
         </select>
