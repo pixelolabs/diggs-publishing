@@ -35,6 +35,47 @@
     <div
       class="container-669"
     >
+      <div class="js__faq-category-side-panel hide">
+        <ul class="text-center faq-category-sidepanel ipad-none">
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'list' -%}
+                <li>
+                  <a
+                    title="{{block.settings.heading}}"
+                    href="
+                      #{{block.settings.heading | remove: ',' | remove: '-' | remove: ' ' | remove: '&' | remove: "'" | remove: '
+                      (' | remove: ')' }}
+                    "
+                  >
+                    {{- block.settings.heading -}}
+                  </a>
+                </li>
+            {%- endcase -%}
+          {%- endfor -%}
+        </ul>
+        <div class="dropdown ipad-block">
+          <p class="js__dropdown_result selected capitalize">Select Category</p>
+          <ul class="js__dropdown">
+            {%- for block in section.blocks -%}
+              {%- case block.type -%}
+                {%- when 'list' -%}
+                  <li>
+                    <a
+                      title="{{block.settings.heading}}"
+                      href="
+                        #{{block.settings.heading | remove: ',' | remove: '-' | remove: ' ' | remove: '&' | remove: "'" | remove: '
+                        (' | remove: ')' }}
+                      "
+                    >
+                      {{- block.settings.heading -}}
+                    </a>
+                  </li>
+              {%- endcase -%}
+            {%- endfor -%}
+          </ul>
+        </div>
+      </div>
       <ul
         class="accordian js__accordian"
       >
