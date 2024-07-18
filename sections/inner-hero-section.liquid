@@ -85,15 +85,17 @@
       {% endif %}
     </div>
   {% else %}
-    <div class="image-section {% if section.settings.gradient == true %} gradient{%endif%}">
-      <picture>
-        <source
-          media="(max-width: 480px)"
-          srcset="{% if section.settings.mobileImage != blank %}{{ section.settings.mobileImage | img_url: '750x1400' }}   {% endif %}"
-        >
-        {{ section.settings.image | image_url: width: 2880 | image_tag: loading: 'lazy', widths: '2880x1620' }}
-      </picture>
-    </div>
+    {% if section.settings.image != blank %}
+      <div class="image-section {% if section.settings.gradient == true %} gradient{%endif%}">
+        <picture>
+          <source
+            media="(max-width: 480px)"
+            srcset="{% if section.settings.mobileImage != blank %}{{ section.settings.mobileImage | img_url: '750x1400' }}   {% endif %}"
+          >
+          {{ section.settings.image | image_url: width: 2880 | image_tag: loading: 'lazy', widths: '2880x1620' }}
+        </picture>
+      </div>
+    {% endif %}
   {% endif %}
   <div
     class="
