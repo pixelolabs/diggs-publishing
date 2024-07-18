@@ -5,123 +5,123 @@
       <div class="container-880">
         {% comment %}
           <div class="top-section">
-            <div class="search-section">
-              {% if section.settings.searchTitle != blank %}
-                <h2 class="h3">{{ section.settings.searchTitle }}</h2>
-              {% endif %}
-              <div class="full-format small">
-                {{ section.settings.searchDescription }}
-              </div>
+          <div class="search-section">
+            {% if section.settings.searchTitle != blank %}
+              <h2 class="h3">{{ section.settings.searchTitle }}</h2>
+            {% endif %}
+            <div class="full-format small">
+              {{ section.settings.searchDescription }}
+            </div>
 
-              <form
-                class="search-bar flex"
+            <form
+              class="search-bar flex"
 
-                data-np-autofill-form-type="other"
-                data-np-checked="1"
-                data-np-watching="1"
+              data-np-autofill-form-type="other"
+              data-np-checked="1"
+              data-np-watching="1"
+            >
+              {% include 'icon-search' %}
+              <input
+                type="text"
+                placeholder="I need help with"
+                onkeydown="return (event.keyCode!=13);"
+                id="txt-faq-search"
               >
-                {% include 'icon-search' %}
-                <input
-                  type="text"
-                  placeholder="I need help with"
-                  onkeydown="return (event.keyCode!=13);"
-                  id="txt-faq-search"
-                >
-                <a class="btn--primary js__btn-faq-search">Search</a>
-              </form>
-            </div>
-            <div class="filter-section category-section">
-              <h2 class="h3 ipad-none">Or select from the following FAQ topics:</h2>
-              <ul class="flex-wrap ipad-none">
-                {% for block in section.blocks %}
-                  {%- case block.type -%}
-                    {%- when 'category' -%}
-                      {% if block.settings.title != blank %}
-                        <li>
-                          <a
-                            class="tab-link btn--tertiary"
-                            title="{{block.settings.title}}"
-                            data-attr="tab-{{block.settings.title | downcase | remove: ' ' }}"
-                          >
-                            {{ block.settings.title }}
-                          </a>
-                        </li>
-                      {% endif %}
-                  {% endcase %}
-                {% endfor %}
-              </ul>
-              <select class="custom-dropdown-select dropdown-select ipad-block">
-                <option value="all">All FAQS</option>
-                {% for block in section.blocks %}
-                  {%- case block.type -%}
-                    {%- when 'category' -%}
-                      {% if block.settings.title != blank %}
-                        <option value="{{block.settings.title | downcase | remove: ' ' }}">
-                          {{ block.settings.title }}
-                        </option>
-                      {% endif %}
-                  {% endcase %}
-                {% endfor %}
-              </select>
-            </div>
+              <a class="btn--primary js__btn-faq-search">Search</a>
+            </form>
           </div>
         {% endcomment %}
-
-        <div class="result-section js__faq-tab">
-          {%- for block in section.blocks -%}
-            {%- case block.type -%}
-              {%- when 'category' -%}
-                <div class="tab-content js__tab-content" id="tab-{{ block.settings.title | downcase | remove: ' ' }}">
-                  <h2 class="h3 ipad-none">{{ block.settings.title }}</h2>
-                  {% assign category = block.settings.title | downcase | remove: ' ' %}
-                  <div class="accordian-section">
-                    <ul class="accordian js__accordian">
-                      {%- for block in section.blocks -%}
-                        {%- case block.type -%}
-                          {%- when 'list' -%}
-                            {% assign categoryFAQ = block.settings.categoryFAQ | downcase | remove: ' ' %}
-                            {% if categoryFAQ == category %}
-                              {% if block.settings.faqAnswer != blank %}
-                                <li>
-                                  <h3 class="h5">{{ block.settings.title }}</h3>
-
-                                  <div class=" content full-format">
-                                    {{ block.settings.faqAnswer }}
-                                  </div>
-                                </li>
-                              {% endif %}
-                            {% endif %}
-                        {% endcase %}
-                      {% endfor %}
-                    </ul>
-                  </div>
-                </div>
-            {% endcase %}
-          {% endfor %}
-        </div>
-
-        <div class="result-section js__faq-search-section hide">
-          <div class="tab-content" style="display:block !important">
-            <div class="accordian-section">
-              <ul class="accordian js__accordian js__faq-search">
-                {%- for block in section.blocks -%}
-                  {% if block.settings.faqAnswer != blank %}
+        <div class="filter-section category-section">
+          <h2 class="h3 ipad-none">Or select from the following FAQ topics:</h2>
+          <ul class="flex-wrap ipad-none">
+            {% for block in section.blocks %}
+              {%- case block.type -%}
+                {%- when 'category' -%}
+                  {% if block.settings.title != blank %}
                     <li>
-                      <h3 class="h5">{{ block.settings.title }}</h3>
-
-                      <div class=" content full-format">
-                        {{ block.settings.faqAnswer }}
-                      </div>
+                      <a
+                        class="tab-link btn--tertiary"
+                        title="{{block.settings.title}}"
+                        data-attr="tab-{{block.settings.title | downcase | remove: ' ' }}"
+                      >
+                        {{ block.settings.title }}
+                      </a>
                     </li>
                   {% endif %}
-                {% endfor %}
-              </ul>
-            </div>
+              {% endcase %}
+            {% endfor %}
+          </ul>
+          <select class="custom-dropdown-select dropdown-select ipad-block">
+            <option value="all">All FAQS</option>
+            {% for block in section.blocks %}
+              {%- case block.type -%}
+                {%- when 'category' -%}
+                  {% if block.settings.title != blank %}
+                    <option value="{{block.settings.title | downcase | remove: ' ' }}">
+                      {{ block.settings.title }}
+                    </option>
+                  {% endif %}
+              {% endcase %}
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+
+      <div class="result-section js__faq-tab">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'category' -%}
+              <div class="tab-content js__tab-content" id="tab-{{ block.settings.title | downcase | remove: ' ' }}">
+                <h2 class="h3 ipad-none">{{ block.settings.title }}</h2>
+                {% assign category = block.settings.title | downcase | remove: ' ' %}
+                <div class="accordian-section">
+                  <ul class="accordian js__accordian">
+                    {%- for block in section.blocks -%}
+                      {%- case block.type -%}
+                        {%- when 'list' -%}
+                          {% assign categoryFAQ = block.settings.categoryFAQ | downcase | remove: ' ' %}
+                          {% if categoryFAQ == category %}
+                            {% if block.settings.faqAnswer != blank %}
+                              <li>
+                                <h3 class="h5">{{ block.settings.title }}</h3>
+
+                                <div class=" content full-format">
+                                  {{ block.settings.faqAnswer }}
+                                </div>
+                              </li>
+                            {% endif %}
+                          {% endif %}
+                      {% endcase %}
+                    {% endfor %}
+                  </ul>
+                </div>
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+
+      <div class="result-section js__faq-search-section hide">
+        <div class="tab-content" style="display:block !important">
+          <div class="accordian-section">
+            <ul class="accordian js__accordian js__faq-search">
+              {%- for block in section.blocks -%}
+                {% if block.settings.faqAnswer != blank %}
+                  <li>
+                    <h3 class="h5">{{ block.settings.title }}</h3>
+
+                    <div class=" content full-format">
+                      {{ block.settings.faqAnswer }}
+                    </div>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
           </div>
         </div>
-        <p class="js__no-data-found hide">No Data Found</p>
       </div>
+      <p class="js__no-data-found hide">No Data Found</p>
     </div>
+  </div>
   </div>
 {%- endif -%}
 
