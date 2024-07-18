@@ -130,38 +130,25 @@
           </p>
         </div>
       {%- endif -%}
-      {%- if show_moreshortdescription -%}
-        <div class="description">
-          <p>
-            {%- if articleRelated.excerpt.size > 0 -%}
-              {{ articleRelated.excerpt }}
-            {%- else -%}
-              {{ articleRelated.content | strip_html | truncate: 60 }}
-            {%- endif -%}
-          </p>
-        </div>
-      {%- endif -%}
 
       {%- if show_readMore -%}
-        {% if articleRelated.metafields.accentuate.read_more_button_text != blank %}
-          <a
-            href="{{ articleRelated.url }}"
-            class="link--primary"
-            aria-label="Read More About {{ articleRelated.title }}"
-            title="Read More About {{ articleRelated.title }}"
-          >
-            {{- articleRelated.metafields.accentuate.read_more_button_text -}}
-          </a>
-        {% else %}
-          <a
-            href="{{ articleRelated.url }}"
-            class="link--primary"
-            aria-label="Read More About {{ articleRelated.title }}"
-            title="Read More About {{ articleRelated.title }}"
-            >Read More</a
-          >
-        {%- endif -%}
-      {% endif %}
+        <a
+          href="{{ articleRelated.url }}"
+          class="more-btn"
+          aria-label="Read More About {{ articleRelated.title }}"
+          title="Read More About {{ articleRelated.title }}"
+        >
+          {{- articleRelated.metafields.accentuate.read_more_button_text -}}
+        </a>
+
+        <a
+          href="{{ articleRelated.url }}"
+          class="link--primary"
+          aria-label="Read More About {{ articleRelated.title }}"
+          title="Read More About {{ articleRelated.title }}"
+          >Read More</a
+        >
+      {%- endif -%}
     </div>
   </div>
 </div>
