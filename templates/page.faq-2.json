@@ -20,6 +20,55 @@
         "content_alignment": "left"
       }
     },
+    "faq_accordion_simple_bFU4Lf": {
+      "type": "faq-accordion-simple",
+      "blocks": {
+        "question_MCMfnV": {
+          "type": "question",
+          "settings": {
+            "title": "what is this?",
+            "faqAnswer": ""
+          }
+        }
+      },
+      "block_order": [
+        "question_MCMfnV"
+      ],
+      "settings": {
+        "title": "",
+        "description": "",
+        "linkText": "",
+        "textLink": ""
+      }
+    },
+    "faq_accordion_with_category_h3NLVb": {
+      "type": "faq-accordion-with-category",
+      "blocks": {
+        "list_anUH39": {
+          "type": "list",
+          "settings": {
+            "heading": "category 1"
+          }
+        },
+        "question_te3VP6": {
+          "type": "question",
+          "settings": {
+            "title": "what is this?",
+            "faqAnswer": ""
+          }
+        }
+      },
+      "block_order": [
+        "list_anUH39",
+        "question_te3VP6"
+      ],
+      "settings": {
+        "title": "",
+        "description": "",
+        "linkText": "",
+        "textLink": ""
+      }
+    },
     "faq_accordian_section_mLBbic": {
       "type": "faq-accordian-section",
       "blocks": {
@@ -44,28 +93,12 @@
             "title": "Title\/Question",
             "faqAnswer": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
           }
-        },
-        "category_HrRbCq": {
-          "type": "category",
-          "settings": {
-            "title": "Category 2"
-          }
-        },
-        "list_aXPW9g": {
-          "type": "list",
-          "settings": {
-            "categoryFAQ": "Category 2",
-            "title": "Title\/Question",
-            "faqAnswer": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
-          }
         }
       },
       "block_order": [
         "category_QaV3w9",
         "list_yTDmyq",
-        "list_aLyjrg",
-        "category_HrRbCq",
-        "list_aXPW9g"
+        "list_aLyjrg"
       ],
       "settings": {
         "title": "Title",
@@ -78,6 +111,8 @@
   },
   "order": [
     "innerBanner",
+    "faq_accordion_simple_bFU4Lf",
+    "faq_accordion_with_category_h3NLVb",
     "faq_accordian_section_mLBbic"
   ]
 }
