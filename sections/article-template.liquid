@@ -231,9 +231,9 @@
   var relatedList = $('.js__realated-articles').children('.article-card'),
     relatedListArray = [];
   /* If no posts - then hide the section */
-  if (relatedList.length === 0) {
+  {% comment %} if (relatedList.length === 0) {
     $('.related-posts').hide();
-  }
+  } {% endcomment %}
   /* get the current postID */
   var currentArticleID = $('article').attr('data-article-id');
   /* go through the loop of the postArray List */
