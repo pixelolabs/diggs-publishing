@@ -962,8 +962,8 @@ jQuery(function () {
       }
     },
     navigation: {
-      nextEl: ".swiper-button-next-product-section",
-      prevEl: ".swiper-button-prev-product-section"
+      nextEl: ".swiper-button-next-article-section",
+      prevEl: ".swiper-button-prev-article-section"
     }
   });
   var reviewSectionSlider = new Swiper(".js__review-slider", {
