@@ -12,55 +12,10 @@
   }
 {%- endstyle -%}
 <div class="inner-hero-section {% if section.settings.smallHeight == true %} small {% endif %} section-{{ section.id }}-padding color-{{ section.settings.color_scheme }}">
-  {%- if section.settings.videobanner -%}
-    <div class="video-section {% if section.settings.gradient == true %} gradient{%endif%}">
-      <div class="video-wrapper none-980">
-        {% if section.settings.video contains '.mp4' %}
-          <video
-            muted
-            loop
-            autoplay
-          >
-            <source src="{{ section.settings.video }}" type="video/mp4">
-          </video>
-        {% else %}
-          {% if section.settings.video != blank %}
-            {% assign videoId = section.settings.video | split: 'vimeo.com/' %}
-            <iframe
-              src="https://player.vimeo.com/video/{{ videoId[1] }}?loop=1&autoplay=1&muted=1"
-              frameborder="0"
-              allow="fullscreen"
-              allowfullscreen
-              loading="lazy"
-            ></iframe>
-          {% endif %}
-        {% endif %}
-      </div>
-      {% if section.settings.videoMobile != blank %}
-        <div class="video-wrapper block-980">
-          {% if section.settings.videoMobile contains '.mp4' %}
-            <video
-              muted
-              loop
-              autoplay
-            >
-              <source src="{{ section.settings.videoMobile }}" type="video/mp4">
-            </video>
-          {% else %}
-            {% if section.settings.videoMobile != blank %}
-              {% assign videoId = section.settings.videoMobile | split: 'vimeo.com/' %}
-              <iframe
-                src="https://player.vimeo.com/video/{{ videoId[1] }}?loop=1&autoplay=1&muted=1"
-                frameborder="0"
-                allow="fullscreen"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
-            {% endif %}
-          {% endif %}
-        </div>
-      {% else %}
-        <div class="video-wrapper block-980">
+  {% comment %}
+    {%- if section.settings.videobanner -%}
+      <div class="video-section {% if section.settings.gradient == true %} gradient{%endif%}">
+        <div class="video-wrapper none-980">
           {% if section.settings.video contains '.mp4' %}
             <video
               muted
@@ -82,21 +37,68 @@
             {% endif %}
           {% endif %}
         </div>
-      {% endif %}
-    </div>
-  {% else %}
-    {% if section.settings.image != blank %}
-      <div class="image-section {% if section.settings.gradient == true %} gradient{%endif%}">
-        <picture>
-          <source
-            media="(max-width: 480px)"
-            srcset="{% if section.settings.mobileImage != blank %}{{ section.settings.mobileImage | img_url: '750x1400' }}   {% endif %}"
-          >
-          {{ section.settings.image | image_url: width: 2880 | image_tag: loading: 'lazy', widths: '2880x1620' }}
-        </picture>
+        {% if section.settings.videoMobile != blank %}
+          <div class="video-wrapper block-980">
+            {% if section.settings.videoMobile contains '.mp4' %}
+              <video
+                muted
+                loop
+                autoplay
+              >
+                <source src="{{ section.settings.videoMobile }}" type="video/mp4">
+              </video>
+            {% else %}
+              {% if section.settings.videoMobile != blank %}
+                {% assign videoId = section.settings.videoMobile | split: 'vimeo.com/' %}
+                <iframe
+                  src="https://player.vimeo.com/video/{{ videoId[1] }}?loop=1&autoplay=1&muted=1"
+                  frameborder="0"
+                  allow="fullscreen"
+                  allowfullscreen
+                  loading="lazy"
+                ></iframe>
+              {% endif %}
+            {% endif %}
+          </div>
+        {% else %}
+          <div class="video-wrapper block-980">
+            {% if section.settings.video contains '.mp4' %}
+              <video
+                muted
+                loop
+                autoplay
+              >
+                <source src="{{ section.settings.video }}" type="video/mp4">
+              </video>
+            {% else %}
+              {% if section.settings.video != blank %}
+                {% assign videoId = section.settings.video | split: 'vimeo.com/' %}
+                <iframe
+                  src="https://player.vimeo.com/video/{{ videoId[1] }}?loop=1&autoplay=1&muted=1"
+                  frameborder="0"
+                  allow="fullscreen"
+                  allowfullscreen
+                  loading="lazy"
+                ></iframe>
+              {% endif %}
+            {% endif %}
+          </div>
+        {% endif %}
       </div>
-    {% endif %}
+    {% else %}
+  {% endcomment %}
+  {% if section.settings.image != blank %}
+    <div class="image-section {% if section.settings.gradient == true %} gradient{%endif%}">
+      <picture>
+        <source
+          media="(max-width: 480px)"
+          srcset="{% if section.settings.mobileImage != blank %}{{ section.settings.mobileImage | img_url: '750x1400' }}   {% endif %}"
+        >
+        {{ section.settings.image | image_url: width: 2880 | image_tag: loading: 'lazy', widths: '2880x1620' }}
+      </picture>
+    </div>
   {% endif %}
+  {% comment %} {% endif %} {% endcomment %}
   <div
     class="
       container-1240 {% if section.settings.content_alignment == "center" %} center--align {% endif %} {% if section.settings.content_alignment == "right" %} right--align {% endif %}{% if
@@ -172,24 +174,6 @@
       "id": "mobileImage",
       "label": "Background Image (Mobile)",
       "info": "750 x 1400px Recommended"
-    },
-    {
-      "type": "url",
-      "id": "video",
-      "label": "Background Video",
-      "info": "Add video type as video/mp4 or vimeo"
-    },
-    {
-      "type": "url",
-      "id": "videoMobile",
-      "label": "Background Video (Mobile)",
-      "info": "Add video type as video/mp4 or vimeo"
-    },
-    {
-      "type": "checkbox",
-      "id": "videobanner",
-      "label": "Video Banner",
-      "default": false
     },
     {
       "type": "header",
