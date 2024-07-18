@@ -287,13 +287,10 @@
           "buttonText2": "",
           "buttonLink2": "",
           "content_alignment": "left",
-          "smallHeight": false,
           "paddingtop": 0,
           "paddingtopmobile": 0,
           "paddingbottom": 0,
-          "paddingbottomMobile": 0,
-          "pageBanner": true,
-          "gradient": false
+          "paddingbottomMobile": 0
         }
       }
     },
