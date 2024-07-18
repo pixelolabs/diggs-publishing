@@ -43,19 +43,22 @@
             {%- endfor -%}
           </ul>
         {% endcomment %}
-        <select class="js__faq-dropdown">
-          {%- for block in section.blocks -%}
-            {%- case block.type -%}
-              {%- when 'list' -%}
-                {% assign category = block.settings.heading | replace: ' ', '-' %}
-                {% assign category = category | replace: "'", '-' %}
-                {% assign category = category | replace: '--', '-' %}
-                {% assign category = category | replace: '---', '-' %}
+        <div class="drop-down-outer">
+          <h5 class="text-center">Select FAQ Category</h5>
+          <select class="js__faq-dropdown">
+            {%- for block in section.blocks -%}
+              {%- case block.type -%}
+                {%- when 'list' -%}
+                  {% assign category = block.settings.heading | replace: ' ', '-' %}
+                  {% assign category = category | replace: "'", '-' %}
+                  {% assign category = category | replace: '--', '-' %}
+                  {% assign category = category | replace: '---', '-' %}
 
-                <option value="#{{category}}">{{ block.settings.heading }}</option>
-            {%- endcase -%}
-          {%- endfor -%}
-        </select>
+                  <option value="#{{category}}">{{ block.settings.heading }}</option>
+              {%- endcase -%}
+            {%- endfor -%}
+          </select>
+        </div>
       </div>
     </div>
     <ul class="accordian js__accordian">
