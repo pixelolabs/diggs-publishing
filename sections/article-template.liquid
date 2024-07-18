@@ -191,37 +191,37 @@
     </div>
 
     <div class="inner-wrapper flex js__realated-articles">
-      {% for tag in article.tags limit: 2 %}
-        {% assign counter = 0 %}
-        {% assign skip_articles = article.handle | split: '.....' %}
-        {% for related_article in blog.articles %}
-          {% if related_article.tags contains tag and counter < 1 %}
-            {% unless skip_articles contains related_article.handle %}
-              {% assign counter = counter | plus: 1 %}
-              {% assign temp = related_article.handle | split: '.....' %}
-              {% assign skip_articles = skip_articles | concat: temp %}
-              <div class="slider-outer">
-                <div class="slider js__article-slider">
-                  <div class="swiper-wrapper">
+      <div class="slider-outer">
+        <div class="slider js__article-slider">
+          <div class="swiper-wrapper">
+            {% for tag in article.tags limit: 2 %}
+              {% assign counter = 0 %}
+              {% assign skip_articles = article.handle | split: '.....' %}
+              {% for related_article in blog.articles %}
+                {% if related_article.tags contains tag and counter < 1 %}
+                  {% unless skip_articles contains related_article.handle %}
+                    {% assign counter = counter | plus: 1 %}
+                    {% assign temp = related_article.handle | split: '.....' %}
+                    {% assign skip_articles = skip_articles | concat: temp %}
                     <div class="articlecard--outer slide" data-article-id="{{related_article.id}}">
                       {%
                         include 'article_Card' with articleRelated: related_article, show_tags: true, show_shortdescription: true, show_readMore:
                         true
                       %}
                     </div>
-                  </div>
-                </div>
-                <div class="swiper-button-prev-article-slider">
-                  {% include 'icon-arrow-slide-black' %}
-                </div>
-                <div class="swiper-button-next-article-slider">
-                  {% include 'icon-arrow-slide-black' %}
-                </div>
-              </div>
-            {% endunless %}
-          {% endif %}
-        {% endfor %}
-      {% endfor %}
+                  {% endunless %}
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </div>
+        </div>
+        <div class="swiper-button-prev-article-slider">
+          {% include 'icon-arrow-slide-black' %}
+        </div>
+        <div class="swiper-button-next--slider">
+          {% include 'icon-arrow-slide-black' %}
+        </div>
+      </div>
     </div>
   </div>
 </div>
