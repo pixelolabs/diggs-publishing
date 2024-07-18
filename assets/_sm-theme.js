@@ -1261,8 +1261,11 @@ jQuery(function () {
       }
     }
   });
-  /*FAQ Drop down*/
+});
+/** Dropdown **/
 
+jQuery(function ($) {
+  /*FAQ Drop down*/
   $(".drop-down-outer select option").each(function () {
     if (this.value === path) {
       this.setAttribute("selected", true);
@@ -1275,10 +1278,6 @@ jQuery(function () {
       scrollTop: target.offset().top - 200
     }, 500);
   });
-});
-/** Dropdown **/
-
-jQuery(function ($) {
   $(".js__cate-accordian .togglebtn h3").on("click", function () {
     if ($(".js__cate-accordian").children(".rem").css("display") == "none") {
       $(".rem").slideDown(300);
