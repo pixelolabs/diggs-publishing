@@ -6,14 +6,15 @@
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when 'list' -%}
+              {% assign category = block.settings.heading | replace: ' ', '-' %}
+              {% assign category = category | replace: "'", '-' %}
+              {% assign category = category | replace: '--', '-' %}
+              {% assign category = category | replace: '---', '-' %}
               <li>
                 <a
                   class="faq-btn"
                   title="{{block.settings.heading}}"
-                  href="
-                    #{{block.settings.heading | remove: ',' | remove: '-' | remove: ' ' | remove: '&' | remove: "'" | remove: '
-                    (' | remove: ')' }}
-                  "
+                  href="#{{ category }}"
                 >
                   {{- block.settings.heading -}}
                 </a>
