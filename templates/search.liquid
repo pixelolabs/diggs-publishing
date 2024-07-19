@@ -1,0 +1,81 @@
+<div class="search-section"></div>
+{% paginate search.results by 12 %}
+<div class="search-section">
+  <div class="inner-hero-section  white-bg">
+    <div class="container-1340 text-center">
+      {% if search.performed == false %}
+      <h1>
+        {{ 'general.search.title' | t }}
+      </h1>
+      {% else %}
+    
+      <h1>
+       
+        <span class="visually-hidden">{{ 'general.search.heading' | t: count: search.results_count }}:</span>
+        {{ 'general.search.results_with_count' | t: terms: search.terms, count: search.results_count }}
+      </h1>
+      {% endif %}
+      <div class="form-section text-center">
+        {% if search.performed and search.results_count == 0 %}
+        <div class="rte search--no-results-found">
+          <p>{{ 'general.search.no_results' | t }}</p>
+        </div>
+        {% endif %}
+        <form action="{{ routes.search_url }}" method="get" role="search" class="search-form search-page-form">
+          <input type=hidden name=type value="product,article,page">
+          <div class="input-group input-group--nowrap">
+            <div class="input-group__field input-group__field--connected search-form__input-wrapper">
+              <input type="search" name="q" value="{{ search.terms | escape }}"
+                placeholder="{{ 'general.search.placeholder' | t }}" role="combobox" aria-autocomplete="list"
+                aria-owns="predictive-search-results" aria-expanded="false"
+                aria-label="{{ 'general.search.placeholder' | t }}" aria-haspopup="listbox" class="search-form__input"
+                data-search-page-predictive-search-input data-base-url="{{ routes.search_url }}" />
+              <input type="hidden" name="options[prefix]" value="last" aria-hidden="true" />
+              <div class="predictive-search-wrapper" data-predictive-search-mount="default"></div>
+            </div>
+            <button type="submit" class="btn--primary" aria-label="{{ 'general.search.submit' | t }}"
+              data-search-page-predictive-search-submit>
+              Search
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    {% include 'graphic-bottom' %}
+  </div>
+  <div class="container-1380 ">
+    {% if search.performed %}
+    <h2 class="visually-hidden">{{ 'general.search.heading' | t: count: search.results_count }}</h2>
+    <ul class="collection__product-list flex-wrap">
+      {% for item in search.results %}
+      <li class="grid__item product-card">
+        {% if item.object_type == 'product' %}
+        {% include 'product_Card'  with  productRelated: item , show_price: true, show_tags: true, show_auto_tags: true, show_title: true, show_fav: true, show_secondary_button: true %}
+        {% else %}
+        <a class="product-wrapper" title="{{ item.title }}" href="{{ item.url }}" tabindex="0">
+          <div class="image-section">
+            <img src="{{ "search-image.webp" | asset_url }}" class="cover">
+          </div>
+          <div class="content">
+            <h3 class="h5 product-card__product-title uppercase">
+              {{ item.title }}
+              </h4>
+          </div>
+        </a>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {%- if paginate.pages > 1 -%}
+    {% include 'pagination', paginate: paginate %}
+    {%- endif -%}
+    {% endif %}
+    {% if search.results_count < 2  %}
+    <div class="search--less-than-2-results"></div>
+    {% endif %}
+    {% endpaginate %}
+  </div>
+</div>
+
+
+
