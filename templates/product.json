@@ -9,11 +9,6 @@
         "subscribeText": ""
       }
     },
-    "pdp_three_column_card_slider_RVxcGX": {
-      "type": "pdp-three-column-card-slider",
-      "settings": {
-      }
-    },
     "product_tab_section_g4EUiU": {
       "type": "product-tab-section",
       "settings": {
@@ -33,7 +28,6 @@
   },
   "order": [
     "product_gDBkfE",
-    "pdp_three_column_card_slider_RVxcGX",
     "product_tab_section_g4EUiU",
     "product_recommendations_maXkrb",
     "product_reviews_section_HHXAiU"

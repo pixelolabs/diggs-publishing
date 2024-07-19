@@ -1135,6 +1135,24 @@ jQuery(function () {
       prevEl: ".swiper-button-prev-small-product-slider "
     }
   });
+
+  if (window.location.href.indexOf("article&") > -1) {
+    $(".search-item").val("article");
+    $(".js__search-blog").addClass("active");
+  } else {
+    $(".search-item").val("product");
+    $(".js__search-product").addClass("active");
+  }
+
+  $(".js__search-type a").on("click", function () {
+    if ($(this).html().trim() == "Blog") {
+      $(".search-item").val("article");
+      $(".js__search-submit").click();
+    } else {
+      $(".search-item").val("product");
+      $(".js__search-submit").click();
+    }
+  });
   /* Collection selected*/
 
   $(document).ready(function ($) {
