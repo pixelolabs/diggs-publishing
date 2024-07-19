@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "product_gDBkfE": {
@@ -7,11 +16,6 @@
         "enable_payment_button": true,
         "onetimeText": "",
         "subscribeText": ""
-      }
-    },
-    "pdp_three_column_card_slider_RVxcGX": {
-      "type": "pdp-three-column-card-slider",
-      "settings": {
       }
     },
     "product_tab_section_g4EUiU": {
@@ -33,7 +37,6 @@
   },
   "order": [
     "product_gDBkfE",
-    "pdp_three_column_card_slider_RVxcGX",
     "product_tab_section_g4EUiU",
     "product_recommendations_maXkrb",
     "product_reviews_section_HHXAiU"
