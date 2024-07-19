@@ -1135,6 +1135,32 @@ jQuery(function () {
       prevEl: ".swiper-button-prev-small-product-slider "
     }
   });
+
+  if (window.location.href.indexOf("article&") > -1) {
+    $(".js__search-type").html("Show Product Results");
+    $(".search-item").val("article");
+    $(".js__search-title").html("Blog Posts");
+  } else {
+    $(".js__search-type").html("Show Blog Results");
+    $(".search-item").val("product");
+    $(".js__search-title").html("Products");
+  }
+
+  $(".js__search-type").on("click", function () {
+    console.log($(this).html());
+
+    if ($(this).html().trim() == "Show Blog Results") {
+      $(".search-item").val("article");
+      $(this).html("Show Product Results");
+      $(".js__search-title").html("Blog Posts");
+      $(".js__search-submit").click();
+    } else {
+      $(".search-item").val("product");
+      $(this).html("Show Blog Results");
+      $(".js__search-title").html("Products");
+      $(".js__search-submit").click();
+    }
+  });
   /* Collection selected*/
 
   $(document).ready(function ($) {
