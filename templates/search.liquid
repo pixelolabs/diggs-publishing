@@ -22,7 +22,7 @@
         </div>
         {% endif %}
         <form action="{{ routes.search_url }}" method="get" role="search" class="search-form search-page-form">
-          <input type=hidden name=type value="product,article,page">
+          <input type="hidden" name="type" value="product" class="search-item" >
           <div class="input-group input-group--nowrap">
             <div class="input-group__field input-group__field--connected search-form__input-wrapper">
               <input type="search" name="q" value="{{ search.terms | escape }}"
