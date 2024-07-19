@@ -26,9 +26,9 @@
           <div class="input-group input-group--nowrap">
             <div class="input-group__field input-group__field--connected search-form__input-wrapper">
               <input type="search" name="q" value="{{ search.terms | escape }}"
-                placeholder="{{ 'general.search.placeholder' | t }}" role="combobox" aria-autocomplete="list"
+                placeholder="Search" role="combobox" aria-autocomplete="list"
                 aria-owns="predictive-search-results" aria-expanded="false"
-                aria-label="{{ 'general.search.placeholder' | t }}" aria-haspopup="listbox" class="search-form__input"
+                aria-label="Search" aria-haspopup="listbox" class="search-form__input"
                 data-search-page-predictive-search-input data-base-url="{{ routes.search_url }}" />
               <input type="hidden" name="options[prefix]" value="last" aria-hidden="true" />
               <div class="predictive-search-wrapper" data-predictive-search-mount="default"></div>
