@@ -78,34 +78,10 @@
           {% endif %}
         {% endif %}
       </div>
-      {% if section.settings.sort_enable %}
-        <div class="sort-by">
-          {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
-          <label class="filters-toolbar__label select-label" for="SortBy">
-            Sort By
-          </label>
-
-          <select
-            name="sort_by"
-            id="SortBy"
-            class="filters-toolbar__input hidden custom-dropdown-select"
-            aria-describedby="a11y-refresh-page-message a11y-selection-message"
-            data-default-sortby="{{ collection.default_sort_by }}"
-            data-select-input
-          >
-            {%- for option in collection.sort_options -%}
-              <option
-                value="{{ option.value }}"
-                {% if option.value == sort_by %}
-                  selected="selected"
-                {% endif %}
-              >
-                {{ option.name }}
-              </option>
-            {%- endfor -%}
-          </select>
-        </div>
-      {% endif %}
+    <div class="search-option">
+      <a class="active">Product</a>
+      <a>Blog</a>
+      </div>
     </div>
     {% if search.performed %}
     <h2 class="visually-hidden">{{ 'general.search.heading' | t: count: search.results_count }}</h2>
