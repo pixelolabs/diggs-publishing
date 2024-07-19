@@ -1138,10 +1138,10 @@ jQuery(function () {
 
   if (window.location.href.indexOf("article&") > -1) {
     $(".search-item").val("article");
-    $(".js__search-product").addClass("active");
+    $(".js__search-blog").addClass("active");
   } else {
     $(".search-item").val("product");
-    $(".js__search-blog").addClass("active");
+    $(".js__search-product").addClass("active");
   }
 
   $(".js__search-type a").on("click", function () {
