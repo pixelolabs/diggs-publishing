@@ -19,28 +19,6 @@
         "content_alignment": "left"
       }
     },
-    "full_width_image_and_content_p9nGnJ": {
-      "type": "full-width-image-and-content",
-      "settings": {
-        "video": "",
-        "videobanner": false,
-        "title1": "",
-        "title2": "",
-        "description": "",
-        "buttonText": "",
-        "buttonLink": "",
-        "content_alignment": "center",
-        "paddingtop": 0,
-        "paddingtopmobile": 0,
-        "paddingbottom": 0,
-        "paddingbottomMobile": 0,
-        "bg": false,
-        "paddingtopInner": 0,
-        "paddingtopmobileInner": 0,
-        "paddingbottomInner": 0,
-        "paddingbottomMobileInner": 0
-      }
-    },
     "half_image_half_content_8FKJK6": {
       "type": "half-image-half-content",
       "blocks": {
@@ -70,7 +48,6 @@
   },
   "order": [
     "innerBanner",
-    "full_width_image_and_content_p9nGnJ",
     "half_image_half_content_8FKJK6"
   ]
 }
