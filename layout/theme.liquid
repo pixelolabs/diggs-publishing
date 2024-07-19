@@ -21,7 +21,7 @@
     <script async defer src="https://tools.luckyorange.com/core/lo.js?site-id=8894106a"></script>
   </head>
 
-  <body class="template-{{ request.page_type | handle }} transparent-header">
+  <body class="template-{{ request.page_type | handle }} template-{{ template | replace: '.', '-' | replace: '/', '-' }} transparent-header">
     {% section 'announcement' %}
     {% section 'header' %}
     <div class="page-container drawer-page-content" id="PageContainer">
