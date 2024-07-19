@@ -2,6 +2,10 @@
 {% paginate search.results by 12 %}
 <div class="search-section">
   <div class="inner-hero-section">
+    <div class="image-section ">
+      <img src="{{ 'search-hero.webp' | asset_url }}" /> 
+     
+      </div>
     <div class="container-1260 text-center">
       {% if search.performed == false %}
       <h1>
