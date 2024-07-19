@@ -13,13 +13,10 @@
       "type": "inner-hero-section",
       "settings": {
         "color_scheme": "",
-        "image": "shopify:\/\/shop_images\/Rectangle_2871_2x_eacc4feb-c9e9-4a3f-8407-2438914e3621.webp",
-        "video": "",
-        "videoMobile": "",
-        "videobanner": false,
-        "title": "",
-        "description": "",
-        "content_alignment": "center"
+        "image": "shopify:\/\/shop_images\/about_us_banner_image.jpg",
+        "title": "About The Author",
+        "description": "<p>Every writer starts as a storyteller. Explore the journey of author Krystaelynne Sanders Diggs, dedicated to empowering young minds through the magic of storytelling.<\/p>",
+        "content_alignment": "left"
       }
     }
   },
