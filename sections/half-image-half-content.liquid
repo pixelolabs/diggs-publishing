@@ -1,7 +1,7 @@
 {% if section.blocks.size > 0 %}
   <div class="half-image-half-content-outer">
   {% for block in section.blocks %}
-    <div class="half-image-half-content {% if block.settings.bg_brown %}bg-brown {% else if block.settings.no_bg-color %} no-bg-color {% endif %}">
+    <div class="half-image-half-content {% if block.settings.background_color == 'blue' %}bg-blue {% else if block.settings.background_color == 'brown' %} bg-brown {% else if block.settings.background_color == 'transparent' %} no-bg-color {% endif %}">
       <div class="container-1260 flex {% if block.settings.col_reverse %}col-reverse{% endif %}">
         <div class="image-wrapper">
         {% if block.settings.showVideo == true %}
@@ -151,14 +151,24 @@
           "info": "Recommened to be used by the developer only"
         },
         {
-          "type": "checkbox",
-          "id": "bg_brown",
-          "label": "Brown Background"
-        },
-        {
-          "type": "checkbox",
-          "id": "no_bg-color",
-          "label": "No Background color"
+          "type": "select",
+          "id": "background_color",
+          "label": "Background color",
+          "options": [
+            {
+              "value": "transparent",
+              "label": "Transparent"
+            },
+            {
+              "value": "brown",
+              "label": "Brown"
+            },
+            {
+              "value": "blue",
+              "label": "Blue"
+            }
+          ],
+          "default": "blue"
         },
         {
           "type": "checkbox",
