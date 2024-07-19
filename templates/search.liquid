@@ -5,14 +5,14 @@
     <div class="container-1260 text-center">
       {% if search.performed == false %}
       <h1>
-        {{ 'general.search.title' | t }}
+        Search
       </h1>
       {% else %}
     
       <h1>
        
-        <span class="visually-hidden">{{ 'general.search.heading' | t: count: search.results_count }}:</span>
-        {{ 'general.search.results_with_count' | t: terms: search.terms, count: search.results_count }}
+       Search results for "{{ search.terms }}"
+      
       </h1>
       {% endif %}
       <div class="form-section text-center">
