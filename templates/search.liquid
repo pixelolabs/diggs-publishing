@@ -2,7 +2,7 @@
 {% paginate search.results by 12 %}
 <div class="search-section">
   <div class="inner-hero-section  white-bg">
-    <div class="container-1340 text-center">
+    <div class="container-1260 text-center">
       {% if search.performed == false %}
       <h1>
         {{ 'general.search.title' | t }}
@@ -43,7 +43,7 @@
     </div>
    
   </div>
-  <div class="container-1380 ">
+  <div class="container-1260 ">
     {% if search.performed %}
     <h2 class="visually-hidden">{{ 'general.search.heading' | t: count: search.results_count }}</h2>
     <ul class="collection__product-list flex-wrap">
