@@ -64,7 +64,7 @@
             "buttonLink": "shopify:\/\/pages\/contact-us",
             "bg": true,
             "col_reverse": true,
-            "fontSize": false,
+            "fontSize": true,
             "center": false
           }
         }
