@@ -10,9 +10,10 @@
       data-section-type="collection-template"
       data-sort-enabled="{{ section.settings.sort_enable }}"
     >
-      <div class="container-1260">
+      <div class="container-1260 graphics">
 
         <div class="collection-top-section">
+          <div class="outer">
           <ul>
           <li class="active">
             <a>
@@ -47,6 +48,7 @@
           </a>
           </li>
           </ul>
+          </div>
           </div>
         <div class="collection-filter-section flex">
         
@@ -149,7 +151,7 @@
         {% endif %}
       </div>
       {%- if paginate.pages > 1 -%}
-        <div class="container-1260 text-center">
+        <div class="container-1240 text-center ">
       
           {% include 'pagination', paginate: paginate %}
         </div>

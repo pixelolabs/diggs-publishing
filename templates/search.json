@@ -28,6 +28,5 @@
   "order": [
     "35ab9d00-1f34-4be1-b536-e5a1bf5e265f",
     "main"
-  ],
-  "wrapper": ".boost-sd__product-filter-fallback"
+  ] 
 }
