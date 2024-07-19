@@ -1,7 +1,7 @@
 {% if section.blocks.size > 0 %}
   <div class="half-image-half-content-outer">
   {% for block in section.blocks %}
-    <div class="half-image-half-content {% if block.settings.bg_brown %}bg-brown{% endif %}">
+    <div class="half-image-half-content {% if block.settings.bg_brown %}bg-brown {% else if block.settings.no_bg-color %} no-bg-color {% endif %}">
       <div class="container-1260 flex {% if block.settings.col_reverse %}col-reverse{% endif %}">
         <div class="image-wrapper">
         {% if block.settings.showVideo == true %}
@@ -154,6 +154,11 @@
           "type": "checkbox",
           "id": "bg_brown",
           "label": "Brown Background"
+        },
+        {
+          "type": "checkbox",
+          "id": "no_bg-color",
+          "label": "No Background color"
         },
         {
           "type": "checkbox",
