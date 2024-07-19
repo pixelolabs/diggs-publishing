@@ -22,7 +22,7 @@
     "half_image_half_content_8FKJK6": {
       "type": "half-image-half-content",
       "blocks": {
-        "image_jdXVE6": {
+        "image_XVzw8B": {
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/About_introduction.jpg",
@@ -57,11 +57,30 @@
             "fontSize": false,
             "center": false
           }
+        },
+        "image_jdXVE6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/About_introduction.jpg",
+            "showVideo": false,
+            "video": "",
+            "videoPopup": false,
+            "pretitle": "",
+            "title": "Let me introduce myself...",
+            "description": "<p>I was born and raised in Sonoma County, California. I attended California State University, East Bay, and somehow graduated with three bachelors degrees. After graduation, I moved to New York to attend Binghamton University. After graduating with my Masters Degree in Political Science, I moved back to California to be close to family. Throughout my career I've specialized in Digital Marketing, but have always secretly dreamed of being a writer.<\/p>",
+            "buttonText": "Contact Me",
+            "buttonLink": "shopify:\/\/pages\/contact-us",
+            "bg_brown": true,
+            "col_reverse": false,
+            "fontSize": false,
+            "center": false
+          }
         }
       },
       "block_order": [
-        "image_jdXVE6",
-        "image_A4DwNt"
+        "image_XVzw8B",
+        "image_A4DwNt",
+        "image_jdXVE6"
       ],
       "settings": {
       }
