@@ -64,17 +64,17 @@
 
         {% if paginate.current_page == 1 %}
           {% if paginate.current_page == paginate.pages %}
-            Showing 1 - {{ collection.products_count }} of {{ collection.products_count }} items
+            Showing 1 - {{ search.results_count }} of {{ search.results_count }} items
           {% else %}
-            Showing 1 - {{ limit }} of {{ collection.products_count }} items
+            Showing 1 - {{ limit }} of {{ search.results_count }} items
           {% endif %}
         {% else %}
           {% if paginate.current_page == paginate.pages %}
             {% assign lastPageItem = items | to_i | minus: currentOffset | to_i %}
-            Showing {{ currentPageStart }} - {{ collection.products_count }} of
-            {{ collection.products_count }} items
+            Showing {{ currentPageStart }} - {{ search.results_count }} of
+            {{ search.results_count }} items
           {% else %}
-            Showing {{ currentPageStart }} - {{ totalshowItems }} of {{ collection.products_count }} items
+            Showing {{ currentPageStart }} - {{ totalshowItems }} of {{ search.results_count }} items
           {% endif %}
         {% endif %}
       </div>
