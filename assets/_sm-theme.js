@@ -1137,13 +1137,11 @@ jQuery(function () {
   });
 
   if (window.location.href.indexOf("article&") > -1) {
-    $(".js__search-type").html("Show Product Results");
     $(".search-item").val("article");
-    $(".js__search-title").html("Blog Posts");
+    $(".js__search-product").addClass("active");
   } else {
-    $(".js__search-type").html("Show Blog Results");
     $(".search-item").val("product");
-    $(".js__search-title").html("Products");
+    $(".js__search-blog").addClass("active");
   }
 
   $(".js__search-type a").on("click", function () {
