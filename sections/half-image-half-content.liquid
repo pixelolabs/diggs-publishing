@@ -2,7 +2,7 @@
   <div class="half-image-half-content-outer {% if section.settings.wave_color == 'yellow-wave' %} yellow-wave{% elsif section.settings.wave_color == 'transparent-wave' %} transparent-wave {% elsif section.settings.wave_color == 'blue-wave' %} blue-wave{% else %} no-wave {% endif %}">
   {% for block in section.blocks %}
     <div class="half-image-half-content {% if block.settings.background_color == 'transparent-bg' %} no-bg-color{% elsif block.settings.background_color == 'brown' %} bg-brown {% elsif block.settings.background_color == 'blue' %}  bg-blue {% else %} no-bg {% endif %}">
-      <div class="container-1260 flex {% if block.settings.col_reverse %} col-reverse{% endif %}">
+      <div class="container-1260 flex">
         <div class="image-wrapper">
         {% if block.settings.showVideo == true %}
           {% if block.settings.videoPopup == true %}
@@ -195,11 +195,6 @@
             }
           ],
           "default": "blue"
-        },
-        {
-          "type": "checkbox",
-          "id": "col_reverse",
-          "label": "Reverse Column"
         },
         {
           "type": "checkbox",
