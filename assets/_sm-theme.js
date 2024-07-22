@@ -341,7 +341,7 @@ function cartInfo(data) {
 
       if ($(".cart-list")[0]) {
         var cartLineItem = "";
-        cartLineItem = '<div class="cart-list__items cart-table-body js__cart-table-item-row flex" data-cart-line-count="' + lineCount + '" data-attr-compare-price="" data-variant-id="' + itemID + '"><a class="remove link--primary" data-cart-line-count="' + lineCount + '" data-variant-id="' + itemID + '" href="javascript:;">remove</a><div class="cart-list__items__columns"><div class="image-section "><img class="img-responsive img-thumbnail item-image" src="' + imageURL + '" alt="' + imageAlt + '"></div> <div class="content">'; // show vendor on cart page
+        cartLineItem = '<div class="cart-list__items cart-table-body js__cart-table-item-row flex" data-cart-line-count="' + lineCount + '" data-attr-compare-price="" data-variant-id="' + itemID + '"><div class="cart-list__items__columns"><div class="image-section "><img class="img-responsive img-thumbnail item-image" src="' + imageURL + '" alt="' + imageAlt + '"></div> <div class="content">'; // show vendor on cart page
 
         if (showVendorOnCartPage) {
           cartLineItem += vendorElement;
