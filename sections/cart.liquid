@@ -1,52 +1,26 @@
 <div class="js__show-cart-items-section">
-  <div id="cart" class="cart-section  ">
-    <div class="container-1340 container-section">
-      <div class="title-shipping-section">
-        <h1 class="h2">Cart (<span class="js__ajax-cart-count"></span>)</h1>
-        <div class="shipping-details js__progressbar_visiblity hide">
-          <span class="hide js__free-shipping-limit">{{ settings.freeShippingThresholdValue }} </span>
-          <span class=" title js__free-shipping-message" style="display: none;">{{ settings.freeShippingMsg }}</span>
-          <span class="title js__free-shipping-limit-message"
-            >You are
-            <b
-              ><span
-                class="js__free-shipping-remaning-amount"
-                >$40</span
-              >
-              away</b
-            >
-            from free shipping</span
-          >
-          <ul class="flex ">
-            <span class="dark-bar js__grandtotal-shipping" data-percentage="0"></span>
-            <li>
-              <div class="icon car js__free-shipping__icon">
-                <img src="{{ 'icon-car.webp' | asset_url }}">
-              </div>
-              <span>Free Shipping</span>
-              <div class="free-shipping__progress-bar js__free-shipping__progress-bar"><span></span></div>
-            </li>
-            {% if settings.freeProduct1 != blank %}
-              <li>
-                <div class="icon js__free-gift-1__icon">
-                  <img src="{{ 'icon-gift.webp' | asset_url }}">
-                </div>
-                <span>Free Gift</span>
-                <div class="free-shipping__progress-bar js__free__gift-1__progress-bar"><span></span></div>
-              </li>
-            {% endif %}
-            {% if settings.freeProduct2 != blank %}
-              <li>
-                <div class="icon js__free-gift-2__icon">
-                  <img src="{{ 'icon-gift.webp' | asset_url }}">
-                </div>
-                <span>Free Gift</span>
-                <div class="free-shipping__progress-bar js__free__gift-2__progress-bar"><span></span></div>
-              </li>
-            {% endif %}
-          </ul>
+  <div class="inner-hero-section">
+    <div class="image-section {% if section.settings.gradient == true %} gradient{%endif%}">
+      <img src="{{ 'cart-hero.webp' | asset_url }}" /> 
+    
+    </div>
+  
+    <div
+      class="
+        container-1240">
+        <div class="content">
+          <h1>
+           Cart
+          </h1>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+          </p>
+          </div>
         </div>
-      </div>
+  </div>
+  <div id="cart" class="cart-section  ">
+    <div class="container-1260 container-section">
+     
       <form action="/cart" method="post">
         <div class="free-shipping js__progressbar_visiblity hide" style="display:none !important">
           <!-- Free Shipping Values from Schema -->
@@ -81,9 +55,7 @@
               <div class="table-head text-center">
                 <span>QUANTITY</span>
               </div>
-              <div class="table-head text-center recharge">
-                <span>Subscribe</span>
-              </div>
+             
 
               <div class="table-head">
                 <span> Total</span>
@@ -95,7 +67,49 @@
           </div>
           <!-- START TOTAL -->
           <div class="wrapper-total">
-            <span class="head uppercase">Overview</span>
+            <div class="shipping-details js__progressbar_visiblity hide">
+              <span class="hide js__free-shipping-limit">{{ settings.freeShippingThresholdValue }} </span>
+              <span class=" title js__free-shipping-message" style="display: none;">{{ settings.freeShippingMsg }}</span>
+              <span class="title js__free-shipping-limit-message"
+                >You are
+                <b
+                  ><span
+                    class="js__free-shipping-remaning-amount"
+                    >$40</span
+                  >
+                  away</b
+                >
+                from free shipping</span
+              >
+              <ul class="flex ">
+                <span class="dark-bar js__grandtotal-shipping" data-percentage="0"></span>
+                <li>
+                  <div class="icon car js__free-shipping__icon">
+                    <img src="{{ 'icon-truck.svg' | asset_url }}">
+                  </div>
+                  <span>Free Shipping</span>
+                  <div class="free-shipping__progress-bar js__free-shipping__progress-bar"><span></span></div>
+                </li>
+                {% if settings.freeProduct1 != blank %}
+                  <li>
+                    <div class="icon js__free-gift-1__icon">
+                      <img src="{{ 'icon-gift.webp' | asset_url }}">
+                    </div>
+                    <span>Free Gift</span>
+                    <div class="free-shipping__progress-bar js__free__gift-1__progress-bar"><span></span></div>
+                  </li>
+                {% endif %}
+                {% if settings.freeProduct2 != blank %}
+                  <li>
+                    <div class="icon js__free-gift-2__icon">
+                      <img src="{{ 'icon-gift.webp' | asset_url }}">
+                    </div>
+                    <span>Free Gift</span>
+                    <div class="free-shipping__progress-bar js__free__gift-2__progress-bar"><span></span></div>
+                  </li>
+                {% endif %}
+              </ul>
+            </div>
             <div class="total">
               <textarea
                 id="note"
@@ -136,7 +150,7 @@
               </div>
 
               <div class="btn-wrapper">
-                <button class="btn--primary" type="submit" id="checkout" name="checkout">Checkout Now</button>
+                <button class="btn--primary yellow" type="submit" id="checkout" name="checkout">Checkout Now</button>
                 <a class="link--primary" href="/collections/all" title="Continue Shopping">Continue Shopping</a>
               </div>
             </div>

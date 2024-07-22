@@ -454,11 +454,7 @@ function cartInfo(data) {
                 }
                 cartLineItem += "</div>";
                 cartLineItem +=
-                    '<a class="remove link--primary" data-cart-line-count="' +
-                    lineCount +
-                    '" data-variant-id="' +
-                    itemID +
-                    '" href="javascript:;">remove</a>  </div>  </div>  <div class="cart-list__items__columns">';
+                    '  </div>  </div>  <div class="cart-list__items__columns">';
                 cartLineItem += showPrice;
                 cartLineItem += "</div>";
                 cartLineItem +=
@@ -468,9 +464,14 @@ function cartInfo(data) {
                     quantityElement +
                     '  <span class="js__out-of-stock"></span>';
                 // ** Remove action is added here too
-                cartLineItem += "</div><div class='cart-list__items__columns recharge ' > " + rechargeDropdown + " </div>";
+                 cartLineItem += "</div>";
+               // cartLineItem += "</div><div class='cart-list__items__columns recharge ' > " + rechargeDropdown + " </div>";
                 cartLineItem +=
-                    '<div class="cart-list__items__columns total-price " data-head="Total"> <span class="price-wrapper js__set-line-item-price" data-attr-price="' +
+                    '<a class="remove" data-cart-line-count="' +
+                    lineCount +
+                    '" data-variant-id="' +
+                    itemID +
+                    '" href="javascript:;"></a><div class="cart-list__items__columns total-price " data-head="Total"> <span class="price-wrapper js__set-line-item-price" data-attr-price="' +
                     itemPrice +
                     '" data-attr-compare-price=' +
                     totalListItemComparePrice +
@@ -482,7 +483,7 @@ function cartInfo(data) {
                     formattedItemLinePriceTotal +
                     "</span> </span>";
                 // ** Remove element is added here too
-                cartCountEmptyValue += " </div></div>";
+                cartCountEmptyValue += ' </div></div>';
                 $(".cart-list").append(cartLineItem);
             }
             lineCount++;

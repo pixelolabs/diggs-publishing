@@ -1,8 +1,19 @@
 /* Cart */
 
 .cart-section {
+    position: relative;
+    &::before{
+        background: url("graphic-wave-inner-banner.svg") repeat left / 2065px;
+        height: 114px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: -90px;
+        content: "";
+        z-index: 2;
+      }
     padding: 52px 0 40px;
-    background: $color-white;
+    background: $color-off-white2;
     .title-shipping-section {
         display: flex;
         justify-content: space-between;
@@ -52,20 +63,18 @@
         .header {
             display: flex;
             justify-content: space-between;
-            border-bottom: solid 1px $color-border-dark-gray;
-            padding: 0px 0 13px;
+            padding: 0px  114px 16px 0;
             .table-head {
-                max-width: 150px;
-                width: 100%;
                 flex: none;
                 text-transform: uppercase;
+                min-width: 53px;
                 span {
                     display: block;
                     font-family: var(--font-family-primary);
-                    font-size: 12px;
+                    font-size: 10px;
                     font-weight: 500;
-                    line-height: normal;
-                    letter-spacing: normal;
+                    line-height: 1.5;
+                    letter-spacing: 1px;
                     text-transform: uppercase;
                     color: $color-black;
                 }
@@ -77,12 +86,7 @@
                         text-align: left;
                     }
                 }
-                &:last-child {
-                    width: 100px;
-                    span {
-                        text-align: right;
-                    }
-                }
+                
                 &.recharge {
                     max-width: 170px;
                 }
@@ -96,22 +100,27 @@
     .cart-list {
         &__items {
             justify-content: space-between;
-            padding: 20px 0;
-            border-bottom: solid 1px $color-border-dark-gray;
-            @include MQ(MQ-1280) {
-                margin: 0 auto;
-                &:first-child {
-                    padding-top: 0px;
-                }
-                display: flex;
-                flex-wrap: wrap;
+            padding: 13px 114px 14px 0px;
+            border: solid 1px $color-black;
+            margin-bottom: 20px;
+            background: $color-white;
+            position: relative;
+            .remove {
+                   margin: 0;
+                width: 17px;
+               height: 17px;
+               position: absolute;
+               right: 17px;
+               top: calc(50% - 8.5px);
+               background: url("icon-cross.webp") no-repeat center / 17px;
+              
             }
+        
             * {
                 color: $color-black;
             }
             &__columns {
-                max-width: 150px;
-                width: 100%;
+                min-width: 53px;
                 flex: none;
                 &:nth-child(3) {
                     justify-content: center;
@@ -152,7 +161,7 @@
                     }
                 }
                 &:first-child {
-                    padding-top: 0px;
+                    padding-left: 15px;
                     width: 40%;
                     max-width: 40%;
                     flex: auto;
@@ -172,8 +181,8 @@
                         margin-bottom: 10px;
                     }
                     .image-section {
-                        width: 56px;
-                        height: 56px;
+                        width: 72px;
+                        height: 65px;
                         flex: none;
                         position: relative;
                         img {
@@ -184,7 +193,7 @@
                     .content {
                         display: flex;
                         flex-direction: column;
-                        margin-left: 20px;
+                        margin-left: 16px;
                         padding-right: 0px;
                         padding-top: 0px;
                         max-width: 220px;
@@ -195,12 +204,12 @@
                             text-decoration: none;
                         }
                         h5 a {
-                            font-family: var(--font-family-secondary);
-                            font-size: 14px;
-                            font-weight: bold;
-                            line-height: 1.29;
-                            letter-spacing: 0.01px;
-                            text-transform: capitalize;
+                            font-family: var(--font-family-primary);
+                            font-size: 12px;
+                            font-weight: 600;
+                            line-height: normal;
+                            letter-spacing: 1px;
+                            text-transform: uppercase;
                             @include MQ(MQ-480) {
                                 max-width: 200px;
                             }
@@ -210,13 +219,7 @@
                         }
                     }
                 }
-                &:last-child {
-                    text-align: right;
-                    @include MQ(MQ-1280) {
-                        text-align: left;
-                    }
-                    width: 100px;
-                }
+                
                 .cart__mini-labels {
                     display: none;
                 }
@@ -228,22 +231,15 @@
                 .price {
                     display: block;
                     font-family: var(--font-family-primary);
-                    font-size: 14px;
-                    font-weight: 500;
-                    line-height: 1.43;
+                    font-size: 12px;
+                    font-weight: normal;
+                    line-height: 1.67;
                     letter-spacing: normal;
                 }
                 s {
-                    color: $color-dark-gray;
+                    color: $color-black;
                 }
-                .remove {
-                    margin-top: 20px;
-                    width: 52px;
-                    color: $color-black !important;
-                    @include MQ(MQ-1280) {
-                        margin-top: 0;
-                    }
-                }
+                
                 .price-wrapper {
                     display: flex;
                     flex-direction: column;
@@ -257,7 +253,7 @@
             }
         }
         &__variant-properties {
-            margin-top: 8px;
+            margin-top: 5px;
             &:empty {
                 margin: 0;
             }
@@ -267,11 +263,11 @@
             }
             span {
                 font-family: var(--font-family-primary);
-                font-size: 14px;
-                font-weight: 500;
-                line-height: normal;
-                letter-spacing: 0.01px;
-                color: $color-dark-gray;
+                font-size: 12px;
+                font-weight: normal;
+                line-height: 1.67;
+                letter-spacing: normal;
+                color: $color-black;
             }
             @include MQ(MQ-1280) {
                 &:first-of-type {
@@ -283,32 +279,12 @@
     /* Total */
     .wrapper-total {
         flex: none;
-        width: 322px;
-        padding: 25px 26.5px 38px;
-        margin-left: 50px;
-        margin-top: 17px;
-        background: $color-off-white;
-        justify-content: space-between;
+        width: 357px;
+        margin-left: 30px;
+        margin-top: 27px;
         @include MQ(MQ-1280) {
             margin-left: 0px;
             margin-top: 40px;
-        }
-        .btn--solid {
-            width: 100%;
-            max-width: 100%;
-        }
-        .head {
-            font-family: var(--font-family-primary);
-            font-size: 12px;
-            font-weight: 500;
-            line-height: normal;
-            letter-spacing: normal;
-            text-transform: uppercase;
-            color: $color-black;
-            border-bottom: solid 1px $color-border-dark-gray;
-            padding: 0px 0 13px;
-            display: block;
-            margin-bottom: 20px;
         }
         @include MQ(MQ-768) {
             flex-direction: column;
@@ -351,7 +327,9 @@
         }
         .total {
             width: 100%;
-            max-width: 301px;
+            border: 1px solid $color-black;
+            margin-top: 19px;
+            padding: 26px 24px 31px;
             @include MQ(MQ-480) {
                 max-width: 100%;
             }
@@ -390,7 +368,7 @@
             }
             .order-total {
                 margin-bottom: 30px;
-                margin-top: 25px;
+                margin-top: 37px;
                 padding-top: 10px;
                 border-top: solid 1px $color-border-dark-gray;
                 width: 100%;
@@ -398,10 +376,10 @@
                 b,
                 span {
                     font-family: var(--font-family-primary);
-                    font-size: 16px;
+                    font-size: 14px;
                     font-weight: bold;
-                    line-height: 1.88;
-                    letter-spacing: 0.12px;
+                    line-height: 1.29;
+                    letter-spacing: 1px;
                     text-transform: uppercase;
                     color: $color-black;
                 }
@@ -545,21 +523,19 @@
 
 .shipping-details {
     flex: none;
-    width: 322px;
-    padding: 13.5px 20px;
-    border-radius: 10px;
-    border: solid 1px $color-border;
-    @include MQ(MQ-480) {
-        max-width: 322px;
-        width: 100%;
-    }
+    width: 100%;
+    padding: 15px 19px;
+    background: $color-white;
+    border: solid 1px $color-black;
+
+    
     .title {
         display: block;
-        font-size: 14px;
-        font-weight: 500;
+        font-size: 12px;
+        font-weight: normal;
         text-align: center;
-        line-height: normal;
-        letter-spacing: 0.01px;
+        line-height: 1.67;
+        letter-spacing: normal;
         b {
             font-weight: bold;
         }
@@ -567,15 +543,15 @@
     ul {
         justify-content: space-between;
         position: relative;
-        margin-top: 10px;
+        margin-top: 1px;
         padding: 0;
         &::before,
         .dark-bar {
             width: 100%;
-            background-color: $color-black;
+            background-color:  $color-yellow;
             content: "";
-            border-radius: 4px;
-            height: 8px;
+            border-radius: 10px;
+            height: 7px;
             position: absolute;
             left: 0;
             top: 12px;
@@ -596,9 +572,9 @@
                 display: none !important;
             }
             .icon {
-                width: 28.5px;
-                height: 28.5px;
-                background: $color-black;
+                width: 25px;
+                height: 25px;
+                background: $color-yellow;
                 border-radius: 50%;
                 margin-bottom: 5px;
                 display: flex;
@@ -611,7 +587,7 @@
                 }
                 &.car {
                     img {
-                        width: 15px;
+                        width: 19px;
                     }
                 }
                 &.active {
@@ -622,11 +598,12 @@
                 }
             }
             span {
-                font-family: var(--font-family-secondary);
+                font-family: var(--font-family-primary);
                 font-size: 10px;
-                font-weight: normal;
-                line-height: normal;
-                letter-spacing: 0.01px;
+                font-weight: 500;
+                line-height: 1.5;
+                letter-spacing: 1px;
+                text-transform: uppercase;
             }
         }
     }

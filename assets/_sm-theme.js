@@ -363,15 +363,16 @@ function cartInfo(data) {
         }
 
         cartLineItem += "</div>";
-        cartLineItem += '<a class="remove link--primary" data-cart-line-count="' + lineCount + '" data-variant-id="' + itemID + '" href="javascript:;">remove</a>  </div>  </div>  <div class="cart-list__items__columns">';
+        cartLineItem += '  </div>  </div>  <div class="cart-list__items__columns">';
         cartLineItem += showPrice;
         cartLineItem += "</div>";
         cartLineItem += '<div class="cart-list__items__columns quantity" data-variant-id="' + itemID + '"> ' + quantityElement + '  <span class="js__out-of-stock"></span>'; // ** Remove action is added here too
 
-        cartLineItem += "</div><div class='cart-list__items__columns recharge ' > " + rechargeDropdown + " </div>";
-        cartLineItem += '<div class="cart-list__items__columns total-price " data-head="Total"> <span class="price-wrapper js__set-line-item-price" data-attr-price="' + itemPrice + '" data-attr-compare-price=' + totalListItemComparePrice + '><s class="hide">' + totalListItemComparePrice + '</s><span class="price" data-key="' + itemID + '">' + formattedItemLinePriceTotal + "</span> </span>"; // ** Remove element is added here too
+        cartLineItem += "</div>"; // cartLineItem += "</div><div class='cart-list__items__columns recharge ' > " + rechargeDropdown + " </div>";
 
-        cartCountEmptyValue += " </div></div>";
+        cartLineItem += '<a class="remove" data-cart-line-count="' + lineCount + '" data-variant-id="' + itemID + '" href="javascript:;"></a><div class="cart-list__items__columns total-price " data-head="Total"> <span class="price-wrapper js__set-line-item-price" data-attr-price="' + itemPrice + '" data-attr-compare-price=' + totalListItemComparePrice + '><s class="hide">' + totalListItemComparePrice + '</s><span class="price" data-key="' + itemID + '">' + formattedItemLinePriceTotal + "</span> </span>"; // ** Remove element is added here too
+
+        cartCountEmptyValue += ' </div></div>';
         $(".cart-list").append(cartLineItem);
       }
 

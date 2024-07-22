@@ -1,0 +1,96 @@
+.three-column-product-slider-v2 {
+  background: $color-sky-blue;
+  padding: 36px 0 172px;
+  &::before{
+    background: url("wave-sky-blue.webp") repeat left / 1452px;
+    height: 85px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -85px;
+    content: '';
+  }
+  transform: translate3d(0, 50px, 0) !important;
+  @include MQ(MQ-480) {
+    padding: 50px 0px 100px;
+  }
+  &.aos-animate {
+    transform: none !important;
+  }
+
+ 
+  .top-section {
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 0 40px;
+    align-items: flex-end;
+    position: relative;
+    &::before{
+      width: 54px;
+      height: 44px;
+      content: '';
+      position: absolute;
+      top: -55px;
+      z-index: 1;
+      left: 226px;
+      background: url("icon-cloud.webp") no-repeat center / 100%;
+      @include MQ(MQ-480) {
+     
+        top: auto;
+        bottom: 270px;
+        right: 25px;
+      }
+    }
+  
+    @include MQ(MQ-480) {
+      margin: 0 0 30px;
+    }
+  }
+
+  .inner {
+    width: 100%;
+    .slider-outer{
+      width: 100%;
+      overflow: hidden;
+    }
+    position: relative;
+  
+    @include MQ(MQ-480) {
+    }
+    .slider {
+      position: relative;
+      overflow: hidden;
+      
+    }
+   
+    .swiper-slide {
+     z-index: 3;
+     height: auto;
+      .content {
+      
+      }
+    }
+    .swiper-button-prev-product-slider,
+    .swiper-button-next-product-slider {
+     
+      position: absolute;
+      width: 19px;
+      height: 30px;
+      right: -54px;
+      top: calc(50% - 9.5px);
+      z-index: 10;
+      cursor: pointer;
+      @include MQ(MQ-600) {
+        display: none;
+      }
+      
+     
+    }
+    .swiper-button-prev-product-slider {
+       transform: rotate(180deg);
+      left: -54px;
+    }
+    
+  }
+
+}

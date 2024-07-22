@@ -1,10 +1,13 @@
 {% comment %} Compatible Products {% endcomment %}
 {% if settings.title != blank %}
-  <div class="four-column-product-slider cart">
+  
+  <div class="three-column-product-slider-v2 cart">
+    <div class="container-1260 flex-wrap">
     <div class="top-section">
-      <h2 class="h2 text-center">You MAY <span class="color-grey h2">ALSO LIKE</span></h2>
+      <h2 class="h2 text-center">You MAY ALSO LIKE</h2>
     </div>
     <div class="inner">
+      <div class="slider-outer">
       <div class="slider js__product-slider">
         <div class="swiper-wrapper">
           {% if settings.product1 != blank %}
@@ -32,15 +35,18 @@
             </div>
           {% endif %}
         </div>
+        </div>
+        </div>
         <div class="swiper-button-prev-product-slider">
-          {% include 'icon-arrow-slide' %}
+          {% include 'icon-arrow-slide-black' %}
         </div>
         <div class="swiper-button-next-product-slider">
-          {% include 'icon-arrow-slide' %}
+          {% include 'icon-arrow-slide-black' %}
         </div>
       </div>
     </div>
-  </div>
+    </div>
+ 
 {% endif %}
 
 {% if settings.product1 != blank %}

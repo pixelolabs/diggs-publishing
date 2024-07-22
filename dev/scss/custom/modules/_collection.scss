@@ -230,7 +230,7 @@
   }
   padding: 60px 0 0px;
   position: relative;
-  background: $color-off-white;
+  background: $color-off-white2;
   z-index: 3;
   .container-1260.graphics{
     position: relative;
@@ -281,8 +281,8 @@
    
   }
   &::before{
-    background: url("yellow-wave.webp") repeat left / 1327px;
-    height: 156.5px;
+    background: url("graphic-wave-inner-banner.svg") repeat left / 2065px;
+    height: 114px;
     width: 100%;
     position: absolute;
     left: 0;
@@ -404,11 +404,17 @@
 
 .search-section{
   margin-top: -20px;
-  .inner-hero-section .container-1260{
+ 
+  .inner-hero-section {
+    @include MQ(MQ-768) {
+      padding-top: 130px !important;
+    }
+    .container-1260{
     display: flex;
     justify-content: center;
     position: relative;
     z-index: 4;
+   
     &::before{
       width: 63.9px;
       height: 51px;
@@ -418,12 +424,14 @@
       z-index: 1;
       left: 160px;
       background: url("icon-cloud.webp") no-repeat center / 100%;
-      @include MQ(MQ-480) {
-        width: 40px;
-        height: 32px;
+      @include MQ(MQ-768) {
         top: auto;
-        bottom: -47px;
-        right: 25px;
+        bottom: -55px;
+        left: 30px;
+        right: auto;
+        width: 16px;
+        height: 22px;
+        background: url(star-large-white.webp) no-repeat center/100%;
       }
     }
     &::after{
@@ -438,18 +446,26 @@
       top:50px;
      
       background: url("star-large.webp") no-repeat center / 100%;
-      @include MQ(MQ-480) {
-        top: auto;
-        bottom: 30px;
-        right: -80px;
-        width: 24px;
-        height: 29px;
+      @include MQ(MQ-1024) {
+      
+        right: 20px;
+       
+      }
+      @include MQ(MQ-768) {
+        top: -60px;
+        left: auto;
+        right: 20px;
+        width: 53px;
+        height: 70px;
+        background: url("kite.webp") no-repeat center / 100%;
       }
      
   }
+}
   }
   form{
     position: relative;
+    z-index: 3;
   }
 .search-form__input{
   z-index: 5;
@@ -493,6 +509,14 @@
 position: absolute;
 top: 5px;
 right: 5px;
+@include MQ(MQ-480) {
+  font-size: 0;
+  padding: 0;
+  width: 45px;
+  background: url("icon-search.svg") no-repeat center / 20px #81c573;
+}
+
+
 }
     
 
@@ -506,6 +530,9 @@ right: 5px;
   h1{
     color: $color-white;
     margin-bottom: 40px;
+    @include MQ(MQ-768) {
+      margin-bottom: 15px;
+    }
   }
 }
 .collection-without-filter {
