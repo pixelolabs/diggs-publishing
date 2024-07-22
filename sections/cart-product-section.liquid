@@ -7,6 +7,7 @@
       <h2 class="h2 text-center">You MAY ALSO LIKE</h2>
     </div>
     <div class="inner">
+      <div class="slider-outer">
       <div class="slider js__product-slider">
         <div class="swiper-wrapper">
           {% if settings.product1 != blank %}
@@ -34,6 +35,8 @@
             </div>
           {% endif %}
         </div>
+        </div>
+        </div>
         <div class="swiper-button-prev-product-slider">
           {% include 'icon-arrow-slide-black' %}
         </div>
@@ -43,7 +46,7 @@
       </div>
     </div>
     </div>
-  </div>
+ 
 {% endif %}
 
 {% if settings.product1 != blank %}
