@@ -372,7 +372,7 @@ function cartInfo(data) {
 
         cartLineItem += '<div class="cart-list__items__columns total-price " data-head="Total"> <span class="price-wrapper js__set-line-item-price" data-attr-price="' + itemPrice + '" data-attr-compare-price=' + totalListItemComparePrice + '><s class="hide">' + totalListItemComparePrice + '</s><span class="price" data-key="' + itemID + '">' + formattedItemLinePriceTotal + "</span> </span>"; // ** Remove element is added here too
 
-        cartCountEmptyValue += ' </div><a class="remove link--primary" data-cart-line-count="' + lineCount + '" data-variant-id="' + itemID + '" href="javascript:;">remove</a></div>';
+        cartCountEmptyValue += ' </div></div>';
         $(".cart-list").append(cartLineItem);
       }
 
