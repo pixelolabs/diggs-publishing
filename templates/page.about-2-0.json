@@ -42,7 +42,7 @@
         "image_A4DwNt": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Family.jpg",
+            "image": "shopify:\/\/shop_images\/Family.webp",
             "showVideo": false,
             "video": "",
             "videoPopup": false,
