@@ -14,6 +14,7 @@
       "settings": {
         "color_scheme": "",
         "image": "shopify:\/\/shop_images\/about_us_banner_image.jpg",
+        "mobileImage": "shopify:\/\/shop_images\/about_us_banner.jpg",
         "title": "About The Author",
         "description": "<p>Every writer starts as a storyteller. Explore the journey of author Krystaelynne Sanders Diggs, dedicated to empowering young minds through the magic of storytelling.<\/p>",
         "content_alignment": "left"
