@@ -48,10 +48,19 @@
         "section_class": "",
         "wave_color": "transparent-wave"
       }
+    },
+    "full_width_cta_UC7Amx": {
+      "type": "full-width-cta",
+      "settings": {
+        "title": "",
+        "buttonText": "",
+        "buttonLink": ""
+      }
     }
   },
   "order": [
     "innerBanner",
-    "half_image_half_content_J3NzQy"
+    "half_image_half_content_J3NzQy",
+    "full_width_cta_UC7Amx"
   ]
 }
