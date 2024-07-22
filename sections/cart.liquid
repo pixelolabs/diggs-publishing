@@ -20,7 +20,7 @@
   </div>
   <div id="cart" class="cart-section  ">
     <div class="container-1260 container-section">
-    
+     
       <form action="/cart" method="post">
         <div class="free-shipping js__progressbar_visiblity hide" style="display:none !important">
           <!-- Free Shipping Values from Schema -->
@@ -69,7 +69,49 @@
           </div>
           <!-- START TOTAL -->
           <div class="wrapper-total">
-          
+            <div class="shipping-details js__progressbar_visiblity hide">
+              <span class="hide js__free-shipping-limit">{{ settings.freeShippingThresholdValue }} </span>
+              <span class=" title js__free-shipping-message" style="display: none;">{{ settings.freeShippingMsg }}</span>
+              <span class="title js__free-shipping-limit-message"
+                >You are
+                <b
+                  ><span
+                    class="js__free-shipping-remaning-amount"
+                    >$40</span
+                  >
+                  away</b
+                >
+                from free shipping</span
+              >
+              <ul class="flex ">
+                <span class="dark-bar js__grandtotal-shipping" data-percentage="0"></span>
+                <li>
+                  <div class="icon car js__free-shipping__icon">
+                    <img src="{{ 'icon-car.webp' | asset_url }}">
+                  </div>
+                  <span>Free Shipping</span>
+                  <div class="free-shipping__progress-bar js__free-shipping__progress-bar"><span></span></div>
+                </li>
+                {% if settings.freeProduct1 != blank %}
+                  <li>
+                    <div class="icon js__free-gift-1__icon">
+                      <img src="{{ 'icon-gift.webp' | asset_url }}">
+                    </div>
+                    <span>Free Gift</span>
+                    <div class="free-shipping__progress-bar js__free__gift-1__progress-bar"><span></span></div>
+                  </li>
+                {% endif %}
+                {% if settings.freeProduct2 != blank %}
+                  <li>
+                    <div class="icon js__free-gift-2__icon">
+                      <img src="{{ 'icon-gift.webp' | asset_url }}">
+                    </div>
+                    <span>Free Gift</span>
+                    <div class="free-shipping__progress-bar js__free__gift-2__progress-bar"><span></span></div>
+                  </li>
+                {% endif %}
+              </ul>
+            </div>
             <div class="total">
               <textarea
                 id="note"
