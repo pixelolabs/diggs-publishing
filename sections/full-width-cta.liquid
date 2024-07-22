@@ -1,0 +1,53 @@
+
+
+{% if section.settings.title != blank %}
+<div class="full-width-content-section">
+  <div class="container-1440">
+    <div class="container-840">
+     
+        <h2>
+          {{ section.settings.title }}
+        </h2>
+        {% if section.settings.buttonLink != blank and section.settings.buttonText != blank %}
+            <a
+              href="{{ section.settings.buttonLink }}"
+              title="Read More About {{ section.settings.title }}"
+              aria-label="Read More About {{ section.settings.title }}"
+              class="btn--primary yellow"
+            > {{ section.settings.buttonText }}</a>
+          {% endif %}
+        </div>
+
+        <div class="kids-images">
+          <img src="{{ 'kids-images.webp' | asset_url }}" /> 
+</div>
+        </div>
+        </div>
+    {% endif %}
+{% schema %}
+{
+  "name": "Full width content",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "buttonText",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "buttonLink",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Full width content"
+    }
+  ]
+}
+{% endschema %}
