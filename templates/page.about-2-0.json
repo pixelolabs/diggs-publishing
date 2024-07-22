@@ -25,7 +25,7 @@
         "image_XVzw8B": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/About_introduction.jpg",
+            "image": "shopify:\/\/shop_images\/About_introduction.webp",
             "showVideo": false,
             "video": "",
             "videoPopup": false,
@@ -35,7 +35,6 @@
             "buttonText": "Contact Me",
             "buttonLink": "shopify:\/\/pages\/contact-us",
             "background_color": "transparent-bg",
-            "col_reverse": false,
             "fontSize": false,
             "center": false
           }
@@ -53,7 +52,6 @@
             "buttonText": "Contact Me",
             "buttonLink": "shopify:\/\/pages\/contact-us",
             "background_color": "transparent-bg",
-            "col_reverse": true,
             "fontSize": false,
             "center": false
           }
@@ -61,7 +59,7 @@
         "image_jdXVE6": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/the_book.jpg",
+            "image": "shopify:\/\/shop_images\/the_book.webp",
             "showVideo": false,
             "video": "",
             "videoPopup": false,
@@ -71,7 +69,6 @@
             "buttonText": "",
             "buttonLink": "",
             "background_color": "transparent-bg",
-            "col_reverse": false,
             "fontSize": false,
             "center": false
           }
