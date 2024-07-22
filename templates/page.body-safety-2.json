@@ -12,6 +12,12 @@
     "innerBanner": {
       "type": "inner-hero-section",
       "settings": {
+        "color_scheme": "",
+        "image": "shopify:\/\/shop_images\/body_safety_banner.webp",
+        "mobileImage": "shopify:\/\/shop_images\/body_safety_banner_m.jpg",
+        "title": "Body Safety Wise Author Visit Program",
+        "description": "<p>Every writer begins as a storyteller. Hone your skills and craft stories that leave a mark.<\/p>",
+        "content_alignment": "left"
       }
     }
   },
