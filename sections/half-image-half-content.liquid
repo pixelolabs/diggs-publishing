@@ -1,5 +1,5 @@
 {% if section.blocks.size > 0 %}
-  <div class="half-image-half-content-outer">
+  <div class="half-image-half-content-outer {% if block.settings.wave_color == 'yellow-wave' %} yellow-wave{% elsif block.settings.wave_color == 'brown-wave' %} brown-wave {% elsif block.settings.wave_color == 'blue-wave' %} blue-wave{% else %} no-wave {% endif %}">
   {% for block in section.blocks %}
     <div class="half-image-half-content {% if block.settings.background_color == 'transparent-bg' %} no-bg-color{% elsif block.settings.background_color == 'brown' %} bg-brown {% elsif block.settings.background_color == 'blue' %}  bg-blue {% else %} no-bg {% endif %}">
       <div class="container-1260 flex {% if block.settings.col_reverse %} col-reverse{% endif %}">
@@ -90,7 +90,28 @@
 {% schema %}
 {
   "name": "Half Image Half Content",
-
+  "settings":[
+    {
+      "type": "select",
+      "id": "wave_color",
+      "label": "Wave color",
+      "options": [
+        {
+          "value": "yellow-wave",
+          "label": "yellow"
+        },
+        {
+          "value": "brown-wave",
+          "label": "Brown"
+        },
+        {
+          "value": "blue-wave",
+          "label": "Blue"
+        }
+      ],
+      "default": "blue-wave"
+    }
+  ],
   "blocks": [
     {
       "type": "image",
@@ -157,7 +178,7 @@
           "options": [
             {
               "value": "transparent-bg",
-              "label": "Transparent"
+              "label": "Yellow"
             },
             {
               "value": "brown",
