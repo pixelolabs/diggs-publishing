@@ -21,8 +21,8 @@ var removeMiniCartTextOrIcon =
     '<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">    <path fill-rule="evenodd" clip-rule="evenodd" d="m5.815 7.586 4.188 4.188 1.523-1.523-4.188-4.188 4.189-4.189L10.004.351 5.814 4.54 1.628.352.104 1.875l4.188 4.188-4.188 4.188 1.523 1.523 4.188-4.188z" fill="#1A1B1B"/> </svg>';
 
 
-var minusIcon = '<svg width="11" height="3" viewBox="0 0 11 3" fill="none" xmlns="http://www.w3.org/2000/svg">   <path fill="#253032" d="M.5.563h10v2H.5z"/> </svg>';
-var plusIcon = '<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 6.563v4h2v-4h4v-2h-4v-4h-2v4h-4v2h4z" fill="#253032"/> </svg>';
+var minusIcon = '<svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2006_22860)"><path d="M0.107422 3.78121H6.96365" stroke="#3B2900" stroke-width="1.34674" stroke-linecap="round" stroke-linejoin="round"/><defs><clipPath id="clip0_2006_22860"><rect width="6.85623" height="6.89921" fill="white" transform="translate(0.107422 0.332153)"/></clipPath></defs></svg>';
+var plusIcon = '<svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_942_17768)"><path d="M3.53516 0.332153V7.23136" stroke="#3B2900" stroke-width="1.34674" stroke-linecap="round" stroke-linejoin="round"/><path d="M0.107422 3.78121H6.96365" stroke="#3B2900" stroke-width="1.34674" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_942_17768"><rect width="6.85623" height="6.89921" fill="white" transform="translate(0.107422 0.332153)"/></clipPath></defs></svg>';
 $(document).ready(function($) {
     reloadAjaxCartItemUsingCartAjaxObject();
     progressBar();
