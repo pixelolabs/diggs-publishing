@@ -481,7 +481,21 @@
         display: none;
       }
     }
+    .full-format {
+      p{
+        padding-bottom: 0;
+          @include MQ(MQ-768) {
+            padding-bottom: 0;
+        }
+      }
+    }
     .half-image-half-content{
+      @include MQ(MQ-980) {
+        padding-bottom: 65px;
+      }
+      @include MQ(MQ-480) {
+        padding-bottom: 45px;
+      }
       &:nth-last-child(1){
         padding-bottom: 0;
       }
@@ -552,27 +566,9 @@
         padding-right: 0;
       }
     }  
-  }
-}
-.template-page-about-2-0{
-  .half-image-half-content{
-    @include MQ(MQ-980) {
-      padding-bottom: 65px;
-    }
-    @include MQ(MQ-480) {
-      padding-bottom: 45px;
-    }
     .image-wrapper:after{
       @include MQ(MQ-980) {
         display: none;
-      }
-    }
-  }
-  .full-format {
-    p{
-      padding-bottom: 0;
-        @include MQ(MQ-768) {
-          padding-bottom: 0;
       }
     }
   }
