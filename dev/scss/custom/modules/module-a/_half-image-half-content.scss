@@ -628,3 +628,12 @@
     }
   } 
 }
+.body-safety-2{
+  .half-image-half-content{
+    padding-top: 150px;
+    .container-1260{
+      // flex-direction: row-reverse;
+      &:before{display: none;}
+    }
+  }  
+}
