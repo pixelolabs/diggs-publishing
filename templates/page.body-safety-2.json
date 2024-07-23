@@ -57,11 +57,71 @@
         "buttonText": "Contact Us",
         "buttonLink": "shopify:\/\/pages\/contact"
       }
+    },
+    "half_image_half_content_AfYRJH": {
+      "type": "half-image-half-content",
+      "blocks": {
+        "image_UYLL87": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Body_Safety_Wise_Author_Visits.webp",
+            "showVideo": false,
+            "video": "",
+            "videoPopup": true,
+            "pretitle": "",
+            "title": "Body Safety Wise Author Visits",
+            "description": "<p>Body Safety Wise Author Visit presentation provides a PK-8 curriculum that teaches students about body safety, consent, and boundaries. It includes an engaging introduction, a book reading, giveaways, book signing, and a brief Q&A. The presentation is approximately 30-45 minutes.<\/p>",
+            "buttonText": "Book Now",
+            "buttonLink": "#",
+            "background_color": "blue",
+            "fontSize": false,
+            "center": false
+          }
+        }
+      },
+      "block_order": [
+        "image_UYLL87"
+      ],
+      "settings": {
+        "section_class": "body-safety-2",
+        "wave_color": "blue-wave"
+      }
+    },
+    "half_image_half_content_pYBVgk": {
+      "type": "half-image-half-content",
+      "blocks": {
+        "image_ERCBqV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ambassador_Program.webp",
+            "showVideo": false,
+            "video": "",
+            "videoPopup": true,
+            "pretitle": "",
+            "title": "Ambassador Program",
+            "description": "<p>The Ambassador Program is a unique opportunity for children and young adults ages 0-18 to become advocates for body safety education! Ambassadors will have the opportunity to share their love of reading and raise awareness about body safety education in their community.<\/p>",
+            "buttonText": "Apply Now",
+            "buttonLink": "#",
+            "background_color": "transparent-bg",
+            "fontSize": false,
+            "center": false
+          }
+        }
+      },
+      "block_order": [
+        "image_ERCBqV"
+      ],
+      "settings": {
+        "section_class": "body-safety-3",
+        "wave_color": "transparent-wave"
+      }
     }
   },
   "order": [
     "innerBanner",
     "half_image_half_content_J3NzQy",
-    "full_width_cta_UC7Amx"
+    "full_width_cta_UC7Amx",
+    "half_image_half_content_AfYRJH",
+    "half_image_half_content_pYBVgk"
   ]
 }
