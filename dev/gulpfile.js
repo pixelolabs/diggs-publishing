@@ -17,7 +17,9 @@ const pngquant = require("imagemin-pngquant");
  * Asset paths.
  */
 const srcSCSS_global = "scss/custom/**/*.scss";
-const srcSCSS_modules = "scss/custom/modules/*.scss";
+const srcSCSS_a = "scss/custom/modules/module-a/*.scss";
+const srcSCSS_n = "scss/custom/modules/module-n/*.scss";
+const srcSCSS_g = "scss/custom/modules/module-g/*.scss";
 const srcSCSSVendor = "scss/vendor/*.css";
 const srcJSCustom = "js/custom/*.js";
 const srcJSVendor = "js/vendor/*.js";
@@ -29,7 +31,9 @@ const format = {
     },
     custom: {
         scripts: srcJSCustom,
-        styles_modules: srcSCSS_modules,
+        styles_a: srcSCSS_a,
+        styles_g: srcSCSS_g,
+        styles_n: srcSCSS_n,
         styles_global: srcSCSS_global,
     },
 };
@@ -59,8 +63,57 @@ gulp.task("sass", function() {
     );
 });
 
+gulp.task("sass-g", function () {
+    return (
+      gulp
+        .src("scss/sm-style-1.scss")
+        .pipe(sourcemaps.init())
+        .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
+        .pipe(
+          autoprefixer(
+            "last 2 version",
+            "safari 5",
+            "ie 7",
+            "ie 8",
+            "ie 9",
+            "opera 12.1",
+            "ios 6",
+            "android 4"
+          )
+        )
+        .pipe(sourcemaps.write("./"))
+        // .pipe(clean())
+        .pipe(rename("_sm-style-1.css"))
+        .pipe(gulp.dest(assetsDir))
+    );
+  });
 
-gulp.task("sass-modules", function() {
+  gulp.task("sass-n", function () {
+    return (
+      gulp
+        .src("scss/sm-style-2.scss")
+        .pipe(sourcemaps.init())
+        .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
+        .pipe(
+          autoprefixer(
+            "last 2 version",
+            "safari 5",
+            "ie 7",
+            "ie 8",
+            "ie 9",
+            "opera 12.1",
+            "ios 6",
+            "android 4"
+          )
+        )
+        .pipe(sourcemaps.write("./"))
+        // .pipe(clean())
+        .pipe(rename("_sm-style-2.css"))
+        .pipe(gulp.dest(assetsDir))
+    );
+  });
+
+gulp.task("sass-a", function() {
     return (
         gulp
         .src("scss/sm-style.scss")
@@ -161,7 +214,9 @@ gulp.task("fonts", () => {
 //  */
 gulp.task("watch", function() {
     gulp.watch(format.custom.styles_global, gulp.series("sass"));
-    gulp.watch(format.custom.styles_modules, gulp.series("sass-modules"));
+    gulp.watch(format.custom.styles_a, gulp.series("sass-a"));
+    gulp.watch(format.custom.styles_g, gulp.series("sass-g"));
+    gulp.watch(format.custom.styles_n, gulp.series("sass-n"));
     gulp.watch(format.vendor.styles, gulp.series("sass-vendor"));
     gulp.watch(srcJSCustom, gulp.series("jsCustom"));
     gulp.watch(srcJSVendor, gulp.series("jsVendor"));
@@ -175,7 +230,9 @@ gulp.task(
     "default",
     gulp.series(
         "sass",
-        "sass-modules",
+        "sass-a",
+        "sass-g",
+        "sass-n",
         "sass-vendor",
         "jsCustom",
         "jsVendor",

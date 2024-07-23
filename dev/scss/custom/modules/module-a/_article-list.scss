@@ -1,0 +1,47 @@
+.article-list {
+  // padding: 67px 0 75px 0;
+  background-color: $color-white;
+
+  @include MQ(MQ-480) {
+    padding: 57px 0 75px 0;
+  }
+
+  .container-1222 {
+    @include MQ(MQ-480) {
+      padding: 0 30px 0 12px;
+    }
+  }
+
+  .top-section {
+    justify-content: space-between;
+    margin-bottom: 72px;
+
+    h2 {
+      max-width: 464px;
+      line-height: normal;
+
+      span {
+        display: inline-block;
+      }
+    }
+
+    @include MQ(MQ-768) {
+      flex-direction: column;
+      margin-bottom: 100px;
+
+      h2 {
+        line-height: 1.48;
+        text-align: center;
+        margin: 0 auto 20px;
+      }
+
+      .btn--primary {
+        margin: 0 auto;
+      }
+    }
+
+    @include MQ(MQ-480) {
+      padding-left: 18px;
+    }
+  }
+}
