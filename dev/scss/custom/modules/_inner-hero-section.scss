@@ -135,7 +135,7 @@
     * {
       color: #ffffff;
     }
-    h1 {
+    h1, .h1 {
       margin: 0 0 16px;
       font-size: 40px;
       font-weight: normal;
@@ -146,6 +146,16 @@
         font-size: 30px;
         margin-bottom: 7px;
       }
+    }
+  }
+}
+
+.template-page-about-2-0{
+  .inner-hero-section{
+    @include MQ(MQ-480) {
+      padding-top: 100px !important;
+      padding-bottom: 100px !important;
+      min-height: 340px;
     }
   }
 }

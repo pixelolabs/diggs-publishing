@@ -1267,6 +1267,12 @@ button {
   padding: 0 30px;
   margin: 0 auto;
 }
+.container-900 {
+  max-width: 900px;
+  width: 100%;
+  padding: 0 30px;
+  margin: 0 auto;
+}
 .container-840 {
   max-width: 840px;
   width: 100%;
@@ -1681,7 +1687,7 @@ button {
     max-width: 350px;
     width: 100%;
     margin: auto;
-    text-align: center;
+    // text-align: center;
   }
 }
 
