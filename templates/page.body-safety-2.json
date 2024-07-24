@@ -115,6 +115,13 @@
         "section_class": "body-safety-3",
         "wave_color": "transparent-wave"
       }
+    },
+    "contact_form_with_text_yJq3pj": {
+      "type": "contact-form-with-text",
+      "settings": {
+        "title": "Reach out to us",
+        "address": "<p>3558 Round Barn Blvd, Suite\u2028200 Santa Rosa, CA 95403<\/p>"
+      }
     }
   },
   "order": [
@@ -122,6 +129,7 @@
     "half_image_half_content_J3NzQy",
     "full_width_cta_UC7Amx",
     "half_image_half_content_AfYRJH",
-    "half_image_half_content_pYBVgk"
+    "half_image_half_content_pYBVgk",
+    "contact_form_with_text_yJq3pj"
   ]
 }
