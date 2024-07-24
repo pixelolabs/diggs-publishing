@@ -18,7 +18,7 @@ var recurringchecked = false;
 var frequency_unit = "";
 //SVG icons
 var removeMiniCartTextOrIcon =
-    '<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">    <path fill-rule="evenodd" clip-rule="evenodd" d="m5.815 7.586 4.188 4.188 1.523-1.523-4.188-4.188 4.189-4.189L10.004.351 5.814 4.54 1.628.352.104 1.875l4.188 4.188-4.188 4.188 1.523 1.523 4.188-4.188z" fill="#1A1B1B"/> </svg>';
+    '<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M10.485 19a9 9 0 1 0 0-18 9 9 0 0 0 0 18z" fill="#fff" stroke="#3B2900" stroke-width="1.326" stroke-linecap="round" stroke-linejoin="round"/>  <path d="m13.185 7.3-5.4 5.4M7.785 7.3l5.4 5.4" stroke="#3B2900" stroke-width="1.326" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
 
 var minusIcon = '<svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2006_22860)"><path d="M0.107422 3.78121H6.96365" stroke="#3B2900" stroke-width="1.34674" stroke-linecap="round" stroke-linejoin="round"/><defs><clipPath id="clip0_2006_22860"><rect width="6.85623" height="6.89921" fill="white" transform="translate(0.107422 0.332153)"/></clipPath></defs></svg>';
