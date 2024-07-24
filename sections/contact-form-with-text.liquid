@@ -1,17 +1,5 @@
-<div class="contact-section">
-  <div class="container-1000 text-center">
-    <div class="content">
-      {% if section.settings.title != blank %}
-        <h2>{{ section.settings.title }}</h2>
-      {% endif %}
-      <div class="full-format description  ">
-        {% if section.settings.title != blank %}
-          {{ section.settings.description }}
-        {% else %}
-          {{ page.content }}
-        {% endif %}
-      </div>
-    </div>
+<div class="contact-form-with-text">
+  <div class="container-1280 flex">
     <div class="contact-info-section">
       <ul>
         <li>
