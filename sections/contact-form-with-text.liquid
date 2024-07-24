@@ -79,7 +79,7 @@
             pattern="[0-9\-]*"
             value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}">
         </div>
-        <div class="textarea-field">
+        <div class="textarea-field full-width-col">
           <label for="Message">
           Message</label>
           <textarea
@@ -91,7 +91,7 @@
               {{ form.body }}{% endif %}
           </textarea>
         </div>
-        <div class="submit-field">
+        <div class="submit-field full-width-col">
         <input
           type="submit"
           class="btn--primary"
