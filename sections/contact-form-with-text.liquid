@@ -1,15 +1,18 @@
 <div class="contact-form-with-text">
   <div class="container-1200 flex">
     <div class="contact-info-section">
+       {% if section.settings.title != blank %}
+        <h2>{{ section.settings.title }}</h2>
+      {% endif %}
       <ul>
         <li>
           <span class="title uppercase">
-            Phone</span>
-          <a href="tel:{% if settings.numberPlusSign == true %}+{%endif%}{{settings.number}}">{{ settings.number }}</a>
+            Location</span>
+          <span class="address">{{ section.settings.address }}</span>
         </li>
         <li>
           <span class="title uppercase">
-            Email</span>
+            Email us on</span>
           <a href="mailto:{{settings.emailAddress}}">
             {{ settings.emailAddress }}</a>
         </li>
@@ -93,8 +96,8 @@
       },
       {
         "type": "richtext",
-        "id": "description",
-        "label": "Description"
+        "id": "address",
+        "label": "Add Location"
       }
     ],
 
