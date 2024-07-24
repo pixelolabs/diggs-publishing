@@ -22,7 +22,7 @@
         {% include 'form-status'
           , form: form
           , form_id: formId %}
-        <div class="input-field">
+        <div class="input-field width-half">
           <label for="Subject">
             How can we help you? *</label>
           <input
@@ -31,7 +31,7 @@
             placeholder="Subject*"
             name="contact[Enquiry_Subject]">
         </div>
-        <div class="input-field">
+        <div class="input-field width-half">
           <label for="Full-name">
           Full Name *</label>
           <input
@@ -41,7 +41,7 @@
             name="contact[{{ 'contact.form.name' | t }}]"
             value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
         </div>
-        <div class="input-field">
+        <div class="input-field width-half">
           <label for="Email">
           Email Address *</label>
           <input
@@ -68,7 +68,7 @@
             </span>
           {%- endif -%}
         </div>
-        <div class="input-field">
+        <div class="input-field width-half">
           <label for="Mobile-number">
           Mobile Number *</label>
           <input
