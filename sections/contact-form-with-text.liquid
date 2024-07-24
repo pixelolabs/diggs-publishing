@@ -1,0 +1,119 @@
+<div class="contact-section">
+  <div class="container-1000 text-center">
+    <div class="content">
+      {% if section.settings.title != blank %}
+        <h2>{{ section.settings.title }}</h2>
+      {% endif %}
+      <div class="full-format description  ">
+        {% if section.settings.title != blank %}
+          {{ section.settings.description }}
+        {% else %}
+          {{ page.content }}
+        {% endif %}
+      </div>
+    </div>
+    <div class="contact-info-section">
+      <ul>
+        <li>
+          <span class="title uppercase">
+            Phone</span>
+          <a href="tel:{% if settings.numberPlusSign == true %}+{%endif%}{{settings.number}}">{{ settings.number }}</a>
+        </li>
+        <li>
+          <span class="title uppercase">
+            Email</span>
+          <a href="mailto:{{settings.emailAddress}}">
+            {{ settings.emailAddress }}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="form-section text-left">
+      {%- assign formId = 'ContactForm' -%}
+      {% form 'contact'
+        , id: formId %}
+        {% include 'form-status'
+          , form: form
+          , form_id: formId %}
+        <input
+          placeholder="Name*"
+          type="text"
+          id="{{ formId }}-name"
+          name="contact[{{ 'contact.form.name' | t }}]"
+          value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
+
+        <input
+          placeholder="Email Address*"
+          class="email-field"
+          type="email"
+          id="{{ formId }}-email"
+          name="contact[email]"
+          autocorrect="off"
+          autocapitalize="off"
+          value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+          aria-required="true"
+          {%- if form.errors contains 'email' -%}
+          class="input--error"
+          aria-invalid="true"
+          aria-describedby="{{ formId }}-email-error"
+          {%- endif -%}>
+        {%- if form.errors contains 'email' -%}
+          <span id="{{ formId}}-email-error" class="input-error-message">
+            <span class="visually-hidden">{{ 'general.accessibility.error' | t }}</span>
+            <span>
+              {{- form.errors.translated_fields.email | capitalize }}
+              {{ form.errors.messages.email }}.</span>
+          </span>
+        {%- endif -%}
+        <input
+          type="tel"
+          id="{{ formId }}-phone"
+          placeholder="Phone Number"
+          name="contact[Phone]"
+          pattern="[0-9\-]*"
+          value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}">
+        <input
+          type="text"
+          id="{{ formId }}-subject"
+          placeholder="Subject*"
+          name="contact[Enquiry_Subject]">
+
+        <textarea
+          placeholder="Message"
+          rows="10"
+          id="{{ formId }}-message"
+          name="contact[{{ 'contact.form.message' | t }}]">
+          {% if form.body %}
+            {{ form.body }}{% endif %}
+        </textarea>
+        <input
+          type="submit"
+          class="btn--primary"
+          value="Submit">
+      {% endform %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Contact Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "description",
+        "label": "Description"
+      }
+    ],
+
+    "presets": [
+      {
+        "name": "Contact Section"
+      }
+    ]
+  }
+{% endschema %}
