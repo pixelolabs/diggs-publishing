@@ -150,7 +150,7 @@
                 <a href="{{product1.url}}" title="{{product1.title}}">{{ product1.title }}</a>
               </h5>
              
-            </div>
+            
             <div class="add-link-price">
 
               <a title="Add" data-attr-variantid="{{current_variant1.id}}" class="freq-add js__addon-add-to-cart ">
@@ -158,6 +158,7 @@
               </a>
               <p>{{ product1.price | money }}</p>
             </div>
+          </div>
           </li>
           {% assign product2 = all_products[settings.product_2] %}
           {%- assign current_variant2 = product2.selected_or_first_available_variant -%}
@@ -177,12 +178,13 @@
                 <a href="{{product2.url}}" title="{{product2.title}}">{{ product2.title }}</a>
               </h5>
             
-            </div>
+           
             <div class="add-link-price">
               <a title="Add" data-attr-variantid="{{current_variant2.id}}" class="freq-add js__addon-add-to-cart ">
                 Add to cart
               </a>
               <p>{{ product2.price | money }}</p>
+            </div>
             </div>
           </li>
         </ul>
