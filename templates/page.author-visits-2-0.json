@@ -1,0 +1,26 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "innerBanner": {
+      "type": "inner-hero-section",
+      "settings": {
+        "color_scheme": "",
+        "image": "shopify:\/\/shop_images\/Author_Visits_banner_1434274f-b871-444d-94f7-3f617241992f.webp",
+        "title": "Are you ready?",
+        "description": "<p>Engage and inspire your students with Author  visits for grades PK-8!<\/p>",
+        "content_alignment": "left"
+      }
+    }
+  },
+  "order": [
+    "innerBanner"
+  ]
+}
