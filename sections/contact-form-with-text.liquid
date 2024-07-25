@@ -21,6 +21,12 @@
                   aria-invalid="true"
                 {%- endif -%}
                 name="contact[Enquiry_Subject]">
+                {%- if form.errors -%}
+                  <span id="{{ formId }}-phone-error" class="input-error-message">
+                    <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+                    <span>{{ form.errors.messages['form'] }}</span>
+                  </span>
+                {%- endif -%}
             </div>
             <div class="input-field half-width-col {% if form.errors %}input-group--error{% endif %}">
               <label for="Full-name">
@@ -35,6 +41,12 @@
                   aria-invalid="true"
                 {%- endif -%}
                 value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
+                {%- if form.errors -%}
+                  <span id="{{ formId }}-phone-error" class="input-error-message">
+                    <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+                    <span>{{ form.errors.messages['form'] }}</span>
+                  </span>
+                {%- endif -%}
             </div>
             <div class="input-field half-width-col {% if form.errors %}input-group--error{% endif %}">
               <label for="Email">
