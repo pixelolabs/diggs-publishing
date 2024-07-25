@@ -2,7 +2,7 @@
   <div class="contact-form-with-text">
     <div class="container-1260 flex">
       <div class="form-section text-left">
-        {%- assign formId = 'BodySafetyContactForm' -%}
+        {%- assign formId = 'ContactForm' -%}
         {% form 'contact'
           , id: formId %}
           {% include 'form-status'
@@ -16,7 +16,10 @@
                 type="text"
                 id="{{ formId }}-subject"
                 placeholder="Subject*"
-                required
+                aria-required="true"
+                {% if form.errors %}
+                  aria-invalid="true"
+                {%- endif -%}
                 name="contact[Enquiry_Subject]">
                 {%- if form.errors -%}
                   <span id="{{ formId }}-phone-error" class="input-error-message">
@@ -33,7 +36,10 @@
                 type="text"
                 id="{{ formId }}-name"
                 name="contact[{{ 'contact.form.name' | t }}]"
-                required
+                aria-required="true"
+                {% if form.errors %}
+                  aria-invalid="true"
+                {%- endif -%}
                 value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
                 {%- if form.errors -%}
                   <span id="{{ formId }}-phone-error" class="input-error-message">
@@ -78,7 +84,10 @@
                 placeholder="Phone Number"
                 name="contact[Phone]"
                 pattern="[0-9\-]*"
-                required
+                aria-required="true"
+                {% if form.errors %}
+                  aria-invalid="true"
+                {%- endif -%}
                 value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}">
                 {%- if form.errors -%}
                   <span id="{{ formId }}-phone-error" class="input-error-message">
@@ -131,7 +140,7 @@
 </div>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const registrationForm = document.querySelector('#BodySafetyContactForm');
+  const registrationForm = document.querySelector('#ContactForm');
 
   if (registrationForm) {
     registrationForm.addEventListener('submit', function(event) {
