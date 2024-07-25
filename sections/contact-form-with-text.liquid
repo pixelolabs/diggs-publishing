@@ -16,6 +16,7 @@
                 type="text"
                 id="{{ formId }}-subject"
                 placeholder="Subject*"
+                aria-required="true"
                 name="contact[Enquiry_Subject]">
             </div>
             <div class="input-field half-width-col">
@@ -26,6 +27,7 @@
                 type="text"
                 id="{{ formId }}-name"
                 name="contact[{{ 'contact.form.name' | t }}]"
+                aria-required="true"
                 value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
             </div>
             <div class="input-field half-width-col">
@@ -64,6 +66,7 @@
                 placeholder="Phone Number"
                 name="contact[Phone]"
                 pattern="[0-9\-]*"
+                aria-required="true"
                 value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}">
             </div>
             <div class="textarea-field full-width-col">
@@ -108,7 +111,41 @@
     </div>
   </div>
 </div>
+<!-- <script>
+document.addEventListener('DOMContentLoaded', function() {
 
+  document.getElementById('ContactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      resetErrorMessages();
+
+      let formIsValid = true;
+      const inputFields = document.querySelectorAll('input[aria-required="true"]');
+      
+      inputFields.forEach(input => {
+          const value = input.value.trim();
+          if (value === '') {
+              const errorMessage = document.createElement('span');
+              errorMessage.textContent = 'This field is required.';
+              errorMessage.classList.add('input-error-message');
+              input.parentNode.appendChild(errorMessage);
+              formIsValid = false;
+          }
+      });
+
+      if (formIsValid) {
+          event.target.submit();
+      }
+  });
+
+  function resetErrorMessages() {
+      const errorMessages = document.querySelectorAll('.error-message');
+      errorMessages.forEach(errorMessage => {
+          errorMessage.parentNode.removeChild(errorMessage);
+      });
+  }
+});
+</script> -->
 {% schema %}
   {
     "name": "Contact Form With Text",
