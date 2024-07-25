@@ -16,14 +16,7 @@
                 type="text"
                 id="{{ formId }}-subject"
                 placeholder="Subject*"
-                aria-required="true"
                 name="contact[Enquiry_Subject]">
-                {%- if form.errors -%}
-                <span id="{{ formId }}-subject-error" class="input-error-message">
-                  <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
-                  <span>{{ form.errors.messages['form'] }}</span>
-                </span>
-              {%- endif -%}
             </div>
             <div class="input-field half-width-col">
               <label for="Full-name">
@@ -33,14 +26,7 @@
                 type="text"
                 id="{{ formId }}-name"
                 name="contact[{{ 'contact.form.name' | t }}]"
-                aria-required="true"
                 value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
-                {%- if form.errors -%}
-                <span id="{{ formId }}-name-error" class="input-error-message">
-                  <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
-                  <span>{{ form.errors.messages['form'] }}</span>
-                </span>
-              {%- endif -%}
             </div>
             <div class="input-field half-width-col">
               <label for="Email">
@@ -77,7 +63,6 @@
                 id="{{ formId }}-phone"
                 placeholder="Phone Number"
                 name="contact[Phone]"
-                aria-required="true"
                 pattern="[0-9\-]*"
                 value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}">
             </div>
