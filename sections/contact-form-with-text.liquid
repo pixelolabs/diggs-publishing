@@ -128,7 +128,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
       if (hasEmptyField) {
         event.preventDefault();
-        alert('All fields are required. Please fill out all fields.');
+        const messageElement = document.createElement('span');
+        messageElement.textContent = 'This field is required.';
+         requiredFields.parentNode.appendChild(messageElement);
       }
     });
   }
