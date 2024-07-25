@@ -128,6 +128,9 @@
     max-width: 490px;
     width: 100%;
     position: relative;
+    .btn--primary{
+      margin-top: 20px;
+    }
     @include MQ(MQ-768) {
       max-width: 300px;
     }

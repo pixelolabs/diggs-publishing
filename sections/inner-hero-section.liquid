@@ -126,7 +126,7 @@
             href="{{ section.settings.buttonLink1 }}"
             title="Read More About {{ section.settings.buttonText1 }}"
             aria-label="Read More About {{ section.settings.buttonText}}"
-            class="btn--secondary"
+            class="btn--primary {% if section.settings.button_bg == 'green' %} green{% else %} pink{% endif %}"
             title="{{ section.settings.buttonText1 }}"
           >
             {{- section.settings.buttonText1 -}}
@@ -137,7 +137,7 @@
             href="{{ section.settings.buttonLink2 }}"
             title="Read More About {{ section.settings.buttonText2 }}"
             aria-label="Read More About {{ section.settings.buttonText2 }}"
-            class="btn--secondary"
+            class="btn--primary"
             title="{{ section.settings.buttonText2 }}"
           >
             {{- section.settings.buttonText2 -}}
@@ -190,7 +190,32 @@
       "id": "description",
       "label": "Description"
     },
-
+    {
+      "type": "text",
+      "id": "buttonText1",
+      "label": "Button Text 1"
+    },
+    {
+      "type": "url",
+      "id": "buttonLink1",
+      "label": "Button Link 1"
+    },
+    {
+      "type": "select",
+      "id": "button_bg",
+      "label": "Button Background color",
+      "options": [
+        {
+          "value": "green",
+          "label": "Green"
+        },
+        {
+          "value": "pink",
+          "label": "Pink"
+        }
+      ],
+      "default": "pink"
+    },
     {
       "type": "header",
       "content": "Extra Settings",

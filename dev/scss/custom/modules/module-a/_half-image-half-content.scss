@@ -581,7 +581,7 @@
   }
 }
 
-.body-safety-1{
+.body-safety-1, .author-visit-1{
   overflow-x: clip;
   @include MQ(MQ-980) {
     margin-bottom: -20px
@@ -772,6 +772,14 @@
   .image-wrapper{
     &:after{
       right: -127px;
+    }
+  }
+}
+
+.author-visit-1{
+  .image-wrapper{
+    &:after{
+      display: none;
     }
   }
 }
