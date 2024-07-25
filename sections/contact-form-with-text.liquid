@@ -2,7 +2,7 @@
   <div class="contact-form-with-text">
     <div class="container-1260 flex">
       <div class="form-section text-left">
-        {%- assign formId = 'ContactForm' -%}
+        {%- assign formId = 'BodySafetyContactForm' -%}
         {% form 'contact'
           , id: formId %}
           {% include 'form-status'
@@ -138,7 +138,29 @@
     </div>
   </div>
 </div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const registrationForm = document.querySelector('#create-customer');
 
+  if (registrationForm) {
+    registrationForm.addEventListener('submit', function(event) {
+      const requiredFields = registrationForm.querySelectorAll('input[required]');
+      let hasEmptyField = false;
+
+      requiredFields.forEach(function(field) {
+        if (field.value.trim() === '') {
+          hasEmptyField = true;
+        }
+      });
+
+      if (hasEmptyField) {
+        event.preventDefault();
+        alert('All fields are required. Please fill out all fields.');
+      }
+    });
+  }
+});
+</script>
 {% schema %}
   {
     "name": "Contact Form With Text",
