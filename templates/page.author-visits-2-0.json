@@ -18,6 +18,7 @@
         "description": "<p>Engage and inspire your students with Author  visits for grades PK-8!<\/p>",
         "buttonText1": "Book Now",
         "buttonLink1": "#",
+        "button_bg": "green",
         "content_alignment": "left"
       }
     }
