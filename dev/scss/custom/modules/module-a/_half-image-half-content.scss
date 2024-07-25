@@ -325,6 +325,10 @@
       display: none;
      }
   }
+  h2{
+    margin: 0 0 15px;
+    padding-bottom: 0;
+  }
   .inner{
     max-width: 544px;
 
@@ -353,7 +357,9 @@
       margin: 0;
       padding-right: 0;
     }
-   
+    @include MQ(MQ-500) {
+      padding-top: 35px;
+    }
     .pre-title{
       margin-bottom: 20px;
       color: $color-orange;
@@ -364,14 +370,6 @@
     .btn--primary{
       margin-top: 30px;
     }
-    .full-format {
-      p{
-        padding-bottom: 0;
-          @include MQ(MQ-768) {
-            padding-bottom: 0;
-        }
-      }
-    } 
   }
   // &:nth-child(even) {
   //   // padding-top: 0;
@@ -465,6 +463,14 @@
      
     }
   }
+  .full-format {
+    p{
+      padding-bottom: 0;
+        @include MQ(MQ-768) {
+          padding-bottom: 0;
+      }
+    }
+  } 
 }
 
   .about-us-section{
@@ -518,10 +524,6 @@
         }
         &:after{
           right: 0;
-        }
-        h2{
-          margin: 0 0 20px;
-          padding-bottom: 0;
         }
         @include MQ(MQ-768) {
           padding-top: 45px;
