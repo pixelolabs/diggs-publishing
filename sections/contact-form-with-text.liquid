@@ -24,7 +24,7 @@
                 {%- if form.errors -%}
                   <span id="{{ formId }}-phone-error" class="input-error-message">
                     <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
-                    <span>{{ form.errors.messages['form'] }}</span>
+                    <span>{{ form.error_required }}</span>
                   </span>
                 {%- endif -%}
             </div>
@@ -44,7 +44,7 @@
                 {%- if form.errors -%}
                   <span id="{{ formId }}-phone-error" class="input-error-message">
                     <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
-                    <span>{{ form.errors.messages['form'] }}</span>
+                    <span>{{ form.error_required }}</span>
                   </span>
                 {%- endif -%}
             </div>
@@ -92,7 +92,7 @@
                 {%- if form.errors -%}
                   <span id="{{ formId }}-phone-error" class="input-error-message">
                     <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
-                    <span>{{ form.errors.messages['form'] }}</span>
+                    <span>{{ form.error_required }}</span>
                   </span>
                 {%- endif -%}
             </div>
