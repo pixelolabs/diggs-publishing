@@ -310,7 +310,7 @@ function cartInfo(data) {
       // remove anchor
 
 
-      var removeAnchorElement = '<div class="remove js__cart-item-remove ' + removeExtraClass + '" data-cart-line-count="' + lineCount + '" data-variant-id="' + itemID + '"  data-cart-remove-variant="' + this.id + ">" + removeMiniCartTextOrIcon + "</div>"; //quantity element
+      var removeAnchorElement = '<div class="remove js__cart-item-remove ' + removeExtraClass + '" data-cart-line-count="' + lineCount + '" data-variant-id="' + itemID + '"  data-cart-remove-variant="' + this.id + '">' + removeMiniCartTextOrIcon + '</div>'; //quantity element
 
       var quantityElement = '<div class="cart-quantity-outer ' + disabled + justifyCenter + '"> <a  tabindex="0"  class="minus-qty ' + hideElementClass + '  font-zero" date-type="minus" onclick="updateCartQuantity(this)"   data-variant-id="' + itemID + '">' + minusIcon + '</a> <input aria-label="Quantity"  tabindex="-1"  data-limit="' + boolItemBoxType + '"  ' + readonly + '   onkeydown="return isNumeric(event);" type="text"  data-attr-raw-variant-quantity="94" data-cart-line-count="' + lineCount + '" class="cart__quantity-selector js__cart__quantity-selector" name="updates[]" id="updates_' + itemID + '" value="' + this.quantity + '" maxlength="3" size="3"> <a  tabindex="0"  class="plus-qty ' + hideElementClass + '  font-zero" date-type="plus" onclick="updateCartQuantity(this)"     data-variant-id="' + itemID + '">' + plusIcon + "</a> </div>"; //vendor element
 
