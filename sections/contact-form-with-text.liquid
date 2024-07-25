@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
           const value = input.value.trim();
           if (value === '') {
               // Show error message
-              const errorMessage = document.createElement('div');
+              const errorMessage = document.createElement('span');
               errorMessage.textContent = 'This field is required.';
               errorMessage.classList.add('input-error-message');
               input.parentNode.appendChild(errorMessage);
