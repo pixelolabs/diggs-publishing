@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
               // Show error message
               const errorMessage = document.createElement('div');
               errorMessage.textContent = 'This field is required.';
-              errorMessage.classList.add('error-message');
+              errorMessage.classList.add('input-error-message');
               input.parentNode.appendChild(errorMessage);
               formIsValid = false;
           }
