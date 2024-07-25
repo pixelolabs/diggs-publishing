@@ -344,10 +344,9 @@ function cartInfo(data) {
                 lineCount +
                 '" data-variant-id="' +
                 itemID +
-                '"  data-cart-remove-variant="' +
-                this.id + ">" +
+                '"  data-cart-remove-variant="' +this.id + '">' +
                 removeMiniCartTextOrIcon +
-                "</div>";
+                '</div>';
             //quantity element
             var quantityElement =
                 '<div class="cart-quantity-outer ' +

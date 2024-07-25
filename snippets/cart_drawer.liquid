@@ -11,7 +11,7 @@
 
           YOUR Cart
         </h4>
-        <a href="/cart" class="link--primary" title="Cart">View Cart</a>
+        <a href="/cart" class="link--primary-small" title="Cart">View Cart</a>
       </div>
       <div class="free-shipping js__progressbar_visiblity hide" style="display:none">
         <!-- Free Shipping Values from Schema -->
@@ -149,13 +149,16 @@
               <h5>
                 <a href="{{product1.url}}" title="{{product1.title}}">{{ product1.title }}</a>
               </h5>
+             
+            
+            <div class="add-link-price">
+
+              <a title="Add" data-attr-variantid="{{current_variant1.id}}" class="freq-add js__addon-add-to-cart ">
+                Add to cart
+              </a>
               <p>{{ product1.price | money }}</p>
             </div>
-            <div class="add-link">
-              <a title="Add" data-attr-variantid="{{current_variant1.id}}" class="freq-add js__addon-add-to-cart ">
-                {% render 'icon-cart-with-bg' %}
-              </a>
-            </div>
+          </div>
           </li>
           {% assign product2 = all_products[settings.product_2] %}
           {%- assign current_variant2 = product2.selected_or_first_available_variant -%}
@@ -174,12 +177,14 @@
               <h5>
                 <a href="{{product2.url}}" title="{{product2.title}}">{{ product2.title }}</a>
               </h5>
+            
+           
+            <div class="add-link-price">
+              <a title="Add" data-attr-variantid="{{current_variant2.id}}" class="freq-add js__addon-add-to-cart ">
+                Add to cart
+              </a>
               <p>{{ product2.price | money }}</p>
             </div>
-            <div class="add-link">
-              <a title="Add" data-attr-variantid="{{current_variant2.id}}" class="freq-add js__addon-add-to-cart ">
-                {% render 'icon-cart-with-bg' %}
-              </a>
             </div>
           </li>
         </ul>
@@ -201,16 +206,15 @@
             <b class="">Free!</b>
           </div>
         {% endcomment %}
-        <div class="flex-space-between js__free-shipping-message tax">
-          <p>Taxes & Shipping</p>
-          <p>Calculated at checkout</p>
+        <div class="flex-space-between js__free-shipping-message1 tax">
+          <p>Taxes & shipping calculated at checkout</p>
         </div>
       </div>
 
       <!-- Footer Actions -->
       <div class="js__top-cart-form-actions width-100">
         <form action="/cart" method="post" class="">
-          <button class="btn--primary width-100" type="submit" id="checkout" name="checkout">Checkout Now</button>
+          <button class="btn--primary yellow width-100" type="submit" id="checkout" name="checkout">Proceed to Checkout</button>
         </form>
         {% comment %} <a href="/cart" class="btn-black-border width-100" title="View Cart">VIEW MY CART</a> {% endcomment %}
       </div>
