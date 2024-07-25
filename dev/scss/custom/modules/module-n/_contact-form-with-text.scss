@@ -1,7 +1,7 @@
 .contact-form-with-text-outer{
     position: relative;
     &:before{
-        background: url(wave-fullwidth.svg) repeat-x center / 100%;
+        background: url(wave-fullwidth-body-bgcolor.svg) repeat-x center / 1452px;
         height: 65px;
         width: 100%;
         position: absolute;
@@ -14,6 +14,9 @@
         }
         @include MQ(MQ-1100){
             top: -22px;
+        }
+        @include MQ(MQ-768){
+            background-size: calc(1452px / 2);
         }
     }
 }
@@ -47,8 +50,8 @@
             top: -220px;
         }
         @include MQ(MQ-500){
-            top: -210px;
-            right: -38px;
+            top: -240px;
+            right: -48px;
         }
     }
     .container-1260{
@@ -98,6 +101,10 @@
                 top: -11px;
                 right: 72px;
             }
+            @include MQ(MQ-500){
+                top: -21px;
+                right: 62px;
+            }
         }
         &::after{
             width: 64px;
@@ -117,6 +124,9 @@
             }
             @include MQ(MQ-768){
                 top: -23px;
+            }
+            @include MQ(MQ-500){
+                top: -36px;
             }
         }
     }
