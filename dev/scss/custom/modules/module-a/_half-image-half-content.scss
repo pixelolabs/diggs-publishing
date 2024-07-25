@@ -14,8 +14,10 @@
   &.blue-wave::before{
       background: url("wave-sky-blue.webp") repeat left / 1452px;
       @include MQ(MQ-980) {
-        height: 155px;
-        top: -100px;
+        // height: 155px;
+        // top: -100px;
+        height: 95px;
+        top: -70px;
       }
       @include MQ(MQ-480) {
         height: 80px;
@@ -25,8 +27,13 @@
   }
   &.transparent-wave::before{
       background: url(wave-transparent.svg) repeat-x center / 100%;
-      height: 176px;
-      top: -128px;
+       // height: 176px;
+      // top: -128px;
+      height: 214px;
+      top: -160px;
+      @include MQ(MQ-1330){
+        top: -130px;
+      }
       @include MQ(MQ-980) {
         height: 155px;
         top: -100px;
@@ -357,15 +364,14 @@
     .btn--primary{
       margin-top: 30px;
     }
-  
-   
-  }
-  &:nth-child(1){
-    .content{
-      .btn--primary{
-        background: url(Isolation_mode-pink.webp) no-repeat center / 100%;
+    .full-format {
+      p{
+        padding-bottom: 0;
+          @include MQ(MQ-768) {
+            padding-bottom: 0;
+        }
       }
-    }
+    } 
   }
   // &:nth-child(even) {
   //   // padding-top: 0;
@@ -481,20 +487,19 @@
         display: none;
       }
     }
-    .full-format {
-      p{
-        padding-bottom: 0;
-          @include MQ(MQ-768) {
-            padding-bottom: 0;
-        }
-      }
-    }
     .half-image-half-content{
       @include MQ(MQ-980) {
         padding-bottom: 65px;
       }
       @include MQ(MQ-480) {
         padding-bottom: 45px;
+      }
+      &:nth-child(1){
+        .content{
+          .btn--primary{
+            background: url(Isolation_mode-pink.webp) no-repeat center / 100%;
+          }
+        }
       }
       &:nth-last-child(1){
         padding-bottom: 0;
@@ -575,6 +580,10 @@
 }
 
 .body-safety-1{
+  overflow-x: clip;
+  @include MQ(MQ-980) {
+    margin-bottom: -20px
+  }
   &:after{
     width: 82px;
     height: 81px;
@@ -596,6 +605,7 @@
   }
   .half-image-half-content{
     padding-bottom: 70px;
+    @include MQ(MQ-980) {padding-bottom: 0px;}
     .content{
       &:before{
         left: unset;
@@ -624,16 +634,142 @@
         right: -85px;
         top: -50px;
         transform: rotate(-4.65deg);
+        @include MQ(MQ-1300) {
+          right: 0;
+          top: -90px;
+        }
       }
     }
   } 
 }
 .body-safety-2{
+  &:before{
+    top: -75px;
+    height: 96px;
+  }
   .half-image-half-content{
     padding-top: 150px;
+    padding-top: 50px;
+    margin-top: 75px;
+    overflow-x: clip;
+    @include MQ(MQ-980) {
+      padding-bottom: 100px;
+    }
     .container-1260{
-      // flex-direction: row-reverse;
-      &:before{display: none;}
+      flex-direction: row-reverse;
+      @include MQ(MQ-980) {
+        flex-direction: column;
+      }
+      &:before{
+        right: unset;
+        left: -290px;
+        transform: rotate(166.2deg);
+        top: -269px;
+        @include MQ(MQ-980){
+          display: block;
+          background: url(icon-cloud.webp) repeat center / 100%;
+          width: 47px;
+          height: 37px;
+          left: unset;
+          right: 59px;
+          bottom: unset;
+          top: -43px;
+          transform: none;
+        }
+      }
+      &:after{display: none;}
+      .content{
+        &:after{
+          right: 0;
+          bottom: unset;
+          top: 27px;
+        }
+      }
+      .image-wrapper{
+        margin-right:-190px;
+        margin-left:139px;
+        &:after{display: none;}
+        &:before{
+          mask-image:url(yellow-shape-right.svg);
+          @include MQ(MQ-768) {
+            width: 500px;
+            height: 424px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+          }
+          @include MQ(MQ-600) {
+            width: 350px;
+            height: 296px;
+            top: 40px;
+          }
+          @include MQ(MQ-480) {
+            width: 320px;
+            height: 273px;
+          } 
+          @include MQ(MQ-400) {
+            width: 280px;
+            height: 239px;
+            left: -10px;
+            top: 25px;
+          }
+        }
+        @include MQ(MQ-1280) {
+          margin-left: 70px;
+         
+        }
+        @include MQ(MQ-1100) {
+          margin-right: -250px;
+         
+        }
+        @include MQ(MQ-980) {
+          width: 100%;
+          max-width: 722px;
+          margin: 0;
+          display: flex;
+          justify-content: center;
+        }
+      }
+      .image-section,
+      .video-section{
+        mask-image: url(right-shape.svg);
+       
+      }
     }
   }  
+}
+
+.body-safety-3{
+  .half-image-half-content{
+    padding-bottom: 75px;
+    overflow-x: clip;
+  }
+  .transparent-wave{
+    &:before{
+      background-image: url(yellow-wave-2.svg); 
+      top: -70px;
+      transform: rotate(1.35deg);
+    }
+  }
+  .container-1260{
+    &::before{
+      right: -195px;
+      @include MQ(MQ-1280){
+        right: 0;
+      }
+    }
+    &:after{
+      @include MQ(MQ-980){
+        display: block;
+        background-image: url(star-large.webp);
+        left: 47px;
+        top: 0;
+      }    
+    }
+  }
+  .image-wrapper{
+    &:after{
+      right: -127px;
+    }
+  }
 }

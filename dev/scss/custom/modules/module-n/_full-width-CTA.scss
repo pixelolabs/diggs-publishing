@@ -1,6 +1,27 @@
 .full-width-cta {
   padding: 50px 0;
+  position: relative;
+  @include MQ(MQ-980){
+    &::after{
+      position: absolute;
+      content: "";
+      right: 32px;
+      bottom: 46px;
+      background: url(star-large.webp) repeat center / 100%;
+      width: 42px;
+      height: 51px;
+    }
+  }
   .btn--primary {
     margin: 20px auto 0;
+    @include MQ(MQ-980){
+      margin-left: 0;
+    }
+  }
+  .container-900{
+    @include MQ(MQ-980){
+      max-width: 604px;
+      text-align: left;
+    }
   }
 }
