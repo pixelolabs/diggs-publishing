@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if (registrationForm) {
     registrationForm.addEventListener('submit', function(event) {
-      const requiredFields = registrationForm.querySelectorAll('input[required]');
+      const requiredFields = registrationForm.querySelectorAll('input[aria-required="true"]');
       let hasEmptyField = false;
 
       requiredFields.forEach(function(field) {
