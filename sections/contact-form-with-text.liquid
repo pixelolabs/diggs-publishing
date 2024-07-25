@@ -16,10 +16,7 @@
                 type="text"
                 id="{{ formId }}-subject"
                 placeholder="Subject*"
-                aria-required="true"
-                {% if form.errors %}
-                  aria-invalid="true"
-                {%- endif -%}
+                required
                 name="contact[Enquiry_Subject]">
                 {%- if form.errors -%}
                   <span id="{{ formId }}-phone-error" class="input-error-message">
@@ -36,10 +33,7 @@
                 type="text"
                 id="{{ formId }}-name"
                 name="contact[{{ 'contact.form.name' | t }}]"
-                aria-required="true"
-                {% if form.errors %}
-                  aria-invalid="true"
-                {%- endif -%}
+                required
                 value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
                 {%- if form.errors -%}
                   <span id="{{ formId }}-phone-error" class="input-error-message">
@@ -84,10 +78,7 @@
                 placeholder="Phone Number"
                 name="contact[Phone]"
                 pattern="[0-9\-]*"
-                aria-required="true"
-                {% if form.errors %}
-                  aria-invalid="true"
-                {%- endif -%}
+                required
                 value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}">
                 {%- if form.errors -%}
                   <span id="{{ formId }}-phone-error" class="input-error-message">
@@ -140,7 +131,7 @@
 </div>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const registrationForm = document.querySelector('#create-customer');
+  const registrationForm = document.querySelector('#BodySafetyContactForm');
 
   if (registrationForm) {
     registrationForm.addEventListener('submit', function(event) {
