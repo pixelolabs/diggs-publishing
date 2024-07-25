@@ -113,26 +113,42 @@
 </div>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const registrationForm = document.querySelector('#ContactForm');
+//  const registrationForm = document.querySelector('#ContactForm');
 
-  if (registrationForm) {
-    registrationForm.addEventListener('submit', function(event) {
-      const requiredFields = registrationForm.querySelectorAll('input[aria-required="true"]');
-      let hasEmptyField = false;
+  document.getElementById('ContactForm').addEventListener('submit', function(event) {
+      // Prevent the form from submitting
+      event.preventDefault();
 
-      requiredFields.forEach(function(field) {
-        if (field.value.trim() === '') {
-          hasEmptyField = true;
-        }
+      // Reset previous error messages
+      resetErrorMessages();
+
+      // Check each input field with aria-required="true"
+      let formIsValid = true;
+      const inputFields = document.querySelectorAll('input[aria-required="true"]');
+      
+      inputFields.forEach(input => {
+          const value = input.value.trim();
+          if (value === '') {
+              // Show error message
+              const errorMessage = document.createElement('div');
+              errorMessage.textContent = 'This field is required.';
+              errorMessage.classList.add('error-message');
+              input.parentNode.appendChild(errorMessage);
+              formIsValid = false;
+          }
       });
 
-      if (hasEmptyField) {
-        event.preventDefault();
-        const messageElement = document.createElement('span');
-        messageElement.textContent = 'This field is required.';
-         requiredFields.parentNode.appendChild(messageElement);
+      // If form is valid, submit it
+      if (formIsValid) {
+          event.target.submit();
       }
-    });
+  });
+
+  function resetErrorMessages() {
+      const errorMessages = document.querySelectorAll('.error-message');
+      errorMessages.forEach(errorMessage => {
+          errorMessage.parentNode.removeChild(errorMessage);
+      });
   }
 });
 </script>
