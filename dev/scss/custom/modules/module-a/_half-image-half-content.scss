@@ -636,6 +636,7 @@
         right: -85px;
         top: -50px;
         transform: rotate(-4.65deg);
+        z-index: 0;
         @include MQ(MQ-1300) {
           right: 0;
           top: -90px;
@@ -778,6 +779,7 @@
 
 .author-visit-1{
   .image-wrapper{
+    margin-right: 107px;
     &:after{
       display: none;
     }
