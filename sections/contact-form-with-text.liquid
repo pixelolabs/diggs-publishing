@@ -114,7 +114,7 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
 //  const registrationForm = document.querySelector('#ContactForm');
-var submitted = false; 
+
   document.getElementById('ContactForm').addEventListener('submit', function(event) {
       // Prevent the form from submitting
       event.preventDefault();
@@ -129,15 +129,12 @@ var submitted = false;
       inputFields.forEach(input => {
           const value = input.value.trim();
           if (value === '') {
-            if (!submitted) {
               // Show error message
               const errorMessage = document.createElement('span');
               errorMessage.textContent = 'This field is required.';
               errorMessage.classList.add('input-error-message');
               input.parentNode.appendChild(errorMessage);
               formIsValid = false;
-            }
-            return false;
           }
       });
 
