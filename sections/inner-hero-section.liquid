@@ -137,7 +137,7 @@
             href="{{ section.settings.buttonLink2 }}"
             title="Read More About {{ section.settings.buttonText2 }}"
             aria-label="Read More About {{ section.settings.buttonText2 }}"
-            class="btn--primary"
+            class="btn--primary {% if block.settings.button_bg == 'green' %} green {% elsif block.settings.button_bg == 'pink' %} pink{% else %} {% endif %}"
             title="{{ section.settings.buttonText2 }}"
           >
             {{- section.settings.buttonText2 -}}
