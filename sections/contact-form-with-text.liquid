@@ -113,23 +113,18 @@
 </div>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-//  const registrationForm = document.querySelector('#ContactForm');
 
   document.getElementById('ContactForm').addEventListener('submit', function(event) {
-      // Prevent the form from submitting
       event.preventDefault();
 
-      // Reset previous error messages
       resetErrorMessages();
 
-      // Check each input field with aria-required="true"
       let formIsValid = true;
       const inputFields = document.querySelectorAll('input[aria-required="true"]');
       
       inputFields.forEach(input => {
           const value = input.value.trim();
           if (value === '') {
-              // Show error message
               const errorMessage = document.createElement('span');
               errorMessage.textContent = 'This field is required.';
               errorMessage.classList.add('input-error-message');
@@ -138,7 +133,6 @@ document.addEventListener('DOMContentLoaded', function() {
           }
       });
 
-      // If form is valid, submit it
       if (formIsValid) {
           event.target.submit();
       }
