@@ -21,7 +21,6 @@
                 {%- if form.errors -%}
                 <span id="{{ formId }}-subject-error" class="input-error-message">
                   <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
-                  {% include 'icon-error' %}
                   <span>{{ form.errors.messages['form'] }}</span>
                 </span>
               {%- endif -%}
@@ -39,7 +38,6 @@
                 {%- if form.errors -%}
                 <span id="{{ formId }}-name-error" class="input-error-message">
                   <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
-                  {% include 'icon-error' %}
                   <span>{{ form.errors.messages['form'] }}</span>
                 </span>
               {%- endif -%}
