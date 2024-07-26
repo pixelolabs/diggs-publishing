@@ -1,33 +1,35 @@
-<div class="full-width-cta-v2-outer">
-  <div class="full-width-cta-v2 {{ section.settings.section_class | schema }}">
-    <div class="container-1440">
-      <div class="container-840 text-center">
-        <div class="content">
-          {% if section.settings.image != blank %}     
-            <div class="image-section">
-              {{ section.settings.image | image_url }}
-            </div>
-          {% endif %}
-          {% if section.settings.title != blank %}     
-            <h2>
-              {{ section.settings.title }}
-            </h2>
-          {% endif %}
-          {% if section.settings.content != blank %}     
-            <p>
-              {{ section.settings.content }}
-            </p>
-          {% endif %}
-            {% if section.settings.buttonLink != blank and section.settings.buttonText != blank %}
-                <a
-                  href="{{ section.settings.buttonLink }}"
-                  title="Read More About {{ section.settings.title }}"
-                  aria-label="Read More About {{ section.settings.title }}"
-                  class="btn--primary yellow"
-                > {{ section.settings.buttonText }}</a>
-              {% endif %}
+<div class="full-width-cta-v2-wave">
+  <div class="full-width-cta-v2-outer">
+    <div class="full-width-cta-v2 {{ section.settings.section_class | schema }}">
+      <div class="container-1440">
+        <div class="container-840 text-center">
+          <div class="content">
+            {% if section.settings.image != blank %}     
+              <div class="image-section">
+                {{ section.settings.image | image_url }}
+              </div>
+            {% endif %}
+            {% if section.settings.title != blank %}     
+              <h2>
+                {{ section.settings.title }}
+              </h2>
+            {% endif %}
+            {% if section.settings.content != blank %}     
+              <p>
+                {{ section.settings.content }}
+              </p>
+            {% endif %}
+              {% if section.settings.buttonLink != blank and section.settings.buttonText != blank %}
+                  <a
+                    href="{{ section.settings.buttonLink }}"
+                    title="Read More About {{ section.settings.title }}"
+                    aria-label="Read More About {{ section.settings.title }}"
+                    class="btn--primary yellow"
+                  > {{ section.settings.buttonText }}</a>
+                {% endif %}
+          </div>
+
         </div>
-        
       </div>
     </div>
   </div>
