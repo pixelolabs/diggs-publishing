@@ -17,6 +17,9 @@
         "mobileImage": "shopify:\/\/shop_images\/body_safety_banner_m.jpg",
         "title": "Body Safety Wise Author Visit Program",
         "description": "<p>Every writer begins as a storyteller. Hone your skills and craft stories that leave a mark.<\/p>",
+        "buttonText1": "",
+        "buttonLink1": "",
+        "button_bg": "pink",
         "content_alignment": "left"
       }
     },
@@ -46,6 +49,7 @@
       ],
       "settings": {
         "section_class": "body-safety-1",
+        "image_position": "left",
         "wave_color": "transparent-wave"
       }
     },
@@ -55,7 +59,8 @@
         "title": "",
         "content": "The second initiative is the Body Safety Wise Ambassador Program. This program is a unique opportunity for children ages 0-18 to become advocates for body safety and literacy education! As a Body Safety Wise Ambassador, participants will have the opportunity to share their love of reading and raise awareness about the importance of body safety education in their community. They will also have the chance to connect with like-minded individuals and build leadership skills. As an author, educator, and advocate, I am passionate about promoting body safety education and literacy. I welcome the opportunity to work with schools, parents, and community leaders to create safe and healthy environments for children. Thank you for considering the Body Safety Wise program for your school or child.",
         "buttonText": "Contact Us",
-        "buttonLink": "shopify:\/\/pages\/contact"
+        "buttonLink": "shopify:\/\/pages\/contact",
+        "section_class": "responsive-text-left"
       }
     },
     "half_image_half_content_AfYRJH": {
@@ -84,6 +89,7 @@
       ],
       "settings": {
         "section_class": "body-safety-2",
+        "image_position": "left",
         "wave_color": "blue-wave"
       }
     },
@@ -113,6 +119,7 @@
       ],
       "settings": {
         "section_class": "body-safety-3",
+        "image_position": "left",
         "wave_color": "transparent-wave"
       }
     },
