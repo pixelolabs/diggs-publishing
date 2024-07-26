@@ -1,29 +1,180 @@
-.full-width-cta-v2 {
-  padding: 50px 0;
+.full-width-cta-v2-wave{
   position: relative;
-  @include MQ(MQ-980){
-    &::after{
-      position: absolute;
-      content: "";
-      right: 32px;
-      bottom: 46px;
-      background: url(star-large.webp) repeat center / 100%;
-      width: 42px;
-      height: 51px;
+  &:before{
+        background: url(wave-fullwidth-body-bgcolor.svg) repeat-x center / 1452px;
+        height: 65px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: -2px;
+        z-index: 2;
+        content: "";
+        @include MQ(MQ-1300){
+            top: -12px;
+        }
+        @include MQ(MQ-1100){
+            top: -22px;
+        }
+        @include MQ(MQ-768){
+            background-size: calc(1452px / 2);
+        }
+    }
+}
+.full-width-cta-v2-outer{
+  position: relative;
+  text-align: center;
+  background: url(full_width_bg_blue.webp) repeat center / 100%;
+  &:before {
+    width: 602.47px;
+    height: 839.08px;
+    content: "";
+    position: absolute;
+    left: -168.46px;
+    z-index: 0;
+    bottom: 0;
+    transform: rotate(35.87deg);
+    background: url(thread-multi-white.webp) no-repeat center / 100%;
+    @include MQ(MQ-980){
+      display: none;
     }
   }
-  .btn--primary {
-    margin: 20px auto 0;
+  &::after{
+    width: 130px;
+    height: 406px;
+    content: "";
+    position: absolute;
+    right: 0;
+    z-index: 0;
+    top: -58px;
+    background: url(thread-white-2.svg) no-repeat center / 100%;
     @include MQ(MQ-980){
-      margin-left: 0;
+      top: -220px;
+    }
+    @include MQ(MQ-500){
+        top: -240px;
+        right: -48px;
     }
   }
-  .container-900{
-    h2{
-      margin-bottom: 18px;
+  .full-width-cta-v2{
+    .container-1440{
+      position: relative;
+      &:before{
+        width: 106.87px;
+        height: 84.88px;
+        content: "";
+        position: absolute;
+        left: 131px;
+        z-index: 1;
+        top: 250px;
+        background: url(icon-cloud.webp) no-repeat center / 100%;
+        @include MQ(MQ-1100){
+          width: 80px;
+          height: 60px;
+          left: 40px;
+        }
+        @include MQ(MQ-768){
+          width: 60px;
+          height: 60px;
+          background: url(ufo.webp) no-repeat center / 100%;
+          top: unset;
+          bottom: 90px;
+        }
+      }
+      &:after{
+        width: 173px;
+        height: 120px;
+        content: "";
+        position: absolute;
+        right: 67px;
+        z-index: 1;
+        top: 120px;
+        background: url(planet-blue.svg) no-repeat center / 100%;
+        @include MQ(MQ-1100){
+          width: 103px;
+          height: 80px;
+        }
+        @include MQ(MQ-980){
+          width: 57px;
+          height: 39.24px;
+        }
+        @include MQ(MQ-768){
+          top: 39px;
+          right: 142px;
+        }
+        @include MQ(MQ-500){
+          right: 72px;
+          top: 35px;
+        }
+      }
     }
-    @include MQ(MQ-980){
-      max-width: 604px;
+    .btn--primary {
+      margin: 20px auto 0;
+    }
+    .container-840{
+      padding-top: 200px;
+      padding-bottom: 265px;
+      position: relative;
+      @include MQ(MQ-980){
+        padding-top: 145px;
+        padding-bottom: 145px;
+      }
+      @include MQ(MQ-500){
+        padding-top: 107px;
+      }
+      &::after{
+        width: 41px;
+        height: 50px;
+        content: "";
+        position: absolute;
+        right: -134px;
+        z-index: 1;
+        bottom: 65px;
+        background: url(star-large.webp) no-repeat center / 100%;
+        @include MQ(MQ-1100){
+          right: 0;
+        }
+        @include MQ(MQ-768){
+          display: none;
+        }
+      }
+      .content{
+        position: relative;
+        &:before{
+          width: 31px;
+          height: 44px;
+          content: "";
+          position: absolute;
+          left: 120px;
+          z-index: 1;
+          bottom: -40px;
+          background: url(star-large.webp) no-repeat center / 100%;
+          @include MQ(MQ-768){
+            display: none;
+          }
+        }
+        
+        h2{
+          position: relative;
+          margin-bottom: 18px;
+          &:after{
+            width: 63.9px;
+            height: 51px;
+            content: "";
+            position: absolute;
+            top: -132px;
+            z-index: 1;
+            right: 150px;
+            background: url(icon-cloud.webp) no-repeat center / 100%;
+            @include MQ(MQ-980){
+              width: 40px;
+              height: 32px;
+              top: -52px;
+              right: unset;
+              left: -20px;
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -14,9 +14,6 @@
   }
   .btn--primary {
     margin: 20px auto 0;
-    @include MQ(MQ-980){
-      margin-left: 0;
-    }
   }
   .container-900{
     h2{
@@ -35,6 +32,11 @@
         right: 32px;
         top: unset;
         bottom: 46px;
+      }
+    }
+    .btn--primary {
+      @include MQ(MQ-980){
+        margin-left: 0;
       }
     }
     .container-900{
