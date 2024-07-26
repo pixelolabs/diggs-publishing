@@ -1,5 +1,5 @@
 {% if section.blocks.size > 0 %}
-  <div class="half-image-half-content-outer {{ section.settings.section_class | schema }} {% if section.settings.wave_color == 'yellow-wave' %}yellow-wave{% elsif section.settings.wave_color == 'transparent-wave' %} transparent-wave {% elsif section.settings.wave_color == 'blue-wave' %} blue-wave{% else %} no-wave {% endif %}">
+  <div class="half-image-half-content-outer {{ section.settings.section_class | schema }} {% if section.settings.fliprows %} section-row-right{% endif %}{% if section.settings.wave_color == 'yellow-wave' %}yellow-wave{% elsif section.settings.wave_color == 'transparent-wave' %} transparent-wave {% elsif section.settings.wave_color == 'blue-wave' %} blue-wave{% else %} no-wave {% endif %}">
   {% for block in section.blocks %}
     <div class="half-image-half-content {% if block.settings.background_color == 'transparent-bg' %} no-bg-color{% elsif block.settings.background_color == 'brown' %} bg-brown {% elsif block.settings.background_color == 'blue' %}  bg-blue {% else %} no-bg {% endif %}">
       <div class="container-1260 flex">
@@ -105,6 +105,12 @@
       "type": "header",
       "content": "Extra Settings",
       "info":"Recommened to match the wave color with Background of the first section"
+    },
+    {
+      "type":"checkbox",
+      "id": "fliprows",
+      "label":"Flip rows",
+      "default": false
     },
     {
       "type": "select",
