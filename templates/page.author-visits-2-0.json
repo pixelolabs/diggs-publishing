@@ -48,6 +48,7 @@
       ],
       "settings": {
         "section_class": "author-visit-1",
+        "fliprows": false,
         "wave_color": "transparent-wave"
       }
     },
@@ -122,6 +123,7 @@
       ],
       "settings": {
         "section_class": "author-visit-2",
+        "fliprows": true,
         "wave_color": "transparent-wave"
       }
     },
