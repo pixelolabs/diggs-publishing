@@ -1,6 +1,11 @@
 <div class="full-width-cta-v2 {{ section.settings.section_class | schema }}">
   <div class="container-1440">
     <div class="container-900 text-center">
+    {% if section.settings.image != blank %}     
+        <div class="image-section">
+          {{ section.settings.image | image_url }}
+        </div>
+      {% endif %}
       {% if section.settings.title != blank %}     
         <h2 class="medium">
           {{ section.settings.title }}
@@ -27,6 +32,11 @@
 {
   "name": "Full width CTA V2",
   "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
     {
       "type": "text",
       "id": "title",
