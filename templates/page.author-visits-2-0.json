@@ -127,21 +127,12 @@
         "image_position": "right",
         "wave_color": "transparent-wave"
       }
-    },
-    "full_width_content_section_YVqd6F": {
-      "type": "full-width-content-section",
-      "settings": {
-        "title": "",
-        "buttonText": "",
-        "buttonLink": ""
-      }
     }
   },
   "order": [
     "innerBanner",
     "half_image_half_content_zRnrfB",
     "full_width_cta_eNdrVD",
-    "half_image_half_content_gL8kEy",
-    "full_width_content_section_YVqd6F"
+    "half_image_half_content_gL8kEy"
   ]
 }
