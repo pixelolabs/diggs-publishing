@@ -1,13 +1,13 @@
 <div class="full-width-cta-v2 {{ section.settings.section_class | schema }}">
   <div class="container-1440">
-    <div class="container-900 text-center">
+    <div class="container-840 text-center">
     {% if section.settings.image != blank %}     
         <div class="image-section">
           {{ section.settings.image | image_url }}
         </div>
       {% endif %}
       {% if section.settings.title != blank %}     
-        <h2 class="medium">
+        <h2>
           {{ section.settings.title }}
         </h2>
       {% endif %}
@@ -21,7 +21,7 @@
               href="{{ section.settings.buttonLink }}"
               title="Read More About {{ section.settings.title }}"
               aria-label="Read More About {{ section.settings.title }}"
-              class="btn--primary pink"
+              class="btn--primary yellow"
             > {{ section.settings.buttonText }}</a>
           {% endif %}
         </div>
