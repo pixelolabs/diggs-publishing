@@ -127,12 +127,23 @@
         "image_position": "right",
         "wave_color": "transparent-wave"
       }
+    },
+    "full_width_cta_v2_WcKbHe": {
+      "type": "full-width-cta-v2",
+      "settings": {
+        "title": "When an unknown printer took a galley of type and scrambled",
+        "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took",
+        "buttonText": "Book Now",
+        "buttonLink": "#",
+        "section_class": ""
+      }
     }
   },
   "order": [
     "innerBanner",
     "half_image_half_content_zRnrfB",
     "full_width_cta_eNdrVD",
-    "half_image_half_content_gL8kEy"
+    "half_image_half_content_gL8kEy",
+    "full_width_cta_v2_WcKbHe"
   ]
 }
