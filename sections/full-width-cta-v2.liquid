@@ -1,4 +1,4 @@
-<div class="full-width-cta-v2">
+<div class="full-width-cta-v2 {{ section.settings.section_class | schema }}">
   <div class="container-1440">
     <div class="container-900 text-center">
       {% if section.settings.title != blank %}     
@@ -46,6 +46,16 @@
       "type": "url",
       "id": "buttonLink",
       "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "Extra Settings",
+      "info": "Recommened to be used by the developer only"
+    },
+    {
+      "type": "text",
+      "id": "section_class",
+      "label": "Add custom class"
     }
   ],
   "presets": [
