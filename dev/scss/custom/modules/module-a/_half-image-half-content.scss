@@ -1,6 +1,5 @@
 .half-image-half-content-outer{
   position: relative;
-
   &::before{
     height: 85px;
     width: 100%;
@@ -60,7 +59,149 @@
       background-size: cover;
     }
   }
-  
+  &.section-row-right{
+    .half-image-half-content{
+      &:nth-child(odd){
+        overflow-x: clip;
+        .container-1260{
+            flex-direction: row-reverse;
+            @include MQ(MQ-980) {
+              flex-direction: column;
+            }
+          &:before{
+            z-index: -1;
+            left: 0;
+            right: unset;
+          }
+        }
+        &:before{display: none;}
+        .content{
+          &:after{
+            right: 0;
+            bottom: unset;
+            top: 27px;
+          }
+        }
+        .image-wrapper{
+          margin-right:-190px;
+          margin-left:139px;
+          &:after{display: none;}
+          &:before{
+            mask-image:url(yellow-shape-right.svg);
+            @include MQ(MQ-768) {
+              width: 500px;
+              height: 424px;
+              left: 0;
+              right: 0;
+              margin: 0 auto;
+            }
+            @include MQ(MQ-600) {
+              width: 350px;
+              height: 296px;
+              top: 40px;
+            }
+            @include MQ(MQ-480) {
+              width: 320px;
+              height: 273px;
+            } 
+            @include MQ(MQ-400) {
+              width: 280px;
+              height: 239px;
+              left: -10px;
+              top: 25px;
+            }
+          }
+          @include MQ(MQ-1280) {
+            margin-left: 70px;
+           
+          }
+          @include MQ(MQ-1100) {
+            margin-right: -250px;
+           
+          }
+          @include MQ(MQ-980) {
+            width: 100%;
+            max-width: 722px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+          }
+        }
+        .image-section,
+        .video-section{
+          mask-image: url(right-shape.svg);
+         
+        }
+      }
+      &:nth-child(even){
+        overflow-x: clip;
+        .container-1260{
+            flex-direction: row;
+            @include MQ(MQ-980) {
+              flex-direction: column;
+            }
+        }
+        &:before{display: none;}
+        .content{
+          &:after{
+            right: 0;
+            bottom: unset;
+            top: 27px;
+          }
+        }
+        .image-wrapper{
+          margin-left:-190px;
+          margin-right:139px;
+          &:after{display: none;}
+          &:before{
+            mask-image:url(yellow-shape-left.svg);
+            @include MQ(MQ-768) {
+              width: 500px;
+              height: 424px;
+              left: 0;
+              right: 0;
+              margin: 0 auto;
+            }
+            @include MQ(MQ-600) {
+              width: 350px;
+              height: 296px;
+              top: 40px;
+            }
+            @include MQ(MQ-480) {
+              width: 320px;
+              height: 273px;
+            } 
+            @include MQ(MQ-400) {
+              width: 280px;
+              height: 239px;
+              left: -10px;
+              top: 25px;
+            }
+          }
+          @include MQ(MQ-1280) {
+            margin-right: 70px;
+           
+          }
+          @include MQ(MQ-1100) {
+            margin-left: -250px;
+           
+          }
+          @include MQ(MQ-980) {
+            width: 100%;
+            max-width: 722px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+          }
+        }
+        .image-section,
+        .video-section{
+          mask-image: url(left-shape.svg);
+         
+        }
+      } 
+    }
+  }
 }
 
 .half-image-half-content {
@@ -469,6 +610,9 @@
         @include MQ(MQ-768) {
           padding-bottom: 0;
       }
+      strong{
+        text-transform: uppercase;
+      }
     }
   } 
 }
@@ -778,10 +922,110 @@
 }
 
 .author-visit-1{
+  @include MQ(MQ-980) {
+    margin-bottom: 5px;
+  }
   .image-wrapper{
     margin-right: 107px;
+    @include MQ(MQ-1280) {
+      margin-right: 70px;
+    }
+    @include MQ(MQ-980) {
+      margin: 0;
+    }
     &:after{
       display: none;
+    }
+  }
+}
+.author-visit-2{
+  &:before{
+    display: none;
+  }
+  .container-1260{
+    &:before{display: none;}
+  }
+  .half-image-half-content{
+    padding-bottom: 75px;
+    @include MQ(MQ-980){
+      padding-top: 0;  
+      padding-bottom: 50px;
+    }
+    &:first-child{
+      .container-1260{
+        &:after{
+          top: unset;
+          bottom: 65px;
+          left: -44px;
+          @include MQ(MQ-980){
+            background: url(star-large.webp) repeat center / 100%;
+            width: 21.37px;
+            height: 28.52px;
+            display: block;
+            left:50px;
+            bottom: -60px;
+          }
+        }
+      }
+      .content{
+        &:before{
+          left: 10.93px;
+          top: -93px;
+        }
+        &:after{
+          top: -22px;
+        }
+      }
+    }
+    &:nth-child(2){
+      .container-1260{
+        &:after{display: none;}
+      }
+      .content{
+        &:before{
+          left: -81px;
+          top: -97px;
+        }
+        &:after{
+          top: unset !important;
+          bottom: -22px !important;
+          right: -43px !important;
+          @include MQ(MQ-1280){
+            right: 0 !important;
+          }
+        }
+      }
+    }
+    &:nth-child(3){
+      .container-1260{
+        &:after{display: none;}
+        &:before{
+          display: block;
+          background: url(star-large.webp) repeat center / 100%;
+          width: 42px;
+          height: 51px;
+          top: unset !important;
+          left: unset !important;
+          bottom: -50px !important;
+          right: -43px !important;
+          @include MQ(MQ-1280){
+            right: 0 !important;
+          }
+          @include MQ(MQ-980){
+            display: none;
+          }
+        }
+      }
+      .content{
+        &:before{
+          left: -56px;
+          top: -86px;
+          @include MQ(MQ-1280){
+            left: 0 !important;
+          }
+        }
+        &:after{display: none;}
+      }
     }
   }
 }
