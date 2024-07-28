@@ -134,6 +134,18 @@
     {% if posts != blank %}
       <div class="blog_wrapper graphic-top-left">
         <div class="container-1240 p-t-80 ">
+          <ul class="tags-wrapper">
+            {% assign split_1 = articleRelated.url | split: '/blogs/' %}
+            {% assign split_2 = split_1[1] | split: '/' %}
+            {% assign blog_handle = split_2[0] | strip %}
+            {% assign article_blog = blogs[blog_handle] %}
+
+            {% for tag in articleRelated.tags limit: 2 %}
+              <li class="tags">
+                <a href="{{article_blog.url}}/tagged/{{ tag | handleize }}" title="{{tag}}" class="tag">{{ tag }}</a>
+              </li>
+            {% endfor %}
+          </ul>
           <ul class="blog-list-view flex-wrap">
             {% for article in posts %}
               {% if section.settings.show_featured_article %}
