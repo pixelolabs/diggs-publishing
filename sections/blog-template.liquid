@@ -80,16 +80,16 @@
                 </div>
               </div>
               <div
-                class="full-format flex-justify-column-center content {% if articleRelated.image == blank%} full {% endif %} "
+                class="full-format flex-justify-column-center content {% if featuredArticle.image == blank%} full {% endif %} "
               >
                 <div class="inner">
                   <h3>
                     <a
-                      aria-label="Read More About {{ articleRelated.title }}"
-                      title="Read More About {{ articleRelated.title }}"
-                      href="{{ articleRelated.url }}"
+                      aria-label="Read More About {{ featuredArticle.title }}"
+                      title="Read More About {{ featuredArticle.title }}"
+                      href="{{ featuredArticle.url }}"
                     >
-                      {{ articleRelated.title | strip_html | truncate: 73 }}
+                      {{ featuredArticle.title | strip_html | truncate: 73 }}
                     </a>
                   </h3>
                   <div class="artical-date-author">
@@ -107,13 +107,13 @@
                     </div>
                   </div>
                   <div class="description">
-                    {{ articleRelated.content | strip_html | truncate: 100 }}
+                    {{ featuredArticle.content | strip_html | truncate: 100 }}
                   </div>
                   <a
-                    href="{{ articleRelated.url }}"
+                    href="{{ featuredArticle.url }}"
                     class="more-btn"
-                    aria-label="Read More About {{ articleRelated.title }}"
-                    title="Read More About {{ articleRelated.title }}"
+                    aria-label="Read More About {{ featuredArticle.title }}"
+                    title="Read More About {{ featuredArticle.title }}"
                     >Read More</a
                   >
                 </div>
