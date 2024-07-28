@@ -56,7 +56,7 @@
       {% assign featuredArticleTitle = featuredArticle.title %}
       {% if featuredArticle.title != blank %}
         <div class="featured-blog">
-          <div class="container-1340 flex-wrap">
+          <div class="container-1240 flex-wrap">
             {%
               include 'article_Card' with articleRelated: featuredArticle,
               show_tags: true, show_time: false, show_description: true, is_featured: true, show_readMore: false;
@@ -75,7 +75,7 @@
     {% assign posts = blog.articles | sort: 'published_at' | reverse %}
     {% if posts != blank %}
       <div class="blog_wrapper graphic-top-left">
-        <div class="container-1300 p-t-80 ">
+        <div class="container-1240 p-t-80 ">
           <ul class="blog-list-view flex-wrap">
             {% for article in posts %}
               {% if section.settings.show_featured_article %}
@@ -100,7 +100,7 @@
     {% if blog.articles_count > section.settings.blogItems %}
       {% comment %} Pagination {% endcomment %}
       <div class="pagination-section flex-align-center">
-        <div class="container-1340">
+        <div class="container-1240">
           <div class="pagination-wrapper">
             {% comment %} <p>Showing <span class="js__page-range">1 - 16</span> of {{ blog.articles_count }} items</p> {% endcomment %}
             {%- if paginate.pages > 1 -%}
