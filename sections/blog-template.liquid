@@ -56,7 +56,7 @@
       {% assign featuredArticleTitle = featuredArticle.title %}
       {% if featuredArticle.title != blank %}
         <div class="featured-blog">
-          <div class="container-1240 flex-wrap">
+          <div class="container-1340 flex-wrap">
             {%
               include 'article_Card' with articleRelated: featuredArticle,
               show_tags: true, show_time: false, show_description: true, is_featured: true, show_readMore: false;
@@ -85,8 +85,8 @@
                 {% else %}
                   <li>
                     {%
-                      include 'article_Card' with articleRelated: article, show_tags: true, show_description: true, show_readMore:
-                      true
+                      include 'article_Card' with articleRelated: article, isFeatured: false,
+                      show_tags: true, show_time: false, show_description: false, show_readMore: true
                     %}
                   </li>
                 {% endif %}
@@ -100,7 +100,7 @@
     {% if blog.articles_count > section.settings.blogItems %}
       {% comment %} Pagination {% endcomment %}
       <div class="pagination-section flex-align-center">
-        <div class="container-1240">
+        <div class="container-1340">
           <div class="pagination-wrapper">
             {% comment %} <p>Showing <span class="js__page-range">1 - 16</span> of {{ blog.articles_count }} items</p> {% endcomment %}
             {%- if paginate.pages > 1 -%}
