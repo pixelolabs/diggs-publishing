@@ -17,6 +17,9 @@
       {% else %}
         <h1 class="small ">{{ blog.title }}</h1>
       {% endif %}
+      {% if section.settings.description != blank %}
+        {{ section.settings.description }}
+      {% endif %}
     </div>
   </div>
 </div>
