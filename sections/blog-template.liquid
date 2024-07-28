@@ -51,10 +51,10 @@
     {% include 'blog_category' %}
     {% comment %} Featured Article {% endcomment %}
 
-    {% if request.path contains '/our-farmers' or request.path contains 'our-farmer' %}
-      {% if section.settings.featured_article2 != blank %}
-        {%- assign featuredArticle = articles[section.settings.featured_article2] -%}
-        {% assign featuredArticleTitle = featuredArticle.title %}
+    {% if section.settings.show_featured_article %}
+      {%- assign featuredArticle = articles[section.settings.featured_article] -%}
+      {% assign featuredArticleTitle = featuredArticle.title %}
+      {% if featuredArticle.title != blank %}
         <div class="featured-blog">
           <div class="container-1340 flex-wrap">
             {%
@@ -64,22 +64,8 @@
           </div>
         </div>
       {% endif %}
-    {% else %}
-      {% if section.settings.show_featured_article %}
-        {%- assign featuredArticle = articles[section.settings.featured_article] -%}
-        {% assign featuredArticleTitle = featuredArticle.title %}
-        {% if featuredArticle.title != blank %}
-          <div class="featured-blog">
-            <div class="container-1340 flex-wrap">
-              {%
-                include 'article_Card' with articleRelated: featuredArticle,
-                show_tags: true, show_time: false, show_description: true, is_featured: true, show_readMore: false;
-              %}
-            </div>
-          </div>
-        {% endif %}
-      {% endif %}
     {% endif %}
+
     {% comment %}
       <div class="blog-header-section flex">
         <h3>All Articles</h3>
