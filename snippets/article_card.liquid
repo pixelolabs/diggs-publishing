@@ -31,7 +31,7 @@
       {% endif %}
     });
 </script>
-<div class="article-card">
+<div class="{%- if add_class -%}  half-image-half-content {% else %} article-card  {% endif %}">
   <div class="inner-section flex">
     {% capture img_id %}ArticleImage-{{ articleRelated.image.id }}{% endcapture %}
     {% capture img_wrapper_id %}ArticleImageWrapper-{{ articleRelated.image.id }}{% endcapture %}
