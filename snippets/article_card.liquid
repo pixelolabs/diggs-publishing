@@ -31,7 +31,7 @@
       {% endif %}
     });
 </script>
-<div class=" article-card ">
+<div class="{% if section.settings.show_featured_article %}  half-image-half-content {% else %} article-card  {% endif %}">
   <div class="inner-section flex">
     {% capture img_id %}ArticleImage-{{ articleRelated.image.id }}{% endcapture %}
     {% capture img_wrapper_id %}ArticleImageWrapper-{{ articleRelated.image.id }}{% endcapture %}
@@ -77,7 +77,7 @@
       </p>
     </noscript>
 
-    <div class="content ">
+    <div class="content">
       <h3>
         <a
           aria-label="Read More About {{ articleRelated.title }}"
