@@ -83,27 +83,39 @@
                 class="full-format flex-justify-column-center content {% if articleRelated.image == blank%} full {% endif %} "
               >
                 <div class="inner">
-                  {% if block.settings.pretitle != blank %}
-                    <span class="pre-title">{{ block.settings.pretitle }}</span>
-                  {% endif %}
-                  {% if block.settings.title != blank %}
-                    <h2 class="w-250 {% if block.settings.fontSize == true %} size {% endif %}">
-                      {{ block.settings.title }}
-                    </h2>
-                  {% endif %}
-                  {% if block.settings.description != blank %}
-                    {{ block.settings.description }}
-                  {% endif %}
-                  {% if block.settings.buttonText != blank %}
+                  <h3>
                     <a
-                      href="{{ block.settings.buttonLink }}"
-                      title="Read More About {{ block.settings.buttonText }}"
-                      aria-label="Read More About {{ block.settings.buttonText }}"
-                      class="btn--primary green"
+                      aria-label="Read More About {{ articleRelated.title }}"
+                      title="Read More About {{ articleRelated.title }}"
+                      href="{{ articleRelated.url }}"
                     >
-                      {{ block.settings.buttonText }}
+                      {{ articleRelated.title | strip_html | truncate: 73 }}
                     </a>
-                  {% endif %}
+                  </h3>
+                  <div class="artical-date-author">
+                    <div class="date-category-section">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                        <path d="M12.867 3.189h-10.5a1.5 1.5 0 0 0-1.5 1.5v10.5a1.5 1.5 0 0 0 1.5 1.5h10.5a1.5 1.5 0 0 0 1.5-1.5v-10.5a1.5 1.5 0 0 0-1.5-1.5zM10.615 1.689v3M4.617 1.689v3M.867 7.689h13.5" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      {{- article.published_at | time_tag: format: 'date' -}}
+                    </div>
+                    <div class="author">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                        <path d="M14.59 16.189v-1.667a3.333 3.333 0 0 0-3.334-3.333H4.589a3.333 3.333 0 0 0-3.333 3.333v1.667M7.921 7.855a3.333 3.333 0 1 0 0-6.666 3.333 3.333 0 0 0 0 6.666z" stroke="#000" stroke-width="1.765" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <span>{{ article.author }}</span>
+                    </div>
+                  </div>
+                  <div class="description">
+                    {{ articleRelated.content | strip_html | truncate: 100 }}
+                  </div>
+                  <a
+                    href="{{ articleRelated.url }}"
+                    class="more-btn"
+                    aria-label="Read More About {{ articleRelated.title }}"
+                    title="Read More About {{ articleRelated.title }}"
+                    >Read More</a
+                  >
                 </div>
               </div>
             </div>
