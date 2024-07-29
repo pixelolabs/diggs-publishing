@@ -24,6 +24,9 @@
     position: relative;
     text-align: center;
     background: url(full_width_bg_orange.webp) repeat center / 100%;
+    @include MQ(MQ-768){
+        background-size: cover;
+    }
     &:before{
         width: 620px;
         height: 773px;
@@ -64,6 +67,9 @@
         @include MQ(MQ-768) {
             padding-bottom: 305px;
             padding-top: 96px;
+        }
+        @include MQ(MQ-500){
+            padding-bottom: 200px;
         }
     }
     .form-section{
@@ -189,5 +195,9 @@
             right: 50%;
             transform: translateX(50%);   
         }        
+        @include MQ(MQ-500){
+            width: 248px;
+            bottom: -60px;
+        }
     }
 }
