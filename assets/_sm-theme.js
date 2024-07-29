@@ -2701,6 +2701,7 @@ $(document).ready(function ($) {
         mutation.addedNodes.forEach(function (added_node) {
           // console.log($(".rc-container-wrapper").html())
           if ($(".cbb-frequently-bought-container").html() != undefined) {
+            $(".cbb-frequently-bought-container").detach().appendTo('.js__product-frequently-bought-section');
             bundleObersrver.disconnect();
           }
         });
