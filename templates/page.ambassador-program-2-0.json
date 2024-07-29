@@ -14,6 +14,7 @@
       "settings": {
         "color_scheme": "",
         "image": "shopify:\/\/shop_images\/Ambassador-Program-Banner.webp",
+        "mobileImage": "shopify:\/\/shop_images\/Ambassador-Program-Banner-mobile.webp",
         "title": "Ambassador Program",
         "description": "<p>Join our Body Safety Wise Ambassador Program, empowering children ages 0-18 as advocates for body safety and literacy in your community!<br\/><\/p>",
         "buttonText1": "Contact Us",
@@ -25,11 +26,18 @@
     "page_default_content_LpFCxz": {
       "type": "page-default-content",
       "settings": {
+        "section_class": "ambassador-program"
+      }
+    },
+    "ambassador_program_registration_form_RgLPPe": {
+      "type": "ambassador-program-registration-form",
+      "settings": {
       }
     }
   },
   "order": [
     "innerBanner",
-    "page_default_content_LpFCxz"
+    "page_default_content_LpFCxz",
+    "ambassador_program_registration_form_RgLPPe"
   ]
 }
