@@ -1,48 +1,8 @@
-{% if section.blocks.size > 0 %}
-  <!-- Announcement -->
-
-  {% if section.settings.show_announcement %}
-    <div class="announcement-bar relative" style="background-color: {{section.settings.announcementColor}};">
-      <div class="container-1410 flex-align-center">
-        <div class="js__announcement-slider ">
-          <div class="swiper-wrapper">
-            {% for block in section.blocks %}
-              {% if block.type == 'announcement' %}
-                {% if block.settings.announcement_link != blank %}
-                  <div class="slide swiper-slide">
-                    <div class="content">
-                      {{ block.settings.header_text }}
-                      <a
-                        href="{{block.settings.announcement_link}}"
-                        title="{{block.settings.announcement_link_text}}"
-                      >
-                        {{- block.settings.announcement_link_text -}}
-                      </a>
-                    </div>
-                  </div>
-
-                {% else %}
-                  <div class="slide swiper-slide">
-                    {{ block.settings.header_text }}
-                  </div>
-                {% endif %}
-              {% endif %}
-            {% endfor %}
-          </div>
-        </div>
-        <!-- Close Button -->
-        <a href="#" title="close" id="announcement-close" class="close">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <path d="M9.902 18.786a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12.601 7.085l-5.4 5.4M7.201 7.085l5.4 5.4" stroke="#3B2900" stroke-width="1.326" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-    <script>
-      $('body').addClass('announcement-visible');
-    </script>
-  {% endif %}
-{% endif %}
+<div class="ambassador-program-form relative">
+  <div class="container-1410 flex-align-center">
+  
+  </div>
+</div>
 
 {% schema %}
 {
