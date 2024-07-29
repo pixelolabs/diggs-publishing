@@ -37,15 +37,8 @@
 
 {% else %}
 
-<div
-  class="pdp-recommendations three-column-product-slider-v2 pdp"
-  data-aos="fade-up"
-  data-aos-duration="2000"
->
-  <div class="container-1260 flex-wrap">
-    <div class="top-section">
-      <h2 class="h2 text-center">You MAY ALSO LIKE</h2>
-    </div>
+
+  
  
   <div
     class="product-recommendations "
@@ -56,7 +49,7 @@
   >
     {%- if recommendations.products_count > 0 -%}
       <div class="pdp-recommendations ">
-        <div class="three-column-product-slider-v2 cart">
+        <div class="three-column-product-slider-v2 pdp">
           <div class="container-1260 flex-wrap">
             <div class="top-section">
               <h2 class="h2 text-center">You MAY ALSO LIKE</h2>
@@ -64,7 +57,7 @@
           <div class="inner">
             <div class="slider-outer">
             <div
-              class="product-recommendations-list slider js__product-slider-recommendations"
+              class="product-recommendations-list slider js__product-slider js__product-slider-recommendations"
 
               id="js__pdp-recommendation-slider"
             >

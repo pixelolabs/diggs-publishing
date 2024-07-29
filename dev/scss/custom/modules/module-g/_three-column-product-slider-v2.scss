@@ -105,4 +105,24 @@
     
   }
 
+  &.pdp{
+    padding: 0px 40px 172px;
+    background: $color-off-white-light;
+    .top-section {
+      &::before{
+        display: none;
+      }
+    }
+    &::before {
+      background: url("graphic-wave-inner-banner.svg") repeat left / 2065px;
+      height: 114px;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: -114px;
+      content: "";
+      z-index: 2;
+    }
+  }
+
 }

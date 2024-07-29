@@ -1654,3 +1654,164 @@
 .price__wrapper {
   padding-top: 0 !important;
 }
+
+
+.cbb-frequently-bought-container{
+  display: none !important;
+}
+
+.product-frequently-bought-section{
+  background: $color-sky-blue;
+  position: relative;
+  padding: 36px 40px 172px;
+  .cbb-frequently-bought-discount-message-container{
+    display: none !important;
+  }
+  &::before{
+    background: url("wave-sky-blue.webp") repeat left / 1452px;
+    height: 85px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -85px;
+    content: '';
+  }
+  .cbb-frequently-bought-selector-list{
+    position: relative;
+    z-index: 2;
+    max-width: 960px ;
+    margin-top: 27px !important;
+  }
+  
+  .cbb-frequently-bought-form{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    margin-top: 43px;
+    .cbb-frequently-bought-total-price-box{
+      margin: 0 52px 0 0 !important;
+      .cbb-frequently-bought-total-price-text{
+        display: none !important;
+      }
+      span,s{
+        font-family: var(--font-family-primary) !important;
+  font-size: 23px!important;
+  font-weight: bold!important;
+  line-height: 0.78!important;
+  letter-spacing: 1px!important;
+  color: $color-black!important;
+      }
+s{
+  span{
+    color: #858585 !important;
+  }
+ 
+  margin : 0 22px 0 0 !important;
+}
+    }
+  }
+  .cbb-frequently-bought-products{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 !important;
+    margin-left: -50px !important;
+    width: calc(100% + 50px);
+    z-index: 2;
+    position: relative;
+    li{
+      width: 20% !important;
+      padding-left: 50px;
+      height: 187.6px !important;
+      .cbb-frequently-bought-plus-icon{
+        position: absolute !important;
+      }
+      .cbb-frequently-bought-product-image-link{
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 !important;
+      }
+      .cbb-frequently-bought-product-image{
+        width: 100% !important;
+        margin: 0 !important;
+        height: 100% !important;
+       
+      }
+    }
+  }
+  .cbb-frequently-bought-title {
+    position: relative;
+    width: 100%;
+    display: block;
+  
+  font-size: 30px!important;
+  font-weight: normal!important;
+  font-stretch: normal!important;
+  font-style: normal!important;
+  line-height: 1!important;
+  letter-spacing: 0.6px!important;
+  text-align: center !important;
+  color: $color-black !important;
+    &::after{
+      width: 33px;
+      height: 40px;
+      content: '';
+      position: absolute;
+      right: 67px;
+      z-index: 1;
+      top: -50px;
+      background: url("star-large.webp") no-repeat center / 100%;
+      @include MQ(MQ-768) {
+          display: none;
+      }
+  }
+  }
+  .cbb-frequently-bought-recommendations-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cbb-frequently-bought-container{
+    display: block !important;
+    max-width: 1227px !important;
+    margin: 0 auto!important;
+    padding: 0 40px 50px;
+    position: relative;
+    &::before{
+      height: calc(100% - 160px);
+
+      width: 100%;
+      border: 1px solid $color-black;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 160px;
+    }
+    &::after{
+      width: 48px;
+      height: 40px;
+      content: '';
+      position: absolute;
+      left: -32px;
+      z-index: 1;
+      top: -39px;
+      background: url("icon-cloud.webp") no-repeat center / 100%;
+      @include MQ(MQ-768) {
+          display: none;
+      }
+  }
+  }
+
+  &::after{
+    width: 31px;
+    height: 44px;
+    content: '';
+    position: absolute;
+    left: 145px;
+    z-index: 1;
+    bottom: -13px;
+    background: url("star-large.webp") no-repeat center / 100%;
+    @include MQ(MQ-768) {
+        display: none;
+    }
+}
+}
