@@ -69,3 +69,41 @@
     }
   }
 }
+
+.ambassador-program{
+  &.default-page-content{
+    position: relative;
+    &:after{
+      width: 234px;
+      height: 200px;
+      background: url(line.webp) no-repeat center/100%;
+      right: 0px;
+      top: 0px;
+      left: unset;
+      transform: rotate(-4.65deg);
+      z-index: 0;
+    }
+    .container-1240{
+      &:before {
+        width: 82px;
+        height: 81px;
+        content: "";
+        position: absolute;
+        left: 37%;
+        z-index: 10;
+        top: -190px;
+        background: url(ufo.webp) no-repeat center / 100%;
+        @include MQ(MQ-980){
+          top: -140px;  
+        }
+        @include MQ(MQ-480){
+          display: none;
+        }
+      }
+      &::after{
+        right: 25%;
+        top: -106px;
+      }
+    }
+  }
+}

@@ -1,15 +1,25 @@
-<div class="full-width-content-default ">
-  <div class="container-860">
-    <div class="white-box">
-      <div class="inner-box full-format wrap-text">
-        {{ page.content }}
-      </div>
+<div class="default-page-content {{ section.settings.section_class | schema }}">
+  <div class="container-1240">
+    <div class="inner-box full-format wrap-text">
+      {{ page.content }}
     </div>
   </div>
 </div>
 {% schema %}
 {
   "name": "Default Page Content",
+  "settings":[
+    {
+      "type": "header",
+      "content": "Extra Settings",
+      "info": "Recommened to be used by the developer only"
+    },
+    {
+      "type": "text",
+      "id": "section_class",
+      "label": "Add custom class"
+    }
+  ],
   "presets": [
     {
       "name": "Full Width Default Page Content"
