@@ -54,7 +54,7 @@ body {
   font-weight: 500;
   line-height: 1.63;
   letter-spacing: 0.02px;
-  background-color: $color-off-white2;
+  background-color: $color-off-white-light;
 }
 
 :focus {
@@ -1147,15 +1147,16 @@ button {
   }
 
   hr {
-    border-bottom: 1px solid $color-black;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    border: 0;
+    border-bottom: 1px solid $color-orange;
+    margin-top: 11px;
+    margin-bottom: 16px;
     height: 1px;
-    background: $color-black;
+    background: $color-orange;
 
-    @include MQ(MQ-980) {
-      margin-bottom: 20px;
-    }
+    // @include MQ(MQ-980) {
+    //   margin-bottom: 20px;
+    // }
   }
 
   // ol,

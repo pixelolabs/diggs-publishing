@@ -293,6 +293,14 @@
           "description": "<p>This Privacy Policy describes how ksdiggs.myshopify.com (the “Site” or “we”) collects, uses, and discloses your Personal Information when you visit or make a purchase from the Site.<\/p>",
           "content_alignment": "left"
         }
+      },
+      "blog-template": {
+        "type": "blog-template",
+        "settings": {
+          "show_featured_article": true,
+          "featured_article": "blog\/what-age-should-kids-learn-about-consent",
+          "blogItems": 10
+        }
       }
     },
     "content_for_index": [
