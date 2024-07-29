@@ -1,231 +1,131 @@
 {% comment %} Tab Section {% endcomment %}
-{% if product.metafields.overview_tab_section.heading_black != blank
-  or product.metafields.nutrition_tab_section.table_title != blank
-  or product.metafields.nutrition_tab_section.table != blank
-  or product.metafields.resources_tab_section.heading_black != blank
-  or product.metafields.about_exactpax.heading != blank
-%}
-  <section
-    class="pdp-tab-section"
-    data-aos="fade-up"
-    data-aos-duration="2000"
-  >
-    <div class="container-1326">
-      <div class="tab-section-wrapper white">
-        <div class="tab-head none-980">
-          <ul class="pdp-tab-head flex">
-            {% if product.metafields.overview_tab_section.heading_black != blank %}
-              <li>
-                <a class="tab-link active" id="tab-link-overview" data-attr="overview"> OVERVIEW </a>
-              </li>
-            {% endif %}
-            {% if product.metafields.nutrition_tab_section.table_title != blank
-              or product.metafields.nutrition_tab_section.table != blank
-            %}
-              <li>
-                <a class="tab-link   tab-link-nutrition" id="tab-link-nutrition" data-attr="nutrition">Nutrition</a>
-              </li>
-            {% endif %}
-            {% if product.metafields.resources_tab_section.heading_black != blank %}
-              <li>
-                <a class="tab-link  " id="tab-link-resources" data-attr="resource">Physician RESOURCE</a>
-              </li>
-            {% endif %}
-            {% if product.metafields.about_exactpax.heading != blank %}
-              <li>
-                <a class="tab-link " id="tab-link-exactpax" data-attr="exactpax">ABOUT EXACTPAX</a>
-              </li>
-            {% endif %}
-          </ul>
-        </div>
-        <div class="main-tab-content">
-          {% if product.metafields.overview_tab_section.heading_black != blank %}
-            <div class="tab-content js-tab-content active" id="overview" data-attr="tab-link-overview">
-              <a class="accordion-link js___accordion" id="tab-link-overview" data-attr="overview">overview</a>
-              <div class="inner-content accordion-con overview-content-wrapper">
-                <h2 class="h2">
-                  {{ product.metafields.overview_tab_section.heading_black }}
-                  {% if product.metafields.overview_tab_section.heading_gray != blank %}
-                    <span class="color-grey h2">{{ product.metafields.overview_tab_section.heading_gray }}</span>
-                  {% endif %}
-                </h2>
-                <div class="overview-content">
-                  <ul>
-                    {% for value in product.metafields.overview_tab_section.title %}
-                      {% assign title = product.metafields.overview_tab_section.title[forloop.index0] %}
-                      {% assign description = product.metafields.overview_tab_section.description[forloop.index0] %}
-                      <li>
-                        <h3 class="h5">{{ title }}</h3>
-                        <div class="description">
-                          {{ description }}
-                        </div>
-                      </li>
-                    {% endfor %}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          {% endif %}
-          {% if product.metafields.nutrition_tab_section.table_title != blank
-            or product.metafields.nutrition_tab_section.table != blank
-          %}
-            <div class="tab-content js-tab-content" id="nutrition" data-attr="tab-link-nutrition">
-              <a
-                class="accordion-link tab-link-nutrition js___accordion "
-                id="tab-link-nutrition"
-                data-attr="nutrition"
-              >
-                Nutrition
-              </a>
 
-              <div class="inner-content nutrition-content-wrapper accordion-con">
-                {% comment %}
-                  <h2 class="h2">
-                    {{ product.metafields.nutrition_tab_section.heading_black }}
-                    {% if product.metafields.nutrition_tab_section.heading_gray != blank %}
-                      <span class="color-grey h2">{{ product.metafields.nutrition_tab_section.heading_gray }}</span>
-                    {% endif %}
-                  </h2>
-                {% endcomment %}
-                <div class="nutrition-content">
-                  {% for value in product.metafields.nutrition_tab_section.table_title %}
-                    {% assign title = product.metafields.nutrition_tab_section.table_title[forloop.index0] %}
-                    {% assign table = product.metafields.nutrition_tab_section.table[forloop.index0] %}
-                    {% assign image = product.metafields.nutrition_tab_section.image[forloop.index0] | first %}
-                    {% assign description = product.metafields.nutrition_tab_section.bottom_description[forloop.index0] %}
-                    <div class="pdp-half-image-half-table flex">
-                      <div class="image-section">
-                        <img src="{{ image.cloudinary_src}}" alt="{{image.alt }}">
-                      </div>
-                      <div class="content">
-                        <span class="table-title">{{ title }}</span>
-                        <div class="table">
-                          {{ table }}
-                        </div>
-                        <div class="description">
-                          {{ description }}
-                        </div>
-                      </div>
-                    </div>
-                  {% endfor %}
-                </div>
-              </div>
-            </div>
-          {% endif %}
-
-          {% if product.metafields.resources_tab_section.heading_black != blank %}
-            <div class="tab-content js-tab-content" id="resource" data-attr="tab-link-resource">
-              <a class="accordion-link js___accordion " id="tab-link-resource" data-attr="resource"
-                >Physician Resource</a
-              >
-              <div class="inner-content accordion-con resources">
-                <h2 class="h2">
-                  {{ product.metafields.resources_tab_section.heading_black }}
-                  {% if product.metafields.resources_tab_section.heading_gray != blank %}
-                    <span class="color-grey h2">{{ product.metafields.resources_tab_section.heading_gray }}</span>
-                  {% endif %}
-                </h2>
-                {% assign image = product.metafields.resources_tab_section.graphic_image | first %}
-                <div class="resource-content flex">
-                  <div class="left-section">
-                    {% if image != blank %}
-                      <div class="image-section">
-                        <img src="{{ image.cloudinary_src}}" alt="{{image.alt }}">
-                      </div>
-                    {% endif %}
-                    {% if product.metafields.resources_tab_section.graphic_image_description != blank %}
-                      <div class="image-des">
-                        {{ product.metafields.resources_tab_section.graphic_image_description }}
-                      </div>
-                    {% endif %}
-                  </div>
-                  {% if product.metafields.resources_tab_section.block_content_title != blank %}
-                    <div class="right-section">
-                      <h3>{{ product.metafields.resources_tab_section.block_content_title }}</h3>
-                      {% if product.metafields.resources_tab_section.block_title != blank %}
-                        <div class="middle-section-block flex-wrap">
-                          <ul class="flex-wrap">
-                            {% for value in product.metafields.resources_tab_section.block_title %}
-                              {% assign title = product.metafields.resources_tab_section.block_title[forloop.index0] %}
-                              {% assign description = product.metafields.resources_tab_section.block_description[forloop.index0] %}
-                              <li>
-                                <h4 class="h5">{{ title }}</h4>
-                                <div class="description">
-                                  {{ description }}
-                                </div>
-                              </li>
-                            {% endfor %}
-                          </ul>
-                        </div>
-                      {% endif %}
-                      <div class="bottom-linkfirst">
-                        {{ product.metafields.resources_tab_section.bottom_link_first }}
-                      </div>
-                      <div class="bottom-linksecond">
-                        {{ product.metafields.resources_tab_section.bottom_link_first }}
-                      </div>
-                    </div>
-                  {% endif %}
-                </div>
-              </div>
-            </div>
-          {% endif %}
-          {% if product.metafields.about_exactpax.heading != blank %}
-            <div class="tab-content js-tab-content" id="exactpax" data-attr="tab-link-exactpax">
-              <a class="accordion-link js___accordion" id="tab-link-exactpax" data-attr="exactpax"> About Exactpax </a>
-              <div class="inner-content accordion-con">
-                <h2 class="h2">
-                  {{ product.metafields.about_exactpax.heading }}
-                  {% if product.metafields.about_exactpax.heading_gray != blank %}
-                    <span class="color-grey h2">{{ product.metafields.about_exactpax.heading_gray }}</span>
-                  {% endif %}
-                </h2>
-                <div class="pdp-half-image-half-content-outer">
-                  {% for value in product.metafields.about_exactpax.title %}
-                    {% assign title = product.metafields.about_exactpax.title[forloop.index0] %}
-                    {% assign subTitle = product.metafields.about_exactpax.sub_title[forloop.index0] %}
-                    {% assign image = product.metafields.about_exactpax.image[forloop.index0] | first %}
-                    {% assign description = product.metafields.about_exactpax.description[forloop.index0] %}
-                    {% assign linkText1 = product.metafields.about_exactpax.link_text_first[forloop.index0] %}
-                    {% assign listUrl1 = product.metafields.about_exactpax.link_url_first[forloop.index0] %}
-                    {% assign linkText2 = product.metafields.about_exactpax.link_text_second[forloop.index0] %}
-                    {% assign listUrl2 = product.metafields.about_exactpax.link_url_second[forloop.index0] %}
-                    <div class="pdp-half-image-half-content flex">
-                      {% if image != blank %}
-                        <div class="image-section">
-                          <img src="{{ image.cloudinary_src}}" alt="{{image.alt }}">
-                        </div>
-                      {% endif %}
-                      {% if title != blank %}
-                        <div class="content">
-                          <h3>{{ title }}</h3>
-                          {% if subTitle != blank %}
-                            <span class="subtitle">{{ subTitle }}</span>
-                          {% endif %}
-                          {% if description != blank %}
-                            <div class="description">
-                              {{ description }}
-                            </div>
-                          {% endif %}
-                          {% if linkText1 != blank %}
-                            <div class="links flex">
-                              <a href="{{linkurl1 }}" class="link--primary" title="{{linkText1 }}">{{ linkText1 }}</a>
-                              <a href="{{linkurl2 }}" class="link--primary" title="{{linkText2 }}">{{ linkText2 }}</a>
-                            </div>
-                          {% endif %}
-                        </div>
-                      {% endif %}
-                    </div>
-                  {% endfor %}
-                </div>
-              </div>
-            </div>
-          {% endif %}
+<div class="product-tab-section">
+  <div class="container-1260">
+    <div class="tab-head none-980">
+  <ul class="pdp-tab-head">
+    
+    <li>
+      <a>Detailed product description</a>
+      </li>
+      <li>
+        <a>Reviews</a>
+        </li>
+        <li>
+          <a>Shipping information</a>
+          </li>
+          <li>
+            <a>FAQ</a>
+            </li>
+    </ul>
+    </div>
+    <div class="main-tab-content">
+      <div class="tab-content js-tab-content active" id="overview" data-attr="tab-link-overview">
+        <a class="accordion-link js___accordion" id="tab-link-overview" data-attr="overview">Detailed product description</a>
+        <div class="inner-content accordion-con overview-content-wrapper">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+<br /><br />
+It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+<br /><br />
+It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus Page Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+</p>
+          </div>
         </div>
       </div>
     </div>
-  </section>
-{% endif %}
+  </div>
+  <div class="half-image-half-content-outer body-safety-2  blue-wave" >
+  
+    <div class="half-image-half-content   bg-blue " >
+      <div class="container-1260 flex" >
+        <div class="image-wrapper" >
+        
+          
+            <div class="image-section aos-init aos-animate" data-aos="fade-up" data-aos-duration="2000" >
+              <img src="//ksdiggs.com/cdn/shop/files/body_safety_wise.webp?v=1721743679&amp;width=1262" alt="" srcset="//ksdiggs.com/cdn/shop/files/body_safety_wise.webp?v=1721743679&amp;width=1262 1262w" width="1262" height="1142" loading="lazy">
+            </div>
+          
+        
+        </div>
+        <div class="full-format flex-justify-column-center content aos-init aos-animate" data-aos="fade-up" data-aos-duration="2000" >
+          <div class="inner" >
+          
+          
+            <h2 class="w-250 " >
+              Body Safety Wise Author Visits
+            </h2>
+          
+          
+            <p a>Body Safety Wise Author Visit presentation provides a PK-8 curriculum that teaches students about body safety, consent, and boundaries. It includes an engaging introduction, a book reading, giveaways, book signing, and a brief Q&amp;A. The presentation is approximately 30-45 minutes.</p>
+          
+          
+            <a href="#" title="Read More About Book Now" aria-label="Read More About Book Now" class="btn--primary green" >
+              Book Now
+            </a>
+          
+          </div>
+        </div>
+
+       
+      </div>
+    </div>
+  
+  </div>
+  <div class="half-image-half-content-outer body-safety-3  transparent-wave " >
+  
+    <div class="half-image-half-content  no-bg-color" >
+      <div class="container-1260 flex" >
+        <div class="image-wrapper" >
+        
+          
+            <div class="image-section aos-init aos-animate" data-aos="fade-up" data-aos-duration="2000" >
+              <img src="//ksdiggs.com/cdn/shop/files/ambassador_program_1c27154d-dbdb-488e-bd7e-b80ba7915e60.webp?v=1721743679&amp;width=1262" alt="" srcset="//ksdiggs.com/cdn/shop/files/ambassador_program_1c27154d-dbdb-488e-bd7e-b80ba7915e60.webp?v=1721743679&amp;width=1262 1262w" width="1262" height="1142" loading="lazy">
+            </div>
+          
+        
+        </div>
+        <div class="full-format flex-justify-column-center content aos-init aos-animate" data-aos="fade-up" data-aos-duration="2000" >
+          <div class="inner" >
+          
+          
+            <h2 class="w-250 " >
+              Ambassador Program
+            </h2>
+          
+          
+            <p a>The Ambassador Program is a unique opportunity for children and young adults ages 0-18 to become advocates for body safety education! Ambassadors will have the opportunity to share their love of reading and raise awareness about body safety education in their community.</p>
+          
+          
+            <a href="#" title="Read More About Apply Now" aria-label="Read More About Apply Now" class="btn--primary green" >
+              Apply Now
+            </a>
+          
+          </div>
+        </div>
+
+       
+      </div>
+    </div>
+  
+  </div>
+  <div class="full-width-content-section" >
+    <div class="container-1440" >
+      <div class="container-840" >
+       
+          <h2 >
+            Every writer starts as a storyteller. Explore the journey of author Krystaelynne Sanders Diggs
+          </h2>
+          
+              <a href="#" title="Read More About Every writer starts as a storyteller. Explore the journey of author Krystaelynne Sanders Diggs" aria-label="Read More About Every writer starts as a storyteller. Explore the journey of author Krystaelynne Sanders Diggs" class="btn--primary yellow" > Read More</a>
+            
+          </div>
+  
+          <div class="kids-images" >
+            <img src="//ksdiggs.com/cdn/shop/t/57/assets/kids-images.webp?v=150076193099332007351720557473"> 
+  </div>
+          </div>
+          </div>
 
 {% schema %}
 {

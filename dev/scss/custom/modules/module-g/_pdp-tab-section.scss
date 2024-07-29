@@ -1,22 +1,69 @@
-.pdp-tab-small {
-  overflow: hidden;
-  padding-top: 40px;
+.product-tab-section {
+ 
+  padding: 24px 0 75px;
+background: $color-off-white-light;
+  position: relative;
+  &::before {
+    background: url("graphic-wave-inner-banner.svg") repeat left / 2065px;
+    height: 114px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -90px;
+    content: "";
+    z-index: 2;
+  }
+  .container-1260{
+    position: relative;
+    &::after {
+      width: 42px;
+      height: 50px;
+      content: "";
+      position: absolute;
+      right: 300px;
+      z-index: 3;
+      top: -93px;
+      background: url("star-large.webp") no-repeat center / 100%;
+      @include MQ(MQ-768) {
+        display: none;
+      }
+    }
+  }
+  
 
-  &__wrapper {
-    &__head {
+    .pdp-tab-head {
       text-transform: uppercase;
-
+      border-bottom: solid 1px $color-black;
+      display: flex;
       li {
-        padding-left: 53px;
+        
+        border: solid 1px $color-black;
+        border-left: none;
+        border-bottom: none;
 
-        &:first-child {
-          padding-left: 0;
-        }
 
         a {
+          min-width: 120px;
+          text-align: center;
+          padding: 20px 25px;
+          font-family: var(--font-family-primary);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.44;
+  letter-spacing: normal;
+  color: $color-black2;
           &.active,
           &:hover {
-            border-bottom: 2px solid $color-black;
+
+            background: $color-light-yellow;
+            
+              color: $color-original-black;
+            
+          }
+        }
+        &:first-child {
+          a {
+          border-left: solid 1px $color-black;
           }
         }
       }
@@ -48,183 +95,14 @@
       border: 2px solid $color-border;
       border-radius: 20px;
     }
-    ul.accordian {
-      li {
-        padding: 15px 20px;
-        border-bottom: 1px solid $color-border;
-        &:last-child {
-          border-bottom: 0;
-        }
-        ul {
-          list-style: none;
-          li {
-            margin-bottom: 10px;
-            &:last-child {
-              margin-bottom: 0;
-            }
-            position: relative;
-            padding: 0px 0 0 26px;
-            font-size: 16px;
-            font-weight: 500;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: 1.5;
-            letter-spacing: 0.02px;
-            text-align: left;
-            font-family: var(--font-family-primary);
-            &:before {
-              position: absolute;
-              content: "";
-              left: 0;
-              width: 16px;
-              height: 14px;
-              background: url("logo-infiniwell-small.svg") no-repeat center/16px;
-            }
-            border-bottom: 0;
-            // padding: 0;
-            list-style: none;
-          }
-        }
-        .h5 {
-          font-size: 14px;
-          font-weight: 500;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: 1.71;
-          letter-spacing: 0.11px;
-
-          text-align: left;
-          position: relative;
-          &:after {
-            position: absolute;
-            width: 11.7px;
-            height: 11.7px;
-            content: "";
-            right: 0;
-            top: 6px;
-            background: url(icon-plus.webp) no-repeat center/11.7px;
-          }
-          &:hover {
-            font-weight: bold;
-          }
-        }
-        &.active {
-          .h5 {
-            font-weight: bold;
-            &:after {
-              background: url(icon-minus.webp) no-repeat center/11.7px;
-            }
-          }
-        }
-        .content {
-          display: none;
-          padding-top: 30px;
-          &.how-to-use-tab {
-            .inner-content {
-              margin-bottom: 20px;
-              .title {
-                position: relative;
-                padding-left: 35px;
-                font-size: 16px;
-                font-weight: bold;
-                margin-bottom: 5px;
-                span {
-                  font-family: var(--font-family-primary);
-                  position: relative;
-                  // padding-left: 30px;
-                  font-size: 14px;
-                  font-weight: bold;
-                  font-stretch: normal;
-                  font-style: normal;
-                  line-height: normal;
-                  letter-spacing: normal;
-
-                  &:after {
-                    display: none;
-                  }
-                }
-                img {
-                  width: auto;
-                  height: auto;
-                  object-fit: contain;
-                  position: absolute;
-                  left: 0;
-                  top: 0;
-                }
-              }
-              .description {
-                padding-left: 35px;
-                p {
-                  font-size: 14px;
-                  font-weight: 500;
-                  font-stretch: normal;
-                  font-style: normal;
-                  line-height: 1.71;
-                  letter-spacing: 0.01px;
-                }
-              }
-            }
-          }
-        }
-      }
+   
+    .main-tab-content{
+      padding-top: 33px;
+.accordion-link{
+  display: none;
+}
     }
-  }
-  .pdp-tab-content {
-    display: none;
-    ul {
-      li {
-        position: relative;
-        padding-left: 26px;
-        &:before {
-          position: absolute;
-          content: "";
-          left: 0;
-          width: 16px;
-          height: 14px;
-          background: url("logo-infiniwell-small.svg") no-repeat center/16px;
-        }
-      }
-    }
-    &.how-to-use-tab {
-      .inner-content {
-        margin-bottom: 20px;
-        .title {
-          position: relative;
-          padding-left: 35px;
-
-          margin-bottom: 5px;
-          span {
-            font-family: var(--font-family-primary);
-            font-size: 14px;
-            font-weight: bold;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: normal;
-            letter-spacing: normal;
-          }
-          img {
-            width: auto;
-            height: auto;
-            object-fit: contain;
-            position: absolute;
-            left: 0;
-            top: 0;
-          }
-        }
-        .description {
-          padding-left: 35px;
-          p {
-            font-size: 14px;
-            font-weight: 500;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: 1.71;
-            letter-spacing: 0.01px;
-          }
-        }
-      }
-    }
-  }
+ 
 }
 
 .pdp-tab-section {
