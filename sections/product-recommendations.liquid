@@ -131,69 +131,13 @@
 
           // RECHARGE
 
-          callRechargeScript();
+        //  callRechargeScript();
 
           // NO RECHARGE
 
-          callNoRechargeScript();
+         // callNoRechargeScript();
 
-          var productRecomm = new Swiper('#js__pdp-recommendation-slider', {
-            slidesPerView: 'auto',
-            spaceBetween: 20,
-            grabCursor: false,
-
-            loop: true,
-
-            loopedSlides: 100,
-            updateOnWindowResize: true,
-            direction: 'horizontal',
-            // effect: 'coverflow',
-            freeModeSticky: true,
-            freeMode: true,
-            freeModeMomentumBounce: false,
-            freeModeMomentumRatio: 0.1,
-            freeModeMomentumVelocityRatio: 0.8,
-            // freeMode: true,
-
-            centeredSlides: true,
-            threshold: 1,
-            breakpoints: {
-              0: {
-                slidesPerView: 1,
-                spaceBetween: 10,
-              },
-              481: {
-                slidesPerView: 2,
-                spaceBetween: 10,
-              },
-              601: {
-                slidesPerView: 3,
-                spaceBetween: 10,
-              },
-
-              769: {
-                slidesPerView: 4,
-                spaceBetween: 20,
-              },
-              981: {
-                slidesPerView: 5,
-                spaceBetween: 20,
-              },
-              1024: {
-                slidesPerView: 6,
-                spaceBetween: 20,
-              },
-              1440: {
-                slidesPerView: 'auto',
-                spaceBetween: 20,
-              },
-            },
-
-            navigation: {
-              nextEl: '.swiper-button-next-product-slider',
-              prevEl: '.swiper-button-prev-product-slider ',
-            },
-          });
+         
         }
       };
       request.send();
