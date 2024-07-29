@@ -13,7 +13,7 @@
       "type": "inner-hero-section",
       "settings": {
         "color_scheme": "",
-        "image": "shopify:\/\/shop_images\/Author_Visits_banner_1434274f-b871-444d-94f7-3f617241992f.webp",
+        "image": "shopify:\/\/shop_images\/Ambassador-Program-Banner.webp",
         "title": "Ambassador Program",
         "description": "<p>Join our Body Safety Wise Ambassador Program, empowering children ages 0-18 as advocates for body safety and literacy in your community!<br\/><\/p>",
         "buttonText1": "Contact Us",
@@ -22,39 +22,14 @@
         "content_alignment": "left"
       }
     },
-    "half_image_half_content_zRnrfB": {
-      "type": "half-image-half-content",
-      "blocks": {
-        "image_CwMRkr": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/author_visits_readings.webp",
-            "showVideo": false,
-            "video": "",
-            "videoPopup": false,
-            "pretitle": "",
-            "title": "Author Visits & Readings",
-            "description": "<p>As an author dedicated to promoting literacy and body safety education. I offer a range of programs that can be tailored to meet your specific needs.<br\/>My goal is to collaborate with you to align my books and presentations with your objectives and to complement the topics you are already teaching your students from PK - 8th grade.<br\/><br\/>My books cover a range of important themes such as confidence, manners, facing fears, overcoming obstacles, problem-solving, consent, and body safety. Almost all of my books are written in rhyme, making them engaging and useful for children learning to read.<br\/>I aim to make your experience with me a positive one, and seek to leave everyone feeling good about my visit to your school. In addition to school visits, I also offer readings of my books for preschools.<br\/><br\/>If you're interested in more information or booking a school visit, library visit, or speaking engagement, please don't hesitate to reach out via my contact form.<\/p>",
-            "buttonText": "",
-            "buttonLink": "",
-            "background_color": "transparent-bg",
-            "fontSize": false,
-            "center": false
-          }
-        }
-      },
-      "block_order": [
-        "image_CwMRkr"
-      ],
+    "page_default_content_LpFCxz": {
+      "type": "page-default-content",
       "settings": {
-        "section_class": "author-visit-1",
-        "image_position": "left",
-        "wave_color": "transparent-wave"
       }
     }
   },
   "order": [
     "innerBanner",
-    "half_image_half_content_zRnrfB"
+    "page_default_content_LpFCxz"
   ]
 }
