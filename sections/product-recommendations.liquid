@@ -136,8 +136,36 @@
           // NO RECHARGE
 
          // callNoRechargeScript();
-
-         
+         var productRecomm = new Swiper('#js__pdp-recommendation-slider', {
+          slidesPerView: 3,
+          spaceBetween: 39,
+          // centeredSlides: true,
+          // resistance: false,
+          loop:true,
+          resistance: false,
+          shortSwipes: true,
+          longSwipes: false,
+          // scrollOverflowOptions: null,
+          // loopedSlidesLimit: false,
+          breakpoints: {
+              0: {
+                  slidesPerView: 1,
+              },
+              769: {
+                  slidesPerView: 2,
+              },
+              1025: {
+                  slidesPerView: 3,
+                 
+              },
+          },
+          navigation: {
+              nextEl: ".swiper-button-next-product-section",
+              prevEl: ".swiper-button-prev-product-section",
+          }
+          
+      });
+        
         }
       };
       request.send();
