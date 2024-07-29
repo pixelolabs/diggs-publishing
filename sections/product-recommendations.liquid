@@ -36,6 +36,17 @@
   </div>
 
 {% else %}
+
+<div
+  class="pdp-recommendations three-column-product-slider-v2 cart"
+  data-aos="fade-up"
+  data-aos-duration="2000"
+>
+  <div class="container-1260 flex-wrap">
+    <div class="top-section">
+      <h2 class="h2 text-center">You MAY ALSO LIKE</h2>
+    </div>
+ 
   <div
     class="product-recommendations "
     data-base-url="{{ routes.product_recommendations_url }}"
@@ -45,40 +56,13 @@
   >
     {%- if recommendations.products_count > 0 -%}
       <div class="pdp-recommendations ">
-        <div class="four-column-product-slider">
-          {% if product.metafields.product_recommendations.title != blank %}
-            <div class="top-section flex">
-              <h2 class="h1">
-                {{ product.metafields.product_recommendations.title }}
-                {% if product.metafields.product_recommendations.title_gray != blank %}
-                  <span class="color-grey h1">{{ product.metafields.product_recommendations.title_gray }}</span>
-                {% endif %}
-              </h2>
-
-              {% if product.metafields.product_recommendations.button_text != blank
-                and product.metafields.product_recommendations.button_link != blank
-              %}
-                <a
-                  href="{{ product.metafields.product_recommendations.button_link }}"
-                  title="Read More About {{ product.metafields.product_recommendations.button_text  }}"
-                  aria-label="Read More About {{ product.metafields.product_recommendations.button_text  }}"
-                  class="btn--primary"
-                >
-                  {{ product.metafields.product_recommendations.button_text }}
-                </a>
-                <a
-                  href="{{ product.metafields.product_recommendations.button_link }}"
-                  title="Read More About {{ product.metafields.product_recommendations.button_text }}"
-                  aria-label="Read More About {{ product.metafields.product_recommendations.button_text}}"
-                  class="link--primary"
-                >
-                  {{- product.metafields.product_recommendations.button_text -}}
-                </a>
-              {% endif %}
+        <div class="three-column-product-slider-v2 cart">
+          <div class="container-1260 flex-wrap">
+            <div class="top-section">
+              <h2 class="h2 text-center">You MAY ALSO LIKE</h2>
             </div>
-          {% endif %}
-
           <div class="inner">
+            <div class="slider-outer">
             <div
               class="product-recommendations-list slider js__product-slider"
 
@@ -95,16 +79,20 @@
                 {% endcomment %}
                 {%- for productRelated in recommendations.products -%}
                   <div class="product-card swiper-slide slide ">
-                    {% include 'product_Card' with productRelated: productRelated , show_price: true, show_tags: true, show_auto_tags: true, show_title: true, show_fav: true, show_secondary_button: false %}
-                  </div>
+                    {% include 'product_Card' with productRelated: productRelated , show_price: true, show_tags: true, show_auto_tags: true, show_title: true, show_fav: false, show_secondary_button: false %}
+      
+                             </div>
                 {% endfor %}
               </div>
-              <div class="swiper-button-prev-product-slider">
-                {% include 'icon-arrow-slide-white' %}
-              </div>
-              <div class="swiper-button-next-product-slider">
-                {% include 'icon-arrow-slide' %}
-              </div>
+            
+            </div>
+            <div class="swiper-button-prev-product-slider">
+              {% include 'icon-arrow-slide-black' %}
+            </div>
+            <div class="swiper-button-next-product-slider">
+              {% include 'icon-arrow-slide-black' %}
+            </div>
+            </div>
             </div>
           </div>
         </div>
