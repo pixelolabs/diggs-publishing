@@ -2679,7 +2679,7 @@ $(document).ready(function ($) {
   });
   /*Ninja price update */
 
-  var targetNodes = $(".product__form");
+  var targetNodes = $("#shopify-section-footer");
   var MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
   var bundleObersrver = new MutationObserver(mutationHandler);
   var obsConfig = {
@@ -2700,32 +2700,9 @@ $(document).ready(function ($) {
         //loop though the added nodes
         mutation.addedNodes.forEach(function (added_node) {
           // console.log($(".rc-container-wrapper").html())
-          if ($(".rc-container-wrapper").html() != undefined) {
-            //console.log("click recharge active");
-            $(".label-recharge-info").remove();
-
-            if ($(".js__subscribeText").html() != "") {
-              $(".rc-option__subsave").append("<span class='label-recharge-info'>" + $(".js__subscribeText").html() + "</span>");
-            }
-
-            if ($(".js__onetimeText").html() != "") {
-              $(".rc-option__onetime").append("<span class='label-recharge-info'>" + $(".js__onetimeText").html() + "</span>");
-            }
-
-            setTimeout(function () {
-              $(".rc-option--active").click();
-            }, 500);
+          if ($(".cbb-frequently-bought-container").html() != undefined) {
             bundleObersrver.disconnect();
           }
-
-          setTimeout(function () {
-            console.log("sub price" + $(".rc_widget__price--subsave").html());
-            console.log("onetime price" + $(".rc_widget__price--onetime").html());
-            $(".rc-option__subsave").children(".rc_widget__option__label").children("s").remove();
-            $(".rc-option__subsave").children(".rc_widget__option__label").append(" <s>" + $(".rc_widget__price--onetime").html() + "</s>");
-            console.log("sub price 2" + $(".rc_widget__price--subsave").html());
-            $(".rc-option--active").click();
-          }, 500);
         });
       }
     });
