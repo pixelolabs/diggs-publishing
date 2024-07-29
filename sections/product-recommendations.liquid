@@ -2,42 +2,15 @@
 {% assign metafieldsHandleForProducts = product.metafields.product_recommendations.product_handle %}
 {% if metafieldsHandleForProducts != blank %}
   <div
-    class="pdp-recommendations four-column-product-slider"
+    class="pdp-recommendations three-column-product-slider-v2 cart"
     data-aos="fade-up"
     data-aos-duration="2000"
   >
-    
-    {% if product.metafields.product_recommendations.title != blank %}
-      <div class="top-section flex">
-        <h2 class="h1">
-          {{ product.metafields.product_recommendations.title }}
-          {% if product.metafields.product_recommendations.title_gray != blank %}
-            <span class="color-grey h1">{{ product.metafields.product_recommendations.title_gray }}</span>
-          {% endif %}
-        </h2>
-
-        {% if product.metafields.product_recommendations.button_text != blank
-          and product.metafields.product_recommendations.button_link != blank
-        %}
-          <a
-            href="{{ product.metafields.product_recommendations.button_link }}"
-            title="Read More About {{ product.metafields.product_recommendations.button_text  }}"
-            aria-label="Read More About {{ product.metafields.product_recommendations.button_text  }}"
-            class="btn--primary"
-          >
-            {{ product.metafields.product_recommendations.button_text }}
-          </a>
-          <a
-            href="{{ product.metafields.product_recommendations.button_link }}"
-            title="Read More About {{ product.metafields.product_recommendations.button_text }}"
-            aria-label="Read More About {{ product.metafields.product_recommendations.button_text}}"
-            class="link--primary"
-          >
-            {{- product.metafields.product_recommendations.button_text -}}
-          </a>
-        {% endif %}
+    <div class="container-1260 flex-wrap">
+      <div class="top-section">
+        <h2 class="h2 text-center">You MAY ALSO LIKE</h2>
       </div>
-    {% endif %}
+   
     <div class="inner">
       <div class="product-recommendations-list slider js__product-slider">
         <div class="swiper-wrapper">
@@ -58,6 +31,7 @@
           {% include 'icon-arrow-slide' %}
         </div>
       </div>
+    </div>
     </div>
   </div>
 
