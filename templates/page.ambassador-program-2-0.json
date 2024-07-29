@@ -25,6 +25,7 @@
     "page_default_content_LpFCxz": {
       "type": "page-default-content",
       "settings": {
+        "section_class": "ambassador-program"
       }
     },
     "ambassador_program_registration_form_RgLPPe": {
