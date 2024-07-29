@@ -26,10 +26,16 @@
       "type": "page-default-content",
       "settings": {
       }
+    },
+    "ambassador_program_registration_form_RgLPPe": {
+      "type": "ambassador-program-registration-form",
+      "settings": {
+      }
     }
   },
   "order": [
     "innerBanner",
-    "page_default_content_LpFCxz"
+    "page_default_content_LpFCxz",
+    "ambassador_program_registration_form_RgLPPe"
   ]
 }
