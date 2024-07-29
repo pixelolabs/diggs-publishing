@@ -935,8 +935,8 @@ jQuery(function () {
       }
     },
     navigation: {
-      nextEl: ".swiper-button-next-product-section",
-      prevEl: ".swiper-button-prev-product-section"
+      nextEl: ".swiper-button-prev-product-slider",
+      prevEl: ".swiper-button-next-product-slider"
     }
   }); //RElated Article slider
 
