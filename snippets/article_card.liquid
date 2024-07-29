@@ -31,11 +31,12 @@
       {% endif %}
     });
 </script>
-<div class="article-card">
+<div class=" article-card ">
   <div class="inner-section flex">
     {% capture img_id %}ArticleImage-{{ articleRelated.image.id }}{% endcapture %}
     {% capture img_wrapper_id %}ArticleImageWrapper-{{ articleRelated.image.id }}{% endcapture %}
     {%- assign img_url = articleRelated.image | img_url: 'master' -%}
+
     {% if articleRelated.image != blank %}
       <a
         href="{{ articleRelated.url }}"
@@ -69,6 +70,7 @@
         {% endif %}
       </a>
     {% endif %}
+
     <noscript>
       <p>
         <a href="{{ articleRelated.url }}" title="{{ articleRelated.title }}">

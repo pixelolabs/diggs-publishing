@@ -115,185 +115,184 @@
 //   }
 // }
 
-.articlecard--outer {
-  .article-card {
+.article-card {
+  max-width: 364px;
+  width: 100%;
+  padding: 18px 16.8px 31px;
+  border: solid 1px rgba(255, 200, 43, 0.36);
+  background-color: #fff8e3;
+  margin-top: 12px;
+  position: relative;
+  &::before {
+    width: calc(100% + 12px);
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 0px;
+    z-index: -2;
     max-width: 364px;
-    width: 100%;
-    padding: 18px 16.8px 31px;
-    border: solid 1px rgba(255, 200, 43, 0.36);
-    background-color: #fff8e3;
-    margin-top: 12px;
+    height: calc(100% - 12px);
+    border: 2px solid $color-green;
+  }
+  &:first-child {
+    border: 2px solid $color-green !important;
+  }
+  &:nth-child(2n) {
     &::before {
-      width: calc(100% + 12px);
-      content: "";
-      position: absolute;
-      left: 12px;
-      top: 0px;
-      z-index: -2;
-      max-width: 364px;
-      height: calc(100% - 12px);
-      border: 2px solid $color-green;
+      border: 2px solid $color-pink;
     }
-    &:first-child {
-      border: 2px solid $color-green !important;
-    }
-    &:nth-child(2n) {
-      &::before {
-        border: 2px solid $color-pink;
-      }
-    }
-    &:nth-child(3n):before {
-      border: 2px solid $color-orange;
-    }
+  }
+  &:nth-child(3n):before {
+    border: 2px solid $color-orange;
+  }
 
+  // @include MQ(MQ-980) {
+  //   padding: 28px 30px 30px 30px;
+  // }
+  // @include MQ(MQ-768) {
+  //   padding: 20px 20px 23px 20px;
+  // }
+  .inner-section {
+    flex-direction: column;
+    margin-bottom: 0;
+    // @include MQ(MQ-768) {
+    //   // padding: 20px 20px 22px 20px;
+    //   // border: 1px solid $color-border;
+    //   // border-radius: 4px;
+    //   &:last-child {
+    //     margin-bottom: 0;
+    //   }
+    //   margin-bottom: 20px;
+    // }
+    .content {
+      margin-left: 0;
+      margin-top: 0px;
+    }
+  }
+  .image-section {
+    width: 100%;
+    max-height: 277px;
+    height: 20vw;
+    max-width: none;
+    min-height: fit-content;
+    position: relative;
+    margin-bottom: 26.5px;
     // @include MQ(MQ-980) {
-    //   padding: 28px 30px 30px 30px;
+    //   margin-bottom: 20px;
     // }
     // @include MQ(MQ-768) {
-    //   padding: 20px 20px 23px 20px;
+    //   margin-bottom: 10px;
+    //   height: 49.065vw;
+    //   max-height: 235px;
     // }
-    .inner-section {
-      flex-direction: column;
-      margin-bottom: 0;
-      // @include MQ(MQ-768) {
-      //   // padding: 20px 20px 22px 20px;
-      //   // border: 1px solid $color-border;
-      //   // border-radius: 4px;
-      //   &:last-child {
-      //     margin-bottom: 0;
-      //   }
-      //   margin-bottom: 20px;
-      // }
-      .content {
-        margin-left: 0;
-        margin-top: 0px;
-      }
-    }
-    .image-section {
-      width: 100%;
-      max-height: 277px;
-      height: 20vw;
-      max-width: none;
-      min-height: fit-content;
+    img {
+      @include img-object-cover;
       position: relative;
-      margin-bottom: 26.5px;
-      // @include MQ(MQ-980) {
-      //   margin-bottom: 20px;
-      // }
-      // @include MQ(MQ-768) {
-      //   margin-bottom: 10px;
-      //   height: 49.065vw;
-      //   max-height: 235px;
-      // }
-      img {
-        @include img-object-cover;
-        position: relative;
-        border-radius: 0 !important;
-      }
-      // @include MQ(MQ-350) {
-      //   height: 158px;
-      // }
+      border-radius: 0 !important;
     }
-    .content {
-      max-width: 482px;
-      width: 100%;
-      .description {
-        p {
-          font-size: 16px;
-          font-weight: 500;
-          line-height: normal;
-          letter-spacing: 0.02px;
-          text-align: left;
-        }
-      }
-      ul {
-        li.tags {
-          padding: 8px 17px 8px 15px;
-          background-color: #cad9eb;
-          line-height: normal;
-          border-radius: 30px;
-          display: inline-block;
-          margin: 0px 10px 13px 0px;
-          a {
-            font-size: 14px;
-            text-transform: capitalize;
-          }
-          @include MQ(MQ-980) {
-            margin: 0px 0 10px 0;
-          }
-        }
-      }
-      h3 {
-        margin-bottom: 14px;
-        a {
-          font-family: var(--font-family-primary);
-          font-size: 16px;
-          font-weight: 600;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: 1.44;
-          letter-spacing: normal;
-          text-align: left;
-          color: #3b2900;
-          text-transform: none;
-        }
-      }
+    // @include MQ(MQ-350) {
+    //   height: 158px;
+    // }
+  }
+  .content {
+    max-width: 482px;
+    width: 100%;
+    .description {
       p {
-        line-height: normal;
-      }
-      .artical-date-author {
-        display: flex;
-        align-items: center;
-        margin-bottom: 22px;
-        flex-wrap: wrap;
-        svg {
-          width: 13px;
-          height: 15px;
-        }
-        time,
-        span {
-          font-size: 12px;
-          font-weight: 600;
-          line-height: normal;
-          letter-spacing: 1px;
-          text-align: left;
-          text-transform: uppercase;
-          margin-left: 12px;
-        }
-        .date-category-section {
-          display: flex;
-          align-items: center;
-          margin-right: 38px;
-          margin-bottom: 12px;
-        }
-        .author {
-          display: flex;
-          align-items: center;
-        }
-      }
-      .description {
-        font-size: 14px;
-        font-weight: normal;
-        line-height: 1.57;
-        letter-spacing: normal;
-        text-align: left;
-      }
-      .more-btn {
-        margin-top: 13px;
-        border: solid 1px $color-yellow;
-        background-color: $color-white;
-        display: block;
-        text-transform: uppercase;
-        font-family: var(--font-family-primary);
-        font-size: 12px;
+        font-size: 16px;
         font-weight: 500;
         line-height: normal;
-        letter-spacing: 1px;
-        text-align: center;
-        padding: 12.5px 22px;
-        min-width: 115px;
-        width: fit-content;
+        letter-spacing: 0.02px;
+        text-align: left;
       }
+    }
+    ul {
+      li.tags {
+        padding: 8px 17px 8px 15px;
+        background-color: #cad9eb;
+        line-height: normal;
+        border-radius: 30px;
+        display: inline-block;
+        margin: 0px 10px 13px 0px;
+        a {
+          font-size: 14px;
+          text-transform: capitalize;
+        }
+        @include MQ(MQ-980) {
+          margin: 0px 0 10px 0;
+        }
+      }
+    }
+    h3 {
+      margin-bottom: 14px;
+      a {
+        font-family: var(--font-family-primary);
+        font-size: 16px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.44;
+        letter-spacing: normal;
+        text-align: left;
+        color: #3b2900;
+        text-transform: none;
+      }
+    }
+    p {
+      line-height: normal;
+    }
+    .artical-date-author {
+      display: flex;
+      align-items: center;
+      margin-bottom: 22px;
+      flex-wrap: wrap;
+      svg {
+        width: 13px;
+        height: 15px;
+      }
+      time,
+      span {
+        font-size: 12px;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 1px;
+        text-align: left;
+        text-transform: uppercase;
+        margin-left: 12px;
+      }
+      .date-category-section {
+        display: flex;
+        align-items: center;
+        margin-right: 38px;
+        margin-bottom: 12px;
+      }
+      .author {
+        display: flex;
+        align-items: center;
+      }
+    }
+    .description {
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 1.57;
+      letter-spacing: normal;
+      text-align: left;
+    }
+    .more-btn {
+      margin-top: 13px;
+      border: solid 1px $color-yellow;
+      background-color: $color-white;
+      display: block;
+      text-transform: uppercase;
+      font-family: var(--font-family-primary);
+      font-size: 12px;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: 1px;
+      text-align: center;
+      padding: 12.5px 22px;
+      min-width: 115px;
+      width: fit-content;
     }
   }
 }
