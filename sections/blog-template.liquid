@@ -73,6 +73,12 @@
                 class="full-format flex-justify-column-center content {% if featuredArticle.image == blank%} full {% endif %} "
               >
                 <div class="inner">
+                  <div class="tags">
+                    {% for tag in articleRelated.tags limit: 1 %}
+                      <span class="tag">{{ tag }}</span>
+                    {% endfor %}
+                  </div>
+
                   <h3>
                     {{ featuredArticle.title }}
                   </h3>
