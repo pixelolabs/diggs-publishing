@@ -300,7 +300,7 @@
       "blog-template": {
         "type": "blog-template",
         "settings": {
-          "image": "shopify:\/\/shop_images\/general_assembly.webp",
+          "image": "{{ localization.market.metafields.custom.inner_hero_banner_image.value }}",
           "description": "",
           "show_featured_article": true,
           "featured_article": "blog\/what-age-should-kids-learn-about-consent",
