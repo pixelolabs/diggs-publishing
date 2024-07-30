@@ -289,20 +289,17 @@
           "color_scheme": "scheme-4",
           "image": "{{ localization.market.metafields.custom.inner_hero_banner_image.value }}",
           "mobileImage": "{{ localization.market.metafields.custom.inner_hero_banner_image.value }}",
-          "title": "Privacy Policy",
-          "description1": "Multicolumn",
-          "description": "<p>This Privacy Policy describes how ksdiggs.myshopify.com (the “Site” or “we”) collects, uses, and discloses your Personal Information when you visit or make a purchase from the Site.<\/p>",
+          "title": "",
+          "description": "<p>description<\/p>",
           "buttonText1": "",
           "buttonLink1": "",
-          "button_bg": "pink",
+          "button_bg": "green",
           "content_alignment": "left"
         }
       },
       "blog-template": {
         "type": "blog-template",
         "settings": {
-          "image": "shopify:\/\/shop_images\/general_assembly.webp",
-          "description": "",
           "show_featured_article": true,
           "featured_article": "blog\/what-age-should-kids-learn-about-consent",
           "featured_article2": "",
