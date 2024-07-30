@@ -1,6 +1,4 @@
 <div class="inner-hero-section">
-  {% assign mobile_image = blog.metafields.hero_banner.background_image_mobile | first %}
-  {% assign image = blog.metafields.hero_banner.background_image_desktop | first %}
   <div class="image-wrapper">
     <picture>
       <source media="(max-width: 600px)" srcset="{{ mobile_image.cloudinary_src}}">
@@ -176,6 +174,20 @@
 {
   "name": "Featured Article",
   "settings": [
+    {
+      "type": "header",
+      "content": "Hero Banner"
+    },
+    {
+      "type": "image_picker",
+      "label": "Image",
+      "id": "image"
+    },
+    {
+      "type": "richtext",
+      "label": "Description",
+      "id": "description"
+    },
     {
       "type": "checkbox",
       "id": "show_featured_article",
