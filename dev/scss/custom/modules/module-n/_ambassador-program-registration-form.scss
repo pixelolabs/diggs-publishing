@@ -1,4 +1,4 @@
-.contact-form-with-text-outer{
+.ambassador-program-form-outer{
     position: relative;
     &:before{
         background: url(wave-fullwidth-body-bgcolor.svg) repeat-x center / 1452px;
@@ -23,18 +23,19 @@
 .ambassador-program-form{
     position: relative;
     text-align: center;
-    background: url(full_width_bg_orange.webp) repeat center / 100%;
+    background: url(full_width_bg_vilot.webp) repeat center / 100%;
     @include MQ(MQ-768){
         background-size: cover;
     }
     &:before{
-        width: 620px;
-        height: 773px;
+        width: 603px;
+        height: 840px;
         content: "";
         position: absolute;
-        left: 0;
+        transform: rotate(35.9deg);
+        top: -150px;
+        left: -148px;
         z-index: 0;
-        bottom: 0;
         background: url(thread-multi-white.webp) no-repeat center / 100%;
         @include MQ(MQ-980){
             display: none;
@@ -47,7 +48,7 @@
         position: absolute;
         right: 0;
         z-index: 0;
-        top: -58px;
+        top: 0px;
         background: url(thread-white-2.svg) no-repeat center / 100%;
         @include MQ(MQ-980){
             top: -220px;
@@ -57,147 +58,90 @@
             right: -48px;
         }
     }
-    .container-1260{
-        padding-top: 162px;
+    .container-970{
+        padding-top: 110px;
         padding-bottom: 116px;
         position: relative;
+        &::after{
+            width: 41px;
+            height: 50px;
+            content: "";
+            position: absolute;
+            right: -85px;
+            z-index: 1;
+            bottom: 200px;
+            background: url(star-large.webp) no-repeat center / 100%;
+            @include MQ(MQ-1300){
+                right: 0;
+                bottom: 100px;
+            }
+            @include MQ(MQ-980){
+                display: none;
+            }
+        }
         @include MQ(MQ-980){
             flex-wrap: wrap;
         }
         @include MQ(MQ-768) {
-            padding-bottom: 305px;
+            padding-bottom: 110px;
             padding-top: 96px;
-        }
-        @include MQ(MQ-500){
-            padding-bottom: 200px;
         }
     }
     .form-section{
-        width: 68.66%;
-        padding-right: 72px;
+        width: 100%;
         position: relative;
-        @include MQ(MQ-1200){
-            padding-right: 40px;
-            width: 60%;
-        }
-        @include MQ(MQ-980){
-            width: 100%;
-            padding-right: 0;
-            padding-bottom: 45px;
-        }
         &::before{
-            width: 65.6px;
-            height: 87px;
-            content: "";
-            position: absolute;
-            left: 272px;
-            z-index: 1;
-            top: -8.7px;
-            transform: translateY(-100%);
-            background: url(kite-orange.webp) no-repeat center / 100%;
-            @include MQ(MQ-980){
-                background-image: url(planet-orange.svg);
-                width: 57px;
-                height: 39.24px;
-                left: unset;
-                right: 110px;
-                top: -40px;
-            }
-            @include MQ(MQ-768){
-                top: -11px;
-                right: 72px;
-            }
-            @include MQ(MQ-500){
-                top: -21px;
-                right: 62px;
-            }
-        }
-        &::after{
             width: 64px;
             height: 51px;
             content: "";
             position: absolute;
-            top: -45.5px;
-            transform: translateY(-100%);
+            top: 30px;
+            transform: translateX(-100%);
             z-index: 1;
-            right: 83.33px;
+            left: -84px;
             background: url(icon-cloud.webp) no-repeat center / 100%;
+            @include MQ(MQ-1300){
+                left: -24px;
+            }
             @include MQ(MQ-980){
-                right: unset;
-                left: 32px;
-                width: 40.83px;
-                height: 32.43px;
+                left: 13px;
+                top: -54px;
+                width: 41px;
+                height: 33px;
+                transform: none;
             }
-            @include MQ(MQ-768){
-                top: -23px;
-            }
-            @include MQ(MQ-500){
-                top: -36px;
-            }
-        }
-    }
-    .contact-info-section{
-        text-align: left;
-        width: 31.34%;
-        position: relative;
-        @include MQ(MQ-1200){
-            width: 40%;
-        }
-        @include MQ(MQ-980){
-            width: 100%;
         }
         &::after{
-            width: 81px;
-            height: 84px;
+            width: 124px;
+            height: 85px;
             content: "";
             position: absolute;
-            top: -35.5px;
+            right: -59px;
             z-index: 1;
-            right: 0px;
-            background: url(rocket.webp) no-repeat center / 100%;
-            @include MQ(MQ-980) {
-                display: none;
+            top: -55px;
+            background: url(planet-purple.svg) no-repeat center / 100%;
+            transform: translateX(100%);
+            @include MQ(MQ-1300){
+                right: 40px;
+                width: 64px;
+                height: 55px;
+                transform: none;
+            }
+            @include MQ(MQ-1100){
+                width: 57px;
+                height: 40px;
+            }
+            @include MQ(MQ-980){
+                right: 110px;
+            }
+            @include MQ(MQ-500){
+                right: 50px;
+                top: -50px;
             }
         }
-        h2{
-            margin-bottom: 20px;
-            font-size: 30px;
-        }
-        ul{
-            li,a{
-                margin-bottom: 20px;
-                letter-spacing:2px;
-                font-weight: 400;
-                .title{
-                    display: block;
-                    margin-bottom: 10px;
-                    letter-spacing: 1px;
-                    font-weight: 700;
-                }
-            }
-            .address{
-                max-width: 240px;
-            }
+        .submit-field{
+            padding-top: 25px;
         }
     }
-    .kids-images{
-        position: absolute;
-        right: -48px;
-        width: 532px;
-        height: 330px;
-        bottom: 0px;
-        z-index: 0;
-        img{
-            @include img-object-contain;
-        }
-        @include MQ(MQ-768) {
-            width: 388px;
-            right: 50%;
-            transform: translateX(50%);   
-        }        
-        @include MQ(MQ-500){
-            width: 248px;
-            bottom: -60px;
-        }
-    }
+   
 }

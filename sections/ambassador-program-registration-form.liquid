@@ -1,9 +1,135 @@
-<div class="ambassador-program-form relative">
-  <div class="container-1410 flex-align-center">
-    test
+<div class="ambassador-program-form-outer">
+  <div class="ambassador-program-form relative">
+    <div class="container-970 flex">
+      <div class="form-section text-left">
+        {%- assign formId = 'AmbassadorProgramForm' -%}
+        {% form 'contact'
+          , id: formId %}
+          {% include 'form-status'
+            , form: form
+            , form_id: formId %}
+          <div class="flex">
+            <div class="input-field half-width-col">
+              <label for="FirstName">Parents First Name</label>
+              <input
+                type="text"
+                id="{{ formId }}-FirstName"
+                placeholder="Parents First Name"
+                name="contact[Enquiry_FirstName]">
+            </div>
+            <div class="input-field half-width-col">
+              <label for="LastName">Parents Last Name</label>
+              <input
+                type="text"
+                id="{{ formId }}-LastName"
+                placeholder="Parents Last Name"
+                name="contact[Enquiry_LastName]">
+            </div>
+            <div class="input-field half-width-col">
+              <label for="Address">Address</label>
+              <input
+                type="text"
+                id="{{ formId }}-Address"
+                placeholder="Address"
+                name="contact[Enquiry_Address]">
+            </div>
+            <div class="input-field half-width-col">
+              <label for="Phone-number">Phone Number</label>
+              <input
+                type="tel"
+                id="{{ formId }}-phone"
+                placeholder="Phone Number"
+                name="contact[Phone]"
+                pattern="[0-9\-]*"
+                aria-required="true"
+                value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}">
+            </div>
+            <div class="input-field half-width-col">
+              <label for="Email">Enter your Email address*</label>
+              <input
+                placeholder="Enter your Email address*"
+                class="email-field"
+                type="email"
+                id="{{ formId }}-email"
+                name="contact[email]"
+                autocorrect="off"
+                autocapitalize="off"
+                value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                aria-required="true"
+                {%- if form.errors contains 'email' -%}
+                class="input--error"
+                aria-invalid="true"
+                aria-describedby="{{ formId }}-email-error"
+                {%- endif -%}>
+              {%- if form.errors contains 'email' -%}
+                <span id="{{ formId}}-email-error" class="input-error-message">
+                  <span class="visually-hidden">{{ 'general.accessibility.error' | t }}</span>
+                  <span>
+                    {{- form.errors.translated_fields.email | capitalize }}
+                    {{ form.errors.messages.email }}.</span>
+                </span>
+              {%- endif -%}
+            </div>
+            <div class="input-field half-width-col">
+              <label for="ChildsFullName">Childs Full Name</label>
+              <input
+                type="text"
+                id="{{ formId }}-ChildsFullName"
+                placeholder="Childs Full Name"
+                name="contact[Enquiry_ChildsFullName]">
+            </div>
+            <div class="input-field half-width-col">
+              <label for="ChildsAge">Childs Age</label>
+              <input
+                type="text"
+                id="{{ formId }}-ChildsAge"
+                placeholder="Childs Age"
+                name="contact[Enquiry_ChildsAge]">
+            </div>
+            <div class="input-field half-width-col">
+              <label for="ChildsReading">Childs Grade and Reading Level</label>
+              <input
+                type="text"
+                id="{{ formId }}-ChildsReading"
+                placeholder="Childs Grade and Reading Level"
+                name="contact[Enquiry_ChildsReading]">
+            </div>
+            <div class="input-field half-width-col">
+              <label for="SocialMediaHandles">Social Media Handles</label>
+              <input
+                type="text"
+                id="{{ formId }}-SocialMediaHandles"
+                placeholder="Social Media Handles"
+                name="contact[Enquiry_SocialMediaHandles]">
+            </div>
+            <div class="input-field half-width-col">
+              <label for="ChildAmbassador">Why do you think this child will make a good ambassador?</label>
+              <input
+                type="text"
+                id="{{ formId }}-ChildAmbassador"
+                placeholder="Why do you think this child will make a good ambassador?"
+                name="contact[Enquiry_ChildAmbassador]">
+            </div>
+            <div class="input-field full-width-col">
+              <label for="CommitteeConsideration">hat else should the committee consider?</label>
+              <input
+                type="text"
+                id="{{ formId }}-CommitteeConsideration"
+                placeholder="hat else should the committee consider?"
+                name="contact[Enquiry_CommitteeConsideration]">
+            </div>
+            <div class="submit-field full-width-col">
+            <input
+              type="submit"
+              class="btn--primary yellow"
+              value="Submit Now">
+            </div>
+          </div>
+        {% endform %}
+      </div>
+    </div>
   </div>
 </div>
-
 {% schema %}
 {
   "name": "Ambassador Program Form",

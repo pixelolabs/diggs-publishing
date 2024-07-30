@@ -73,6 +73,7 @@
 .ambassador-program{
   &.default-page-content{
     position: relative;
+    overflow-x: clip;
     &:after{
       width: 234px;
       height: 200px;
@@ -104,6 +105,12 @@
         right: 25%;
         top: -106px;
       }
+    .full-format {
+      padding-bottom: 66px;
+      @include MQ(MQ-500){
+        padding-bottom: 50px;
+      }
+    }
     }
   }
 }
