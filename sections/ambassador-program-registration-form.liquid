@@ -78,22 +78,50 @@
                 placeholder="Childs Full Name"
                 name="contact[Enquiry_ChildsFullName]">
             </div>
-            <div class="textarea-field full-width-col">
-              <label for="Message">
-              Message</label>
-              <textarea
-                placeholder="Message"
-                rows="10"
-                id="{{ formId }}-message"
-                name="contact[{{ 'contact.form.message' | t }}]">
-                {% if form.body %}
-                  {{ form.body }}{% endif %}
-              </textarea>
+            <div class="input-field half-width-col">
+              <label for="ChildsAge">Childs Age</label>
+              <input
+                type="text"
+                id="{{ formId }}-ChildsAge"
+                placeholder="Childs Age"
+                name="contact[Enquiry_ChildsAge]">
+            </div>
+            <div class="input-field half-width-col">
+              <label for="ChildsReading">Childs Grade and Reading Level</label>
+              <input
+                type="text"
+                id="{{ formId }}-ChildsReading"
+                placeholder="Childs Grade and Reading Level"
+                name="contact[Enquiry_ChildsReading]">
+            </div>
+            <div class="input-field half-width-col">
+              <label for="SocialMediaHandles">Social Media Handles</label>
+              <input
+                type="text"
+                id="{{ formId }}-SocialMediaHandles"
+                placeholder="Social Media Handles"
+                name="contact[Enquiry_SocialMediaHandles]">
+            </div>
+            <div class="input-field half-width-col">
+              <label for="ChildAmbassador">Why do you think this child will make a good ambassador?</label>
+              <input
+                type="text"
+                id="{{ formId }}-ChildAmbassador"
+                placeholder="Why do you think this child will make a good ambassador?"
+                name="contact[Enquiry_ChildAmbassador]">
+            </div>
+            <div class="input-field full-width-col">
+              <label for="CommitteeConsideration">hat else should the committee consider?</label>
+              <input
+                type="text"
+                id="{{ formId }}-CommitteeConsideration"
+                placeholder="hat else should the committee consider?"
+                name="contact[Enquiry_CommitteeConsideration]">
             </div>
             <div class="submit-field full-width-col">
             <input
               type="submit"
-              class="btn--primary"
+              class="btn--primary yellow"
               value="Submit Now">
             </div>
           </div>
