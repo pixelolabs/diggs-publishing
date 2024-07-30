@@ -1,20 +1,22 @@
-<div class="inner-hero-section">
-  <div class="image-wrapper">
-    <img src="{{ section.settings.image}}" alt="{{blog.title}}">
-  </div>
-  <div class="container-1240">
-    <div class="content">
-      <h1 class="small ">{{ blog.title }}</h1>
+{% comment %}
+  <div class="inner-hero-section">
+    <div class="image-wrapper">
+      <img src="{{ section.settings.image}}" alt="{{blog.title}}">
+    </div>
+    <div class="container-1240">
+      <div class="content">
+        <h1 class="small ">{{ blog.title }}</h1>
 
-      <div class="description">
-        {% if section.settings.description != blank %}
-          {{ section.settings.description }}
-        {% endif %}
+        <div class="description">
+          {% if section.settings.description != blank %}
+            {{ section.settings.description }}
+          {% endif %}
+        </div>
       </div>
     </div>
   </div>
-</div>
-
+{% endcomment %}
+{% section 'inner-hero-section' %}
 <div class="blog-section">
   {% paginate blog.articles by section.settings.blogItems %}
     <input
