@@ -289,7 +289,7 @@
           "color_scheme": "scheme-4",
           "image": "{{ localization.market.metafields.custom.inner_hero_banner_image.value }}",
           "mobileImage": "{{ localization.market.metafields.custom.inner_hero_banner_image.value }}",
-          "title": "Privacy Policy",
+          "title": "",
           "description1": "",
           "buttonText1": "",
           "buttonLink1": "",
