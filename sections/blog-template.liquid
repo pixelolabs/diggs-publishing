@@ -1,18 +1,20 @@
-<div class="inner-hero-section">
-  <div class="image-wrapper">
-    <img src="{{ section.settings.image}}" alt="{{blog.title}}">
-  </div>
-  <div class="container-1240">
-    <div class="content">
-      <h1 class="small ">{{ blog.title }}</h1>
-      {% if custom.hero_banner_description != blank %}
-        <div class="description">
-          {{ custom.hero_banner_description }}
-        </div>
-      {% endif %}
+{% comment %}
+  <div class="inner-hero-section">
+    <div class="image-wrapper">
+      <img src="{{ section.settings.image}}" alt="{{blog.title}}">
+    </div>
+    <div class="container-1240">
+      <div class="content">
+        <h1 class="small ">{{ blog.title }}</h1>
+        {% if custom.hero_banner_description != blank %}
+          <div class="description">
+            {{ custom.hero_banner_description }}
+          </div>
+        {% endif %}
+      </div>
     </div>
   </div>
-</div>
+{% endcomment %}
 
 <div class="blog-section">
   {% paginate blog.articles by section.settings.blogItems %}
@@ -71,14 +73,14 @@
                 class="full-format flex-justify-column-center content {% if featuredArticle.image == blank%} full {% endif %} "
               >
                 <div class="inner">
+                  <div class="tags">
+                    {% for tag in featuredArticle.tags limit: 1 %}
+                      <span class="tag">{{ tag }}</span>
+                    {% endfor %}
+                  </div>
+
                   <h3>
-                    <a
-                      aria-label="Read More About {{ featuredArticle.title }}"
-                      title="Read More About {{ featuredArticle.title }}"
-                      href="{{ featuredArticle.url }}"
-                    >
-                      {{ featuredArticle.title | strip_html | truncate: 73 }}
-                    </a>
+                    {{ featuredArticle.title }}
                   </h3>
                   <div class="artical-date-author">
                     <div class="date-category-section">
@@ -95,11 +97,11 @@
                     </div>
                   </div>
                   <div class="description">
-                    {{ featuredArticle.content | strip_html | truncate: 100 }}
+                    {{ featuredArticle.content | strip_html | truncate: 500 }}
                   </div>
                   <a
                     href="{{ featuredArticle.url }}"
-                    class="more-btn"
+                    class="btn--primary"
                     aria-label="Read More About {{ featuredArticle.title }}"
                     title="Read More About {{ featuredArticle.title }}"
                     >Read More</a
@@ -165,21 +167,6 @@
   "name": "Featured Article",
   "settings": [
     {
-      "type": "header",
-      "content": "Hero Banner"
-    },
-    {
-      "type": "image_picker",
-      "label": "Image",
-      "id": "image"
-    },
-    {
-      "type": "inline_richtext",
-      "id": "description",
-      "default": "Multicolumn",
-      "label": "Description"
-    },
-    {
       "type": "checkbox",
       "id": "show_featured_article",
       "label": "Show Featured Article",
@@ -190,6 +177,7 @@
       "id": "featured_article",
       "label": "Featured Article"
     },
+
     {
       "type": "article",
       "id": "featured_article2",

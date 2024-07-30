@@ -11,6 +11,7 @@
   min-height: 550px;
   position: relative;
   display: flex;
+  z-index: 2;
   // align-items: center;
   @include MQ(MQ-768) {
     // padding-top: 119px !important;
@@ -128,7 +129,7 @@
     max-width: 490px;
     width: 100%;
     position: relative;
-    .btn--primary{
+    .btn--primary {
       margin-top: 20px;
     }
     @include MQ(MQ-768) {
@@ -138,7 +139,8 @@
     * {
       color: #ffffff;
     }
-    h1, .h1 {
+    h1,
+    .h1 {
       margin: 0 0 16px;
       font-size: 40px;
       font-weight: normal;
@@ -154,11 +156,11 @@
 }
 
 // .template-page-about-2-0{
-  .inner-hero-section{
-    @include MQ(MQ-480) {
-      padding-top: 100px !important;
-      padding-bottom: 100px !important;
-      min-height: 340px;
-    }
+.inner-hero-section {
+  @include MQ(MQ-480) {
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+    min-height: 340px;
   }
+}
 // }
