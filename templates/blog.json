@@ -28,6 +28,7 @@
       "settings": {
         "show_featured_article": true,
         "featured_article": "",
+        "featured_article1": "{{ section.settings.featured_article.metafields.custom.featured_article_link.value }}",
         "featured_article2": "",
         "blogItems": 10
       }
