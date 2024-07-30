@@ -27,35 +27,14 @@
       "type": "blog-template",
       "settings": {
         "show_featured_article": true,
-        "featured_article": "",
+        "featured_article": "blog\/body-safety-why-it-should-never-be-a-taboo-topic",
         "featured_article2": "",
         "blogItems": 10
-      }
-    },
-    "article_list_JdQDEw": {
-      "type": "article-list",
-      "blocks": {
-        "block_bQ3Qhw": {
-          "type": "block",
-          "settings": {
-            "article": ""
-          }
-        }
-      },
-      "block_order": [
-        "block_bQ3Qhw"
-      ],
-      "settings": {
-        "title1": "",
-        "title2": "",
-        "buttonText": "",
-        "buttonLink": ""
       }
     }
   },
   "order": [
     "inner_hero_section_MntiL6",
-    "main",
-    "article_list_JdQDEw"
+    "main"
   ]
 }
