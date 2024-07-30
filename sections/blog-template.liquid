@@ -1,21 +1,18 @@
-{% comment %}
-  <div class="inner-hero-section">
-    <div class="image-wrapper">
-      <img src="{{ section.settings.image}}" alt="{{blog.title}}">
-    </div>
-    <div class="container-1240">
-      <div class="content">
-        <h1 class="small ">{{ blog.title }}</h1>
-
+<div class="inner-hero-section">
+  <div class="image-wrapper">
+    <img src="{{ section.settings.image}}" alt="{{blog.title}}">
+  </div>
+  <div class="container-1240">
+    <div class="content">
+      <h1 class="small ">{{ blog.title }}</h1>
+      {% if custom.hero_banner_description != blank %}
         <div class="description">
-          {% if section.settings.description != blank %}
-            {{ section.settings.description }}
-          {% endif %}
+          {{ custom.hero_banner_description }}
         </div>
-      </div>
+      {% endif %}
     </div>
   </div>
-{% endcomment %}
+</div>
 
 <div class="blog-section">
   {% paginate blog.articles by section.settings.blogItems %}
@@ -180,7 +177,7 @@
       "type": "inline_richtext",
       "id": "description",
       "default": "Multicolumn",
-      "label": "t:sections.multicolumn.settings.title.label"
+      "label": "Description"
     },
     {
       "type": "checkbox",
