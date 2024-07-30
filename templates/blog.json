@@ -9,19 +9,32 @@
 */
 {
   "sections": {
-    "innerBanner": {
-      "type": "inner-hero-section",
-      "settings": {
-      }
-    },
     "main": {
       "type": "blog-template",
       "settings": {
+        "description": "Multicolumn",
+        "show_featured_article": true,
+        "featured_article": "",
+        "featured_article2": "",
+        "blogItems": 10
+      }
+    },
+    "inner_hero_section_MntiL6": {
+      "type": "inner-hero-section",
+      "settings": {
+        "color_scheme": "",
+        "image": "{{ blog.metafields.custom.inner_hero_banner.value }}",
+        "title": "{{ blog.title }}",
+        "description": "",
+        "buttonText1": "",
+        "buttonLink1": "",
+        "button_bg": "pink",
+        "content_alignment": "left"
       }
     }
   },
   "order": [
-    "innerBanner",
-    "main"
+    "main",
+    "inner_hero_section_MntiL6"
   ]
 }
