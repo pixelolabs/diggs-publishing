@@ -13,26 +13,41 @@
               <label for="FirstName">Parents First Name</label>
               <input
                 type="text"
-                id="{{ formId }}-subject"
+                id="{{ formId }}-FirstName"
                 placeholder="Parents First Name"
-                name="contact[Enquiry_Subject]">
+                name="contact[Enquiry_FirstName]">
             </div>
             <div class="input-field half-width-col">
-              <label for="Full-name">
-              Full Name *</label>
+              <label for="LastName">Parents Last Name</label>
               <input
-                placeholder="How can we help you? *"
                 type="text"
-                id="{{ formId }}-name"
-                name="contact[{{ 'contact.form.name' | t }}]"
-                aria-required="true"
-                value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
+                id="{{ formId }}-LastName"
+                placeholder="Parents Last Name"
+                name="contact[Enquiry_LastName]">
             </div>
             <div class="input-field half-width-col">
-              <label for="Email">
-              Email Address *</label>
+              <label for="Address">Address</label>
               <input
-                placeholder="Email Address*"
+                type="text"
+                id="{{ formId }}-Address"
+                placeholder="Address"
+                name="contact[Enquiry_Address]">
+            </div>
+            <div class="input-field half-width-col">
+              <label for="Phone-number">Phone Number</label>
+              <input
+                type="tel"
+                id="{{ formId }}-phone"
+                placeholder="Phone Number"
+                name="contact[Phone]"
+                pattern="[0-9\-]*"
+                aria-required="true"
+                value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}">
+            </div>
+            <div class="input-field half-width-col">
+              <label for="Email">Enter your Email address*</label>
+              <input
+                placeholder="Enter your Email address*"
                 class="email-field"
                 type="email"
                 id="{{ formId }}-email"
@@ -56,16 +71,12 @@
               {%- endif -%}
             </div>
             <div class="input-field half-width-col">
-              <label for="Mobile-number">
-              Mobile Number *</label>
+              <label for="ChildsFullName">Childs Full Name</label>
               <input
-                type="tel"
-                id="{{ formId }}-phone"
-                placeholder="Phone Number"
-                name="contact[Phone]"
-                pattern="[0-9\-]*"
-                aria-required="true"
-                value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}">
+                type="text"
+                id="{{ formId }}-ChildsFullName"
+                placeholder="Childs Full Name"
+                name="contact[Enquiry_ChildsFullName]">
             </div>
             <div class="textarea-field full-width-col">
               <label for="Message">
