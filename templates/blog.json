@@ -14,8 +14,9 @@
       "settings": {
         "color_scheme": "",
         "image": "{{ blog.metafields.custom.inner_hero_banner.value }}",
+        "mobileImage": "{{ blog.metafields.custom.blog_hero_banner_image_mobile_.value }}",
         "title": "{{ blog.title }}",
-        "description": "",
+        "description": "<p>{{ blog.metafields.custom.blog_hero_banner_description | metafield_tag }}<\/p>",
         "buttonText1": "{{ blog.metafields.custom.button_text.value }}",
         "buttonLink1": "{{ blog.metafields.custom.button_link.value }}",
         "button_bg": "green",
