@@ -2,7 +2,7 @@
   <div class="ambassador-program-form relative">
     <div class="container-1260 flex">
       <div class="form-section text-left">
-        {%- assign formId = 'ContactForm' -%}
+        {%- assign formId = 'AmbassadorProgramForm' -%}
         {% form 'contact'
           , id: formId %}
           {% include 'form-status'
@@ -10,13 +10,11 @@
             , form_id: formId %}
           <div class="flex">
             <div class="input-field half-width-col">
-              <label for="Subject">
-                How can we help you? *</label>
+              <label for="FirstName">Parents First Name</label>
               <input
                 type="text"
                 id="{{ formId }}-subject"
-                placeholder="Subject*"
-                aria-required="true"
+                placeholder="Parents First Name"
                 name="contact[Enquiry_Subject]">
             </div>
             <div class="input-field half-width-col">
