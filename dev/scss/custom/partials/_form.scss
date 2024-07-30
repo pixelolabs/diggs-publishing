@@ -56,7 +56,8 @@
                 font-weight: var(--input-font-weight);
                 font-style: var(--input-font-style);
                 line-height: var(--input-line-height);
-                color: var(--input-text-color);
+                // color: var(--input-text-color);
+                color: transparent;
             }
             option {
                 color: var(--input-text-color);
