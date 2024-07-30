@@ -74,13 +74,7 @@
               >
                 <div class="inner">
                   <h3>
-                    <a
-                      aria-label="Read More About {{ featuredArticle.title }}"
-                      title="Read More About {{ featuredArticle.title }}"
-                      href="{{ featuredArticle.url }}"
-                    >
-                      {{ featuredArticle.title | strip_html | truncate: 73 }}
-                    </a>
+                    {{ featuredArticle.title | strip_html | truncate: 73 }}
                   </h3>
                   <div class="artical-date-author">
                     <div class="date-category-section">
