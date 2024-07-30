@@ -27,7 +27,7 @@
       "type": "blog-template",
       "settings": {
         "show_featured_article": true,
-        "featured_article": "",
+        "featured_article": "blog\/how-do-you-teach-children-about-body-and-consent",
         "featured_article2": "",
         "blogItems": 10
       }
