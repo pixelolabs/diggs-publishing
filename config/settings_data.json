@@ -290,10 +290,10 @@
           "image": "{{ localization.market.metafields.custom.inner_hero_banner_image.value }}",
           "mobileImage": "{{ localization.market.metafields.custom.inner_hero_banner_image.value }}",
           "title": "",
-          "description1": "",
+          "description": "<p>description<\/p>",
           "buttonText1": "",
           "buttonLink1": "",
-          "button_bg": "pink",
+          "button_bg": "green",
           "content_alignment": "left"
         }
       },
