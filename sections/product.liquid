@@ -32,39 +32,7 @@
     </div>
   {%- endunless -%}
 
-  <div class="top-banner">
-    <div class="container-1220">
-      <div class="flex banner-wrapper">
-        <div class="left-section">
-          <span class="product-title"> {{ product.title }}</span>
-          <div class="review-section ">
-            <a class="write-review hide js__write-review-btn hide"> Write a Review </a>
-          </div>
-        </div>
-        <div class="right-section flex">
-          <div class="product-single__prices" content="{{ current_variant.price | divided_by: 100.00 }}">
-            {% if product.price < product.compare_at_price %}
-              <span>{{ product.price | money }}</span> <s>{{ product.compare_at_price | money }}</s>
-            {% else %}
-              <span> {{ product.price | money }}</span>
-            {% endif %}
-          </div>
-          <div class="add-to-cart">
-            <button
-              type="submit"
-              name="add"
-              id="add"
-              class="btn--primary add"
-              onclick="addItem('add-to-cart'); return false;"
-            >
-              <span class="subtotal js__ajax-cart-total"> </span>
-              <span class="pdp-add-to-cart-text"> - Add to Cart</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+ 
 
   <div class="container-1220 flex-wrap">
     {% comment %}
