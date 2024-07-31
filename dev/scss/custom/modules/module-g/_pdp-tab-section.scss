@@ -13,6 +13,17 @@ background: $color-off-white-light;
     content: "";
     z-index: 2;
   }
+   
+  &::after{
+    background: url("thread-orange-4.svg") no-repeat center / 100%;
+    height: 668px;
+    width: 194px;
+    position: absolute;
+    right: 0;
+    top: -350px;
+    content: '';
+    z-index: 5;
+  }
   .container-1260{
     position: relative;
     &::after {

@@ -1,7 +1,26 @@
 .product {
   position: relative;
-  padding: 60px 0;
-  background: $color-white;
+  padding-top: 205px;
+  background-image: linear-gradient(98deg, #5ebe55 1%, #a8d24e 51%, #5abe50 101%);
+  @include MQ(MQ-768) {
+    padding-top: 130px;
+  }
+  .inner {
+    background: $color-off-white-light;
+    padding: 110px 0 210px;
+    position: relative;
+    &::before {
+      background: url("graphic-wave-inner-banner.svg") repeat left / 2065px;
+      height: 114px;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: -90px;
+      content: "";
+      z-index: 2;
+    }
+    
+  }
   .okeReviews-reviewsSummary {
     margin-top: 5px !important;
   }
@@ -1666,7 +1685,10 @@
   padding: 36px 40px 172px;
   .cbb-frequently-bought-discount-message-container{
     display: none !important;
+    
   }
+
+ 
   &::before{
     background: url("wave-sky-blue.webp") repeat left / 1452px;
     height: 85px;
@@ -1680,7 +1702,82 @@
     position: relative;
     z-index: 2;
     max-width: 960px ;
+    margin: 0 auto !important;
     margin-top: 27px !important;
+    display: flex!important;
+    flex-wrap:  wrap !important;
+    margin-bottom: -24px !important;
+    li{
+      margin-bottom: 24px !important;
+width: calc(50% - 30px);
+margin-right: 60px !important;
+
+
+&:nth-child(even){
+  margin-right: 0 !important;
+}
+position: relative;
+padding-left: 26px;
+.cbb-frequently-bought-selector-input{
+  position: absolute;
+  left: 0;
+  top: 10px;
+  margin: 0;
+}
+>a,>span{
+  &:nth-child(2){
+    width: 100%;
+    display: block !important;
+    margin: 0 0 8px!important;
+    h3{
+    font-family: var(--font-family-primary) !important;
+  font-size: 16px !important;
+  font-weight: normal !important;
+  line-height: 1.56 !important;
+  letter-spacing: 0.32px !important;
+  color: $color-black  !important;
+  text-transform: capitalize;
+    }
+  }
+}
+
+select{
+  padding: 4px 14px !important;
+  border-radius: 60px!important;
+  background-color: $color-white !important;
+  height: 25px !important;
+  max-height: none !important;
+  min-height: auto !important;
+  font-family: var(--font-family-primary) !important;
+  font-size: 10px !important;
+  font-weight: 500!important;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5!important;
+  letter-spacing: 1px!important;
+  color: $color-black  !important;
+  margin: 0 !important;
+  border: none !important;
+  text-transform: uppercase !important;
+}
+.cbb-frequently-bought-selector-label-compare-at-price,.cbb-frequently-bought-selector-label-sale-price span,.cbb-frequently-bought-selector-label-regular-price span{
+  font-family: var(--font-family-primary) !important;
+  font-size: 14px!important;
+  font-weight: bold!important;
+  font-stretch: normal!important;
+  font-style: normal!important;
+  line-height: 1.29!important;
+  letter-spacing: 1px!important;
+  color: $color-black!important;
+}
+
+.cbb-frequently-bought-selector-label-compare-at-price{
+  color: #858585!important;
+  
+}
+
+
+    }
   }
   
   .cbb-frequently-bought-form{
@@ -1715,15 +1812,25 @@ s{
     flex-wrap: wrap;
     margin: 0 !important;
     margin-left: -50px !important;
-    width: calc(100% + 50px);
+    width: calc(100% + 50px) !important;
     z-index: 2;
     position: relative;
+
+   
     li{
       width: 20% !important;
       padding-left: 50px;
       height: 187.6px !important;
+      position: relative;
       .cbb-frequently-bought-plus-icon{
         position: absolute !important;
+        width: 50px !important;
+        height: 50px !important;
+        right: -50px;
+        font-size: 0 !important;
+        top: calc(50% - 25px) !important;
+        background: url("icon-plus.svg") no-repeat center / 20px $color-sky-blue !important;
+        
       }
       .cbb-frequently-bought-product-image-link{
         width: 100% !important;
@@ -1736,6 +1843,8 @@ s{
         height: 100% !important;
        
       }
+
+
     }
   }
   .cbb-frequently-bought-title {
@@ -1776,6 +1885,8 @@ s{
     margin: 0 auto!important;
     padding: 0 40px 50px;
     position: relative;
+    background: $color-sky-blue;
+    z-index: 6;
     &::before{
       height: calc(100% - 160px);
 
