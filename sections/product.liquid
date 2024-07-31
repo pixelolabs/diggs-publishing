@@ -72,15 +72,20 @@
             {{ product.title }}
           {% endif %}
         </h1>
-        <div class="price-review-section">
-          <div class="product-single__prices" content="{{ current_variant.price | divided_by: 100.00 }}">
+        
+          <div
+            class="product-single__prices"
+            itemprop="price"
+            content="{{ current_variant.price | divided_by: 100.00 }}"
+          >
             {% if product.price < product.compare_at_price %}
-              <span>{{ product.price }}</span> <s>{{ product.compare_at_price }}</s>
+              <span>{{ product.price | money_without_trailing_zeros }}</span>
+              <s>{{ product.compare_at_price | money_without_trailing_zeros }}</s>
             {% else %}
-              <span> {{ product.price }}</span>
+              <span> {{ product.price | money_without_trailing_zeros }}</span>
             {% endif %}
           </div>
-        </div>
+       
         <!-- Product Short Description -->
         
           <div class="description">
