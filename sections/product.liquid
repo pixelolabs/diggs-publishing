@@ -6,6 +6,7 @@
 {%- assign current_variant = product.selected_or_first_available_variant -%}
 
 <div id="product" class="product">
+  <div class="inner">
   {%- unless template == 'index' or template == 'cart' or template == 'list-collections' or template == '404' -%}
     {%- assign t = template | split: '.' | first -%}
     <div class="breadcrump hide" role="navigation" aria-label="breadcrumbs">
@@ -356,6 +357,7 @@
       
     </div>
     {% comment %} Right section Ends {% endcomment %}
+  </div>
   </div>
 </div>
 
