@@ -72,14 +72,23 @@
             {{ product.title }}
           {% endif %}
         </h1>
+        <div class="price-review-section">
+          <div class="product-single__prices" content="{{ current_variant.price | divided_by: 100.00 }}">
+            {% if product.price < product.compare_at_price %}
+              <span>{{ product.price }}</span> <s>{{ product.compare_at_price }}</s>
+            {% else %}
+              <span> {{ product.price }}</span>
+            {% endif %}
+          </div>
+        </div>
         <!-- Product Short Description -->
-        {% if product.metafields.product.short_description != blank %}
+        
           <div class="description">
             <p>
-              {{ product.metafields.product.short_description }}
+              Where Hands Go is a carefully crafted book, handsomely illustrated, for parents to teach their children about the dangers of inappropriate touching.../<a>Learn More</a>
             </p>
           </div>
-        {% endif %}
+     
         <div class="flex-column price__wrapper ">
           {% comment %} Price {% endcomment %}
           <div class=" ">
