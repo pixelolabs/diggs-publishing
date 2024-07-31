@@ -173,145 +173,28 @@
       <div id="cart-message"></div>
       {% comment %} Tabs {% endcomment %}
 
-      <section class="pdp-tab-small">
-        <div class="pdp-tab-small__wrapper">
-          <div class="pdp-tab-small__wrapper__head none-980">
-            <ul class="flex">
-              {% for value in product.metafields['info-small-tabs'].title %}
-                {% assign title = product.metafields['info-small-tabs'].title[forloop.index0] %}
-
-                <li class="js__tab-small">
-                  <a
-                    class="pdp-tab-link"
-                    data-attr="{{title |  downcase | remove: ' '}}"
-                    id="tab-{{title |  downcase | remove: ' '}}"
-                  >
-                    {{- title -}}
-                  </a>
-                </li>
-              {% endfor %}
-              {% comment %} <a class="tab-link  active" id="tab-small-link-benefits" data-attr="benefits"> benefits </a> {% endcomment %}
-            </ul>
-          </div>
-          <div class="pdp-tab-small__wrapper__content none-980">
-            {% for header in product.metafields['info-small-tabs'].title %}
-              {% assign title = product.metafields['info-small-tabs'].title[forloop.index0] %}
-              {% assign titleid = product.metafields['info-small-tabs'].title[forloop.index0]
-                | downcase
-                | remove: ' '
-              %}
-              {% if titleid == 'howtouse' %}
-                <div class="pdp-tab-content content how-to-use-tab" id="{{title |  downcase | remove: ' '}}">
-                  {% for value in product.metafields.how_to_use.title -%}
-                    {% assign title = product.metafields.how_to_use.title[forloop.index0] %}
-                    {% assign description = product.metafields.how_to_use.description[forloop.index0] %}
-                    {% assign icon = product.metafields.how_to_use.icon[forloop.index0] | first %}
-                    <div class="inner-content">
-                      <div class="title">
-                        <img src="{{ icon.cloudinary_src}}" alt="{{icon.alt }}">
-                        <span class="h5">{{ title }}</span>
-                      </div>
-                      <div class="description">{{ description }}</div>
-                    </div>
-                  {%- endfor %}
-                </div>
-              {% else %}
-                <div class="pdp-tab-content content" id="{{title |  downcase | remove: ' '}}">
-                  {{ product.metafields['info-small-tabs'].description[forloop.index0] }}
-                </div>
-              {% endif %}
-            {% endfor %}
-            {% comment %}
-              {% if product.metafields.overview_tab_section.heading_black != blank %}
-                <div class="tab-content   active" id="benefits" data-attr="tab-small-link-benefits">
-                  {% comment %} <a class="accordion-link " id="tab-small-link-benefits" data-attr="benefits">benefits</a> {% endcomment %}
-                  <div class="inner-content accordion-con benefits-content-wrapper">
-                    {% comment %}
-                      <h2 class="h2">
-
-
-                          <span class="color-grey h2">{{ product.metafields.overview_tab_section.heading_gray }}</span>
-
-                      </h2>
-                    {% endcomment %}
-                    <div class="benefits-content">
-                      {% comment %} {{ product.metafields.info-small-tabs.description }} {% endcomment %}
-                      {% comment %}
-                        <ul>
-                          {% for value in product.metafields.overview_tab_section.title %}
-                            {% assign title = product.metafields.overview_tab_section.title[forloop.index0] %}
-
-                            {% assign description = product.metafields.overview_tab_section.description[forloop.index0] %}
-                            <li>
-                              <h3 class="h5">{{ title }}</h3>
-                              <div class="description">
-                                {{ description }}
-                              </div>
-                            </li>
-                          {% endfor %}
-                        </ul>
-                      {% endcomment %}
-                    </div>
-                  </div>
-                </div>
-              {% endif %}
-            {% endcomment %}
-          </div>
-          <ul class="accordian js__accordian block-980">
-            {% for value in product.metafields['info-small-tabs'].title %}
-              {% assign Title = product.metafields['info-small-tabs'].title[forloop.index0] %}
-              {% assign titleid = product.metafields['info-small-tabs'].title[forloop.index0]
-                | downcase
-                | remove: ' '
-              %}
-              {% assign listContent = product.metafields['info-small-tabs'].description[forloop.index0] %}
-              <li class="outer-list">
-                <h3 class="h5">{{ Title }}</h3>
-                {% if titleid == 'howtouse' %}
-                  <div class="content how-to-use-tab">
-                    {% for value in product.metafields.how_to_use.title -%}
-                      {% assign title = product.metafields.how_to_use.title[forloop.index0] %}
-                      {% assign description = product.metafields.how_to_use.description[forloop.index0] %}
-                      {% assign icon = product.metafields.how_to_use.icon[forloop.index0] | first %}
-                      <div class="inner-content">
-                        <div class="title">
-                          <img src="{{ icon.cloudinary_src}}" alt="{{icon.alt }}">
-                          <span class="h5">{{ title }}</span>
-                        </div>
-                        <div class="description">{{ description }}</div>
-                      </div>
-                    {% endfor %}
-                    {% comment %} {{ listContent }} {% endcomment %}
-                  </div>
-                {% else %}
-                  <div class="content">
-                    {{ listContent }}
-                  </div>
-                {% endif %}
-              </li>
-            {% endfor %}
-          </ul>
+     <div class="three-column-box">
+      <ul>
+      <li>
+      <div class="icon">
+        <img src="{{ 'icon-truck-dark.webp' | asset_url }}" /> 
         </div>
-      </section>
-
-      {% if product.metafields.accordion_section.list_title != blank %}
-        <div class="faq-section pdp-faq">
-          <ul class="accordian js__accordian">
-            {% for value in product.metafields.accordion_section.list_title %}
-              {% assign title = product.metafields.accordion_section.list_title[forloop.index0] %}
-              {% assign content = product.metafields.accordion_section.content[forloop.index0] %}
-              <li>
-                {% include 'icon-minus' %}
-                {% include 'icon-plus' %}
-                <h4 class="h5">{{ title }}</h4>
-                <div class="content full-format small">
-                  {{ content }}
-                </div>
-              </li>
-            {% endfor %}
-          </ul>
-        </div>
-      {% endif %}
+        <span>Free Shipping</span>
+      </li>
+      <li>
+        <div class="icon">
+          <img src="{{ 'icon-check-dark.webp' | asset_url }}" /> 
+          </div>
+          <span>Safe Checkout</span>
+        </li>
+        <li>
+          <div class="icon">
+            <img src="{{ 'icon-return-dark.webp' | asset_url }}" /> 
+            </div>
+            <span>Hassle Free Returns</span>
+          </li>
+      </ul>
+      </div>
       
     </div>
     {% comment %} Right section Ends {% endcomment %}
