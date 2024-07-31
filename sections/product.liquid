@@ -84,18 +84,6 @@
 
     <div class="left-section">
       {% include 'product_images' %}
-      <div class="five-column-icons-section none-980">
-        <ul class="flex">
-          {% for value in product.metafields.accentuate.ico %}
-            {% assign image = product.metafields.accentuate.ico[forloop.index0] | first %}
-            <li>
-              <div class="image-section">
-                <img src="{{ image.cloudinary_src}}" alt="{{image.alt }}">
-              </div>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
     </div>
 
     <!-- Right Product Information Section -->
