@@ -34,7 +34,7 @@
 
  
 
-  <div class="container-1220 flex-wrap">
+  <div class="container-1260 flex-wrap">
     {% comment %}
       <div class=" block-980">
         <span class="product__pre-title hide"></span>
@@ -65,7 +65,7 @@
       data-enable-history-state="true"
     >
       <div class="">
-        <h1 class=" js__pdp-title uppercase small">
+        <h1 class="h2 medium js__pdp-title uppercase">
           {% if product.metafields.product.display_name != blank %}
             {{ product.metafields.product.display_name }}
           {% else %}
@@ -79,8 +79,9 @@
             content="{{ current_variant.price | divided_by: 100.00 }}"
           >
             {% if product.price < product.compare_at_price %}
-              <span>{{ product.price | money_without_trailing_zeros }}</span>
+              
               <s>{{ product.compare_at_price | money_without_trailing_zeros }}</s>
+              <span>{{ product.price | money_without_trailing_zeros }}</span>
             {% else %}
               <span> {{ product.price | money_without_trailing_zeros }}</span>
             {% endif %}
@@ -90,7 +91,7 @@
         
           <div class="description">
             <p>
-              Where Hands Go is a carefully crafted book, handsomely illustrated, for parents to teach their children about the dangers of inappropriate touching.../<a>Learn More</a>
+              Where Hands Go is a carefully crafted book, handsomely illustrated, for parents to teach their children about the dangers of inappropriate touching...  <a>Learn More</a>
             </p>
           </div>
      
@@ -173,7 +174,7 @@
       <div id="cart-message"></div>
       {% comment %} Tabs {% endcomment %}
 
-     <div class="three-column-box">
+     <div class="pdp-three-column-box">
       <ul>
       <li>
       <div class="icon">

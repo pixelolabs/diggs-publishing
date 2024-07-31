@@ -1,25 +1,28 @@
 {% assign variantFilterType = '' %}
 <div class="product__media-outer">
   <div class="product__media active js-pdp-media">
+     {% comment %} 
     <div class="swiper-button-prev swiper-button-prev-pdp none-980">
-      {% comment %} {% include 'icon-arrow-slide' %} {% endcomment %}
+    
       {% include 'icon-arrow-slide-white' %}
     </div>
     <div class="swiper-button-next swiper-button-next-pdp none-980">
       {% include 'icon-arrow-slide' %}
     </div>
+    {% endcomment %}
     <!-- BELOW - OLD CODE NOT TO BE USED -->
     <div class="js__pdp-slider pdp-slider">
+        {% comment %} 
       <span class="product-card__tags-status">
         {% include 'product_tags' with productRelated: product %}
         {% if product.compare_at_price > product.price %}
           <div class="tag sale">sale!</div>
         {% endif %}
       </span>
-
-      <button
+ {% endcomment %}
+      <button 
         data-with-epi="true"
-        class="wishlist swym-button swym-add-to-wishlist-view-product product_{{product.id}}"
+        class="hide wishlist swym-button swym-add-to-wishlist-view-product product_{{product.id}}"
         data-swaction="addToWishlist"
         data-product-id="{{product.id | json}}"
         data-variant-id="{{product.variants[0].id}}"
