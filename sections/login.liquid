@@ -6,12 +6,12 @@
   {% endcomment %}
 
   <div id="CustomerLoginForm">
-    <div class="inner">
+    <div class="inner-login-hero">
       <div class="container-1260">
         <h1 class="text-center">{{ 'customer.login.title' | t }}</h1>
       </div>
     </div>
-    <div class="container-530">
+    <div class="container-670">
       {% form 'customer_login' %}
         <div class="note form-success" id="ResetSuccess" style="display:none;">
           {{ 'customer.recover_password.success' | t }}
@@ -75,7 +75,7 @@
     This page uses JavaScript to show/hide the recover password form
   {% endcomment %}
   <div id="RecoverPasswordForm" style="display: none;">
-    <div class="inner">
+    <div class="inner-login-hero">
       <div class="container-1260">
         <h2 class="h1 text-center">{{ 'customer.recover_password.title' | t }}</h2>
       </div>
@@ -84,7 +84,7 @@
     {% comment %}
       This form must use 'recover_customer_password'
     {% endcomment %}
-    <div class="container-530">
+    <div class="container-670">
       {% form 'recover_customer_password' %}
         {{ form.errors | default_errors }}
         {% comment %}
