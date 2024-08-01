@@ -46,7 +46,7 @@
         <div class="text-center btn-wrapper">
           <button type="submit" class="btn--primary">{{ 'customer.login.sign_in' | t }}</button>
           <div class="link--wrapper">
-            {{ 'layout.customer.create_account' | t | customer_register_link }}
+           <a class="link--primary" href="/account/register">Create account</a>
             {% if form.password_needed %}
               <span>|</span>
               <a
