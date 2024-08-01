@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin language editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "general": {
     "password_page": {
@@ -429,7 +438,7 @@
       "delete": "Ștergeți",
       "delete_confirm": "Sigur ștergeți această adresă?"
     },
-    "login_page": {
+    "login": {
       "cancel": "Anulați",
       "create_account": "Creați un cont",
       "email": "E-mail",
