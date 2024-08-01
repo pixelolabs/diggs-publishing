@@ -2570,7 +2570,7 @@ $(document).ready(function ($) {
       grabCursor: true,
       mousewheel: true,
       direction: "horizontal",
-      spaceBetween: 12
+      spaceBetween: 15
     });
   }
 
@@ -2968,7 +2968,7 @@ $(document).ready(function ($) {
       resistance: false,
       shortSwipes: true,
       loop: true,
-      spaceBetween: 12,
+      spaceBetween: 15,
       navigation: {
         nextEl: ".swiper-button-next-pdp",
         prevEl: ".swiper-button-prev-pdp"
