@@ -53,20 +53,21 @@
           >
         {% endif %}
         <div class="text-center btn-wrapper">
+          {% if form.password_needed %}
+            <span>|</span>
+            <a
+              class="link--primary-small"
+              href="#"
+              title="{{ 'customer.login.forgot_password' | t }}"
+              onclick="showRecoverPasswordForm();return false;"
+            >
+              {{- 'customer.login.forgot_password' | t -}}
+            </a>
+          {% endif %}
           <button type="submit" class="btn--primary">{{ 'customer.login.sign_in' | t }}</button>
           <div class="link--wrapper">
-           <a class="link--primary" href="/account/register">Create account</a>
-            {% if form.password_needed %}
-              <span>|</span>
-              <a
-                class="link--primary"
-                href="#"
-                title="{{ 'customer.login.forgot_password' | t }}"
-                onclick="showRecoverPasswordForm();return false;"
-              >
-                {{- 'customer.login.forgot_password' | t -}}
-              </a>
-            {% endif %}
+           <a class="link--primary-small" href="/account/register">Create account</a>
+           
           </div>
         </div>
       {% endform %}
