@@ -131,12 +131,13 @@
         -->
         <div class="text-center btn-wrapper right-link">
           <p>{{ 'customer.recover_password.subtext' | t }}</p>
-          <button type="submit" class="btn--primary">Reset</button>
           
+          <div class="link--wrapper">
+            <button type="submit" class="btn--primary">Reset</button>
             <a href="#" class="link--primary-small" onclick="hideRecoverPasswordForm();return false;">
               Cencel
             </a>
-          
+          </div>
         </div>
       {% endform %}
       </div>
