@@ -441,7 +441,7 @@
       "delete": "Usuń",
       "delete_confirm": "Czy na pewno chcesz usunąć ten adres?"
     },
-    "login_page": {
+    "login": {
       "cancel": "Anuluj",
       "create_account": "Utwórz konto",
       "email": "E-mail",

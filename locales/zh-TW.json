@@ -417,7 +417,7 @@
     },
     "log_in": "登入",
     "log_out": "登出",
-    "login_page": {
+    "login": {
       "cancel": "取消",
       "create_account": "建立帳號",
       "email": "電子郵件",

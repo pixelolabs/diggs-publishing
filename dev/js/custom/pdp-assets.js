@@ -66,7 +66,7 @@ $(document).ready(function($) {
                 grabCursor: true,
                 mousewheel: true,
                 direction: "horizontal",
-                spaceBetween: 12,
+                spaceBetween: 15,
 
 
 

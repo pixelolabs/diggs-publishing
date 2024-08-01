@@ -417,7 +417,7 @@
     },
     "log_in": "Login",
     "log_out": "Logout",
-    "login_page": {
+    "login": {
       "cancel": "Batal",
       "create_account": "Buat Akun",
       "email": "Email",

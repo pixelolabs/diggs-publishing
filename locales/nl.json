@@ -417,7 +417,7 @@
     },
     "log_in": "Inloggen",
     "log_out": "Uitloggen",
-    "login_page": {
+    "login": {
       "cancel": "Annuleren",
       "create_account": "Account aanmaken",
       "email": "E‑mail",

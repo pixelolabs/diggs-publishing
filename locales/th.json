@@ -417,7 +417,7 @@
     },
     "log_in": "เข้าสู่ระบบ",
     "log_out": "ออกจากระบบ",
-    "login_page": {
+    "login": {
       "cancel": "ยกเลิก",
       "create_account": "สร้างบัญชีผู้ใช้",
       "email": "อีเมล",

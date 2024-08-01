@@ -441,7 +441,7 @@
       "delete": "Ištrinti",
       "delete_confirm": "Ar tikrai norite ištrinti šį adresą?"
     },
-    "login_page": {
+    "login": {
       "cancel": "Atšaukti",
       "create_account": "Kurti paskyrą",
       "email": "El. pašto adresas",

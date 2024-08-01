@@ -429,7 +429,7 @@
     },
     "log_in": "Connexion",
     "log_out": "Déconnexion",
-    "login_page": {
+    "login": {
       "cancel": "Annuler",
       "create_account": "Créer un compte",
       "email": "E-mail",

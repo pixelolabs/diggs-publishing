@@ -417,7 +417,7 @@
     },
     "log_in": "Logga in",
     "log_out": "Logga ut",
-    "login_page": {
+    "login": {
       "cancel": "Avbryt",
       "create_account": "Skapa konto",
       "email": "E-postadress",

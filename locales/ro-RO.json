@@ -429,7 +429,7 @@
       "delete": "Ștergeți",
       "delete_confirm": "Sigur ștergeți această adresă?"
     },
-    "login_page": {
+    "login": {
       "cancel": "Anulați",
       "create_account": "Creați un cont",
       "email": "E-mail",

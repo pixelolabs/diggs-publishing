@@ -426,7 +426,7 @@
     },
     "log_in": "Log in",
     "log_out": "Log out",
-    "login_page": {
+    "login": {
       "cancel": "Cancel",
       "create_account": "Create account",
       "email": "Email",

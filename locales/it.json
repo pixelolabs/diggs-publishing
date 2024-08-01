@@ -429,7 +429,7 @@
     },
     "log_in": "Accedi",
     "log_out": "Esci",
-    "login_page": {
+    "login": {
       "cancel": "Annulla",
       "create_account": "Crea account",
       "email": "Indirizzo email",

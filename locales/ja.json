@@ -417,7 +417,7 @@
     },
     "log_in": "ログイン",
     "log_out": "ログアウト",
-    "login_page": {
+    "login": {
       "cancel": "キャンセル",
       "create_account": "アカウントを作成する",
       "email": "メール",

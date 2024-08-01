@@ -417,7 +417,7 @@
     },
     "log_in": "Đăng nhập",
     "log_out": "Đăng xuất",
-    "login_page": {
+    "login": {
       "cancel": "Hủy",
       "create_account": "Tạo tài khoản",
       "email": "Email",

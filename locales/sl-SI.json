@@ -441,7 +441,7 @@
       "delete": "Izbriši",
       "delete_confirm": "Ali ste prepričani, da želite izbrisati ta naslov?"
     },
-    "login_page": {
+    "login": {
       "cancel": "Prekliči",
       "create_account": "Ustvari račun",
       "email": "E-poštni naslov",

@@ -417,7 +417,7 @@
     },
     "log_in": "Kirjaudu sisään",
     "log_out": "Kirjaudu ulos",
-    "login_page": {
+    "login": {
       "cancel": "Peruuta",
       "create_account": "Luo tili",
       "email": "Sähköposti",

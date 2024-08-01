@@ -429,7 +429,7 @@
       "delete": "Izbriši",
       "delete_confirm": "Jeste li sigurni da želite izbrisati ovu adresu?"
     },
-    "login_page": {
+    "login": {
       "cancel": "Odustani",
       "create_account": "Izradi račun",
       "email": "Adresa e-pošte",

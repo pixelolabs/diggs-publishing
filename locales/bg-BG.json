@@ -411,7 +411,7 @@
     },
     "log_in": "Влизане",
     "log_out": "Излизане",
-    "login_page": {
+    "login": {
       "cancel": "Отказ",
       "email": "Имейл",
       "forgot_password": "Забравена парола?",

@@ -3,6 +3,17 @@
 .full-width-content-section-v2{
    position: relative;
    text-align: center;
+
+   &::after{
+    background: url("wave-shape.svg") repeat left / 1452px;
+    height: 101px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -41px;
+    z-index: 2;
+    content: '';
+  }
    
    .thumb-images{
     position: relative;
@@ -12,6 +23,9 @@
     margin-bottom: 34px;
     img{
         @include img-object-contain;
+    }
+    @include MQ(MQ-480) {
+        margin-bottom: 20px;
     }
    }
 .inner{
@@ -26,10 +40,7 @@
         top: -90px;
         background: url("icon-kite-2.webp") no-repeat center / 100%;
         @include MQ(MQ-768) {
-            width: 49px;
-            height: 64px;
-            left: 18px;
-            top: -63px;
+            display: none;
         }
     }
     &::after{
@@ -42,8 +53,12 @@
         right: 150px;
         background: url("icon-cloud.webp") no-repeat center / 100%;
         @include MQ(MQ-768) {
-            display: none;
+            width: 39px;
+            height: 30px;
+            right: auto;
+            left: 30px;
         }
+       
     }
 }
 
@@ -54,19 +69,19 @@
     position: absolute;
     left: 0px;
     z-index: 0;
-    bottom: 0px;
+    bottom: -60px;
     background: url("thread-multi-white.webp") no-repeat center / 100%;
     @include MQ(MQ-768) {
         display: none;
     }
 }
     .container-1440{
-        padding: 293px 0 174px;
+        padding: 168px 0 174px;
         @include MQ(MQ-1200) {
             padding-bottom: 174px;
         }
         @include MQ(MQ-768) {
-            padding: 110px 0 150px;
+            padding: 110px 0 100px;
         }
         position: relative;
         &::before{
@@ -78,8 +93,16 @@
             z-index: 1;
             top: 210px;
             background: url("icon-cloud.webp") no-repeat center / 100%;
+            @include MQ(MQ-1200) {
+                left: 40px;
+                top: 180px;
+            }
             @include MQ(MQ-768) {
-                display: none;
+                left:101px;
+                bottom: 0px;
+                top: auto;
+                width: 43px;
+                height: 33px;
             }
         }
         &::after{
@@ -89,12 +112,12 @@
             position: absolute;
             right: 70px;
             z-index: 1;
-            top: 60px;
+            top: 135px;
             background: url("icon-planet-purple.svg") no-repeat center / 100%;
             @include MQ(MQ-768) {
                 width: 57px;
                 height: 40px;
-                top: 40px;
+                top: 70px;
             }
         }
 
@@ -128,10 +151,15 @@
     h2{
         margin-bottom: 20px;
         position: relative;
-       
+        @include MQ(MQ-480) {
+            margin-bottom: 10px;
+        }
     }
     p{
         margin-bottom: 25px;
+        @include MQ(MQ-480) {
+            margin-bottom: 17px;
+        }
     }
     .btn--primary{
         margin: 0 auto;

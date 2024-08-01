@@ -417,7 +417,7 @@
     },
     "log_in": "Log ind",
     "log_out": "Log af",
-    "login_page": {
+    "login": {
       "cancel": "Annuller",
       "create_account": "Opret konto",
       "email": "Mailadresse",

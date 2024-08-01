@@ -417,7 +417,7 @@
     },
     "log_in": "Oturum aç",
     "log_out": "Oturumu kapat",
-    "login_page": {
+    "login": {
       "cancel": "İptal Et",
       "create_account": "Hesap oluştur",
       "email": "E-posta",

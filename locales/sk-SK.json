@@ -441,7 +441,7 @@
       "delete": "Odstrániť",
       "delete_confirm": "Naozaj chcete túto adresu odstrániť?"
     },
-    "login_page": {
+    "login": {
       "cancel": "Zrušiť",
       "create_account": "Vytvoriť konto",
       "email": "E-mail",

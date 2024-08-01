@@ -417,7 +417,7 @@
     },
     "log_in": "Bejelentkezés",
     "log_out": "Kijelentkezés",
-    "login_page": {
+    "login": {
       "cancel": "Mégse",
       "create_account": "Fiók létrehozása",
       "email": "E-mail-cím",

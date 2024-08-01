@@ -6,21 +6,29 @@
   {% endcomment %}
 
   <div id="CustomerLoginForm">
-    <div class="inner">
-      <div class="container-1340">
+    <div class="inner-login-hero">
+      <div class="container-1260">
+        <div class="content">
         <h1 class="text-center">{{ 'customer.login.title' | t }}</h1>
       </div>
+      
+      </div>
+      <div class="image-section">
+        <img src="{{ 'dummy-collection.webp' | asset_url }}" /> 
+      </div>
     </div>
-    <div class="container-530">
+    <div class="form-outer">
+    <div class="box">
+      
       {% form 'customer_login' %}
         <div class="note form-success" id="ResetSuccess" style="display:none;">
           {{ 'customer.recover_password.success' | t }}
         </div>
 
         {{ form.errors | default_errors }}
-
+      <label>{{ 'customer.login.email' | t }}</label>
         <input
-          placeholder="{{ 'customer.login.email' | t }}"
+         
           type="email"
           name="customer[email]"
           id="CustomerEmail"
@@ -32,8 +40,9 @@
           autofocus
         >
         {% if form.password_needed %}
+          <label>{{ 'customer.login.password' | t }}</label>
           <input
-            placeholder="{{ 'customer.login.password' | t }}"
+            
             type="password"
             value=""
             name="customer[password]"
@@ -44,20 +53,20 @@
           >
         {% endif %}
         <div class="text-center btn-wrapper">
+          {% if form.password_needed %}
+           
+            <a
+              class="link--primary-small"
+              href="#"
+              title="{{ 'customer.login.forgot_password' | t }}"
+              onclick="showRecoverPasswordForm();return false;"
+            >
+              {{- 'customer.login.forgot_password' | t -}}
+            </a>
+          {% endif %}
           <button type="submit" class="btn--primary">{{ 'customer.login.sign_in' | t }}</button>
           <div class="link--wrapper">
-            {{ 'layout.customer.create_account' | t | customer_register_link }}
-            {% if form.password_needed %}
-              <span>|</span>
-              <a
-                class="link--primary"
-                href="#"
-                title="{{ 'customer.login.forgot_password' | t }}"
-                onclick="showRecoverPasswordForm();return false;"
-              >
-                {{- 'customer.login.forgot_password' | t -}}
-              </a>
-            {% endif %}
+            <p>Don't have an account?  <a class="link--primary-small" href="/account/register">Create account</a></p>
           </div>
         </div>
       {% endform %}
@@ -70,21 +79,32 @@
         </div>
       {% endif %}
     </div>
+    </div>
   </div>
   {% comment %}
     This page uses JavaScript to show/hide the recover password form
   {% endcomment %}
   <div id="RecoverPasswordForm" style="display: none;">
-    <div class="inner">
-      <div class="container-1340">
-        <h2 class="h1 text-center">{{ 'customer.recover_password.title' | t }}</h2>
+    
+
+    <div class="inner-login-hero">
+      <div class="container-1260">
+        <div class="content">
+          <h2 class="h1 text-center">{{ 'customer.recover_password.title' | t }}</h2>
+      </div>
+      
+      </div>
+      <div class="image-section">
+        <img src="{{ 'dummy-collection.webp' | asset_url }}" /> 
       </div>
     </div>
+    <div class="form-outer">
+    <div class="box">
 
     {% comment %}
       This form must use 'recover_customer_password'
     {% endcomment %}
-    <div class="container-530">
+  
       {% form 'recover_customer_password' %}
         {{ form.errors | default_errors }}
         {% comment %}
@@ -109,16 +129,18 @@
         <!--
           <a href="#" onclick="hideRecoverPasswordForm();return false;">{{ 'customer.recover_password.cancel' | t }}</a>
         -->
-        <div class="text-center btn-wrapper">
+        <div class="text-center btn-wrapper right-link">
           <p>{{ 'customer.recover_password.subtext' | t }}</p>
-          <button type="submit" class="btn--primary">{{ 'customer.recover_password.submit' | t }}</button>
+          
           <div class="link--wrapper">
-            <a href="#" class="link--primary" onclick="hideRecoverPasswordForm();return false;">
-              {{- 'customer.recover_password.cancel' | t -}}
+            <button type="submit" class="btn--primary">Reset</button>
+            <a href="#" class="link--primary-small" onclick="hideRecoverPasswordForm();return false;">
+              Cencel
             </a>
           </div>
         </div>
       {% endform %}
+      </div>
     </div>
   </div>
   {% comment %}

@@ -417,7 +417,7 @@
     },
     "log_in": "Σύνδεση",
     "log_out": "Αποσύνδεση",
-    "login_page": {
+    "login": {
       "cancel": "Ακύρωση",
       "create_account": "Δημιουργία λογαριασμού",
       "email": "Email",

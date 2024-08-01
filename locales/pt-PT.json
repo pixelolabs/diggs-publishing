@@ -429,7 +429,7 @@
     },
     "log_in": "Iniciar sessão",
     "log_out": "Terminar sessão",
-    "login_page": {
+    "login": {
       "cancel": "Cancelar",
       "create_account": "Criar conta",
       "email": "E-mail",
