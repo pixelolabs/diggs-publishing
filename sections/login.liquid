@@ -40,8 +40,9 @@
           autofocus
         >
         {% if form.password_needed %}
+          <label>{{ 'customer.login.password' | t }}</label>
           <input
-            placeholder="{{ 'customer.login.password' | t }}"
+            
             type="password"
             value=""
             name="customer[password]"
