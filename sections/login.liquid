@@ -26,9 +26,9 @@
         </div>
 
         {{ form.errors | default_errors }}
-
+      <label>{{ 'customer.login.email' | t }}</label>
         <input
-          placeholder="{{ 'customer.login.email' | t }}"
+         
           type="email"
           name="customer[email]"
           id="CustomerEmail"
