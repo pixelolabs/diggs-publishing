@@ -18,7 +18,7 @@
     </div>
     <div class="form-outer">
       <div class="box">
-        <div class="cloud-bg"></div>
+        {% comment %} <div class="cloud-bg"></div> {% endcomment %}
         {% form 'customer_login' %}
           <div class="note form-success" id="ResetSuccess" style="display:none;">
             {{ 'customer.recover_password.success' | t }}
