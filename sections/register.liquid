@@ -16,7 +16,7 @@
         <input type="hidden" name="return_to" value="/account">
 
         {% include 'form-status', form: form, form_id: formId %}
-
+        <label>{{ 'customer.register.first_name' | t }}</label>
         <input
           placeholder="{{ 'customer.register.first_name' | t }}"
           type="text"
@@ -27,7 +27,7 @@
           {% endif %}
           autocomplete="given-name"
         >
-
+        <label>{{ 'customer.register.last_name' | t }}</label>
         <input
           placeholder="{{ 'customer.register.last_name' | t }}"
           type="text"
@@ -38,7 +38,7 @@
           {% endif %}
           autocomplete="family-name"
         >
-
+        <label>{{ 'customer.register.email' | t }}</label>
         <input
           placeholder="{{ 'customer.register.email' | t }}"
           type="email"
@@ -66,7 +66,7 @@
             >
           </span>
         {%- endif -%}
-
+        <label>{{ 'customer.register.password' | t }}</label>
         <input
           placeholder="{{ 'customer.register.password' | t }}"
           type="password"
@@ -86,7 +86,7 @@
             >
           </span>
         {%- endif -%}
-
+        <label>Confirm Password</label>
         <input
           placeholder="Confirm Password*"
           type="password"
