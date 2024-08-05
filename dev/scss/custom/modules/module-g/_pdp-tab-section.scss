@@ -1,7 +1,6 @@
 .product-tab-section {
- 
   padding: 24px 0 75px;
-background: $color-off-white-light;
+  background: $color-off-white-light;
   position: relative;
   &::before {
     background: url("graphic-wave-inner-banner.svg") repeat left / 2065px;
@@ -13,18 +12,18 @@ background: $color-off-white-light;
     content: "";
     z-index: 2;
   }
-   
-  &::after{
+
+  &::after {
     background: url("thread-orange-4.svg") no-repeat center / 100%;
     height: 668px;
     width: 194px;
     position: absolute;
     right: 0;
     top: -350px;
-    content: '';
+    content: "";
     z-index: 5;
   }
-  .container-1260{
+  .container-1260 {
     position: relative;
     &::after {
       width: 42px;
@@ -40,80 +39,111 @@ background: $color-off-white-light;
       }
     }
   }
-  
 
-    .pdp-tab-head {
-      text-transform: uppercase;
-      border-bottom: solid 1px $color-black;
-      display: flex;
-      li {
-        
-        border: solid 1px $color-black;
-        border-left: none;
-        border-bottom: none;
+  .pdp-tab-head {
+    text-transform: uppercase;
+    border-bottom: solid 1px $color-black;
+    display: flex;
+    li {
+      border: solid 1px $color-black;
+      border-left: none;
+      border-bottom: none;
 
-
-        a {
-          min-width: 120px;
-          text-align: center;
-          padding: 20px 25px;
-          font-family: var(--font-family-primary);
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.44;
-  letter-spacing: normal;
-  color: $color-black2;
-          &.active,
-          &:hover {
-
-            background: $color-light-yellow;
-            
-              color: $color-original-black;
-            
-          }
-        }
-        &:first-child {
-          a {
-          border-left: solid 1px $color-black;
-          }
-        }
-      }
-    }
-
-    &__content {
-      padding-top: 25px;
-
-      li {
-        padding-bottom: 10px;
-        // font-size: $font-size-small;
-        line-height: 1.57;
-
+      a {
+        min-width: 120px;
+        text-align: center;
+        padding: 20px 25px;
+        font-family: var(--font-family-primary);
         font-size: 16px;
-        font-weight: 500;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.5;
-        letter-spacing: 0.02px;
-        text-align: left;
+        font-weight: 600;
+        line-height: 1.44;
+        letter-spacing: normal;
+        color: $color-black2;
+        &.active,
+        &:hover {
+          background: $color-light-yellow;
 
-        &:last-child {
-          padding-bottom: 0;
+          color: $color-original-black;
+        }
+      }
+      &:first-child {
+        a {
+          border-left: solid 1px $color-black;
         }
       }
     }
-    @include MQ(MQ-980) {
-      // padding: 0 20px;
-      border: 2px solid $color-border;
-      border-radius: 20px;
+  }
+
+  &__content {
+    padding-top: 25px;
+
+    li {
+      padding-bottom: 10px;
+      // font-size: $font-size-small;
+      line-height: 1.57;
+
+      font-size: 16px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: 0.02px;
+      text-align: left;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
     }
-   
-    .main-tab-content{
-      padding-top: 33px;
-.accordion-link{
-  display: none;
-}
+  }
+  @include MQ(MQ-980) {
+    // padding: 0 20px;
+    // border: 2px solid $color-border;
+    // border-radius: 20px;
+  }
+
+  .main-tab-content {
+    padding-top: 33px;
+    .tab-content {
+      @include MQ(MQ-980) {
+        display: block !important;
+        border: 1px solid $color-black;
+        margin-bottom: 20px;
+        .accordion-con {
+          display: none;
+          padding: 19px 19px 19px;
+          border-top: 1px solid $color-black;
+        }
+      }
     }
- 
+    .accordion-link {
+      display: none;
+      @include MQ(MQ-980) {
+        display: block !important;
+        padding: 19px 19px 19px;
+        // background: url(dropdown-arrow.svg) no-repeat right 20px center / 13px
+        //   #fff;
+
+        background: $color-white;
+        position: relative;
+        &:before {
+          position: absolute;
+          content: "";
+          width: 13px;
+          height: 7px;
+          z-index: 2222;
+          right: 20px;
+          top: calc(50% - 4px);
+          background: url(dropdown-arrow.svg) no-repeat center center / 100%;
+        }
+        &.active {
+          background: $color-light-yellow;
+          &:before {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
 }
 
 .pdp-tab-section {

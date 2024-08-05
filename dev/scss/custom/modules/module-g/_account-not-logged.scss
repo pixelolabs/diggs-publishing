@@ -1,8 +1,16 @@
 .not-logged-tempate {
-  .inner-login-hero{
+  .inner-login-hero {
     height: 544px;
-   
-    background-image: linear-gradient(111deg, #535fbb 2%, #7886ed 51%, #535fbb 99%);
+
+    background-image: linear-gradient(
+      111deg,
+      #535fbb 2%,
+      #7886ed 51%,
+      #535fbb 99%
+    );
+    @include MQ(MQ-768) {
+      height: 374px;
+    }
     .image-section {
       width: 246px;
       height: 418px;
@@ -10,16 +18,14 @@
       right: 70px;
       position: absolute;
       z-index: 2;
-     
-   
+
       @include MQ(MQ-768) {
         display: none;
       }
-     
+
       img {
         @include img-object-contain;
       }
-    
     }
     &::before {
       width: 367.6px;
@@ -49,20 +55,17 @@
       }
     }
     position: relative;
-    .content{
-    
-     
+    .content {
       &::before {
         top: auto;
-          bottom:40px;
-          left: 60px;
-         content: '';
-         z-index: 3;
-         position: absolute;
-          width: 31px;
-          height: 42px;
-          background: url(star-large-white.webp) no-repeat center/contain;
-       
+        bottom: 40px;
+        left: 60px;
+        content: "";
+        z-index: 3;
+        position: absolute;
+        width: 31px;
+        height: 42px;
+        background: url(star-large-white.webp) no-repeat center/contain;
       }
     }
     .container-1260 {
@@ -75,61 +78,59 @@
         content: "";
         position: absolute;
         right: 310px;
-        @include MQ(MQ-980) {
-         
-        }
-  
         z-index: 1;
         top: 93px;
-  
         background: url("star-large.webp") no-repeat center / 100%;
-        @include MQ(MQ-480) {
-          top: auto;
-          bottom: 30px;
+        @include MQ(MQ-768) {
           right: -80px;
-          width: 24px;
-          height: 29px;
+          width: 23px;
+          height: 28px;
+          top: 82px;
+          transform: rotate(10deg);
         }
+      }
+      @include MQ(MQ-768) {
+        padding: 139px 30px;
       }
 
       &::before {
-        width:60px;
+        width: 60px;
         height: 46px;
         content: "";
         position: absolute;
         top: 135px;
         z-index: 1;
-        left:130px;
+        left: 130px;
         background: url("icon-cloud.webp") no-repeat center / contain;
-        @include MQ(MQ-480) {
-         
+        @include MQ(MQ-768) {
+          display: none;
         }
       }
-      
     }
   }
-  .form-outer{
+  .form-outer {
     position: relative;
-    background: $color-off-white;
+    // background: $color-off-white;
     padding: 0 20px;
-  
+
     display: flex;
     justify-content: center;
-    @include MQ(MQ-480) {
-        padding: 0 12px;
+    @include MQ(MQ-768) {
+      padding: 0 30px;
     }
-    &::before{
-        background: url("yellow-wave.webp") repeat left / 1327px;
-        height: 156.5px;
-        width: 100%;
-        position: absolute;
-        left: 0;
-        top: -100px;
-        content: "";
-        z-index: 2;
-       
+    &::before {
+      background: url("yellow-wave.webp") repeat left / 1327px;
+      height: 156.5px;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: -100px;
+      content: "";
+      z-index: 2;
+      filter: brightness(0) saturate(100%) invert(96%) sepia(76%) saturate(167%)
+        hue-rotate(19deg) brightness(109%) contrast(102%);
     }
-    .box{
+    .box {
       position: relative;
 
       max-width: 553px;
@@ -139,38 +140,54 @@
       z-index: 5;
       position: relative;
       border: solid 3px $color-yellow;
-      background:  url("cloud.webp") no-repeat center bottom / 100% $color-sky-blue;
-
-      &::after{
+      background: url("cloud.webp") no-repeat center bottom / 100%
+        $color-sky-blue;
+      //       .cloud-bg {
+      //         position: absolute;
+      //  width: 100%;
+      //  left: 0;
+      //  height: 100%;
+      //  background: url(account-form-background-cloud.png) no-repeat center bottom / 100%;
+      //  bottom: 0;
+      //  z-index: -1;
+      //    }
+      @include MQ(MQ-768) {
+        padding: 30px 25px 36px;
+        margin-top: -168px;
+      }
+      &::after {
         width: 82px;
         height: 85px;
-        content: '';
+        content: "";
         position: absolute;
         right: -8px;
         z-index: 1;
         bottom: -16px;
         background: url("rocket.webp") no-repeat center / 100%;
-    }
-    &::before{
-      width: 97.8px;
-      height: 67.3px;
-      content: '';
-      position: absolute;
-      left: -43px;
-      top: -35px;
-    
-      z-index: 1;
-      
-      background: url("planet.webp") no-repeat center / 100%;
-      @include MQ(MQ-768) {
-          width: 60px;
+        @include MQ(MQ-768) {
+          width: 50px;
+          height: 50px;
+        }
+      }
+      &::before {
+        width: 97.8px;
+        height: 67.3px;
+        content: "";
+        position: absolute;
+        left: -43px;
+        top: -35px;
+
+        z-index: 1;
+
+        background: url("planet.webp") no-repeat center / 100%;
+        @include MQ(MQ-768) {
+          width: 58px;
           height: 40px;
-          left: 36px;
+          left: -14px;
           z-index: 1;
           top: -20px;
+        }
       }
-  }
-      
     }
   }
   .login-header {
@@ -184,10 +201,19 @@
       }
     }
   }
-  
-  .h1,h1 {
-   text-align: center;
-   color: $color-white;
+
+  .h1,
+  h1 {
+    text-align: center;
+    color: $color-white;
+    z-index: 3;
+    position: relative;
+    @include MQ(MQ-768) {
+      font-size: 40px;
+    }
+    @include MQ(MQ-480) {
+      font-size: 30px;
+    }
   }
   .link--wrapper {
     margin-top: 20px;
@@ -222,17 +248,15 @@
     margin-top: 0px;
     display: flex;
     flex-direction: column;
-   text-align: left !important;
+    text-align: left !important;
 
-   align-items: flex-start;
-   &.right-link{
-  
-    .link--primary-small{
-      margin-bottom: 0 !important;
-      margin-left: 23px !important;
-
+    align-items: flex-start;
+    &.right-link {
+      .link--primary-small {
+        margin-bottom: 0 !important;
+        margin-left: 23px !important;
+      }
     }
-   }
     .btn--primary {
       text-align: center;
     }
@@ -256,14 +280,12 @@
       font-stretch: normal;
       font-style: normal;
       line-height: normal;
-      letter-spacing:normal;
+      letter-spacing: normal;
       text-align: center;
       color: $color-black;
       text-decoration: underline !important;
       position: relative;
       text-transform: capitalize;
-    
-      
     }
     .wsaio_form {
       margin-left: 15px;
@@ -275,6 +297,10 @@
     }
     .already-login-section {
       margin-bottom: 0px;
+      a {
+        text-decoration: underline !important;
+        font-size: 13px;
+      }
     }
   }
   #RecoverPasswordForm {
