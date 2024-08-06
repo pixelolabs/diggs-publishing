@@ -39,11 +39,25 @@
             "buttonLink": "",
             "content_alignment": "right"
           }
+        },
+        "slide_Nrmfqw": {
+          "type": "slide",
+          "settings": {
+            "video": "https:\/\/www.youtube.com\/watch?v=9xwazD5SyVg",
+            "videobanner": true,
+            "pretitle": "",
+            "title": "this is the vedio banner",
+            "description": "",
+            "buttonText": "",
+            "buttonLink": "",
+            "content_alignment": "left"
+          }
         }
       },
       "block_order": [
         "d96d2ebe-b86c-4725-886e-21c6b9472a39",
-        "slide_VH9idD"
+        "slide_VH9idD",
+        "slide_Nrmfqw"
       ],
       "settings": {
         "color_scheme": ""
