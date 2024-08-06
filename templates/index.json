@@ -244,7 +244,11 @@
         "logo_jCikGR"
       ],
       "settings": {
-        "title": "Charities Krystaelynne Works With and Supports"
+        "title": "Charities Krystaelynne Works With and Supports",
+        "paddingtop": 74,
+        "paddingtopmobile": 0,
+        "paddingbottom": 78,
+        "paddingbottomMobile": 0
       }
     },
     "full_width_content_section_4eMcgt": {
