@@ -152,7 +152,7 @@
       "type": "review-slider-with-image",
       "settings": {
         "color_scheme": "scheme-4",
-        "pretitle": "",
+        "pretitle": "Latest Reviews",
         "title": "What customers say about us"
       }
     },
