@@ -14,9 +14,12 @@
         {% endif %}
       </div>
     {% endif %}
-    <div class="right-image">
-      <img src="{{ 'baby-2.webp' | asset_url }}">
-    </div>
+    {% if section.settings.image2 != blank %}
+      <div class="right-image">
+        {% comment %} <img src="{{ 'baby-2.webp' | asset_url }}"> {% endcomment %}
+        {{ section.settings.image2 | image_url: width: 600 | image_tag: loading: 'lazy', widths: '600x600' }}
+      </div>
+    {% endif %}
   </div>
 </div>
 {% schema %}
