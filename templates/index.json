@@ -16,8 +16,6 @@
           "type": "slide",
           "settings": {
             "backgroundImage": "shopify:\/\/shop_images\/hero-baby.webp",
-            "video": "",
-            "videobanner": false,
             "pretitle": "Welcome to Diggs Publishing",
             "title": "Diverse Children’s Books collections",
             "description": "<p>In a word filled with countless stories, Diggs Publishing celebrates the unique tales that often go untold.<\/p>",
@@ -31,8 +29,6 @@
           "disabled": true,
           "settings": {
             "backgroundImage": "shopify:\/\/shop_images\/body_safety_wise_1.webp",
-            "video": "",
-            "videobanner": false,
             "pretitle": "hello",
             "title": "this is the banner",
             "description": "",
@@ -45,8 +41,6 @@
           "type": "slide",
           "disabled": true,
           "settings": {
-            "video": "https:\/\/sample-videos.com\/video321\/mp4\/720\/big_buck_bunny_720p_10mb.mp4",
-            "videobanner": true,
             "pretitle": "",
             "title": "this is the vedio banner",
             "description": "",
@@ -255,6 +249,7 @@
       "type": "full-width-content-section",
       "settings": {
         "title": "Every writer starts as a storyteller. Explore the journey of author Krystaelynne Sanders Diggs",
+        "image": "shopify:\/\/shop_images\/kids-images.webp",
         "buttonText": "Read More",
         "buttonLink": "#"
       }
