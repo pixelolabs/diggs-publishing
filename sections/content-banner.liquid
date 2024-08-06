@@ -3,10 +3,12 @@
     <div class="left-image">
       <img src="{{ 'baby-1.webp' | asset_url }}">
     </div>
-    <div class="content">
-      <h2 class="medium">95% of child sexual abuse is preventable through education.</h2>
-      <p class="medium">Child molestation reseach and prevention institute</p>
-    </div>
+    {% if section.settings.title != blank %}
+      <div class="content">
+        <h2 class="medium">95% of child sexual abuse is preventable through education.</h2>
+        <p class="medium">Child molestation reseach and prevention institute</p>
+      </div>
+    {% endif %}
     <div class="right-image">
       <img src="{{ 'baby-2.webp' | asset_url }}">
     </div>
