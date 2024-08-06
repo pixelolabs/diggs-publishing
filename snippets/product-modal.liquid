@@ -136,65 +136,7 @@
           {% endunless %}
         {% endif %}
 
-        <section class="pdp-tab-small">
-          <div class="pdp-tab-small__wrapper">
-            <div class="pdp-tab-small__wrapper__head-outer">
-              <div class="pdp-tab-small__wrapper__head">
-                <ul class="pdp-tab-link-{{ productData.id }}">
-                  {% for value in productData.metafields['info-small-tabs'].title %}
-                    {% assign title = productData.metafields['info-small-tabs'].title[forloop.index0] %}
-
-                    <li class="js__tab-small">
-                      <a
-                        class="pdp-tab-link"
-                        data-attr="{{title |  downcase | remove: ' '}}-{{ productData.id }}"
-                        id="tab-{{title |  downcase | remove: ' '}}-{{ productData.id }}"
-                      >
-                        {{- title -}}
-                      </a>
-                    </li>
-                  {% endfor %}
-                  {% comment %}
-                    <a class="tab-link  active" id="tab-small-link-benefits" data-attr="benefits"> benefits
-                    </a>
-                  {% endcomment %}
-                </ul>
-              </div>
-            </div>
-            <div class="pdp-tab-small__wrapper__content ">
-              {% for header in productData.metafields['info-small-tabs'].title %}
-                {% assign title = productData.metafields['info-small-tabs'].title[forloop.index0] %}
-                {% assign titleid = productData.metafields['info-small-tabs'].title[forloop.index0]
-                  | downcase
-                  | remove: ' '
-                %}
-                {% if titleid == 'howtouse' %}
-                  <div
-                    class="pdp-tab-content content how-to-use-tab"
-                    id="{{title |  downcase | remove: ' '}}-{{ productData.id }}"
-                  >
-                    {% for value in productData.metafields.how_to_use.title -%}
-                      {% assign title = productData.metafields.how_to_use.title[forloop.index0] %}
-                      {% assign description = productData.metafields.how_to_use.description[forloop.index0] %}
-                      {% assign icon = productData.metafields.how_to_use.icon[forloop.index0] | first %}
-                      <div class="inner-content">
-                        <div class="title">
-                          <img src="{{ icon.cloudinary_src}}" alt="{{icon.alt }}">
-                          <span class="h5">{{ title }}</span>
-                        </div>
-                        <div class="description">{{ description }}</div>
-                      </div>
-                    {%- endfor %}
-                  </div>
-                {% else %}
-                  <div class="pdp-tab-content content" id="{{title |  downcase | remove: ' '}}-{{ productData.id }}">
-                    {{ productData.metafields['info-small-tabs'].description[forloop.index0] }}
-                  </div>
-                {% endif %}
-              {% endfor %}
-            </div>
-          </div>
-        </section>
+     
         
         {% if productData.available %}
           <div class="pdp__actions flex">
@@ -231,6 +173,31 @@
           
           </div>
         {% endif %}
+
+        <div class="pdp-three-column-box">
+          <ul>
+          <li>
+          <div class="icon">
+            <img src="{{ 'icon-truck-dark.webp' | asset_url }}" /> 
+            </div>
+            <span>Free Shipping</span>
+          </li>
+          <li>
+            <div class="icon">
+              <img src="{{ 'icon-check-dark.webp' | asset_url }}" /> 
+              </div>
+              <span>Safe Checkout</span>
+            </li>
+            <li>
+              <div class="icon">
+                <img src="{{ 'icon-return-dark.webp' | asset_url }}" /> 
+                </div>
+                <span>Hassle Free Returns</span>
+              </li>
+          </ul>
+          </div>
+          
+        </div>
         {% comment %} Product information ends {% endcomment %}
       </div>
       {% comment %} Actions {% endcomment %}
