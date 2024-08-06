@@ -54,12 +54,12 @@
           itemprop="price"
           content="{{ current_variant.price | divided_by: 100.00 }}"
         >
-          {% if product.price < product.compare_at_price %}
+          {% if productData.price < productData.compare_at_price %}
             
-            <s>{{ product.compare_at_price | money_without_trailing_zeros }}</s>
-            <span>{{ product.price | money_without_trailing_zeros }}</span>
+            <s>{{ productData.compare_at_price | money_without_trailing_zeros }}</s>
+            <span>{{ productData.price | money_without_trailing_zeros }}</span>
           {% else %}
-            <span> {{ product.price | money_without_trailing_zeros }}</span>
+            <span> {{ productData.price | money_without_trailing_zeros }}</span>
           {% endif %}
         </div>
         <div class="description">
