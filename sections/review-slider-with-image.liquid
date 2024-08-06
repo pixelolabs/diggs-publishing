@@ -11,65 +11,64 @@
               <h2>{{ section.settings.title }}</h2>
             {% endif %}
           </div>
-          {% if block.settings.description != blank or block.settings.name != blank %}
-            <div class="slider-outer">
-              <div class="slider {% if section.blocks.size > 0 %}js__review-slider{% endif %}">
-                <div class="swiper-wrapper">
-                  {% for block in section.blocks %}
-                    <div class="slide swiper-slide">
-                      <div class="box">
-                        <div class="icon">
-                          <img src="{{ 'icon-rating.webp' | asset_url }}">
-                        </div>
-                        {% if block.settings.name != blank %}
-                          <h3>{{ block.settings.name }}</h3>
-                        {% endif %}
-                        {% if block.settings.description != blank %}
-                          <div class="small description">
-                            {{ block.settings.description }}
-                          </div>
-                        {% endif %}
+
+          <div class="slider-outer">
+            <div class="slider {% if section.blocks.size > 0 %}js__review-slider{% endif %}">
+              <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+                  <div class="slide swiper-slide">
+                    <div class="box">
+                      <div class="icon">
+                        <img src="{{ 'icon-rating.webp' | asset_url }}">
                       </div>
-                    </div>
-                  {% endfor %}
-                  {% comment %}
-                    <div class="slide swiper-slide">
-                      <div class="box">
-                        <div class="icon">
-                          <img src="{{ 'icon-rating.webp' | asset_url }}">
+                      {% if block.settings.name != blank %}
+                        <h3>{{ block.settings.name }}</h3>
+                      {% endif %}
+                      {% if block.settings.description != blank %}
+                        <div class="small description">
+                          {{ block.settings.description }}
                         </div>
-                        <h3>Beulah Henry</h3>
-                        <p class="small">
-                          You won't be disappointed in buying this book. It is perfect for parents to teach our young ones
-                          what is appropriate and not appropriate touching. With this time in age, this book is a great
-                          introduction to that subject. Well worth the price! You will love this book.
-                        </p>
-                      </div>
+                      {% endif %}
                     </div>
-                    <div class="slide swiper-slide">
-                      <div class="box">
-                        <div class="icon">
-                          <img src="{{ 'icon-rating.webp' | asset_url }}">
-                        </div>
-                        <h3>Beulah Henry</h3>
-                        <p class="small">
-                          You won't be disappointed in buying this book. It is perfect for parents to teach our young ones
-                          what is appropriate and not appropriate touching. With this time in age, this book is a great
-                          introduction to that subject. Well worth the price! You will love this book.
-                        </p>
+                  </div>
+                {% endfor %}
+                {% comment %}
+                  <div class="slide swiper-slide">
+                    <div class="box">
+                      <div class="icon">
+                        <img src="{{ 'icon-rating.webp' | asset_url }}">
                       </div>
+                      <h3>Beulah Henry</h3>
+                      <p class="small">
+                        You won't be disappointed in buying this book. It is perfect for parents to teach our young ones
+                        what is appropriate and not appropriate touching. With this time in age, this book is a great
+                        introduction to that subject. Well worth the price! You will love this book.
+                      </p>
                     </div>
-                  {% endcomment %}
-                </div>
-              </div>
-              <div class="swiper-button-prev-review-slider">
-                {% include 'icon-arrow-slide-black-small' %}
-              </div>
-              <div class="swiper-button-next-review-slider">
-                {% include 'icon-arrow-slide-black-small' %}
+                  </div>
+                  <div class="slide swiper-slide">
+                    <div class="box">
+                      <div class="icon">
+                        <img src="{{ 'icon-rating.webp' | asset_url }}">
+                      </div>
+                      <h3>Beulah Henry</h3>
+                      <p class="small">
+                        You won't be disappointed in buying this book. It is perfect for parents to teach our young ones
+                        what is appropriate and not appropriate touching. With this time in age, this book is a great
+                        introduction to that subject. Well worth the price! You will love this book.
+                      </p>
+                    </div>
+                  </div>
+                {% endcomment %}
               </div>
             </div>
-          {% endif %}
+            <div class="swiper-button-prev-review-slider">
+              {% include 'icon-arrow-slide-black-small' %}
+            </div>
+            <div class="swiper-button-next-review-slider">
+              {% include 'icon-arrow-slide-black-small' %}
+            </div>
+          </div>
         </div>
       </div>
       {% if section.settings.image != blank %}
