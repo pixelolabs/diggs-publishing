@@ -18,30 +18,32 @@
                 class="full-link"
               ></a>
             {% endif %}
-            {%- if block.settings.videobanner -%}
-              <div class="video-section">
-                <div class="video-wrapper">
-                  {% if block.settings.video contains '.mp4' %}
-                    <video muted loop autoplay>
-                      <source src="{{ block.settings.video }}" type="video/mp4">
-                    </video>
-                  {% else %}
-                    {% if block.settings.video != blank %}
-                      {% assign videoId = block.settings.video | split: 'vimeo.com/' %}
-                      <iframe
-                        src="https://player.vimeo.com/video/{{ videoId[1] }}?loop=1&autoplay=1&muted=1"
-                        frameborder="0"
-                        allow="fullscreen"
-                        allowfullscreen
-                        loading="lazy"
-                      ></iframe>
+            {% comment %}
+              {%- if block.settings.videobanner -%}
+                <div class="video-section">
+                  <div class="video-wrapper">
+                    {% if block.settings.video contains '.mp4' %}
+                      <video muted loop autoplay>
+                        <source src="{{ block.settings.video }}" type="video/mp4">
+                      </video>
+                    {% else %}
+                      {% if block.settings.video != blank %}
+                        {% assign videoId = block.settings.video | split: 'vimeo.com/' %}
+                        <iframe
+                          src="https://player.vimeo.com/video/{{ videoId[1] }}?loop=1&autoplay=1&muted=1"
+                          frameborder="0"
+                          allow="fullscreen"
+                          allowfullscreen
+                          loading="lazy"
+                        ></iframe>
+                      {% endif %}
                     {% endif %}
-                  {% endif %}
+                  </div>
                 </div>
-              </div>
-            {% else %}
+              {% else %}
 
-            {% endif %}
+              {% endif %}
+            {% endcomment %}
             <div class="container-1260 flex-wrap">
               {%- if block.settings.videobanner == false -%}
                 {% if block.settings.backgroundImage != blank or block.settings.videobanner != blank %}
