@@ -42,29 +42,32 @@
       <div class="product__information">
         <!-- Hide in Small Screen Devices -->
 
-        <h2 class="h3  js__popup-product-name">
+        <h2 class="h2 medium  js__popup-product-name">
           {% if productData.metafields.product.display_name != blank %}
             {{ productData.metafields.product.display_name }}
           {% else %}
             {{ productData.title }}
           {% endif %}
         </h2>
-        <!-- Product Short Description -->
-        {% if productData.metafields.product.short_description != blank %}
-          <div class="description">
-            <p>
-              {{ productData.metafields.product.short_description }}
-            </p>
-          </div>
-        {% endif %}
-        <div class="flex-column price__wrapper ">
-          {% comment %} Price {% endcomment %}
-          <a href="{{productData.url }}">
-            <div data-oke-reviews-product-listing-rating>
-              {{ productData.metafields.okendo.ProductListingSnippet }}
-            </div>
-          </a>
+        <div
+          class="product-single__prices"
+          itemprop="price"
+          content="{{ current_variant.price | divided_by: 100.00 }}"
+        >
+          {% if product.price < product.compare_at_price %}
+            
+            <s>{{ product.compare_at_price | money_without_trailing_zeros }}</s>
+            <span>{{ product.price | money_without_trailing_zeros }}</span>
+          {% else %}
+            <span> {{ product.price | money_without_trailing_zeros }}</span>
+          {% endif %}
         </div>
+        <div class="description">
+          <p>
+            Where Hands Go is a carefully crafted book, handsomely illustrated, for parents to teach their children about the dangers of inappropriate touching...  <a>Learn More</a>
+          </p>
+        </div>
+        
 
         {% comment %} Variants Information {% endcomment %}
 
@@ -217,15 +220,15 @@
                 </button>
               </div>
             </div>
-            <a href="{{productData.url }}" class="link--primary">Learn More <span class="sr-only"> About {{ productData.title }}</span></a>
+          
           </div>
 
         {% else %}
           <div class="pdp__actions flex">
             <div class="action action--atc">
-              <button disabled class="btn--primary btn btn--green btn--atc">Out Of Stock</button>
+              <button disabled class="btn--primary yellow btn--green btn--atc">Out Of Stock</button>
             </div>
-            <a href="{{productData.url }}" class="link--primary">Learn More <span class="sr-only"> About {{ productData.title }}</span></a>
+          
           </div>
         {% endif %}
         {% comment %} Product information ends {% endcomment %}
