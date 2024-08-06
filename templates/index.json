@@ -16,8 +16,6 @@
           "type": "slide",
           "settings": {
             "backgroundImage": "shopify:\/\/shop_images\/hero-baby.webp",
-            "video": "",
-            "videobanner": false,
             "pretitle": "Welcome to Diggs Publishing",
             "title": "Diverse Children’s Books collections",
             "description": "<p>In a word filled with countless stories, Diggs Publishing celebrates the unique tales that often go untold.<\/p>",
@@ -25,18 +23,49 @@
             "buttonLink": "shopify:\/\/collections",
             "content_alignment": "left"
           }
+        },
+        "slide_VH9idD": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "backgroundImage": "shopify:\/\/shop_images\/body_safety_wise_1.webp",
+            "pretitle": "hello",
+            "title": "this is the banner",
+            "description": "",
+            "buttonText": "home",
+            "buttonLink": "",
+            "content_alignment": "right"
+          }
+        },
+        "slide_Nrmfqw": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "pretitle": "",
+            "title": "this is the vedio banner",
+            "description": "",
+            "buttonText": "",
+            "buttonLink": "",
+            "content_alignment": "left"
+          }
         }
       },
       "block_order": [
-        "d96d2ebe-b86c-4725-886e-21c6b9472a39"
+        "d96d2ebe-b86c-4725-886e-21c6b9472a39",
+        "slide_VH9idD",
+        "slide_Nrmfqw"
       ],
       "settings": {
-        "color_scheme": ""
+        "color_scheme": "scheme-1"
       }
     },
     "content_banner_maXcHf": {
       "type": "content-banner",
       "settings": {
+        "title": "95% of child sexual abuse is preventable through education.",
+        "description": "<p>Child molestation reseach and prevention institute<\/p>",
+        "image1": "shopify:\/\/shop_images\/child-with-glasses.webp",
+        "image2": "shopify:\/\/shop_images\/child-with-kite.webp"
       }
     },
     "three_column_product_slider_KnYRxa": {
@@ -94,14 +123,15 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/dummy.webp",
-            "showVideo": false,
-            "video": "https:\/\/www.youtube.com\/watch?v=9xwazD5SyVg",
-            "videoPopup": true,
+            "showVideo": true,
+            "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/634081785d1e4beaa80bd4e07e37b7ce.mp4",
+            "videoPopup": false,
             "pretitle": "Krystaelynne Sanders Diggs",
             "title": "My Mission is to prevent child sexual abuse",
             "description": "<p>In a world filled with countless stories, Diggs Publishing celebrates the unique tales that often go untold. Dive into our universe, where each page brings to life characters that truly reflect the world’s diverse tapestry.<\/p>",
             "buttonText": "Read More",
             "buttonLink": "#",
+            "background_color": "blue",
             "fontSize": false,
             "center": false
           }
@@ -111,11 +141,49 @@
         "image_U6JiFN"
       ],
       "settings": {
+        "section_class": "",
+        "image_position": "left",
+        "wave_color": "blue-wave"
       }
     },
     "review_slider_with_image_EptAbU": {
       "type": "review-slider-with-image",
+      "blocks": {
+        "review_fTttDh": {
+          "type": "review",
+          "settings": {
+            "name": "TRICIA HENLEY",
+            "description": "<p>You won't be disappointed <br\/>in buying this book. It is <br\/>perfect for parents to <br\/>teach our young ones <br\/>what is appropriate and <br\/>not appropriate touching. <br\/>With this time in age, this <br\/>book is a great <br\/>introduction to that <br\/>subject. Well worth the <br\/>price! You will love this book.<\/p>"
+          }
+        },
+        "review_3NiegC": {
+          "type": "review",
+          "settings": {
+            "name": "DENEA",
+            "description": "<p>I purchased this book for <br\/>mv daughter, we both <br\/>enjoyed it. <br\/>illustrations are very <br\/>inviting for kids, and it <br\/>explains safe touching, to <br\/>enlighten kids on their <br\/>body is THEIRS. I <br\/>recommend it because <br\/>this is a kid friendly way <br\/>to help teach our small <br\/>loved ones the importance <br\/>of safe touch.<\/p>"
+          }
+        },
+        "review_EJFUni": {
+          "type": "review",
+          "settings": {
+            "name": "MARKEISHA",
+            "description": "<p>\"This book is illustrated <br\/>beautifully and provides a <br\/>simple way to introduce <br\/>the topic of \"touch\" <br\/>without making it <br\/>uncomfortable to your <br\/>children. Must buy as a <br\/>gift and for your own <br\/>children! Just beautiful!\"<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "review_fTttDh",
+        "review_3NiegC",
+        "review_EJFUni"
+      ],
       "settings": {
+        "pretitle": "Latest Reviews",
+        "title": "What customers say about us",
+        "image": "shopify:\/\/shop_images\/About_introduction.webp",
+        "paddingtop": 0,
+        "paddingtopmobile": 0,
+        "paddingbottom": 80,
+        "paddingbottomMobile": 0
       }
     },
     "logo_slider_UUChAJ": {
@@ -170,13 +238,18 @@
         "logo_jCikGR"
       ],
       "settings": {
-        "title": "Charities Krystaelynne Works With and Supports"
+        "title": "Charities Krystaelynne Works With and Supports",
+        "paddingtop": 0,
+        "paddingtopmobile": 0,
+        "paddingbottom": 0,
+        "paddingbottomMobile": 0
       }
     },
     "full_width_content_section_4eMcgt": {
       "type": "full-width-content-section",
       "settings": {
         "title": "Every writer starts as a storyteller. Explore the journey of author Krystaelynne Sanders Diggs",
+        "image": "shopify:\/\/shop_images\/kids-images.webp",
         "buttonText": "Read More",
         "buttonLink": "#"
       }
