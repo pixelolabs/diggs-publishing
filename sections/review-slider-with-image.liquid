@@ -64,11 +64,14 @@
           </div>
         </div>
       </div>
-      <div class="image-wrapper">
-        <div class="image-section">
-          <img src="{{ 'dummy-image-2.webp' | asset_url }}">
+      {% if section.settings.image != blank %}
+        <div class="image-wrapper">
+          <div class="image-section">
+            {% comment %} <img src="{{ 'dummy-image-2.webp' | asset_url }}"> {% endcomment %}
+            {{ section.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '1200x1200' }}
+          </div>
         </div>
-      </div>
+      {% endif %}
     </div>
   </div>
 {% endif %}
@@ -91,6 +94,12 @@
       "type": "text",
       "id": "title",
       "label": "Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "1200 x 1200px Recommended"
     }
   ],
   "presets": [
