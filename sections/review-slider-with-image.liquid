@@ -86,15 +86,15 @@
           </div>
         </div>
       </div>
-
-      <div class="image-wrapper" data-attr="{{ block.settings.name | downcase | remove: ' ' }}">
-        <div class="image-section">
-          {% for block in section.blocks %}
+      {% for block in section.blocks %}
+        <div class="image-wrapper" data-attr="{{ block.settings.name | downcase | remove: ' ' }}">
+          <div class="image-section">
             {{ block.settings.userimage | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '1200x1200' }}
-          {% endfor %}
-          {% comment %} <img src="{{ 'dummy-image-2.webp' | asset_url }}"> {% endcomment %}
+
+            {% comment %} <img src="{{ 'dummy-image-2.webp' | asset_url }}"> {% endcomment %}
+          </div>
         </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 {% endif %}
