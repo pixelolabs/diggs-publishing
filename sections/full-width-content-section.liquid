@@ -16,10 +16,11 @@
           </a>
         {% endif %}
       </div>
-
-      <div class="kids-images">
-        <img src="{{ 'kids-images.webp' | asset_url }}">
-      </div>
+      {% if section.settings.image != blank %}
+        <div class="kids-images">
+          <img src="{{ 'kids-images.webp' | asset_url }}">
+        </div>
+      {% endif %}
     </div>
   </div>
 {% endif %}
