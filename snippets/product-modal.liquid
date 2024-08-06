@@ -73,7 +73,7 @@
 
         {% if productData.variants != blank %}
           {% unless productData.has_only_default_variant %}
-            <div class="pdp__variants">
+            <div class="pdp-variant-options">
               {% comment %} Custom {% endcomment %}
               {% for option in productData.options_with_values %}
                 <div class="variant-option" rc-option{{ forloop.index }}-selector data-type="TYPE">
