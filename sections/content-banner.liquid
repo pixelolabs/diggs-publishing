@@ -2,7 +2,8 @@
   <div class="box">
     {% if section.settings.image1 != blank %}
       <div class="left-image">
-        <img src="{{ 'baby-1.webp' | asset_url }}">
+        {% comment %} <img src="{{ 'baby-1.webp' | asset_url }}"> {% endcomment %}
+        {{ section.settings.image1 | image_url: width: 600 | image_tag: loading: 'lazy', widths: '600x600' }}
       </div>
     {% endif %}
     {% if section.settings.title != blank %}
