@@ -89,8 +89,10 @@
       {% if section.settings.image != blank %}
         <div class="image-wrapper">
           <div class="image-section">
+            {% for block in section.blocks %}
+              {{ block.settings.userimage | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '1200x1200' }}
+            {% endfor %}
             {% comment %} <img src="{{ 'dummy-image-2.webp' | asset_url }}"> {% endcomment %}
-            {{ section.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '1200x1200' }}
           </div>
         </div>
       {% endif %}
