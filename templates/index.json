@@ -69,7 +69,9 @@
       "type": "content-banner",
       "settings": {
         "title": "95% of child sexual abuse is preventable through education.",
-        "description": ""
+        "description": "<p>Child molestation reseach and prevention institute<\/p>",
+        "image1": "shopify:\/\/shop_images\/child-with-glasses.webp",
+        "image2": "shopify:\/\/shop_images\/child-with-kite.webp"
       }
     },
     "three_column_product_slider_KnYRxa": {
