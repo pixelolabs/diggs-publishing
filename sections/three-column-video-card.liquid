@@ -16,7 +16,10 @@
 
 {% if section.blocks.size > 0 %}
   {% if section.settings.title1 != blank %}
-    <div class="three-column-video-card section-{{ section.id }}-padding color-{{ section.settings.color_scheme }}" id="loadMoreList">
+    <div
+      class="three-column-video-card section-{{ section.id }}-padding color-{{ section.settings.color_scheme }}"
+      id="loadMoreList"
+    >
       <div class="container-1300">
         {%- if section.settings.videobanner -%}
           <div class="video-section">
@@ -199,10 +202,10 @@
       "default": false
     },
     {
-        "type": "color_scheme",
-        "id": "color_scheme",
-        "label": "t:sections.all.colors.label",
-        "default": "scheme-1"
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
     },
     {
       "type": "text",
@@ -225,7 +228,7 @@
       "max": 140,
       "step": 2,
       "unit": "px",
-      "label": "Padding top (Desktop)",
+      "label": "Padding Top (Desktop)",
       "default": 0
     },
     {
@@ -235,7 +238,7 @@
       "max": 140,
       "step": 2,
       "unit": "px",
-      "label": "Padding top (Mobile)",
+      "label": "Padding Top (Mobile)",
       "default": 0
     },
     {
