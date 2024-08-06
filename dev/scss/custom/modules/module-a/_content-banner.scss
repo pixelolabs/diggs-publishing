@@ -1,203 +1,199 @@
-.content-banner{
-   
-    position: relative;
-    background: $color-off-white;
-    padding: 0 20px;
+.content-banner {
+  position: relative;
+  background: $color-off-white;
+  padding: 0 20px;
+  @include MQ(MQ-480) {
+    padding: 0 12px;
+  }
+  &::before {
+    background: url("yellow-wave.webp") repeat left / 1327px;
+    height: 156.5px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 42px;
+    content: "";
+    z-index: 2;
+  }
+  .box {
+    max-width: 1030px;
+    z-index: 4;
+    width: 100%;
+
+    margin: 0 auto;
+    margin-top: -133px;
     @include MQ(MQ-480) {
-        padding: 0 12px;
+      margin-top: -55px;
     }
-    &::before{
-        background: url("yellow-wave.webp") repeat left / 1327px;
-        height: 156.5px;
-        width: 100%;
-        position: absolute;
-        left: 0;
-        top: 42px;
-        content: "";
-        z-index: 2;
-       
+    border-radius: 30px;
+    border: solid 3px $color-yellow;
+    background: url("cloud.webp") no-repeat center bottom / 100% $color-sky-blue;
+    padding: 0px 194px 0px 22px;
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+    @include MQ(MQ-768) {
+      padding: 0px 80px 0px 10px;
     }
-    .box{
-        max-width: 1030px;
-        z-index: 4;
-        width: 100%;
-        
-        margin: 0 auto;
-        margin-top: -133px;
-        @include MQ(MQ-480) {
-            margin-top: -55px;
-        }
-        border-radius: 30px;
-        border: solid 3px $color-yellow;
-        background:  url("cloud.webp") no-repeat center bottom / 100% $color-sky-blue;
-        padding: 0px 194px 0px 22px;
-        display: flex;
-        position: relative;
-        align-items: flex-end;
-        @include MQ(MQ-768) {
-            padding: 0px 80px 0px 10px;
-        }
-        @include MQ(MQ-350) {
-            padding: 0px 20px;
-        }
-        &::before{
-            width: 97.8px;
-            height: 67.3px;
-            content: '';
-            position: absolute;
-            left: 276px;
-            z-index: 1;
-            top: -34px;
-            background: url("planet.webp") no-repeat center / 100%;
-            @include MQ(MQ-768) {
-                width: 60px;
-                height: 40px;
-                left: 36px;
-                z-index: 1;
-                top: -20px;
-            }
-        }
-        &::after{
-            width: 82px;
-            height: 81px;
-            content: '';
-            position: absolute;
-            right: 224px;
-            z-index: 1;
-            bottom: -31px;
-            background: url("ufo.webp") no-repeat center / 100%;
-            @include MQ(MQ-768) {
-                width: 57px;
-                height: 56px;
-                right: 48px;
-                bottom: -24px;
-            }
-        }
+    @include MQ(MQ-350) {
+      padding: 0px 20px;
+    }
+    &::before {
+      width: 97.8px;
+      height: 67.3px;
+      content: "";
+      position: absolute;
+      left: 276px;
+      z-index: 1;
+      top: -34px;
+      background: url("planet.webp") no-repeat center / 100%;
+      @include MQ(MQ-768) {
+        width: 60px;
+        height: 40px;
+        left: 36px;
+        z-index: 1;
+        top: -20px;
+      }
+    }
+    &::after {
+      width: 82px;
+      height: 81px;
+      content: "";
+      position: absolute;
+      right: 224px;
+      z-index: 1;
+      bottom: -31px;
+      background: url("ufo.webp") no-repeat center / 100%;
+      @include MQ(MQ-768) {
+        width: 57px;
+        height: 56px;
+        right: 48px;
+        bottom: -24px;
+      }
+    }
+  }
+  .content {
+    text-align: center;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 85px;
+    padding-bottom: 65px;
+    z-index: 2;
+    @include MQ(MQ-768) {
+      padding-top: 36px;
+      padding-bottom: 30px;
+    }
+    h2 {
+      color: $color-pink;
+      margin-bottom: 8.3px;
+      @include MQ(MQ-480) {
+        margin-bottom: 3px;
+      }
+    }
+    p {
+      @include MQ(MQ-480) {
+        padding: 0 23px;
+      }
+    }
+    &::after {
+      width: 14.3px;
+      height: 18px;
+      content: "";
+      position: absolute;
+      right: 180px;
+      z-index: 1;
+      top: 34px;
+      background: url("icon-vector.webp") no-repeat center / 100%;
+      @include MQ(MQ-768) {
+        display: none;
+      }
+    }
+  }
+  .left-image {
+    width: 171px;
+    height: 170px;
+    flex: none;
+    position: relative;
+    @include MQ(MQ-350) {
+      display: none;
+    }
+    @include MQ(MQ-768) {
+      width: 93px;
+      height: 91px;
+    }
+    @include MQ(MQ-480) {
+      margin-right: -45px;
+    }
 
-       
+    img {
+      @include img-object-contain;
     }
-    .content{
-        text-align: center;
-        position: relative;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding-top: 85px;
-        padding-bottom: 65px;
-        z-index: 2;
-        @include MQ(MQ-768) {
-            padding-top: 36px;
-            padding-bottom: 30px;
-        }
-        h2{
-            color: $color-pink;
-            margin-bottom: 8.3px;
-            @include MQ(MQ-480) {
-                margin-bottom: 3px;
-            }
-        }
-        p{
-            @include MQ(MQ-480) {
-                padding: 0 23px;
-            }
-        }
-        &::after{
-            width: 14.3px;
-            height: 18px;
-            content: '';
-            position: absolute;
-            right: 180px;
-            z-index: 1;
-            top: 34px;
-            background: url("icon-vector.webp") no-repeat center / 100%;
-            @include MQ(MQ-768) {
-                display: none;
-            }
-        }
+    &::before {
+      width: 20.6px;
+      height: 25px;
+      content: "";
+      position: absolute;
+      right: -41px;
+      z-index: 1;
+      bottom: 45.5px;
+      background: url("star-large.webp") no-repeat center / 100%;
+      @include MQ(MQ-768) {
+        display: none;
+      }
     }
-    .left-image{
-        width: 171px;
-        height: 170px;
-        flex: none;
-        position: relative;
-        @include MQ(MQ-350) {
-            display: none;
-        }
-        @include MQ(MQ-768) {
-            width: 93px;
-            height: 91px;
-        }
-        @include MQ(MQ-480) {
-            margin-right: -45px;
-        }
-
-        img{
-            @include img-object-contain;
-        }
-        &::before{
-            width: 20.6px;
-            height: 25px;
-            content: '';
-            position: absolute;
-            right: -41px;
-            z-index: 1;
-            bottom: 45.5px;
-            background: url("star-large.webp") no-repeat center / 100%;
-            @include MQ(MQ-768) {
-                display: none;
-            }
-        }
-        &::after{
-            width: 14.3px;
-            height: 18px;
-            content: '';
-            position: absolute;
-            left: 46px;
-            z-index: 1;
-            top: -3px;
-            background: url("icon-vector.webp") no-repeat center / 100%;
-            @include MQ(MQ-768) {
-                display: none;
-            }
-        }
-
-       
+    &::after {
+      width: 14.3px;
+      height: 18px;
+      content: "";
+      position: absolute;
+      left: 46px;
+      z-index: 1;
+      top: -3px;
+      background: url("icon-vector.webp") no-repeat center / 100%;
+      @include MQ(MQ-768) {
+        display: none;
+      }
     }
-    .right-image{
-        width: 132px;
-        height: 204px;
-        flex: none;
-        position: absolute;
-        top: 21px;
-        right: 45.5px;
-        @include MQ(MQ-768) {
-            width: 60px;
-            height: 93px;
-            right: 10px;
-        }
-        @include MQ(MQ-350) {
-            display: none;
-        }
-        img{
-            @include img-object-contain;
-        }
-        margin-bottom: 8.4px;
-        margin-left: 16px;
-        &::before{
-            width: 23.2px;
-            height: 190.7px;
-            content: '';
-            position: absolute;
-            left: -4.4px;
-            z-index: 3;
-            bottom: 36px;
-            background: url("rope.webp") no-repeat center / 100%;
-            @include MQ(MQ-768) {
-                width: 10px;
-                height: 80px;
-            }
-        }
-       
+  }
+  .right-image {
+    // width: 132px;
+    width: 143px;
+    // height: 204px;
+    height: 239px;
+    flex: none;
+    position: absolute;
+    // top: 21px;
+    top: 0px;
+    right: 45.5px;
+    @include MQ(MQ-768) {
+      width: 60px;
+      height: 93px;
+      right: 10px;
     }
+    @include MQ(MQ-350) {
+      display: none;
+    }
+    img {
+      @include img-object-contain;
+    }
+    margin-bottom: 8.4px;
+    margin-left: 16px;
+    // &::before{
+    //     width: 23.2px;
+    //     height: 190.7px;
+    //     content: '';
+    //     position: absolute;
+    //     left: -4.4px;
+    //     z-index: 3;
+    //     bottom: 36px;
+    //     background: url("rope.webp") no-repeat center / 100%;
+    //     @include MQ(MQ-768) {
+    //         width: 10px;
+    //         height: 80px;
+    //     }
+    // }
+  }
 }

@@ -27,9 +27,13 @@
   position: relative;
   // overflow-x: hidden;
   overflow-x: clip;
+  // padding-bottom: 240px;
   @include MQ(MQ-980) {
     padding-top: 20px;
   }
+  // @include MQ(MQ-768) {
+  //   padding-bottom: 160px;
+  // }
   &:before {
     background: url(yellow-wave.webp) repeat-x top / 100%;
     height: 200px;
@@ -64,6 +68,13 @@
     background: url(ufo.webp) no-repeat center / 100%;
     @include MQ(MQ-480) {
       display: none;
+    }
+  }
+  .pagination-section {
+    margin-top: 20px;
+    .container-1240 {
+      display: flex;
+      justify-content: center;
     }
   }
 }

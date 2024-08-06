@@ -1243,24 +1243,26 @@ textarea.input--error {
   height: 100%;
   top: 0;
   left: 0;
-
+  iframe {
+    @include iframe-bg();
+  }
   iframe,
   video {
     min-height: 0;
     height: calc(100vh - 40px);
-    @include iframe-bg();
-    min-width: 150vw;
-    @include MQ(MQ-1024) {
-      min-width: 180vw;
-    }
-    @include MQ(MQ-980) {
-      // min-width: 250vw;
-      min-height: 250vw;
-    }
-    @include MQ(MQ-480) {
-      min-width: 350vw;
-      min-height: 350vw;
-    }
+    // @include iframe-bg();
+    // min-width: 150vw;
+    // @include MQ(MQ-1024) {
+    //   min-width: 180vw;
+    // }
+    // @include MQ(MQ-980) {
+    //   // min-width: 250vw;
+    //   min-height: 250vw;
+    // }
+    // @include MQ(MQ-480) {
+    //   min-width: 350vw;
+    //   min-height: 350vw;
+    // }
   }
   img {
     width: 100%;
