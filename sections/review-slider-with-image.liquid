@@ -3,8 +3,12 @@
     <div class="left-section">
       <div class="inner">
         <div class="heading">
-          <span class="pre-title"> Latest Reviews</span>
-          <h2>What customers say about us</h2>
+          {% if section.settings.pretitle != blank %}
+            <span class="pre-title"> {{ section.settings.pretitle }}</span>
+          {% endif %}
+          {% if section.settings.title != blank %}
+            <h2>What customers say about us</h2>
+          {% endif %}
         </div>
         <div class="slider-outer">
           <div class="slider js__review-slider">
