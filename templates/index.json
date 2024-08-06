@@ -179,10 +179,13 @@
         "review_EJFUni"
       ],
       "settings": {
-        "color_scheme": "scheme-4",
         "pretitle": "Latest Reviews",
         "title": "What customers say about us",
-        "image": "shopify:\/\/shop_images\/About_introduction.webp"
+        "image": "shopify:\/\/shop_images\/About_introduction.webp",
+        "paddingtop": 0,
+        "paddingtopmobile": 0,
+        "paddingbottom": 50,
+        "paddingbottomMobile": 0
       }
     },
     "logo_slider_UUChAJ": {
