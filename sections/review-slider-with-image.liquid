@@ -14,7 +14,7 @@
   }
 {%- endstyle -%}
 {% if section.settings.title != blank %}
-  <div class="review-slider-with-image color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding">
+  <div class="review-slider-with-image section-{{ section.id }}-padding">
     <div class="container-1260 flex">
       <div class="left-section">
         <div class="inner">
@@ -101,12 +101,6 @@
 {
   "name": "Review Slider with Image",
   "settings": [
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:sections.all.colors.label",
-      "default": "scheme-1"
-    },
     {
       "type": "text",
       "id": "pretitle",
