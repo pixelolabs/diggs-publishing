@@ -123,8 +123,8 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/dummy.webp",
-            "showVideo": false,
-            "video": "https:\/\/sample-videos.com\/video321\/mp4\/720\/big_buck_bunny_720p_10mb.mp4",
+            "showVideo": true,
+            "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/634081785d1e4beaa80bd4e07e37b7ce.mp4",
             "videoPopup": false,
             "pretitle": "Krystaelynne Sanders Diggs",
             "title": "My Mission is to prevent child sexual abuse",
