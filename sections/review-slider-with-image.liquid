@@ -13,7 +13,7 @@
           </div>
           {% if block.settings.description != blank or block.settings.name != blank %}
             <div class="slider-outer">
-              <div class="slider {% if section.blocks.size > 1 %}js__review-slider{% endif %}">
+              <div class="slider {% if section.blocks.size > 0 %}js__review-slider{% endif %}">
                 <div class="swiper-wrapper">
                   {% for block in section.blocks %}
                     <div class="slide swiper-slide">
