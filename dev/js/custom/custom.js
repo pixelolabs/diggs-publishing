@@ -788,21 +788,9 @@ jQuery(function() {
         e.stopImmediatePropagation();
         var id = $(this).attr("data-id");
         //Executed after SWYM has loaded all necessary resources.
-        function onSwymLoadCallback(swat) {
-            // Please make all SWYM-related API calls inside this function.
-            // You can use the swat argument within this scope.
-            if (swat) {
+      
 
-                swat.initializeActionButtons("#shopify-section-collection-modals");
-            }
-        }
-        if (!window.SwymCallbacks) {
-            window.SwymCallbacks = [];
-        }
-        window.SwymCallbacks.push(onSwymLoadCallback);
-
-
-        $(".popup-subscribe-option-" + id).find("input").click();
+       
         $(".pdp-tab-link-" + id + " li:first-child").children("a").click();
 
         $(".js__popup-variant-select-" + id + " li:first-child").click();
