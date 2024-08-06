@@ -25,10 +25,25 @@
             "buttonLink": "shopify:\/\/collections",
             "content_alignment": "left"
           }
+        },
+        "slide_VH9idD": {
+          "type": "slide",
+          "settings": {
+            "backgroundImage": "shopify:\/\/shop_images\/body_safety_wise_1.webp",
+            "video": "",
+            "videobanner": false,
+            "pretitle": "hello",
+            "title": "this is the banner",
+            "description": "",
+            "buttonText": "home",
+            "buttonLink": "",
+            "content_alignment": "right"
+          }
         }
       },
       "block_order": [
-        "d96d2ebe-b86c-4725-886e-21c6b9472a39"
+        "d96d2ebe-b86c-4725-886e-21c6b9472a39",
+        "slide_VH9idD"
       ],
       "settings": {
         "color_scheme": ""
@@ -102,6 +117,7 @@
             "description": "<p>In a world filled with countless stories, Diggs Publishing celebrates the unique tales that often go untold. Dive into our universe, where each page brings to life characters that truly reflect the world’s diverse tapestry.<\/p>",
             "buttonText": "Read More",
             "buttonLink": "#",
+            "background_color": "blue",
             "fontSize": false,
             "center": false
           }
@@ -111,6 +127,9 @@
         "image_U6JiFN"
       ],
       "settings": {
+        "section_class": "",
+        "image_position": "left",
+        "wave_color": "blue-wave"
       }
     },
     "review_slider_with_image_EptAbU": {
