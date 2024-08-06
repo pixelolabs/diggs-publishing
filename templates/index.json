@@ -150,6 +150,18 @@
     },
     "review_slider_with_image_EptAbU": {
       "type": "review-slider-with-image",
+      "blocks": {
+        "review_fTttDh": {
+          "type": "review",
+          "settings": {
+            "name": "TRICIA HENLEY",
+            "description": "<p>You won't be disappointed <br\/>in buying this book. It is <br\/>perfect for parents to <br\/>teach our young ones <br\/>what is appropriate and <br\/>not appropriate touching. <br\/>With this time in age, this <br\/>book is a great <br\/>introduction to that <br\/>subject. Well worth the <br\/>price! You will love this book.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "review_fTttDh"
+      ],
       "settings": {
         "color_scheme": "scheme-4",
         "pretitle": "Latest Reviews",
