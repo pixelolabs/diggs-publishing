@@ -9,18 +9,7 @@
   <div class="modal-content collection-popup">
     <button class="close js__quick-view-popup-close">{% render 'icon-mobile-menu-close' %}</button>
 
-    <button
-      data-with-epi="true"
-      id="swym-button-product_{{ productData.id }}"
-      class="swym-button swym-button-quickview wishlist swym-button product_{{ productData.id }}"
-      data-swaction="addToWishlist"
-      data-product-id="{{ productData.id }}"
-      data-variant-id="{{ productData.variants[0].id }}"
-      data-product-url="{{ shop.url }}{{ productData.url }}"
-    >
-      {% render 'icon-heart' -%}
-      {%- render 'icon-heart-filled' %}
-    </button>
+ 
     {% comment %}
          <button
         data-with-epi="true"
@@ -203,39 +192,7 @@
             </div>
           </div>
         </section>
-        {% if productData.available and productData.selling_plan_groups[0].selling_plans %}
-          <div class="pdp__recharge">
-            <div class="variant form__group form__group--radio popup-subscribe-option-{{ productData.id }}">
-              <label class="d-flex align-center pdp-option__select ">
-                <input value="rc-yes" name="recharge--{{ productData.id }}" type="radio">
-                <span class="checkmark"></span>
-                <span class="variant__info d-flex justify-between">
-                  <span>Subscribe <span sm-rc-discount-ammount></span></span>
-                  <div><span sm-rc-variant-subscribe-price></span> <s sm-rc-variant-one-time-price></s></div>
-                </span>
-              </label>
-            </div>
-            <div class="variant form__group form__group--radio active">
-              <label class="d-flex align-center pdp-option__select" data-plan_id="false">
-                <input checked name="recharge--{{ productData.id }}" type="radio">
-                <span class="checkmark"></span>
-                <span class="variant__info d-flex justify-between">
-                  <span>One-time Purchase</span>
-                  <div sm-rc-variant-one-time-price></div>
-                </span>
-              </label>
-            </div>
-
-            <div class="form__group form__group--rc hide">
-              <select class="frequency-select">
-                {% for plan in productData.selling_plan_groups[0].selling_plans %}
-                  <option value="{{ plan.id }}">{{ plan.name }}</option>
-                {% endfor %}
-              </select>
-            </div>
-          </div>
-        {% endif %}
-
+        
         {% if productData.available %}
           <div class="pdp__actions flex">
             <div class="btn-quantity-outer flex">
@@ -274,13 +231,7 @@
         {% comment %} Product information ends {% endcomment %}
       </div>
       {% comment %} Actions {% endcomment %}
-      <div class="hide popup-footer">
-        {% comment %} Recharge {% endcomment %}
-
-        {% comment %} Tabs {% endcomment %}
-
-        {% render 'sm-rc-widget-modal', _product: productData %}
-      </div>
+     
     </div>
   </div>
 </div>
