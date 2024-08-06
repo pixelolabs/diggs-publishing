@@ -28,6 +28,7 @@
         },
         "slide_VH9idD": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "backgroundImage": "shopify:\/\/shop_images\/body_safety_wise_1.webp",
             "video": "",
@@ -42,6 +43,7 @@
         },
         "slide_Nrmfqw": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "video": "https:\/\/sample-videos.com\/video321\/mp4\/720\/big_buck_bunny_720p_10mb.mp4",
             "videobanner": true,
@@ -123,7 +125,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/dummy.webp",
-            "showVideo": false,
+            "showVideo": true,
             "video": "https:\/\/www.youtube.com\/watch?v=9xwazD5SyVg",
             "videoPopup": true,
             "pretitle": "Krystaelynne Sanders Diggs",
