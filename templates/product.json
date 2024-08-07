@@ -89,17 +89,13 @@
       "settings": {
       }
     },
-    "half_image_half_content_cmMnWa": {
-      "type": "half-image-half-content",
+    "product_half_image_half_content_KJNQBb": {
+      "type": "product-half-image-half-content",
       "blocks": {
-        "image_Q7nhWk": {
+        "image_ENbLUG": {
           "type": "image",
           "settings": {
             "image": "{{ product.metafields.custom.half_image_half_content_image_first_.value }}",
-            "showVideo": false,
-            "video": "",
-            "videoPopup": false,
-            "pretitle": "",
             "title": "{{ product.metafields.custom.half_image_half_content_title_first.value }}",
             "description": "{{ product.metafields.custom.half_image_half_content_description_first_ | metafield_tag }}",
             "buttonText": "{{ product.metafields.custom.half_image_half_content_button_text_first_.value }}",
@@ -111,12 +107,38 @@
         }
       },
       "block_order": [
-        "image_Q7nhWk"
+        "image_ENbLUG"
+      ],
+      "settings": {
+        "section_class": "body-safety-2",
+        "image_position": "right",
+        "wave_color": "blue-wave"
+      }
+    },
+    "product_half_image_half_content_Yn8wKT": {
+      "type": "product-half-image-half-content",
+      "blocks": {
+        "image_maGKHJ": {
+          "type": "image",
+          "settings": {
+            "image": "{{ product.metafields.custom.half_image_half_content_image_second_.value }}",
+            "title": "{{ product.metafields.custom.half_image_half_content_title_second.value }}",
+            "description": "{{ product.metafields.custom.half_image_half_content_description_second_ | metafield_tag }}",
+            "buttonText": "{{ product.metafields.custom.half_image_half_content_button_text_first_.value }}",
+            "buttonLink": "{{ product.metafields.custom.half_image_half_content_button_link_second_.value }}",
+            "background_color": "transparent-bg",
+            "fontSize": false,
+            "center": false
+          }
+        }
+      },
+      "block_order": [
+        "image_maGKHJ"
       ],
       "settings": {
         "section_class": "",
         "image_position": "left",
-        "wave_color": "blue-wave"
+        "wave_color": "transparent-wave"
       }
     },
     "product_full_width_content_section_v2_bWNnmF": {
@@ -144,7 +166,8 @@
   "order": [
     "product_gDBkfE",
     "product_tab_section_g4EUiU",
-    "half_image_half_content_cmMnWa",
+    "product_half_image_half_content_KJNQBb",
+    "product_half_image_half_content_Yn8wKT",
     "product_full_width_content_section_v2_bWNnmF",
     "product_recommendations_maXkrb",
     "product_reviews_section_HHXAiU"
