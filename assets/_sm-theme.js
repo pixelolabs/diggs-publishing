@@ -1203,7 +1203,7 @@ jQuery(function () {
   $(".tab-link").on("click", function () {
     var dataId = $(this).attr("data-attr");
     var i, tabcontent, tablink;
-    contentinner = document.getElementsByClassName("accordion-con");
+    var contentinner = document.getElementsByClassName("accordion-con");
     tabcontent = document.getElementsByClassName("tab-content");
 
     for (i = 0; i < tabcontent.length; i++) {
