@@ -85,6 +85,13 @@
                     <span> {{ product.price | money_without_trailing_zeros }}</span>
                   {% endif %}
                 </div>
+
+              {% when 'description' %}
+                {%- if product.description != blank -%}
+                  <div class="description">
+                    {{ product.description }}
+                  </div>
+                {%- endif -%}
             {%- endcase -%}
           {% endfor %}
 

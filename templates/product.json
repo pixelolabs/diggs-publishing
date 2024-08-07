@@ -16,10 +16,16 @@
           "type": "title",
           "settings": {
           }
+        },
+        "price_npmjnD": {
+          "type": "price",
+          "settings": {
+          }
         }
       },
       "block_order": [
-        "title_6qDmLq"
+        "title_6qDmLq",
+        "price_npmjnD"
       ],
       "settings": {
         "product_quantity_enable": false,
