@@ -17,7 +17,7 @@
     "banner": {
       "type": "main-collection-banner",
       "settings": {
-        "title": "{{ collection.metafields.custom.collection_banner_title.value }}",
+        "title": "{{ collection.title }}",
         "description": "{{ collection.metafields.custom.collection_banner_description | metafield_tag }}",
         "show_collection_description": true,
         "show_collection_image": false,
