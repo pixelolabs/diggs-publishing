@@ -11,6 +11,40 @@
   "sections": {
     "product_gDBkfE": {
       "type": "product",
+      "blocks": {
+        "title_6qDmLq": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "price_npmjnD": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "description_akCmxJ": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "three_column_info_aqKn7k": {
+          "type": "three-column-info",
+          "settings": {
+            "icon_1": "{{ product.metafields.custom.product_info_three_column_info_section_icon_first_.value }}",
+            "text_1": "{{ product.metafields.custom.product_info_three_column_info_section_title_first_.value }}",
+            "icon_2": "{{ product.metafields.custom.product_info_three_column_info_section_icon_second_.value }}",
+            "text_2": "{{ product.metafields.custom.product_info_three_column_info_section_title_second_.value }}",
+            "icon_3": "{{ product.metafields.custom.product_info_three_column_info_section_icon_third_.value }}",
+            "text_3": "{{ product.metafields.custom.product_info_three_column_info_section_title_third_.value }}"
+          }
+        }
+      },
+      "block_order": [
+        "title_6qDmLq",
+        "price_npmjnD",
+        "description_akCmxJ",
+        "three_column_info_aqKn7k"
+      ],
       "settings": {
         "product_quantity_enable": false,
         "enable_payment_button": true,
@@ -159,7 +193,7 @@
     "product_recommendations_YxCiEQ": {
       "type": "product-recommendations",
       "settings": {
-        "title": "hiii"
+        "title": "You may like"
       }
     }
   },
