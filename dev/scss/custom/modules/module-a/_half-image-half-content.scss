@@ -7,7 +7,7 @@
     left: 0;
     top: -85px;
     content: "";
-    z-index: 1;
+    z-index: 2;
   }
 
   &.blue-wave::before {
@@ -631,6 +631,29 @@
       display: none;
     }
   }
+  // &:before {
+  //   background: url(yellow-wave.webp) repeat-x top / 100%;
+  //   height: 200px;
+  //   width: 100%;
+  //   position: absolute;
+  //   left: 0;
+  //   top: -125px;
+  //   content: "";
+  //   background-size: contain;
+  //   z-index: 2;
+  //   filter: brightness(0) saturate(100%) invert(100%) sepia(56%) saturate(587%)
+  //     hue-rotate(316deg) brightness(105%) contrast(114%);
+  //   @include MQ(MQ-1440) {
+  //     height: 114px;
+  //     top: -97px;
+  //     background-size: cover;
+  //   }
+  //   @include MQ(MQ-768) {
+  //     height: 88px;
+  //     top: -54px;
+  //     background-size: cover;
+  //   }
+  // }
   .half-image-half-content {
     @include MQ(MQ-980) {
       padding-bottom: 65px;

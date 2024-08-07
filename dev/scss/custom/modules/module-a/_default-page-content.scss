@@ -10,7 +10,7 @@
     top: -125px;
     content: "";
     background-size: contain;
-    z-index: 1;
+    z-index: 2;
     filter: brightness(0) saturate(100%) invert(100%) sepia(56%) saturate(587%)
       hue-rotate(316deg) brightness(105%) contrast(114%);
     @include MQ(MQ-1440) {
@@ -50,7 +50,7 @@
       background: url(icon-cloud.webp) no-repeat center / 100%;
       width: 65px;
       height: 52px;
-      z-index: 1;
+      z-index: 2;
       @include MQ(MQ-480) {
         display: none;
       }
@@ -70,11 +70,11 @@
   }
 }
 
-.ambassador-program{
-  &.default-page-content{
+.ambassador-program {
+  &.default-page-content {
     position: relative;
     overflow-x: clip;
-    &:after{
+    &:after {
       width: 234px;
       height: 200px;
       background: url(line.webp) no-repeat center/100%;
@@ -84,7 +84,7 @@
       transform: rotate(-4.65deg);
       z-index: 0;
     }
-    .container-1240{
+    .container-1240 {
       &:before {
         width: 82px;
         height: 81px;
@@ -94,23 +94,23 @@
         z-index: 10;
         top: -190px;
         background: url(ufo.webp) no-repeat center / 100%;
-        @include MQ(MQ-980){
-          top: -140px;  
+        @include MQ(MQ-980) {
+          top: -140px;
         }
-        @include MQ(MQ-480){
+        @include MQ(MQ-480) {
           display: none;
         }
       }
-      &::after{
+      &::after {
         right: 25%;
         top: -106px;
       }
-    .full-format {
-      padding-bottom: 66px;
-      @include MQ(MQ-500){
-        padding-bottom: 50px;
+      .full-format {
+        padding-bottom: 66px;
+        @include MQ(MQ-500) {
+          padding-bottom: 50px;
+        }
       }
-    }
     }
   }
 }
