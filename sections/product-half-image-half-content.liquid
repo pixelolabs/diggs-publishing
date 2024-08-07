@@ -3,8 +3,8 @@
     {% for block in section.blocks limit: 1 %}
       <div class="half-image-half-content {% if block.settings.background_color == 'transparent-bg' %} no-bg-color{% elsif block.settings.background_color == 'brown' %} bg-brown {% elsif block.settings.background_color == 'blue' %}  bg-blue {% else %} no-bg {% endif %}">
         <div class="container-1260 flex">
-          <div class="image-wrapper">
-            {% if block.settings.image != blank %}
+          {% if block.settings.image != blank %}
+            <div class="image-wrapper">
               <div
                 class="image-section"
                 data-aos="fade-up"
@@ -12,8 +12,8 @@
               >
                 {{ block.settings.image | image_url: width: 1262 | image_tag: loading: 'lazy', widths: '1262x1000' }}
               </div>
-            {% endif %}
-          </div>
+            </div>
+          {% endif %}
           <div
             class="full-format flex-justify-column-center content {% if block.settings.image == blank and block.settings.video == blank %} full {% endif %} {%if block.settings.center == true%}center{%endif%}"
             data-aos="fade-up"
