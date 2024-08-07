@@ -196,7 +196,9 @@
                         {% comment %} <img src="{{ 'icon-truck-dark.webp' | asset_url }}"> {% endcomment %}
                       </div>
                     {% endif %}
-                    <span>Free Shipping</span>
+                    {% if block.settings.text_1 != blank %}
+                      <span>{{ block.settings.text_1 }}</span>
+                    {% endif %}
                   </li>
                   <li>
                     <div class="icon">
