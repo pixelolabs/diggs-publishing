@@ -1443,33 +1443,36 @@ jQuery(document).ready(function ($) {
       $(this).parent(".tab-content").children(".accordion-con").removeClass("active");
     }
   });
-  $(document).on("click", ".js___accordion", function (e) {
-    e.preventDefault();
 
-    if ($(this).parent(".tab-content").children(".accordion-con").css("display") == "none") {
-      $(".accordion-con").slideUp();
-      $(".accordion-con").removeClass("active");
-      $(".accordion-link").removeClass("active"); // $(".tab-content").removeClass("active");
+  if ($(window).width() > 980) {
+    $(document).on("click", ".js___accordion", function (e) {
+      e.preventDefault();
 
-      $(".tab-link").removeClass("active");
-      $(this).parent(".tab-content").children(".accordion-con").slideDown();
-      $(this).parent(".tab-content").children(".accordion-con").addClass("active"); // $(this).parent(".tab-content").addClass("active");
+      if ($(this).parent(".tab-content").children(".accordion-con").css("display") == "none") {
+        $(".accordion-con").slideUp();
+        $(".accordion-con").removeClass("active");
+        $(".accordion-link").removeClass("active"); // $(".tab-content").removeClass("active");
 
-      $(this).parent(".tab-content").children(".accordion-link").addClass("active");
-      var dataId = $(this).parent(".tab-content").attr("data-attr");
-      document.getElementById(dataId).className += " active";
-      $('html,body').animate({
-        scrollTop: $(this).offset().top - 120
-      }, 500);
-    } else {
-      $(".accordion-con").slideUp();
-      $(".accordion-con").removeClass("active"); // $(".tab-content").removeClass("active");
+        $(".tab-link").removeClass("active");
+        $(this).parent(".tab-content").children(".accordion-con").slideDown();
+        $(this).parent(".tab-content").children(".accordion-con").addClass("active"); // $(this).parent(".tab-content").addClass("active");
 
-      $(this).parent(".tab-content").children(".accordion-link").removeClass("active"); // $(this).parent(".tab-content").removeClass("active");
+        $(this).parent(".tab-content").children(".accordion-link").addClass("active");
+        var dataId = $(this).parent(".tab-content").attr("data-attr");
+        document.getElementById(dataId).className += " active";
+        $('html,body').animate({
+          scrollTop: $(this).offset().top - 120
+        }, 500);
+      } else {
+        $(".accordion-con").slideUp();
+        $(".accordion-con").removeClass("active"); // $(".tab-content").removeClass("active");
 
-      $(this).parent(".tab-content").children(".accordion-con").removeClass("active");
-    }
-  });
+        $(this).parent(".tab-content").children(".accordion-link").removeClass("active"); // $(this).parent(".tab-content").removeClass("active");
+
+        $(this).parent(".tab-content").children(".accordion-con").removeClass("active");
+      }
+    });
+  }
 });
 /*Select Dropdown change wit Tab */
 
