@@ -20,25 +20,156 @@
     },
     "product_tab_section_g4EUiU": {
       "type": "product-tab-section",
+      "blocks": {
+        "tabs_zz3VhF": {
+          "type": "tabs",
+          "settings": {
+            "heading": "{{ product.metafields.custom.product_tab_first_category.value }}"
+          }
+        },
+        "description_3rBHNF": {
+          "type": "description",
+          "settings": {
+            "category": "{{ product.metafields.custom.product_tab_first_category.value }}",
+            "description": "<p>{{ product.metafields.custom.product_tab_first_category_description | metafield_tag }}<\/p>"
+          }
+        },
+        "tabs_8hjLM9": {
+          "type": "tabs",
+          "settings": {
+            "heading": "{{ product.metafields.custom.product_tab_second_category.value }}"
+          }
+        },
+        "description_M6GxCj": {
+          "type": "description",
+          "settings": {
+            "category": "{{ product.metafields.custom.product_tab_second_category.value }}",
+            "description": "<p>{{ product.metafields.custom.product_tab_second_category_description | metafield_tag }}<\/p>"
+          }
+        },
+        "tabs_iFHY4C": {
+          "type": "tabs",
+          "settings": {
+            "heading": "{{ product.metafields.custom.product_tab_third_category.value }}"
+          }
+        },
+        "description_xxtLbm": {
+          "type": "description",
+          "settings": {
+            "category": "{{ product.metafields.custom.product_tab_third_category.value }}",
+            "description": "<p>{{ product.metafields.custom.product_tab_third_category_description | metafield_tag }}<\/p>"
+          }
+        },
+        "tabs_NRTHVG": {
+          "type": "tabs",
+          "disabled": true,
+          "settings": {
+            "heading": "FAQ"
+          }
+        },
+        "description_pRXqni": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "category": "FAQ",
+            "description": "<p>FAQ Section<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "tabs_zz3VhF",
+        "description_3rBHNF",
+        "tabs_8hjLM9",
+        "description_M6GxCj",
+        "tabs_iFHY4C",
+        "description_xxtLbm",
+        "tabs_NRTHVG",
+        "description_pRXqni"
+      ],
       "settings": {
       }
     },
-    "product_recommendations_maXkrb": {
-      "type": "product-recommendations",
+    "product_half_image_half_content_KJNQBb": {
+      "type": "product-half-image-half-content",
+      "blocks": {
+        "image_ENbLUG": {
+          "type": "image",
+          "settings": {
+            "image": "{{ product.metafields.custom.half_image_half_content_image_first_.value }}",
+            "title": "{{ product.metafields.custom.half_image_half_content_title_first.value }}",
+            "description": "{{ product.metafields.custom.half_image_half_content_description_first_ | metafield_tag }}",
+            "buttonText": "{{ product.metafields.custom.half_image_half_content_button_text_first_.value }}",
+            "buttonLink": "{{ product.metafields.custom.half_image_half_content_button_link_first_.value }}",
+            "background_color": "blue",
+            "fontSize": false,
+            "center": false
+          }
+        }
+      },
+      "block_order": [
+        "image_ENbLUG"
+      ],
       "settings": {
-        "title": ""
+        "section_class": "body-safety-2",
+        "image_position": "right",
+        "wave_color": "blue-wave"
+      }
+    },
+    "product_half_image_half_content_Yn8wKT": {
+      "type": "product-half-image-half-content",
+      "blocks": {
+        "image_maGKHJ": {
+          "type": "image",
+          "settings": {
+            "image": "{{ product.metafields.custom.half_image_half_content_image_second_.value }}",
+            "title": "{{ product.metafields.custom.half_image_half_content_title_second.value }}",
+            "description": "{{ product.metafields.custom.half_image_half_content_description_second_ | metafield_tag }}",
+            "buttonText": "{{ product.metafields.custom.half_image_half_content_button_text_first_.value }}",
+            "buttonLink": "{{ product.metafields.custom.half_image_half_content_button_link_second_.value }}",
+            "background_color": "transparent-bg",
+            "fontSize": false,
+            "center": false
+          }
+        }
+      },
+      "block_order": [
+        "image_maGKHJ"
+      ],
+      "settings": {
+        "section_class": "",
+        "image_position": "left",
+        "wave_color": "transparent-wave"
+      }
+    },
+    "product_full_width_content_section_v2_bWNnmF": {
+      "type": "product-full-width-content-section-v2",
+      "settings": {
+        "icon": "{{ product.metafields.custom.full_width_content_icon.value }}",
+        "title": "{{ product.metafields.custom.full_width_content_title.value }}",
+        "description": "{{ product.metafields.custom.full_width_content_description | metafield_tag }}",
+        "btnText": "{{ product.metafields.custom.full_width_content_button_text.value }}",
+        "btnLink": "{{ product.metafields.custom.full_width_content_button_link.value }}"
       }
     },
     "product_reviews_section_HHXAiU": {
       "type": "product-reviews-section",
       "settings": {
       }
+    },
+    "product_recommendations_YxCiEQ": {
+      "type": "product-recommendations",
+      "settings": {
+        "title": "hiii"
+      }
     }
   },
   "order": [
     "product_gDBkfE",
     "product_tab_section_g4EUiU",
-    "product_recommendations_maXkrb",
-    "product_reviews_section_HHXAiU"
+    "product_half_image_half_content_KJNQBb",
+    "product_half_image_half_content_Yn8wKT",
+    "product_full_width_content_section_v2_bWNnmF",
+    "product_reviews_section_HHXAiU",
+    "product_recommendations_YxCiEQ"
   ]
 }
