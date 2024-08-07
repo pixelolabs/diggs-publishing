@@ -14,8 +14,8 @@
               <li>
                 <a
                   class="tab-link active"
-                  id="tab-link-{{ category}}"
-                  data-attr="{{ category}}"
+                  id="tab-link-{{ category  | downcase}}"
+                  data-attr="{{ category  | downcase}}"
                 >
                   {{- block.settings.heading -}}
                 </a>
