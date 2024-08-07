@@ -3,16 +3,26 @@
     <div class="container-1440">
       <div class="container-840">
         <div class="inner">
-          <div class="thumb-images">
-            <img src="{{ 'icon-thumpup.webp' | asset_url }}">
-          </div>
-          <h2>When an unknown printer took a galley of type and scrambled</h2>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took
-          </p>
-
-          <a href="#" title="" aria-label="" class="btn--primary yellow"> Book Now</a>
+          {% if section.settings.icon != blank %}
+            <div class="thumb-images">
+              {% comment %} <img src="{{ 'icon-thumpup.webp' | asset_url }}"> {% endcomment %}
+              {{ section.settings.icon | image_url: width: 200 | image_tag: loading: 'lazy', widths: '200x200' }}
+            </div>
+          {% endif %}
+          <h2>{{ section.settings.title }}</h2>
+          {% if section.settings.description != blank %}
+            {{ section.settings.description }}
+          {% endif %}
+          {% if section.settings.btnLink != blank and section.settings.btnText != blank %}
+            <a
+              href="{{section.settings.btnLink}}"
+              title="{{ section.settings.btnText }}"
+              aria-label="{{ section.settings.btnText }}"
+              class="btn--primary yellow"
+            >
+              {{ section.settings.btnText -}}
+            </a>
+          {% endif %}
         </div>
       </div>
     </div>
