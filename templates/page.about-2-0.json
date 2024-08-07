@@ -29,8 +29,8 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/About_introduction.webp",
-            "showVideo": false,
-            "video": "",
+            "showVideo": true,
+            "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/634081785d1e4beaa80bd4e07e37b7ce.mp4",
             "videoPopup": false,
             "pretitle": "",
             "title": "Let me introduce myself...",
