@@ -12,18 +12,23 @@
     "innerBanner": {
       "type": "inner-hero-section",
       "settings": {
-        "image": "shopify:\/\/shop_images\/about_us_banner_image.jpg",
-        "mobileImage": "shopify:\/\/shop_images\/about_us_banner.jpg",
-        "title": "About The Author",
-        "description": "<p>Every writer starts as a storyteller. Explore the journey of author Krystaelynne Sanders Diggs, dedicated to empowering young minds through the magic of storytelling.<\/p>",
+        "title": "{{ page.title }}",
+        "description": "<p>This Privacy Policy describes how ksdiggs.myshopify.com (the “Site” or “we”) collects, uses, and discloses your Personal Information when you visit or make a purchase from the Site.<\/p>",
         "buttonText1": "",
         "buttonLink1": "",
         "button_bg": "pink",
         "content_alignment": "left"
       }
+    },
+    "page_default_content_6YCngU": {
+      "type": "page-default-content",
+      "settings": {
+        "section_class": ""
+      }
     }
   },
   "order": [
-    "innerBanner"
+    "innerBanner",
+    "page_default_content_6YCngU"
   ]
 }
