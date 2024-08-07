@@ -20,9 +20,6 @@
             data-aos-duration="2000"
           >
             <div class="inner">
-              {% if block.settings.pretitle != blank %}
-                <span class="pre-title">{{ block.settings.pretitle }}</span>
-              {% endif %}
               {% if block.settings.title != blank %}
                 <h2 class="w-250 {% if block.settings.fontSize == true %} size {% endif %}">
                   {{ block.settings.title }}
@@ -119,26 +116,7 @@
           "id": "image",
           "label": "Image"
         },
-        {
-          "type": "checkbox",
-          "id": "showVideo",
-          "label": "Show Video"
-        },
-        {
-          "type": "url",
-          "id": "video",
-          "label": "Video"
-        },
-        {
-          "type": "checkbox",
-          "id": "videoPopup",
-          "label": "Open Video in Popup"
-        },
-        {
-          "type": "text",
-          "id": "pretitle",
-          "label": "Pre Title"
-        },
+
         {
           "type": "text",
           "id": "title",
