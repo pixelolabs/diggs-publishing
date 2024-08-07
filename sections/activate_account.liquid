@@ -17,6 +17,7 @@
             {{ form.errors | default_errors }}
           </div>
         {%- endif -%}
+        <label>{{ 'customer.activate_account.password' | t }}</label>
         <input
           type="password"
           value=""
@@ -24,6 +25,7 @@
           id="CustomerPassword"
           placeholder="{{ 'customer.activate_account.password' | t }}"
         >
+          <label>{{ 'customer.activate_account.password_confirm' | t }}</label>
         <input
           type="password"
           value=""
@@ -43,7 +45,7 @@
               type="submit"
               name="decline"
               value="{{ 'customer.activate_account.cancel' | t }}"
-              class="link--primary button"
+              class="link--primary-small"
             >
           </div>
         </div>
