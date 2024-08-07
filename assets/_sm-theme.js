@@ -1219,7 +1219,6 @@ jQuery(function () {
     document.getElementById(dataId).style.display = "block";
     event.currentTarget.className += " active";
     $(this).addClass("active");
-    tabcontent[i].className += " active";
     /*PDP select*/
 
     $(".js__pdp-tab-select").val(dataId);
