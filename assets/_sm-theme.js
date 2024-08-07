@@ -1451,12 +1451,12 @@ jQuery(document).ready(function ($) {
       if ($(this).parent(".tab-content").children(".accordion-con").css("display") == "none") {
         $(".accordion-con").slideUp();
         $(".accordion-con").removeClass("active");
-        $(".accordion-link").removeClass("active");
-        $(".tab-content").removeClass("active");
+        $(".accordion-link").removeClass("active"); // $(".tab-content").removeClass("active");
+
         $(".tab-link").removeClass("active");
         $(this).parent(".tab-content").children(".accordion-con").slideDown();
-        $(this).parent(".tab-content").children(".accordion-con").addClass("active");
-        $(this).parent(".tab-content").addClass("active");
+        $(this).parent(".tab-content").children(".accordion-con").addClass("active"); // $(this).parent(".tab-content").addClass("active");
+
         $(this).parent(".tab-content").children(".accordion-link").addClass("active");
         var dataId = $(this).parent(".tab-content").attr("data-attr");
         document.getElementById(dataId).className += " active";
