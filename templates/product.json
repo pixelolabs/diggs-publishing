@@ -20,6 +20,38 @@
     },
     "product_tab_section_g4EUiU": {
       "type": "product-tab-section",
+      "blocks": {
+        "tabs_zz3VhF": {
+          "type": "tabs",
+          "settings": {
+            "heading": "Detailed product description"
+          }
+        },
+        "tabs_8hjLM9": {
+          "type": "tabs",
+          "settings": {
+            "heading": "Reviews"
+          }
+        },
+        "tabs_iFHY4C": {
+          "type": "tabs",
+          "settings": {
+            "heading": "Shipping information"
+          }
+        },
+        "tabs_NRTHVG": {
+          "type": "tabs",
+          "settings": {
+            "heading": "FAQ"
+          }
+        }
+      },
+      "block_order": [
+        "tabs_zz3VhF",
+        "tabs_8hjLM9",
+        "tabs_iFHY4C",
+        "tabs_NRTHVG"
+      ],
       "settings": {
       }
     },
