@@ -1207,7 +1207,6 @@ jQuery(function () {
 
     for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
-      tabcontent[i].className = tabcontent[i].className.replace(" active", "");
     }
 
     tablink = document.getElementsByClassName("tab-link");
