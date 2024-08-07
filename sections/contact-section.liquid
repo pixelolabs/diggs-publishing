@@ -22,19 +22,27 @@
       </ul>
     </div>
     <div class="form-section text-left">
+      <h2>Get in touch</h2>
       {%- assign formId = 'ContactForm' -%}
       {% form 'contact'
         , id: formId %}
         {% include 'form-status'
           , form: form
           , form_id: formId %}
+          <label>How can we help you? *</label>
+          <input
+            type="text"
+            id="{{ formId }}-subject"
+            placeholder="Subject*"
+            name="contact[Enquiry_Subject]">
+          <label>Full Name *</label>
         <input
           placeholder="Name*"
           type="text"
           id="{{ formId }}-name"
           name="contact[{{ 'contact.form.name' | t }}]"
           value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
-
+          <label>Email Address *</label>
         <input
           placeholder="Email Address*"
           class="email-field"
@@ -58,6 +66,7 @@
               {{ form.errors.messages.email }}.</span>
           </span>
         {%- endif -%}
+        <label>Mobile Number *</label>
         <input
           type="tel"
           id="{{ formId }}-phone"
@@ -65,12 +74,8 @@
           name="contact[Phone]"
           pattern="[0-9\-]*"
           value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}">
-        <input
-          type="text"
-          id="{{ formId }}-subject"
-          placeholder="Subject*"
-          name="contact[Enquiry_Subject]">
-
+         
+          <label>Message</label>
         <textarea
           placeholder="Message"
           rows="10"
