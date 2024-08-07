@@ -85,7 +85,7 @@
                     <span> {{ product.price | money_without_trailing_zeros }}</span>
                   {% endif %}
                 </div>
-
+                <!-- Product Short Description -->
               {% when 'description' %}
                 {%- if product.description != blank -%}
                   <div class="description">
@@ -96,14 +96,14 @@
             {%- endcase -%}
           {% endfor %}
 
-          <!-- Product Short Description -->
-
-          <div class="description">
-            <p>
-              Where Hands Go is a carefully crafted book, handsomely illustrated, for parents to teach their children
-              about the dangers of inappropriate touching... <a>Learn More</a>
-            </p>
-          </div>
+          {% comment %}
+            <div class="description">
+              <p>
+                Where Hands Go is a carefully crafted book, handsomely illustrated, for parents to teach their children
+                about the dangers of inappropriate touching... <a>Learn More</a>
+              </p>
+            </div>
+          {% endcomment %}
 
           <div class="flex-column price__wrapper ">
             {% comment %} Price {% endcomment %}
