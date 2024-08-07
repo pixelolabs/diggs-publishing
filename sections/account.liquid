@@ -1,15 +1,13 @@
 
 
 <div class="account-section">
-    <div class="inner">
-      <div class="container-1340">
-        <div class="heading-section text-center">
-          <h1 class="h1">{{ 'customer.account.title' | t }}</h1>
-          {{ 'layout.customer.log_out' | t | customer_logout_link }}
-        </div>
-      </div>
-    </div>
-    <div class="container-1340 ">
+ 
+    <div class="container-1260">
+      <h2 class="h2 text-center">
+        Your cart is empty
+      </h2>
+      <a href="/collections/all" title="Continue Shopping" class="btn--primary yellow">Continue Shopping</a>
+    
       <div class="account-section__wrapper flex">
         <div class="account-section__table ">
           {% paginate customer.orders by 20 %}
