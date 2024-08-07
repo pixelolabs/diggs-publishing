@@ -1,6 +1,7 @@
 .faq-section-with-category {
   padding-top: 76.9px;
   padding-bottom: 200px;
+
   @include MQ(MQ-980) {
     padding-bottom: 150px;
   }

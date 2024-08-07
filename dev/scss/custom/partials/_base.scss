@@ -478,7 +478,7 @@ h6,
     top: -125px;
     content: "";
     background-size: contain;
-    z-index: 1;
+    z-index: 2;
     filter: brightness(0) saturate(100%) invert(100%) sepia(56%) saturate(587%)
       hue-rotate(316deg) brightness(105%) contrast(114%);
     @include MQ(MQ-1440) {

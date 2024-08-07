@@ -23,13 +23,16 @@
 // }
 .blog-section {
   padding-top: 50px;
-  // padding-bottom: 50px;
+  padding-bottom: 200px;
   position: relative;
   // overflow-x: hidden;
   overflow-x: clip;
   // padding-bottom: 240px;
   @include MQ(MQ-980) {
     padding-top: 20px;
+  }
+  @include MQ(MQ-768) {
+    padding-bottom: 150px;
   }
   // @include MQ(MQ-768) {
   //   padding-bottom: 160px;
