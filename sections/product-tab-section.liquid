@@ -1,187 +1,189 @@
 {% comment %} Tab Section {% endcomment %}
 <div class="product-frequently-bought-section js__product-frequently-bought-section"></div>
-<div class="product-tab-section">
-  <div class="container-1260">
-    <div class="tab-head none-980">
-      <ul class="pdp-tab-head">
-        {%- for block in section.blocks -%}
+{% if section.blocks.size > 0 %}
+  <div class="product-tab-section">
+    <div class="container-1260">
+      <div class="tab-head none-980">
+        <ul class="pdp-tab-head">
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'tabs' -%}
+                {% assign category = block.settings.heading | replace: ' ', '-' %}
+                {% assign category = category | replace: "'", '-' %}
+                {% assign category = category | replace: '--', '-' %}
+                {% assign category = category | replace: '---', '-' %}
+                <li>
+                  <a
+                    class="tab-link"
+                    id="tab-link-{{ category  | downcase}}"
+                    data-attr="{{ category  | downcase}}"
+                  >
+                    {{- block.settings.heading -}}
+                  </a>
+                </li>
+            {%- endcase -%}
+          {% endfor %}
+          {% comment %}
+            <li>
+              <a class="tab-link" id="tab-link-reviews" data-attr="reviews">Reviews</a>
+            </li>
+            <li>
+              <a class="tab-link" id="tab-link-shipping" data-attr="shipping">Shipping information</a>
+            </li>
+            <li>
+              <a class="tab-link" id="tab-link-faq" data-attr="faq">FAQ</a>
+            </li>
+          {% endcomment %}
+        </ul>
+      </div>
+      <div class="main-tab-content">
+        {% for block in section.blocks %}
           {%- case block.type -%}
-            {%- when 'tabs' -%}
-              {% assign category = block.settings.heading | replace: ' ', '-' %}
-              {% assign category = category | replace: "'", '-' %}
-              {% assign category = category | replace: '--', '-' %}
-              {% assign category = category | replace: '---', '-' %}
-              <li>
+            {%- when 'description' -%}
+              {% assign categorytitle = block.settings.category | replace: ' ', '-' %}
+              {% assign categorytitle = categorytitle | replace: "'", '-' %}
+              {% assign categorytitle = categorytitle | replace: '--', '-' %}
+              {% assign categorytitle = categorytitle | replace: '---', '-' %}
+              <div
+                class="tab-content js-tab-content"
+                id="{{ categorytitle | downcase }}"
+              >
                 <a
-                  class="tab-link"
-                  id="tab-link-{{ category  | downcase}}"
-                  data-attr="{{ category  | downcase}}"
+                  class="accordion-link js___accordion"
+                  id="tab-link-{{ categorytitle | downcase }}"
+                  data-attr="{{ categorytitle | downcase }}"
                 >
-                  {{- block.settings.heading -}}
+                  {{- block.settings.category -}}
                 </a>
-              </li>
+                <div class="inner-content accordion-con " data-attr="tab-link-{{ categorytitle | downcase }}">
+                  {% comment %}
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                      industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                      scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                      when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                      <br>
+                      <br>
+                      It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                      essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                      Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageLorem Ipsum is
+                      simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                      it to make a type specimen book.
+                      <br>
+                      <br>
+                      It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                      essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                      Lorem Ipsum passages, and more recently with desktop publishing software like Aldus Page Lorem Ipsum
+                      is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                      it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting
+                      industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                      unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </p>
+                  {% endcomment %}
+                  {{ block.settings.description }}
+                </div>
+              </div>
           {%- endcase -%}
         {% endfor %}
         {% comment %}
-          <li>
-            <a class="tab-link" id="tab-link-reviews" data-attr="reviews">Reviews</a>
-          </li>
-          <li>
-            <a class="tab-link" id="tab-link-shipping" data-attr="shipping">Shipping information</a>
-          </li>
-          <li>
-            <a class="tab-link" id="tab-link-faq" data-attr="faq">FAQ</a>
-          </li>
-        {% endcomment %}
-      </ul>
-    </div>
-    <div class="main-tab-content">
-      {% for block in section.blocks %}
-        {%- case block.type -%}
-          {%- when 'description' -%}
-            {% assign categorytitle = block.settings.category | replace: ' ', '-' %}
-            {% assign categorytitle = categorytitle | replace: "'", '-' %}
-            {% assign categorytitle = categorytitle | replace: '--', '-' %}
-            {% assign categorytitle = categorytitle | replace: '---', '-' %}
-            <div
-              class="tab-content js-tab-content"
-              id="{{ categorytitle | downcase }}"
-            >
-              <a
-                class="accordion-link js___accordion"
-                id="tab-link-{{ categorytitle | downcase }}"
-                data-attr="{{ categorytitle | downcase }}"
-              >
-                {{- block.settings.category -}}
-              </a>
-              <div class="inner-content accordion-con " data-attr="tab-link-{{ categorytitle | downcase }}">
-                {% comment %}
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                    scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    <br>
-                    <br>
-                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-                    essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                    Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageLorem Ipsum is
-                    simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
-                    it to make a type specimen book.
-                    <br>
-                    <br>
-                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-                    essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                    Lorem Ipsum passages, and more recently with desktop publishing software like Aldus Page Lorem Ipsum
-                    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
-                    it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting
-                    industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-                  </p>
-                {% endcomment %}
-                {{ block.settings.description }}
-              </div>
+          <div class="tab-content js-tab-content" id="reviews" data-attr="tab-link-reviews">
+            <a class="accordion-link js___accordion" id="tab-link-reviews" data-attr="reviews">Reviews</a>
+            <div class="inner-content accordion-con overview-content-wrapper">
+              <p>
+                Reviews Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a type specimen book.
+                <br>
+                <br>
+                It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+                Ipsum passages, and more recently with desktop publishing software like Aldus PageLorem Ipsum is simply
+                dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+                ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                book.
+                <br>
+                <br>
+                It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+                Ipsum passages, and more recently with desktop publishing software like Aldus Page Lorem Ipsum is simply
+                dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+                ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book.
+              </p>
             </div>
-        {%- endcase -%}
-      {% endfor %}
-      {% comment %}
-        <div class="tab-content js-tab-content" id="reviews" data-attr="tab-link-reviews">
-          <a class="accordion-link js___accordion" id="tab-link-reviews" data-attr="reviews">Reviews</a>
-          <div class="inner-content accordion-con overview-content-wrapper">
-            <p>
-              Reviews Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-              printer took a galley of type and scrambled it to make a type specimen book.
-              <br>
-              <br>
-              It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-              essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-              Ipsum passages, and more recently with desktop publishing software like Aldus PageLorem Ipsum is simply
-              dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-              book.
-              <br>
-              <br>
-              It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-              essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-              Ipsum passages, and more recently with desktop publishing software like Aldus Page Lorem Ipsum is simply
-              dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-              book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book.
-            </p>
           </div>
-        </div>
-        <div class="tab-content js-tab-content" id="shipping" data-attr="tab-link-shipping">
-          <a class="accordion-link js___accordion" id="tab-link-shipping" data-attr="shipping">Shipping information</a>
-          <div class="inner-content accordion-con overview-content-wrapper">
-            <p>
-              Shipping Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-              printer took a galley of type and scrambled it to make a type specimen book.
-              <br>
-              <br>
-              It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-              essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-              Ipsum passages, and more recently with desktop publishing software like Aldus PageLorem Ipsum is simply
-              dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-              book.
-              <br>
-              <br>
-              It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-              essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-              Ipsum passages, and more recently with desktop publishing software like Aldus Page Lorem Ipsum is simply
-              dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-              book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book.
-            </p>
+          <div class="tab-content js-tab-content" id="shipping" data-attr="tab-link-shipping">
+            <a class="accordion-link js___accordion" id="tab-link-shipping" data-attr="shipping">Shipping information</a>
+            <div class="inner-content accordion-con overview-content-wrapper">
+              <p>
+                Shipping Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a type specimen book.
+                <br>
+                <br>
+                It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+                Ipsum passages, and more recently with desktop publishing software like Aldus PageLorem Ipsum is simply
+                dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+                ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                book.
+                <br>
+                <br>
+                It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+                Ipsum passages, and more recently with desktop publishing software like Aldus Page Lorem Ipsum is simply
+                dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+                ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book.
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="tab-content js-tab-content active" id="faq" data-attr="tab-link-faq">
-          <a class="accordion-link js___accordion" id="tab-link-faq" data-attr="faq">FAQ</a>
-          <div class="inner-content accordion-con overview-content-wrapper">
-            <p>
-              FAQ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-              printer took a galley of type and scrambled it to make a type specimen book.
-              <br>
-              <br>
-              It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-              essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-              Ipsum passages, and more recently with desktop publishing software like Aldus PageLorem Ipsum is simply
-              dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-              book.
-              <br>
-              <br>
-              It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-              essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-              Ipsum passages, and more recently with desktop publishing software like Aldus Page Lorem Ipsum is simply
-              dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-              book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book.
-            </p>
+          <div class="tab-content js-tab-content active" id="faq" data-attr="tab-link-faq">
+            <a class="accordion-link js___accordion" id="tab-link-faq" data-attr="faq">FAQ</a>
+            <div class="inner-content accordion-con overview-content-wrapper">
+              <p>
+                FAQ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a type specimen book.
+                <br>
+                <br>
+                It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+                Ipsum passages, and more recently with desktop publishing software like Aldus PageLorem Ipsum is simply
+                dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+                ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                book.
+                <br>
+                <br>
+                It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+                Ipsum passages, and more recently with desktop publishing software like Aldus Page Lorem Ipsum is simply
+                dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+                ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book.
+              </p>
+            </div>
           </div>
-        </div>
-      {% endcomment %}
+        {% endcomment %}
+      </div>
     </div>
   </div>
-</div>
+{% endif %}
 
 {% comment %}
   <div class="half-image-half-content-outer body-safety-2  blue-wave">
