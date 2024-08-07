@@ -23,37 +23,10 @@
             "buttonLink": "shopify:\/\/collections",
             "content_alignment": "left"
           }
-        },
-        "slide_VH9idD": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "backgroundImage": "shopify:\/\/shop_images\/body_safety_wise_1.webp",
-            "pretitle": "hello",
-            "title": "this is the banner",
-            "description": "",
-            "buttonText": "home",
-            "buttonLink": "",
-            "content_alignment": "right"
-          }
-        },
-        "slide_Nrmfqw": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "pretitle": "",
-            "title": "this is the vedio banner",
-            "description": "",
-            "buttonText": "",
-            "buttonLink": "",
-            "content_alignment": "left"
-          }
         }
       },
       "block_order": [
-        "d96d2ebe-b86c-4725-886e-21c6b9472a39",
-        "slide_VH9idD",
-        "slide_Nrmfqw"
+        "d96d2ebe-b86c-4725-886e-21c6b9472a39"
       ],
       "settings": {
         "color_scheme": "scheme-1"
@@ -74,7 +47,7 @@
         "product_QdJg9b": {
           "type": "product",
           "settings": {
-            "product": "always-there-a-childrens-book-about-healing-from-grief"
+            "product": "backpack-1"
           }
         },
         "product_kqjaAK": {
