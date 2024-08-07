@@ -1203,7 +1203,6 @@ jQuery(function () {
   $(".tab-link").on("click", function () {
     var dataId = $(this).attr("data-attr");
     var i, tabcontent, tablink;
-    var contentinner = document.getElementsByClassName("accordion-con");
     tabcontent = document.getElementsByClassName("tab-content");
 
     for (i = 0; i < tabcontent.length; i++) {
@@ -1217,7 +1216,6 @@ jQuery(function () {
     }
 
     document.getElementById(dataId).style.display = "block";
-    document.getElementById(dataId).children(".accordion-con").style.display = "block";
     event.currentTarget.className += " active";
     $(this).addClass("active");
     /*PDP select*/
