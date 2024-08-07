@@ -29,12 +29,16 @@
         {% include 'form-status'
           , form: form
           , form_id: formId %}
+          <div class="half-and-half">
+            <div class="half">
           <label>How can we help you? *</label>
           <input
             type="text"
             id="{{ formId }}-subject"
             placeholder="Subject*"
             name="contact[Enquiry_Subject]">
+            </div>
+            <div class="half">
           <label>Full Name *</label>
         <input
           placeholder="Name*"
@@ -42,6 +46,10 @@
           id="{{ formId }}-name"
           name="contact[{{ 'contact.form.name' | t }}]"
           value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
+          </div>
+        </div>
+        <div class="half-and-half">
+          <div class="half">
           <label>Email Address *</label>
         <input
           placeholder="Email Address*"
@@ -66,6 +74,9 @@
               {{ form.errors.messages.email }}.</span>
           </span>
         {%- endif -%}
+        </div>
+        
+          <div class="half">
         <label>Mobile Number *</label>
         <input
           type="tel"
@@ -74,7 +85,8 @@
           name="contact[Phone]"
           pattern="[0-9\-]*"
           value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}">
-         
+         </div>
+         </div>
           <label>Message</label>
         <textarea
           placeholder="Message"
