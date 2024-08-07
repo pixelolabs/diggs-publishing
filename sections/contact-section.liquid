@@ -1,29 +1,23 @@
 <div class="contact-section">
-  <div class="container-1000 text-center">
-    <div class="content">
-      {% if section.settings.title != blank %}
-        <h2>{{ section.settings.title }}</h2>
-      {% endif %}
-      <div class="full-format description  ">
-        {% if section.settings.title != blank %}
-          {{ section.settings.description }}
-        {% else %}
-          {{ page.content }}
-        {% endif %}
-      </div>
-    </div>
+  <div class="container-1260 text-center">
+  
     <div class="contact-info-section">
+      <h2 class="h4">Contact Information</h2>
+      <p>Contact us or simply fill in the form and we will get back to you as soon as possible.</p>
       <ul>
         <li>
-          <span class="title uppercase">
-            Phone</span>
-          <a href="tel:{% if settings.numberPlusSign == true %}+{%endif%}{{settings.number}}">{{ settings.number }}</a>
+          
+           <div class="icon">{% include 'icon-phone-contact' %}</div>
+          <a href="tel:+1234567890}">+(123) 456-7890</a>
         </li>
         <li>
-          <span class="title uppercase">
-            Email</span>
-          <a href="mailto:{{settings.emailAddress}}">
-            {{ settings.emailAddress }}</a>
+          <div class="icon">{% include 'icon-email-contact' %}</div>
+          <a href="mailto:demo@gmail.com">
+            demo@gmail.com</a>
+        </li>
+        <li>
+          <div class="icon">{% include 'icon-address-contact' %}</div>
+        <p>Lorem Ipsum is simply dummy text</p>
         </li>
       </ul>
     </div>
