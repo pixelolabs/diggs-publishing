@@ -185,21 +185,23 @@
             {%- when 'three-column-info' -%}
               <div class="pdp-three-column-box">
                 <ul>
-                  <li>
-                    {% if block.settings.icon_1 != blank %}
-                      <div class="icon">
-                        {{
-                          block.settings.icon_1
-                          | image_url: width: 200
-                          | image_tag: loading: 'lazy', widths: '200x200'
-                        }}
-                        {% comment %} <img src="{{ 'icon-truck-dark.webp' | asset_url }}"> {% endcomment %}
-                      </div>
-                    {% endif %}
-                    {% if block.settings.text_1 != blank %}
-                      <span>{{ block.settings.text_1 }}</span>
-                    {% endif %}
-                  </li>
+                  {% if block.settings.text_1 != blank or block.settings.icon_1 != blank %}
+                    <li>
+                      {% if block.settings.icon_1 != blank %}
+                        <div class="icon">
+                          {{
+                            block.settings.icon_1
+                            | image_url: width: 200
+                            | image_tag: loading: 'lazy', widths: '200x200'
+                          }}
+                          {% comment %} <img src="{{ 'icon-truck-dark.webp' | asset_url }}"> {% endcomment %}
+                        </div>
+                      {% endif %}
+                      {% if block.settings.text_1 != blank %}
+                        <span>{{ block.settings.text_1 }}</span>
+                      {% endif %}
+                    </li>
+                  {% endif %}
                   <li>
                     <div class="icon">
                       <img src="{{ 'icon-check-dark.webp' | asset_url }}">
