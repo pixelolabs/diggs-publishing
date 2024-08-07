@@ -12,7 +12,6 @@
     "innerBanner": {
       "type": "inner-hero-section",
       "settings": {
-        "color_scheme": "",
         "image": "{{ blog.metafields.custom.inner_hero_banner.value }}",
         "mobileImage": "{{ blog.metafields.custom.blog_hero_banner_image_mobile_.value }}",
         "title": "{{ blog.title }}",
@@ -29,7 +28,7 @@
         "show_featured_article": true,
         "featured_article": "blog\/what-age-should-kids-learn-about-consent",
         "featured_article2": "",
-        "blogItems": 3
+        "blogItems": 6
       }
     }
   },
