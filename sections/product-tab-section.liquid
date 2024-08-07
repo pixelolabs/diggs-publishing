@@ -13,7 +13,7 @@
               {% assign category = category | replace: '---', '-' %}
               <li>
                 <a
-                  class="tab-link active"
+                  class="tab-link"
                   id="tab-link-{{ category  | downcase}}"
                   data-attr="{{ category  | downcase}}"
                 >
@@ -44,7 +44,7 @@
             {% assign categorytitle = categorytitle | replace: '--', '-' %}
             {% assign categorytitle = categorytitle | replace: '---', '-' %}
             <div
-              class="tab-content js-tab-content active"
+              class="tab-content js-tab-content"
               id="{{ categorytitle | downcase }}"
               data-attr="tab-link-{{ categorytitle | downcase }}"
             >
