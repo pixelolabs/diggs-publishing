@@ -89,6 +89,56 @@
       "settings": {
       }
     },
+    "half_image_half_content_cmMnWa": {
+      "type": "half-image-half-content",
+      "blocks": {
+        "image_Q7nhWk": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "{{ product.metafields.custom.half_image_half_content_image_first_.value }}",
+            "showVideo": false,
+            "video": "",
+            "videoPopup": false,
+            "pretitle": "",
+            "title": "{{ product.metafields.custom.half_image_half_content_title_first.value }}",
+            "description": "{{ product.metafields.custom.half_image_half_content_description_first_ | metafield_tag }}",
+            "buttonText": "{{ product.metafields.custom.half_image_half_content_button_text_first_.value }}",
+            "buttonLink": "{{ product.metafields.custom.half_image_half_content_button_link_first_.value }}",
+            "background_color": "blue",
+            "fontSize": false,
+            "center": false
+          }
+        },
+        "image_kL9WAT": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "{{ product.metafields.custom.half_image_half_content_image_second_.value }}",
+            "showVideo": false,
+            "video": "",
+            "videoPopup": false,
+            "pretitle": "",
+            "title": "{{ product.metafields.custom.half_image_half_content_title_second.value }}",
+            "description": "{{ product.metafields.custom.half_image_half_content_description_second_ | metafield_tag }}",
+            "buttonText": "{{ product.metafields.custom.half_image_half_content_button_text_second_.value }}",
+            "buttonLink": "{{ product.metafields.custom.half_image_half_content_button_link_second_.value }}",
+            "background_color": "transparent-bg",
+            "fontSize": false,
+            "center": false
+          }
+        }
+      },
+      "block_order": [
+        "image_Q7nhWk",
+        "image_kL9WAT"
+      ],
+      "settings": {
+        "section_class": "",
+        "image_position": "left",
+        "wave_color": "blue-wave"
+      }
+    },
     "product_recommendations_maXkrb": {
       "type": "product-recommendations",
       "settings": {
@@ -104,6 +154,7 @@
   "order": [
     "product_gDBkfE",
     "product_tab_section_g4EUiU",
+    "half_image_half_content_cmMnWa",
     "product_recommendations_maXkrb",
     "product_reviews_section_HHXAiU"
   ]
