@@ -98,15 +98,15 @@
           "type": "tabs",
           "disabled": true,
           "settings": {
-            "heading": "FAQ"
+            "heading": "{{ product.metafields.custom.product_tab_fourth_category.value }}"
           }
         },
         "description_pRXqni": {
           "type": "description",
           "disabled": true,
           "settings": {
-            "category": "FAQ",
-            "description": "<p>FAQ Section<\/p>"
+            "category": "{{ product.metafields.custom.product_tab_fourth_category.value }}",
+            "description": "<p>{{ product.metafields.custom.product_tab_fourth_category_description | metafield_tag }}<\/p>"
           }
         }
       },

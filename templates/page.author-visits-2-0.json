@@ -48,7 +48,11 @@
       "settings": {
         "section_class": "author-visit-1",
         "image_position": "left",
-        "wave_color": "transparent-wave"
+        "wave_color": "transparent-wave",
+        "paddingtop": 0,
+        "paddingtopmobile": 0,
+        "paddingbottom": 0,
+        "paddingbottomMobile": 0
       }
     },
     "full_width_cta_eNdrVD": {
@@ -124,7 +128,11 @@
       "settings": {
         "section_class": "author-visit-2",
         "image_position": "right",
-        "wave_color": "transparent-wave"
+        "wave_color": "transparent-wave",
+        "paddingtop": 0,
+        "paddingtopmobile": 0,
+        "paddingbottom": 0,
+        "paddingbottomMobile": 0
       }
     },
     "full_width_cta_v2_WcKbHe": {

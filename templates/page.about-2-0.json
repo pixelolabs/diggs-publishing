@@ -85,7 +85,11 @@
       "settings": {
         "section_class": "about-us-section",
         "image_position": "left",
-        "wave_color": "transparent-wave"
+        "wave_color": "transparent-wave",
+        "paddingtop": 0,
+        "paddingtopmobile": 0,
+        "paddingbottom": 201,
+        "paddingbottomMobile": 140
       }
     }
   },

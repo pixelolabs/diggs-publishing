@@ -12,7 +12,6 @@
     "innerBanner": {
       "type": "inner-hero-section",
       "settings": {
-        "color_scheme": "",
         "image": "shopify:\/\/shop_images\/body_safety_banner.webp",
         "mobileImage": "shopify:\/\/shop_images\/body_safety_banner_m.jpg",
         "title": "Body Safety Wise Author Visit Program",
@@ -32,7 +31,7 @@
             "image": "shopify:\/\/shop_images\/body-safety-video-poster.png",
             "showVideo": false,
             "video": "",
-            "videoPopup": true,
+            "videoPopup": false,
             "pretitle": "",
             "title": "Programs",
             "description": "<p>Welcome to my Body Safety Wise programs! I am excited to offer two unique initiatives that promote literacy, education, diversity, and body safety awareness. The first initiative is the Body Safety Wise Author Visit Program. This program is dedicated to providing age-appropriate resources and lessons that empower children with the knowledge and skills to stay safe and healthy. Through engaging presentations and interactive activities, students PK-8th grade will learn about body safety, boundaries, and consent in a fun and approachable way. As an author and educator, I am committed to helping children develop the tools they need to stay safe and healthy, both physically and emotionally. <\/p>",
@@ -50,7 +49,11 @@
       "settings": {
         "section_class": "body-safety-1",
         "image_position": "left",
-        "wave_color": "transparent-wave"
+        "wave_color": "transparent-wave",
+        "paddingtop": 0,
+        "paddingtopmobile": 0,
+        "paddingbottom": 0,
+        "paddingbottomMobile": 0
       }
     },
     "full_width_cta_UC7Amx": {
@@ -90,7 +93,11 @@
       "settings": {
         "section_class": "body-safety-2",
         "image_position": "left",
-        "wave_color": "blue-wave"
+        "wave_color": "blue-wave",
+        "paddingtop": 0,
+        "paddingtopmobile": 0,
+        "paddingbottom": 0,
+        "paddingbottomMobile": 0
       }
     },
     "half_image_half_content_pYBVgk": {
@@ -120,7 +127,11 @@
       "settings": {
         "section_class": "body-safety-3",
         "image_position": "left",
-        "wave_color": "transparent-wave"
+        "wave_color": "transparent-wave",
+        "paddingtop": 0,
+        "paddingtopmobile": 0,
+        "paddingbottom": 0,
+        "paddingbottomMobile": 0
       }
     },
     "contact_form_with_text_yJq3pj": {

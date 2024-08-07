@@ -1,0 +1,36 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "innerBanner": {
+      "type": "inner-hero-section",
+      "settings": {
+        "image": "{{ page.metafields.custom.hero_banner_background_image_desktop_.value }}",
+        "mobileImage": "{{ page.metafields.custom.hero_banner_background_image_mobile_.value }}",
+        "title": "{{ page.metafields.custom.hero_banner_title.value }}",
+        "description": "{{ page.metafields.custom.hero_banner_description | metafield_tag }}",
+        "buttonText1": "{{ page.metafields.custom.hero_banner_button_text.value }}",
+        "buttonLink1": "{{ page.metafields.custom.hero_banner_button_link.value }}",
+        "button_bg": "pink",
+        "content_alignment": "left"
+      }
+    },
+    "page_default_content_6YCngU": {
+      "type": "page-default-content",
+      "settings": {
+        "section_class": ""
+      }
+    }
+  },
+  "order": [
+    "innerBanner",
+    "page_default_content_6YCngU"
+  ]
+}
