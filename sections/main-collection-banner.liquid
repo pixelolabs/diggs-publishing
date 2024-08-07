@@ -1,16 +1,19 @@
-
-
 <div class="collection-hero-section">
- <div class="container-1260 flex">
-  <div class="content">
-    <h1 class="h2">Collections</h1>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-   
+  <div class="container-1260 flex">
+    <div class="content">
+      {% if section.settings.title != blank %}
+        <h1 class="h2">{{ section.settings.title }}</h1>
+      {% else %}
+        <h1 class="h2">Collection</h1>
+      {% endif %}
+      {% if section.settings.description != blank %}
+        {{ section.settings.description }}
+      {% endif %}
+    </div>
+    <div class="image-section">
+      <img src="{{ 'dummy-collection.webp' | asset_url }}">
+    </div>
   </div>
-  <div class="image-section">
-    <img src="{{ 'dummy-collection.webp' | asset_url }}" /> 
-  </div>
- </div>
 </div>
 
 {% schema %}
@@ -18,6 +21,16 @@
   "name": "t:sections.main-collection-banner.name",
   "class": "section",
   "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
     {
       "type": "paragraph",
       "content": "t:sections.main-collection-banner.settings.paragraph.content"
