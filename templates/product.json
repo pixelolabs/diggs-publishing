@@ -21,11 +21,17 @@
           "type": "price",
           "settings": {
           }
+        },
+        "description_akCmxJ": {
+          "type": "description",
+          "settings": {
+          }
         }
       },
       "block_order": [
         "title_6qDmLq",
-        "price_npmjnD"
+        "price_npmjnD",
+        "description_akCmxJ"
       ],
       "settings": {
         "product_quantity_enable": false,
