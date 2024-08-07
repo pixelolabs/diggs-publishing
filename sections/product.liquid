@@ -186,9 +186,16 @@
               <div class="pdp-three-column-box">
                 <ul>
                   <li>
-                    <div class="icon">
-                      <img src="{{ 'icon-truck-dark.webp' | asset_url }}">
-                    </div>
+                    {% if block.settings.icon_1 != blank %}
+                      <div class="icon">
+                        {{
+                          block.settings.icon_1
+                          | image_url: width: 200
+                          | image_tag: loading: 'lazy', widths: '200x200'
+                        }}
+                        {% comment %} <img src="{{ 'icon-truck-dark.webp' | asset_url }}"> {% endcomment %}
+                      </div>
+                    {% endif %}
                     <span>Free Shipping</span>
                   </li>
                   <li>
@@ -280,7 +287,7 @@
       "settings": [
         {
           "type": "image_picker",
-          "id": "Icon_1",
+          "id": "icon_1",
           "label": "Icon (First)"
         },
         {
@@ -290,7 +297,7 @@
         },
         {
           "type": "image_picker",
-          "id": "Icon_2",
+          "id": "icon_2",
           "label": "Icon (Second)"
         },
         {
@@ -301,7 +308,7 @@
 
         {
           "type": "image_picker",
-          "id": "Icon_3",
+          "id": "icon_3",
           "label": "Icon (Third)"
         },
         {
