@@ -225,10 +225,13 @@
   .container-1240 {
     padding: 0 20px;
   }
-  padding: 60px 0 0px;
+  padding: 60px 0 200px 0px;
   position: relative;
   background: $color-off-white-light;
   z-index: 3;
+  @include MQ(MQ-768) {
+    padding-bottom: 150px;
+  }
   .container-1260.graphics {
     position: relative;
     &::before {

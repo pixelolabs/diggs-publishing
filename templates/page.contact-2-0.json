@@ -1,0 +1,37 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "innerBanner": {
+      "type": "inner-hero-section",
+      "settings": {
+        "image": "{{ page.metafields.custom.hero_banner_background_image_desktop_.value }}",
+        "mobileImage": "{{ page.metafields.custom.hero_banner_background_image_mobile_.value }}",
+        "title": "Contact",
+        "description": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s<\/p>",
+        "buttonText1": "{{ page.metafields.custom.hero_banner_button_text.value }}",
+        "buttonLink1": "{{ page.metafields.custom.hero_banner_button_link.value }}",
+        "button_bg": "pink",
+        "content_alignment": "left"
+      }
+    },
+    "contact_section_RHMnDG": {
+      "type": "contact-section",
+      "settings": {
+        "title": "",
+        "description": ""
+      }
+    }
+  },
+  "order": [
+    "innerBanner",
+    "contact_section_RHMnDG"
+  ]
+}
