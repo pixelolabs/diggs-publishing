@@ -290,7 +290,7 @@
           "image": "{{ localization.market.metafields.custom.inner_hero_banner_image.value }}",
           "mobileImage": "{{ localization.market.metafields.custom.inner_hero_banner_image.value }}",
           "title": "",
-          "description": "<p>description<\/p>",
+          "description": "",
           "buttonText1": "",
           "buttonLink1": "",
           "button_bg": "green",
