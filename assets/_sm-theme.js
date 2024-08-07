@@ -942,7 +942,7 @@ jQuery(function () {
 
   var productSectionSlider = new Swiper(".js__article-slider", {
     slidesPerView: 3,
-    spaceBetween: 32,
+    spaceBetween: 30,
     // centeredSlides: true,
     // resistance: false,
     loop: true,
