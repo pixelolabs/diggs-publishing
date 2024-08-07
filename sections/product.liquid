@@ -65,6 +65,8 @@
         <div class="">
           {%- for block in section.blocks -%}
             {%- case block.type -%}
+              {%- when '@app' -%}
+                {% render block %}
               {%- when 'title' -%}
                 <h1 class="h2 medium js__pdp-title uppercase">
                   {{ product.title | escape }}
