@@ -3,10 +3,9 @@
 <div class="account-section">
  
     <div class="container-1260">
-      <h2 class="h2 text-center">
-        Your cart is empty
-      </h2>
-      <a href="/collections/all" title="Continue Shopping" class="btn--primary yellow">Continue Shopping</a>
+      <h1 class="h2">{{ 'customer.account.title' | t }}</h1>
+      
+      {{ 'layout.customer.log_out' | t | customer_logout_link }}
     
       <div class="account-section__wrapper flex">
         <div class="account-section__table ">
