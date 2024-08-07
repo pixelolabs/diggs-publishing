@@ -151,15 +151,15 @@
         "btnLink": "{{ product.metafields.custom.full_width_content_button_link.value }}"
       }
     },
-    "product_recommendations_maXkrb": {
-      "type": "product-recommendations",
-      "settings": {
-        "title": "you may also like"
-      }
-    },
     "product_reviews_section_HHXAiU": {
       "type": "product-reviews-section",
       "settings": {
+      }
+    },
+    "product_recommendations_YxCiEQ": {
+      "type": "product-recommendations",
+      "settings": {
+        "title": "hiii"
       }
     }
   },
@@ -169,7 +169,7 @@
     "product_half_image_half_content_KJNQBb",
     "product_half_image_half_content_Yn8wKT",
     "product_full_width_content_section_v2_bWNnmF",
-    "product_recommendations_maXkrb",
-    "product_reviews_section_HHXAiU"
+    "product_reviews_section_HHXAiU",
+    "product_recommendations_YxCiEQ"
   ]
 }
