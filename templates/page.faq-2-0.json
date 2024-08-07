@@ -12,7 +12,6 @@
     "innerBanner": {
       "type": "inner-hero-section",
       "settings": {
-        "color_scheme": "",
         "image": "shopify:\/\/shop_images\/faq-banner-image.png",
         "mobileImage": "shopify:\/\/shop_images\/Group_482562.png",
         "title": "FAQ",
