@@ -11,6 +11,16 @@
   "sections": {
     "product_gDBkfE": {
       "type": "product",
+      "blocks": {
+        "title_6qDmLq": {
+          "type": "title",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "title_6qDmLq"
+      ],
       "settings": {
         "product_quantity_enable": false,
         "enable_payment_button": true,
