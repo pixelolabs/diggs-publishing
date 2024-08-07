@@ -8,38 +8,34 @@
   >
     <div class="container-1260 flex-wrap">
       <div class="top-section">
-        <h2 class="h2 text-center">You MAY ALSO LIKE</h2>
+        <h2 class="h2 text-center">{{ section.settings.title }}</h2>
       </div>
-   
-    <div class="inner">
-      <div class="product-recommendations-list slider js__product-slider">
-        <div class="swiper-wrapper">
-          {% assign productHandles = metafieldsHandleForProducts | split: '|' %}
 
-          {% for productRec in productHandles %}
-            {% assign productRelated = all_products[productRec] %}
+      <div class="inner">
+        <div class="product-recommendations-list slider js__product-slider">
+          <div class="swiper-wrapper">
+            {% assign productHandles = metafieldsHandleForProducts | split: '|' %}
 
-            <div class="product-card swiper-slide slide ">
-              {% include 'product_Card'  with  productRelated: productRelated , show_price: true, show_tags: true, show_auto_tags: true, show_title: true, show_fav: true, show_secondary_button: true %}
-            </div>
-          {% endfor %}
-        </div>
-        <div class="swiper-button-prev-product-slider">
-          {% include 'icon-arrow-slide' %}
-        </div>
-        <div class="swiper-button-next-product-slider">
-          {% include 'icon-arrow-slide' %}
+            {% for productRec in productHandles %}
+              {% assign productRelated = all_products[productRec] %}
+
+              <div class="product-card swiper-slide slide ">
+                {% include 'product_Card'  with  productRelated: productRelated , show_price: true, show_tags: true, show_auto_tags: true, show_title: true, show_fav: true, show_secondary_button: true %}
+              </div>
+            {% endfor %}
+          </div>
+          <div class="swiper-button-prev-product-slider">
+            {% include 'icon-arrow-slide' %}
+          </div>
+          <div class="swiper-button-next-product-slider">
+            {% include 'icon-arrow-slide' %}
+          </div>
         </div>
       </div>
-    </div>
     </div>
   </div>
 
 {% else %}
-
-
-  
- 
   <div
     class="product-recommendations "
     data-base-url="{{ routes.product_recommendations_url }}"
@@ -52,40 +48,38 @@
         <div class="three-column-product-slider-v2 pdp">
           <div class="container-1260 flex-wrap">
             <div class="top-section">
-              <h2 class="h2 text-center">You MAY ALSO LIKE</h2>
+              <h2 class="h2 text-center">v{{ section.settings.title }}</h2>
             </div>
-          <div class="inner">
-            <div class="slider-outer">
-            <div
-              class="product-recommendations-list slider js__product-slider js__product-slider-recommendations"
+            <div class="inner">
+              <div class="slider-outer">
+                <div
+                  class="product-recommendations-list slider js__product-slider js__product-slider-recommendations"
 
-              id="js__pdp-recommendation-slider"
-            >
-              <div class="swiper-wrapper">
-                {% comment %}
-                  <div
-                    class="product-recommendations-list flex-wrap "
-                    {%- if settings.product_recommendation_slider == 'on' -%}
-                      id="js__pdp-recommendation-slider"
-                    {%- endif -%}
-                  >
-                {% endcomment %}
-                {%- for productRelated in recommendations.products -%}
-                  <div class="product-card swiper-slide slide ">
-                    {% include 'product_Card' with productRelated: productRelated , show_price: true, show_tags: true, show_auto_tags: true, show_title: true, show_fav: false, show_secondary_button: false %}
-      
-                             </div>
-                {% endfor %}
+                  id="js__pdp-recommendation-slider"
+                >
+                  <div class="swiper-wrapper">
+                    {% comment %}
+                      <div
+                        class="product-recommendations-list flex-wrap "
+                        {%- if settings.product_recommendation_slider == 'on' -%}
+                          id="js__pdp-recommendation-slider"
+                        {%- endif -%}
+                      >
+                    {% endcomment %}
+                    {%- for productRelated in recommendations.products -%}
+                      <div class="product-card swiper-slide slide ">
+                        {% include 'product_Card' with productRelated: productRelated , show_price: true, show_tags: true, show_auto_tags: true, show_title: true, show_fav: false, show_secondary_button: false %}
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+                <div class="swiper-button-prev-product-slider">
+                  {% include 'icon-arrow-slide-black' %}
+                </div>
+                <div class="swiper-button-next-product-slider">
+                  {% include 'icon-arrow-slide-black' %}
+                </div>
               </div>
-            
-            </div>
-            <div class="swiper-button-prev-product-slider">
-              {% include 'icon-arrow-slide-black' %}
-            </div>
-            <div class="swiper-button-next-product-slider">
-              {% include 'icon-arrow-slide-black' %}
-            </div>
-            </div>
             </div>
           </div>
         </div>
@@ -124,41 +118,38 @@
 
           // RECHARGE
 
-        //  callRechargeScript();
+          //  callRechargeScript();
 
           // NO RECHARGE
 
-         // callNoRechargeScript();
-         var productRecomm = new Swiper('#js__pdp-recommendation-slider', {
-          slidesPerView: 3,
-          spaceBetween: 39,
-          // centeredSlides: true,
-          // resistance: false,
-          loop:true,
-          resistance: false,
-          shortSwipes: true,
-          longSwipes: false,
-          // scrollOverflowOptions: null,
-          // loopedSlidesLimit: false,
-          breakpoints: {
+          // callNoRechargeScript();
+          var productRecomm = new Swiper('#js__pdp-recommendation-slider', {
+            slidesPerView: 3,
+            spaceBetween: 39,
+            // centeredSlides: true,
+            // resistance: false,
+            loop: true,
+            resistance: false,
+            shortSwipes: true,
+            longSwipes: false,
+            // scrollOverflowOptions: null,
+            // loopedSlidesLimit: false,
+            breakpoints: {
               0: {
-                  slidesPerView: 1,
+                slidesPerView: 1,
               },
               769: {
-                  slidesPerView: 2,
+                slidesPerView: 2,
               },
               1025: {
-                  slidesPerView: 3,
-                 
+                slidesPerView: 3,
               },
-          },
-          navigation: {
-            nextEl: ".swiper-button-next-product-slider",
-            prevEl: ".swiper-button-prev-product-slider"
-          }
-          
-      });
-        
+            },
+            navigation: {
+              nextEl: '.swiper-button-next-product-slider',
+              prevEl: '.swiper-button-prev-product-slider',
+            },
+          });
         }
       };
       request.send();
