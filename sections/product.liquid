@@ -63,14 +63,26 @@
         data-enable-history-state="true"
       >
         <div class="">
-          <h1 class="h2 medium js__pdp-title uppercase">
-            {% if product.metafields.product.display_name != blank %}
-              {{ product.metafields.product.display_name }}
-            {% else %}
-              {{ product.title }}
-            {% endif %}
-          </h1>
-
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'title' -%}
+                <div class="product__title" {{ block.shopify_attributes }}>
+                  <h1>{{ product.title | escape }}</h1>
+                  <a href="{{ product.url }}" class="product__title">
+                    <h2 class="h1">
+                      {{ product.title | escape }}
+                    </h2>
+                  </a>
+                </div>
+                <h1 class="h2 medium js__pdp-title uppercase">
+                  {% if product.metafields.product.display_name != blank %}
+                    {{ product.metafields.product.display_name }}
+                  {% else %}
+                    {{ product.title }}
+                  {% endif %}
+                </h1>
+            {%- endcase -%}
+          {% endfor %}
           <div
             class="product-single__prices"
             itemprop="price"
