@@ -159,7 +159,7 @@
     "product_recommendations_YxCiEQ": {
       "type": "product-recommendations",
       "settings": {
-        "title1": "You may like"
+        "title": "You may like"
       }
     }
   },
