@@ -202,18 +202,40 @@
                       {% endif %}
                     </li>
                   {% endif %}
-                  <li>
-                    <div class="icon">
-                      <img src="{{ 'icon-check-dark.webp' | asset_url }}">
-                    </div>
-                    <span>Safe Checkout</span>
-                  </li>
-                  <li>
-                    <div class="icon">
-                      <img src="{{ 'icon-return-dark.webp' | asset_url }}">
-                    </div>
-                    <span>Hassle Free Returns</span>
-                  </li>
+                  {% if block.settings.text_2 != blank or block.settings.icon_2 != blank %}
+                    <li>
+                      {% if block.settings.icon_2 != blank %}
+                        <div class="icon">
+                          {{
+                            block.settings.icon_2
+                            | image_url: width: 200
+                            | image_tag: loading: 'lazy', widths: '200x200'
+                          }}
+                          {% comment %} <img src="{{ 'icon-truck-dark.webp' | asset_url }}"> {% endcomment %}
+                        </div>
+                      {% endif %}
+                      {% if block.settings.text_2 != blank %}
+                        <span>{{ block.settings.text_2 }}</span>
+                      {% endif %}
+                    </li>
+                  {% endif %}
+                  {% if block.settings.text_3 != blank or block.settings.icon_3 != blank %}
+                    <li>
+                      {% if block.settings.icon_3 != blank %}
+                        <div class="icon">
+                          {{
+                            block.settings.icon_3
+                            | image_url: width: 200
+                            | image_tag: loading: 'lazy', widths: '200x200'
+                          }}
+                          {% comment %} <img src="{{ 'icon-truck-dark.webp' | asset_url }}"> {% endcomment %}
+                        </div>
+                      {% endif %}
+                      {% if block.settings.text_3 != blank %}
+                        <span>{{ block.settings.text_3 }}</span>
+                      {% endif %}
+                    </li>
+                  {% endif %}
                 </ul>
               </div>
           {% endcase %}
