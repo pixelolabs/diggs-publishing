@@ -71,20 +71,22 @@
                 <h1 class="h2 medium js__pdp-title uppercase">
                   {{ product.title | escape }}
                 </h1>
+
+              {% when 'price' %}
+                <div
+                  class="product-single__prices"
+                  itemprop="price"
+                  content="{{ current_variant.price | divided_by: 100.00 }}"
+                >
+                  {% if product.price < product.compare_at_price %}
+                    <s>{{ product.compare_at_price | money_without_trailing_zeros }}</s>
+                    <span>{{ product.price | money_without_trailing_zeros }}</span>
+                  {% else %}
+                    <span> {{ product.price | money_without_trailing_zeros }}</span>
+                  {% endif %}
+                </div>
             {%- endcase -%}
           {% endfor %}
-          <div
-            class="product-single__prices"
-            itemprop="price"
-            content="{{ current_variant.price | divided_by: 100.00 }}"
-          >
-            {% if product.price < product.compare_at_price %}
-              <s>{{ product.compare_at_price | money_without_trailing_zeros }}</s>
-              <span>{{ product.price | money_without_trailing_zeros }}</span>
-            {% else %}
-              <span> {{ product.price | money_without_trailing_zeros }}</span>
-            {% endif %}
-          </div>
 
           <!-- Product Short Description -->
 
