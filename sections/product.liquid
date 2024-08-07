@@ -7,199 +7,193 @@
 
 <div id="product" class="product">
   <div class="inner">
-  {%- unless template == 'index' or template == 'cart' or template == 'list-collections' or template == '404' -%}
-    {%- assign t = template | split: '.' | first -%}
-    <div class="breadcrump hide" role="navigation" aria-label="breadcrumbs">
-      <div class="container-1300">
-        <ul>
-          <li>
-            <a href="/"> Home </a>
-          </li>
-          {% assign full_url = request.path %}
-          {% assign productURL = full_url | split: '/' %}
-          {% if productURL[1] == 'collections' %}
+    {%- unless template == 'index' or template == 'cart' or template == 'list-collections' or template == '404' -%}
+      {%- assign t = template | split: '.' | first -%}
+      <div class="breadcrump hide" role="navigation" aria-label="breadcrumbs">
+        <div class="container-1300">
+          <ul>
             <li>
-              <a href="{{ collections[productURL[2] ].url }}" title="{{ collections[productURL[2] ].title }}">
-                {{ collections[productURL[2]].title }}
-              </a>
+              <a href="/"> Home </a>
             </li>
-          {% endif %}
-          <li class="active">
-            <span>{{ product.title }}</span>
-          </li>
-        </ul>
+            {% assign full_url = request.path %}
+            {% assign productURL = full_url | split: '/' %}
+            {% if productURL[1] == 'collections' %}
+              <li>
+                <a href="{{ collections[productURL[2] ].url }}" title="{{ collections[productURL[2] ].title }}">
+                  {{ collections[productURL[2]].title }}
+                </a>
+              </li>
+            {% endif %}
+            <li class="active">
+              <span>{{ product.title }}</span>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  {%- endunless -%}
+    {%- endunless -%}
 
- 
+    <div class="container-1260 flex-wrap">
+      {% comment %}
+        <div class=" block-980">
+          <span class="product__pre-title hide"></span>
+          <h2 class="h1 product__title uppercase">
+            {% if product.metafields.product.display_name != blank %}
+              {{ product.metafields.product.display_name }}
+            {% else %}
+              {{ product.title }}
+            {% endif %}
+          </h2>
+          <p>Enhances your sleep & offers nutritional support</p>
+        </div>
+      {% endcomment %}
+      <!-- Left Product Image Slider Section -->
 
-  <div class="container-1260 flex-wrap">
-    {% comment %}
-      <div class=" block-980">
-        <span class="product__pre-title hide"></span>
-        <h2 class="h1 product__title uppercase">
-          {% if product.metafields.product.display_name != blank %}
-            {{ product.metafields.product.display_name }}
-          {% else %}
-            {{ product.title }}
-          {% endif %}
-        </h2>
-        <p>Enhances your sleep & offers nutritional support</p>
+      <div class="left-section">
+        {% include 'product_images' %}
       </div>
-    {% endcomment %}
-    <!-- Left Product Image Slider Section -->
 
-    <div class="left-section">
-      {% include 'product_images' %}
-    </div>
+      <!-- Right Product Information Section -->
+      <div
+        class="product__information"
+        id="ProductSection"
+        data-section-id="{{ section.id }}"
+        data-section-type="product-template"
+        data-image-zoom-type="{{ section.settings.product_image_zoom_type }}"
+        data-extra-tab-content="{{ section.settings.extra_tab_content }}"
+        data-enable-history-state="true"
+      >
+        <div class="">
+          <h1 class="h2 medium js__pdp-title uppercase">
+            {% if product.metafields.product.display_name != blank %}
+              {{ product.metafields.product.display_name }}
+            {% else %}
+              {{ product.title }}
+            {% endif %}
+          </h1>
 
-    <!-- Right Product Information Section -->
-    <div
-      class="product__information"
-      id="ProductSection"
-      data-section-id="{{ section.id }}"
-      data-section-type="product-template"
-      data-image-zoom-type="{{ section.settings.product_image_zoom_type }}"
-      data-extra-tab-content="{{ section.settings.extra_tab_content }}"
-      data-enable-history-state="true"
-    >
-      <div class="">
-        <h1 class="h2 medium js__pdp-title uppercase">
-          {% if product.metafields.product.display_name != blank %}
-            {{ product.metafields.product.display_name }}
-          {% else %}
-            {{ product.title }}
-          {% endif %}
-        </h1>
-        
           <div
             class="product-single__prices"
             itemprop="price"
             content="{{ current_variant.price | divided_by: 100.00 }}"
           >
             {% if product.price < product.compare_at_price %}
-              
               <s>{{ product.compare_at_price | money_without_trailing_zeros }}</s>
               <span>{{ product.price | money_without_trailing_zeros }}</span>
             {% else %}
               <span> {{ product.price | money_without_trailing_zeros }}</span>
             {% endif %}
           </div>
-       
-        <!-- Product Short Description -->
-        
+
+          <!-- Product Short Description -->
+
           <div class="description">
             <p>
-              Where Hands Go is a carefully crafted book, handsomely illustrated, for parents to teach their children about the dangers of inappropriate touching...  <a>Learn More</a>
+              Where Hands Go is a carefully crafted book, handsomely illustrated, for parents to teach their children
+              about the dangers of inappropriate touching... <a>Learn More</a>
             </p>
           </div>
-     
-        <div class="flex-column price__wrapper ">
-          {% comment %} Price {% endcomment %}
-          <div class=" ">
-            <div data-oke-reviews-product-listing-rating>{{ product.metafields.okendo.ProductListingSnippet }}</div>
+
+          <div class="flex-column price__wrapper ">
+            {% comment %} Price {% endcomment %}
+            <div class=" ">
+              <div data-oke-reviews-product-listing-rating>{{ product.metafields.okendo.ProductListingSnippet }}</div>
+            </div>
           </div>
         </div>
-      </div>
 
-    
-      
-      {% comment %} Form {% endcomment %}
-      <div class="product__form">
-        <form
-          action="/cart/add"
-          id="add-to-cart"
-          method="post"
-          enctype="multipart/form-data"
-          data-productid="{{ product.id }}"
-        >
-          {% include 'product_linked-options' %}
-          <div class="hide">
-            <select id="product-select" name="id" style="display: none;">
-              {% for variant in product.variants %}
-                {% if variant.available %}
-                  <option
-                    {% if variant == current_variant %}
-                      selected="selected"
-                    {% endif %}
-                    value="{{ variant.id }}"
+        {% comment %} Form {% endcomment %}
+        <div class="product__form">
+          <form
+            action="/cart/add"
+            id="add-to-cart"
+            method="post"
+            enctype="multipart/form-data"
+            data-productid="{{ product.id }}"
+          >
+            {% include 'product_linked-options' %}
+            <div class="hide">
+              <select id="product-select" name="id" style="display: none;">
+                {% for variant in product.variants %}
+                  {% if variant.available %}
+                    <option
+                      {% if variant == current_variant %}
+                        selected="selected"
+                      {% endif %}
+                      value="{{ variant.id }}"
+                    >
+                      {{ variant.title }}
+                    </option>
+                  {% else %}
+                    <option value="{{ variant.id }}">{{ variant.title }} - sold out!</option>
+                  {% endif %}
+                {% endfor %}
+              </select>
+            </div>
+
+            <div class="product__actions flex">
+              <div class="product-single__quantity js-product-single__quantity js-quantity-hide">
+                <span class="hide">Qty</span>
+                <div class="quantity-outer " data-children-count="1">
+                  <a class="minus-qty js-plus-minus-qty" data-type="minus">{% include 'icon-minus' %}</a>
+                  <input
+                    type="text"
+                    class="quantity-selector js-quantity-selector"
+                    value="1"
+                    id="Quantity"
+                    name="quantity"
                   >
-                    {{ variant.title }}
-                  </option>
-                {% else %}
-                  <option value="{{ variant.id }}">{{ variant.title }} - sold out!</option>
-                {% endif %}
-              {% endfor %}
-            </select>
-          </div>
-
-          <div class="product__actions flex">
-            <div class="product-single__quantity js-product-single__quantity js-quantity-hide">
-              <span class="hide">Qty</span>
-              <div class="quantity-outer " data-children-count="1">
-                <a class="minus-qty js-plus-minus-qty" data-type="minus">{% include 'icon-minus' %}</a>
-                <input
-                  type="text"
-                  class="quantity-selector js-quantity-selector"
-                  value="1"
-                  id="Quantity"
-                  name="quantity"
+                  <a class="plus-qty js-plus-minus-qty" data-type="plus">{% include 'icon-plus' %}</a>
+                </div>
+              </div>
+              <div class="add-to-cart">
+                <button
+                  type="submit"
+                  name="add"
+                  id="add"
+                  class="btn--primary yellow"
+                  onclick="addItem('add-to-cart'); return false;"
                 >
-                <a class="plus-qty js-plus-minus-qty" data-type="plus">{% include 'icon-plus' %}</a>
+                  <span class="pdp-add-to-cart-text">Add to Cart</span>
+                  {% comment %} <span class="pdp-add-to-cart-price"></span> {% endcomment %}
+                </button>
+                <div class="trigger_disclaimer"></div>
               </div>
             </div>
-            <div class="add-to-cart">
-              <button
-                type="submit"
-                name="add"
-                id="add"
-                class="btn--primary yellow"
-                onclick="addItem('add-to-cart'); return false;"
-              >
-                <span class="pdp-add-to-cart-text">Add to Cart</span>
-                {% comment %} <span class="pdp-add-to-cart-price"></span> {% endcomment %}
-              </button>
-              <div class="trigger_disclaimer"></div>
-            </div>
-
-          </div>
-        </form>
-      </div>
-      {% comment %} Form ends {% endcomment %}
-      {% comment %}
-        show success/error message if required.
-        This needs to be enabled in js
-      {% endcomment %}
-      <div id="cart-message"></div>
-      {% comment %} Tabs {% endcomment %}
-
-     <div class="pdp-three-column-box">
-      <ul>
-      <li>
-      <div class="icon">
-        <img src="{{ 'icon-truck-dark.webp' | asset_url }}" /> 
+          </form>
         </div>
-        <span>Free Shipping</span>
-      </li>
-      <li>
-        <div class="icon">
-          <img src="{{ 'icon-check-dark.webp' | asset_url }}" /> 
-          </div>
-          <span>Safe Checkout</span>
-        </li>
-        <li>
-          <div class="icon">
-            <img src="{{ 'icon-return-dark.webp' | asset_url }}" /> 
-            </div>
-            <span>Hassle Free Returns</span>
-          </li>
-      </ul>
+        {% comment %} Form ends {% endcomment %}
+        {% comment %}
+          show success/error message if required.
+          This needs to be enabled in js
+        {% endcomment %}
+        <div id="cart-message"></div>
+        {% comment %} Tabs {% endcomment %}
+
+        <div class="pdp-three-column-box">
+          <ul>
+            <li>
+              <div class="icon">
+                <img src="{{ 'icon-truck-dark.webp' | asset_url }}">
+              </div>
+              <span>Free Shipping</span>
+            </li>
+            <li>
+              <div class="icon">
+                <img src="{{ 'icon-check-dark.webp' | asset_url }}">
+              </div>
+              <span>Safe Checkout</span>
+            </li>
+            <li>
+              <div class="icon">
+                <img src="{{ 'icon-return-dark.webp' | asset_url }}">
+              </div>
+              <span>Hassle Free Returns</span>
+            </li>
+          </ul>
+        </div>
       </div>
-      
+      {% comment %} Right section Ends {% endcomment %}
     </div>
-    {% comment %} Right section Ends {% endcomment %}
-  </div>
   </div>
 </div>
 
@@ -212,39 +206,27 @@
 {% endunless %}
 {% schema %}
 {
-  "name": {
-    "en": "Product pages"
-  },
+  "name": "Product pages",
   "settings": [
     {
       "type": "checkbox",
       "id": "product_quantity_enable",
-      "label": {
-        "en": "Show quantity selector"
-      }
+      "label": "Show quantity selector"
     },
     {
       "type": "header",
-      "content": {
-        "en": "Product options form (Not being used)"
-      }
+      "content": "Product options form (Not being used)"
     },
     {
       "type": "checkbox",
       "id": "enable_payment_button",
-      "label": {
-        "en": "Show dynamic checkout button"
-      },
-      "info": {
-        "en": "Each customer will see their preferred payment method from those available on your store, such as PayPal or Apple Pay. [Learn more](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
-      },
+      "label": "Show dynamic checkout button",
+      "info": "Each customer will see their preferred payment method from those available on your store, such as PayPal or Apple Pay. [Learn more](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
       "default": true
     },
     {
       "type": "header",
-      "content": {
-        "en": "Product Recharge Info"
-      }
+      "content": "Product Recharge Info"
     },
     {
       "type": "text",
