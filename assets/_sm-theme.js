@@ -1207,6 +1207,7 @@ jQuery(function () {
 
     for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
+      tabcontent[i].className = tabcontent[i].className.replace(" active", "");
     }
 
     tablink = document.getElementsByClassName("tab-link");
@@ -1218,6 +1219,7 @@ jQuery(function () {
     document.getElementById(dataId).style.display = "block";
     event.currentTarget.className += " active";
     $(this).addClass("active");
+    tabcontent[i].className += " active";
     /*PDP select*/
 
     $(".js__pdp-tab-select").val(dataId);
