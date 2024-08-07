@@ -1214,9 +1214,9 @@ jQuery(function () {
 
     for (i = 0; i < tablink.length; i++) {
       tablink[i].className = tablink[i].className.replace(" active", "");
-    } // document.getElementById(dataId).style.display = "block";
+    }
 
-
+    document.getElementById(dataId).style.display = "block";
     event.currentTarget.className += " active";
     $(this).addClass("active");
     /*PDP select*/
