@@ -1444,7 +1444,7 @@ jQuery(document).ready(function ($) {
     }
   });
 
-  if ($(window).width() > 980) {
+  if ($(window).width() < 980) {
     $(document).on("click", ".js___accordion", function (e) {
       e.preventDefault();
 
