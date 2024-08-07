@@ -181,28 +181,31 @@
         <div id="cart-message"></div>
         {% comment %} Tabs {% endcomment %}
         {%- for block in section.blocks -%}
-          <div class="pdp-three-column-box">
-            <ul>
-              <li>
-                <div class="icon">
-                  <img src="{{ 'icon-truck-dark.webp' | asset_url }}">
-                </div>
-                <span>Free Shipping</span>
-              </li>
-              <li>
-                <div class="icon">
-                  <img src="{{ 'icon-check-dark.webp' | asset_url }}">
-                </div>
-                <span>Safe Checkout</span>
-              </li>
-              <li>
-                <div class="icon">
-                  <img src="{{ 'icon-return-dark.webp' | asset_url }}">
-                </div>
-                <span>Hassle Free Returns</span>
-              </li>
-            </ul>
-          </div>
+          {%- case block.type -%}
+            {%- when 'three-column-info' -%}
+              <div class="pdp-three-column-box">
+                <ul>
+                  <li>
+                    <div class="icon">
+                      <img src="{{ 'icon-truck-dark.webp' | asset_url }}">
+                    </div>
+                    <span>Free Shipping</span>
+                  </li>
+                  <li>
+                    <div class="icon">
+                      <img src="{{ 'icon-check-dark.webp' | asset_url }}">
+                    </div>
+                    <span>Safe Checkout</span>
+                  </li>
+                  <li>
+                    <div class="icon">
+                      <img src="{{ 'icon-return-dark.webp' | asset_url }}">
+                    </div>
+                    <span>Hassle Free Returns</span>
+                  </li>
+                </ul>
+              </div>
+          {% endcase %}
         {% endfor %}
       </div>
       {% comment %} Right section Ends {% endcomment %}
