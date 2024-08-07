@@ -1469,6 +1469,10 @@ jQuery(document).ready(function ($) {
 
       $(this).parent(".tab-content").children(".accordion-con").removeClass("active");
     }
+
+    if ($(this).parent(".tab-content").css("display") == "block") {
+      $(this).parent(".tab-content").children(".accordion-con").slideDown();
+    }
   });
 });
 /*Select Dropdown change wit Tab */
