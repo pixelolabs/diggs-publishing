@@ -4,23 +4,35 @@
   <div class="container-1260">
     <div class="tab-head none-980">
       <ul class="pdp-tab-head">
-        <li>
-          <a
-            class="tab-link active"
-            id="tab-link-description"
-            data-attr="description"
-            >Detailed product description</a
-          >
-        </li>
-        <li>
-          <a class="tab-link" id="tab-link-reviews" data-attr="reviews">Reviews</a>
-        </li>
-        <li>
-          <a class="tab-link" id="tab-link-shipping" data-attr="shipping">Shipping information</a>
-        </li>
-        <li>
-          <a class="tab-link" id="tab-link-faq" data-attr="faq">FAQ</a>
-        </li>
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'tabs' -%}
+              {% assign category = block.settings.heading | replace: ' ', '-' %}
+              {% assign category = category | replace: "'", '-' %}
+              {% assign category = category | replace: '--', '-' %}
+              {% assign category = category | replace: '---', '-' %}
+              <li>
+                <a
+                  class="tab-link active"
+                  id="tab-link-{{ category}}"
+                  data-attr="{{ category}}"
+                >
+                  {{- block.settings.heading -}}
+                </a>
+              </li>
+          {%- endcase -%}
+        {% endfor %}
+        {% comment %}
+          <li>
+            <a class="tab-link" id="tab-link-reviews" data-attr="reviews">Reviews</a>
+          </li>
+          <li>
+            <a class="tab-link" id="tab-link-shipping" data-attr="shipping">Shipping information</a>
+          </li>
+          <li>
+            <a class="tab-link" id="tab-link-faq" data-attr="faq">FAQ</a>
+          </li>
+        {% endcomment %}
       </ul>
     </div>
     <div class="main-tab-content">
