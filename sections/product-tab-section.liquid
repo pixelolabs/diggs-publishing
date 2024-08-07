@@ -12,16 +12,17 @@
                 {% assign category = category | replace: "'", '-' %}
                 {% assign category = category | replace: '--', '-' %}
                 {% assign category = category | replace: '---', '-' %}
-
-                <li>
-                  <a
-                    class="tab-link"
-                    id="tab-link-{{ category  | downcase}}"
-                    data-attr="{{ category  | downcase}}"
-                  >
-                    {{- block.settings.heading -}}
-                  </a>
-                </li>
+                {% if block.settings.heading != blank %}
+                  <li>
+                    <a
+                      class="tab-link"
+                      id="tab-link-{{ category  | downcase}}"
+                      data-attr="{{ category  | downcase}}"
+                    >
+                      {{- block.settings.heading -}}
+                    </a>
+                  </li>
+                {% endif %}
             {%- endcase -%}
           {% endfor %}
           {% comment %}
