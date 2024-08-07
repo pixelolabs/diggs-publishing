@@ -1,8 +1,6 @@
 {%- assign limit = 12 -%}
 {% paginate collection.products by limit %}
   <div class="collection" data-section-id="{{ section.id }}" data-section-type="collection-template">
-   
-
     <div
       class="collection-section"
       id="CollectionSection"
@@ -11,47 +9,45 @@
       data-sort-enabled="{{ section.settings.sort_enable }}"
     >
       <div class="container-1260 graphics">
-
         <div class="collection-top-section">
           <div class="outer">
-          <ul>
-          <li class="active">
-            <a>
-             
-          <div class="icon">
-            <img src="{{ 'Books.png' | asset_url }}" /> </div>
-            <span>Books</span>
-          </a>
-          </li>
-          <li>
-            <a>
-             
-          <div class="icon">
-            <img src="{{ 'bulk-order.png' | asset_url }}" /> </div>
-            <span>Bulk Order</span>
-          </a>
-          </li>
-          <li>
-            <a>
-             
-          <div class="icon">
-            <img src="{{ 'Bundles.png' | asset_url }}" /> </div>
-            <span>Bundles</span>
-          </a>
-          </li>
-          <li>
-            <a>
-             
-          <div class="icon">
-            <img src="{{ 'Daily-deals.png' | asset_url }}" /> </div>
-            <span>Daily Deals</span>
-          </a>
-          </li>
-          </ul>
+            <ul>
+              <li class="active">
+                <a>
+                  <div class="icon">
+                    <img src="{{ 'Books.png' | asset_url }}">
+                  </div>
+                  <span>Books</span>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <div class="icon">
+                    <img src="{{ 'bulk-order.png' | asset_url }}">
+                  </div>
+                  <span>Bulk Order</span>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <div class="icon">
+                    <img src="{{ 'Bundles.png' | asset_url }}">
+                  </div>
+                  <span>Bundles</span>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <div class="icon">
+                    <img src="{{ 'Daily-deals.png' | asset_url }}">
+                  </div>
+                  <span>Daily Deals</span>
+                </a>
+              </li>
+            </ul>
           </div>
-          </div>
+        </div>
         <div class="collection-filter-section flex">
-        
           <div class="item--count">
             {% assign currentOffset = paginate.current_offset | to_i %}
             {% assign items = paginate.items %}
@@ -80,9 +76,7 @@
           {% if section.settings.sort_enable %}
             <div class="sort-by">
               {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
-              <label class="filters-toolbar__label select-label" for="SortBy">
-                Sort By
-              </label>
+              <label class="filters-toolbar__label select-label" for="SortBy"> Sort By </label>
 
               <select
                 name="sort_by"
@@ -147,13 +141,12 @@
 
         {% if is_empty_collection %}
           <div class="grid__item small--text-center">
-            <p class="text-center">{{ 'collections.general.no_matches' | t }}</p>
+            <p class="text-center">{{ 'collections.general.empty' | t }}</p>
           </div>
         {% endif %}
       </div>
       {%- if paginate.pages > 1 -%}
         <div class="container-1240 text-center ">
-      
           {% include 'pagination', paginate: paginate %}
         </div>
       {%- endif -%}
