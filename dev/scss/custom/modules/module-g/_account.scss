@@ -1,8 +1,22 @@
 .account-section {
-  padding: 80px 0 100px;
-  @include MQ(MQ-480) {
-    padding: 40px 0 60px;
+  position: relative;
+  padding-top: 205px;
+  background-image: linear-gradient(98deg, #5ebe55 1%, #a8d24e 51%, #5abe50 101%);
+  .inner{
+  &::before {
+    background: url("graphic-wave-inner-banner.svg") repeat left / 2065px;
+    height: 114px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -90px;
+    content: "";
+    z-index: 2;
   }
+  padding: 52px 0 180px;
+  background: $color-off-white-light;
+  position: relative;
+}
   .order-detail-info {
     margin-bottom: -20px;
     h4 {
@@ -10,12 +24,12 @@
     }
   }
   .heading-section {
-    text-align: center;
+  
     position: relative;
     #customer_logout_link,
-    .link--primary {
+    .link--primary--small {
       position: relative;
-      margin-top: 20px;
+      margin-top: 10px;
       display: inline-block;
     }
     p {
@@ -23,47 +37,20 @@
     }
   }
   #customer_logout_link,
-  .link--primary {
-    font-size: 14px;
+  .link--primary--small {
+    font-size: 13px;
     font-weight: 500;
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
-    letter-spacing: 0.01px;
+    letter-spacing: normal;
     text-align: center;
+    border: none;
+    background: transparent;
     color: $color-black;
+    text-decoration: underline !important;
     position: relative;
     text-transform: capitalize;
-    padding-bottom: 5px;
-    text-decoration: none;
-    &:after,
-    &:before {
-      position: absolute;
-      content: "";
-      left: auto;
-      right: 0;
-      bottom: 0px;
-      height: 1px;
-      width: 100%;
-      background: $color-black;
-      transition: 0.4s ease-in-out;
-    }
-    &:before {
-      width: 0;
-      left: 0;
-      right: auto;
-      transition: 0.6s ease-in-out;
-    }
-    &:hover {
-      &:after {
-        width: 0;
-        transition: 0.4s ease-in-out;
-      }
-      &:before {
-        width: 100%;
-        transition: 0.6s ease-in-out;
-      }
-    }
   }
   &__wrapper {
     margin-top: 60px;

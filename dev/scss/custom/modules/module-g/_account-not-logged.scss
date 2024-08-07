@@ -108,6 +108,13 @@
       }
     }
   }
+
+  &.account-activate{
+    .btn--primary{
+      margin-top: 20px;
+    }
+  }
+
   .form-outer {
     position: relative;
     // background: $color-off-white;
@@ -120,6 +127,7 @@
       padding: 0 30px;
       padding-bottom: 150px;
     }
+    
     &::before {
       background: url("yellow-wave.webp") repeat left / 1327px;
       height: 156.5px;
@@ -284,6 +292,8 @@
       line-height: normal;
       letter-spacing: normal;
       text-align: center;
+      border: none;
+      background: transparent;
       color: $color-black;
       text-decoration: underline !important;
       position: relative;
@@ -314,7 +324,7 @@
   }
   &.reset-password {
     .btn-wrapper {
-      margin-top: 20px;
+      margin-top: 10px;
     }
   }
   @include MQ(MQ-480) {
