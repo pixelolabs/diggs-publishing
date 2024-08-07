@@ -96,8 +96,8 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/dummy.webp",
-            "showVideo": true,
-            "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/634081785d1e4beaa80bd4e07e37b7ce.mp4",
+            "showVideo": false,
+            "video": "",
             "videoPopup": false,
             "pretitle": "Krystaelynne Sanders Diggs",
             "title": "My Mission is to prevent child sexual abuse",
