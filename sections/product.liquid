@@ -63,35 +63,47 @@
         data-enable-history-state="true"
       >
         <div class="">
-          <h1 class="h2 medium js__pdp-title uppercase">
-            {% if product.metafields.product.display_name != blank %}
-              {{ product.metafields.product.display_name }}
-            {% else %}
-              {{ product.title }}
-            {% endif %}
-          </h1>
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when '@app' -%}
+                {% render block %}
+              {%- when 'title' -%}
+                <h1 class="h2 medium js__pdp-title uppercase">
+                  {{ product.title | escape }}
+                </h1>
 
-          <div
-            class="product-single__prices"
-            itemprop="price"
-            content="{{ current_variant.price | divided_by: 100.00 }}"
-          >
-            {% if product.price < product.compare_at_price %}
-              <s>{{ product.compare_at_price | money_without_trailing_zeros }}</s>
-              <span>{{ product.price | money_without_trailing_zeros }}</span>
-            {% else %}
-              <span> {{ product.price | money_without_trailing_zeros }}</span>
-            {% endif %}
-          </div>
+              {% when 'price' %}
+                <div
+                  class="product-single__prices"
+                  itemprop="price"
+                  content="{{ current_variant.price | divided_by: 100.00 }}"
+                >
+                  {% if product.price < product.compare_at_price %}
+                    <s>{{ product.compare_at_price | money_without_trailing_zeros }}</s>
+                    <span>{{ product.price | money_without_trailing_zeros }}</span>
+                  {% else %}
+                    <span> {{ product.price | money_without_trailing_zeros }}</span>
+                  {% endif %}
+                </div>
+                <!-- Product Short Description -->
+              {% when 'description' %}
+                {%- if product.description != blank -%}
+                  <div class="description">
+                    <p>{{ product.description | strip_html | truncate: 150 }}</p>
+                    <div class="js__pdp-view-details more-link">Learn More</div>
+                  </div>
+                {%- endif -%}
+            {%- endcase -%}
+          {% endfor %}
 
-          <!-- Product Short Description -->
-
-          <div class="description">
-            <p>
-              Where Hands Go is a carefully crafted book, handsomely illustrated, for parents to teach their children
-              about the dangers of inappropriate touching... <a>Learn More</a>
-            </p>
-          </div>
+          {% comment %}
+            <div class="description">
+              <p>
+                Where Hands Go is a carefully crafted book, handsomely illustrated, for parents to teach their children
+                about the dangers of inappropriate touching... <a>Learn More</a>
+              </p>
+            </div>
+          {% endcomment %}
 
           <div class="flex-column price__wrapper ">
             {% comment %} Price {% endcomment %}
@@ -168,29 +180,66 @@
         {% endcomment %}
         <div id="cart-message"></div>
         {% comment %} Tabs {% endcomment %}
-
-        <div class="pdp-three-column-box">
-          <ul>
-            <li>
-              <div class="icon">
-                <img src="{{ 'icon-truck-dark.webp' | asset_url }}">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'three-column-info' -%}
+              <div class="pdp-three-column-box">
+                <ul>
+                  {% if block.settings.text_1 != blank or block.settings.icon_1 != blank %}
+                    <li>
+                      {% if block.settings.icon_1 != blank %}
+                        <div class="icon">
+                          {{
+                            block.settings.icon_1
+                            | image_url: width: 200
+                            | image_tag: loading: 'lazy', widths: '200x200'
+                          }}
+                          {% comment %} <img src="{{ 'icon-truck-dark.webp' | asset_url }}"> {% endcomment %}
+                        </div>
+                      {% endif %}
+                      {% if block.settings.text_1 != blank %}
+                        <span>{{ block.settings.text_1 }}</span>
+                      {% endif %}
+                    </li>
+                  {% endif %}
+                  {% if block.settings.text_2 != blank or block.settings.icon_2 != blank %}
+                    <li>
+                      {% if block.settings.icon_2 != blank %}
+                        <div class="icon">
+                          {{
+                            block.settings.icon_2
+                            | image_url: width: 200
+                            | image_tag: loading: 'lazy', widths: '200x200'
+                          }}
+                          {% comment %} <img src="{{ 'icon-truck-dark.webp' | asset_url }}"> {% endcomment %}
+                        </div>
+                      {% endif %}
+                      {% if block.settings.text_2 != blank %}
+                        <span>{{ block.settings.text_2 }}</span>
+                      {% endif %}
+                    </li>
+                  {% endif %}
+                  {% if block.settings.text_3 != blank or block.settings.icon_3 != blank %}
+                    <li>
+                      {% if block.settings.icon_3 != blank %}
+                        <div class="icon">
+                          {{
+                            block.settings.icon_3
+                            | image_url: width: 200
+                            | image_tag: loading: 'lazy', widths: '200x200'
+                          }}
+                          {% comment %} <img src="{{ 'icon-truck-dark.webp' | asset_url }}"> {% endcomment %}
+                        </div>
+                      {% endif %}
+                      {% if block.settings.text_3 != blank %}
+                        <span>{{ block.settings.text_3 }}</span>
+                      {% endif %}
+                    </li>
+                  {% endif %}
+                </ul>
               </div>
-              <span>Free Shipping</span>
-            </li>
-            <li>
-              <div class="icon">
-                <img src="{{ 'icon-check-dark.webp' | asset_url }}">
-              </div>
-              <span>Safe Checkout</span>
-            </li>
-            <li>
-              <div class="icon">
-                <img src="{{ 'icon-return-dark.webp' | asset_url }}">
-              </div>
-              <span>Hassle Free Returns</span>
-            </li>
-          </ul>
-        </div>
+          {% endcase %}
+        {% endfor %}
       </div>
       {% comment %} Right section Ends {% endcomment %}
     </div>
@@ -206,7 +255,7 @@
 {% endunless %}
 {% schema %}
 {
-  "name": "Product pages",
+  "name": "Product Information",
   "settings": [
     {
       "type": "checkbox",
@@ -242,6 +291,60 @@
   "blocks": [
     {
       "type": "@app"
+    },
+    {
+      "type": "title",
+      "name": "Product Title",
+      "limit": 1
+    },
+    {
+      "type": "price",
+      "name": "Price",
+      "limit": 1
+    },
+    {
+      "type": "description",
+      "name": "Description",
+      "limit": 1
+    },
+
+    {
+      "type": "three-column-info",
+      "name": "Three Col. Info",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon_1",
+          "label": "Icon (First)"
+        },
+        {
+          "type": "text",
+          "id": "text_1",
+          "label": "Text (First)"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_2",
+          "label": "Icon (Second)"
+        },
+        {
+          "type": "text",
+          "id": "text_2",
+          "label": "Text (Second)"
+        },
+
+        {
+          "type": "image_picker",
+          "id": "icon_3",
+          "label": "Icon (Third)"
+        },
+        {
+          "type": "text",
+          "id": "text_3",
+          "label": "Text (Third)"
+        }
+      ]
     }
   ],
   "presets": [

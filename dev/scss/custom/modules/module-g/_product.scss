@@ -85,11 +85,13 @@
       font-weight: normal;
       line-height: 1.33;
       letter-spacing: normal;
+      display: inline;
       @include MQ(MQ-480) {
         font-size: 14px;
       }
     }
-    a {
+    a,
+    .more-link {
       font-family: var(--font-family-primary);
       font-size: 12px;
       line-height: normal;
@@ -99,6 +101,7 @@
       display: inline-block;
       text-decoration: underline !important;
       font-weight: 500 !important;
+      cursor: pointer;
       &::before,
       &::after {
         display: none !important;
@@ -583,9 +586,10 @@
     align-items: center;
     position: relative;
     padding-top: 11px;
-    flex-wrap: wrap;
+
     @include MQ(MQ-980) {
       padding-top: 0;
+      flex-wrap: wrap;
     }
     .product-single__quantity {
       margin-right: 26px;
@@ -619,7 +623,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        
       }
       //   margin-top: 10px;
       //   @include MQ(MQ-480) {

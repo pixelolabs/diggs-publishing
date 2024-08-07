@@ -1,14 +1,14 @@
 .three-column-product-slider-v2 {
   background: $color-sky-blue;
   padding: 36px 40px 172px;
-  &::before{
+  &::before {
     background: url("wave-sky-blue.webp") repeat left / 1452px;
     height: 85px;
     width: 100%;
     position: absolute;
     left: 0;
     top: -85px;
-    content: '';
+    content: "";
   }
   transform: translate3d(0, 50px, 0) !important;
   @include MQ(MQ-480) {
@@ -18,32 +18,30 @@
     transform: none !important;
   }
 
- 
   .top-section {
     width: 100%;
     justify-content: space-between;
     margin: 0 0 40px;
     align-items: flex-end;
     position: relative;
-    &::before{
+    &::before {
       width: 54px;
       height: 44px;
-      content: '';
+      content: "";
       position: absolute;
       top: -55px;
       z-index: 1;
       left: 226px;
       background: url("icon-cloud.webp") no-repeat center / 100%;
       @include MQ(MQ-480) {
-     
         width: 43px;
-      height: 33px;
-      top: -90px;
-    
-      left: 90px;
+        height: 33px;
+        top: -90px;
+
+        left: 90px;
       }
     }
-  
+
     @include MQ(MQ-480) {
       margin: 0 0 30px;
     }
@@ -51,30 +49,27 @@
 
   .inner {
     width: 100%;
-    .slider-outer{
+    .slider-outer {
       width: 100%;
       overflow: hidden;
     }
     position: relative;
-  
+
     @include MQ(MQ-480) {
     }
     .slider {
       position: relative;
       overflow: hidden;
-      
     }
-   
+
     .swiper-slide {
-     z-index: 3;
-     height: auto;
+      z-index: 3;
+      height: auto;
       .content {
-      
       }
     }
     .swiper-button-prev-product-slider,
     .swiper-button-next-product-slider {
-     
       position: absolute;
       width: 19px;
       height: 30px;
@@ -84,32 +79,29 @@
       cursor: pointer;
       @include MQ(MQ-480) {
         width: 15px;
-      height: 24px;
-       right: -23px;
-        svg{
-         width: 15px;
-      height: 24px;
+        height: 24px;
+        right: -23px;
+        svg {
+          width: 15px;
+          height: 24px;
+        }
       }
-      }
-      
-     
     }
     .swiper-button-prev-product-slider {
-       transform: rotate(180deg);
+      transform: rotate(180deg);
       left: -54px;
       right: auto !important;
-        @include MQ(MQ-480) {
+      @include MQ(MQ-480) {
         left: -23px;
-        }
+      }
     }
-    
   }
 
-  &.pdp{
+  &.pdp {
     padding: 0px 40px 0px;
     background: $color-off-white-light;
     .top-section {
-      &::before{
+      &::before {
         display: none;
       }
     }
@@ -119,10 +111,9 @@
       width: 100%;
       position: absolute;
       left: 0;
-      top: -114px;
+      top: -189px;
       content: "";
       z-index: 2;
     }
   }
-
 }

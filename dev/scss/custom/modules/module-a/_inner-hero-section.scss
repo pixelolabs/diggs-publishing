@@ -1,11 +1,11 @@
 .inner-hero-section {
   // padding: 193px 0 170px;
-  // background-image: linear-gradient(
-  //   109deg,
-  //   #5ebe55 2%,
-  //   #a8d24e 51%,
-  //   #5abe50 100%
-  // );
+  background-image: linear-gradient(
+    109deg,
+    #5ebe55 2%,
+    #a8d24e 51%,
+    #5abe50 100%
+  );
   padding-top: 180px !important;
   padding-bottom: 108px !important;
   min-height: 550px;
@@ -146,7 +146,7 @@
       font-weight: normal;
       line-height: 1;
       letter-spacing: 0.8px;
-      text-align: left;
+      // text-align: left;
       @include MQ(MQ-480) {
         font-size: 30px;
         margin-bottom: 7px;
