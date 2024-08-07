@@ -3,14 +3,14 @@ footer {
   position: relative;
   overflow-x: clip;
   background-color: $color-yellow;
-  z-index: 2;
-  margin-top: 233px;
-  @include MQ(MQ-768) {
-    margin-top: 180px;
-  }
-  @include MQ(MQ-480) {
-    margin-top: 120px;
-  }
+  z-index: 3;
+  // margin-top: 233px;
+  // @include MQ(MQ-768) {
+  //   margin-top: 180px;
+  // }
+  // @include MQ(MQ-480) {
+  //   margin-top: 120px;
+  // }
   &:before {
     background: url(graphic-yellow-wave.png) repeat-x top/100%;
     position: absolute;
@@ -669,6 +669,9 @@ footer {
     }
   }
 }
-.template-index footer {
-  margin-top: 0 !important;
+.template-index,
+.template-404 {
+  footer {
+    margin-top: 0 !important;
+  }
 }
