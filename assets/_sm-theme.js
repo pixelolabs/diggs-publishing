@@ -1217,6 +1217,7 @@ jQuery(function () {
     }
 
     document.getElementById(dataId).style.display = "block";
+    document.getElementById(dataId).children(".accordion-con").style.display = "block";
     event.currentTarget.className += " active";
     $(this).addClass("active");
     /*PDP select*/
