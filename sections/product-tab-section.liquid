@@ -37,38 +37,53 @@
     </div>
     <div class="main-tab-content">
       {% for block in section.blocks %}
-        <div class="tab-content js-tab-content active" id="description" data-attr="tab-link-description">
-          <a class="accordion-link js___accordion" id="tab-link-description" data-attr="description"
-            >Detailed product description</a
-          >
-          <div class="inner-content accordion-con overview-content-wrapper">
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and
-              typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
-              an unknown printer took a galley of type and scrambled it to make a type specimen book.
-              <br>
-              <br>
-              It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-              essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-              Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageLorem Ipsum is
-              simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-              dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-              type specimen book.
-              <br>
-              <br>
-              It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-              essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-              Lorem Ipsum passages, and more recently with desktop publishing software like Aldus Page Lorem Ipsum is
-              simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-              dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-              type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-              has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </p>
-          </div>
-        </div>
+        {%- case block.type -%}
+          {%- when 'description' -%}
+            {% assign categorytitle = block.settings.category | replace: ' ', '-' %}
+            {% assign categorytitle = categorytitle | replace: "'", '-' %}
+            {% assign categorytitle = categorytitle | replace: '--', '-' %}
+            {% assign categorytitle = categorytitle | replace: '---', '-' %}
+            <div
+              class="tab-content js-tab-content active"
+              id="{{ categorytitle | downcase }}"
+              data-attr="tab-link-{{ categorytitle | downcase }}"
+            >
+              <a
+                class="accordion-link js___accordion"
+                id="tab-link-{{ categorytitle | downcase }}"
+                data-attr="{{ categorytitle | downcase }}"
+              >
+                {{- block.settings.category -}}
+              </a>
+              <div class="inner-content accordion-con overview-content-wrapper">
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                  industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                  scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                  when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                  <br>
+                  <br>
+                  It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                  essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                  Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageLorem Ipsum is
+                  simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                  it to make a type specimen book.
+                  <br>
+                  <br>
+                  It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                  essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                  Lorem Ipsum passages, and more recently with desktop publishing software like Aldus Page Lorem Ipsum
+                  is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                  it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting
+                  industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                  unknown printer took a galley of type and scrambled it to make a type specimen book.
+                </p>
+              </div>
+            </div>
+        {%- endcase -%}
       {% endfor %}
       {% comment %}
         <div class="tab-content js-tab-content" id="reviews" data-attr="tab-link-reviews">
