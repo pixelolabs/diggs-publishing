@@ -1215,7 +1215,7 @@ jQuery(function () {
       tablink[i].className = tablink[i].className.replace(" active", "");
     }
 
-    document.getElementById(dataId).style.display = "block";
+    document.getElementById(dataId).style.display = "inline";
     event.currentTarget.className += " active";
     $(this).addClass("active");
     /*PDP select*/
