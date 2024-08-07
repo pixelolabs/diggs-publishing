@@ -250,7 +250,35 @@
 {% schema %}
 {
   "name": "Product Tab Section",
-
+  "blocks": [
+    {
+      "type": "tabs",
+      "name": "Tabs Heading",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        }
+      ]
+    },
+    {
+      "type": "question",
+      "name": "Question",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "faqAnswer",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
       "name": "Product Tab Section"
