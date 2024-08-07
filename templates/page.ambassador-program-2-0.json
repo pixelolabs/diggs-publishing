@@ -12,7 +12,6 @@
     "innerBanner": {
       "type": "inner-hero-section",
       "settings": {
-        "color_scheme": "",
         "image": "shopify:\/\/shop_images\/Ambassador-Program-Banner.webp",
         "mobileImage": "shopify:\/\/shop_images\/Ambassador-Program-Banner-mobile.webp",
         "title": "Ambassador Program",
