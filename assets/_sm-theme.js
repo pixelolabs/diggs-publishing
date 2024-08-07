@@ -1471,7 +1471,7 @@ jQuery(document).ready(function ($) {
     }
 
     if ($(this).parent(".tab-content").css("display") == "block") {
-      $(this).parent(".tab-content").children(".accordion-con").slideDown();
+      $(this).parent(".tab-content").children(".accordion-con").addClass("active");
     }
   });
 });
