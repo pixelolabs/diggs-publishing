@@ -21,16 +21,9 @@
         "button_bg": "pink",
         "content_alignment": "left"
       }
-    },
-    "page_default_content_6YCngU": {
-      "type": "page-default-content",
-      "settings": {
-        "section_class": ""
-      }
     }
   },
   "order": [
-    "innerBanner",
-    "page_default_content_6YCngU"
+    "innerBanner"
   ]
 }
