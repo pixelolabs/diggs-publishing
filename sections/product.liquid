@@ -89,7 +89,7 @@
               {% when 'description' %}
                 {%- if product.description != blank -%}
                   <div class="description">
-                    {{ product.description | strip_html | truncate: 200 }}
+                    <p>{{ product.description | strip_html | truncate: 200 }}</p>
                     <div class="js__pdp-view-details more-link">Learn More</div>
                   </div>
                 {%- endif -%}
