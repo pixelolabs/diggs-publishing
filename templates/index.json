@@ -140,7 +140,7 @@
           "type": "review",
           "settings": {
             "name": "MARKEISHA",
-            "description": "<p>\"This book is illustrated <br\/>beautifully and provides a <br\/>simple way to introduce <br\/>the topic of \"touch\" <br\/>without making it <br\/>uncomfortable to your <br\/>children. Must buy as a <br\/>gift and for your own <br\/>children! Just beautiful!\"<\/p>"
+            "description": "<p>This book is illustrated <br\/>beautifully and provides a <br\/>simple way to introduce <br\/>the topic of \"touch\" <br\/>without making it <br\/>uncomfortable to your <br\/>children. Must buy as a <br\/>gift and for your own <br\/>children! Just beautiful!<\/p>"
           }
         }
       },
@@ -166,8 +166,8 @@
           "type": "logo",
           "settings": {
             "image": "shopify:\/\/shop_images\/dummy-logo.webp",
-            "link": "",
-            "title": ""
+            "link": "shopify:\/\/pages\/about-2-0",
+            "title": "dfwefewf"
           }
         },
         "logo_qmTtnb": {
