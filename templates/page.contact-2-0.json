@@ -12,12 +12,12 @@
     "innerBanner": {
       "type": "inner-hero-section",
       "settings": {
-        "image": "{{ page.metafields.custom.hero_banner_background_image_desktop_.value }}",
-        "mobileImage": "{{ page.metafields.custom.hero_banner_background_image_mobile_.value }}",
+        "image": "shopify:\/\/shop_images\/Rectangle_2871_2x_259cdd64-c965-43a0-9eb6-bb12fe6f4d4c.jpg",
+        "mobileImage": "shopify:\/\/shop_images\/Rectangle_2871_2x_2.webp",
         "title": "Contact",
         "description": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s<\/p>",
-        "buttonText1": "{{ page.metafields.custom.hero_banner_button_text.value }}",
-        "buttonLink1": "{{ page.metafields.custom.hero_banner_button_link.value }}",
+        "buttonText1": "",
+        "buttonLink1": "",
         "button_bg": "pink",
         "content_alignment": "left"
       }
