@@ -194,6 +194,28 @@
 {% schema %}
 {
   "name": "Cart",
+  "settings": [
+    {
+      "type": "text",
+      "id": "banner-title",
+      "label": "Banner Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "bannerImage",
+      "label": "Banner Background Image (Desktop)"
+    },
+    {
+      "type": "image_picker",
+      "id": "bannerImageM",
+      "label": "Banner Background Image (Mobile)"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    }
+  ],
   "presets": [
     {
       "name": "Cart Information"
