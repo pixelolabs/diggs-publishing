@@ -1,28 +1,29 @@
 <div class="full-width-cta {{ section.settings.section_class | schema }}">
   <div class="container-1440">
     <div class="container-900 text-center">
-      {% if section.settings.title != blank %}     
+      {% if section.settings.title != blank %}
         <h2 class="medium">
           {{ section.settings.title }}
         </h2>
       {% endif %}
-      {% if section.settings.content != blank %}     
+      {% if section.settings.content != blank %}
         <p>
           {{ section.settings.content }}
         </p>
       {% endif %}
-        {% if section.settings.buttonLink != blank and section.settings.buttonText != blank %}
-            <a
-              href="{{ section.settings.buttonLink }}"
-              title="Read More About {{ section.settings.title }}"
-              aria-label="Read More About {{ section.settings.title }}"
-              class="btn--primary pink"
-            > {{ section.settings.buttonText }}</a>
-          {% endif %}
-        </div>
-
-      </div>
+      {% if section.settings.buttonLink != blank and section.settings.buttonText != blank %}
+        <a
+          href="{{ section.settings.buttonLink }}"
+          title="Read More About {{ section.settings.title }}"
+          aria-label="Read More About {{ section.settings.title }}"
+          class="btn--primary pink"
+        >
+          {{ section.settings.buttonText -}}
+        </a>
+      {% endif %}
     </div>
+  </div>
+</div>
 {% schema %}
 {
   "name": "Full width CTA",
@@ -35,7 +36,7 @@
     {
       "type": "inline_richtext",
       "id": "content",
-      "label": "Content"
+      "label": "Description"
     },
     {
       "type": "text",
