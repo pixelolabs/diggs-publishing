@@ -25,7 +25,7 @@
       </ul>
     </div>
     <div class="form-section text-left">
-      <h2 class="medium ">Get in touch</h2>
+      <h2 class="medium ">{{ section.settings.title }}</h2>
       {%- assign formId = 'ContactForm' -%}
       {% form 'contact', id: formId %}
         {% include 'form-status', form: form, form_id: formId %}

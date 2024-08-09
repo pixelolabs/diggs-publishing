@@ -96,7 +96,6 @@
     "product3": "bebe-de-piel-morena",
     "product4": "donation-where-hands-go-the-power-of-no",
     "freeProduct1": "free-gift",
-    "number": "1-888-819-4640",
     "emailAddress": "shop@store.com",
     "social_facebook_link": "#",
     "social_twitter_link": "#",
@@ -108,6 +107,7 @@
     "share_pinterest": true,
     "copy_link": true,
     "favicon": "shopify:\/\/shop_images\/pixe_Verse_Black.png",
+    "number": "1-888-819-4640",
     "type_body_font": "poppins_n4",
     "sections": {
       "404": {
