@@ -27,8 +27,10 @@
     top: 0px !important;
   }
   .navbar-collapse {
-    top: 74px !important;
-    height: calc(100vh - 70px);
+    @include MQ(MQ-980) {
+      height: calc(100vh - 54px);
+      top: 72px !important;
+    }
   }
 }
 .announcement-bar {
