@@ -96,8 +96,8 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/dummy.webp",
-            "showVideo": false,
-            "video": "",
+            "showVideo": true,
+            "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/634081785d1e4beaa80bd4e07e37b7ce.mp4",
             "videoPopup": false,
             "pretitle": "Krystaelynne Sanders Diggs",
             "title": "My Mission is to prevent child sexual abuse",
@@ -116,7 +116,11 @@
       "settings": {
         "section_class": "",
         "image_position": "left",
-        "wave_color": "blue-wave"
+        "wave_color": "blue-wave",
+        "paddingtop": 0,
+        "paddingtopmobile": 0,
+        "paddingbottom": 0,
+        "paddingbottomMobile": 0
       }
     },
     "review_slider_with_image_EptAbU": {
