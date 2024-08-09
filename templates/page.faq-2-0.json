@@ -16,29 +16,10 @@
         "mobileImage": "shopify:\/\/shop_images\/Group_482562.png",
         "title": "FAQ",
         "description": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s<\/p>",
+        "buttonText1": "",
+        "buttonLink1": "",
+        "button_bg": "pink",
         "content_alignment": "left"
-      }
-    },
-    "faq_accordion_simple_bFU4Lf": {
-      "type": "faq-accordion-simple",
-      "blocks": {
-        "question_MCMfnV": {
-          "type": "question",
-          "settings": {
-            "title": "what is this?",
-            "faqAnswer": ""
-          }
-        }
-      },
-      "block_order": [
-        "question_MCMfnV"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "",
-        "description": "",
-        "linkText": "",
-        "textLink": ""
       }
     },
     "faq_accordion_with_category_h3NLVb": {
@@ -157,73 +138,11 @@
         "question_UfCeRN"
       ],
       "settings": {
-        "title": "",
-        "description": "",
-        "linkText": "",
-        "textLink": ""
-      }
-    },
-    "faq_accordian_section_mLBbic": {
-      "type": "faq-accordian-section",
-      "blocks": {
-        "category_QaV3w9": {
-          "type": "category",
-          "settings": {
-            "title": "Category 1"
-          }
-        },
-        "list_yTDmyq": {
-          "type": "list",
-          "settings": {
-            "categoryFAQ": "Category 1",
-            "title": "Title\/Question",
-            "faqAnswer": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
-          }
-        },
-        "list_aLyjrg": {
-          "type": "list",
-          "settings": {
-            "categoryFAQ": "Category 1",
-            "title": "Title\/Question",
-            "faqAnswer": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
-          }
-        },
-        "category_Nayin9": {
-          "type": "category",
-          "settings": {
-            "title": "CAtegory 2"
-          }
-        },
-        "list_rQmJT8": {
-          "type": "list",
-          "settings": {
-            "categoryFAQ": "CAtegory 2",
-            "title": "what is this",
-            "faqAnswer": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi <\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "category_QaV3w9",
-        "list_yTDmyq",
-        "list_aLyjrg",
-        "category_Nayin9",
-        "list_rQmJT8"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "Title",
-        "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>",
-        "page_Menu": "",
-        "searchTitle": "Search Box Title",
-        "searchDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>"
       }
     }
   },
   "order": [
     "innerBanner",
-    "faq_accordion_simple_bFU4Lf",
-    "faq_accordion_with_category_h3NLVb",
-    "faq_accordian_section_mLBbic"
+    "faq_accordion_with_category_h3NLVb"
   ]
 }
