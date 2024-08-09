@@ -183,61 +183,63 @@
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when 'three-column-info' -%}
-              <div class="pdp-three-column-box">
-                <ul>
-                  {% if block.settings.text_1 != blank or block.settings.icon_1 != blank %}
-                    <li>
-                      {% if block.settings.icon_1 != blank %}
-                        <div class="icon">
-                          {{
-                            block.settings.icon_1
-                            | image_url: width: 200
-                            | image_tag: loading: 'lazy', widths: '200x200'
-                          }}
-                          {% comment %} <img src="{{ 'icon-truck-dark.webp' | asset_url }}"> {% endcomment %}
-                        </div>
-                      {% endif %}
-                      {% if block.settings.text_1 != blank %}
-                        <span>{{ block.settings.text_1 }}</span>
-                      {% endif %}
-                    </li>
-                  {% endif %}
-                  {% if block.settings.text_2 != blank or block.settings.icon_2 != blank %}
-                    <li>
-                      {% if block.settings.icon_2 != blank %}
-                        <div class="icon">
-                          {{
-                            block.settings.icon_2
-                            | image_url: width: 200
-                            | image_tag: loading: 'lazy', widths: '200x200'
-                          }}
-                          {% comment %} <img src="{{ 'icon-truck-dark.webp' | asset_url }}"> {% endcomment %}
-                        </div>
-                      {% endif %}
-                      {% if block.settings.text_2 != blank %}
-                        <span>{{ block.settings.text_2 }}</span>
-                      {% endif %}
-                    </li>
-                  {% endif %}
-                  {% if block.settings.text_3 != blank or block.settings.icon_3 != blank %}
-                    <li>
-                      {% if block.settings.icon_3 != blank %}
-                        <div class="icon">
-                          {{
-                            block.settings.icon_3
-                            | image_url: width: 200
-                            | image_tag: loading: 'lazy', widths: '200x200'
-                          }}
-                          {% comment %} <img src="{{ 'icon-truck-dark.webp' | asset_url }}"> {% endcomment %}
-                        </div>
-                      {% endif %}
-                      {% if block.settings.text_3 != blank %}
-                        <span>{{ block.settings.text_3 }}</span>
-                      {% endif %}
-                    </li>
-                  {% endif %}
-                </ul>
-              </div>
+              {% if section.blocks.size > 0 %}
+                <div class="pdp-three-column-box">
+                  <ul>
+                    {% if block.settings.text_1 != blank or block.settings.icon_1 != blank %}
+                      <li>
+                        {% if block.settings.icon_1 != blank %}
+                          <div class="icon">
+                            {{
+                              block.settings.icon_1
+                              | image_url: width: 200
+                              | image_tag: loading: 'lazy', widths: '200x200'
+                            }}
+                            {% comment %} <img src="{{ 'icon-truck-dark.webp' | asset_url }}"> {% endcomment %}
+                          </div>
+                        {% endif %}
+                        {% if block.settings.text_1 != blank %}
+                          <span>{{ block.settings.text_1 }}</span>
+                        {% endif %}
+                      </li>
+                    {% endif %}
+                    {% if block.settings.text_2 != blank or block.settings.icon_2 != blank %}
+                      <li>
+                        {% if block.settings.icon_2 != blank %}
+                          <div class="icon">
+                            {{
+                              block.settings.icon_2
+                              | image_url: width: 200
+                              | image_tag: loading: 'lazy', widths: '200x200'
+                            }}
+                            {% comment %} <img src="{{ 'icon-truck-dark.webp' | asset_url }}"> {% endcomment %}
+                          </div>
+                        {% endif %}
+                        {% if block.settings.text_2 != blank %}
+                          <span>{{ block.settings.text_2 }}</span>
+                        {% endif %}
+                      </li>
+                    {% endif %}
+                    {% if block.settings.text_3 != blank or block.settings.icon_3 != blank %}
+                      <li>
+                        {% if block.settings.icon_3 != blank %}
+                          <div class="icon">
+                            {{
+                              block.settings.icon_3
+                              | image_url: width: 200
+                              | image_tag: loading: 'lazy', widths: '200x200'
+                            }}
+                            {% comment %} <img src="{{ 'icon-truck-dark.webp' | asset_url }}"> {% endcomment %}
+                          </div>
+                        {% endif %}
+                        {% if block.settings.text_3 != blank %}
+                          <span>{{ block.settings.text_3 }}</span>
+                        {% endif %}
+                      </li>
+                    {% endif %}
+                  </ul>
+                </div>
+              {% endif %}
           {% endcase %}
         {% endfor %}
       </div>
