@@ -2257,6 +2257,11 @@
         "type": "text",
         "id": "emailAddress",
         "label": "Email Address"
+      },
+      {
+        "type": "url",
+        "id": "addresslink",
+        "label": "Address Link"
       }
       
     ]
