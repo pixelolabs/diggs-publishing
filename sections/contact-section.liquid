@@ -4,7 +4,9 @@
       {% if section.settings.sidebartitle != blank %}
         <h2 class="h4">{{ section.settings.sidebartitle }}</h2>
       {% endif %}
-      <p class="medium">Contact us or simply fill in the form and we will get back to you as soon as possible.</p>
+      {% if section.settings.sidebardescription != blank %}
+        <p class="medium">{{ section.settings.sidebardescription }}</p>
+      {% endif %}
       <ul>
         <li>
           <div class="icon">{% include 'icon-phone-contact' %}</div>
@@ -120,7 +122,7 @@
     },
     {
       "type": "richtext",
-      "id": "description",
+      "id": "sidebardescription",
       "label": "Description"
     }
   ],
