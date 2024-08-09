@@ -2250,14 +2250,15 @@
       },
       {
         "type": "text",
-        "id": "emailAddress",
-        "label": "Email Address (Mobile)"
+        "id": "textnumber",
+        "label": "Text Number (Mobile)"
       },
       {
         "type": "text",
-        "id": "textnumber",
-        "label": "Text Number (Mobile)"
+        "id": "emailAddress",
+        "label": "Email Address (Mobile)"
       }
+      
     ]
   },
   
