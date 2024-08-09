@@ -15,7 +15,7 @@
               {% for block in section.blocks %}
                 {% assign Collection = block.settings.collection %}
                 {% assign full_url = request.host | append: request.path %}
-
+                {{ full_url }}
                 <li class="">
                   <a
                     href="{% if block.settings.link != blank %}{{ block.settings.link }} {% else %}{{ Collection.url }}{% endif %}"
