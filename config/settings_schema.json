@@ -2251,7 +2251,7 @@
       {
         "type": "text",
         "id": "textnumber",
-        "label": "Text Number"
+        "label": "Contact Number"
       },
       {
         "type": "text",
