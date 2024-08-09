@@ -3,9 +3,26 @@
     <div class="inner-hero-section">
       {% if section.settings.bannerImage != blank %}
         <div class="image-section {% if section.settings.gradient == true %} gradient{%endif%}">
-          <img src="{{ 'cart-hero.webp' | asset_url }}">
+          <picture>
+            <source
+              media="(max-width: 480px)"
+              srcset="{% if bannerImageM != blank %}{{ bannerImageM | img_url: '750x1400' }}   {% endif %}"
+            >
+            {{
+              section.settings.bannerImage
+              | image_url: width: 2880
+              | image_tag: loading: 'lazy', widths: '2880x1620'
+            }}
+          </picture>
         </div>
       {% endif %}
+      {% comment %}
+        {% if section.settings.bannerImage != blank %}
+          <div class="image-section {% if section.settings.gradient == true %} gradient{%endif%}">
+            <img src="{{ 'cart-hero.webp' | asset_url }}">
+          </div>
+        {% endif %}
+      {% endcomment %}
 
       <div
         class="        container-1240"
