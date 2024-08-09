@@ -25,7 +25,9 @@
 
   {% else %}
     <div class="form-message form-message--error">
-      <h2 class="h3 form-message__title" tabindex="-1" data-form-status>{{ 'contact.form.error_heading' | t }}</h2>
+      <h2 class="h3 form-message__title" tabindex="-1" data-form-status>
+        {{ 'templates.contact.form.error_heading' | t }}
+      </h2>
 
       <ul>
         {% for error in error_order %}
