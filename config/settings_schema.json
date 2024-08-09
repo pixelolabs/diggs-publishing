@@ -2255,8 +2255,8 @@
       },
       {
         "type": "text",
-        "id": "emailAddress",
-        "label": "Email Address"
+        "id": "Address",
+        "label": "Address"
       },
       {
         "type": "url",
