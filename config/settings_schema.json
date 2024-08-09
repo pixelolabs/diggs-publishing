@@ -2251,12 +2251,12 @@
       {
         "type": "text",
         "id": "textnumber",
-        "label": "Text Number (Mobile)"
+        "label": "Text Number"
       },
       {
         "type": "text",
         "id": "emailAddress",
-        "label": "Email Address (Mobile)"
+        "label": "Email Address"
       }
       
     ]
