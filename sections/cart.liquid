@@ -1,20 +1,23 @@
 <div class="js__show-cart-items-section">
-  <div class="inner-hero-section">
-    <div class="image-section {% if section.settings.gradient == true %} gradient{%endif%}">
-      <img src="{{ 'cart-hero.webp' | asset_url }}">
-    </div>
+  {% if section.settings['banner-title'] != balnk %}
+    <div class="inner-hero-section">
+      <div class="image-section {% if section.settings.gradient == true %} gradient{%endif%}">
+        <img src="{{ 'cart-hero.webp' | asset_url }}">
+      </div>
 
-    <div
-      class="        container-1240"
-    >
-      <div class="content">
-        <h1>Cart</h1>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-        </p>
+      <div
+        class="        container-1240"
+      >
+        <div class="content">
+          <h1>Cart</h1>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's
+          </p>
+        </div>
       </div>
     </div>
-  </div>
+  {% endif %}
   <div id="cart" class="cart-section  ">
     <div class="container-1260 container-section">
       <form action="/cart" method="post">
