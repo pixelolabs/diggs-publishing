@@ -21,7 +21,9 @@
                         {{ block.settins.icon | image_url: width: 200 | image_tag: loading: 'lazy', widths: '200x200' }}
                       </div>
                     {% endif %}
-                    <span>Books</span>
+                    {% if block.settings.title != blank %}
+                      <span>{{ block.settings.title }}</span>
+                    {% endif %}
                   </a>
                 </li>
               {% endfor %}
