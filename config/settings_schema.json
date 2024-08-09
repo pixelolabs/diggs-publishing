@@ -2244,153 +2244,26 @@
     "name": "Contact Information",
     "settings": [
       {
-        "type": "header",
-        "content": "Live Chat Info"
-      },
-      {
         "type": "text",
-        "id": "chattitle",
-        "label": "Title"
-      },
-      {
-        "type": "richtext",
-        "id": "chatdescription",
-        "label": "Chat description"
-      },
-      {
-        "type": "text",
-        "id": "chatText",
-        "label": "Chat Button Text"
-      },
-      {
-        "type": "url",
-        "id": "chatLink",
-        "label": "Chat Button Link"
-      },
-      {
-        "type": "header",
-        "content": "Live Chat Info (Mobile)"
-      },
-      {
-        "type": "text",
-        "id": "chatnumber",
-        "label": "Chat Number"
-      },
-      {
-        "type": "header",
-        "content": "Phone Numbers Info"
-      },
-      {
-        "type": "text",
-        "id": "phonetitle",
-        "label": "Title"
-      },
-      {
-        "type": "richtext",
-        "id": "contactdescription",
-        "label": "Contact Number Info"
-      },
-      {
-        "type": "checkbox",
-        "id": "numberPlusSign",
-        "label": "Plus sign for tel number",
-        "default": true,
-        "info": "Add Plus sign to tel number into the href to get directly called"
-      },
-      {
-        "type": "header",
-        "content": "Contact Number Info (Mobile)"
-      },
-      {
-        "type": "text",
-        "id": "phonemobtitle",
-        "label": "Title"
-      },
-      {
-        "type": "text",
-        "id": "number",
-        "label": "Call Us No."
-      },
-      {
-        "type": "header",
-        "content": "Email Info"
-      },
-      {
-        "type": "text",
-        "id": "emailtitle",
-        "label": "Title"
-      },
-      {
-        "type": "richtext",
-        "id": "emailAddressdesc",
-        "label": "Email Address With Some Extra Info"
-      },
-      {
-        "type": "header",
-        "content": "Email Info (Mobile)"
-      },
-      {
-        "type": "text",
-        "id": "emailAddress",
-        "label": "Email Address (Mobile)"
-      },
-      {
-        "type": "header",
-        "content": "Address Info"
-      },
-      {
-        "type": "text",
-        "id": "addtitle",
-        "label": "Title"
-      },
-      {
-        "type": "richtext",
-        "id": "officeadd",
-        "label": "Main Office Address"
-      },
-      {
-        "type": "header",
-        "content": "Hours Info"
-      },
-      {
-        "type": "text",
-        "id": "hrtitle",
-        "label": "Title"
-      },
-      {
-        "type": "text",
-        "id": "weekdays",
-        "label": "Week Days Title"
-      },
-      {
-        "type": "text",
-        "id": "weekdayshr",
-        "label": "Week Days Hours"
-      },
-      {
-        "type": "text",
-        "id": "weekend",
-        "label": "Weekend Title"
-      },
-      {
-        "type": "text",
-        "id": "weekendshr",
-        "label": "Weekend Days Hours"
-      },
-      {
-        "type": "header",
-        "content": "Text Us Info (Mobile)"
-      },
-      {
-        "type": "text",
-        "id": "texttitle",
-        "label": "Title"
+        "id": "email",
+        "label": "Email"
       },
       {
         "type": "text",
         "id": "textnumber",
-        "label": "Text Number (Mobile)"
+        "label": "Contact Number"
+      },
+      {
+        "type": "richtext",
+        "id": "address",
+        "label": "Address"
+      },
+      {
+        "type": "url",
+        "id": "addresslink",
+        "label": "Address Link"
       }
+      
     ]
   },
   

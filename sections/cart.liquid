@@ -1,26 +1,43 @@
 <div class="js__show-cart-items-section">
-  <div class="inner-hero-section">
-    <div class="image-section {% if section.settings.gradient == true %} gradient{%endif%}">
-      <img src="{{ 'cart-hero.webp' | asset_url }}" /> 
-    
-    </div>
-  
-    <div
-      class="
-        container-1240">
-        <div class="content">
-          <h1>
-           Cart
-          </h1>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-          </p>
-          </div>
+  {% if section.settings.title != blank %}
+    <div class="inner-hero-section">
+      {% if section.settings.bannerImage != blank %}
+        <div class="image-section {% if section.settings.gradient == true %} gradient{%endif%}">
+          <picture>
+            <source
+              media="(max-width: 480px)"
+              srcset="{% if bannerImageM != blank %}{{ bannerImageM | img_url: '750x1400' }}   {% endif %}"
+            >
+            {{
+              section.settings.bannerImage
+              | image_url: width: 2880
+              | image_tag: loading: 'lazy', widths: '2880x1620'
+            }}
+          </picture>
         </div>
-  </div>
+      {% endif %}
+      {% comment %}
+        {% if section.settings.bannerImage != blank %}
+          <div class="image-section {% if section.settings.gradient == true %} gradient{%endif%}">
+            <img src="{{ 'cart-hero.webp' | asset_url }}">
+          </div>
+        {% endif %}
+      {% endcomment %}
+
+      <div
+        class="        container-1240"
+      >
+        <div class="content">
+          <h1>{{ section.settings.title }}</h1>
+          {% if section.settings.description != blank %}
+            {{ section.settings.description }}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
   <div id="cart" class="cart-section  ">
     <div class="container-1260 container-section">
-     
       <form action="/cart" method="post">
         <div class="free-shipping js__progressbar_visiblity hide" style="display:none !important">
           <!-- Free Shipping Values from Schema -->
@@ -55,7 +72,6 @@
               <div class="table-head text-center">
                 <span>QUANTITY</span>
               </div>
-             
 
               <div class="table-head">
                 <span> Total</span>
@@ -69,7 +85,9 @@
           <div class="wrapper-total">
             <div class="shipping-details js__progressbar_visiblity hide">
               <span class="hide js__free-shipping-limit">{{ settings.freeShippingThresholdValue }} </span>
-              <span class=" title js__free-shipping-message" style="display: none;">{{ settings.freeShippingMsg }}</span>
+              <span class=" title js__free-shipping-message" style="display: none;">
+                {{- settings.freeShippingMsg -}}
+              </span>
               <span class="title js__free-shipping-limit-message"
                 >You are
                 <b
@@ -111,15 +129,14 @@
               </ul>
             </div>
             <div class="total">
-
-            <div class="coupon-section">
-              <label>Coupon Code</label>
-              <div class="form">
-              <input type="text" placeholder="Coupon Code">
-              <input type="button" value="Apply" class="btn-coupon" >
+              <div class="coupon-section">
+                <label>Coupon Code</label>
+                <div class="form">
+                  <input type="text" placeholder="Coupon Code">
+                  <input type="button" value="Apply" class="btn-coupon">
+                </div>
+                <p>Coupon code will be applied on the checkout page</p>
               </div>
-              <p>Coupon code will be applied on the checkout page</p>
-            </div>
 
               <textarea
                 id="note"
@@ -140,7 +157,7 @@
                   <span>Free!</span>
                 </div>
               </div>
-             
+
               <div class="cart-info hide">
                 <b>Special Notes About Your Order</b>
                 <p>
@@ -180,9 +197,7 @@
 
   <div class="cart-section">
     <div class="container-1260">
-      <h2 class="h2 text-center">
-        Your cart is empty
-      </h2>
+      <h2 class="h2 text-center">Your cart is empty</h2>
       <a href="/collections/all" title="Continue Shopping" class="btn--primary yellow">Continue Shopping</a>
     </div>
   </div>
@@ -199,9 +214,29 @@
 </style>
 {% schema %}
 {
-  "name": {
-    "en": "Cart"
-  },
+  "name": "Cart",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Banner Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "bannerImage",
+      "label": "Banner Background Image (Desktop)"
+    },
+    {
+      "type": "image_picker",
+      "id": "bannerImageM",
+      "label": "Banner Background Image (Mobile)"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Banner Description"
+    }
+  ],
   "presets": [
     {
       "name": "Cart Information"

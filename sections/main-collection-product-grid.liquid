@@ -12,38 +12,61 @@
         <div class="collection-top-section">
           <div class="outer">
             <ul>
-              <li class="active">
-                <a>
-                  <div class="icon">
-                    <img src="{{ 'Books.png' | asset_url }}">
-                  </div>
-                  <span>Books</span>
-                </a>
-              </li>
-              <li>
-                <a>
-                  <div class="icon">
-                    <img src="{{ 'bulk-order.png' | asset_url }}">
-                  </div>
-                  <span>Bulk Order</span>
-                </a>
-              </li>
-              <li>
-                <a>
-                  <div class="icon">
-                    <img src="{{ 'Bundles.png' | asset_url }}">
-                  </div>
-                  <span>Bundles</span>
-                </a>
-              </li>
-              <li>
-                <a>
-                  <div class="icon">
-                    <img src="{{ 'Daily-deals.png' | asset_url }}">
-                  </div>
-                  <span>Daily Deals</span>
-                </a>
-              </li>
+              {% for block in section.blocks %}
+                {% assign Collection = block.settings.collection %}
+                {% assign full_url = request.host | append: request.path %}
+
+                <li class="{% if full_url contains Collection.url or full_url contains block.settings.link %}  active {% endif %}">
+                  <a
+                    href="{% if block.settings.link != blank %}{{ block.settings.link }} {% else %}{{ Collection.url }}{% endif %}"
+                    class=""
+                  >
+                    {% if block.settings.icon != blank %}
+                      <div class="icon">
+                        {% comment %} <img src="{{ 'Books.png' | asset_url }}"> {% endcomment %}
+                        {{
+                          block.settings.icon
+                          | image_url: width: 200
+                          | image_tag: loading: 'lazy', widths: '200x200'
+                        }}
+                      </div>
+                    {% else %}
+
+                    {% endif %}
+                    {% if block.settings.title != blank %}
+                      <span>{{ block.settings.title }}</span>
+                    {% else %}
+                      <span>{{ Collection.title }}</span>
+                    {% endif %}
+                  </a>
+                </li>
+              {% endfor %}
+              {% comment %}
+                <li>
+                  <a>
+                    <div class="icon">
+                      <img src="{{ 'bulk-order.png' | asset_url }}">
+                    </div>
+                    <span>Bulk Order</span>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <div class="icon">
+                      <img src="{{ 'Bundles.png' | asset_url }}">
+                    </div>
+                    <span>Bundles</span>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <div class="icon">
+                      <img src="{{ 'Daily-deals.png' | asset_url }}">
+                    </div>
+                    <span>Daily Deals</span>
+                  </a>
+                </li>
+              {% endcomment %}
             </ul>
           </div>
         </div>
@@ -156,9 +179,7 @@
 
 {% schema %}
 {
-  "name": {
-    "en": "Collection pages"
-  },
+  "name": "Collection pages",
   "settings": [
     {
       "type": "text",
@@ -173,9 +194,7 @@
     {
       "type": "range",
       "id": "grid",
-      "label": {
-        "en": "Products per row (grid only)"
-      },
+      "label": "Products per row (grid only)",
       "default": 4,
       "min": 2,
       "max": 5,
@@ -184,9 +203,7 @@
     {
       "type": "range",
       "id": "rows",
-      "label": {
-        "en": "Rows per page (grid only)"
-      },
+      "label": "Rows per page (grid only)",
       "default": 2,
       "min": 2,
       "max": 8,
@@ -195,26 +212,48 @@
     {
       "type": "checkbox",
       "id": "show_vendor",
-      "label": {
-        "en": "Show product vendors"
-      },
+      "label": "Show product vendors",
       "default": false
     },
     {
       "type": "checkbox",
       "id": "sort_enable",
-      "label": {
-        "en": "Enable sorting"
-      },
+      "label": "Enable sorting",
       "default": true
     },
     {
       "type": "checkbox",
       "id": "tags_enable",
-      "label": {
-        "en": "Enable tag filtering"
-      },
+      "label": "Enable tag filtering",
       "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "categories",
+      "name": "Categories",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        }
+      ]
     }
   ]
 }

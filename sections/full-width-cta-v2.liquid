@@ -1,45 +1,44 @@
- <div class="full-width-cta-v2-outer">
-    <div class="full-width-cta-v2 {{ section.settings.section_class | schema }}">
-      <div class="container-840 text-center">
-        <div class="content">
-          {% if section.settings.image != blank %}     
+<div class="full-width-cta-v2-outer">
+  <div class="full-width-cta-v2 {{ section.settings.section_class | schema }}">
+    <div class="container-840 text-center">
+      <div class="content">
+        {% comment %}
+          {% if section.settings.image != blank %}
             <div class="image-section">
-              {{ section.settings.image | image_url }}
+              {% comment %} {{ section.settings.image | image_url }} {% endcomment %}
+              {{ section.settings.image | image_url: width: 1262 | image_tag: loading: 'lazy', widths: '1262x1000' }}
             </div>
           {% endif %}
-          {% if section.settings.title != blank %}     
-            <h2>
-              {{ section.settings.title }}
-            </h2>
-          {% endif %}
-          {% if section.settings.content != blank %}     
-            <p>
-              {{ section.settings.content }}
-            </p>
-          {% endif %}
-            {% if section.settings.buttonLink != blank and section.settings.buttonText != blank %}
-                <a
-                  href="{{ section.settings.buttonLink }}"
-                  title="Read More About {{ section.settings.title }}"
-                  aria-label="Read More About {{ section.settings.title }}"
-                  class="btn--primary yellow"
-                > {{ section.settings.buttonText }}</a>
-              {% endif %}
-        </div>
-
+        {% endcomment %}
+        {% if section.settings.title != blank %}
+          <h2>
+            {{ section.settings.title }}
+          </h2>
+        {% endif %}
+        {% if section.settings.content != blank %}
+          <p>
+            {{ section.settings.content }}
+          </p>
+        {% endif %}
+        {% if section.settings.buttonLink != blank and section.settings.buttonText != blank %}
+          <a
+            href="{{ section.settings.buttonLink }}"
+            title="Read More About {{ section.settings.title }}"
+            aria-label="Read More About {{ section.settings.title }}"
+            class="btn--primary yellow"
+          >
+            {{ section.settings.buttonText -}}
+          </a>
+        {% endif %}
       </div>
     </div>
+  </div>
 </div>
 
 {% schema %}
 {
   "name": "Full width CTA V2",
   "settings": [
-    {
-      "type": "image_picker",
-      "id": "image",
-      "label": "Image"
-    },
     {
       "type": "text",
       "id": "title",
@@ -48,7 +47,7 @@
     {
       "type": "inline_richtext",
       "id": "content",
-      "label": "Content"
+      "label": "Description"
     },
     {
       "type": "text",
@@ -73,7 +72,7 @@
   ],
   "presets": [
     {
-      "name": "Full width CTA V2"
+      "name": "Full width CTA with Background"
     }
   ]
 }
