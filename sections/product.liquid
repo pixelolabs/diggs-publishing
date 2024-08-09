@@ -79,7 +79,7 @@
                   content="{{ current_variant.price | divided_by: 100.00 }}"
                 >
                   {% if product.price < product.compare_at_price %}
-                    <s>{{ product.compare_at_price | money_without_trailing_zeros }}</s>
+                    <s class="pdp-add-to-cart-price-compare">{{ product.compare_at_price | money_without_trailing_zeros }}</s>
                     <span class="pdp-add-to-cart-price">{{ product.price | money_without_trailing_zeros }}</span>
                   {% else %}
                     <span class="pdp-add-to-cart-price"> {{ product.price | money_without_trailing_zeros }}</span>
