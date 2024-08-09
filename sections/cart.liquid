@@ -1,5 +1,5 @@
 <div class="js__show-cart-items-section">
-  {% if section.settings['banner-title'] != balnk %}
+  {% if section.settings.title != blank %}
     <div class="inner-hero-section">
       {% if section.settings.bannerImage != blank %}
         <div class="image-section {% if section.settings.gradient == true %} gradient{%endif%}">
@@ -11,7 +11,7 @@
         class="        container-1240"
       >
         <div class="content">
-          <h1>Cart</h1>
+          <h1>{{ section.settings.title }}</h1>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
             industry's
