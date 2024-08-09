@@ -12,7 +12,7 @@
         <div class="collection-top-section">
           <div class="outer">
             <ul>
-              {% for blocks in section.block %}
+              {% for block in section.blocks %}
                 {% assign Collection = block.settings.collection %}
                 <li class="">
                   <a href="{% if block.settings.link != blank %}{{ block.settings.link }} {% else %}{{ Collection.url }}{% endif %}">
