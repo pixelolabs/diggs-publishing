@@ -30,7 +30,7 @@
         "categories_rbgHMT": {
           "type": "categories",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Free_Shipping.svg",
+            "icon": "shopify:\/\/shop_images\/Hassle_Free_Returns.svg",
             "title": "Bundles",
             "link": "shopify:\/\/collections\/bundles",
             "collection": "bundles"
@@ -39,15 +39,25 @@
         "categories_GM8M9T": {
           "type": "categories",
           "settings": {
+            "icon": "shopify:\/\/shop_images\/Safe_Checkout.svg",
             "title": "",
             "link": "",
             "collection": "daily-deals"
+          }
+        },
+        "categories_WQPUqE": {
+          "type": "categories",
+          "settings": {
+            "title": "",
+            "link": "",
+            "collection": ""
           }
         }
       },
       "block_order": [
         "categories_rbgHMT",
-        "categories_GM8M9T"
+        "categories_GM8M9T",
+        "categories_WQPUqE"
       ],
       "settings": {
         "subTitle": "",
