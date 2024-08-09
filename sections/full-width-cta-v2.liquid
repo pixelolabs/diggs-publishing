@@ -2,12 +2,14 @@
   <div class="full-width-cta-v2 {{ section.settings.section_class | schema }}">
     <div class="container-840 text-center">
       <div class="content">
-        {% if section.settings.image != blank %}
-          <div class="image-section">
-            {% comment %} {{ section.settings.image | image_url }} {% endcomment %}
-            {{ section.settings.image | image_url: width: 1262 | image_tag: loading: 'lazy', widths: '1262x1000' }}
-          </div>
-        {% endif %}
+        {% comment %}
+          {% if section.settings.image != blank %}
+            <div class="image-section">
+              {% comment %} {{ section.settings.image | image_url }} {% endcomment %}
+              {{ section.settings.image | image_url: width: 1262 | image_tag: loading: 'lazy', widths: '1262x1000' }}
+            </div>
+          {% endif %}
+        {% endcomment %}
         {% if section.settings.title != blank %}
           <h2>
             {{ section.settings.title }}
@@ -37,12 +39,6 @@
 {
   "name": "Full width CTA V2",
   "settings": [
-    {
-      "type": "image_picker",
-      "id": "image",
-      "label": "Image",
-      "info": "1262 x 1000px Recommended"
-    },
     {
       "type": "text",
       "id": "title",
