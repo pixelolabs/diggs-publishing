@@ -14,10 +14,13 @@
             <ul>
               {% for blocks in section.block %}
                 <li class="active">
-                  <a>
-                    <div class="icon">
-                      <img src="{{ 'Books.png' | asset_url }}">
-                    </div>
+                  <a href="">
+                    {% if block.settins.icon != blank %}
+                      <div class="icon">
+                        {% comment %} <img src="{{ 'Books.png' | asset_url }}"> {% endcomment %}
+                        {{ block.settins.icon | image_url: width: 200 | image_tag: loading: 'lazy', widths: '200x200' }}
+                      </div>
+                    {% endif %}
                     <span>Books</span>
                   </a>
                 </li>
