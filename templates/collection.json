@@ -39,24 +39,36 @@
         "categories_GM8M9T": {
           "type": "categories",
           "settings": {
+            "icon": "shopify:\/\/shop_images\/bulk-order.svg",
             "title": "",
             "link": "",
-            "collection": "daily-deals"
+            "collection": "e-books"
           }
         },
         "categories_WQPUqE": {
           "type": "categories",
           "settings": {
+            "icon": "shopify:\/\/shop_images\/Bundles.svg",
             "title": "",
             "link": "",
-            "collection": ""
+            "collection": "bundles"
+          }
+        },
+        "categories_H9cfnE": {
+          "type": "categories",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Group_482534.svg",
+            "title": "",
+            "link": "",
+            "collection": "daily-deals"
           }
         }
       },
       "block_order": [
         "categories_rbgHMT",
         "categories_GM8M9T",
-        "categories_WQPUqE"
+        "categories_WQPUqE",
+        "categories_H9cfnE"
       ],
       "settings": {
         "subTitle": "",
