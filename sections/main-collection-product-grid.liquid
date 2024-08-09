@@ -19,7 +19,7 @@
                 <li class="">
                   <a
                     href="{% if block.settings.link != blank %}{{ block.settings.link }} {% else %}{{ Collection.url }}{% endif %}"
-                    class="{% if full_url == Collection.url or full_url == block.settings.link %} active {% endif %}"
+                    class="{% if full_url == Collection.url  %} active {% endif %}"
                   >
                     {% if block.settings.icon != blank %}
                       <div class="icon">
