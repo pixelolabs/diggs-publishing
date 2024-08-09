@@ -36,9 +36,9 @@
               {% capture field_label %}
                 {% case field %}
                   {% when 'author' %}
-                    {{ 'contact.form.name' | t }}
+                    {{ 'templates.contact.form.name' | t }}
                   {% when 'body' %}
-                    {{ 'contact.form.message' | t }}
+                    {{ 'templates.contact.post_success' | t }}
                   {% else %}
                     {{ form.errors.translated_fields[field] }}
                 {% endcase %}
