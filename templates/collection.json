@@ -26,6 +26,19 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "blocks": {
+        "categories_rbgHMT": {
+          "type": "categories",
+          "settings": {
+            "title": "",
+            "link": "",
+            "collection": "bundles"
+          }
+        }
+      },
+      "block_order": [
+        "categories_rbgHMT"
+      ],
       "settings": {
         "subTitle": "",
         "grid": 4,

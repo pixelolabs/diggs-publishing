@@ -15,7 +15,7 @@
               {% for blocks in section.block %}
                 {% assign collectionsname = block.settings.collection %}
                 <li class="">
-                  <a href="{{ block.settings.link }}">
+                  <a href="{% if block.settings.link != blank %}{{ block.settings.link }} {% else %}{{ collectionsname.url }}{% endif %}">
                     {% if block.settins.icon != blank %}
                       <div class="icon">
                         {% comment %} <img src="{{ 'Books.png' | asset_url }}"> {% endcomment %}
