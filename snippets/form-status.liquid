@@ -10,7 +10,7 @@
 {% endcomment %}
 {%- if form.posted_successfully? -%}
   <p class="form-message form-message--success" tabindex="-1" data-form-status>
-    {{ success_message | default: 'contact.form.post_success' | t }}
+    {{ success_message | default: 'templates.contact.form.post_success' | t }}
   </p>
 {%- endif -%}
 
@@ -38,7 +38,7 @@
                   {% when 'author' %}
                     {{ 'templates.contact.form.name' | t }}
                   {% when 'body' %}
-                    {{ 'templates.contact.post_success' | t }}
+                    {{ 'contact.form.message' | t }}
                   {% else %}
                     {{ form.errors.translated_fields[field] }}
                 {% endcase %}
