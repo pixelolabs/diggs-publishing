@@ -34,10 +34,19 @@
             "link": "",
             "collection": "bundles"
           }
+        },
+        "categories_GM8M9T": {
+          "type": "categories",
+          "settings": {
+            "title": "",
+            "link": "",
+            "collection": "daily-deals"
+          }
         }
       },
       "block_order": [
-        "categories_rbgHMT"
+        "categories_rbgHMT",
+        "categories_GM8M9T"
       ],
       "settings": {
         "subTitle": "",
