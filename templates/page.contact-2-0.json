@@ -25,7 +25,9 @@
     "contact_section_RHMnDG": {
       "type": "contact-section",
       "settings": {
-        "title": "Contact Information"
+        "sidebartitle": "Contact Information",
+        "sidebardescription": "<p>Ignite change with your stories. Reach out us and embark on a publishing journey where diversity and creativity know no bounds<\/p>",
+        "title": "Get In touch"
       }
     }
   },
