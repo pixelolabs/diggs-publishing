@@ -2254,7 +2254,7 @@
         "label": "Contact Number"
       },
       {
-        "type": "text",
+        "type": "richtext",
         "id": "address",
         "label": "Address"
       },
