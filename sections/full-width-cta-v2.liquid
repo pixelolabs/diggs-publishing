@@ -4,7 +4,8 @@
       <div class="content">
         {% if section.settings.image != blank %}
           <div class="image-section">
-            {{ section.settings.image | image_url }}
+            {% comment %} {{ section.settings.image | image_url }} {% endcomment %}
+            {{ section.settings.image | image_url: width: 1262 | image_tag: loading: 'lazy', widths: '1262x1000' }}
           </div>
         {% endif %}
         {% if section.settings.title != blank %}
@@ -39,7 +40,8 @@
     {
       "type": "image_picker",
       "id": "image",
-      "label": "Image"
+      "label": "Image",
+      "info": "1262 x 1000px Recommended"
     },
     {
       "type": "text",
