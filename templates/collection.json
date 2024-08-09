@@ -30,8 +30,9 @@
         "categories_rbgHMT": {
           "type": "categories",
           "settings": {
-            "title": "",
-            "link": "",
+            "icon": "shopify:\/\/shop_images\/Free_Shipping.svg",
+            "title": "Bundles",
+            "link": "shopify:\/\/collections\/bundles",
             "collection": "bundles"
           }
         },
