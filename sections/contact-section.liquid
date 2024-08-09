@@ -1,8 +1,8 @@
 <div class="contact-section ">
   <div class="container-1260  flex">
     <div class="contact-info-section">
-      {% if section.settings.title != blank %}
-        <h2 class="h4">{{ section.settings.title }}</h2>
+      {% if section.settings.sidebartitle != blank %}
+        <h2 class="h4">{{ section.settings.sidebartitle }}</h2>
       {% endif %}
       <p class="medium">Contact us or simply fill in the form and we will get back to you as soon as possible.</p>
       <ul>
@@ -115,8 +115,8 @@
   "settings": [
     {
       "type": "text",
-      "id": "title",
-      "label": "Title"
+      "id": "sidebartitle",
+      "label": "Sidebar Title"
     },
     {
       "type": "richtext",
