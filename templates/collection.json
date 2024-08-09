@@ -30,10 +30,10 @@
         "categories_rbgHMT": {
           "type": "categories",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Hassle_Free_Returns.svg",
-            "title": "Bundles",
-            "link": "shopify:\/\/collections\/bundles",
-            "collection": "bundles"
+            "icon": "{{ block.settings.collection.metafields.custom.collection_category_icon.value }}",
+            "title": "{{ block.settings.collection.metafields.custom.collection_category_title.value }}",
+            "link": "{{ block.settings.collection.metafields.custom.collection_category_link.value }}",
+            "collection": "{{ collection.metafields.custom.collection.value }}"
           }
         },
         "categories_GM8M9T": {
