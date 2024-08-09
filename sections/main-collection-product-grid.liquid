@@ -15,9 +15,12 @@
               {% for block in section.blocks %}
                 {% assign Collection = block.settings.collection %}
                 {% assign full_url = request.host | append: request.path %}
-                {{ full_url }}
+
                 <li class="">
-                  <a href="{% if block.settings.link != blank %}{{ block.settings.link }} {% else %}{{ Collection.url }}{% endif %}">
+                  <a
+                    href="{% if block.settings.link != blank %}{{ block.settings.link }} {% else %}{{ Collection.url }}{% endif %}"
+                    class="{% if full_url == Collection.url or full_url == block.settings.link %} active {% endif %}"
+                  >
                     {% if block.settings.icon != blank %}
                       <div class="icon">
                         {% comment %} <img src="{{ 'Books.png' | asset_url }}"> {% endcomment %}
