@@ -13,9 +13,9 @@
           <div class="outer">
             <ul>
               {% for blocks in section.block %}
-                {% assign collectionsname = block.settings.collection %}
+                {% assign Collection = block.settings.collection %}
                 <li class="">
-                  <a href="{% if block.settings.link != blank %}{{ block.settings.link }} {% else %}{{ collectionsname.url }}{% endif %}">
+                  <a href="{% if block.settings.link != blank %}{{ block.settings.link }} {% else %}{{ Collection.url }}{% endif %}">
                     {% if block.settins.icon != blank %}
                       <div class="icon">
                         {% comment %} <img src="{{ 'Books.png' | asset_url }}"> {% endcomment %}
@@ -27,7 +27,7 @@
                     {% if block.settings.title != blank %}
                       <span>{{ block.settings.title }}</span>
                     {% else %}
-                      <span>{{ collectionsname.title }}</span>
+                      <span>{{ Collection.title }}</span>
                     {% endif %}
                   </a>
                 </li>
