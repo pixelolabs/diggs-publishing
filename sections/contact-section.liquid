@@ -14,7 +14,7 @@
         </li>
         <li>
           <div class="icon">{% include 'icon-email-contact' %}</div>
-          <a href="mailto:demo@gmail.com"> demo@gmail.com</a>
+          <a href="{{ settings.email }}"> {{ settings.email }}</a>
         </li>
         <li>
           <div class="icon">{% include 'icon-address-contact' %}</div>
@@ -123,7 +123,7 @@
     {
       "type": "richtext",
       "id": "sidebardescription",
-      "label": "Description"
+      "label": "Sidebar Description"
     }
   ],
 
