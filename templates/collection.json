@@ -30,16 +30,15 @@
         "categories_rbgHMT": {
           "type": "categories",
           "settings": {
-            "icon": "{{ block.settings.collection.metafields.custom.collection_category_icon.value }}",
-            "title": "{{ block.settings.collection.metafields.custom.collection_category_title.value }}",
-            "link": "{{ block.settings.collection.metafields.custom.collection_category_link.value }}",
-            "collection": "{{ collection.metafields.custom.collection.value }}"
+            "icon": "shopify:\/\/shop_images\/Books.svg",
+            "title": "",
+            "link": "",
+            "collection": "books"
           }
         },
         "categories_GM8M9T": {
           "type": "categories",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Safe_Checkout.svg",
             "title": "",
             "link": "",
             "collection": "daily-deals"
