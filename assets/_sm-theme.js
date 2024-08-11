@@ -1652,9 +1652,6 @@ jQuery(function () {
     $(this).parent("ul").children("li").removeClass("active");
     var index = $(this).parent("ul").attr("data-index");
     var option = $(this).attr("data-value");
-    var variantOuter = $(this).parent("ul").parent("div").parent("div").parent(".product__information").siblings(".popup-footer").find(".sm-rc-widget");
-    variantOuter.children(".sm-rc-option-" + index).val(option);
-    variantOuter.children(".sm-rc-option-" + index).change();
     $(this).addClass("active");
     var pID = $(this).attr("data-id");
     $("#product-select-" + pID + " option").each(function (index) {
