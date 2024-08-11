@@ -93,6 +93,12 @@
     {%- assign current_variant = productRelated.selected_or_first_available_variant -%}
     {% if show_secondary_button %}
       <div class="btn--wrapper flex">
+        {% assign all_out_of_stock = true %}
+{% for variant in productRelated.variants %}
+  {% if variant.available %}
+    {% assign all_out_of_stock = false %}
+  {% endif %}
+{% endfor %}
         {% if product.available %}
       <a
         class="btn--atc js__card-add-to-cart"
