@@ -15,7 +15,7 @@
         "image": "shopify:\/\/shop_images\/faq-banner-image.png",
         "mobileImage": "shopify:\/\/shop_images\/Group_482562.png",
         "title": "FAQ",
-        "description": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s<\/p>",
+        "description": "",
         "buttonText1": "",
         "buttonLink1": "",
         "button_bg": "pink",
@@ -28,28 +28,35 @@
         "list_anUH39": {
           "type": "list",
           "settings": {
-            "heading": "Refund"
+            "heading": "Refund & Orders"
           }
         },
         "question_te3VP6": {
           "type": "question",
           "settings": {
-            "title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry?",
-            "faqAnswer": "<p>Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing.<\/p>"
+            "title": "What is your refund policy?",
+            "faqAnswer": "<p>We have a 10-day return policy, which means you have 10 days after receiving your item to request a return.<\/p><p>To be eligible for a return, your item must be in the same condition that you received it, unused, with tags, and in its original packaging. You’ll also need the receipt or proof of purchase.<\/p><p>To start a return, you can contact us at author@ksdiggs.com. If your return is accepted, we’ll send you a return shipping label, as well as instructions on how and where to send your package. Items sent back to us without first requesting a return will not be accepted.<\/p><p>You can always contact us for any return question at author@ksdiggs.com<\/p><p><strong>Damages and issues<\/strong><\/p><p>Please inspect your order upon reception and contact us immediately if the item is defective, damaged or if you receive the wrong item, so that we can evaluate the issue and make it right.<\/p><h6>Exceptions \/ non-returnable items<\/h6><p>Certain types of items cannot be returned, like perishable goods (such as food, flowers, or plants), custom products (such as special orders or personalized items), and personal care goods (such as beauty products). We also do not accept returns for hazardous materials, flammable liquids, or gases. Please get in touch if you have questions or concerns about your specific item.<\/p><p>Unfortunately, we cannot accept returns on sale items or gift cards.<\/p><h6>Exchanges<\/h6><p>The fastest way to ensure you get what you want is to return the item you have, and once the return is accepted, make a separate purchase for the new item.<\/p><h6>Refunds<\/h6><p>We will notify you once we’ve received and inspected your return, and let you know if the refund was approved or not. If approved, you’ll be automatically refunded on your original payment method minus shipping and handling fees. Please remember it can take some time for your bank or credit card company to process and post the refund too.<\/p>"
           }
         },
         "question_pc4zCV": {
           "type": "question",
           "settings": {
-            "title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry?",
-            "faqAnswer": ""
+            "title": "How long does it take to process a refund?",
+            "faqAnswer": "<p>Refunds typically take several business days to appear in your account. If you haven't received your refund within two weeks, please contact us or your bank for further assistance.<\/p>"
           }
         },
         "question_Ak3beG": {
           "type": "question",
           "settings": {
-            "title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry?",
-            "faqAnswer": ""
+            "title": "Do you offer exchanges?",
+            "faqAnswer": "<p>Yes, we offer exchanges in two cases:<\/p><ol><li><strong>There has been an error in your order:<\/strong> If you received the wrong item or there was a mistake in your order, please reach out to us. We will provide you with a return shipping label at no cost. Once we receive the incorrect item, we will promptly send you the correct one.<\/li><li><strong>If you ordered the wrong book: <\/strong>If you accidentally ordered the wrong book, you can still request an exchange. In this case, you'll be responsible for the return shipping and any price difference between the books you wish to exchange for. Once we receive the returned item and any additional payment, we’ll send you the book you wanted.<\/li><\/ol><p>To initiate an exchange, just contact us at author@ksdiggs.com, and we'll guide you through the process!<\/p>"
+          }
+        },
+        "question_yyYqaA": {
+          "type": "question",
+          "settings": {
+            "title": "Can I change or cancel my order after it has been placed?",
+            "faqAnswer": "<p>The ability to change or cancel an order may depend on the status of the order. Please contact our customer service at author@ksdiggs.com as soon as possible if you need to make changes or cancel your order.<\/p>"
           }
         },
         "list_zRnAaE": {
@@ -61,29 +68,36 @@
         "question_7YmQJU": {
           "type": "question",
           "settings": {
-            "title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry?",
-            "faqAnswer": ""
+            "title": "What is the processing and shipping time for books?",
+            "faqAnswer": "<p>Orders are typically processed 24 to 72 hours after business day reciept. Processing times may take longer on weekends and holidays. Shipping time for books can vary depending on your location, weather, and other external factors. For the most accurate information, please refer the tracking number received after your order.<\/p>"
           }
         },
         "question_e9ULQH": {
           "type": "question",
           "settings": {
-            "title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry?",
-            "faqAnswer": ""
-          }
-        },
-        "question_Xw3Uay": {
-          "type": "question",
-          "settings": {
-            "title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry?",
-            "faqAnswer": ""
+            "title": "Do you ship internationally?",
+            "faqAnswer": "<p>Yes we do ship internationally! For more information on international shipping, please refer to our shipping policy on the website or contact our customer service.<\/p>"
           }
         },
         "question_ckwcj6": {
           "type": "question",
           "settings": {
-            "title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry?",
-            "faqAnswer": ""
+            "title": "Can I track my order?",
+            "faqAnswer": "<p>Typically, once an order has been shipped, you should receive a tracking number. If you have not received one or if you're having trouble tracking your order, please contact our customer service for assistance.<\/p>"
+          }
+        },
+        "question_Xw3Uay": {
+          "type": "question",
+          "settings": {
+            "title": "What should I do if my package is lost or marked as delivered but I didn’t receive it?",
+            "faqAnswer": "<p>If your package is marked as lost or delivered but you haven't received it, please contact your local USPS office to file a claim. They will investigate and either locate your package or declare it lost. Once it's officially declared lost, reach out to us, and we'll be happy to send a replacement.<\/p>"
+          }
+        },
+        "question_8DDhDa": {
+          "type": "question",
+          "settings": {
+            "title": "What should I do if I receive a damaged item?",
+            "faqAnswer": "<p>If you received a damaged item, please contact our customer service immediately. We will guide you through the process of returning the damaged item and receiving a replacement.<\/p>"
           }
         },
         "list_AQbbJX": {
@@ -95,29 +109,63 @@
         "question_btE46P": {
           "type": "question",
           "settings": {
-            "title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry?",
-            "faqAnswer": ""
+            "title": "What payment methods do you accept?",
+            "faqAnswer": "<p>We accept a variety of payment methods, including Visa, Mastercard, American Express, Discover, PayPal, ShopPay, Apple Pay, Amazon Pay, and others.<\/p>"
           }
         },
         "question_i4GNng": {
           "type": "question",
           "settings": {
-            "title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry?",
-            "faqAnswer": ""
+            "title": "How do I apply a discount or promo code?",
+            "faqAnswer": "<p>Discounts and promo codes can be applied during the checkout process. Simply enter your code in the designated field to see the discount reflected in your total.<\/p>"
+          }
+        },
+        "list_dNQaRz": {
+          "type": "list",
+          "settings": {
+            "heading": "Books"
           }
         },
         "question_jGPcGH": {
           "type": "question",
           "settings": {
-            "title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry?",
-            "faqAnswer": ""
+            "title": "What is the difference between Body Safety Box Sets 1 and 2?",
+            "faqAnswer": "<p>The difference between Box Set 1 and Box Set 2 is that each set includes a different version of the book \"Where Hands Go: An Introduction to Safe and Unsafe Touch.\" Box Set 1 contains the girls' version of the book, while Box Set 2 contains the boys' version. All other books in both sets are the same and feature both boys and girls throughout.<\/p><p>Both versions of \"Where Hands Go: An Introduction to Safe and Unsafe Touch\" have the same content and aim to educate children about safe and unsafe touch. The only difference is in the illustrations, where one book depicts a girl and the other depicts a boy. This is to ensure that all children can identify with the characters and understand the important messages about body safety and consent.<\/p>"
           }
         },
         "question_UfCeRN": {
           "type": "question",
           "settings": {
-            "title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry?",
-            "faqAnswer": ""
+            "title": "What age ranges are your books suitable for?",
+            "faqAnswer": "<p>Our books are great for children aged 2 to 10. It's best to introduce body safety concepts early, and our books provide age-appropriate content for each stage of development.<\/p>"
+          }
+        },
+        "question_YMN4jm": {
+          "type": "question",
+          "settings": {
+            "title": "How often do you release new books?",
+            "faqAnswer": "<p>The release of new books can vary. We recommend signing up for our newsletter or following us on social media to stay updated on new releases.<\/p>"
+          }
+        },
+        "question_gVJNLA": {
+          "type": "question",
+          "settings": {
+            "title": "Do you accept bulk orders?",
+            "faqAnswer": "<p>Yes, we absolutely do! Orders over 25 books are considered bulk and are eligible for discount. For information on bulk orders, please email author@ksdiggs.com. We would be happy to assist you with your needs.<\/p>"
+          }
+        },
+        "question_dQziRa": {
+          "type": "question",
+          "settings": {
+            "title": "Do you partner with nonprofits and other community organizations?",
+            "faqAnswer": "<p>We are open to partnerships and collaborations that align with our mission. For more information, please contact us directly at author@ksdiggs.com<\/p>"
+          }
+        },
+        "question_VdcG7D": {
+          "type": "question",
+          "settings": {
+            "title": "How can I get in touch for press or media inquiries?",
+            "faqAnswer": "<p>For press or media inquiries, please use the contact form on our website or email us at author@ksdiggs.com.<\/p>"
           }
         }
       },
@@ -126,16 +174,23 @@
         "question_te3VP6",
         "question_pc4zCV",
         "question_Ak3beG",
+        "question_yyYqaA",
         "list_zRnAaE",
         "question_7YmQJU",
         "question_e9ULQH",
-        "question_Xw3Uay",
         "question_ckwcj6",
+        "question_Xw3Uay",
+        "question_8DDhDa",
         "list_AQbbJX",
         "question_btE46P",
         "question_i4GNng",
+        "list_dNQaRz",
         "question_jGPcGH",
-        "question_UfCeRN"
+        "question_UfCeRN",
+        "question_YMN4jm",
+        "question_gVJNLA",
+        "question_dQziRa",
+        "question_VdcG7D"
       ],
       "settings": {
       }
