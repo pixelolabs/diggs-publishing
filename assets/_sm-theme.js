@@ -1621,8 +1621,6 @@ jQuery(function () {
         spaceBetween: 20
       });
     } catch (_unused3) {}
-
-    $(".js_pdp-variant-options-" + id).find(".js__popup-variant-select").children("li:first-child").click();
   });
   $(document).on("click", ".modal", function (e) {
     if (!($(e.target).closest(".modal-content").length > 0 || $(e.target).closest(".close").length > 0)) {
