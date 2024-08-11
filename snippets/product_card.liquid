@@ -99,25 +99,26 @@
     {% assign all_out_of_stock = false %}
   {% endif %}
 {% endfor %}
-        {% if product.available %}
-      <a
-        class="btn--atc js__card-add-to-cart"
-        href="javascript:;"
-        
-        title="Shop {{productRelated.title}}"
-        data-variant-id="{{current_variant.id}}"
-        >Add To Cart</a
-      >
+{% if all_out_of_stock %}
+  <a
+    class="btn--atc"
+    title="{{ productRelated.title }}"
+    href="javascript:;"
+    
+    title="Shop {{productRelated.title}}"
+    data-id="{{productRelated.id}}"
+    >Sold Out</a
+  >
         {% else %}
         <a
-          class="btn--atc"
-          title="{{ productRelated.title }}"
+          class="btn--atc js__card-add-to-cart"
           href="javascript:;"
           
           title="Shop {{productRelated.title}}"
-          data-id="{{productRelated.id}}"
-          >Sold Out</a
+          data-variant-id="{{current_variant.id}}"
+          >Add To Cart</a
         >
+       
 {% endif %}
     <a
       class="btn--quick-view rimary js__quick-view-click"
