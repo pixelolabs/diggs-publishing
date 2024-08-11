@@ -1656,13 +1656,13 @@ jQuery(function () {
       var vID = $(this).attr("value");
       var variantSoldout = $(this).attr("data-soldout");
       var price = $(this).attr("data-price");
-      $(".js__price-popup-price-" + pID).hide();
 
       if (optionName.trim() == option.trim()) {
         console.log("optionName" + optionName);
         console.log("if");
         console.log("vID" + vID);
         console.log("html" + $(".js__price-popup-" + vID).html());
+        $(".js__price-popup-price-" + pID).hide();
         $(".js__price-popup-" + vID).show();
 
         if (variantSoldout == "true") {
