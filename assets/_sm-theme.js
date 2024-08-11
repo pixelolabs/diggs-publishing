@@ -1658,6 +1658,8 @@ jQuery(function () {
       var vID = $(this).attr("value");
       var variantSoldout = $(this).attr("data-soldout");
       var price = $(this).attr("data-price");
+      $(".js__price-popup-price").hide();
+      $(".js__price-popup-price").hide();
 
       if (optionName.trim() == option.trim()) {
         if (variantSoldout == "true") {
