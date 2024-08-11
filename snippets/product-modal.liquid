@@ -51,7 +51,7 @@
         </h2>
         {% for variant in productData.variants %}
         <div
-          class="product-single__prices js__price-{{ variant.id }}"
+          class="product-single__prices js__price-popup-price-{{ productData.id }} js__price-popup-{{ variant.id }}"
           itemprop="price"
           content="{{ current_variant.price | divided_by: 100.00 }}"
         >
@@ -64,11 +64,13 @@
           {% endif %}
         </div>
       {% endfor %}
+      {%- if productData.description != blank -%}
         <div class="description">
-          <p>
-            Where Hands Go is a carefully crafted book, handsomely illustrated, for parents to teach their children about the dangers of inappropriate touching...  <a>Learn More</a>
-          </p>
+          <p>{{ productData.description | strip_html | truncate: 150 }}</p>
+          <a href="{{productData.url }}" class="more-link">Learn More</a>
         </div>
+      {%- endif -%}
+        
         
 
         {% comment %} Variants Information {% endcomment %}
@@ -134,6 +136,21 @@
                   </label>
                 </div>
               {% endfor %}
+              <div class="hide">
+                
+                <select id="product-select-{{productData.id}}" name="id" style="display: none;">
+                  {% for variant in productData.variants %}
+                  {% if variant.available %}
+                  <option {% if variant==current_variant %}selected="selected"  {% endif %} data-price="{{variant.price | money_without_trailing_zeros}}" value="{{ variant.id }}">
+                    {{ variant.title }}
+                  </option>
+                  {% else %}
+                  <option disabled="disabled" data-soldout="true" data-price="{{variant.price |money_without_trailing_zeros}}" value="{{ variant.id }}">{{ variant.title }}</option>
+                  {% endif %}
+                  {% endfor %}
+                </select>
+              
+            </div>
             </div>
           {% endunless %}
         {% endif %}
@@ -149,7 +166,7 @@
                   <input
                     type="text"
                     sm-rc-quantity-selector
-                    class="quantity-selector qty-val"
+                    class="quantity-selector qty-val js-quantity-selector-{{productData.id}}"
                     value="1"
                     id="Quantity"
                     name="quantity"
@@ -158,9 +175,7 @@
                 </div>
               </div>
               <div class="action action--atc">
-                <button sm-rc-add-to-cart class="btn--primary yellow js__popup-addtocart">
-                  <span class="oos-text"> Out Of Stock </span>
-                  <span class="is-text">Add To Cart</span>
+                <button data-id="{{productData.id}}" class="btn--primary yellow js__modal-popup-addtocart js__modal-popup-addtocart-{{productData.id}}">Add To Cart
                 </button>
               </div>
             </div>

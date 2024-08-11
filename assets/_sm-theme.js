@@ -1573,7 +1573,6 @@ jQuery(function () {
     e.stopImmediatePropagation();
     var id = $(this).attr("data-id"); //Executed after SWYM has loaded all necessary resources.
 
-    $(".pdp-tab-link-" + id + " li:first-child").children("a").click();
     $(".js__popup-variant-select-" + id + " li:first-child").click(); // show modal pop up
 
     $("#modal-" + id).show();
@@ -1622,8 +1621,6 @@ jQuery(function () {
         spaceBetween: 20
       });
     } catch (_unused3) {}
-
-    $(".js_pdp-variant-options-" + id).find(".js__popup-variant-select").children("li:first-child").click();
   });
   $(document).on("click", ".modal", function (e) {
     if (!($(e.target).closest(".modal-content").length > 0 || $(e.target).closest(".close").length > 0)) {
@@ -1650,13 +1647,10 @@ jQuery(function () {
 
   $(document).on("click", ".js__popup-variant-select li", function (e) {
     $(this).parent("ul").children("li").removeClass("active");
-    var index = $(this).parent("ul").attr("data-index");
     var option = $(this).attr("data-value");
-    var variantOuter = $(this).parent("ul").parent("div").parent("div").parent(".product__information").siblings(".popup-footer").find(".sm-rc-widget");
-    variantOuter.children(".sm-rc-option-" + index).val(option);
-    variantOuter.children(".sm-rc-option-" + index).change();
     $(this).addClass("active");
     var pID = $(this).attr("data-id");
+    console.log("pID" + pID);
     $("#product-select-" + pID + " option").each(function (index) {
       var optionName = $(this).html();
       var vID = $(this).attr("value");
@@ -1664,17 +1658,16 @@ jQuery(function () {
       var price = $(this).attr("data-price");
 
       if (optionName.trim() == option.trim()) {
+        $(".js__price-popup-price-" + pID).hide();
+        $(".js__price-popup-" + vID).show();
+
         if (variantSoldout == "true") {
           $(".js__modal-popup-addtocart-" + pID).attr("disabled", "disabled"); //update the text for the add to cart button to sold out
 
           $(".js__modal-popup-addtocart-text-" + pID).html("Soldout"); //hide the price if it's sold out
-
-          $(".modal-popup-price-" + pID).hide();
         } else {
           //update the text for the button to add to cart, if not sold out
-          $(".js__modal-popup-addtocart-text-" + pID).html("Add to Cart"); // update the price in the button - add to cart
-
-          $(".modal-popup-price-" + pID).show(); // if not sold out, then remove the attr disabled
+          $(".js__modal-popup-addtocart-text-" + pID).html("Add to Cart"); // if not sold out, then remove the attr disabled
 
           $(".js__modal-popup-addtocart-" + pID).removeAttr("disabled");
         } // update the variant ID for the data-variant-id
@@ -1725,22 +1718,19 @@ jQuery(function () {
     var selectedVariantID = $(this).attr("data-variant-id");
     var quantity = parseInt($(".js-quantity-selector-" + pID).val());
     var recharge = $(".js__rc_radio_options-" + pID).html();
-    var productUrl = $(".js__product-url-" + pID).val();
     var items = [];
 
     if (recharge == undefined) {
       /* For the main item */
       items.push({
         id: selectedVariantID,
-        quantity: quantity,
-        "properties[_ProductUrl]": productUrl
+        quantity: quantity
       });
     } else {
       if ($(".js__rc_radio_options-" + pID + " .rc_block__type-modal-popup.rc_block__type--active").hasClass("rc_block__type__onetime")) {
         items.push({
           id: selectedVariantID,
-          quantity: quantity,
-          "properties[_ProductUrl]": productUrl
+          quantity: quantity
         });
       } else {
         var shippingIntervalFrequency = $(".js__shipping_interval_frequency-" + pID).val();
@@ -1749,15 +1739,40 @@ jQuery(function () {
           id: selectedVariantID,
           quantity: quantity,
           "properties[shipping_interval_frequency]": shippingIntervalFrequency,
-          "properties[shipping_interval_unit_type]": shippingIntervalUnitType,
-          "properties[_ProductUrl]": productUrl
+          "properties[shipping_interval_unit_type]": shippingIntervalUnitType
         });
       }
     }
 
     CartJS.addItems(items, {
       success: function success(response, textStatus, jqXHR) {
-        CartJS.getNote();
+        $(".modal-quick-view").hide();
+
+        if (getglobalLib("Mini_Cart") == "yes") {
+          /* Show message */
+          setTimeout(openMiniCart, 500);
+        } else {
+          window.location = "/cart";
+        }
+      },
+      // Define an error callback to display an error message.
+      error: function error(jqXHR, textStatus, errorThrown) {
+        showCartErrorMessage();
+      }
+    });
+  });
+  $(document).on("click", ".js__card-add-to-cart", function (e) {
+    var selectedVariantID = $(this).attr("data-variant-id");
+    var quantity = 1;
+    var items = [];
+    /* For the main item */
+
+    items.push({
+      id: selectedVariantID,
+      quantity: quantity
+    });
+    CartJS.addItems(items, {
+      success: function success(response, textStatus, jqXHR) {
         $(".modal-quick-view").hide();
 
         if (getglobalLib("Mini_Cart") == "yes") {

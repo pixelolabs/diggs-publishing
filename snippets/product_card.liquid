@@ -90,16 +90,36 @@
         {% endif %}
       </span>
     {% endif %}
+    {%- assign current_variant = productRelated.selected_or_first_available_variant -%}
     {% if show_secondary_button %}
       <div class="btn--wrapper flex">
-      <a
-        class="btn--atc js__quick-view-click"
-        title="{{ productRelated.title }}"
-        href="javascript:;"
-        title="Shop {{productRelated.title}}"
-        data-id="{{productRelated.id}}"
-        >Add To Cart</a
-      >
+        {% assign all_out_of_stock = true %}
+{% for variant in productRelated.variants %}
+  {% if variant.available %}
+    {% assign all_out_of_stock = false %}
+  {% endif %}
+{% endfor %}
+{% if all_out_of_stock %}
+  <a
+    class="btn--atc"
+    title="{{ productRelated.title }}"
+    href="javascript:;"
+    
+    title="Shop {{productRelated.title}}"
+    data-id="{{productRelated.id}}"
+    >Sold Out</a
+  >
+        {% else %}
+        <a
+          class="btn--atc js__card-add-to-cart"
+          href="javascript:;"
+          
+          title="Shop {{productRelated.title}}"
+          data-variant-id="{{current_variant.id}}"
+          >Add To Cart</a
+        >
+       
+{% endif %}
     <a
       class="btn--quick-view rimary js__quick-view-click"
       title="{{ productRelated.title }}"
