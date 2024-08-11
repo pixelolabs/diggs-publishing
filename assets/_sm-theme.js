@@ -1658,10 +1658,6 @@ jQuery(function () {
       var price = $(this).attr("data-price");
 
       if (optionName.trim() == option.trim()) {
-        console.log("optionName" + optionName);
-        console.log("if");
-        console.log("vID" + vID);
-        console.log("html" + $(".js__price-popup-" + vID).html());
         $(".js__price-popup-price-" + pID).hide();
         $(".js__price-popup-" + vID).show();
 
