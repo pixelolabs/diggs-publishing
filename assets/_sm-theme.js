@@ -1664,6 +1664,8 @@ jQuery(function () {
       $(".js__price-popup-" + vID).show();
 
       if (optionName.trim() == option.trim()) {
+        console.log("if");
+
         if (variantSoldout == "true") {
           $(".js__modal-popup-addtocart-" + pID).attr("disabled", "disabled"); //update the text for the add to cart button to sold out
 
