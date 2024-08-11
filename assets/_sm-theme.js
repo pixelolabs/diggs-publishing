@@ -1655,14 +1655,14 @@ jQuery(function () {
       var optionName = $(this).html();
       var vID = $(this).attr("value");
       var variantSoldout = $(this).attr("data-soldout");
-      var price = $(this).attr("data-price");
-      $(".js__price-popup-price-" + pID).hide();
+      var price = $(this).attr("data-price"); // $(".js__price-popup-price-"+pID).hide();
 
       if (optionName.trim() == option.trim()) {
         console.log("optionName" + optionName);
         console.log("if");
         console.log("vID" + vID);
-        console.log("html" + $(".js__price-popup-" + vID).html()); //  $(".js__price-popup-"+vID).show();
+        console.log("html" + $(".js__price-popup-" + vID).html());
+        $(".js__price-popup-" + vID).show();
 
         if (variantSoldout == "true") {
           $(".js__modal-popup-addtocart-" + pID).attr("disabled", "disabled"); //update the text for the add to cart button to sold out
