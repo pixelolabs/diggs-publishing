@@ -1650,7 +1650,6 @@ jQuery(function () {
 
   $(document).on("click", ".js__popup-variant-select li", function (e) {
     $(this).parent("ul").children("li").removeClass("active");
-    var index = $(this).parent("ul").attr("data-index");
     var option = $(this).attr("data-value");
     $(this).addClass("active");
     var pID = $(this).attr("data-id");
