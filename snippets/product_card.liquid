@@ -95,11 +95,11 @@
       <div class="btn--wrapper flex">
         {% if product.available %}
       <a
-        class="btn--atc js__quick-view-click"
+        class="btn--atc js__card-add-to-cart"
         href="javascript:;"
         
         title="Shop {{productRelated.title}}"
-        data-id="{{productRelated.id}}"
+        data-id="{{current_variant.id}}"
         >Add To Cart</a
       >
         {% else %}
