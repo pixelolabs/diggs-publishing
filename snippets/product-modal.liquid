@@ -104,21 +104,51 @@
 
               {% comment %} SM {% endcomment %}
 
+              {% for variant in productData.variants %}
+                <div class="variant form__group form__group--radio hide">
+                  <label
+                    class="pdp-option__select{% if forloop.first == true %} active{% endif %}"
+                    data-variant_id="{{ variant.id }}"
+                  >
+                    <input
+                      {% if forloop.first == true %}
+                        checked
+                      {% endif %}
+                      name="radio--{{ productData.id }}"
+                      type="radio"
+                    >
+                    <span class="checkmark"></span>
+                    <span class="variant__info">
+                      {{ variant.title }} - {{ variant.price | money }}
+
+                      {% assign basePrice = productData.price_min %}
+                      {% assign varNumber = variant.title | abs %}
+
+                      {% assign normalPrice = basePrice | times: varNumber %}
+                      {% assign savedPrice = normalPrice | minus: variant.price %}
+
+                      {% if savedPrice != 0 and product.variants.size > 1 %}
+                        <span class="saved"> (Save {{ savedPrice | money }}) </span>
+                      {% endif %}
+                    </span>
+                  </label>
+                </div>
+              {% endfor %}
               <div class="hide">
                 
-                  <select id="product-select-{{productData.id}}" name="id" style="display: none;">
-                    {% for variant in productData.variants %}
-                    {% if variant.available %}
-                    <option {% if variant==current_variant %}selected="selected"  {% endif %} data-price="{{variant.price | money_without_trailing_zeros}}" value="{{ variant.id }}">
-                      {{ variant.title }}
-                    </option>
-                    {% else %}
-                    <option disabled="disabled" data-price="{{variant.price |money_without_trailing_zeros}}" value="{{ variant.id }}">{{ variant.title }}</option>
-                    {% endif %}
-                    {% endfor %}
-                  </select>
-                
-              </div>
+                <select id="product-select-{{productData.id}}" name="id" style="display: none;">
+                  {% for variant in productData.variants %}
+                  {% if variant.available %}
+                  <option {% if variant==current_variant %}selected="selected"  {% endif %} data-price="{{variant.price | money_without_trailing_zeros}}" value="{{ variant.id }}">
+                    {{ variant.title }}
+                  </option>
+                  {% else %}
+                  <option disabled="disabled" data-price="{{variant.price |money_without_trailing_zeros}}" value="{{ variant.id }}">{{ variant.title }}</option>
+                  {% endif %}
+                  {% endfor %}
+                </select>
+              
+            </div>
             </div>
           {% endunless %}
         {% endif %}
