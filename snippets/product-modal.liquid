@@ -67,7 +67,7 @@
       {%- if productData.description != blank -%}
         <div class="description">
           <p>{{ productData.description | strip_html | truncate: 150 }}</p>
-          <div href="{{productData.url }}" class="more-link">Learn More</div>
+          <a href="{{productData.url }}" class="more-link">Learn More</a>
         </div>
       {%- endif -%}
         
