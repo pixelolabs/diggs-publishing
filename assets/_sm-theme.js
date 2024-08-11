@@ -1761,6 +1761,33 @@ jQuery(function () {
       }
     });
   });
+  $(document).on("click", ".js__card-add-to-cart", function (e) {
+    var selectedVariantID = $(this).attr("data-variant-id");
+    var quantity = 1;
+    var items = [];
+    /* For the main item */
+
+    items.push({
+      id: selectedVariantID,
+      quantity: quantity
+    });
+    CartJS.addItems(items, {
+      success: function success(response, textStatus, jqXHR) {
+        $(".modal-quick-view").hide();
+
+        if (getglobalLib("Mini_Cart") == "yes") {
+          /* Show message */
+          setTimeout(openMiniCart, 500);
+        } else {
+          window.location = "/cart";
+        }
+      },
+      // Define an error callback to display an error message.
+      error: function error(jqXHR, textStatus, errorThrown) {
+        showCartErrorMessage();
+      }
+    });
+  });
   $(document).on("click", ".js__popup-collection-slider-thumbnail .slide", function (e) {
     var slideno = parseInt($(this).index());
     e.preventDefault();
