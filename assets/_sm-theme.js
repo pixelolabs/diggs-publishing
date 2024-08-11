@@ -1652,11 +1652,14 @@ jQuery(function () {
     var option = $(this).attr("data-value");
     $(this).addClass("active");
     var pID = $(this).attr("data-id");
+    console.log("pID" + pID);
     $("#product-select-" + pID + " option").each(function (index) {
       var optionName = $(this).html();
       var vID = $(this).attr("value");
       var variantSoldout = $(this).attr("data-soldout");
       var price = $(this).attr("data-price");
+      console.log("optionName" + optionName);
+      console.log("vID" + vID);
       $(".js__price-popup-price").hide();
       $(".js__price-popup-" + vID).show();
 
