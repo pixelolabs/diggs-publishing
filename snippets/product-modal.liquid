@@ -105,17 +105,7 @@
               {% comment %} SM {% endcomment %}
 
               <div class="hide">
-                {% for option in productData.options_with_values %}
-                {{option.name}}
-                <select pl-rc-option{{ forloop.index }}-selector>
-                  {% for value in option.values %}
-                  <option value="{{ value }}">
-                    {{ value }}
-                  </option>
-                  {% endfor %}
-                </select>
-                {% endfor %}
-               
+                
                   <select id="product-select-{{productData.id}}" name="id" style="display: none;">
                     {% for variant in productData.variants %}
                     {% if variant.available %}
