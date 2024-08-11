@@ -51,7 +51,7 @@
         </h2>
         {% for variant in productData.variants %}
         <div
-          class="product-single__prices js__price-popup-price js__price-popup-{{ variant.id }}"
+          class="product-single__prices js__price-popup-price-{{ productData.id }} js__price-popup-{{ variant.id }}"
           itemprop="price"
           content="{{ current_variant.price | divided_by: 100.00 }}"
         >
