@@ -27,7 +27,7 @@
         "image_CwMRkr": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/author_visits_readings.webp",
+            "image": "shopify:\/\/shop_images\/IMG_9130_2.jpg",
             "showVideo": false,
             "video": "",
             "videoPopup": false,
@@ -71,7 +71,7 @@
         "image_bnffq7": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/body_safety_wise_1.webp",
+            "image": "shopify:\/\/shop_images\/body_safety_wise.webp",
             "showVideo": false,
             "video": "",
             "videoPopup": false,
@@ -88,7 +88,7 @@
         "image_z8xpBV": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/general_assembly.webp",
+            "image": "shopify:\/\/shop_images\/IMG_9127_2.jpg",
             "showVideo": false,
             "video": "",
             "videoPopup": false,
@@ -138,7 +138,6 @@
     "full_width_cta_v2_WcKbHe": {
       "type": "full-width-cta-v2",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Vector_2.svg",
         "title": "When an unknown printer took a galley of type and scrambled",
         "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took",
         "buttonText": "Book Now",
