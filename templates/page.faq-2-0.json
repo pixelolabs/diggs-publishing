@@ -167,6 +167,13 @@
             "title": "How can I get in touch for press or media inquiries?",
             "faqAnswer": "<p>For press or media inquiries, please use the contact form on our website or email us at author@ksdiggs.com.<\/p>"
           }
+        },
+        "question_GBnzgg": {
+          "type": "question",
+          "settings": {
+            "title": "",
+            "faqAnswer": ""
+          }
         }
       },
       "block_order": [
@@ -190,7 +197,8 @@
         "question_YMN4jm",
         "question_gVJNLA",
         "question_dQziRa",
-        "question_VdcG7D"
+        "question_VdcG7D",
+        "question_GBnzgg"
       ],
       "settings": {
       }
