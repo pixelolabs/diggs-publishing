@@ -2074,7 +2074,7 @@ jQuery(function () {
     slidesPerView: 1,
     resistance: false,
     shortSwipes: true,
-    loop: false,
+    loop: true,
     autoHeight: true
   });
   /* Announcement 
