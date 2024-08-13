@@ -140,10 +140,19 @@
               "announcement_link": "shopify:\/\/collections",
               "announcement_link_text": "Shop Now"
             }
+          },
+          "announcement_UWp6dr": {
+            "type": "announcement",
+            "settings": {
+              "header_text": "<p>Sale! On the Newsest Collection<\/p>",
+              "announcement_link": "shopify:\/\/products\/cocoa-butter-baby",
+              "announcement_link_text": "Shop Now"
+            }
           }
         },
         "block_order": [
-          "announcement_wHQAmg"
+          "announcement_wHQAmg",
+          "announcement_UWp6dr"
         ],
         "settings": {
           "show_announcement": true
