@@ -12,7 +12,7 @@
 {%- form 'customer', action: newsletter_form_action, class: 'input-group' -%}
 {% if form.posted_successfully? %}
 
-  <p class="password-newsletter-success">{{newsletter.success}}</p>
+  <p class="password-newsletter-success">{{'newsletter.success' | t}}</p>
 {% comment %} {% else %}
   <script>
     $(document).ready(function(){
