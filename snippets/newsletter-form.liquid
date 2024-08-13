@@ -72,10 +72,15 @@
   })
 </script>
 {% endif %}
-    <input type="hidden" name="contact[tags]" value="newsletter">
+{% if form.posted_successfully? %}
+    <input type="hidden hide" name="contact[tags]" value="newsletter">
+    <input class="input-group-field hide" type="email" name="contact[email]"  aria-label="Email Address" placeholder="{{ 'newsletter.label' | t }}" required="required">
+    <button class="btn-submit btn hide" type="submit" value="{{ 'newsletter.button_label' | t }}">Subscribe</button>
+{% else %}
+<input type="hidden" name="contact[tags]" value="newsletter">
     <input class="input-group-field" type="email" name="contact[email]"  aria-label="Email Address" placeholder="{{ 'newsletter.label' | t }}" required="required">
     <button class="btn-submit btn" type="submit" value="{{ 'newsletter.button_label' | t }}">Subscribe</button>
-
+{% endif %}
 {%- endform -%}
 {% endcapture %}
 
