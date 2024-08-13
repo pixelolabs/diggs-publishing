@@ -73,8 +73,8 @@
 </script>
 {% endif %}
     <input type="hidden" name="contact[tags]" value="newsletter">
-    <input class="input-group-field" type="email" name="contact[email]" {% if settings.enable_multilang %}data-translate="general.newsletter_form.newsletter_text" translate-item="placeholder"{%endif%} aria-label="Email Address" placeholder="{% if settings.footer_layout == '06' or settings.footer_layout == '08' or settings.footer_layout == '04'%}{{ 'general.newsletter_form.newsletter_text_1' | t }}{% elsif settings.footer_layout == '07' %}{{ 'general.newsletter_form.newsletter_text_2' | t }}{% else %}{{ 'general.newsletter_form.newsletter_text' | t }}{% endif %}" required="required">
-    <button class="btn-submit btn" type="submit" value="{% if settings.footer_layout == '06' or settings.footer_layout == '09' %}{{ 'general.newsletter_form.submit_1' | t }}{% else %}{{ 'general.newsletter_form.submit' | t }}{% endif %}">Subscribe</button>
+    <input class="input-group-field" type="email" name="contact[email]"  aria-label="Email Address" placeholder="{{ 'newsletter.label' | t }}" required="required">
+    <button class="btn-submit btn" type="submit" value="{{ 'newsletter.button_label' | t }}">Subscribe</button>
 
 {%- endform -%}
 {% endcapture %}
