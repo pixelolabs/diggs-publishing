@@ -2075,7 +2075,10 @@ jQuery(function () {
     resistance: false,
     shortSwipes: true,
     loop: true,
-    autoHeight: true
+    autoHeight: true,
+    autoplay: {
+      delay: 10000
+    }
   });
   /* Announcement 
   Close on Click  */
