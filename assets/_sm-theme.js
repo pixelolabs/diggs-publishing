@@ -2078,7 +2078,8 @@ jQuery(function () {
     autoHeight: true,
     autoplay: {
       delay: 3000
-    }
+    },
+    direction: 'vertical'
   });
   /* Announcement 
   Close on Click  */
