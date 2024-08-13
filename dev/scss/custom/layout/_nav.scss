@@ -730,6 +730,25 @@ header {
                   max-width: 341px;
                   width: calc(50% + 37px);
                   margin-left: 37px;
+                  .product-wrapper {
+                    padding: 0 !important;
+                  }
+                  &:first-child {
+                    &:before {
+                      border: 2px solid $color-yellow3 !important;
+                    }
+                    .content {
+                      background: $color-yellow3 !important;
+                    }
+                  }
+                  &:nth-child(2) {
+                    &:before {
+                      border: 2px solid $color-green !important;
+                    }
+                    .content {
+                      background: $color-green !important;
+                    }
+                  }
                   .image-section {
                     height: 231px;
                     a {
@@ -745,7 +764,7 @@ header {
                       line-height: normal;
                       letter-spacing: normal;
                       text-align: center;
-                      color: $color-black !important;
+                      color: $color-white !important;
                       font-family: var(--font-family-primary) !important ;
                       margin-bottom: 0 !important;
                       text-transform: capitalize;

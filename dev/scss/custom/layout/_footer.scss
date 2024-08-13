@@ -155,7 +155,7 @@ footer {
         }
 
         li {
-          margin-right: 21px;
+          margin-right: 11px;
 
           &:last-child {
             margin-right: 0;
@@ -307,6 +307,9 @@ footer {
           object-fit: contain;
           object-position: right bottom;
         }
+        @include MQ(MQ-1200) {
+          height: 28vw;
+        }
         @include MQ(MQ-768) {
           left: 0;
           position: relative;
@@ -360,21 +363,33 @@ footer {
         position: relative;
         padding-top: 61px;
         margin-top: 88px;
+        z-index: 3;
+        padding-bottom: 20px;
         @include MQ(MQ-980) {
           margin-top: 60px;
+          padding-bottom: 40px;
         }
         @include MQ(MQ-768) {
           margin-top: 45px;
+          padding-bottom: 0;
         }
         &:before {
           position: absolute;
           content: "";
           width: 276px;
           height: 29px;
+          opacity: 0.6;
           left: 0;
           top: 0;
           z-index: 6;
           background: url(graphic-dotted-border.png) no-repeat center / 276px;
+        }
+        p,
+        a {
+          opacity: 0.6;
+        }
+        p {
+          margin-bottom: 7px;
         }
       }
       // &:after {
@@ -414,6 +429,7 @@ footer {
         letter-spacing: 0.01px;
         display: block;
         width: 100%;
+        // opacity: 0.6;
       }
     }
 
@@ -508,6 +524,7 @@ footer {
       font-style: normal;
       line-height: 1.43;
       letter-spacing: 0.01px;
+      text-transform: none;
     }
 
     // @include MQ(MQ-980) {

@@ -31,10 +31,11 @@
                   title="Read More About {{ block.settings.title }}"
                   aria-label="Read More About {{ block.settings.title }}"
                   class="image-section"
+                  target="_blank"
                 >
                   <img
                     class="lazyload"
-                    data-src="{{ block.settings.image | img_url: 'master' }}"
+                    data-src="{{ block.settings.image | img_url: 'large' }}"
                     alt="{{block.settings.title}}"
                   >
                 </a>
@@ -110,7 +111,7 @@
           "type": "image_picker",
           "id": "image",
           "label": "Image",
-          "info": "210 x 60px Recommended"
+          "info": "210 x 60px Recommended. And image should be 2x"
         },
         {
           "type": "url",

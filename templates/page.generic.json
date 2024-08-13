@@ -364,7 +364,7 @@
         "image_TXGker": {
           "type": "image",
           "settings": {
-            "pretitle": "Pre Title",
+            "pretitle": "PreTitle",
             "title": "Title",
             "description": "<p><strong>Lorem Ipsum<\/strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s<\/p>",
             "buttonText": "Button Text",
@@ -374,7 +374,7 @@
         "image_3LANHW": {
           "type": "image",
           "settings": {
-            "pretitle": "Pre Title",
+            "pretitle": "PreTitle",
             "title": "Title",
             "description": "<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularized in the 1960s<\/p>",
             "buttonText": "Button Text",
@@ -392,7 +392,7 @@
     "half_image_half_content_v2_D9hYbg": {
       "type": "half-image-half-content-v2",
       "settings": {
-        "preTitle": "Pre Title",
+        "preTitle": "PreTitle",
         "title1": "Half image",
         "title2": "Half Content V2",
         "description": "<p><strong>Lorem Ipsum <\/strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s<\/p>",

@@ -2074,8 +2074,12 @@ jQuery(function () {
     slidesPerView: 1,
     resistance: false,
     shortSwipes: true,
-    loop: false,
-    autoHeight: true
+    loop: true,
+    autoHeight: true,
+    autoplay: {
+      delay: 3000
+    },
+    direction: 'vertical'
   });
   /* Announcement 
   Close on Click  */
