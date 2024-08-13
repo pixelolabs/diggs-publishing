@@ -2077,7 +2077,7 @@ jQuery(function () {
     loop: true,
     autoHeight: true,
     autoplay: {
-      delay: 10000
+      delay: 3000
     }
   });
   /* Announcement 
