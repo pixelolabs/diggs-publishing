@@ -43,11 +43,11 @@
   </script>
 {% endif %} {% endcomment %}
 {% else %}
-{% if form.posted_successfully? %}
+
 <p class="password-newsletter-already-register">This email has been registered</p>
-{% endif %}
+
 <script>
-    jQuery(document).ready(function($)
+    jQuery(document).ready(function($){
     if (window.location.href.indexOf('newsletter&form_type=customer') > -1) {
         $(".password-newsletter-already-register").addClass("active");
       var newsletterSuccessPopup = (function(){
