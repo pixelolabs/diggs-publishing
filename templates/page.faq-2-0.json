@@ -25,6 +25,13 @@
     "faq_accordion_with_category_h3NLVb": {
       "type": "faq-accordion-with-category",
       "blocks": {
+        "question_enqKfk": {
+          "type": "question",
+          "settings": {
+            "title": "",
+            "faqAnswer": ""
+          }
+        },
         "list_anUH39": {
           "type": "list",
           "settings": {
@@ -170,6 +177,7 @@
         }
       },
       "block_order": [
+        "question_enqKfk",
         "list_anUH39",
         "question_te3VP6",
         "question_pc4zCV",
