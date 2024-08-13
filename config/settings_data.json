@@ -137,8 +137,8 @@
             "type": "announcement",
             "settings": {
               "header_text": "<p>Free Shipping on all orders over $50. <a href=\"\/collections\" target=\"_blank\" title=\"All collections\">Shop Now<\/a><\/p>",
-              "announcement_link": "shopify:\/\/collections",
-              "announcement_link_text": "Shop Now"
+              "announcement_link": "",
+              "announcement_link_text": ""
             }
           },
           "announcement_UWp6dr": {
