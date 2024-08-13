@@ -50,6 +50,7 @@
     jQuery(document).ready(function($){
     if (window.location.href.indexOf('newsletter&form_type=customer') > -1) {
         $(".password-newsletter-already-register").addClass("active");
+        $(".form").addClass("active");
       var newsletterSuccessPopup = (function(){
         var popup = $('.newsletter-success-modal');
         var close = popup.find('.close');
