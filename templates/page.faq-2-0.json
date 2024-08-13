@@ -25,6 +25,13 @@
     "faq_accordion_with_category_h3NLVb": {
       "type": "faq-accordion-with-category",
       "blocks": {
+        "question_enqKfk": {
+          "type": "question",
+          "settings": {
+            "title": "",
+            "faqAnswer": ""
+          }
+        },
         "list_anUH39": {
           "type": "list",
           "settings": {
@@ -167,16 +174,10 @@
             "title": "How can I get in touch for press or media inquiries?",
             "faqAnswer": "<p>For press or media inquiries, please use the contact form on our website or email us at author@ksdiggs.com.<\/p>"
           }
-        },
-        "question_GBnzgg": {
-          "type": "question",
-          "settings": {
-            "title": "",
-            "faqAnswer": ""
-          }
         }
       },
       "block_order": [
+        "question_enqKfk",
         "list_anUH39",
         "question_te3VP6",
         "question_pc4zCV",
@@ -197,8 +198,7 @@
         "question_YMN4jm",
         "question_gVJNLA",
         "question_dQziRa",
-        "question_VdcG7D",
-        "question_GBnzgg"
+        "question_VdcG7D"
       ],
       "settings": {
       }
