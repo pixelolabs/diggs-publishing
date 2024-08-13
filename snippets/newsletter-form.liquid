@@ -11,9 +11,9 @@
 
 {%- form 'customer', action: newsletter_form_action, class: 'input-group' -%}
 {% if form.posted_successfully? %}
-{% if newsletter-form == 'password' %}
+
   <p class="password-newsletter-success">{{message}}</p>
-{% else %}
+{% comment %} {% else %}
   <script>
     $(document).ready(function(){
       var newsletterSuccessPopup = (function(){
@@ -41,7 +41,7 @@
         window.history.pushState('object', document.title, newURL);
     })
   </script>
-{% endif %}
+{% endif %} {% endcomment %}
 {% else %}
 <script>
   $(document).ready(function(){
