@@ -26,25 +26,46 @@
         "product_HanETL": {
           "type": "product",
           "settings": {
-            "product": "60-minutes-consultation"
+            "product": "{{ article.metafields.custom.product_recommendation_product_1.value }}"
           }
         },
         "product_89Mhmh": {
           "type": "product",
           "settings": {
-            "product": "always-there-a-childrens-book-about-healing-from-grief"
+            "product": "{{ article.metafields.custom.product_recommendation_product_2.value }}"
+          }
+        },
+        "product_8QmUdz": {
+          "type": "product",
+          "settings": {
+            "product": "{{ article.metafields.custom.product_recommendation_product_3.value }}"
+          }
+        },
+        "product_YB7J4q": {
+          "type": "product",
+          "settings": {
+            "product": "{{ article.metafields.custom.product_recommendation_product_4.value }}"
+          }
+        },
+        "product_3jmdjB": {
+          "type": "product",
+          "settings": {
+            "product": "{{ article.metafields.custom.product_recommendation_product_5.value }}"
           }
         }
       },
       "block_order": [
         "product_HanETL",
-        "product_89Mhmh"
+        "product_89Mhmh",
+        "product_8QmUdz",
+        "product_YB7J4q",
+        "product_3jmdjB"
       ],
       "settings": {
-        "pretitle": "Best Deals",
-        "title": "Latest Books Collection",
-        "buttonText": "VIEW ALL",
-        "buttonLink": "shopify:\/\/collections\/books"
+        "pretitle": "{{ article.metafields.custom.product_recommendation_pretitle.value }}",
+        "title": "{{ article.metafields.custom.product_recommendation_title.value }}",
+        "buttonText": "{{ article.metafields.custom.product_recommendation_link_text.value }}",
+        "buttonLink": "{{ article.metafields.custom.product_recommendation_btn_link.value }}"
       }
     }
   },
