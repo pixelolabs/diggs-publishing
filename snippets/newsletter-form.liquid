@@ -105,7 +105,7 @@
   <div class="modal-overlay">
     <div class="halo-modal-content">
       <button type="button" class="close close-window inv-btn" title="{{ 'cart.ajax_cart.close' | t }}">
-        {% render 'icon-close' %}
+        {% render 'icon-close-white' %}
       </button>
 
       <div class="halo-modal-body">
@@ -122,13 +122,13 @@
         <div class="column-right">
           {% if settings.popup_newsletter_title != blank %}
             <h2 class="title">
-              {% render 'multilang' with settings.popup_newsletter_title %}
+              {{ settings.popup_newsletter_title }}
             </h2>
           {% endif %}
 
           {% if settings.popup_newsletter_des != blank %}
             <div class="des">
-              {% render 'multilang' with settings.popup_newsletter_des %}
+              {{ settings.popup_newsletter_des }}
             </div>
           {% endif %}
 
@@ -149,7 +149,7 @@
           {% if settings.popup_newsletter_text_note != blank and settings.when_to_show == 'first_time' %}
             <input id="dismiss" type="checkbox" name="dismiss">
             <label for="dismiss">
-              {% render 'multilang' with settings.popup_newsletter_text_note %}
+              {{ settings.popup_newsletter_text_note }}
             </label>
           {% endif %}
         </div>
