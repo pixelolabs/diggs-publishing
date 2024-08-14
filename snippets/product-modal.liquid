@@ -190,29 +190,72 @@
           
           </div>
         {% endif %}
+        {%- assign productIcon1 = productData.metafields.custom.product_info_three_column_info_section_icon_first_ -%}
+        {%- assign productIcon2 = productData.metafields.custom.product_info_three_column_info_section_icon_second_ -%}
+        {%- assign productIcon3 = productData.metafields.custom.product_info_three_column_info_section_icon_third_ -%}
+        {%- assign productTitle1 = productData.metafields.custom.product_info_three_column_info_section_title_first_ -%}
+        {%- assign productTitle2 = productData.metafields.custom.product_info_three_column_info_section_title_second_ -%}
+        {%- assign productTitle3 = productData.metafields.custom.product_info_three_column_info_section_title_third_ -%}
+       
+        
 
+        {% if productIcon1 != blank or productIcon2 != blank or productIcon3 != blank or productTitle1 != blank or productTitle2 != blank or productTitle3 != blank   %}
         <div class="pdp-three-column-box">
           <ul>
-          <li>
-          <div class="icon">
-            <img src="{{ 'icon-truck-dark.webp' | asset_url }}" /> 
-            </div>
-            <span>Free Shipping</span>
-          </li>
-          <li>
-            <div class="icon">
-              <img src="{{ 'icon-check-dark.webp' | asset_url }}" /> 
-              </div>
-              <span>Safe Checkout</span>
-            </li>
-            <li>
-              <div class="icon">
-                <img src="{{ 'icon-return-dark.webp' | asset_url }}" /> 
-                </div>
-                <span>Hassle Free Returns</span>
+            {% if productIcon3 != blank or productTitle3 != blank %}
+              <li>
+                {% if productIcon3 != blank %}
+                  <div class="icon">
+                    {{
+                      productIcon3
+                      | image_url: width: 200
+                      | image_tag: loading: 'lazy', widths: '200x200'
+                    }}
+                    {% comment %} <img src="{{ 'icon-truck-dark.webp' | asset_url }}"> {% endcomment %}
+                  </div>
+                {% endif %}
+                {% if productTitle3 != blank %}
+                  <span>{{ productTitle3 }}</span>
+                {% endif %}
               </li>
+            {% endif %}
+            {% if productIcon2 != blank or productTitle2 != blank %}
+              <li>
+                {% if productIcon2 != blank %}
+                  <div class="icon">
+                    {{
+                      productIcon2
+                      | image_url: width: 200
+                      | image_tag: loading: 'lazy', widths: '200x200'
+                    }}
+                    {% comment %} <img src="{{ 'icon-truck-dark.webp' | asset_url }}"> {% endcomment %}
+                  </div>
+                {% endif %}
+                {% if productTitle2 != blank %}
+                  <span>{{ productTitle2 }}</span>
+                {% endif %}
+              </li>
+            {% endif %}
+            {% if productIcon1 != blank or productTitle1 != blank %}
+              <li>
+                {% if productIcon1 != blank %}
+                  <div class="icon">
+                    {{
+                      productIcon1
+                      | image_url: width: 200
+                      | image_tag: loading: 'lazy', widths: '200x200'
+                    }}
+                    {% comment %} <img src="{{ 'icon-truck-dark.webp' | asset_url }}"> {% endcomment %}
+                  </div>
+                {% endif %}
+                {% if productTitle1 != blank %}
+                  <span>{{ productTitle1 }}</span>
+                {% endif %}
+              </li>
+            {% endif %}
           </ul>
           </div>
+        {% endif %}
         {% comment %} Product information ends {% endcomment %}
       </div>
       {% comment %} Actions {% endcomment %}
