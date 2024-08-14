@@ -138,11 +138,13 @@
             </div>
           </div>
 
-          {% if settings.display_popup_social %}
-            <div class="icon-social">
-              {% render 'social-media' %}
-            </div>
-          {% endif %}
+          {% comment %}
+            {% if settings.display_popup_social %}
+              <div class="icon-social">
+                {% render 'social-media' %}
+              </div>
+            {% endif %}
+          {% endcomment %}
 
           {% if settings.popup_newsletter_text_note != blank and settings.when_to_show == 'first_time' %}
             <input id="dismiss" type="checkbox" name="dismiss">
