@@ -196,7 +196,9 @@
             <h2>{{ section.settings.recommendedHeading }}</h2>
           {% endif %}
         </div>
-        <a href="" class="link--primary">VIEW ALL</a>
+        {% if section.settings.link != blank %}
+          <a href="" class="link--primary">VIEW ALL</a>
+        {% endif %}
       </div>
 
       <div class="inner-wrapper js__realated-articles">
