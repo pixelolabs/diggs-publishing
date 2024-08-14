@@ -53,6 +53,19 @@
         </div>
       </div>
     </div>
+    <div class="text-center width-100">
+      {% if section.settings.buttonText != blank and section.settings.buttonLink != blank %}
+        <a
+          href="{{ section.settings.buttonLink }}"
+          title="Read More About {{ section.settings.buttonText }}"
+          aria-label="Read More About {{ section.settings.buttonText }}"
+          class="link--primary ipad-block"
+          data-button-text="{{- section.settings.buttonText -}}"
+        >
+          {{- section.settings.buttonText -}}
+        </a>
+      {% endif %}
+    </div>
   </div>
 </div>
 {% if section.blocks.size > 0 %}
