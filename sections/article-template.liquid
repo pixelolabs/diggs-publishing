@@ -189,7 +189,9 @@
     <div class="container-1260">
       <div class="heading flex">
         <div class="left-side">
-          <span class="pre-title">Recent Blogs</span>
+          {% if section.settings.pretitle != blank %}
+            <span class="pre-title">{{ section.settings.pretitle }}</span>
+          {% endif %}
           {% if section.settings.recommendedHeading != blank %}
             <h2>{{ section.settings.recommendedHeading }}</h2>
           {% endif %}
