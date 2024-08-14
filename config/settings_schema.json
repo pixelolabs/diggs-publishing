@@ -2390,5 +2390,150 @@
         }
       }
     ]
+  },
+  {
+    "name": "Add On Newsletter Popup",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "display_popup_newsletter",
+        "label": "Display Newsletter Popup?",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "hidden_default",
+        "label": "Hidden default?",
+        "default": false
+      },
+      {
+        "type": "select",
+        "id": "when_to_show",
+        "label": "When To Show",
+        "options": [
+          {
+            "value": "first_time",
+            "label": "With 'No, thanks' Option"
+          },
+          {
+            "value": "all_the_time",
+            "label": "Without 'No, thanks' Option"
+          }
+        ],
+        "default": "first_time",
+        "info": "Default Value: With 'No, thanks' Option"
+      },
+      {
+        "type": "text",
+        "id": "popup_newsletter_expire",
+        "label": "Newsletter Popup shows again after (days)",
+        "default": "1"
+      },
+      {
+        "type": "text",
+        "id": "popup_newsletter_delay",
+        "label": "Newsletter Popup Delay Time (seconds)",
+        "default": "5"
+      },
+      {
+        "type": "image_picker",
+        "id": "newsletter",
+        "label": "Upload a new newsletter image"
+      },
+      {
+        "type": "text",
+        "id": "popup_newsletter_title",
+        "label": "Newsletter Popup Title"
+      },
+      {
+        "type": "textarea",
+        "id": "popup_newsletter_des",
+        "label": "Newsletter Popup Descriptions"
+      },
+      {
+        "type": "text",
+        "id": "popup_newsletter_text_note",
+        "label": "Popup Newsletter Text Note"
+      },
+      {
+        "type": "text",
+        "id": "newssletter_success_text",
+        "label": "Successfully Subscribed Text",
+        "default": "You have successfully subscribed!"
+      },
+      {
+        "type": "text",
+        "id": "newssletter_error_text",
+        "label": "Error Subscribed Text",
+        "default": "This email has been registered",
+        "info": "Use Advanced Marketing app with Avada. Discount 30% for 3 months. Coupon code: ELLA [(How to setup)](https:\/\/help.avada.io\/en\/article\/how-to-setup-avada-newsletter-popup-for-ella-theme-users-1t7wsgl)"
+      },
+      {
+        "type": "header",
+        "content": "Newsletter Toolbar"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_newsletter_toolbar",
+        "label": "Enable?",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "position_toolbar",
+        "label": "Position",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left"
+      },
+      {
+        "type": "text",
+        "id": "text_toolbar",
+        "label": "Text",
+        "default": "Newsletter"
+      },
+      {
+        "type": "color",
+        "id": "color_icon_toolbar",
+        "label": "Color Icon",
+        "default": "#a7a7a7"
+      },
+      {
+        "type": "color",
+        "id": "color_hover_icon_toolbar",
+        "label": "Color Icon Hover",
+        "default": "#505050"
+      },
+      {
+        "type": "color",
+        "id": "color_text_toolbar",
+        "label": "Color Text",
+        "default": "#202020"
+      },
+      {
+        "type": "color",
+        "id": "color_hover_text_toolbar",
+        "label": "Color Text Hover",
+        "default": "#202020"
+      },
+      {
+        "type": "header",
+        "content": "Social"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_popup_social",
+        "label": "Display Social Media?",
+        "default": true
+      }
+    ]
   }
 ]
