@@ -1,0 +1,126 @@
+<!-- Product Recommendations -->
+{% if section.settings.pretitle != blank %}
+  <div class="three-column-product-slider-v2 article-product-slider pdp">
+    <div class="container-1260 flex-wrap">
+      <div class="top-section flex">
+        <div class="heading">
+          {% if section.settings.pretitle != blank %}
+            <span class="pre-title">
+              {{ section.settings.pretitle }}
+            </span>
+          {% endif %}
+          {% if section.settings.title != blank %}
+            <h2>
+              {{ section.settings.title }}
+            </h2>
+          {% endif %}
+        </div>
+        {% if section.settings.buttonText != blank and section.settings.buttonLink != blank %}
+          <a
+            href="{{ section.settings.buttonLink }}"
+            title="Read More About {{ section.settings.buttonText }}"
+            aria-label="Read More About {{ section.settings.buttonText }}"
+            class="link--primary ipad-none"
+            data-button-text="{{- section.settings.buttonText -}}"
+          >
+            {{- section.settings.buttonText -}}
+          </a>
+        {% endif %}
+      </div>
+      <div class="inner">
+        <div class="slider-outer">
+          <div
+            class="product-recommendations-list slider js__product-slider js__product-slider-recommendations"
+
+            id="js__pdp-recommendation-slider"
+          >
+            <div class="swiper-wrapper">
+              {%- for block in section.blocks -%}
+                {% assign productRelated = all_products[block.settings.product] %}
+                {% if productRelated != empty %}
+                  <div class="product-card swiper-slide slide ">
+                    {% include 'product_Card'  with  productRelated: productRelated , show_price: true, show_tags: false, show_auto_tags: false, show_title: true, show_fav: false, show_secondary_button: true %}
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+          <div class="swiper-button-prev-product-slider">
+            {% include 'icon-arrow-slide-black' %}
+          </div>
+          <div class="swiper-button-next-product-slider">
+            {% include 'icon-arrow-slide-black' %}
+          </div>
+        </div>
+      </div>
+      <div class="text-center width-100">
+        {% if section.settings.buttonText != blank and section.settings.buttonLink != blank %}
+          <a
+            href="{{ section.settings.buttonLink }}"
+            title="Read More About {{ section.settings.buttonText }}"
+            aria-label="Read More About {{ section.settings.buttonText }}"
+            class="link--primary ipad-block"
+            data-button-text="{{- section.settings.buttonText -}}"
+          >
+            {{- section.settings.buttonText -}}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+{% if section.blocks.size > 0 %}
+  {% for block in section.blocks %}
+    {% assign productRelated = all_products[block.settings.product] %}
+    {% render 'product-modal', productData: productRelated %}
+  {% endfor %}
+{% endif %}
+
+<!-- reviews -->
+
+{% schema %}
+{
+  "name": "Article Product Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "pretitle",
+      "label": "Pretitle"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "buttonText",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "buttonLink",
+      "label": "Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        }
+      ]
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Article Product Recommendations"
+    }
+  ]
+}
+{% endschema %}

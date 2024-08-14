@@ -4,75 +4,69 @@
   data-aos-duration="2000"
 >
   <div class="container-1260 flex-wrap">
-  <div class="top-section flex">
-    <div class="heading">
-    {% if section.settings.pretitle != blank %}
-      <span class="pre-title">
-        {{ section.settings.pretitle }}
-      </span>
-    {% endif %}
-    {% if section.settings.title != blank %}
-      <h2>
-        {{ section.settings.title }}
-      </h2>
-    {% endif %}
-    </div>
-    {% if section.settings.buttonText != blank and section.settings.buttonLink != blank %}
-      <a 
-        href="{{ section.settings.buttonLink }}"
-        title="Read More About {{ section.settings.buttonText }}"
-        aria-label="Read More About {{ section.settings.buttonText }}"
-        class="link--primary ipad-none"
-        data-button-text="{{- section.settings.buttonText -}}"
-      >
-        
-          {{- section.settings.buttonText -}}
-       
-      </a>
-    {% endif %}
-  </div>
-  <div
-    class="inner"
-  >
-    <div class="slider-outer">
-    <div class="slider js__product-slider">
-      <div class="swiper-wrapper">
-       
-        {%- for block in section.blocks -%}
-          {% assign productRelated = all_products[block.settings.product] %}
-          {% if productRelated != empty %}
-          <div class="product-card swiper-slide slide ">
-            {% include 'product_Card'  with  productRelated: productRelated , show_price: true, show_tags: false, show_auto_tags: false, show_title: true, show_fav: false, show_secondary_button: false %}
-          </div>
+    <div class="top-section flex">
+      <div class="heading">
+        {% if section.settings.pretitle != blank %}
+          <span class="pre-title">
+            {{ section.settings.pretitle }}
+          </span>
         {% endif %}
-        {% endfor %}
+        {% if section.settings.title != blank %}
+          <h2>
+            {{ section.settings.title }}
+          </h2>
+        {% endif %}
       </div>
-      
+      {% if section.settings.buttonText != blank and section.settings.buttonLink != blank %}
+        <a
+          href="{{ section.settings.buttonLink }}"
+          title="Read More About {{ section.settings.buttonText }}"
+          aria-label="Read More About {{ section.settings.buttonText }}"
+          class="link--primary ipad-none"
+          data-button-text="{{- section.settings.buttonText -}}"
+        >
+          {{- section.settings.buttonText -}}
+        </a>
+      {% endif %}
     </div>
-    </div>
-    <div class="swiper-button-prev-product-slider">
-      {% include 'icon-arrow-slide-black' %}
-    </div>
-    <div class="swiper-button-next-product-slider">
-      {% include 'icon-arrow-slide-black' %}
-    </div>
-  </div>
-  <div class="text-center width-100">
-  {% if section.settings.buttonText != blank and section.settings.buttonLink != blank %}
-    <a 
-      href="{{ section.settings.buttonLink }}"
-      title="Read More About {{ section.settings.buttonText }}"
-      aria-label="Read More About {{ section.settings.buttonText }}"
-      class="link--primary ipad-block"
-      data-button-text="{{- section.settings.buttonText -}}"
+    <div
+      class="inner"
     >
-      
-        {{- section.settings.buttonText -}}
-     
-    </a>
-  {% endif %}
+      <div class="slider-outer">
+        <div class="slider js__product-slider">
+          <div class="swiper-wrapper">
+            {%- for block in section.blocks -%}
+              {% assign productRelated = all_products[block.settings.product] %}
+              {% if productRelated != empty %}
+                <div class="product-card swiper-slide slide ">
+                  {% include 'product_Card'  with  productRelated: productRelated , show_price: true, show_tags: false, show_auto_tags: false, show_title: true, show_fav: false, show_secondary_button: false %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-prev-product-slider">
+        {% include 'icon-arrow-slide-black' %}
+      </div>
+      <div class="swiper-button-next-product-slider">
+        {% include 'icon-arrow-slide-black' %}
+      </div>
+    </div>
+    <div class="text-center width-100">
+      {% if section.settings.buttonText != blank and section.settings.buttonLink != blank %}
+        <a
+          href="{{ section.settings.buttonLink }}"
+          title="Read More About {{ section.settings.buttonText }}"
+          aria-label="Read More About {{ section.settings.buttonText }}"
+          class="link--primary ipad-block"
+          data-button-text="{{- section.settings.buttonText -}}"
+        >
+          {{- section.settings.buttonText -}}
+        </a>
+      {% endif %}
+    </div>
   </div>
-</div>
 </div>
 {% if section.blocks.size > 0 %}
   {% for block in section.blocks %}
