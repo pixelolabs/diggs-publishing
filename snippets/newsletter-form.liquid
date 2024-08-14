@@ -11,9 +11,9 @@
 
 {%- form 'customer', action: newsletter_form_action, class: 'input-group' -%}
 {% if form.posted_successfully? %}
-
-  <p class="password-newsletter-success">{{'newsletter.success' | t}}</p>
-
+{% if newsletter-form == 'password' %}
+  <p class="password-newsletter-success">{{message}}</p>
+{% else %}
   <script>
     $(document).ready(function(){
       var newsletterSuccessPopup = (function(){
@@ -41,16 +41,11 @@
         window.history.pushState('object', document.title, newURL);
     })
   </script>
-{% comment %} {% endif %}  {% endcomment %}
+{% endif %}
 {% else %}
-
-<p class="password-newsletter-already-register">This email has been registered</p>
-
 <script>
-    jQuery(document).ready(function($){
+  $(document).ready(function(){
     if (window.location.href.indexOf('newsletter&form_type=customer') > -1) {
-        $(".password-newsletter-already-register").addClass("active");
-        $("form").addClass("active");
       var newsletterSuccessPopup = (function(){
         var popup = $('.newsletter-success-modal');
         var close = popup.find('.close');
@@ -74,160 +69,14 @@
       var newURL = location.href.split("?")[0];
       window.history.pushState('object', document.title, newURL);
     }
-    else{
-        $(".password-newsletter-already-register").removeClass("active");
-        $("form").removeClass("active");
-    }
   })
 </script>
 {% endif %}
-{% if form.posted_successfully? %}
-    <div class="" style="display:none;">
     <input type="hidden" name="contact[tags]" value="newsletter">
-    <input class="input-group-field" type="email" name="contact[email]"  aria-label="Email Address" placeholder="{{ 'newsletter.label' | t }}" required="required">
-    <button class="btn-submit btn" type="submit" value="{{ 'newsletter.button_label' | t }}">Subscribe</button>
-</div>
-{% else %}
-<input type="hidden" name="contact[tags]" value="newsletter">
-    <input class="input-group-field" type="email" name="contact[email]"  aria-label="Email Address" placeholder="{{ 'newsletter.label' | t }}" required="required">
-    <button class="btn-submit btn" type="submit" value="{{ 'newsletter.button_label' | t }}">Subscribe</button>
-{% endif %}
+    <input class="input-group-field" type="email" name="contact[email]" {% if settings.enable_multilang %}data-translate="general.newsletter_form.newsletter_text" translate-item="placeholder"{%endif%} aria-label="Email Address" placeholder="{% if settings.footer_layout == '06' or settings.footer_layout == '08' or settings.footer_layout == '04'%}{{ 'general.newsletter_form.newsletter_text_1' | t }}{% elsif settings.footer_layout == '07' %}{{ 'general.newsletter_form.newsletter_text_2' | t }}{% else %}{{ 'general.newsletter_form.newsletter_text' | t }}{% endif %}" required="required">
+    <input class="btn" type="submit" value="{% if settings.footer_layout == '06' or settings.footer_layout == '09' %}{{ 'general.newsletter_form.submit_1' | t }}{% else %}{{ 'general.newsletter_form.submit' | t }}{% endif %}">
+
 {%- endform -%}
 {% endcapture %}
 
 {{ newsletter_form }}
-<div
-  class="wrapper-newsletter halo-modal"
-  data-newsletter
-  data-delay="{{settings.popup_newsletter_delay | times:1000}}"
-  data-expire="{{ settings.popup_newsletter_expire }}"
->
-  <div class="modal-overlay">
-    <div class="halo-modal-content">
-      <button type="button" class="close close-window inv-btn" title="{{ 'cart.ajax_cart.close' | t }}">
-        {% render 'icon-close-white' %}
-      </button>
-
-      <div class="halo-modal-body">
-        <div class="column-left">
-          {%- assign img_url = settings.newsletter | img_url: '360x360' -%}
-
-          {% if settings.newsletter != blank %}
-            <img data-srcset="{{ img_url }}" class="lazyload" data-sizes="auto">
-          {% else %}
-            <div class="not_img">360 x 360px</div>
-          {% endif %}
-        </div>
-
-        <div class="column-right">
-          {% if settings.popup_newsletter_title != blank %}
-            <h2 class="title">
-              {{ settings.popup_newsletter_title }}
-            </h2>
-          {% endif %}
-
-          {% if settings.popup_newsletter_des != blank %}
-            <div class="des">
-              {{ settings.popup_newsletter_des }}
-            </div>
-          {% endif %}
-
-          <div id="mailchimp-email-subscibe" class="newsletter">
-            <div id="mc_embed_signup">
-              {% render 'newsletter-form' %}
-            </div>
-          </div>
-
-          {% comment %}
-            {% if settings.display_popup_social %}
-              <div class="icon-social">
-                {% render 'social-media' %}
-              </div>
-            {% endif %}
-          {% endcomment %}
-
-          {% if settings.popup_newsletter_text_note != blank and settings.when_to_show == 'first_time' %}
-            <input id="dismiss" type="checkbox" name="dismiss">
-            <label for="dismiss">
-              {{ settings.popup_newsletter_text_note }}
-            </label>
-          {% endif %}
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<style>
-  .newsletter-success-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-    display: none;
-  }
-
-  .newsletter-success-modal i {
-    margin-right: 10px;
-    font-size: 16px;
-  }
-
-  .newsletter-success-modal i.fa-times {
-    color: red;
-  }
-
-  .newsletter-success-modal .modal-overlay {
-    background-color: rgba(35, 35, 35, 0.8);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 2;
-  }
-
-  .newsletter-success-modal .halo-modal-content {
-    width: 280px;
-    padding: 20px;
-    background: #fff;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -moz-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    z-index: 3;
-  }
-
-  .newsletter-success-modal .halo-modal-content .close {
-    background: var(--background_1);
-    color: var(--color_1);
-    border-color: var(--border_1);
-  }
-
-  .newsletter-success-modal .halo-modal-content .close:hover {
-    background: var(--background_2);
-    color: var(--color_2);
-    border-color: var(--border_2);
-  }
-
-  .newsletter-success-modal .halo-modal-body {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    -ms-align-items: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-  }
-</style>
