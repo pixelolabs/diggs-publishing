@@ -1,14 +1,76 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
-    "sections": {
-      "articleMain": {
-        "type": "article-template",
-        "settings": {
-        
-        }
+  "sections": {
+    "articleMain": {
+      "type": "article-template",
+      "settings": {
+        "blog_show_date": true,
+        "show_share_buttons": true,
+        "pretitle": "Recent Blogs",
+        "recommendedHeading": "Latest Blogs",
+        "link": "View All",
+        "linkUrl": "shopify:\/\/blogs\/blog"
       }
     },
-    "order": [
-      "articleMain"
-      
-    ]
-  }
+    "article_three_column_product_section_BGkkr7": {
+      "type": "article-three-column-product-section",
+      "blocks": {
+        "product_HanETL": {
+          "type": "product",
+          "settings": {
+            "product": "{{ article.metafields.custom.product_recommendation_product_1.value }}"
+          }
+        },
+        "product_89Mhmh": {
+          "type": "product",
+          "settings": {
+            "product": "{{ article.metafields.custom.product_recommendation_product_2.value }}"
+          }
+        },
+        "product_8QmUdz": {
+          "type": "product",
+          "settings": {
+            "product": "{{ article.metafields.custom.product_recommendation_product_3.value }}"
+          }
+        },
+        "product_YB7J4q": {
+          "type": "product",
+          "settings": {
+            "product": "{{ article.metafields.custom.product_recommendation_product_4.value }}"
+          }
+        },
+        "product_3jmdjB": {
+          "type": "product",
+          "settings": {
+            "product": "{{ article.metafields.custom.product_recommendation_product_5.value }}"
+          }
+        }
+      },
+      "block_order": [
+        "product_HanETL",
+        "product_89Mhmh",
+        "product_8QmUdz",
+        "product_YB7J4q",
+        "product_3jmdjB"
+      ],
+      "settings": {
+        "pretitle": "{{ article.metafields.custom.product_recommendation_pretitle.value }}",
+        "title": "{{ article.metafields.custom.product_recommendation_title.value }}",
+        "buttonText": "{{ article.metafields.custom.product_recommendation_link_text.value }}",
+        "buttonLink": "{{ article.metafields.custom.product_recommendation_btn_link.value }}"
+      }
+    }
+  },
+  "order": [
+    "articleMain",
+    "article_three_column_product_section_BGkkr7"
+  ]
+}
