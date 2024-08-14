@@ -7,43 +7,41 @@
   data-aos="fade-up"
   data-aos-duration="2000"
 >
-  {%- if recommendations.products_count > 0 -%}
-    <div class="pdp-recommendations ">
-      <div class="three-column-product-slider-v2 pdp">
-        <div class="container-1260 flex-wrap">
-          <div class="top-section">
-            <h2 class="h2 text-center">{{ section.settings.title }}</h2>
-          </div>
-          <div class="inner">
-            <div class="slider-outer">
-              <div
-                class="product-recommendations-list slider js__product-slider js__product-slider-recommendations"
+  <div class="pdp-recommendations ">
+    <div class="three-column-product-slider-v2 pdp">
+      <div class="container-1260 flex-wrap">
+        <div class="top-section">
+          <h2 class="h2 text-center">{{ section.settings.title }}</h2>
+        </div>
+        <div class="inner">
+          <div class="slider-outer">
+            <div
+              class="product-recommendations-list slider js__product-slider js__product-slider-recommendations"
 
-                id="js__pdp-recommendation-slider"
-              >
-                <div class="swiper-wrapper">
-                  {%- for block in section.blocks -%}
-                    {% assign productRelated = all_products[block.settings.product] %}
-                    {% if productRelated != empty %}
-                      <div class="product-card swiper-slide slide ">
-                        {% include 'product_Card'  with  productRelated: productRelated , show_price: true, show_tags: false, show_auto_tags: false, show_title: true, show_fav: false, show_secondary_button: false %}
-                      </div>
-                    {% endif %}
-                  {% endfor %}
-                </div>
+              id="js__pdp-recommendation-slider"
+            >
+              <div class="swiper-wrapper">
+                {%- for block in section.blocks -%}
+                  {% assign productRelated = all_products[block.settings.product] %}
+                  {% if productRelated != empty %}
+                    <div class="product-card swiper-slide slide ">
+                      {% include 'product_Card'  with  productRelated: productRelated , show_price: true, show_tags: false, show_auto_tags: false, show_title: true, show_fav: false, show_secondary_button: false %}
+                    </div>
+                  {% endif %}
+                {% endfor %}
               </div>
-              <div class="swiper-button-prev-product-slider">
-                {% include 'icon-arrow-slide-black' %}
-              </div>
-              <div class="swiper-button-next-product-slider">
-                {% include 'icon-arrow-slide-black' %}
-              </div>
+            </div>
+            <div class="swiper-button-prev-product-slider">
+              {% include 'icon-arrow-slide-black' %}
+            </div>
+            <div class="swiper-button-next-product-slider">
+              {% include 'icon-arrow-slide-black' %}
             </div>
           </div>
         </div>
       </div>
     </div>
-  {% endif %}
+  </div>
 </div>
 
 <script>
