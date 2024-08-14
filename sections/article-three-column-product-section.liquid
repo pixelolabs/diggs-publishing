@@ -11,7 +11,29 @@
     <div class="three-column-product-slider-v2 pdp">
       <div class="container-1260 flex-wrap">
         <div class="top-section">
-          <h2 class="h2 text-center">{{ section.settings.title }}</h2>
+          <div class="heading">
+            {% if section.settings.pretitle != blank %}
+              <span class="pre-title">
+                {{ section.settings.pretitle }}
+              </span>
+            {% endif %}
+            {% if section.settings.title != blank %}
+              <h2>
+                {{ section.settings.title }}
+              </h2>
+            {% endif %}
+          </div>
+          {% if section.settings.buttonText != blank and section.settings.buttonLink != blank %}
+            <a
+              href="{{ section.settings.buttonLink }}"
+              title="Read More About {{ section.settings.buttonText }}"
+              aria-label="Read More About {{ section.settings.buttonText }}"
+              class="link--primary ipad-none"
+              data-button-text="{{- section.settings.buttonText -}}"
+            >
+              {{- section.settings.buttonText -}}
+            </a>
+          {% endif %}
         </div>
         <div class="inner">
           <div class="slider-outer">
