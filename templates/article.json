@@ -19,9 +19,37 @@
         "link": "View All",
         "linkUrl": "shopify:\/\/blogs\/blog"
       }
+    },
+    "article_three_column_product_section_BGkkr7": {
+      "type": "article-three-column-product-section",
+      "blocks": {
+        "product_HanETL": {
+          "type": "product",
+          "settings": {
+            "product": "60-minutes-consultation"
+          }
+        },
+        "product_89Mhmh": {
+          "type": "product",
+          "settings": {
+            "product": "always-there-a-childrens-book-about-healing-from-grief"
+          }
+        }
+      },
+      "block_order": [
+        "product_HanETL",
+        "product_89Mhmh"
+      ],
+      "settings": {
+        "pretitle": "Best Deals",
+        "title": "Latest Books Collection",
+        "buttonText": "VIEW ALL",
+        "buttonLink": "shopify:\/\/collections\/books"
+      }
     }
   },
   "order": [
-    "articleMain"
+    "articleMain",
+    "article_three_column_product_section_BGkkr7"
   ]
 }
