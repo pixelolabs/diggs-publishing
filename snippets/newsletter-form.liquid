@@ -13,7 +13,7 @@
 {% if form.posted_successfully? %}
 
   <p class="password-newsletter-success">{{'newsletter.success' | t}}</p>
-{% comment %} {% else %}
+
   <script>
     $(document).ready(function(){
       var newsletterSuccessPopup = (function(){
@@ -41,7 +41,7 @@
         window.history.pushState('object', document.title, newURL);
     })
   </script>
-{% endif %} {% endcomment %}
+{% comment %} {% endif %}  {% endcomment %}
 {% else %}
 
 <p class="password-newsletter-already-register">This email has been registered</p>
