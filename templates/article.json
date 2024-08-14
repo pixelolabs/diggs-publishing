@@ -12,6 +12,12 @@
     "articleMain": {
       "type": "article-template",
       "settings": {
+        "blog_show_date": true,
+        "show_share_buttons": true,
+        "pretitle": "Recent Blogs",
+        "recommendedHeading": "Latest Blogs",
+        "link": "View All",
+        "linkUrl": "shopify:\/\/blogs\/blog"
       }
     }
   },
