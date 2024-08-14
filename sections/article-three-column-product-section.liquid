@@ -63,9 +63,12 @@
         </div>
       </div>
     </div>
-    {%- for productRelated in block.settings.product -%}
-      {% render 'product-modal', productData: productRelated %}
-    {% endfor %}
+    {% if section.blocks.size > 0 %}
+      {% for block in section.blocks %}
+        {% assign productRelated = all_products[block.settings.product] %}
+        {% render 'product-modal', productData: productRelated %}
+      {% endfor %}
+    {% endif %}
   </div>
 </div>
 
