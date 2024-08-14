@@ -12,7 +12,7 @@
       <div class="three-column-product-slider-v2 pdp">
         <div class="container-1260 flex-wrap">
           <div class="top-section">
-            <h2 class="h2 text-center">You MAy Also Like{{ section.settings.title }}</h2>
+            <h2 class="h2 text-center">{{ section.settings.title }}</h2>
           </div>
           <div class="inner">
             <div class="slider-outer">
@@ -22,18 +22,13 @@
                 id="js__pdp-recommendation-slider"
               >
                 <div class="swiper-wrapper">
-                  {% comment %}
-                    <div
-                      class="product-recommendations-list flex-wrap "
-                      {%- if settings.product_recommendation_slider == 'on' -%}
-                        id="js__pdp-recommendation-slider"
-                      {%- endif -%}
-                    >
-                  {% endcomment %}
-                  {%- for productRelated in recommendations.products -%}
-                    <div class="product-card swiper-slide slide ">
-                      {% include 'product_Card' with productRelated: productRelated , show_price: true, show_tags: true, show_auto_tags: true, show_title: true, show_fav: false, show_secondary_button: true %}
-                    </div>
+                  {%- for block in section.blocks -%}
+                    {% assign productRelated = all_products[block.settings.product] %}
+                    {% if productRelated != empty %}
+                      <div class="product-card swiper-slide slide ">
+                        {% include 'product_Card'  with  productRelated: productRelated , show_price: true, show_tags: false, show_auto_tags: false, show_title: true, show_fav: false, show_secondary_button: false %}
+                      </div>
+                    {% endif %}
                   {% endfor %}
                 </div>
               </div>
@@ -138,10 +133,39 @@
   "settings": [
     {
       "type": "text",
+      "id": "pretitle",
+      "label": "Pretitle"
+    },
+    {
+      "type": "text",
       "id": "title",
       "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "buttonText",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "buttonLink",
+      "label": "Button Link"
     }
   ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        }
+      ]
+    }
+  ],
+
   "presets": [
     {
       "name": "Article Product Recommendations"
