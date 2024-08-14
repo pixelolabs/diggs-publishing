@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <style>
   .newsletter-success-modal {
     position: fixed;
@@ -152,3 +153,159 @@
     </div>
   </div>
 {% endif %}
+=======
+<style>
+  .newsletter-success-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: none;
+  }
+
+  .newsletter-success-modal i {
+    margin-right: 10px;
+    font-size: 16px;
+  }
+
+  .newsletter-success-modal i.fa-times {
+    color: red;
+  }
+
+  .newsletter-success-modal .modal-overlay {
+    background-color: rgba(35, 35, 35, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+
+  .newsletter-success-modal .halo-modal-content {
+    width: 280px;
+    padding: 20px;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 3;
+  }
+
+  .newsletter-success-modal .halo-modal-content .close {
+    background: var(--background_1);
+    color: var(--color_1);
+    border-color: var(--border_1);
+  }
+
+  .newsletter-success-modal .halo-modal-content .close:hover {
+    background: var(--background_2);
+    color: var(--color_2);
+    border-color: var(--border_2);
+  }
+
+  .newsletter-success-modal .halo-modal-body {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+</style>
+{% if settings.display_popup_newsletter %}
+  {% if settings.display_newsletter_toolbar and settings.text_toolbar != blank %}
+    <div
+      class="newsletter-toolbar{% if settings.position_toolbar == 'right' %} align-right{% endif %}"
+      data-toolbar-newsletter
+    >
+      <div class="toolbar--social">
+        {% if settings.display_popup_social %}
+          <div class="icon-social">
+            {% render 'social-media' %}
+          </div>
+        {% endif %}
+      </div>
+      <div class="toolbar--text">
+        <span data-modal-newsletter>{{ settings.text_toolbar }}</span>
+      </div>
+    </div>
+  {% endif %}
+  <div
+    class="wrapper-newsletter halo-modal"
+    data-newsletter
+    data-delay="{{settings.popup_newsletter_delay | times:1000}}"
+    data-expire="{{ settings.popup_newsletter_expire }}"
+  >
+    <div class="modal-overlay">
+      <div class="halo-modal-content">
+        <button type="button" class="close close-window inv-btn" title="{{ 'cart.ajax_cart.close' | t }}">
+          {% render 'icon-close' %}
+        </button>
+
+        <div class="halo-modal-body">
+          <div class="column-left">
+            {%- assign img_url = settings.newsletter | img_url: '360x360' -%}
+
+            {% if settings.newsletter != blank %}
+              <img data-srcset="{{ img_url }}" class="lazyload" data-sizes="auto">
+            {% else %}
+              <div class="not_img">360 x 360px</div>
+            {% endif %}
+          </div>
+
+          <div class="column-right">
+            {% if settings.popup_newsletter_title != blank %}
+              <h2 class="title">
+                {{ settings.popup_newsletter_title }}
+              </h2>
+            {% endif %}
+
+            {% if settings.popup_newsletter_des != blank %}
+              <div class="des">
+                {{ settings.popup_newsletter_des }}
+              </div>
+            {% endif %}
+
+            <div id="mailchimp-email-subscibe" class="newsletter">
+              <div id="mc_embed_signup">
+                {% render 'newsletter-form' %}
+              </div>
+            </div>
+
+            {% comment %}
+              {% if settings.display_popup_social %}
+                <div class="icon-social">
+                  {% render 'social-media' %}
+                </div>
+              {% endif %}
+            {% endcomment %}
+
+            {% if settings.popup_newsletter_text_note != blank and settings.when_to_show == 'first_time' %}
+              <input id="dismiss" type="checkbox" name="dismiss">
+              <label for="dismiss">
+                {{ settings.popup_newsletter_text_note }}
+              </label>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+>>>>>>> 9f9e89c22621a2bafc58c09a1a563a09ea03543a
