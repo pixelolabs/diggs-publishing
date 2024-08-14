@@ -2268,126 +2268,82 @@
   },
   
   {
-    "name": {
-      "en": "Social media"
-    },
+    "name": "Social media",
     "settings": [
       {
         "type": "header",
-        "content": {
-          "en": "Social accounts"
-        }
+        "content": "Social accounts"
       },
       {
         "type": "text",
         "id": "social_facebook_link",
-        "label": {
-          "en": "Facebook"
-        },
-        "info": {
-          "en": "https:\/\/facebook.com\/shopify"
-        }
+        "label": "Facebook",
+        "info": "https:\/\/facebook.com\/shopify"
       },
       {
         "type": "text",
         "id": "social_twitter_link",
-        "label": {
-          "en": "Twitter"
-        },
-        "info": {
-          "en": "http:\/\/twitter.com\/shopify"
-        }
+        "label": "Twitter",
+        "info": "http:\/\/twitter.com\/shopify"
       },
       {
         "type": "text",
         "id": "social_instagram_link",
-        "label": {
-          "en": "Instagram"
-        },
-        "info": {
-          "en": "http:\/\/instagram.com\/shopify"
-        }
+        "label": "Instagram",
+        "info": "http:\/\/instagram.com\/shopify"
       },
       {
         "type": "text",
         "id": "social_tiktok_link",
-        "label": {
-          "en": "Tiktok"
-        },
-        "info": {
-          "en": "http:\/\/tiktok.com"
-        }
+        "label":"Tiktok",
+        "info": "http:\/\/tiktok.com"
       },
       {
         "type": "text",
         "id": "social_youtube_link",
-        "label": {
-          "en": "YouTube"
-        },
-        "info": {
-          "en": "http:\/\/youtube.com"
-        }
+        "label": "YouTube",
+        "info": "http:\/\/youtube.com"
       },
       {
         "type": "text",
         "id": "social_linkedin_link",
-        "label": {
-          "en": "Linkedin"
-        },
-        "info": {
-          "en": "http:\/\/linkedin.com"
-        }
+        "label": "Linkedin",
+        "info": "http:\/\/linkedin.com"
       },
       {
         "type": "header",
-        "content": {
-          "en": "Sharing options"
-        }
+        "content": "Sharing options"
       },
       {
         "type": "checkbox",
         "id": "share_facebook",
-        "label": {
-          "en": "Share on Facebook"
-        }
+        "label":  "Share on Facebook"
       },
       {
         "type": "checkbox",
         "id": "share_twitter",
-        "label": {
-          "en": "Tweet on Twitter"
-        }
+        "label": "Tweet on Twitter"
       },
       {
         "type": "checkbox",
         "id": "share_pinterest",
-        "label": {
-          "en": "Share on Pinterest"
-        }
+        "label": "Share on Pinterest"
       },
       {
         "type": "checkbox",
         "id": "copy_link",
-        "label": {
-          "en": "Print"
-        }
+        "label": "Print"
       }
     ]
   },
   {
-    "name": {
-      "en": "Favicon"
-    },
+    "name": "Favicon",
     "settings": [
       {
         "type": "image_picker",
         "id": "favicon",
-        "label": {
-          "en": "Favicon image"
-        },
-        "info": {
-          "en": "Will be scaled down to 32 x 32px"
-        }
+        "label": "Favicon image",
+        "info": "Will be scaled down to 32 x 32px"
       }
     ]
   },
