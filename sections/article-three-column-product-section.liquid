@@ -63,6 +63,9 @@
         </div>
       </div>
     </div>
+    {%- for productRelated in section.blocks -%}
+      {% render 'product-modal', productData: productRelated %}
+    {% endfor %}
   </div>
 </div>
 
