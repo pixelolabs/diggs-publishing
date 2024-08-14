@@ -8,7 +8,7 @@
   data-aos-duration="2000"
 >
   <div class="pdp-recommendations ">
-    <div class="three-column-product-slider-v2 product-slider-v3 pdp">
+    <div class="three-column-product-slider-v2 article-product-slider pdp">
       <div class="container-1260 flex-wrap">
         <div class="top-section flex">
           <div class="heading">
@@ -47,7 +47,7 @@
                   {% assign productRelated = all_products[block.settings.product] %}
                   {% if productRelated != empty %}
                     <div class="product-card swiper-slide slide ">
-                      {% include 'product_Card'  with  productRelated: productRelated , show_price: true, show_tags: false, show_auto_tags: false, show_title: true, show_fav: false, show_secondary_button: false %}
+                      {% include 'product_Card'  with  productRelated: productRelated , show_price: true, show_tags: false, show_auto_tags: false, show_title: true, show_fav: false, show_secondary_button: true %}
                     </div>
                   {% endif %}
                 {% endfor %}
