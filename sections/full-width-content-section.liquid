@@ -5,6 +5,11 @@
         <h2>
           {{ section.settings.title }}
         </h2>
+        {% if section.settings.content != blank %}
+          <p>
+            {{ section.settings.content }}
+          </p>
+        {% endif %}
         {% if section.settings.buttonLink != blank and section.settings.buttonText != blank %}
           <a
             href="{{ section.settings.buttonLink }}"
@@ -33,6 +38,11 @@
       "type": "text",
       "id": "title",
       "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Description"
     },
     {
       "type": "image_picker",
