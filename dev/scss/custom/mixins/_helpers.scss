@@ -175,7 +175,7 @@ $MQ-1920: 1920px;
   align-items: center;
   justify-content: center;
   text-transform: var(--buttons-desktop-texttransform);
-  height: 40px;
+  height: 43px;
   @include MQ(MQ-480) {
     font-size: var(--buttons-mobile-fontsize);
     line-height: var(--buttons-mobile-lineheight);

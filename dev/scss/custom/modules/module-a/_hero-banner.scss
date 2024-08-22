@@ -214,7 +214,7 @@ align-items: center;
         right: 37px;
         z-index: 1;
         top: -27px;
-        background: url("kite.webp") no-repeat center / 100%;
+        background: url("kite.svg") no-repeat center / 100%;
         @include MQ(MQ-480) {
           width: 54px;
           height: 70px;
@@ -243,16 +243,16 @@ align-items: center;
       background: url("star-large-white.webp") no-repeat center / 100%;
   }
         .pre-title {
-          margin-bottom: 20px;
+          margin-bottom: 15px;
          color: $color-pink;
          @include MQ(MQ-480) {
           margin-bottom: 10px;
         }
         }
         h1{
-          margin-bottom: 8.3px;
+          margin-bottom: 18px;
           @include MQ(MQ-480) {
-            margin-bottom: 1.5px;
+            margin-bottom: 8px;
           }
         }
         .btn--primary {
@@ -267,7 +267,9 @@ align-items: center;
         p {
           color: rgba(var(--color-foreground),1);
         }
-
+        p{
+          max-width: 453px;
+        }
         
       }
     }

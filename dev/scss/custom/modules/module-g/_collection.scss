@@ -108,7 +108,7 @@
       right: -82px;
       z-index: 1;
       top: -88px;
-      background: url("kite.webp") no-repeat center / 100%;
+      background: url("kite.svg") no-repeat center / 100%;
       @include MQ(MQ-768) {
         width: 54px;
         height: 70px;
@@ -436,7 +436,7 @@
           right: 20px;
           width: 53px;
           height: 70px;
-          background: url("kite.webp") no-repeat center / 100%;
+          background: url("kite.svg") no-repeat center / 100%;
         }
       }
     }
