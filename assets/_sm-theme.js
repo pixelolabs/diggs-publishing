@@ -901,7 +901,11 @@ function recharge2020(key, value) {
 // });
 "use strict";
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 jQuery(function () {
+  var _Swiper;
+
   $(window).scroll(function () {
     // var targetScroll = $('.product__actions').position().top;
     var targetScroll = $('.product__actions').offset().top - $('.product__actions').outerHeight() + 20;
@@ -1017,7 +1021,7 @@ jQuery(function () {
     }
   }); // logo Slider
 
-  var logoSlider = new Swiper('.js_logo-slider', {
+  var logoSlider = new Swiper('.js_logo-slider', (_Swiper = {
     slidesPerView: "auto",
     spaceBetween: 148,
     freeMode: true,
@@ -1026,58 +1030,20 @@ jQuery(function () {
     resistance: false,
     shortSwipes: false,
     loop: true,
-    grabCursor: false,
-    breakpoints: {
-      0: {
-        spaceBetween: 90
-      },
-      601: {
-        spaceBetween: 148
-      }
-    } // threshold: 1,
-    // speed: 4000,
-    // autoplay: {
-    //  delay: 1,
-    // disableOnInteraction: false,
-    // reverseDirection: true,
-    //  },
-
-    /* breakpoints: {
-         0: {
-             slidesPerView: 2,
-             spaceBetween: 20,
-         },
-         350: {
-             slidesPerView: 2,
-             spaceBetween: 20,
-         },
-         480: {
-             slidesPerView: 4,
-             spaceBetween: 20,
-         },
-         600: {
-             slidesPerView: 4,
-             spaceBetween: 20,
-         },
-         980: {
-             slidesPerView: 5,
-             spaceBetween: 20,
-         },
-         1024: {
-             slidesPerView: 6,
-             spaceBetween: 20,
-         },
-         1200: {
-             slidesPerView: 7,
-             spaceBetween: 20,
-         },
-         1280: {
-             slidesPerView: 8,
-             spaceBetween: 20,
-         },
-     },*/
-
-  }); //    embed slider
+    grabCursor: false
+  }, _defineProperty(_Swiper, "slidesPerView", 5), _defineProperty(_Swiper, "breakpoints", {
+    0: {
+      slidesPerView: 2
+    },
+    601: {
+      slidesPerView: 3,
+      spaceBetween: 90
+    },
+    1023: {
+      slidesPerView: 5,
+      spaceBetween: 148
+    }
+  }), _Swiper)); //    embed slider
 
   var halfcontentSlider = new Swiper(".js_half-content-half-image-slider", {
     slidesPerView: 1,
