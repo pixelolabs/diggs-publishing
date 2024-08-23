@@ -218,8 +218,8 @@
         "title": "Charities Krystaelynne Works With and Supports",
         "paddingtop": 0,
         "paddingtopmobile": 0,
-        "paddingbottom": 0,
-        "paddingbottomMobile": 0
+        "paddingbottom": 50,
+        "paddingbottomMobile": 50
       }
     },
     "full_width_content_section_4eMcgt": {
