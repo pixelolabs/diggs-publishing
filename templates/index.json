@@ -130,7 +130,7 @@
           "type": "review",
           "settings": {
             "name": "TRICIA HENLEY",
-            "description": "<p>You won't be disappointed <br\/>in buying this book. It is <br\/>perfect for parents to <br\/>teach our young ones <br\/>what is appropriate and <br\/>not appropriate touching. <br\/>With this time in age, this <br\/>book is a great <br\/>introduction to that <br\/>subject. Well worth the <br\/>price! You will love this book.<\/p>"
+            "description": "<p>You won't be disappointed in buying this book. It is perfect for parents to teach our young ones what is appropriate and not appropriate touching. With this time in age, this book is a great introduction to that subject. Well worth the price! You will love this book.<\/p>"
           }
         },
         "review_3NiegC": {
@@ -226,6 +226,7 @@
       "type": "full-width-content-section",
       "settings": {
         "title": "Every writer starts as a storyteller. Explore the journey of author Krystaelynne Sanders Diggs",
+        "content": "",
         "image": "shopify:\/\/shop_images\/kids-images.webp",
         "buttonText": "Read More",
         "buttonLink": "#"
