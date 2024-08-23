@@ -1039,7 +1039,7 @@ jQuery(function () {
       slidesPerView: 3,
       spaceBetween: 90
     },
-    1023: {
+    1100: {
       slidesPerView: 5,
       spaceBetween: 148
     }
