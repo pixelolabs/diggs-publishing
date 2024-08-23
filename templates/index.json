@@ -130,21 +130,21 @@
           "type": "review",
           "settings": {
             "name": "TRICIA HENLEY",
-            "description": "<p>You won't be disappointed <br\/>in buying this book. It is <br\/>perfect for parents to <br\/>teach our young ones <br\/>what is appropriate and <br\/>not appropriate touching. <br\/>With this time in age, this <br\/>book is a great <br\/>introduction to that <br\/>subject. Well worth the <br\/>price! You will love this book.<\/p>"
+            "description": "<p>You won't be disappointed in buying this book. It is perfect for parents to teach our young ones what is appropriate and not appropriate touching. With this time in age, this book is a great introduction to that subject. Well worth the price! You will love this book.<\/p>"
           }
         },
         "review_3NiegC": {
           "type": "review",
           "settings": {
             "name": "DENEA",
-            "description": "<p>I purchased this book for <br\/>mv daughter, we both <br\/>enjoyed it. <br\/>illustrations are very <br\/>inviting for kids, and it <br\/>explains safe touching, to <br\/>enlighten kids on their <br\/>body is THEIRS. I <br\/>recommend it because <br\/>this is a kid friendly way <br\/>to help teach our small <br\/>loved ones the importance <br\/>of safe touch.<\/p>"
+            "description": "<p>I purchased this book for mv daughter, we both enjoyed it. illustrations are very inviting for kids, and it explains safe touching, to enlighten kids on their body is THEIRS. I recommend it because this is a kid friendly way to help teach our small loved ones the importance of safe touch.<\/p>"
           }
         },
         "review_EJFUni": {
           "type": "review",
           "settings": {
             "name": "MARKEISHA",
-            "description": "<p>This book is illustrated <br\/>beautifully and provides a <br\/>simple way to introduce <br\/>the topic of \"touch\" <br\/>without making it <br\/>uncomfortable to your <br\/>children. Must buy as a <br\/>gift and for your own <br\/>children! Just beautiful!<\/p>"
+            "description": "<p>This book is illustrated beautifully and provides a simple way to introduce the topic of \"touch\" without making it uncomfortable to your children. Must buy as a gift and for your own children! Just beautiful!<\/p>"
           }
         }
       },
@@ -169,7 +169,7 @@
         "logo_hAHcqH": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/dummy-logo.webp",
+            "image": "shopify:\/\/shop_images\/Kids_Again.png",
             "link": "",
             "title": ""
           }
@@ -177,7 +177,7 @@
         "logo_qmTtnb": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/dummy-logo.webp",
+            "image": "shopify:\/\/shop_images\/Signs_of_Hope.png",
             "link": "",
             "title": ""
           }
@@ -185,7 +185,7 @@
         "logo_nfBUJE": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/dummy-logo.webp",
+            "image": "shopify:\/\/shop_images\/Journey_2_self.png",
             "link": "",
             "title": ""
           }
@@ -193,7 +193,7 @@
         "logo_8icidq": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/dummy-logo.webp",
+            "image": "shopify:\/\/shop_images\/Room_Redux.png",
             "link": "",
             "title": ""
           }
@@ -201,7 +201,7 @@
         "logo_jCikGR": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/dummy-logo.webp",
+            "image": "shopify:\/\/shop_images\/Vivid_Bound.png",
             "link": "",
             "title": ""
           }
@@ -218,14 +218,15 @@
         "title": "Charities Krystaelynne Works With and Supports",
         "paddingtop": 0,
         "paddingtopmobile": 0,
-        "paddingbottom": 0,
-        "paddingbottomMobile": 0
+        "paddingbottom": 50,
+        "paddingbottomMobile": 50
       }
     },
     "full_width_content_section_4eMcgt": {
       "type": "full-width-content-section",
       "settings": {
         "title": "Every writer starts as a storyteller. Explore the journey of author Krystaelynne Sanders Diggs",
+        "content": "",
         "image": "shopify:\/\/shop_images\/kids-images.webp",
         "buttonText": "Read More",
         "buttonLink": "#"
