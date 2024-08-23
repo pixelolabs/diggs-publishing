@@ -137,11 +137,20 @@ var productSectionSlider = new Swiper(".js__article-slider", {
         shortSwipes: false,
         loop: true,
         grabCursor: false,
+        slidesPerView: 5,
         breakpoints: {
             0: {
-                spaceBetween: 90
+                slidesPerView: 2
             },
             601: {
+                slidesPerView: 3,
+                spaceBetween: 90
+            },
+            900: {
+                slidesPerView: 4
+            },
+            1100: {
+                slidesPerView: 5,
                 spaceBetween: 148
             }
         }

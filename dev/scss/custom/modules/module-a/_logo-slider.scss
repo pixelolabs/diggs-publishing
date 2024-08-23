@@ -3,6 +3,7 @@
   padding: 0px 0px 58px 0px;
   background-color: $color-off-white;
   position: relative;
+  z-index: 2;
   @include MQ(MQ-600) {
     padding-bottom: 30px;
   }
