@@ -1039,6 +1039,9 @@ jQuery(function () {
       slidesPerView: 3,
       spaceBetween: 90
     },
+    900: {
+      slidesPerView: 4
+    },
     1100: {
       slidesPerView: 5,
       spaceBetween: 148
