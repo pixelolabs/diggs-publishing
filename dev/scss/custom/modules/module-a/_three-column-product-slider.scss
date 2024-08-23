@@ -90,7 +90,8 @@
     .image-section {
       overflow: hidden !important;
       position: relative !important;
-      height: 304px;
+      // height: 304px;
+      height: 362px;
       width: 100%;
       @include MQ(MQ-480) {
         height: 266px;
@@ -289,7 +290,7 @@
     }
     
     .pre-title{
-      margin-bottom: 22px;
+      margin-bottom: 15px;
       color: $color-orange;
       @include MQ(MQ-480) {
         margin-bottom: 15px;
