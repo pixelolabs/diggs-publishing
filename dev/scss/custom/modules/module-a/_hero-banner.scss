@@ -9,6 +9,12 @@
    
     display: flex;
     align-items: center;
+    @include MQ(MQ-1200) {
+      padding-bottom: 148px;
+    }
+    @include MQ(MQ-1024) {
+      padding-bottom: 118px;
+    }
     @include MQ(MQ-480) {
       padding-bottom: 45px;
       padding-top: 98px;
@@ -22,6 +28,12 @@
       z-index: 1;
       bottom: 168px;
       background: url("thread-hero-white.webp") no-repeat center / 100%;
+      @include MQ(MQ-1200) {
+        bottom: 100px;
+      }
+      @include MQ(MQ-1024) {
+        bottom: 168px;
+      }
       @include MQ(MQ-480) {
         display: none;
       }
