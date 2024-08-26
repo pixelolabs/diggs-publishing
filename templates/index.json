@@ -92,18 +92,34 @@
     "half_image_half_content_MaYr7A": {
       "type": "half-image-half-content",
       "blocks": {
+        "image_YNUah6": {
+          "type": "image",
+          "settings": {
+            "showVideo": false,
+            "video": "",
+            "videoPopup": false,
+            "pretitle": "",
+            "title": "",
+            "description": "",
+            "buttonText": "",
+            "buttonLink": "",
+            "background_color": "blue",
+            "fontSize": false,
+            "center": false
+          }
+        },
         "image_U6JiFN": {
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/dummy.webp",
             "showVideo": true,
-            "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/634081785d1e4beaa80bd4e07e37b7ce.mp4",
+            "video": "https:\/\/youtu.be\/xpG6R261b_c?si=1lrOSBXD_hjwiA-2",
             "videoPopup": false,
             "pretitle": "Krystaelynne Sanders Diggs",
             "title": "My Mission is to prevent child sexual abuse",
             "description": "<p>In a world filled with countless stories, Diggs Publishing celebrates the unique tales that often go untold. Dive into our universe, where each page brings to life characters that truly reflect the world’s diverse tapestry.<\/p>",
             "buttonText": "",
-            "buttonLink": "#",
+            "buttonLink": "https:\/\/youtu.be\/xpG6R261b_c?si=1lrOSBXD_hjwiA-2",
             "background_color": "blue",
             "fontSize": false,
             "center": false
@@ -111,6 +127,7 @@
         }
       },
       "block_order": [
+        "image_YNUah6",
         "image_U6JiFN"
       ],
       "settings": {
@@ -229,7 +246,8 @@
         "content": "",
         "image": "shopify:\/\/shop_images\/kids-images.webp",
         "buttonText": "Read More",
-        "buttonLink": "#"
+        "buttonLink": "#",
+        "backgroundcolor": false
       }
     }
   },
