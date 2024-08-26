@@ -137,12 +137,23 @@
     },
     "full_width_cta_v2_WcKbHe": {
       "type": "full-width-cta-v2",
+      "disabled": true,
       "settings": {
         "title": "When an unknown printer took a galley of type and scrambled",
         "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took",
         "buttonText": "Book Now",
         "buttonLink": "#",
         "section_class": ""
+      }
+    },
+    "full_width_content_section_7z9FmL": {
+      "type": "full-width-content-section",
+      "settings": {
+        "title": "When an unknown printer took a galley of type and scrambled",
+        "content": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took<\/p>",
+        "buttonText": "Book Now",
+        "buttonLink": "shopify:\/\/pages\/author-visits",
+        "backgroundcolor": true
       }
     }
   },
@@ -151,6 +162,7 @@
     "half_image_half_content_zRnrfB",
     "full_width_cta_eNdrVD",
     "half_image_half_content_gL8kEy",
-    "full_width_cta_v2_WcKbHe"
+    "full_width_cta_v2_WcKbHe",
+    "full_width_content_section_7z9FmL"
   ]
 }
