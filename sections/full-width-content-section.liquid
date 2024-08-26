@@ -6,9 +6,9 @@
           {{ section.settings.title }}
         </h2>
         {% if section.settings.content != blank %}
-          <p>
+          <div class="description">
             {{ section.settings.content }}
-          </p>
+          </div>
         {% endif %}
         {% if section.settings.buttonLink != blank and section.settings.buttonText != blank %}
           <a
