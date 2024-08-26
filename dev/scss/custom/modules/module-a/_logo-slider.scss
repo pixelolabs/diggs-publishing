@@ -7,9 +7,9 @@
   @include MQ(MQ-600) {
     padding-bottom: 30px;
   }
-  &::before{
+  &::before {
     position: absolute;
-    content: '';
+    content: "";
     left: 22px;
     top: 98px;
     background: url("star-large.webp") repeat center / 100%;
@@ -18,21 +18,19 @@
     @include MQ(MQ-600) {
       display: none;
     }
+  }
+  // &::after{
+  //   background: url("shape.svg") repeat left / 1452px;
+  //   height: 101px;
+  //   width: 100%;
+  //   position: absolute;
+  //   left: 0;
+  //   bottom: -53px;
+  //   z-index: 2;
+  //   content: '';
+  // }
 
-  }
-  &::after{
-    background: url("shape.svg") repeat left / 1452px;
-    height: 101px;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: -53px;
-    z-index: 2;
-    content: '';
-  }
- 
- 
-  h2{
+  h2 {
     max-width: 411px;
     width: 100%;
     position: relative;
@@ -41,9 +39,9 @@
       width: 100%;
       padding-right: 42px;
     }
-    &::after{
+    &::after {
       position: absolute;
-      content: '';
+      content: "";
       right: -150px;
       top: -36px;
       background: url("rocket.webp") repeat center / 100%;
@@ -56,19 +54,18 @@
         top: -2px;
       }
     }
-
   }
-  .slider{
+  .slider {
     overflow: hidden;
     margin-top: 55px;
     position: relative;
     z-index: 3;
   }
- 
+
   .swiper-slide {
-   width: 151px;
-   position: relative;
-   height: 100px;
+    width: 151px;
+    position: relative;
+    height: 100px;
 
     .image-section {
       width: 100%;
