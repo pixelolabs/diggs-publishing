@@ -92,7 +92,24 @@
     "half_image_half_content_MaYr7A": {
       "type": "half-image-half-content",
       "blocks": {
-        "image_YNUah6": {
+        "image_U6JiFN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2024-08-26_at_4.48.17_PM.png",
+            "showVideo": true,
+            "video": "https:\/\/youtu.be\/xpG6R261b_c?si=vu4KL9_nTs_j-OPQ",
+            "videoPopup": true,
+            "pretitle": "Krystaelynne Sanders Diggs",
+            "title": "My Mission is to prevent child sexual abuse",
+            "description": "<p>In a world filled with countless stories, Diggs Publishing celebrates the unique tales that often go untold. Dive into our universe, where each page brings to life characters that truly reflect the world’s diverse tapestry.<\/p>",
+            "buttonText": "",
+            "buttonLink": "https:\/\/youtu.be\/xpG6R261b_c?si=1lrOSBXD_hjwiA-2",
+            "background_color": "blue",
+            "fontSize": false,
+            "center": false
+          }
+        },
+        "image_k7wL6Y": {
           "type": "image",
           "settings": {
             "showVideo": false,
@@ -108,18 +125,17 @@
             "center": false
           }
         },
-        "image_U6JiFN": {
+        "image_YNUah6": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/author_visits_readings.webp",
-            "showVideo": true,
-            "video": "https:\/\/youtu.be\/xpG6R261b_c?si=vu4KL9_nTs_j-OPQ",
-            "videoPopup": true,
-            "pretitle": "Krystaelynne Sanders Diggs",
-            "title": "My Mission is to prevent child sexual abuse",
-            "description": "<p>In a world filled with countless stories, Diggs Publishing celebrates the unique tales that often go untold. Dive into our universe, where each page brings to life characters that truly reflect the world’s diverse tapestry.<\/p>",
+            "showVideo": false,
+            "video": "",
+            "videoPopup": false,
+            "pretitle": "",
+            "title": "",
+            "description": "",
             "buttonText": "",
-            "buttonLink": "https:\/\/youtu.be\/xpG6R261b_c?si=1lrOSBXD_hjwiA-2",
+            "buttonLink": "",
             "background_color": "blue",
             "fontSize": false,
             "center": false
@@ -127,8 +143,9 @@
         }
       },
       "block_order": [
-        "image_YNUah6",
-        "image_U6JiFN"
+        "image_U6JiFN",
+        "image_k7wL6Y",
+        "image_YNUah6"
       ],
       "settings": {
         "section_class": "",
