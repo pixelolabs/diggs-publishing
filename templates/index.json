@@ -108,44 +108,10 @@
             "fontSize": false,
             "center": false
           }
-        },
-        "image_k7wL6Y": {
-          "type": "image",
-          "settings": {
-            "showVideo": false,
-            "video": "",
-            "videoPopup": false,
-            "pretitle": "",
-            "title": "",
-            "description": "",
-            "buttonText": "",
-            "buttonLink": "",
-            "background_color": "blue",
-            "fontSize": false,
-            "center": false
-          }
-        },
-        "image_YNUah6": {
-          "type": "image",
-          "settings": {
-            "showVideo": false,
-            "video": "",
-            "videoPopup": false,
-            "pretitle": "",
-            "title": "",
-            "description": "",
-            "buttonText": "",
-            "buttonLink": "",
-            "background_color": "blue",
-            "fontSize": false,
-            "center": false
-          }
         }
       },
       "block_order": [
-        "image_U6JiFN",
-        "image_k7wL6Y",
-        "image_YNUah6"
+        "image_U6JiFN"
       ],
       "settings": {
         "section_class": "",
