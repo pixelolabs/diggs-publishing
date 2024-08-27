@@ -20,7 +20,7 @@
         <div class="container-1260 flex">
           <div class="image-wrapper">
             {% if block.settings.showVideo == true %}
-              {% if block.settings.videoPopup == true %}
+         
                 {% if block.settings.video != blank %}
                   <a class="video-section " data-lity href="{{block.settings.video}}">
                     {{
@@ -31,31 +31,7 @@
                     <div class="play-icon"></div>
                   </a>
                 {% endif %}
-              {% else %}
-                <div class="video-section" data-aos="fade-up" data-aos-duration="2000">
-                  <div class="video-wrapper">
-                    {% if block.settings.video contains '.mp4' %}
-                      <video controls loop class="video">
-                        <source src="{{ block.settings.video }}" type="video/mp4">
-                      </video>
-                      <div class="play-icon"></div>
-                    {% else %}
-                      {% if block.settings.video != blank %}
-                        {% assign videoId = block.settings.video | split: 'vimeo.com/' %}
-                        <iframe
-                          src="https://player.vimeo.com/video/{{ videoId[1] }}?"
-                          frameborder="0"
-                          allow="fullscreen"
-                          allowfullscreen
-                          loading="lazy"
-                          class="video"
-                        ></iframe>
-                        <div id="playIcon" class="play-icon"></div>
-                      {% endif %}
-                    {% endif %}
-                  </div>
-                </div>
-              {% endif %}
+             
 
             {% else %}
               {% if block.settings.image != blank %}
@@ -228,11 +204,6 @@
           "type": "url",
           "id": "video",
           "label": "Video"
-        },
-        {
-          "type": "checkbox",
-          "id": "videoPopup",
-          "label": "Open Video in Popup"
         },
         {
           "type": "text",
