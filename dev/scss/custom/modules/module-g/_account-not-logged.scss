@@ -189,7 +189,7 @@
 
         z-index: 1;
 
-        background: url("planet.webp") no-repeat center / 100%;
+        background: url("planet.svg") no-repeat center / 100%;
         @include MQ(MQ-768) {
           width: 58px;
           height: 40px;

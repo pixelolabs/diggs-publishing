@@ -646,6 +646,11 @@ button {
   text-transform: uppercase;
   background: url("icon-right-arrow.webp") no-repeat right center/ 13.5px;
   padding-right: 21.5px;
+  transition: 0.3s ease;
+  &:hover{
+    color: $color-orange;
+    background-image: url("icon-right-arrow-orange.webp")
+  }
 }
 
 .link--secondary {

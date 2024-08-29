@@ -1,5 +1,5 @@
 .default-page-content {
-  padding: 73px 0 0;
+  padding: 73px 0 200px;
   position: relative;
   &:before {
     background: url(yellow-wave.webp) repeat-x top / 100%;
@@ -38,7 +38,10 @@
     }
   }
   @include MQ(MQ-980) {
-    padding: 60px 0 0px;
+    padding: 60px 0 120px;
+  }
+  @include MQ(MQ-767) {
+    padding-bottom: 80px;
   }
   .container-1240 {
     position: relative;

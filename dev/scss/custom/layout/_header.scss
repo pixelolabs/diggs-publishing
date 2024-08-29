@@ -65,6 +65,10 @@
       @include MQ(MQ-980) {
         padding: 11.6px 0;
       }
+      @include MQ(MQ-600) {
+        padding: 0;
+        min-height: 40px;
+      }
       * {
         color: $color-black;
         text-align: center;

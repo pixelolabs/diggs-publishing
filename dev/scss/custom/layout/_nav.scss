@@ -171,7 +171,7 @@ header.fixed {
     .header-search-section {
       // top: 65px;
       // top: 46px;
-      top: 0;
+      top: 0 !important;
       @include MQ(MQ-980) {
         top: 0 !important;
       }

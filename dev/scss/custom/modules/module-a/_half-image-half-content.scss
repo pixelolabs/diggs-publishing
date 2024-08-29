@@ -94,6 +94,7 @@
           }
           &:before {
             mask-image: url(yellow-shape-right.svg);
+            transform: translateX(-20px);
             @include MQ(MQ-768) {
               width: 500px;
               height: 424px;
@@ -208,6 +209,20 @@
   }
 }
 
+.template-index {
+  .half-image-half-content-outer {
+    z-index: 0;
+    .half-image-half-content {
+      &::before {
+        right: 0px;
+        top: -315px;
+        width: 284px;
+        height: 642px;
+        background: url("thread-yellow.webp") no-repeat center / 100%;
+      }
+    }
+  }
+}
 .half-image-half-content {
   position: relative;
   z-index: 1;
@@ -223,6 +238,28 @@
   }
   &:first-child {
     padding-top: 50px;
+    &::before {
+      position: absolute;
+      content: "";
+      right: 0px;
+      top: 0;
+      background: url("thread-orange.svg") no-repeat center / 100%;
+      width: 221.6px;
+      height: 182.06px;
+    }
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    right: 0px;
+    top: -315px;
+    background: url("thread-yellow.webp") no-repeat center / 100%;
+    width: 284px;
+    height: 642px;
+    z-index: 1;
+    @include MQ(MQ-980) {
+      display: none;
+    }
   }
   .container-1260 {
     @include MQ(MQ-980) {
@@ -240,20 +277,6 @@
       background: url("star-large-white.webp") repeat center / 100%;
       width: 31.4px;
       height: 38.2px;
-      @include MQ(MQ-980) {
-        display: none;
-      }
-    }
-
-    &::before {
-      position: absolute;
-      content: "";
-      right: 0px;
-      top: -315px;
-      background: url("thread-yellow.webp") repeat center / 100%;
-      width: 284px;
-      height: 642px;
-      z-index: 1;
       @include MQ(MQ-980) {
         display: none;
       }
@@ -361,6 +384,7 @@
       content: "";
       left: 0;
       top: 70px;
+      transform: translateX(15px);
       @include MQ(MQ-600) {
         width: 350px;
         height: 296px;
@@ -455,7 +479,7 @@
       content: "";
       left: 0px;
       top: 20px;
-      background: url("icon-cloud.webp") repeat center / 100%;
+      background: url("icon-cloud.webp") no-repeat center / 100%;
       width: 65px;
       height: 52px;
       @include MQ(MQ-980) {
@@ -558,6 +582,7 @@
       }
       &:before {
         mask-image: url(yellow-shape-right.svg);
+        transform: translateX(-20px);
         @include MQ(MQ-768) {
           width: 500px;
           height: 424px;
@@ -841,7 +866,7 @@
         top: -269px;
         @include MQ(MQ-980) {
           display: block;
-          background: url(icon-cloud.webp) repeat center / 100%;
+          background: url(icon-cloud.webp) no-repeat center / 100%;
           width: 47px;
           height: 37px;
           left: unset;
@@ -988,7 +1013,7 @@
           bottom: 65px;
           left: -44px;
           @include MQ(MQ-980) {
-            background: url(star-large.webp) repeat center / 100%;
+            background: url(star-large.webp) no-repeat center / 100%;
             width: 21.37px;
             height: 28.52px;
             display: block;
@@ -1035,7 +1060,7 @@
         }
         &:before {
           display: block;
-          background: url(star-large.webp) repeat center / 100%;
+          background: url(star-large.webp) no-repeat center / 100%;
           width: 42px;
           height: 51px;
           top: unset !important;

@@ -50,6 +50,7 @@ footer {
       width: 60px;
       height: 45px;
       top: -44px;
+      display: none;
     }
   }
   .top-section {
@@ -196,8 +197,9 @@ footer {
       right: 18%;
       background-size: contain;
       @include MQ(MQ-480) {
-        width: 30px;
-        height: 25px;
+        width: 45.95px;
+        height: 37.98px;
+        top: -35px;
       }
     }
     &:before {
@@ -208,6 +210,9 @@ footer {
       background: url(star-large-white.webp) no-repeat center / 100%;
       width: 27.2px;
       height: 41.9px;
+      @include MQ(MQ-480) {
+        display: none;
+      }
     }
   }
   // .footer-top-bar {
