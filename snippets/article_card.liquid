@@ -59,13 +59,14 @@
             {% assign blog_handle = split_2[0] | strip %}
             {% assign article_blog = blogs[blog_handle] %}
 
-            {% for tag in articleRelated.tags %}
-              <li class="tags">
-                <span class="tag">
-                  {{- tag -}}
-                  {{- article_blog -}}
-                </span>
-              </li>
+            {% for tag in blog.all_tags %}
+              {% if current_tags contains tag %}
+                <li class="tags">
+                  <span class="tag">
+                    {{- tag -}}
+                  </span>
+                </li>
+              {% endif %}
             {% endfor %}
           </ul>
         {% endif %}
