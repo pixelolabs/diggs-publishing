@@ -62,8 +62,8 @@
             {% assign article_blog = blogs[blog_handle] %}
 
             {% for tag in articleRelated.tags %}
-              {% assign articleRelated.tags = tags| map: 'tags' %}
-              {% if particleRelated.tags contains current_tags %}
+              {% assign articleRelated.tags = tag | map: 'tag' %}
+              {% if articleRelated.tags contains current_tags %}
                 <li class="tags">
                   <span class="tag">{{ current_tags }}</span>
                 </li>
