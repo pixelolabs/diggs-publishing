@@ -5,8 +5,7 @@
         <div
           class="
             slide swiper-slide
-            hero-banner {% if section.settings.content_alignment == "center" %} center-align{% endif %} {% if section.settings.content_alignment == "right" %} right-align{% endif %}
-            {% if section.settings.content_alignment == "left" %} left-align{% endif %}
+            hero-banner
           "
         >
           {% if section.settings.buttonLink != blank and section.settings.buttonText != blank %}
@@ -115,17 +114,6 @@
       "type": "header",
       "content": "Extra Settings",
       "info": "Recommened to be used by the developer only"
-    },
-    {
-      "type": "select",
-      "id": "content_alignment",
-      "options": [
-        { "value": "left", "label": "Left" },
-        { "value": "right", "label": "Right" }
-      ],
-      "label": "Image Alignment",
-      "info": "By default it is left aligned.",
-      "default": "left"
     }
   ],
 

@@ -11,25 +11,15 @@
   "sections": {
     "HeroBanner": {
       "type": "home-hero-banner",
-      "blocks": {
-        "d96d2ebe-b86c-4725-886e-21c6b9472a39": {
-          "type": "slide",
-          "settings": {
-            "backgroundImage": "shopify:\/\/shop_images\/Untitled_design-3.png",
-            "pretitle": "Welcome to Diggs Publishing",
-            "title": "Diverse Children’s Books collections",
-            "description": "<p>In a word filled with countless stories, Diggs Publishing celebrates the unique tales that often go untold.<\/p>",
-            "buttonText": "Order Now",
-            "buttonLink": "shopify:\/\/collections",
-            "content_alignment": "left"
-          }
-        }
-      },
-      "block_order": [
-        "d96d2ebe-b86c-4725-886e-21c6b9472a39"
-      ],
       "settings": {
-        "color_scheme": "scheme-1"
+        "color_scheme": "scheme-1",
+        "backgroundImage": "shopify:\/\/shop_images\/hero-baby.webp",
+        "backgroundImageMobile": "shopify:\/\/shop_images\/hero-baby.webp",
+        "pretitle": "Welcome to Diggs Publishing",
+        "title": "Diverse Children’s Books collections",
+        "description": "<p>In a word filled with countless stories, Diggs Publishing celebrates the unique tales that often go untold.<\/p>",
+        "buttonText": "Order Now",
+        "buttonLink": "shopify:\/\/collections"
       }
     },
     "content_banner_maXcHf": {
