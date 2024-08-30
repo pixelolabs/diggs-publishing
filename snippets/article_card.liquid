@@ -62,11 +62,9 @@
             {% assign article_blog = blogs[blog_handle] %}
 
             {% for tag in articleRelated.tags %}
-              {% if articleRelated.tags contains current_tags %}
-                <li class="tags">
-                  <span class="tag">{{ current_tags }}</span>
-                </li>
-              {% endif %}
+              <li class="tags">
+                <span class="tag">{{ tag }}</span>
+              </li>
             {% endfor %}
           </ul>
         {% endif %}
