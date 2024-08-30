@@ -61,7 +61,7 @@
             {% assign blog_handle = split_2[0] | strip %}
             {% assign article_blog = blogs[blog_handle] %}
 
-            {% for tag in articleRelated.tags limit: 2 %}
+            {% for tag in articleRelated.tags limit: 1 %}
               <li class="tags">
                 <a href="{{article_blog.url}}/tagged/{{ tag | handleize }}" title="{{tag}}" class="tag">{{ tag }}</a>
               </li>
