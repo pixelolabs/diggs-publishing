@@ -138,7 +138,7 @@
                       <div class="articlecard--outer swiper-slide slide" data-article-id="{{related_article.id}}">
                         {%
                           include 'article_Card' with articleRelated: related_article, show_tags: true, show_description: true, show_readMore:
-                          true
+                          true,show_tags_with_limits:true
                         %}
                       </div>
                     {% endunless %}

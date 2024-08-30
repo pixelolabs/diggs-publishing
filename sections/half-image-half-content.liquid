@@ -20,18 +20,12 @@
         <div class="container-1260 flex">
           <div class="image-wrapper">
             {% if block.settings.showVideo == true %}
-         
-                {% if block.settings.video != blank %}
-                  <a class="video-section " data-lity href="{{block.settings.video}}">
-                    {{
-                      block.settings.image
-                      | image_url: width: 1262
-                      | image_tag: loading: 'lazy', widths: '1262x1000'
-                    }}
-                    <div class="play-icon"></div>
-                  </a>
-                {% endif %}
-             
+              {% if block.settings.video != blank %}
+                <a class="video-section " data-lity href="{{block.settings.video}}">
+                  {{ block.settings.image | image_url: width: 1262 | image_tag: loading: 'lazy', widths: '1262x1000' }}
+                  <div class="play-icon"></div>
+                </a>
+              {% endif %}
 
             {% else %}
               {% if block.settings.image != blank %}
@@ -198,12 +192,14 @@
         {
           "type": "checkbox",
           "id": "showVideo",
-          "label": "Show Video"
+          "label": "Show Video",
+          "info": "Check to show video in popup model"
         },
         {
           "type": "url",
           "id": "video",
-          "label": "Video"
+          "label": "Video",
+          "info": "youtube video link / mp4 video link"
         },
         {
           "type": "text",

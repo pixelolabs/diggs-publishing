@@ -1,106 +1,61 @@
-{% if section.blocks.size > 0 %}
+{% if section.settings.title != blank %}
   <div class="slider hero-banner-slider   {% if section.blocks.size > 1 %} js__hero-banner-slider  padding-left-right {% endif %} color-{{ section.settings.color_scheme }}">
     <div class="swiper-wrapper">
-      {% for block in section.blocks %}
-        {% if block.settings.backgroundImage != blank or block.settings.videobanner != blank %}
-          <div
-            class="
-              slide swiper-slide
-              hero-banner {% if block.settings.content_alignment == "center" %} center-align{% endif %} {% if block.settings.content_alignment == "right" %} right-align{% endif %}
-              {% if block.settings.content_alignment == "left" %} left-align{% endif %} {% if section.blocks.size > 1 %} padding-left-right {% endif %}
-            "
-          >
-            {% if block.settings.buttonLink != blank and block.settings.buttonText != blank %}
-              <a
-                href="{{ block.settings.buttonLink }}"
-                title="Read More About {{ block.settings.title }}"
-                aria-label="Read More About {{ block.settings.title }}"
-                class="full-link"
-              ></a>
-            {% endif %}
-            {% comment %}
-              {%- if block.settings.videobanner -%}
-                <div class="video-section">
-                  <div class="video-wrapper">
-                    {% if block.settings.video contains '.mp4' %}
-                      <video muted loop autoplay>
-                        <source src="{{ block.settings.video }}" type="video/mp4">
-                      </video>
-                    {% else %}
-                      {% if block.settings.video != blank %}
-                        {% assign videoId = block.settings.video | split: 'vimeo.com/' %}
-                        <iframe
-                          src="https://player.vimeo.com/video/{{ videoId[1] }}?loop=1&autoplay=1&muted=1"
-                          frameborder="0"
-                          allow="fullscreen"
-                          allowfullscreen
-                          loading="lazy"
-                        ></iframe>
-                      {% endif %}
-                    {% endif %}
-                  </div>
-                </div>
-              {% else %}
+      {% if section.settings.backgroundImage != blank or section.settings.videobanner != blank %}
+        <div
+          class="
+            slide swiper-slide
+            hero-banner
+          "
+        >
+          {% if section.settings.buttonLink != blank and section.settings.buttonText != blank %}
+            <a
+              href="{{ section.settings.buttonLink }}"
+              title="Read More About {{ section.settings.title }}"
+              aria-label="Read More About {{ section.settings.title }}"
+              class="full-link"
+            ></a>
+          {% endif %}
 
-              {% endif %}
-            {% endcomment %}
-            <div class="container-1260 flex-wrap">
-              {% if block.settings.backgroundImage != blank %}
-                <div class="image-section {%if block.settings.gradient == true%} gradient-none{%endif%}">
-                  <picture>
-                    <source
-                      media="(max-width: 600px)"
-                      srcset="{% if block.settings.backgroundImageMobile != blank %}{{ block.settings.backgroundImageMobile | img_url: '600x600' }}{%endif%}"
-                    >
-                    <img
-                      src="{{ block.settings.backgroundImage | img_url: '1028x1028' }}"
-                      alt="{{ block.settings.backgroundImage.alt}}"
-                    >
-                  </picture>
-                </div>
-              {% endif %}
-
-              <div
-                class="content"
-              >
-                {% if block.settings.pretitle != blank %}
-                  <span class="pre-title">{{ block.settings.pretitle }}</span>
-                {% endif %}
-                {% if block.settings.title != blank %}
-                  {% if section.blocks.size > 1 %}
-                    <p class="h1">{{ block.settings.title }}</p>
-                  {% else %}
-                    <h1>{{ block.settings.title }}</h1>
-                  {% endif %}
-                {% endif %}
-                {% if block.settings.description != blank %}
-                  {{ block.settings.description }}
-                {% endif %}
-                {% if block.settings.buttonText != blank %}
-                  <span
-                    class="btn--primary"
+          <div class="container-1260 flex-wrap">
+            {% if section.settings.backgroundImage != blank %}
+              <div class="image-section {%if section.settings.gradient == true%} gradient-none{%endif%}">
+                <picture>
+                  <source
+                    media="(max-width: 600px)"
+                    srcset="{% if section.settings.backgroundImageMobile != blank %}{{ section.settings.backgroundImageMobile | img_url: '600x600' }}{%endif%}"
                   >
-                    {{- block.settings.buttonText -}}
-                  </span>
-                {% endif %}
+                  <img
+                    src="{{ section.settings.backgroundImage | img_url: '1028x1028' }}"
+                    alt="{{ section.settings.backgroundImage.alt}}"
+                  >
+                </picture>
               </div>
+            {% endif %}
+
+            <div
+              class="content"
+            >
+              {% if section.settings.pretitle != blank %}
+                <span class="pre-title">{{ section.settings.pretitle }}</span>
+              {% endif %}
+              <h1>{{ section.settings.title }}</h1>
+
+              {% if section.settings.description != blank %}
+                {{ section.settings.description }}
+              {% endif %}
+              {% if section.settings.buttonText != blank %}
+                <span
+                  class="btn--primary"
+                >
+                  {{- section.settings.buttonText -}}
+                </span>
+              {% endif %}
             </div>
           </div>
-        {% endif %}
-      {% endfor %}
+        </div>
+      {% endif %}
     </div>
-
-    {% if section.blocks.size > 1 %}
-      <div class="swiper-button-arrow swiper-button-prev-hero-banner">
-        {% include 'icon-arrow-slide-white' %}
-      </div>
-      <div class="swiper-button-arrow swiper-button-next-hero-banner">
-        {% comment %}
-          {% include 'icon-arrow-slide-white' %}
-        {% endcomment %}
-        {% include 'icon-arrow-slide' %}
-      </div>
-    {% endif %}
   </div>
 {% endif %}
 
@@ -113,74 +68,50 @@
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "scheme-1"
-    }
-  ],
-  "blocks": [
+    },
     {
-      "type": "slide",
-      "name": "Slide",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "backgroundImage",
-          "label": "Background Image (Desktop)",
-          "info": "1028px x 1028px Recommended"
-        },
-        {
-          "type": "image_picker",
-          "id": "backgroundImageMobile",
-          "label": "Background Image (Mobile)",
-          "info": "750 x 1400px Recommended"
-        },
-
-        {
-          "type": "header",
-          "content": "Content"
-        },
-        {
-          "type": "text",
-          "id": "pretitle",
-          "label": "PreTitle"
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Title"
-        },
-        {
-          "type": "richtext",
-          "id": "description",
-          "label": "Description"
-        },
-        {
-          "type": "text",
-          "id": "buttonText",
-          "label": "Button Text"
-        },
-        {
-          "type": "url",
-          "id": "buttonLink",
-          "label": "Button Link"
-        },
-        {
-          "type": "header",
-          "content": "Extra Settings",
-          "info": "Recommened to be used by the developer only"
-        },
-        {
-          "type": "select",
-          "id": "content_alignment",
-          "options": [
-            { "value": "left", "label": "Left" },
-            { "value": "right", "label": "Right" }
-          ],
-          "label": "Image Alignment",
-          "info": "By default it is left aligned.",
-          "default": "left"
-        }
-      ]
+      "type": "image_picker",
+      "id": "backgroundImage",
+      "label": "Background Image (Desktop)",
+      "info": "1028px x 1028px Recommended"
+    },
+    {
+      "type": "image_picker",
+      "id": "backgroundImageMobile",
+      "label": "Background Image (Mobile)",
+      "info": "750 x 1400px Recommended"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "pretitle",
+      "label": "PreTitle"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "buttonText",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "buttonLink",
+      "label": "Button Link"
     }
   ],
+
   "presets": [
     {
       "name": "Hero Banner"

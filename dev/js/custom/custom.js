@@ -110,21 +110,21 @@ var productSectionSlider = new Swiper(".js__article-slider", {
 
     
     /* Hero Banner SLider */
-    var heroSlider = new Swiper(".js__hero-banner-slider", {
-        slidesPerView: 1,
+    // var heroSlider = new Swiper(".js__hero-banner-slider", {
+    //     slidesPerView: 1,
 
-        resistance: false,
+    //     resistance: false,
 
-        loop: true,
-        // autoplay: {
-        //     delay: 10000,
-        // },
-        // Navigation arrows
-        navigation: {
-            nextEl: ".swiper-button-next-hero-banner",
-            prevEl: ".swiper-button-prev-hero-banner",
-        },
-    });
+    //     loop: true,
+    //     // autoplay: {
+    //     //     delay: 10000,
+    //     // },
+    //     // Navigation arrows
+    //     navigation: {
+    //         nextEl: ".swiper-button-next-hero-banner",
+    //         prevEl: ".swiper-button-prev-hero-banner",
+    //     },
+    // });
 
     // logo Slider
     var logoSlider = new Swiper('.js_logo-slider', {
