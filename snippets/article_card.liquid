@@ -61,10 +61,13 @@
             {% assign blog_handle = split_2[0] | strip %}
             {% assign article_blog = blogs[blog_handle] %}
 
-            {% for tag in articleRelated.tags limit: 1 %}
-              <li class="tags">
-                <span class="tag">{{ blog_handle }}</span>
-              </li>
+            {% for tag in articleRelated.tags %}
+              {% assign articleRelated.tags = tags| map: 'tags' %}
+              {% if particleRelated.tags contains current_tags %}
+                <li class="tags">
+                  <span class="tag">{{ current_tags }}</span>
+                </li>
+              {% endif %}
             {% endfor %}
           </ul>
         {% endif %}
