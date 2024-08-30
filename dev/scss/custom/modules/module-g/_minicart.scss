@@ -57,6 +57,9 @@
     width: 100% !important;
     max-width: 100% !important;
     border: none;
+    b{
+      font-weight: 400 !important;
+    }
     ul {
       padding: 0px;
       &::before,
@@ -244,6 +247,11 @@
             font-family: var(--font-family-primary);
             color: $color-black;
             text-transform: uppercase;
+            text-overflow: ellipsis;
+            width: 100%;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+            white-space: nowrap;
             a {
               font: inherit;
               color: inherit;
@@ -342,6 +350,7 @@
       max-width: 100%;
       width: 100%;
       margin-top: 32px;
+      background-image: url(full-width-button.webp);
     }
     .cart-total {
       align-items: center;
@@ -379,7 +388,7 @@
       background: $color-white;
       margin-bottom: 22px;
       position: relative;
-     
+      border: 1px solid #D5D4D3;
       
       .image-section {
         position: relative;

@@ -34,7 +34,8 @@
       position: absolute;
       left: 0px;
       z-index: 1;
-      bottom: 74px;
+      // bottom: 74px;
+      bottom: 174px;
       background: url("thread-hero-white.webp") no-repeat center / 100%;
       @include MQ(MQ-768) {
         display: none;
@@ -58,7 +59,7 @@
     .content {
       &::before {
         top: auto;
-        bottom: 40px;
+        bottom: 60px;
         left: 60px;
         content: "";
         z-index: 3;
@@ -145,13 +146,13 @@
 
       max-width: 553px;
       width: 100%;
-      padding: 50px;
+      // padding: 50px;
       margin-top: -228px;
       z-index: 5;
       position: relative;
       border: solid 3px $color-yellow;
-      background: url("cloud.webp") no-repeat center bottom / 100%
-        $color-sky-blue;
+      // background: url("cloud.webp") no-repeat center bottom / 100% $color-sky-blue;
+      background: $color-sky-blue;
       //       .cloud-bg {
       //         position: absolute;
       //  width: 100%;
@@ -161,6 +162,28 @@
       //  bottom: 0;
       //  z-index: -1;
       //    }
+      form{
+        padding: 50px;
+        position: relative;
+        &::after{
+          content: '';
+          position: absolute;
+          width: 100%;
+          left: 0;
+          height: 449.39px;
+          // background: url(account-form-background-cloud.png) no-repeat center bottom / 100%;
+          background: url(cloud.webp) no-repeat center bottom/1054px;
+          bottom: 0;
+          z-index: -1;
+        }
+      }
+      &.register{
+        form{
+          &::after{
+            background-size: cover;
+          }
+        }
+      }
       @include MQ(MQ-768) {
         padding: 30px 25px 36px;
         margin-top: -168px;

@@ -274,25 +274,33 @@
     }
   }
   &::before {
-    background: url("graphic-wave-inner-banner.svg") repeat left / 2065px;
-    height: 114px;
+    // background: url("graphic-wave-inner-banner.svg") repeat left / 2065px;
+    background: url(yellow-wave.webp) repeat-x top/100%;
+    background-size: contain;
+    height: 200px;
     width: 100%;
     position: absolute;
     left: 0;
-    top: -90px;
+    top: -125px;
     content: "";
     z-index: 2;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(56%) saturate(587%) hue-rotate(316deg) brightness(105%) contrast(114%);
+    @include MQ(MQ-1440) {
+        height: 114px;
+        top: -97px;
+        background-size: cover;
+    }
   }
   &::after {
     width: 82px;
     height: 81px;
     content: "";
     position: absolute;
-    right: 0;
-    left: 0;
-    margin: 0 auto;
+    left: 37%;
+    // margin: 0 auto;
     z-index: 2;
-    top: -90px;
+    // top: -90px;
+    top: -111px;
     background: url("ufo.webp") no-repeat center / 100%;
     @include MQ(MQ-768) {
       display: none;

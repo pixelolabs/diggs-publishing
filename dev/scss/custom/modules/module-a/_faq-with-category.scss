@@ -27,7 +27,7 @@
     right: 0;
     left: 98px;
     margin: 0 auto;
-    z-index: 1;
+    z-index: 2;
     top: -20px;
     background: url(star-large.webp) no-repeat center right / 25px;
     @include MQ(MQ-768) {
@@ -186,7 +186,7 @@
           // }
         }
         .h5 {
-          font-weight: bold;
+          // font-weight: bold;
           font-family: var(--font-family-primary);
         }
         .content {
