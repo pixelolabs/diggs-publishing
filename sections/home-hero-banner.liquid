@@ -1,4 +1,4 @@
-{% if section.blocks.size > 0 %}
+{% if section.settings.title != blank %}
   <div class="slider hero-banner-slider   {% if section.blocks.size > 1 %} js__hero-banner-slider  padding-left-right {% endif %} color-{{ section.settings.color_scheme }}">
     <div class="swiper-wrapper">
       {% if section.settings.backgroundImage != blank or section.settings.videobanner != blank %}
@@ -17,32 +17,7 @@
               class="full-link"
             ></a>
           {% endif %}
-          {% comment %}
-            {%- if section.settings.videobanner -%}
-              <div class="video-section">
-                <div class="video-wrapper">
-                  {% if section.settings.video contains '.mp4' %}
-                    <video muted loop autoplay>
-                      <source src="{{ section.settings.video }}" type="video/mp4">
-                    </video>
-                  {% else %}
-                    {% if section.settings.video != blank %}
-                      {% assign videoId = section.settings.video | split: 'vimeo.com/' %}
-                      <iframe
-                        src="https://player.vimeo.com/video/{{ videoId[1] }}?loop=1&autoplay=1&muted=1"
-                        frameborder="0"
-                        allow="fullscreen"
-                        allowfullscreen
-                        loading="lazy"
-                      ></iframe>
-                    {% endif %}
-                  {% endif %}
-                </div>
-              </div>
-            {% else %}
 
-            {% endif %}
-          {% endcomment %}
           <div class="container-1260 flex-wrap">
             {% if section.settings.backgroundImage != blank %}
               <div class="image-section {%if section.settings.gradient == true%} gradient-none{%endif%}">
@@ -65,13 +40,8 @@
               {% if section.settings.pretitle != blank %}
                 <span class="pre-title">{{ section.settings.pretitle }}</span>
               {% endif %}
-              {% if section.settings.title != blank %}
-                {% if section.sections.size > 1 %}
-                  <p class="h1">{{ section.settings.title }}</p>
-                {% else %}
-                  <h1>{{ section.settings.title }}</h1>
-                {% endif %}
-              {% endif %}
+              <h1>{{ section.settings.title }}</h1>
+
               {% if section.settings.description != blank %}
                 {{ section.settings.description }}
               {% endif %}
@@ -87,18 +57,6 @@
         </div>
       {% endif %}
     </div>
-
-    {% if section.sections.size > 1 %}
-      <div class="swiper-button-arrow swiper-button-prev-hero-banner">
-        {% include 'icon-arrow-slide-white' %}
-      </div>
-      <div class="swiper-button-arrow swiper-button-next-hero-banner">
-        {% comment %}
-          {% include 'icon-arrow-slide-white' %}
-        {% endcomment %}
-        {% include 'icon-arrow-slide' %}
-      </div>
-    {% endif %}
   </div>
 {% endif %}
 
