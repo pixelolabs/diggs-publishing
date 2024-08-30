@@ -66,6 +66,12 @@
                     {{- tag -}}
                   </span>
                 </li>
+              {% else %}
+                <li class="tags">
+                  <span class="tag">
+                    {{- tag limit:1 -}}
+                  </span>
+                </li>
               {% endif %}
             {% endfor %}
           </ul>
