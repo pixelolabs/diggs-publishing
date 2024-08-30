@@ -56,15 +56,15 @@
         >
         {%- if show_tags_with_limits -%}
           <ul class="tags-wrapper">
-            {% if current_tags contains tag %}
-              {% for tag in articleRelated.tags %}
+            {% for tag in articleRelated.tags %}
+              {% if current_tags contains tag %}
                 <li class="tags">
                   <span class="tag">
                     {{- tag -}}
                   </span>
                 </li>
-              {% endfor %}
-            {% endif %}
+              {% endif %}
+            {% endfor %}
           </ul>
         {% endif %}
       </a>
