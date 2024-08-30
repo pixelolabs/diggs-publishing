@@ -15,7 +15,7 @@
         "image": "shopify:\/\/shop_images\/faq-banner-image.png",
         "mobileImage": "shopify:\/\/shop_images\/Group_482562.png",
         "title": "FAQ",
-        "description": "",
+        "description": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s<\/p>",
         "buttonText1": "",
         "buttonLink1": "",
         "button_bg": "pink",
