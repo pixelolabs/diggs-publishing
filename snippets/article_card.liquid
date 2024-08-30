@@ -56,9 +56,6 @@
         >
         {%- if show_tags_with_limits -%}
           <ul class="tags-wrapper">
-            {% assign blog_handle = split_2[0] | strip %}
-            {% assign article_blog = blogs[blog_handle] %}
-
             {% for tag in articleRelated.tags %}
               {% if current_tags contains tag %}
                 <li class="tags">
