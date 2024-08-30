@@ -122,9 +122,10 @@ p {
     letter-spacing: var(--para-mobile-letterspacing);
   }
   a {
-    color: $color-black;
+    // color: $color-black;
+    color: $color-pink;
     text-decoration: none !important;
-    font-weight: 700;
+    font-weight: 400;
     position: relative;
   }
 
@@ -721,6 +722,9 @@ button {
     &:last-child {
       padding-bottom: 0;
     }
+    + hr{
+      margin-top: 3px;
+    }
   }
   h3,
   .h3 {
@@ -1088,7 +1092,8 @@ button {
 
   a {
     text-decoration: underline;
-    color: $color-black;
+    // color: $color-black;
+    color: $color-pink;
   }
 
   a.btn--primary {
