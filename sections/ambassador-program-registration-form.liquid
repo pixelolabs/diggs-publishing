@@ -26,36 +26,39 @@
                 placeholder="Parents Last Name"
                 name="contact[Parents Last Name]">
             </div>
+           
             <div class="input-field half-width-col">
               <label for="Address">Address</label>
               <input
                 type="text"
-                id="{{ formId }}-Address"
+                id="Address"
                 placeholder="Address"
-                name="contact[Enquiry_Address]">
+                name="contact[Address]">
             </div>
+          
             <div class="input-field half-width-col">
-              <label for="Phone-number">Phone Number</label>
+              <label for="Phone_number">Phone Number</label>
               <input
                 type="tel"
-                id="{{ formId }}-phone"
+                id="Phone_number"
                 placeholder="Phone Number"
-                name="contact[Phone]"
+                name="contact[Phone number]"
                 pattern="[0-9\-]*"
                 aria-required="true"
-                value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}">
+                >
             </div>
+            <input class="dsgn-pck__field" type="email" name="contact[email]" required="" id="Enter_your_Email_address" placeholder="" aca_font_size="18px" aca_line_height="26px" aca_letter_spacing="NaNpx">
             <div class="input-field half-width-col">
-              <label for="Email">Enter your Email address*</label>
+              <label for="email">Enter your Email address*</label>
               <input
                 placeholder="Enter your Email address*"
                 class="email-field"
                 type="email"
-                id="{{ formId }}-email"
+                id="email"
                 name="contact[email]"
                 autocorrect="off"
                 autocapitalize="off"
-                value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                
                 aria-required="true"
                 {%- if form.errors contains 'email' -%}
                 class="input--error"
