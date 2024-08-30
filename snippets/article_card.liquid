@@ -67,7 +67,7 @@
                   </span>
                 </li>
               {% else %}
-                {% if articleRelated.tags > 1 limit:1 %}
+                {% if tag | split: " " | intersect: selected_tags | size > 1 %}
                   <li class="tags">
                     <span class="tag">
                       {{- tag -}}
