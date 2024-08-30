@@ -1006,20 +1006,20 @@ jQuery(function () {
     }
   });
   /* Hero Banner SLider */
-
-  var heroSlider = new Swiper(".js__hero-banner-slider", {
-    slidesPerView: 1,
-    resistance: false,
-    loop: true,
-    // autoplay: {
-    //     delay: 10000,
-    // },
-    // Navigation arrows
-    navigation: {
-      nextEl: ".swiper-button-next-hero-banner",
-      prevEl: ".swiper-button-prev-hero-banner"
-    }
-  }); // logo Slider
+  // var heroSlider = new Swiper(".js__hero-banner-slider", {
+  //     slidesPerView: 1,
+  //     resistance: false,
+  //     loop: true,
+  //     // autoplay: {
+  //     //     delay: 10000,
+  //     // },
+  //     // Navigation arrows
+  //     navigation: {
+  //         nextEl: ".swiper-button-next-hero-banner",
+  //         prevEl: ".swiper-button-prev-hero-banner",
+  //     },
+  // });
+  // logo Slider
 
   var logoSlider = new Swiper('.js_logo-slider', (_Swiper = {
     slidesPerView: "auto",
