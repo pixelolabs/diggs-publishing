@@ -63,7 +63,10 @@
 
             {% for tag in articleRelated.tags %}
               <li class="tags">
-                <span class="tag">{{ tag }}</span>
+                <span class="tag">
+                  {{- tag -}}
+                  {{- blog_handle -}}
+                </span>
               </li>
             {% endfor %}
           </ul>
