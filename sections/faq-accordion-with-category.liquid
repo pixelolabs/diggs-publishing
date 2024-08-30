@@ -68,6 +68,16 @@
   </div>
 </div>
 
+<script>
+    $('.faq-category-sidepanel li a[href^="#"]').click(function(e) {
+        e.preventDefault(); // Prevent default anchor behavior
+        
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 800); // 800 is the duration of the animation in milliseconds
+    });
+</script>
+
 {% schema %}
 {
   "name": "FAQ's",
