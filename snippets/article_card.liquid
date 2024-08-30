@@ -67,11 +67,13 @@
                   </span>
                 </li>
               {% else %}
-                <li class="tags">
-                  <span class="tag">
-                    {{- tag limit:1 -}}
-                  </span>
-                </li>
+                {% if articleRelated.tags > 1 limit:1 %}
+                  <li class="tags">
+                    <span class="tag">
+                      {{- tag -}}
+                    </span>
+                  </li>
+                {% endif %}
               {% endif %}
             {% endfor %}
           </ul>
