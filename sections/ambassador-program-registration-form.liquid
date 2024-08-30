@@ -8,22 +8,23 @@
           {% include 'form-status'
             , form: form
             , form_id: formId %}
+           
           <div class="flex">
             <div class="input-field half-width-col">
-              <label for="FirstName">Parents First Name</label>
+              <label for="Parents_First_Name">Parents First Name</label>
               <input
                 type="text"
-                id="{{ formId }}-FirstName"
+                id="Parents_First_Name"
                 placeholder="Parents First Name"
-                name="contact[Enquiry_FirstName]">
+                name="contact[Parents First Name]">
             </div>
             <div class="input-field half-width-col">
-              <label for="LastName">Parents Last Name</label>
+              <label for="Parents_First_Name">Parents Last Name</label>
               <input
                 type="text"
-                id="{{ formId }}-LastName"
+                id="Parents_Last_Name"
                 placeholder="Parents Last Name"
-                name="contact[Enquiry_LastName]">
+                name="contact[Parents Last Name]">
             </div>
             <div class="input-field half-width-col">
               <label for="Address">Address</label>
