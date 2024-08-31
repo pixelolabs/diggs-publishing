@@ -19,6 +19,11 @@
         letter-spacing: 0.09px !important;
       }
     }
+    &:hover{
+      .btn--wrapper{
+        opacity: 1;
+      }
+    }
     &__product-title a {
       font-size: 16px;
       font-family: var(--font-family-primary);
@@ -41,6 +46,26 @@
       border: 2px solid $color-pink;
     }
   
+    .btn--wrapper{
+      justify-content: center;
+      opacity: 0;
+      a{
+        border: solid 1px $color-yellow !important;
+        background: transparent !important;
+        padding: 11.5px 20px 9.5px;
+        color: $color-white !important;
+        width: auto !important;
+        font-family: var(--font-family-primary);
+  font-size: 12px !important;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+      }
+    }
    
    
     .product-wrapper {

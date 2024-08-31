@@ -638,6 +638,7 @@
   height: 37px;
   border: solid 1px $color-yellow;
   background: $color-white;
+  font-size: 0;
   background: url("eye.svg") no-repeat center / 15px $color-white;
   @include MQ(MQ-768) {
     width: 38px;
