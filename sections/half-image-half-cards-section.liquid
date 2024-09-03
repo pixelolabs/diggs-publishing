@@ -39,7 +39,7 @@
             </div>
           {% endif %}
         </div>
-        <div class="card-rows">
+        <div class="card-rows-content">
           {% if section.blocks.size > 0 %}
             <ul>
               {% for block in section.blocks %}
@@ -73,35 +73,6 @@
           {% if section.settings.btnText != blank and section.settings.btnLink != blank %}
             <a class="btn--primary" href="{{ section.settings.btnLink }}" title="{{ section.settings.btnText }}">
               {{- section.settings.btnText -}}
-            </a>
-          {% endif %}
-        </div>
-      </div>
-      <div
-        class="full-format flex-justify-column-center content  {%if section.settings.center == true%}center{%endif%}"
-        data-aos="fade-up"
-        data-aos-duration="2000"
-      >
-        <div class="inner">
-          {% if section.settings.pretitle != blank %}
-            <span class="pre-title">{{ section.settings.pretitle }}</span>
-          {% endif %}
-          {% if section.settings.title != blank %}
-            <h2 class="w-250 {% if section.settings.fontSize == true %} size {% endif %}">
-              {{ section.settings.title }}
-            </h2>
-          {% endif %}
-          {% if section.settings.description != blank %}
-            {{ section.settings.description }}
-          {% endif %}
-          {% if section.settings.buttonText != blank and section.settings.buttonLink != blank %}
-            <a
-              href="{{ section.settings.buttonLink }}"
-              title="Read More About {{ section.settings.buttonText }}"
-              aria-label="Read More About {{ section.settings.buttonText }}"
-              class="btn--primary green"
-            >
-              {{ section.settings.buttonText }}
             </a>
           {% endif %}
         </div>
