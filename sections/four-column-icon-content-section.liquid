@@ -4,16 +4,21 @@
       <div class="top-header">
         <h2>{{ section.settings.heading }}</h2>
       </div>
-
-      <ul class="icon-content-block">
-        {% for block in section.blocks %}
-          <li class="icon-card">
-            <div class="image-section"></div>
-            <h3></h3>
-            <div class="description"></div>
-          </li>
-        {% endfor %}
-      </ul>
+      {% if section.blocks.size > 0 %}
+        <ul class="icon-content-block">
+          {% for block in section.blocks %}
+            <li class="icon-card">
+              {% if block.settings.icon != blank %}
+                <div class="image-section">
+                  {{ block.settings.icon | image_url: width: 100 | image_tag: loading: 'lazy', widths: '100x100' }}
+                </div>
+              {% endif %}
+              <h3></h3>
+              <div class="description"></div>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
     </div>
   </div>
 {% endif %}
