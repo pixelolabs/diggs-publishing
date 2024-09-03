@@ -27,27 +27,22 @@
           </div>
         {% endif %}
       </div>
-      <div class="half-image-half-cards">
+      <div class="half-image-half-cards flex">
         <div class="image-wrapper">
-          {% if section.settings.showVideo == true %}
-            {% if section.settings.video != blank %}
-              <a class="video-section " data-lity href="{{section.settings.video}}">
-                {{ section.settings.image | image_url: width: 1262 | image_tag: loading: 'lazy', widths: '1262x1000' }}
-                <div class="play-icon"></div>
-              </a>
-            {% endif %}
-
-          {% else %}
-            {% if section.settings.image != blank %}
-              <div
-                class="image-section"
-                data-aos="fade-up"
-                data-aos-duration="2000"
-              >
-                {{ section.settings.image | image_url: width: 1262 | image_tag: loading: 'lazy', widths: '1262x1000' }}
-              </div>
-            {% endif %}
+          {% if section.settings.image != blank %}
+            <div
+              class="image-section"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              {{ section.settings.image | image_url: width: 1262 | image_tag: loading: 'lazy', widths: '1262x1000' }}
+            </div>
           {% endif %}
+        </div>
+        <div class="card-rows">
+          <ul>
+            <li></li>
+          </ul>
         </div>
       </div>
       <div
@@ -196,18 +191,14 @@
   ],
   "blocks": [
     {
-      "type": "image",
-      "name": "Section",
+      "type": "card",
+      "name": "Cards",
       "settings": [
         {
-          "type": "header",
-          "content": "Content"
-        },
-        {
           "type": "image_picker",
-          "id": "image",
-          "label": "Image",
-          "info": "1262 x 1000px Recommended"
+          "id": "icon",
+          "label": "Icon",
+          "info": "100 x 100px Recommended"
         },
         {
           "type": "checkbox",
