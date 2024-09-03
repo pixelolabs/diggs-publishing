@@ -21,7 +21,11 @@
         {% if section.settings.subTitle != blank %}
           <h3>{{ section.settings.subTitle }}</h3>
         {% endif %}
-        <div class="description"></div>
+        {% if section.settings.description != blank %}
+          <div class="description">
+            {{ section.settings.description }}
+          </div>
+        {% endif %}
       </div>
       <div class="image-wrapper">
         {% if section.settings.showVideo == true %}
