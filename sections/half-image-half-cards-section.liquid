@@ -40,29 +40,31 @@
           {% endif %}
         </div>
         <div class="card-rows">
-          <ul>
-            {% for block in section.blocks %}
-              <li class="cards flex">
-                {% if block.settings.icon != blank %}
-                  <div class="icon-section">
-                    {{ block.settings.icon | image_url: width: 100 | image_tag: loading: 'lazy', widths: '100x100' }}
-                  </div>
-                {% endif %}
-                {% if block.settings.title != blank or block.settings.carddescription != blank %}
-                  <div class="content">
-                    {% if block.settings.title != blank %}
-                      <h3>{{ block.settings.title }}</h3>
-                    {% endif %}
-                    {% if block.settings.carddescription != blank %}
-                      <div class="description">
-                        {{ block.settings.carddescription }}
-                      </div>
-                    {% endif %}
-                  </div>
-                {% endif %}
-              </li>
-            {% endfor %}
-          </ul>
+          {% if section.blocks.size > 0 %}
+            <ul>
+              {% for block in section.blocks %}
+                <li class="cards flex">
+                  {% if block.settings.icon != blank %}
+                    <div class="icon-section">
+                      {{ block.settings.icon | image_url: width: 100 | image_tag: loading: 'lazy', widths: '100x100' }}
+                    </div>
+                  {% endif %}
+                  {% if block.settings.title != blank or block.settings.carddescription != blank %}
+                    <div class="content">
+                      {% if block.settings.title != blank %}
+                        <h3>{{ block.settings.title }}</h3>
+                      {% endif %}
+                      {% if block.settings.carddescription != blank %}
+                        <div class="description">
+                          {{ block.settings.carddescription }}
+                        </div>
+                      {% endif %}
+                    </div>
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
         </div>
       </div>
       <div
