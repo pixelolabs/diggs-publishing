@@ -6,9 +6,11 @@
         <ul class="cards-block">
           {% for block in section.blocks %}
             <li class="card">
-              <div class="image-section">
-                {{ section.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '1200x1200' }}
-              </div>
+              {% if block.settings.icon != blank %}
+                <div class="image-section">
+                  {{ block.settings.icon | image_url: width: 100 | image_tag: loading: 'lazy', widths: '100x100' }}
+                </div>
+              {% endif %}
               {% if block.settings.title != blank %}
                 <h3>{{ block.settings.title }}</h3>
               {% endif %}
