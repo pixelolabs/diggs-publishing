@@ -28,8 +28,8 @@
         {% endif %}
       </div>
       <div class="half-image-half-cards flex">
-        <div class="image-wrapper">
-          {% if section.settings.image != blank %}
+        {% if section.settings.image != blank %}
+          <div class="image-wrapper">
             <div
               class="image-section"
               data-aos="fade-up"
@@ -37,8 +37,8 @@
             >
               {{ section.settings.image | image_url: width: 1262 | image_tag: loading: 'lazy', widths: '1262x1000' }}
             </div>
-          {% endif %}
-        </div>
+          </div>
+        {% endif %}
         <div class="card-rows-content">
           {% if section.blocks.size > 0 %}
             <ul>
