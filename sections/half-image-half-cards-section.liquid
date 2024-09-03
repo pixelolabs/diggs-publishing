@@ -65,6 +65,11 @@
               {% endfor %}
             </ul>
           {% endif %}
+          {% if section.settings.bottomdescription != blank %}
+            <div class="bottom-description">
+              {{ section.settings.bottomdescription }}
+            </div>
+          {% endif %}
         </div>
       </div>
       <div
