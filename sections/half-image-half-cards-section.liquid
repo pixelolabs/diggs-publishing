@@ -41,7 +41,7 @@
         {% endif %}
         <div class="card-rows-content">
           {% if section.blocks.size > 0 %}
-            <ul>
+            <ul class="cards-rows-outer">
               {% for block in section.blocks %}
                 <li class="cards flex">
                   {% if block.settings.icon != blank %}
@@ -260,3 +260,13 @@
   ]
 }
 {% endschema %}
+<script>
+  jQuery(document).ready(function ($) {
+      $(".js__dropdown li a").each(function() {
+
+      });
+  });
+  .card-rows-content .cards:before{
+      background:{{ block.settings.cardColor  }}
+    }
+</script>
