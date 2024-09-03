@@ -124,11 +124,45 @@
         "paddingbottom": 0,
         "paddingbottomMobile": 0
       }
+    },
+    "half_image_half_content_4gRXR4": {
+      "type": "half-image-half-content",
+      "blocks": {
+        "image_MfqFH8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/children-book-banner.png",
+            "showVideo": false,
+            "video": "",
+            "pretitle": "",
+            "title": "Your Book, Your Way: Customized Marketing Solutions",
+            "description": "<p>A great book deserves to be read, and with the right marketing strategy, it will be. It's all about connecting with the readers in the right way, the right time.<\/p>",
+            "buttonText": "Let’s get Start",
+            "buttonLink": "shopify:\/\/pages\/publishing-checkout",
+            "background_color": "blue",
+            "fontSize": false,
+            "center": false
+          }
+        }
+      },
+      "block_order": [
+        "image_MfqFH8"
+      ],
+      "settings": {
+        "section_class": "",
+        "image_position": "right",
+        "wave_color": "blue-wave",
+        "paddingtop": 0,
+        "paddingtopmobile": 0,
+        "paddingbottom": 0,
+        "paddingbottomMobile": 0
+      }
     }
   },
   "order": [
     "innerBanner",
     "half_image_half_content_4cFq3j",
-    "three_column_card_section_8VkjeD"
+    "three_column_card_section_8VkjeD",
+    "half_image_half_content_4gRXR4"
   ]
 }
