@@ -1,0 +1,152 @@
+{%- style -%}
+  .section-{{ section.id }}-padding{
+      padding-top: {{ section.settings.paddingtop | round: 0 }}px;
+      padding-bottom: {{ section.settings.paddingbottom | round: 0 }}px;
+    }
+
+
+    @media screen and (max-width: 768px) {
+    .section-{{ section.id }}-padding{
+      padding-top: {{ section.settings.paddingtopmobile | round: 0 }}px;
+      padding-bottom: {{ section.settings.paddingbottomMobile | round: 0 }}px;
+    }
+
+  }
+{%- endstyle -%}
+{% if section.settings.heading != blank %}
+  <div class="three-column-card-section section-{{ section.id }}-padding {% if section.settings.backgroundtransparent == true %} transparent{% endif %}">
+    <div class="container-1260">
+      <h2>{{ section.settings.heading }}</h2>
+      {% if section.blocks.size > 0 %}
+        <ul class="cards-block">
+          {% for block in section.blocks %}
+            <li class="card">
+              {% if block.settings.icon != blank %}
+                <div class="image-section">
+                  {{ block.settings.icon | image_url: width: 100 | image_tag: loading: 'lazy', widths: '100x100' }}
+                </div>
+              {% endif %}
+              {% if block.settings.title != blank %}
+                <h3>{{ block.settings.title }}</h3>
+              {% endif %}
+              {% if block.settings.description != blank %}
+                <div class="description">
+                  {{ block.settings.description }}
+                </div>
+              {% endif %}
+              {% if block.settings.btnLink != blank and block.settings.btnText != blank %}
+                <a href="{{ block.settings.btnLink }}" title="{{ block.settings.btnText }}" class="btn--secondary">
+                  {{- block.settings.btnText -}}
+                </a>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}
+{% schema %}
+{
+  "name": "Three Column Cards",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Title"
+    },
+    {
+      "type": "header",
+      "content": "Extra Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "backgroundtransparent",
+      "label": "Do you want to transparent the background?"
+    },
+    {
+      "type": "header",
+      "content": "Top/Bottom Section Space"
+    },
+    {
+      "type": "range",
+      "id": "paddingtop",
+      "min": 0,
+      "max": 140,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top (Desktop)",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "paddingtopmobile",
+      "min": 0,
+      "max": 140,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top (Mobile)",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "paddingbottom",
+      "min": 0,
+      "max": 140,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom (Desktop)",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "paddingbottomMobile",
+      "min": 0,
+      "max": 140,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom (Mobile)",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "cards",
+      "name": "Cards",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon",
+          "info": "100 x 100px Recommended"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "btnText",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "btnLink",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Three Column Cards Section"
+    }
+  ]
+}
+{% endschema %}

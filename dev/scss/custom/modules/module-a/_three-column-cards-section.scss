@@ -1,0 +1,136 @@
+.three-column-card-section {
+  position: relative;
+  background: $color-sky-blue;
+  &.transparent {
+    background: transparent;
+    &:before {
+      display: none;
+    }
+  }
+  &:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 122px;
+    left: 0;
+    top: -81px;
+    background: url(sky-blue-wave.png) repeat-x top / 100%;
+    @include MQ(MQ-980) {
+      top: -50px;
+    }
+    @include MQ(MQ-768) {
+      top: -40px;
+    }
+    @include MQ(MQ-480) {
+      top: -20px;
+    }
+  }
+  .container-1260 {
+    position: relative;
+    &:after {
+      width: 63.9px;
+      height: 51px;
+      content: "";
+      position: absolute;
+      top: -30px;
+      z-index: 1;
+      left: 0px;
+      background: url(icon-cloud.webp) no-repeat center / 100%;
+      @include MQ(MQ-768) {
+        top: -75px;
+      }
+    }
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 55px;
+    z-index: 3;
+    position: relative;
+    @include MQ(MQ-480) {
+      margin-bottom: 35px;
+    }
+  }
+  .cards-block {
+    display: flex;
+    justify-content: center;
+    margin-left: -47px;
+    width: calc(100% + 47px);
+    flex-wrap: wrap;
+    z-index: 2;
+    position: relative;
+    @include MQ(MQ-1100) {
+      margin-left: -35px;
+      width: calc(100% + 35px);
+    }
+    @include MQ(MQ-600) {
+      margin-left: 0;
+      width: 100%;
+    }
+
+    .card {
+      margin-left: 47px;
+      width: calc(33.33% - 47px);
+      margin-bottom: 48px;
+      text-align: center;
+      background: $color-white;
+      padding: 50px 32px 65px;
+      border: solid 1px rgba(255, 200, 43, 0.36);
+      position: relative;
+      @include MQ(MQ-1100) {
+        margin-left: 35px;
+        width: calc(33.33% - 35px);
+      }
+      @include MQ(MQ-980) {
+        width: calc(50% - 35px);
+      }
+      @include MQ(MQ-600) {
+        width: 100%;
+        margin-left: 0;
+      }
+      &:before {
+        width: 100%;
+        height: 100%;
+        top: -12px;
+        right: -12px;
+        border: 1px solid $color-purple;
+        position: absolute;
+        content: "";
+        z-index: -1;
+      }
+      h3 {
+        color: $color-pink;
+        font-size: 23px;
+        font-weight: normal;
+        line-height: 1.13;
+        letter-spacing: 0.46px;
+        margin-top: 21.4px;
+        @include MQ(MQ-480) {
+          font-size: 20px;
+        }
+      }
+      .description {
+        margin-top: 20px;
+      }
+      .image-section {
+        width: 66px;
+        height: 66px;
+
+        position: relative;
+        margin: 0 auto;
+        img {
+          @include img-object-contain;
+        }
+      }
+      .btn--secondary {
+        font-family: var(--font-family-primary);
+        margin: 33px auto 0;
+        border: 1px solid $color-black;
+        text-transform: uppercase;
+        font-size: 16px;
+        padding: 10px 20px;
+        width: fit-content;
+        min-width: 115px;
+      }
+    }
+  }
+}
