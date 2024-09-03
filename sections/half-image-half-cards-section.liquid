@@ -43,9 +43,11 @@
           <ul>
             {% for block in section.blocks %}
               <li class="cards">
-                <div class="icon-section">
-                  {{ block.settings.icon | image_url: width: 100 | image_tag: loading: 'lazy', widths: '100x100' }}
-                </div>
+                {% if block.settings.icon != blank %}
+                  <div class="icon-section">
+                    {{ block.settings.icon | image_url: width: 100 | image_tag: loading: 'lazy', widths: '100x100' }}
+                  </div>
+                {% endif %}
                 <div class="content">
                   <h3></h3>
                   <div class="description"></div>
