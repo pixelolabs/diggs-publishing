@@ -219,7 +219,8 @@
         "image": "shopify:\/\/shop_images\/kids-images.webp",
         "buttonText": "Read More",
         "buttonLink": "#",
-        "backgroundcolor": false
+        "backgroundcolor": false,
+        "bgColor": "#53aa42"
       }
     }
   },
