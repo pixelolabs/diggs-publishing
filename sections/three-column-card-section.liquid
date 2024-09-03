@@ -14,7 +14,7 @@
   }
 {%- endstyle -%}
 {% if section.settings.heading != blank %}
-  <div class="three-column-card-section section-{{ section.id }}-padding">
+  <div class="three-column-card-section section-{{ section.id }}-padding {% if section.settings.backgroundtransparent == true %} transparent{% endif %}">
     <div class="container-1260">
       <h2>{{ section.settings.heading }}</h2>
       {% if section.blocks.size > 0 %}
@@ -61,7 +61,7 @@
     },
     {
       "type": "checkbox",
-      "id": "backgroundcolor",
+      "id": "backgroundtransparent",
       "label": "Do you want to transparent the background?"
     },
     {
