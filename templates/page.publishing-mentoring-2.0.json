@@ -54,10 +54,44 @@
         "paddingbottom": 0,
         "paddingbottomMobile": 0
       }
+    },
+    "half_image_half_content_PHfqhH": {
+      "type": "half-image-half-content",
+      "blocks": {
+        "image_fjkmb3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/children-with-book.png",
+            "showVideo": false,
+            "video": "",
+            "pretitle": "",
+            "title": "Your Children's Book Journey Starts Here",
+            "description": "<p>Begin your authorial adventure with the guidance of Krystaelynne Diggs' mentoring sessions. Whether you're starting fresh or refining a manuscript, our tailored approach ensures your stories reach their fullest potential. Revel in the synergy of expert insight, individualized feedback, and a nurturing ambiance. Dive deep into the world of children's literature. Illuminate young minds and hearts with your unique tales.<\/p>",
+            "buttonText": "Book Now",
+            "buttonLink": "https:\/\/calendly.com\/authorksd\/author-meeting-w-krystaelynne?month=2024-09",
+            "background_color": "transparent-bg",
+            "fontSize": false,
+            "center": false
+          }
+        }
+      },
+      "block_order": [
+        "image_fjkmb3"
+      ],
+      "settings": {
+        "section_class": "",
+        "image_position": "left",
+        "wave_color": "transparent-wave",
+        "paddingtop": 0,
+        "paddingtopmobile": 0,
+        "paddingbottom": 0,
+        "paddingbottomMobile": 0
+      }
     }
   },
   "order": [
     "innerBanner",
-    "half_image_half_content_HzBwiK"
+    "half_image_half_content_HzBwiK",
+    "half_image_half_content_PHfqhH"
   ]
 }
