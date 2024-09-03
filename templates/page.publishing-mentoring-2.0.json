@@ -87,11 +87,20 @@
         "paddingbottom": 0,
         "paddingbottomMobile": 0
       }
+    },
+    "contact_form_with_text_jAYcV4": {
+      "type": "contact-form-with-text",
+      "settings": {
+        "title": "Reach out to us",
+        "address": "<p>3558 Round Barn Blvd, Suite<br\/>200 Santa Rosa, CA 95403<\/p>",
+        "bgColor": ""
+      }
     }
   },
   "order": [
     "innerBanner",
     "half_image_half_content_HzBwiK",
-    "half_image_half_content_PHfqhH"
+    "half_image_half_content_PHfqhH",
+    "contact_form_with_text_jAYcV4"
   ]
 }
