@@ -168,6 +168,13 @@
         "backgroundcolor": false,
         "bgColor": "#c192ff"
       }
+    },
+    "contact_form_with_text_KfFfgE": {
+      "type": "contact-form-with-text",
+      "settings": {
+        "title": "",
+        "address": ""
+      }
     }
   },
   "order": [
@@ -175,6 +182,7 @@
     "half_image_half_content_4cFq3j",
     "three_column_card_section_8VkjeD",
     "half_image_half_content_4gRXR4",
-    "full_width_content_section_WF9A6U"
+    "full_width_content_section_WF9A6U",
+    "contact_form_with_text_KfFfgE"
   ]
 }
