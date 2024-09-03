@@ -8814,7 +8814,7 @@
 }
 
 /*# sourceMappingURL=sm-style.css.map */
-======= <<<<<<< HEAD @-webkit-keyframes stretch {
+@-webkit-keyframes stretch {
   0% {
     -webkit-transform: scale(0.3);
     transform: scale(0.3);
@@ -17594,7 +17594,7 @@
     top: -33px;
   }
 }
-======= @-webkit-keyframes stretch {
+ @-webkit-keyframes stretch {
   0% {
     -webkit-transform: scale(0.3);
     transform: scale(0.3);
