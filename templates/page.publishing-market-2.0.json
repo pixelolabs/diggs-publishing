@@ -84,7 +84,12 @@
         "cards_9yn6nG"
       ],
       "settings": {
-        "heading": "effective AND CLEAR MARKETING strategies"
+        "heading": "effective AND CLEAR MARKETING strategies",
+        "backgroundtransparent": false,
+        "paddingtop": 100,
+        "paddingtopmobile": 80,
+        "paddingbottom": 0,
+        "paddingbottomMobile": 0
       }
     }
   },
