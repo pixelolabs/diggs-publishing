@@ -61,12 +61,12 @@
                       {% endif %}
                     </div>
                   {% endif %}
+                  <style>
+                    .card-rows-content .cards:before{
+                        background:{{ block.settings.cardColor  }}
+                      }
+                  </style>
                 </li>
-                <style>
-                  .card-rows-content .cards:before{
-                      background:{{ block.settings.cardColor  }}
-                    }
-                </style>
               {% endfor %}
             </ul>
           {% endif %}
