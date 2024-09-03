@@ -70,6 +70,9 @@
               {{ section.settings.bottomdescription }}
             </div>
           {% endif %}
+          <a class="btn--primary" href="" title="{{ section.settings.buttonText }}">
+            {{- section.settings.buttonText -}}
+          </a>
         </div>
       </div>
       <div
@@ -146,12 +149,12 @@
     },
     {
       "type": "text",
-      "id": "buttonText",
+      "id": "btnText",
       "label": "Button Text"
     },
     {
       "type": "url",
-      "id": "buttonLink",
+      "id": "btnLink",
       "label": "Button Link"
     },
 
