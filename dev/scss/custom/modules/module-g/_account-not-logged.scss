@@ -346,6 +346,9 @@
     .btn-wrapper {
       .link--primary-small {
         margin-bottom: 0px;
+        @include MQ(MQ-480) {
+          margin: 20px 0 0;
+        }
       }
     }
   }
