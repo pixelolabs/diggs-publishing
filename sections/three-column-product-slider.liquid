@@ -41,7 +41,7 @@
               {% assign productRelated = all_products[block.settings.product] %}
               {% if productRelated != empty %}
                 <div class="product-card swiper-slide slide ">
-                  {% include 'product_Card'  with  productRelated: productRelated , show_price: true, show_tags: false, show_auto_tags: true, show_title: true, show_fav: false, show_secondary_button: true %}
+                  {% include 'product_Card'  with  productRelated: productRelated , show_price: true, show_tags: true, show_auto_tags: true, show_title: true, show_fav: false, show_secondary_button: true %}
                 </div>
               {% endif %}
             {% endfor %}
