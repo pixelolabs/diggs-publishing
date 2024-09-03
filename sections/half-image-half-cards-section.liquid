@@ -70,9 +70,11 @@
               {{ section.settings.bottomdescription }}
             </div>
           {% endif %}
-          <a class="btn--primary" href="" title="{{ section.settings.buttonText }}">
-            {{- section.settings.buttonText -}}
-          </a>
+          {% if section.settings.btnText != blank and section.settings.btnLink != blank %}
+            <a class="btn--primary" href="{{ section.settings.btnLink }}" title="{{ section.settings.btnText }}">
+              {{- section.settings.btnText -}}
+            </a>
+          {% endif %}
         </div>
       </div>
       <div
