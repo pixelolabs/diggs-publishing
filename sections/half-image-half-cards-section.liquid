@@ -27,54 +27,52 @@
           </div>
         {% endif %}
       </div>
-      <div class="half-image-half-cards">
+      <div class="half-image-half-cards flex">
         <div class="image-wrapper">
-          {% if section.settings.showVideo == true %}
-            {% if section.settings.video != blank %}
-              <a class="video-section " data-lity href="{{section.settings.video}}">
-                {{ section.settings.image | image_url: width: 1262 | image_tag: loading: 'lazy', widths: '1262x1000' }}
-                <div class="play-icon"></div>
-              </a>
-            {% endif %}
-
-          {% else %}
-            {% if section.settings.image != blank %}
-              <div
-                class="image-section"
-                data-aos="fade-up"
-                data-aos-duration="2000"
-              >
-                {{ section.settings.image | image_url: width: 1262 | image_tag: loading: 'lazy', widths: '1262x1000' }}
-              </div>
-            {% endif %}
+          {% if section.settings.image != blank %}
+            <div
+              class="image-section"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              {{ section.settings.image | image_url: width: 1262 | image_tag: loading: 'lazy', widths: '1262x1000' }}
+            </div>
           {% endif %}
         </div>
-      </div>
-      <div
-        class="full-format flex-justify-column-center content  {%if section.settings.center == true%}center{%endif%}"
-        data-aos="fade-up"
-        data-aos-duration="2000"
-      >
-        <div class="inner">
-          {% if section.settings.pretitle != blank %}
-            <span class="pre-title">{{ section.settings.pretitle }}</span>
+        <div class="card-rows-content">
+          {% if section.blocks.size > 0 %}
+            <ul>
+              {% for block in section.blocks %}
+                <li class="cards flex">
+                  {% if block.settings.icon != blank %}
+                    <div class="icon-section">
+                      {{ block.settings.icon | image_url: width: 100 | image_tag: loading: 'lazy', widths: '100x100' }}
+                    </div>
+                  {% endif %}
+                  {% if block.settings.title != blank or block.settings.carddescription != blank %}
+                    <div class="content">
+                      {% if block.settings.title != blank %}
+                        <h3>{{ block.settings.title }}</h3>
+                      {% endif %}
+                      {% if block.settings.carddescription != blank %}
+                        <div class="description">
+                          {{ block.settings.carddescription }}
+                        </div>
+                      {% endif %}
+                    </div>
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
           {% endif %}
-          {% if section.settings.title != blank %}
-            <h2 class="w-250 {% if section.settings.fontSize == true %} size {% endif %}">
-              {{ section.settings.title }}
-            </h2>
+          {% if section.settings.bottomdescription != blank %}
+            <div class="bottom-description">
+              {{ section.settings.bottomdescription }}
+            </div>
           {% endif %}
-          {% if section.settings.description != blank %}
-            {{ section.settings.description }}
-          {% endif %}
-          {% if section.settings.buttonText != blank and section.settings.buttonLink != blank %}
-            <a
-              href="{{ section.settings.buttonLink }}"
-              title="Read More About {{ section.settings.buttonText }}"
-              aria-label="Read More About {{ section.settings.buttonText }}"
-              class="btn--primary green"
-            >
-              {{ section.settings.buttonText }}
+          {% if section.settings.btnText != blank and section.settings.btnLink != blank %}
+            <a class="btn--primary" href="{{ section.settings.btnLink }}" title="{{ section.settings.btnText }}">
+              {{- section.settings.btnText -}}
             </a>
           {% endif %}
         </div>
@@ -93,6 +91,10 @@
       "label": "Heading"
     },
     {
+      "type": "header",
+      "content": "Top Header Content"
+    },
+    {
       "type": "text",
       "id": "subTitle",
       "label": "Sub Title"
@@ -100,14 +102,35 @@
     {
       "type": "richtext",
       "id": "description",
-      "label": "description"
+      "label": "Description"
     },
+
     {
       "type": "image_picker",
       "id": "image",
       "label": "Image",
       "info": "1262 x 1000px Recommended"
     },
+    {
+      "type": "header",
+      "content": "Bottom Content"
+    },
+    {
+      "type": "richtext",
+      "id": "bottomdescription",
+      "label": "Bottom Description"
+    },
+    {
+      "type": "text",
+      "id": "btnText",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "btnLink",
+      "label": "Button Link"
+    },
+
     {
       "type": "header",
       "content": "Extra Settings"
@@ -196,36 +219,16 @@
   ],
   "blocks": [
     {
-      "type": "image",
-      "name": "Section",
+      "type": "card",
+      "name": "Cards",
       "settings": [
         {
-          "type": "header",
-          "content": "Content"
-        },
-        {
           "type": "image_picker",
-          "id": "image",
-          "label": "Image",
-          "info": "1262 x 1000px Recommended"
+          "id": "icon",
+          "label": "Icon",
+          "info": "100 x 100px Recommended"
         },
-        {
-          "type": "checkbox",
-          "id": "showVideo",
-          "label": "Show Video",
-          "info": "Check to show video in popup model"
-        },
-        {
-          "type": "url",
-          "id": "video",
-          "label": "Video",
-          "info": "youtube video link / mp4 video link"
-        },
-        {
-          "type": "text",
-          "id": "pretitle",
-          "label": "PreTitle"
-        },
+
         {
           "type": "text",
           "id": "title",
@@ -233,57 +236,19 @@
         },
         {
           "type": "richtext",
-          "id": "description",
+          "id": "carddescription",
           "label": "Description"
         },
-        {
-          "type": "text",
-          "id": "buttonText",
-          "label": "Button Text"
-        },
-        {
-          "type": "url",
-          "id": "buttonLink",
-          "label": "Button Link"
-        },
+
         {
           "type": "header",
-          "content": "Extra Settings",
-          "info": "Recommened to be used by the developer only"
+          "content": "Extra Settings"
         },
+
         {
-          "type": "select",
-          "id": "background_color",
-          "label": "Background color",
-          "options": [
-            {
-              "value": "transparent-bg",
-              "label": "Yellow"
-            },
-            {
-              "value": "brown",
-              "label": "Brown"
-            },
-            {
-              "value": "blue",
-              "label": "Blue"
-            }
-          ],
-          "default": "blue"
-        },
-        {
-          "type": "checkbox",
-          "id": "fontSize",
-          "label": "Do you want the title to be bigger?"
-        },
-        {
-          "type": "header",
-          "content": "Mobile Settings"
-        },
-        {
-          "type": "checkbox",
-          "id": "center",
-          "label": "Center align the content"
+          "type": "color",
+          "id": "cardColor",
+          "label": "Cards Border Colors"
         }
       ]
     }
