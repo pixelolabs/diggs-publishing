@@ -70,7 +70,7 @@
         "wave_color": "blue-wave",
         "paddingtop": 102,
         "paddingtopmobile": 0,
-        "paddingbottom": 0,
+        "paddingbottom": 99,
         "paddingbottomMobile": 0
       }
     },
