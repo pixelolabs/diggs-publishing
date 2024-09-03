@@ -2,6 +2,7 @@
 
 .cart-section {
   position: relative;
+  z-index: 2;
   &::after {
     width: 232px;
     height: 81px;
