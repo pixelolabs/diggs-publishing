@@ -55,6 +55,92 @@
         "paddingbottomMobile": 0
       }
     },
+    "four_column_icon_content_section_jXnQbQ": {
+      "type": "four-column-icon-content-section",
+      "blocks": {
+        "cards_pTdtHF": {
+          "type": "cards",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Tailored_Guidance.svg",
+            "title": "Tailored Guidance",
+            "description": "<p>Each story is as unique as its teller. Our sessions are crafted to cater to your specific needs, ensuring your narrative shines its brightest.<\/p>"
+          }
+        },
+        "cards_zt3aVh": {
+          "type": "cards",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Expert_Insight.svg",
+            "title": "Expert Insight",
+            "description": "<p>Leverage the depth of Krystaelynne Diggs' experience. Drawing from her success in children's literature, she offers unparalleled insights, guiding your manuscript to its best version.<\/p>"
+          }
+        },
+        "cards_8dfF6E": {
+          "type": "cards",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Genuine_Feedback_4b80cc23-6db6-4867-b471-d7665d6359c7.svg",
+            "title": "Genuine Feedback",
+            "description": "<p>Constructive criticism is growth in disguise. Recognize your strengths, address areas for improvement, and mold your narrative into a captivating tale.<\/p>"
+          }
+        },
+        "cards_PNfgrE": {
+          "type": "cards",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Conquering_Challenges.svg",
+            "title": "Conquering Challenges",
+            "description": "<p>The realm of children's literature is enchanting yet intricate. Navigate its challenges with our support, ensuring your story is both compelling and suitable for young readers.<\/p>"
+          }
+        },
+        "cards_bmqQCP": {
+          "type": "cards",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Personal_Touch.svg",
+            "title": "Personal Touch",
+            "description": "<p>Our sessions respect your individual pace, preferences, and passion, fostering a harmonious path to your book's completion.<\/p>"
+          }
+        },
+        "cards_6yXU6P": {
+          "type": "cards",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Confidence_Building.svg",
+            "title": "Confidence Building",
+            "description": "<p>Beyond the technicalities of writing, lies the heart of a storyteller. Let us bolster your confidence, empowering you to narrate tales that the world yearns to hear.<\/p>"
+          }
+        },
+        "cards_XCXazM": {
+          "type": "cards",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Making_a_Mark.svg",
+            "title": "Making a Mark",
+            "description": "<p>The magic of children's books lies in their influence. We emphasize creating narratives that not only entertain but leave a lasting impact on youthful minds.<\/p>"
+          }
+        },
+        "cards_L8rKpN": {
+          "type": "cards",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Championing_Diversity.svg",
+            "title": "Championing Diversity",
+            "description": "<p>Diggs Publishing champions a world where every child sees a reflection of themselves in the stories they cherish. We urge authors to weave diverse tales, filling the shelves with varied, relatable characters.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "cards_pTdtHF",
+        "cards_zt3aVh",
+        "cards_8dfF6E",
+        "cards_PNfgrE",
+        "cards_bmqQCP",
+        "cards_6yXU6P",
+        "cards_XCXazM",
+        "cards_L8rKpN"
+      ],
+      "settings": {
+        "heading": "Why Dive into Our Children's Book Mentoring Service?",
+        "paddingtop": 140,
+        "paddingtopmobile": 90,
+        "paddingbottom": 140,
+        "paddingbottomMobile": 80
+      }
+    },
     "half_image_half_content_PHfqhH": {
       "type": "half-image-half-content",
       "blocks": {
@@ -100,6 +186,7 @@
   "order": [
     "innerBanner",
     "half_image_half_content_HzBwiK",
+    "four_column_icon_content_section_jXnQbQ",
     "half_image_half_content_PHfqhH",
     "contact_form_with_text_jAYcV4"
   ]
