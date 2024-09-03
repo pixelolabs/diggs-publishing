@@ -45,7 +45,7 @@
               {% for block in section.blocks %}
                 <li class="cards flex">
                   {% if block.settings.icon != blank %}
-                    <div class="icon-section" style="background={{ block.settings.cardColor }}">
+                    <div class="icon-section" style="background:{{ block.settings.cardColor }};">
                       {{ block.settings.icon | image_url: width: 100 | image_tag: loading: 'lazy', widths: '100x100' }}
                     </div>
                   {% endif %}
