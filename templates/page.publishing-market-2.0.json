@@ -22,15 +22,74 @@
         "content_alignment": "left"
       }
     },
-    "page_default_content_6YCngU": {
-      "type": "page-default-content",
+    "three_column_card_section_8VkjeD": {
+      "type": "three-column-card-section",
+      "blocks": {
+        "cards_qKLXFf": {
+          "type": "cards",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Vector.png",
+            "title": "Finding the Right Readers",
+            "description": "<p>We'll do the research to find out who will love your book the most. By understanding who they are, we can help you target them more effectively.<\/p>",
+            "btnText": "",
+            "btnLink": ""
+          }
+        },
+        "cards_HizBmG": {
+          "type": "cards",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Vector_1.png",
+            "title": "Covering All Bases",
+            "description": "<p>We'll do the research to find out who will love your book the most. By understanding who they are, we can help you target them more effectively.<\/p>",
+            "btnText": "",
+            "btnLink": ""
+          }
+        },
+        "cards_bDq3Bw": {
+          "type": "cards",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Vector_2.png",
+            "title": "Online Presence",
+            "description": "<p>Beyond just a review, expect comprehensive insights. From thematic depths, narrative arcs, to the intricacies of character dynamics, we will guide you through every detail.<\/p>",
+            "btnText": "",
+            "btnLink": ""
+          }
+        },
+        "cards_rAnzAa": {
+          "type": "cards",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Vector_3.png",
+            "title": "Real tips forreal results",
+            "description": "<p>We'll do the research to find out who will love your book the most. By understanding who they are, we can help you target them more effectively.<\/p>",
+            "btnText": "",
+            "btnLink": ""
+          }
+        },
+        "cards_9yn6nG": {
+          "type": "cards",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Vector_4.png",
+            "title": "Adapting as we go",
+            "description": "<p>Beyond just a review, expect comprehensive insights. From thematic depths, narrative arcs, to the intricacies of character dynamics, we will guide you through every detail.<\/p>",
+            "btnText": "",
+            "btnLink": ""
+          }
+        }
+      },
+      "block_order": [
+        "cards_qKLXFf",
+        "cards_HizBmG",
+        "cards_bDq3Bw",
+        "cards_rAnzAa",
+        "cards_9yn6nG"
+      ],
       "settings": {
-        "section_class": ""
+        "heading": "effective AND CLEAR MARKETING strategies"
       }
     }
   },
   "order": [
     "innerBanner",
-    "page_default_content_6YCngU"
+    "three_column_card_section_8VkjeD"
   ]
 }
