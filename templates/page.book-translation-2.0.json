@@ -80,11 +80,79 @@
         "paddingbottom": 140,
         "paddingbottomMobile": 80
       }
+    },
+    "half_image_half_content_aNeg6X": {
+      "type": "half-image-half-content",
+      "blocks": {
+        "image_4DYBgf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/one_language.png",
+            "showVideo": false,
+            "video": "",
+            "pretitle": "",
+            "title": "One Language, Infinite Echoe",
+            "description": "<p>Every entrancing story deserves to spread its magic. And with the depth and richness of the Spanish language, your tale has the potential to leave an indelible mark on many more hearts.<\/p>",
+            "buttonText": "Start Today",
+            "buttonLink": "shopify:\/\/pages\/publishing-checkout",
+            "background_color": "transparent-bg",
+            "fontSize": false,
+            "center": false
+          }
+        }
+      },
+      "block_order": [
+        "image_4DYBgf"
+      ],
+      "settings": {
+        "section_class": "",
+        "image_position": "right",
+        "wave_color": "transparent-wave",
+        "paddingtop": 0,
+        "paddingtopmobile": 0,
+        "paddingbottom": 0,
+        "paddingbottomMobile": 0
+      }
+    },
+    "half_image_half_content_KGDaz7": {
+      "type": "half-image-half-content",
+      "blocks": {
+        "image_c68wgB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Begin_a_New_Narrative_Journey.png",
+            "showVideo": false,
+            "video": "",
+            "pretitle": "",
+            "title": "Begin a New Narrative Journey",
+            "description": "<p>Think of how many emotions, dreams, and aspirations your story might awaken if told in Spanish.<\/p>",
+            "buttonText": "Let’s Begin",
+            "buttonLink": "shopify:\/\/pages\/publishing-checkout",
+            "background_color": "blue",
+            "fontSize": false,
+            "center": false
+          }
+        }
+      },
+      "block_order": [
+        "image_c68wgB"
+      ],
+      "settings": {
+        "section_class": "",
+        "image_position": "left",
+        "wave_color": "blue-wave",
+        "paddingtop": 0,
+        "paddingtopmobile": 0,
+        "paddingbottom": 0,
+        "paddingbottomMobile": 0
+      }
     }
   },
   "order": [
     "innerBanner",
     "full_width_content_section_ehrVDd",
-    "three_column_card_section_3dczmn"
+    "three_column_card_section_3dczmn",
+    "half_image_half_content_aNeg6X",
+    "half_image_half_content_KGDaz7"
   ]
 }
