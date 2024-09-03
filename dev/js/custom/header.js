@@ -17,7 +17,8 @@ jQuery(function() {
 
     /* Announcement 
     Close on Click  */
-    $("#announcement-close").on("click", function() {
+    $("#announcement-close").on("click", function(e) {
+        e.preventDefault();
         $(".announcement-bar").hide();
         $("body").removeClass("announcement-visible");
         $("body").addClass("announcement-hide");
