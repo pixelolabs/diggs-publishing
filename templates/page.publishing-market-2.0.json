@@ -165,7 +165,8 @@
         "content": "<p>As an author, your journey does not end with the last sentence. In fact, this is only the beginning. Diggs Publishing recognizes the importance of not only crafting compelling stories but also ensuring that they reach the right audience.<\/p>",
         "buttonText": "Order Now",
         "buttonLink": "shopify:\/\/pages\/publishing-checkout",
-        "backgroundcolor": false
+        "backgroundcolor": false,
+        "bgColor": "#c192ff"
       }
     }
   },
