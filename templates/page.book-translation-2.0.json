@@ -12,25 +12,79 @@
     "innerBanner": {
       "type": "inner-hero-section",
       "settings": {
-        "image": "{{ page.metafields.custom.hero_banner_background_image_desktop_.value }}",
-        "mobileImage": "{{ page.metafields.custom.hero_banner_background_image_mobile_.value }}",
-        "title": "{{ page.metafields.custom.hero_banner_title.value }}",
-        "description": "{{ page.metafields.custom.hero_banner_description | metafield_tag }}",
-        "buttonText1": "{{ page.metafields.custom.hero_banner_button_text.value }}",
-        "buttonLink1": "{{ page.metafields.custom.hero_banner_button_link.value }}",
+        "image": "shopify:\/\/shop_images\/book-translation-banner.png",
+        "mobileImage": "shopify:\/\/shop_images\/book-translation-banner.png",
+        "title": "BOOK TRANSLATIONS",
+        "description": "<p>Widen Your Horizon: Your Story, Reverberated in Spanish Melodies.<\/p>",
+        "buttonText1": "Reach your Audience",
+        "buttonLink1": "shopify:\/\/pages\/publishing-checkout",
         "button_bg": "pink",
         "content_alignment": "left"
       }
     },
-    "page_default_content_6YCngU": {
-      "type": "page-default-content",
+    "full_width_content_section_ehrVDd": {
+      "type": "full-width-content-section",
       "settings": {
-        "section_class": ""
+        "title": "Cast a Wider Spell with Spanish",
+        "content": "<p>Every captivating story deserves to spread its enchantment. With the depth and richness of the Spanish language, your story has the potential to touch many more hearts.<\/p>",
+        "buttonText": "Translate Now",
+        "buttonLink": "shopify:\/\/pages\/publishing-checkout",
+        "backgroundcolor": false,
+        "bgColor": "#c192ff"
+      }
+    },
+    "three_column_card_section_3dczmn": {
+      "type": "three-column-card-section",
+      "blocks": {
+        "cards_8FhKgm": {
+          "type": "cards",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/A_Vast_Audience.svg",
+            "title": "A Vast Audience",
+            "description": "<p>Spanish is among the most spoken languages, connecting you to a plethora of readers, each waiting for their next favorite narrative.<\/p>",
+            "btnText": "",
+            "btnLink": ""
+          }
+        },
+        "cards_FKBC3R": {
+          "type": "cards",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/The_Rising_Tide.svg",
+            "title": "The Rising Tide",
+            "description": "<p>As more and more people embrace bilingualism and the beauty of diverse stories, the appetite for children's literature in Spanish continues to soar.<\/p>",
+            "btnText": "",
+            "btnLink": ""
+          }
+        },
+        "cards_DgH4jt": {
+          "type": "cards",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Narrative_Nuances.svg",
+            "title": "Narrative Nuances",
+            "description": "<p>Crafting your story in Spanish means infusing it with layers of profound traditions, histories, and emotions intrinsic to the language.soar.<\/p>",
+            "btnText": "",
+            "btnLink": ""
+          }
+        }
+      },
+      "block_order": [
+        "cards_8FhKgm",
+        "cards_FKBC3R",
+        "cards_DgH4jt"
+      ],
+      "settings": {
+        "heading": "Spanish: A Symphony of Traditions",
+        "backgroundtransparent": false,
+        "paddingtop": 100,
+        "paddingtopmobile": 80,
+        "paddingbottom": 140,
+        "paddingbottomMobile": 80
       }
     }
   },
   "order": [
     "innerBanner",
-    "page_default_content_6YCngU"
+    "full_width_content_section_ehrVDd",
+    "three_column_card_section_3dczmn"
   ]
 }
