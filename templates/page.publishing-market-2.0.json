@@ -12,12 +12,12 @@
     "innerBanner": {
       "type": "inner-hero-section",
       "settings": {
-        "image": "{{ page.metafields.custom.hero_banner_background_image_desktop_.value }}",
-        "mobileImage": "{{ page.metafields.custom.hero_banner_background_image_mobile_.value }}",
-        "title": "{{ page.metafields.custom.hero_banner_title.value }}",
-        "description": "{{ page.metafields.custom.hero_banner_description | metafield_tag }}",
-        "buttonText1": "{{ page.metafields.custom.hero_banner_button_text.value }}",
-        "buttonLink1": "{{ page.metafields.custom.hero_banner_button_link.value }}",
+        "image": "shopify:\/\/shop_images\/publishing-market-banner.png",
+        "mobileImage": "shopify:\/\/shop_images\/publishing-market-banner.png",
+        "title": "Tailored Marketing Plans",
+        "description": "<p>Your story is unique, and your marketing strategy should reflect that. Diggs Publishing recognizes the importance of individuality. Allow us to assist you in discovering and connecting with your niche audience in a way that is as unique as your story.<\/p>",
+        "buttonText1": "Reach your Audience",
+        "buttonLink1": "shopify:\/\/blogs\/blog",
         "button_bg": "pink",
         "content_alignment": "left"
       }
