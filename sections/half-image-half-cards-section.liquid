@@ -27,29 +27,31 @@
           </div>
         {% endif %}
       </div>
-      <div class="image-wrapper">
-        {% if section.settings.showVideo == true %}
-          {% if section.settings.video != blank %}
-            <a class="video-section " data-lity href="{{section.settings.video}}">
-              {{ section.settings.image | image_url: width: 1262 | image_tag: loading: 'lazy', widths: '1262x1000' }}
-              <div class="play-icon"></div>
-            </a>
-          {% endif %}
+      <div class="half-image-half-cards">
+        <div class="image-wrapper">
+          {% if section.settings.showVideo == true %}
+            {% if section.settings.video != blank %}
+              <a class="video-section " data-lity href="{{section.settings.video}}">
+                {{ section.settings.image | image_url: width: 1262 | image_tag: loading: 'lazy', widths: '1262x1000' }}
+                <div class="play-icon"></div>
+              </a>
+            {% endif %}
 
-        {% else %}
-          {% if section.settings.image != blank %}
-            <div
-              class="image-section"
-              data-aos="fade-up"
-              data-aos-duration="2000"
-            >
-              {{ section.settings.image | image_url: width: 1262 | image_tag: loading: 'lazy', widths: '1262x1000' }}
-            </div>
+          {% else %}
+            {% if section.settings.image != blank %}
+              <div
+                class="image-section"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+              >
+                {{ section.settings.image | image_url: width: 1262 | image_tag: loading: 'lazy', widths: '1262x1000' }}
+              </div>
+            {% endif %}
           {% endif %}
-        {% endif %}
+        </div>
       </div>
       <div
-        class="full-format flex-justify-column-center content {% if section.settings.image == blank and section.settings.video == blank %} full {% endif %} {%if section.settings.center == true%}center{%endif%}"
+        class="full-format flex-justify-column-center content  {%if section.settings.center == true%}center{%endif%}"
         data-aos="fade-up"
         data-aos-duration="2000"
       >
