@@ -21,9 +21,43 @@
         "button_bg": "green",
         "content_alignment": "left"
       }
+    },
+    "half_image_half_content_HzBwiK": {
+      "type": "half-image-half-content",
+      "blocks": {
+        "image_hyh9bK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/author-meeting.png",
+            "showVideo": false,
+            "video": "",
+            "pretitle": "",
+            "title": "Your Unique Children's Book Journey",
+            "description": "<p>You can expect an engaging and informative experience tailored to your specific needs and goals during the one-hour Children's Book Mentoring Session with Krystaelynne Diggs. The goal of this mentoring session is to provide you with knowledge, inspiration, and confidence to continue your journey in the world of children's literature.<\/p>",
+            "buttonText": "Book Now",
+            "buttonLink": "shopify:\/\/pages\/ambassador-program-2-0",
+            "background_color": "transparent-bg",
+            "fontSize": false,
+            "center": false
+          }
+        }
+      },
+      "block_order": [
+        "image_hyh9bK"
+      ],
+      "settings": {
+        "section_class": "",
+        "image_position": "left",
+        "wave_color": "transparent-wave",
+        "paddingtop": 0,
+        "paddingtopmobile": 0,
+        "paddingbottom": 0,
+        "paddingbottomMobile": 0
+      }
     }
   },
   "order": [
-    "innerBanner"
+    "innerBanner",
+    "half_image_half_content_HzBwiK"
   ]
 }
