@@ -15,57 +15,60 @@
 {%- endstyle -%}
 
 <div class="half-image-half-cards-section section-{{ section.id }}-padding  {% if section.settings.image_position == 'right' %} section-row-right {% endif %}{% if section.settings.wave_color == 'yellow-wave' %} yellow-wave{% elsif section.settings.wave_color == 'transparent-wave' %} transparent-wave {% elsif section.settings.wave_color == 'blue-wave' %} blue-wave{% else %} no-wave {% endif %}">
-  <div class="half-image-half-cards {% if block.settings.background_color == 'transparent-bg' %} no-bg-color{% elsif block.settings.background_color == 'brown' %} bg-brown {% elsif block.settings.background_color == 'blue' %}  bg-blue {% else %} no-bg {% endif %}">
-    <div class="container-1260 flex">
-      <div class="image-wrapper">
-        {% if block.settings.showVideo == true %}
-          {% if block.settings.video != blank %}
-            <a class="video-section " data-lity href="{{block.settings.video}}">
-              {{ block.settings.image | image_url: width: 1262 | image_tag: loading: 'lazy', widths: '1262x1000' }}
-              <div class="play-icon"></div>
-            </a>
-          {% endif %}
-
-        {% else %}
-          {% if block.settings.image != blank %}
-            <div
-              class="image-section"
-              data-aos="fade-up"
-              data-aos-duration="2000"
-            >
-              {{ block.settings.image | image_url: width: 1262 | image_tag: loading: 'lazy', widths: '1262x1000' }}
-            </div>
-          {% endif %}
+  <div class="container-1260 flex">
+    <div class="top-header">
+      <h2></h2>
+      <h3></h3>
+      <div class="description"></div>
+    </div>
+    <div class="image-wrapper">
+      {% if section.settings.showVideo == true %}
+        {% if section.settings.video != blank %}
+          <a class="video-section " data-lity href="{{section.settings.video}}">
+            {{ section.settings.image | image_url: width: 1262 | image_tag: loading: 'lazy', widths: '1262x1000' }}
+            <div class="play-icon"></div>
+          </a>
         {% endif %}
-      </div>
-      <div
-        class="full-format flex-justify-column-center content {% if block.settings.image == blank and block.settings.video == blank %} full {% endif %} {%if block.settings.center == true%}center{%endif%}"
-        data-aos="fade-up"
-        data-aos-duration="2000"
-      >
-        <div class="inner">
-          {% if block.settings.pretitle != blank %}
-            <span class="pre-title">{{ block.settings.pretitle }}</span>
-          {% endif %}
-          {% if block.settings.title != blank %}
-            <h2 class="w-250 {% if block.settings.fontSize == true %} size {% endif %}">
-              {{ block.settings.title }}
-            </h2>
-          {% endif %}
-          {% if block.settings.description != blank %}
-            {{ block.settings.description }}
-          {% endif %}
-          {% if block.settings.buttonText != blank and block.settings.buttonLink != blank %}
-            <a
-              href="{{ block.settings.buttonLink }}"
-              title="Read More About {{ block.settings.buttonText }}"
-              aria-label="Read More About {{ block.settings.buttonText }}"
-              class="btn--primary green"
-            >
-              {{ block.settings.buttonText }}
-            </a>
-          {% endif %}
-        </div>
+
+      {% else %}
+        {% if section.settings.image != blank %}
+          <div
+            class="image-section"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            {{ section.settings.image | image_url: width: 1262 | image_tag: loading: 'lazy', widths: '1262x1000' }}
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+    <div
+      class="full-format flex-justify-column-center content {% if section.settings.image == blank and section.settings.video == blank %} full {% endif %} {%if section.settings.center == true%}center{%endif%}"
+      data-aos="fade-up"
+      data-aos-duration="2000"
+    >
+      <div class="inner">
+        {% if section.settings.pretitle != blank %}
+          <span class="pre-title">{{ section.settings.pretitle }}</span>
+        {% endif %}
+        {% if section.settings.title != blank %}
+          <h2 class="w-250 {% if section.settings.fontSize == true %} size {% endif %}">
+            {{ section.settings.title }}
+          </h2>
+        {% endif %}
+        {% if section.settings.description != blank %}
+          {{ section.settings.description }}
+        {% endif %}
+        {% if section.settings.buttonText != blank and section.settings.buttonLink != blank %}
+          <a
+            href="{{ section.settings.buttonLink }}"
+            title="Read More About {{ section.settings.buttonText }}"
+            aria-label="Read More About {{ section.settings.buttonText }}"
+            class="btn--primary green"
+          >
+            {{ section.settings.buttonText }}
+          </a>
+        {% endif %}
       </div>
     </div>
   </div>
@@ -73,7 +76,7 @@
 
 {% schema %}
 {
-  "name": "Half Image Half Content",
+  "name": "Half Image Half Cards",
   "settings": [
     {
       "type": "header",
@@ -82,8 +85,18 @@
     },
     {
       "type": "text",
-      "id": "section_class",
-      "label": "Add custom class"
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "subTitle",
+      "label": "Sub Title"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "description"
     },
     {
       "type": "select",
