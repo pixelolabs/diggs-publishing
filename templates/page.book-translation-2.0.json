@@ -68,8 +68,8 @@
         "btnLink": "",
         "image_position": "left",
         "wave_color": "blue-wave",
-        "paddingtop": 102,
-        "paddingtopmobile": 0,
+        "paddingtop": 141,
+        "paddingtopmobile": 80,
         "paddingbottom": 99,
         "paddingbottomMobile": 0
       }
