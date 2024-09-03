@@ -121,8 +121,8 @@
         "backgroundtransparent": false,
         "paddingtop": 100,
         "paddingtopmobile": 80,
-        "paddingbottom": 100,
-        "paddingbottomMobile": 80
+        "paddingbottom": 140,
+        "paddingbottomMobile": 100
       }
     },
     "half_image_half_content_4gRXR4": {
