@@ -1,5 +1,20 @@
+{%- style -%}
+  .section-{{ section.id }}-padding{
+      padding-top: {{ section.settings.paddingtop | round: 0 }}px;
+      padding-bottom: {{ section.settings.paddingbottom | round: 0 }}px;
+    }
+
+
+    @media screen and (max-width: 768px) {
+    .section-{{ section.id }}-padding{
+      padding-top: {{ section.settings.paddingtopmobile | round: 0 }}px;
+      padding-bottom: {{ section.settings.paddingbottomMobile | round: 0 }}px;
+    }
+
+  }
+{%- endstyle -%}
 {% if section.settings.heading != blank %}
-  <div class="three-column-card-section">
+  <div class="three-column-card-section section-{{ section.id }}-padding">
     <div class="container-1260">
       <h2>{{ section.settings.heading }}</h2>
       {% if section.blocks.size > 0 %}
@@ -39,6 +54,50 @@
       "type": "text",
       "id": "heading",
       "label": "Title"
+    },
+    {
+      "type": "header",
+      "content": "Top/Bottom Section Space"
+    },
+    {
+      "type": "range",
+      "id": "paddingtop",
+      "min": 0,
+      "max": 140,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top (Desktop)",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "paddingtopmobile",
+      "min": 0,
+      "max": 140,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top (Mobile)",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "paddingbottom",
+      "min": 0,
+      "max": 140,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom (Desktop)",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "paddingbottomMobile",
+      "min": 0,
+      "max": 140,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom (Mobile)",
+      "default": 0
     }
   ],
   "blocks": [
