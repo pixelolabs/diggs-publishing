@@ -927,6 +927,8 @@ textarea.input--error {
       }
       @include MQ(MQ-480) {
         right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
       }
     }
   }
