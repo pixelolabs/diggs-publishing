@@ -14,12 +14,13 @@
     // }
     &:before {
       background: url(wave-fullwidth-body-bgcolor.svg) repeat-x center / 1452px;
-      height: 12vw;
+      height: 6vw;
       width: 100%;
       position: absolute;
       left: 0;
-      top: -2px;
+      top: -3px;
       z-index: 2;
+      background-size: contain;
       content: "";
       @media (min-width: 1440px) {
         background: url(wave-fullwidth-body-bgcolor.svg) repeat-x center / 100%;
@@ -27,16 +28,19 @@
         top: -6px;
       }
       @include MQ(MQ-1300) {
-        top: -12px;
+        height: 136px;
+        top: -37px;
       }
       @include MQ(MQ-1100) {
-        top: -22px;
+        top: -47px;
       }
       @include MQ(MQ-768) {
         // background-size: calc(1452px / 2);
         // top: -32px;
         background-size: contain;
-        height: 11vw;
+
+        top: -50px;
+        // height: 11vw;
       }
       @include MQ(MQ-600) {
         height: 85px;
@@ -114,7 +118,7 @@
       z-index: 1;
       top: 210px;
       background: url("icon-cloud.webp") no-repeat center / 100%;
-      @include MQ(MQ-768) {
+      @include MQ(MQ-980) {
         display: none;
       }
     }
@@ -126,7 +130,7 @@
       right: 70px;
       z-index: 1;
       top: 110px;
-      background: url("planet-green.webp") no-repeat center / 100%;
+      background: url("graphic-planet.png") no-repeat center / 100%;
       @include MQ(MQ-768) {
         width: 57px;
         height: 40px;
@@ -164,7 +168,7 @@
       z-index: -1;
       bottom: -13px;
       background: url("star-large.webp") no-repeat center / 100%;
-      @include MQ(MQ-768) {
+      @include MQ(MQ-980) {
         display: none;
       }
     }
@@ -215,7 +219,7 @@
       z-index: 1;
       right: 150px;
       background: url("icon-cloud.webp") no-repeat center / 100%;
-      @include MQ(MQ-768) {
+      @include MQ(MQ-980) {
         display: none;
       }
     }

@@ -1,38 +1,37 @@
 <div class="contact-form-with-text-outer">
+  <svg viewBox="0 0 1440 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill="{% if section.settings.bgColor != blank  %} {{ section.settings.bgColor }} {% else %} #fffcf3{% endif %}" d="M2430.9-58.8l-1216.1,2.8l0-2.8l-1451,3.4l1.1,68.2C-196.4,45.2-91.7,97,17.4,45.6C126.5-5.8,252,24.4,301.1,46 c44.4,25,167.1,60.9,302.2,4c135.1-56.9,262-56.3,346.3-26.1c68.7,24.6,172.6,71.3,254.2,33.2c9.8-3.1,19.7-6.9,29.7-11.6 c109.1-51.4,234.6-21.2,283.7,0.4c44.4,25,167.1,60.9,302.2,4s262-56.3,346.3-26.1c72.2,25.9,183.3,76.1,266.5,26.7L2430.9-58.8z"/>
+  </svg>
   <div class="contact-form-with-text">
     <div class="container-1260 flex">
       <div class="form-section text-left">
         {%- assign formId = 'ContactForm' -%}
-        {% form 'contact'
-          , id: formId %}
-          {% include 'form-status'
-            , form: form
-            , form_id: formId %}
+        {% form 'contact', id: formId %}
+          {% include 'form-status', form: form, form_id: formId %}
           <div class="flex">
             <div class="input-field half-width-col">
-              <label for="Subject">
-                How can we help you? *</label>
+              <label for="Subject"> How can we help you? *</label>
               <input
                 type="text"
                 id="{{ formId }}-subject"
                 placeholder="Subject*"
                 aria-required="true"
-                name="contact[Enquiry_Subject]">
+                name="contact[Enquiry_Subject]"
+              >
             </div>
             <div class="input-field half-width-col">
-              <label for="Full-name">
-              Full Name *</label>
+              <label for="Full-name"> Full Name *</label>
               <input
                 placeholder="How can we help you? *"
                 type="text"
                 id="{{ formId }}-name"
                 name="contact[{{ 'contact.form.name' | t }}]"
                 aria-required="true"
-                value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
+                value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}"
+              >
             </div>
             <div class="input-field half-width-col">
-              <label for="Email">
-              Email Address *</label>
+              <label for="Email"> Email Address *</label>
               <input
                 placeholder="Email Address*"
                 class="email-field"
@@ -44,22 +43,23 @@
                 value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
                 aria-required="true"
                 {%- if form.errors contains 'email' -%}
-                class="input--error"
-                aria-invalid="true"
-                aria-describedby="{{ formId }}-email-error"
-                {%- endif -%}>
+                  class="input--error"
+                  aria-invalid="true"
+                  aria-describedby="{{ formId }}-email-error"
+                {%- endif -%}
+              >
               {%- if form.errors contains 'email' -%}
                 <span id="{{ formId}}-email-error" class="input-error-message">
                   <span class="visually-hidden">{{ 'general.accessibility.error' | t }}</span>
                   <span>
                     {{- form.errors.translated_fields.email | capitalize }}
-                    {{ form.errors.messages.email }}.</span>
+                    {{ form.errors.messages.email }}.</span
+                  >
                 </span>
               {%- endif -%}
             </div>
             <div class="input-field half-width-col">
-              <label for="Mobile-number">
-              Mobile Number *</label>
+              <label for="Mobile-number"> Mobile Number *</label>
               <input
                 type="tel"
                 id="{{ formId }}-phone"
@@ -67,25 +67,27 @@
                 name="contact[Phone]"
                 pattern="[0-9\-]*"
                 aria-required="true"
-                value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}">
+                value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+              >
             </div>
             <div class="textarea-field full-width-col">
-              <label for="Message">
-              Message</label>
+              <label for="Message"> Message</label>
               <textarea
                 placeholder="Message"
                 rows="10"
                 id="{{ formId }}-message"
-                name="contact[{{ 'contact.form.message' | t }}]">
+                name="contact[{{ 'contact.form.message' | t }}]"
+              >
                 {% if form.body %}
                   {{ form.body }}{% endif %}
               </textarea>
             </div>
             <div class="submit-field full-width-col">
-            <input
-              type="submit"
-              class="btn--primary"
-              value="Submit Now">
+              <input
+                type="submit"
+                class="btn--primary"
+                value="Submit Now"
+              >
             </div>
           </div>
         {% endform %}
@@ -101,71 +103,84 @@
           </li>
           <li>
             <div class="title uppercase">Email us on:</div>
-            <div><a href="mailto:{{settings.emailAddress}}">{{ settings.emailAddress }}</a></div>
+            <div>
+              <a href="mailto:{{settings.emailAddress}}">{{ settings.emailAddress }}</a>
+            </div>
           </li>
         </ul>
       </div>
       <div class="kids-images">
-          <img src="{{ 'kids-image-2.webp' | asset_url }}" /> 
+        <img src="{{ 'kids-image-2.webp' | asset_url }}">
       </div>
     </div>
   </div>
 </div>
-<!-- <script>
-document.addEventListener('DOMContentLoaded', function() {
+<!--
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
 
-  document.getElementById('ContactForm').addEventListener('submit', function(event) {
-      event.preventDefault();
+    document.getElementById('ContactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
 
-      resetErrorMessages();
+        resetErrorMessages();
 
-      let formIsValid = true;
-      const inputFields = document.querySelectorAll('input[aria-required="true"]');
-      
-      inputFields.forEach(input => {
-          const value = input.value.trim();
-          if (value === '') {
-              const errorMessage = document.createElement('span');
-              errorMessage.textContent = 'This field is required.';
-              errorMessage.classList.add('input-error-message');
-              input.parentNode.appendChild(errorMessage);
-              formIsValid = false;
-          }
-      });
+        let formIsValid = true;
+        const inputFields = document.querySelectorAll('input[aria-required="true"]');
 
-      if (formIsValid) {
-          event.target.submit();
-      }
+        inputFields.forEach(input => {
+            const value = input.value.trim();
+            if (value === '') {
+                const errorMessage = document.createElement('span');
+                errorMessage.textContent = 'This field is required.';
+                errorMessage.classList.add('input-error-message');
+                input.parentNode.appendChild(errorMessage);
+                formIsValid = false;
+            }
+        });
+
+        if (formIsValid) {
+            event.target.submit();
+        }
+    });
+
+    function resetErrorMessages() {
+        const errorMessages = document.querySelectorAll('.error-message');
+        errorMessages.forEach(errorMessage => {
+            errorMessage.parentNode.removeChild(errorMessage);
+        });
+    }
   });
-
-  function resetErrorMessages() {
-      const errorMessages = document.querySelectorAll('.error-message');
-      errorMessages.forEach(errorMessage => {
-          errorMessage.parentNode.removeChild(errorMessage);
-      });
-  }
-});
-</script> -->
+  </script>
+-->
 {% schema %}
-  {
-    "name": "Contact Form With Text",
-    "settings": [
-      {
-        "type": "text",
-        "id": "title",
-        "label": "Title"
-      },
-      {
-        "type": "richtext",
-        "id": "address",
-        "label": "Add Location"
-      }
-    ],
+{
+  "name": "Contact Form With Text",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "address",
+      "label": "Add Location"
+    },
+    {
+      "type": "header",
+      "content": "Extra Settings"
+    },
+    {
+      "type": "color",
+      "id": "bgColor",
+      "label": "Wave Background Color"
+    }
+  ],
 
-    "presets": [
-      {
-        "name": "Contact Form With Text"
-      }
-    ]
-  }
+  "presets": [
+    {
+      "name": "Contact Form With Text"
+    }
+  ]
+}
 {% endschema %}

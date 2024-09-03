@@ -1,219 +1,227 @@
-.contact-form-with-text-outer{
-    position: relative;
-    &:before{
-        background: url(wave-fullwidth-body-bgcolor.svg) repeat-x center / 1452px;
-        height: 12vw;
-        width: 100%;
-        position: absolute;
-        left: 0;
-        top: -2px;
-        z-index: 2;
-        content: "";
-        @media (min-width: 1440px) {
-            background: url(wave-fullwidth-body-bgcolor.svg) repeat-x center /
-              100%;
-            height: 6vw;
-            top: -6px;
-          }
-          @include MQ(MQ-1300) {
-            top: -12px;
-          }
-          @include MQ(MQ-1100) {
-            top: -22px;
-          }
-          @include MQ(MQ-768) {
-            // background-size: calc(1452px / 2);
-            // top: -32px;
-            background-size: contain;
-            height: 11vw;
-          }
-          @include MQ(MQ-600) {
-            height: 85px;
-            top: -32px;
-          }
-          @include MQ(MQ-350) {
-            top: -33px;
-          }
-    }
+.contact-form-with-text-outer {
+  position: relative;
+  svg {
+    height: auto;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -2px;
+    z-index: 1;
+  }
+  //   &:before {
+  //     background: url(wave-fullwidth-body-bgcolor.svg) repeat-x center / 1452px;
+  //     height: 12vw;
+  //     width: 100%;
+  //     position: absolute;
+  //     left: 0;
+  //     top: -2px;
+  //     z-index: 2;
+  //     content: "";
+  //     @media (min-width: 1440px) {
+  //       background: url(wave-fullwidth-body-bgcolor.svg) repeat-x center / 100%;
+  //       height: 6vw;
+  //       top: -6px;
+  //     }
+  //     @include MQ(MQ-1300) {
+  //       top: -12px;
+  //     }
+  //     @include MQ(MQ-1100) {
+  //       top: -22px;
+  //     }
+  //     @include MQ(MQ-768) {
+  //       // background-size: calc(1452px / 2);
+  //       // top: -32px;
+  //       background-size: contain;
+  //       height: 11vw;
+  //     }
+  //     @include MQ(MQ-600) {
+  //       height: 85px;
+  //       top: -32px;
+  //     }
+  //     @include MQ(MQ-350) {
+  //       top: -33px;
+  //     }
+  //   }
 }
-.contact-form-with-text{
+.contact-form-with-text {
+  position: relative;
+  text-align: center;
+  background: url(full_width_bg_orange.webp) repeat center / 100%;
+  @include MQ(MQ-768) {
+    background-size: cover;
+  }
+  &:before {
+    width: 620px;
+    height: 773px;
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 0;
+    bottom: 0;
+    background: url(thread-multi-white.webp) no-repeat center / 100%;
+    @include MQ(MQ-980) {
+      display: none;
+    }
+  }
+  &:after {
+    width: 130px;
+    height: 406px;
+    content: "";
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    top: -58px;
+    background: url(thread-white-2.svg) no-repeat center / 100%;
+    @include MQ(MQ-980) {
+      top: -220px;
+    }
+    @include MQ(MQ-500) {
+      top: -240px;
+      right: -48px;
+    }
+  }
+  .container-1260 {
+    padding-top: 162px;
+    padding-bottom: 116px;
     position: relative;
-    text-align: center;
-    background: url(full_width_bg_orange.webp) repeat center / 100%;
-    @include MQ(MQ-768){
-        background-size: cover;
+    @include MQ(MQ-980) {
+      flex-wrap: wrap;
     }
-    &:before{
-        width: 620px;
-        height: 773px;
-        content: "";
-        position: absolute;
-        left: 0;
-        z-index: 0;
-        bottom: 0;
-        background: url(thread-multi-white.webp) no-repeat center / 100%;
-        @include MQ(MQ-980){
-            display: none;
-        }
+    @include MQ(MQ-768) {
+      padding-bottom: 305px;
+      padding-top: 96px;
     }
-    &:after{
-        width: 130px;
-        height: 406px;
-        content: "";
-        position: absolute;
-        right: 0;
-        z-index: 0;
-        top: -58px;
-        background: url(thread-white-2.svg) no-repeat center / 100%;
-        @include MQ(MQ-980){
-            top: -220px;
-        }
-        @include MQ(MQ-500){
-            top: -240px;
-            right: -48px;
-        }
+    @include MQ(MQ-500) {
+      padding-bottom: 200px;
     }
-    .container-1260{
-        padding-top: 162px;
-        padding-bottom: 116px;
-        position: relative;
-        @include MQ(MQ-980){
-            flex-wrap: wrap;
-        }
-        @include MQ(MQ-768) {
-            padding-bottom: 305px;
-            padding-top: 96px;
-        }
-        @include MQ(MQ-500){
-            padding-bottom: 200px;
-        }
+  }
+  .form-section {
+    width: 68.66%;
+    padding-right: 72px;
+    position: relative;
+    @include MQ(MQ-1200) {
+      padding-right: 40px;
+      width: 60%;
     }
-    .form-section{
-        width: 68.66%;
-        padding-right: 72px;
-        position: relative;
-        @include MQ(MQ-1200){
-            padding-right: 40px;
-            width: 60%;
-        }
-        @include MQ(MQ-980){
-            width: 100%;
-            padding-right: 0;
-            padding-bottom: 45px;
-        }
-        &::before{
-            width: 65.6px;
-            height: 87px;
-            content: "";
-            position: absolute;
-            left: 272px;
-            z-index: 1;
-            top: -8.7px;
-            transform: translateY(-100%);
-            background: url(kite-orange.webp) no-repeat center / 100%;
-            @include MQ(MQ-980){
-                background-image: url(planet-orange.svg);
-                width: 57px;
-                height: 39.24px;
-                left: unset;
-                right: 110px;
-                top: -40px;
-            }
-            @include MQ(MQ-768){
-                top: -11px;
-                right: 72px;
-            }
-            @include MQ(MQ-500){
-                top: -21px;
-                right: 62px;
-            }
-        }
-        &::after{
-            width: 64px;
-            height: 51px;
-            content: "";
-            position: absolute;
-            top: -45.5px;
-            transform: translateY(-100%);
-            z-index: 1;
-            right: 83.33px;
-            background: url(icon-cloud.webp) no-repeat center / 100%;
-            @include MQ(MQ-980){
-                right: unset;
-                left: 32px;
-                width: 40.83px;
-                height: 32.43px;
-            }
-            @include MQ(MQ-768){
-                top: -23px;
-            }
-            @include MQ(MQ-500){
-                top: -36px;
-            }
-        }
+    @include MQ(MQ-980) {
+      width: 100%;
+      padding-right: 0;
+      padding-bottom: 45px;
     }
-    .contact-info-section{
-        text-align: left;
-        width: 31.34%;
-        position: relative;
-        @include MQ(MQ-1200){
-            width: 40%;
-        }
-        @include MQ(MQ-980){
-            width: 100%;
-        }
-        &::after{
-            width: 81px;
-            height: 84px;
-            content: "";
-            position: absolute;
-            top: -35.5px;
-            z-index: 1;
-            right: 0px;
-            background: url(rocket.webp) no-repeat center / 100%;
-            @include MQ(MQ-980) {
-                display: none;
-            }
-        }
-        h2{
-            margin-bottom: 20px;
-            font-size: 30px;
-        }
-        ul{
-            li,a{
-                margin-bottom: 20px;
-                letter-spacing:2px;
-                font-weight: 400;
-                .title{
-                    display: block;
-                    margin-bottom: 10px;
-                    letter-spacing: 1px;
-                    font-weight: 700;
-                }
-            }
-            .address{
-                max-width: 240px;
-            }
-        }
+    &::before {
+      width: 65.6px;
+      height: 87px;
+      content: "";
+      position: absolute;
+      left: 272px;
+      z-index: 1;
+      top: -8.7px;
+      transform: translateY(-100%);
+      background: url(kite-orange.webp) no-repeat center / 100%;
+      @include MQ(MQ-980) {
+        background-image: url(planet-orange.svg);
+        width: 57px;
+        height: 39.24px;
+        left: unset;
+        right: 110px;
+        top: -40px;
+      }
+      @include MQ(MQ-768) {
+        top: -11px;
+        right: 72px;
+      }
+      @include MQ(MQ-500) {
+        top: -21px;
+        right: 62px;
+      }
     }
-    .kids-images{
-        position: absolute;
-        right: -48px;
-        width: 532px;
-        height: 330px;
-        bottom: 0px;
-        z-index: 0;
-        img{
-            @include img-object-contain;
-        }
-        @include MQ(MQ-768) {
-            width: 388px;
-            right: 50%;
-            transform: translateX(50%);   
-        }        
-        @include MQ(MQ-500){
-            width: 248px;
-            bottom: -60px;
-        }
+    &::after {
+      width: 64px;
+      height: 51px;
+      content: "";
+      position: absolute;
+      top: -45.5px;
+      transform: translateY(-100%);
+      z-index: 1;
+      right: 83.33px;
+      background: url(icon-cloud.webp) no-repeat center / 100%;
+      @include MQ(MQ-980) {
+        right: unset;
+        left: 32px;
+        width: 40.83px;
+        height: 32.43px;
+      }
+      @include MQ(MQ-768) {
+        top: -23px;
+      }
+      @include MQ(MQ-500) {
+        top: -36px;
+      }
     }
+  }
+  .contact-info-section {
+    text-align: left;
+    width: 31.34%;
+    position: relative;
+    @include MQ(MQ-1200) {
+      width: 40%;
+    }
+    @include MQ(MQ-980) {
+      width: 100%;
+    }
+    &::after {
+      width: 81px;
+      height: 84px;
+      content: "";
+      position: absolute;
+      top: -35.5px;
+      z-index: 1;
+      right: 0px;
+      background: url(rocket.webp) no-repeat center / 100%;
+      @include MQ(MQ-980) {
+        display: none;
+      }
+    }
+    h2 {
+      margin-bottom: 20px;
+      font-size: 30px;
+    }
+    ul {
+      li,
+      a {
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+        font-weight: 400;
+        .title {
+          display: block;
+          margin-bottom: 10px;
+          letter-spacing: 1px;
+          font-weight: 700;
+        }
+      }
+      .address {
+        max-width: 240px;
+      }
+    }
+  }
+  .kids-images {
+    position: absolute;
+    right: -48px;
+    width: 532px;
+    height: 330px;
+    bottom: 0px;
+    z-index: 0;
+    img {
+      @include img-object-contain;
+    }
+    @include MQ(MQ-768) {
+      width: 388px;
+      right: 50%;
+      transform: translateX(50%);
+    }
+    @include MQ(MQ-500) {
+      width: 248px;
+      bottom: -60px;
+    }
+  }
 }
