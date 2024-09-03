@@ -89,7 +89,7 @@
       {% for item in search.results %}
       <li class="grid__item product-card">
         {% if item.object_type == 'product' %}
-          {% include 'product_Card'  with  productRelated: item , show_price: true, show_tags: false, show_auto_tags: false, show_title: true, show_fav: false, show_secondary_button: true %}
+          {% include 'product_Card'  with  productRelated: item , show_price: true, show_tags: true, show_auto_tags: true, show_title: true, show_fav: false, show_secondary_button: true %}
           {% render 'product-modal', productData: item %}
           {% else %}
         <div class="product-wrapper" title="{{ item.title }}" href="{{ item.url }}" tabindex="0">

@@ -202,7 +202,7 @@
         display: inline-block;
         margin-right: 10px;
         background: $color-black !important;
-        color: $color-black !important;
+        color: $color-white !important;
         font-size: 12px;
         font-weight: bold;
         font-stretch: normal;
@@ -214,7 +214,7 @@
         text-transform: uppercase;
         padding: 8px 16px;
         border-radius: 50px;
-        font-family: var(--font-family-secondary);
+        font-family: var(--font-family-primary);
         &:last-child {
           margin-right: 0px;
         }

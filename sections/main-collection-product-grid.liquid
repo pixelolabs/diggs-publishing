@@ -126,7 +126,7 @@
         <ul class="collection__product-list flex">
           {% for productRelated in collection.products %}
             <li class="product-card">
-              {% include 'product_Card'  with  productRelated: productRelated , show_price: true, show_tags: false, show_auto_tags: false, show_title: true, show_fav: false, show_secondary_button: true %}
+              {% include 'product_Card'  with  productRelated: productRelated , show_price: true, show_tags: true, show_auto_tags: true, show_title: true, show_fav: false, show_secondary_button: true %}
             </li>
             {% render 'product-modal', productData: productRelated %}
           {% else %}
