@@ -14,7 +14,7 @@
     // }
     &:before {
       background: url(wave-fullwidth-body-bgcolor.svg) repeat-x center / 1452px;
-      height: 6vw;
+      // height: 6vw;
       width: 100%;
       position: absolute;
       left: 0;
@@ -24,7 +24,7 @@
       content: "";
       @media (min-width: 1440px) {
         background: url(wave-fullwidth-body-bgcolor.svg) repeat-x center / 100%;
-        height: 6vw;
+        // height: 6vw;
         top: -6px;
       }
       @include MQ(MQ-1300) {
@@ -42,10 +42,10 @@
         top: -50px;
         // height: 11vw;
       }
-      @include MQ(MQ-600) {
-        height: 85px;
-        top: -32px;
-      }
+      // @include MQ(MQ-600) {
+      //   height: 85px;
+      //   top: -32px;
+      // }
       @include MQ(MQ-350) {
         top: -33px;
       }
@@ -190,7 +190,7 @@
     z-index: 0;
   }
   text-align: center;
-  background: url("full-width-bg-green.jpg") repeat center / 100%;
+  background: url("graphic_tarnsperant-rays.png") repeat center / 100%;
   h2 {
     margin-bottom: 20px;
     position: relative;
@@ -238,41 +238,43 @@
   .full-width-content-section {
     .top-wave {
       &:before {
-        background: url(wave-fullwidth-body-bgcolor.svg) repeat-x center /
-          1452px;
-        height: 12vw;
+        background: url(wave-fullwidth-body-bgcolor.svg) no-repeat center / 100%;
+        // height: 12vw;
+        height: 94px;
         width: 100%;
         position: absolute;
         left: 0;
-        top: -2px;
+        top: -20px;
         z-index: 2;
         content: "";
+
         filter: brightness(0) saturate(100%) invert(97%) sepia(90%)
           saturate(332%) hue-rotate(309deg) brightness(102%) contrast(102%);
         @media (min-width: 1440px) {
           background: url(wave-fullwidth-body-bgcolor.svg) repeat-x center /
             100%;
-          height: 6vw;
+          // height: 6vw;
           top: -6px;
         }
-        @include MQ(MQ-1300) {
-          top: -12px;
+        @include MQ(MQ-980) {
+          top: -25px;
         }
-        @include MQ(MQ-1100) {
-          top: -22px;
-        }
+        // @include MQ(MQ-1300) {
+        //   top: -12px;
+        // }
+        // @include MQ(MQ-1100) {
+        //   top: -22px;
+        // // }
         @include MQ(MQ-768) {
-          // background-size: calc(1452px / 2);
-          // top: -32px;
-          background-size: contain;
-          height: 11vw;
+          top: -32px;
+          height: 100px;
         }
         @include MQ(MQ-600) {
           height: 85px;
           top: -31px;
         }
-        @include MQ(MQ-350) {
-          top: -34px;
+        @include MQ(MQ-480) {
+          height: 81px;
         }
       }
     }
