@@ -9,9 +9,10 @@
         class="{% if link.levels ==  2 or linkTitle contains 'shop'%}has-big-nav{%else%}has-sub-nav{%endif%}"
         aria-haspopup="true"
       >
-        {% comment %} href=" {{ link.url}}" {% endcomment %}
+        {% comment %}  {% endcomment %}
 
         <a
+          href=" {{ link.url}}"
           title=" {{ link.title | escape }}"
           class="site-nav__link none-980"
           data-meganav-type="parent"
