@@ -55,5 +55,11 @@
         document.dispatchEvent(cloneDOMContentLoaded);
       });
     </script>
+    <script>
+      let url = window.location.href;
+      if (url.includes('/collections')) {
+        location.href = '/collections/all';
+      }
+    </script>
   </body>
 </html>
