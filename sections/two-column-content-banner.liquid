@@ -1,12 +1,10 @@
-{% if section.settings.title != blank
-  or section.settings.description != blank
-  or section.settings.image1 != blank
-  or section.settings.image2 != blank
-%}
+{% if section.blocks.size > 0 %}
   <div class="content-banner two-column-content-banner">
     <div class="box">
       <ul class="two-column-block">
-        <li></li>
+        {%- for block in section.blocks -%}
+          <li></li>
+        {% endfor %}
       </ul>
     </div>
   </div>
