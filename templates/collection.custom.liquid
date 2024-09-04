@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% comment %}
   {% comment %}
     The contents of the collection.liquid template can be found in /sections/collection-template.liquid
@@ -19,3 +20,26 @@
 <script>
   window.location.href = '/collections/all';
 </script>
+=======
+{% comment %}
+  {% comment %}
+    The contents of the collection.liquid template can be found in /sections/collection-template.liquid
+  {% endcomment %}
+
+  {% section 'custom-collection-template' %}
+
+
+  <style>
+    {% if collection.image%}
+    header{
+      background: transparent;
+    }
+    {%endif%}
+
+    </style>
+{% endcomment %}
+{% section 'custom-collection-template' %}
+<script>
+  window.location.href = '/collections/all';
+</script>
+>>>>>>> 85380d76dd27c47fc037352fe879f15f028b77a4

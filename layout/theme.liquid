@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
@@ -63,3 +64,70 @@
     </script>
   </body>
 </html>
+=======
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=0 ">
+
+    {% include 'head' %}
+    {% include 'sm-og-data' %}
+    {% include 'scripts_head' %}
+
+    {% render 'boost-sd-fallback' %}
+    {{ content_for_header }}
+    {% comment %}
+      <!-- Extra Apps Per Theme-->
+      {% render 'hulkapps-wishlist-js' %}
+      <link href='//hulkapps-wishlist.nyc3.digitaloceanspaces.com/assets/hulkapps-wishlist-styles.css' rel='stylesheet'>
+    {% endcomment %}
+
+    <!-- end-boost-pfs-filter-css -->
+    <script async defer src="https://tools.luckyorange.com/core/lo.js?site-id=8894106a"></script>
+  </head>
+
+  <body class="template-{{ request.page_type | handle }} transparent-header">
+    <script>
+      if (/collections$/.test(window.location.href)) {
+        var url = `${window.location.href}/all`;
+        window.location.href = url;
+      }
+    </script>
+    {% section 'announcement' %}
+    {% section 'header' %}
+    <div class="page-container drawer-page-content" id="PageContainer">
+      <main class="main-content js-focus-hidden js__main-content" id="MainContent" role="main" tabindex="-1">
+        {{ content_for_layout }}
+      </main>
+      {% section 'footer' %}
+    </div>
+    {% include 'scripts_footer' %}
+    {% comment %}
+      <!-- Extra Scripts for Apps-->
+      <!-- Hulk App WishList for PDP -->
+      {% if template != null %}{% endif %}
+      {% render 'hulkappsWishlistPopup' %} {% if template != null %}
+      <script type='text/javascript'
+        src='//hulkapps-wishlist.nyc3.digitaloceanspaces.com/assets/hulkapps-wishlist-global.js'></script>{% endif %}
+      <div data-wishlist-wrapper style='display:none' data-time='2021-06-18'></div>
+    {% endcomment %}
+
+    <!-- end-boost-pfs-js -->
+    {% include 'swym-custom' %}
+    <script>
+      AOS.init();
+      var options = {
+        startEvent: 'cloneDOMContentLoaded',
+      };
+      AOS.init(options);
+
+      document.addEventListener('DOMContentLoaded', function (event) {
+        var cloneDOMContentLoaded = new Event('cloneDOMContentLoaded');
+        document.dispatchEvent(cloneDOMContentLoaded);
+      });
+    </script>
+  </body>
+</html>
+>>>>>>> 85380d76dd27c47fc037352fe879f15f028b77a4
