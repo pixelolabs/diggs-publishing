@@ -11,8 +11,8 @@
   "sections": {
     "innerBanner": {
       "type": "inner-hero-section",
+      "disabled": true,
       "settings": {
-        "image": "{{ page.metafields.custom.hero_banner_background_image_desktop_.value }}",
         "mobileImage": "{{ page.metafields.custom.hero_banner_background_image_mobile_.value }}",
         "title": "{{ page.metafields.custom.hero_banner_title.value }}",
         "description": "{{ page.metafields.custom.hero_banner_description | metafield_tag }}",
@@ -22,15 +22,87 @@
         "content_alignment": "left"
       }
     },
-    "page_default_content_6YCngU": {
-      "type": "page-default-content",
+    "home_hero_banner_U4TPf8": {
+      "type": "home-hero-banner",
       "settings": {
-        "section_class": ""
+        "color_scheme": "scheme-1",
+        "backgroundImage": "shopify:\/\/shop_images\/book-la.png",
+        "pretitle": "Welcome to Diggs Publishing",
+        "title": "WHERE DIVERSE STORIES COME TO LIFE!",
+        "description": "<p>In a word filled with countless stories, Diggs Publishing celebrates the unique tales thaIn a world filled with countless stories, Diggs Publishing celebrates the unique tales that often go untold. Dive into our universe, where each page brings to life characters that truly reflect the world's diverse tapestry.<\/p>",
+        "buttonText": "Join Now",
+        "buttonLink": "shopify:\/\/pages\/about-us"
+      }
+    },
+    "three_column_card_section_XXU9Pt": {
+      "type": "three-column-card-section",
+      "blocks": {
+        "cards_WrVRyg": {
+          "type": "cards",
+          "settings": {
+            "title": "Done-for- You Children's Books",
+            "description": "<p>Turn your vision into a heartwarming tale with our collaborative approach, weaving magic through words and illustrations<\/p>",
+            "btnText": "Read more",
+            "btnLink": "shopify:\/\/pages\/done-for-you-books-2-0"
+          }
+        },
+        "cards_nAdtpL": {
+          "type": "cards",
+          "settings": {
+            "title": "BookTranslations",
+            "description": "<p>Bridge cultural gaps and introduce your story to a global stage, one language at a time.<\/p>",
+            "btnText": "",
+            "btnLink": ""
+          }
+        },
+        "cards_pq7FmH": {
+          "type": "cards",
+          "settings": {
+            "title": "ComprehensiveBook Review",
+            "description": "<p>Constructive feedback torefine your narrative and enhance its resonance.<\/p>",
+            "btnText": "",
+            "btnLink": ""
+          }
+        },
+        "cards_y3HC6R": {
+          "type": "cards",
+          "settings": {
+            "title": "Tailored Marketing Plans",
+            "description": "<p>Your story is unique. Your marketing plan should be too. Let us help you find your niche audience.<\/p>",
+            "btnText": "",
+            "btnLink": ""
+          }
+        },
+        "cards_xWbaVw": {
+          "type": "cards",
+          "settings": {
+            "title": "Children's Book Mentoring",
+            "description": "<p>Bridge cultural gaps and introduce your story to a global stage, one language at a time.<\/p>",
+            "btnText": "Read more",
+            "btnLink": "shopify:\/\/pages\/publishing-mentoring-2-0"
+          }
+        }
+      },
+      "block_order": [
+        "cards_WrVRyg",
+        "cards_nAdtpL",
+        "cards_pq7FmH",
+        "cards_y3HC6R",
+        "cards_xWbaVw"
+      ],
+      "settings": {
+        "heading": "Services We Offer",
+        "backgroundtransparent": true,
+        "paddingtop": 90,
+        "paddingtopmobile": 90,
+        "paddingbottom": 114,
+        "paddingbottomMobile": 80
       }
     }
   },
   "order": [
     "innerBanner",
-    "page_default_content_6YCngU"
+    "home_hero_banner_U4TPf8",
+    "three_column_card_section_XXU9Pt"
   ]
 }
