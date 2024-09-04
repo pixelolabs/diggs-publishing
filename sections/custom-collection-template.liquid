@@ -3,7 +3,8 @@
   <div
     class="collection"
     data-section-id="{{ section.id }}"
-    data-section-type="collection-template">
+    data-section-type="collection-template"
+  >
     <div class="inner-hero-section-collection ">
       <div class="inner">
         <div class="container-1320">
@@ -19,7 +20,7 @@
                   {% assign link = collection.metafields.custom_links.link[forloop.index0] %}
 
                   <li>
-                    <a href="{{link}}">
+                    <a href="{{link}}" title="{{ title }}">
                       {% if collection.metafields.custom_links.image[forloop.index0] != blank %}
                         {% assign image = collection.metafields.custom_links.image[forloop.index0] | first %}
                         <div class="image-section">
@@ -43,7 +44,8 @@
       id="CollectionSection"
       data-section-id="{{ section.id }}"
       data-section-type="collection-template"
-      data-sort-enabled="{{ section.settings.sort_enable }}">
+      data-sort-enabled="{{ section.settings.sort_enable }}"
+    >
       <div class="container-1320">
         <div class="collection-filter-section flex">
           {% if section.settings.sort_enable %}
@@ -59,13 +61,15 @@
                 class="filters-toolbar__input hidden custom-dropdown-select"
                 aria-describedby="a11y-refresh-page-message a11y-selection-message"
                 data-default-sortby="{{ collection.default_sort_by }}"
-                data-select-input>
+                data-select-input
+              >
                 {%- for option in collection.sort_options -%}
                   <option
                     value="{{ option.value }}"
                     {% if option.value == sort_by %}
-                    selected="selected"
-                    {% endif %}>
+                      selected="selected"
+                    {% endif %}
+                  >
                     {{ option.name }}
                   </option>
                 {%- endfor -%}
@@ -97,20 +101,22 @@
         <ul class="collection__product-list flex">
           {% for productRelated in collection.products %}
             <li class="product-card">
-              {% include 'product_Card' with productRelated: productRelated
+              {%
+                include 'product_Card' with productRelated: productRelated
                 , show_price: true
                 , show_tags: true
                 , show_auto_tags: true
                 , show_title: true
                 , show_fav: true
-                , show_secondary_button: false %}
+                , show_secondary_button: false
+              %}
             </li>
           {% else %}
-            {% comment %} 
-                            Add default products to help with onboarding for collections/all only.
-                            The onboarding styles and products are only loaded if the
-                            store has no products. 
-                        {% endcomment %}
+            {% comment %}
+              Add default products to help with onboarding for collections/all only.
+              The onboarding styles and products are only loaded if the
+              store has no products.
+            {% endcomment %}
             {% if collection.handle == 'all' and collection.all_vendors.size == 0 and collection.all_types.size == 0 %}
               <li class="grid__item product-card 22">
                 <div class="grid grid--uniform">
@@ -146,8 +152,7 @@
       </div>
       {%- if paginate.pages > 1 -%}
         <div class="container-1380">
-          {% include 'pagination'
-            , paginate: paginate %}
+          {% include 'pagination', paginate: paginate %}
         </div>
       {%- endif -%}
     </div>
@@ -155,67 +160,67 @@
 {% endpaginate %}
 
 {% schema %}
-  {
-    "name": {
-      "en": "Collection pages"
+{
+  "name": {
+    "en": "Collection pages"
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "subTitle",
+      "label": "SubTitle for Collection All"
     },
-    "settings": [
-      {
-        "type": "text",
-        "id": "subTitle",
-        "label": "SubTitle for Collection All"
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image for Collection All"
+    },
+    {
+      "type": "range",
+      "id": "grid",
+      "label": {
+        "en": "Products per row (grid only)"
       },
-      {
-        "type": "image_picker",
-        "id": "image",
-        "label": "Image for Collection All"
+      "default": 4,
+      "min": 2,
+      "max": 5,
+      "step": 1
+    },
+    {
+      "type": "range",
+      "id": "rows",
+      "label": {
+        "en": "Rows per page (grid only)"
       },
-      {
-        "type": "range",
-        "id": "grid",
-        "label": {
-          "en": "Products per row (grid only)"
-        },
-        "default": 4,
-        "min": 2,
-        "max": 5,
-        "step": 1
+      "default": 2,
+      "min": 2,
+      "max": 8,
+      "step": 1
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": {
+        "en": "Show product vendors"
       },
-      {
-        "type": "range",
-        "id": "rows",
-        "label": {
-          "en": "Rows per page (grid only)"
-        },
-        "default": 2,
-        "min": 2,
-        "max": 8,
-        "step": 1
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "sort_enable",
+      "label": {
+        "en": "Enable sorting"
       },
-      {
-        "type": "checkbox",
-        "id": "show_vendor",
-        "label": {
-          "en": "Show product vendors"
-        },
-        "default": false
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "tags_enable",
+      "label": {
+        "en": "Enable tag filtering"
       },
-      {
-        "type": "checkbox",
-        "id": "sort_enable",
-        "label": {
-          "en": "Enable sorting"
-        },
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "tags_enable",
-        "label": {
-          "en": "Enable tag filtering"
-        },
-        "default": true
-      }
-    ]
-  }
+      "default": true
+    }
+  ]
+}
 {% endschema %}

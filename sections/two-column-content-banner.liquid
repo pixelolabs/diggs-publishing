@@ -1,0 +1,59 @@
+{% if section.blocks.size > 0 %}
+  <div class=" two-column-content-banner">
+    <div class="box">
+      <ul class="two-column-block">
+        {%- for block in section.blocks -%}
+          <li class="column">
+            {% if block.settings.icon != blank %}
+              <div class="icon-section">
+                {{ block.settings.icon | image_url: width: 100 | image_tag: loading: 'lazy', widths: '100x100' }}
+              </div>
+            {% endif %}
+            <h2 class="h3">{{ block.settings.title }}</h2>
+            {% if block.settings.description != blank %}
+              <div class="description">
+                {{ block.settings.description }}
+              </div>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endif %}
+{% schema %}
+{
+  "name": "Two Column Content Banner",
+
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Column",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon",
+          "info": "100 x 100px Recommended"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Two Column Content Banner"
+    }
+  ]
+}
+{% endschema %}

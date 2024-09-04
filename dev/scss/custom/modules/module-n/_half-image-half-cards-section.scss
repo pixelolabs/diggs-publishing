@@ -101,6 +101,15 @@
   }
   .bottom-description {
     margin-top: 49px;
+    h3 {
+      font-size: 30px;
+      @include MQ(MQ-768) {
+        font-size: 24px;
+      }
+      @include MQ(MQ-480) {
+        font-size: 18px;
+      }
+    }
   }
   .half-image-half-cards {
     align-items: center;
@@ -267,6 +276,9 @@
         }
         .content {
           width: calc(100% - 62px);
+        }
+        .description {
+          margin-top: 8px;
         }
       }
     }

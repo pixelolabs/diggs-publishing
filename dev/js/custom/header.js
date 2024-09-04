@@ -6,11 +6,11 @@ jQuery(function() {
         resistance: false,
         shortSwipes: true,
         loop:true,
-        autoHeight: true,
+        
         autoplay: {
             delay: 3000,
         },
-        direction: 'vertical',
+        // direction: 'vertical',
         
 
     });

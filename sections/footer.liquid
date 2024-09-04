@@ -6,7 +6,12 @@
           {%- for block in section.blocks limit: 6 %}
             {% if block.settings.instaImage != blank %}
               <li>
-                <a href="{{ block.settings.InstaLink }}" target="_blank" class="image-section">
+                <a
+                  href="{{ block.settings.InstaLink }}"
+                  target="_blank"
+                  class="image-section"
+                  title="{{ block.settings.InstaLink }}"
+                >
                   {{
                     block.settings.instaImage
                     | image_url: width: 1262
@@ -35,7 +40,12 @@
           {% for block in section.blocks offset: 6 %}
             {% if block.settings.instaImage != blank %}
               <li>
-                <a href="{{ block.settings.InstaLink }}" target="_blank" class="image-section">
+                <a
+                  href="{{ block.settings.InstaLink }}"
+                  target="_blank"
+                  class="image-section"
+                  title="{{ block.settings.InstaLink }}"
+                >
                   {{
                     block.settings.instaImage
                     | image_url: width: 1262
@@ -121,7 +131,7 @@
           </div>
         </div>
         <div class="footer-cartoon">
-          <img src="{{ "Footer-cartoon.jpg" |asset_url}}" alt="">
+          <img src="{{ "Footer-cartoon.jpg" |asset_url}}" alt="cartoon-figures">
         </div>
       </div>
     </div>

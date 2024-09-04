@@ -1,7 +1,7 @@
 .logo-slider {
   position: relative;
   padding: 0px 0px 58px 0px;
-  background-color: $color-off-white;
+  background-color: var(--gradient-background);
   position: relative;
   z-index: 2;
   @include MQ(MQ-600) {

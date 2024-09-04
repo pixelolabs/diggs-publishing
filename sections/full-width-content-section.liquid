@@ -1,6 +1,6 @@
 {% if section.settings.title != blank %}
   <div
-    class="full-width-content-section {% if section.settings.backgroundcolor == true %} blue-bg {% endif %}"
+    class="full-width-content-section"
     style="background-color:{{ section.settings.bgColor }};"
   >
     <div class="top-wave">
@@ -69,15 +69,12 @@
       "type": "header",
       "content": "Background Settings"
     },
-    {
-      "type": "checkbox",
-      "id": "backgroundcolor",
-      "label": "Do you want to change the background to blue?"
-    },
+
     {
       "type": "color",
       "id": "bgColor",
-      "label": "Background Color"
+      "label": "Background Color",
+      "default": "#53aa42"
     }
   ],
   "presets": [

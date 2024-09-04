@@ -104,7 +104,9 @@
           <li>
             <div class="title uppercase">Email us on:</div>
             <div>
-              <a href="mailto:{{settings.emailAddress}}">{{ settings.emailAddress }}</a>
+              <a href="mailto:{{settings.emailAddress}}" title="{{ settings.emailAddress }}">
+                {{- settings.emailAddress -}}
+              </a>
             </div>
           </li>
         </ul>

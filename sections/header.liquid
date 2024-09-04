@@ -3,7 +3,7 @@
   <div class="main-header js__main-header">
     <div class="container-1400 flex-align-center">
       <div class="header-logo relative">
-        <a href="{{ routes.root_url }}" itemprop="url" alt="{{shop.name}}">
+        <a href="{{ routes.root_url }}" itemprop="url" title="{{shop.name}}">
           {% if section.settings.logo != blank %}
             <img
               src="{{section.settings.logo | img_url: 'master' }}"
@@ -118,7 +118,7 @@
             {% if customer %}
               <a href="/account" title="My Account" class="user site-nav__link">
                 {% include 'icon-account' %}
-                </a>
+              </a>
             {% else %}
               <a href="/account/login" title="Log In" class="user site-nav__link">
                 {% include 'icon-account' %}

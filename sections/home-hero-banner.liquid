@@ -1,5 +1,5 @@
 {% if section.settings.title != blank %}
-  <div class="slider hero-banner-slider   {% if section.blocks.size > 1 %} js__hero-banner-slider  padding-left-right {% endif %} color-{{ section.settings.color_scheme }}">
+  <div class="slider hero-banner-slider color-{{ section.settings.color_scheme }} {% if section.settings.bluegradient == true %} blue-gradient{% endif %}">
     <div class="swiper-wrapper">
       {% if section.settings.backgroundImage != blank or section.settings.videobanner != blank %}
         <div
@@ -109,6 +109,15 @@
       "type": "url",
       "id": "buttonLink",
       "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "Extra Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "bluegradient",
+      "label": "Change the background to blue gradient"
     }
   ],
 

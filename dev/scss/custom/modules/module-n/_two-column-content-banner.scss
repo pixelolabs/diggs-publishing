@@ -1,0 +1,174 @@
+.two-column-content-banner {
+  position: relative;
+  background: transparent;
+  padding: 0 20px;
+  @include MQ(MQ-480) {
+    padding: 0 12px;
+  }
+  &::before {
+    background: url("yellow-wave.webp") repeat left / 1327px;
+    height: 156.5px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 42px;
+    content: "";
+    z-index: 2;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(80%) saturate(387%)
+      hue-rotate(327deg) brightness(110%) contrast(104%);
+    @include MQ(MQ-480) {
+      background: url(yellow-wave.webp) repeat center / 1327px;
+      height: 154px;
+
+      top: -18px;
+    }
+  }
+  .box {
+    max-width: 1030px;
+    z-index: 4;
+    width: 100%;
+
+    margin: 0 auto;
+    margin-top: -133px;
+    @include MQ(MQ-480) {
+      margin-top: -55px;
+    }
+    border-radius: 30px;
+    border: solid 3px $color-yellow;
+    background: url("cloud.webp") no-repeat center bottom -55px / 100% $color-sky-blue;
+    padding: 48px 83px;
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+    @include MQ(MQ-768) {
+      padding: 48px 50px;
+      background: url("cloud.webp") no-repeat center bottom -35px / 100% $color-sky-blue;
+    }
+    @include MQ(MQ-600) {
+      background: url("cloud.webp") no-repeat center bottom 0px / 100%
+        $color-sky-blue;
+      padding: 40px 30px;
+    }
+    &::before {
+      width: 97.8px;
+      height: 67.3px;
+      content: "";
+      position: absolute;
+      left: 127px;
+      z-index: 1;
+      top: -34px;
+      background: url("planet.svg") no-repeat center / contain;
+      @include MQ(MQ-768) {
+        width: 60px;
+        height: 40px;
+        left: 36px;
+        z-index: 1;
+        top: -20px;
+      }
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      width: 14.255px;
+      height: 17.976px;
+      left: 69px;
+      top: 45.37px;
+      background: url(graphic-white-start.svg) no-repeat center/100%;
+    }
+  }
+  .two-column-block {
+    width: calc(100% + 146px);
+    margin-left: -146px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    // align-items: center;
+    position: relative;
+    @include MQ(MQ-980) {
+      width: calc(100% + 100px);
+      margin-left: -100px;
+    }
+    @include MQ(MQ-768) {
+      width: calc(100% + 50px);
+      margin-left: -50px;
+    }
+    @include MQ(MQ-600) {
+      flex-direction: column;
+      width: 100%;
+      margin-left: 0px;
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      width: 14.255px;
+      height: 17.976px;
+      left: 200px;
+      right: -50px;
+      margin: 0 auto;
+      top: 52px;
+      background: url(graphic-white-start.svg) no-repeat center / 100%;
+      @include MQ(MQ-600) {
+        top: 252px;
+      }
+    }
+    .column {
+      width: calc(50% - 146px);
+      margin-left: 146px;
+      text-align: center;
+      @include MQ(MQ-980) {
+        width: calc(50% - 100px);
+        margin-left: 100px;
+      }
+      @include MQ(MQ-768) {
+        width: calc(50% - 50px);
+        margin-left: 50px;
+      }
+      @include MQ(MQ-600) {
+        width: 100%;
+        margin-left: 0;
+      }
+      .icon-section {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto;
+        @include MQ(MQ-600) {
+          width: 50px;
+          height: 50px;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          object-position: top;
+        }
+      }
+      h2 {
+        font-size: 30px;
+        color: $color-pink;
+        margin-top: 23px;
+        @include MQ(MQ-768) {
+          font-size: 25px;
+        }
+        @include MQ(MQ-480) {
+          font-size: 20px;
+        }
+      }
+      .description {
+        margin-top: 9px;
+        p {
+          font-size: 14px;
+        }
+      }
+      &:first-child {
+        @include MQ(MQ-600) {
+          margin-bottom: 40px;
+        }
+      }
+      &:last-child {
+        h2 {
+          color: $color-orange;
+        }
+      }
+    }
+  }
+}

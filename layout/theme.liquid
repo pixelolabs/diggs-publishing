@@ -22,6 +22,12 @@
   </head>
 
   <body class="template-{{ request.page_type | handle }} transparent-header">
+    <script>
+      if (/collections$/.test(window.location.href)) {
+        var url = `${window.location.href}/all`;
+        window.location.href = url;
+      }
+    </script>
     {% section 'announcement' %}
     {% section 'header' %}
     <div class="page-container drawer-page-content" id="PageContainer">
