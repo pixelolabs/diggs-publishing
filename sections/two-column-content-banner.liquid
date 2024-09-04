@@ -5,26 +5,9 @@
 %}
   <div class="content-banner two-column-content-banner">
     <div class="box">
-      {% if section.settings.image1 != blank %}
-        <div class="left-image">
-          {% comment %} <img src="{{ 'baby-1.webp' | asset_url }}"> {% endcomment %}
-          {{ section.settings.image1 | image_url: width: 600 | image_tag: loading: 'lazy', widths: '600x600' }}
-        </div>
-      {% endif %}
-      {% if section.settings.title != blank %}
-        <div class="content">
-          <h2 class="medium">{{ section.settings.title }}</h2>
-          {% if section.settings.description != blank %}
-            <div class="medium">{{ section.settings.description }}</div>
-          {% endif %}
-        </div>
-      {% endif %}
-      {% if section.settings.image2 != blank %}
-        <div class="right-image">
-          {% comment %} <img src="{{ 'baby-2.webp' | asset_url }}"> {% endcomment %}
-          {{ section.settings.image2 | image_url: width: 600 | image_tag: loading: 'lazy', widths: '600x600' }}
-        </div>
-      {% endif %}
+      <ul class="two-column-block">
+        <li></li>
+      </ul>
     </div>
   </div>
 {% endif %}
@@ -55,9 +38,34 @@
       "info": "600 x 600px Recommended"
     }
   ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Column",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon",
+          "info": "100 x 100px Recommended"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
-      "name": "Content Banner"
+      "name": "Two Column Content Banner"
     }
   ]
 }
