@@ -19,7 +19,8 @@
         "title": "Diverse Children’s Books collections",
         "description": "<p>In a word filled with countless stories, Diggs Publishing celebrates the unique tales that often go untold.<\/p>",
         "buttonText": "Order Now",
-        "buttonLink": "shopify:\/\/collections"
+        "buttonLink": "shopify:\/\/collections",
+        "bluegradient": false
       }
     },
     "content_banner_maXcHf": {
@@ -204,6 +205,7 @@
         "logo_jCikGR"
       ],
       "settings": {
+        "color_scheme": "scheme-7772dde2-4ded-4c9a-aaae-0b71d2e9dd67",
         "title": "Charities Krystaelynne Works With and Supports",
         "paddingtop": 0,
         "paddingtopmobile": 0,
