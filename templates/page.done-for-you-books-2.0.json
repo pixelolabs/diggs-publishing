@@ -12,25 +12,18 @@
     "innerBanner": {
       "type": "inner-hero-section",
       "settings": {
-        "image": "{{ page.metafields.custom.hero_banner_background_image_desktop_.value }}",
-        "mobileImage": "{{ page.metafields.custom.hero_banner_background_image_mobile_.value }}",
-        "title": "{{ page.metafields.custom.hero_banner_title.value }}",
-        "description": "{{ page.metafields.custom.hero_banner_description | metafield_tag }}",
-        "buttonText1": "{{ page.metafields.custom.hero_banner_button_text.value }}",
-        "buttonLink1": "{{ page.metafields.custom.hero_banner_button_link.value }}",
-        "button_bg": "pink",
+        "image": "shopify:\/\/shop_images\/childrens-book.jpg",
+        "mobileImage": "shopify:\/\/shop_images\/m-childrens-book.jpg",
+        "title": "Done-For-You Children's Book",
+        "description": "<p>Turn your vision into a heartwarming tale with our collaborative approach, weaving magic through words and illustrations.<br\/><\/p>",
+        "buttonText1": "Order Now",
+        "buttonLink1": "shopify:\/\/pages\/publishing-checkout",
+        "button_bg": "green",
         "content_alignment": "left"
-      }
-    },
-    "page_default_content_6YCngU": {
-      "type": "page-default-content",
-      "settings": {
-        "section_class": ""
       }
     }
   },
   "order": [
-    "innerBanner",
-    "page_default_content_6YCngU"
+    "innerBanner"
   ]
 }
