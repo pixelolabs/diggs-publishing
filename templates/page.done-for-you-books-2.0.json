@@ -71,10 +71,111 @@
         "paddingbottom": 0,
         "paddingbottomMobile": 0
       }
+    },
+    "three_column_card_section_EtqQbx": {
+      "type": "three-column-card-section",
+      "blocks": {
+        "cards_iFJdxJ": {
+          "type": "cards",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Vectord.svg",
+            "title": "Co-creative Process",
+            "description": "<p>Join Krystaelynne in a collaborative journey. Share your vision, your passion, and your unique perspectives.<\/p>",
+            "btnText": "",
+            "btnLink": ""
+          }
+        },
+        "cards_7ghW6m": {
+          "type": "cards",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/The_Rising_Tide.svg",
+            "title": "Stunning Visuals",
+            "description": "<p>Complementing the engaging narrative, our artists create vivid illustrations that pull young readers into the heart of your story.<\/p>",
+            "btnText": "",
+            "btnLink": ""
+          }
+        },
+        "cards_CLYQkK": {
+          "type": "cards",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Vectorc.svg",
+            "title": "Editorial Excellence",
+            "description": "<p>Perfecting the tale with finesse and precision to ensure every word, sentence, and paragraph flows seamlessly.<\/p>",
+            "btnText": "",
+            "btnLink": ""
+          }
+        }
+      },
+      "block_order": [
+        "cards_iFJdxJ",
+        "cards_7ghW6m",
+        "cards_CLYQkK"
+      ],
+      "settings": {
+        "heading": "Crafted with Care, Tailored to You",
+        "backgroundtransparent": false,
+        "paddingtop": 100,
+        "paddingtopmobile": 80,
+        "paddingbottom": 120,
+        "paddingbottomMobile": 100
+      }
+    },
+    "half_image_half_cards_section_jWRNNW": {
+      "type": "half-image-half-cards-section",
+      "blocks": {
+        "card_PeQX8E": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/touch_of_authenticity.svg",
+            "title": "Turn Dreams into Legacy",
+            "carddescription": "<p>Your story deserves to be told. Let Krystaelynne Sanders Diggs and the Diggs Publishing team be the ones to share it with the world. Ready to embark on this literary journey?<\/p>",
+            "cardColor": "#d51f91"
+          }
+        },
+        "card_JfDdEj": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/profiund_passion.svg",
+            "title": "Seize the Moment",
+            "carddescription": "<p>Dive into the world of children's literature with us.<\/p>",
+            "cardColor": "#81c573"
+          }
+        }
+      },
+      "block_order": [
+        "card_PeQX8E",
+        "card_JfDdEj"
+      ],
+      "settings": {
+        "heading": "Why Settle for Ordinary?",
+        "subTitle": "",
+        "description": "<p>In the vast world of children's literature, make your mark with a story that stands out – a story that resonates, educates, and fascinates. With Krystaelynne and the Diggs Publishing team by your side, every page turned will be an unforgettable adventure for young readers.<\/p>",
+        "image": "shopify:\/\/shop_images\/children-with-book.png",
+        "bottomdescription": "<h3>Let’s create magic together. Connect now.<\/h3>",
+        "btnText": "Book Your Session Now",
+        "btnLink": "shopify:\/\/pages\/publishing-checkout",
+        "image_position": "left",
+        "wave_color": "transparent-wave",
+        "paddingtop": 102,
+        "paddingtopmobile": 80,
+        "paddingbottom": 120,
+        "paddingbottomMobile": 80
+      }
+    },
+    "contact_form_with_text_6LV7zp": {
+      "type": "contact-form-with-text",
+      "settings": {
+        "title": "Reach out to us",
+        "address": "<p>3558 Round Barn Blvd, Suite\u2028200 Santa Rosa, CA 95403<\/p>",
+        "bgColor": ""
+      }
     }
   },
   "order": [
     "innerBanner",
-    "half_image_half_content_FXTpyc"
+    "half_image_half_content_FXTpyc",
+    "three_column_card_section_EtqQbx",
+    "half_image_half_cards_section_jWRNNW",
+    "contact_form_with_text_6LV7zp"
   ]
 }
