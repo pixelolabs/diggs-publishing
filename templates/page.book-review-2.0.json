@@ -97,9 +97,9 @@
       "settings": {
         "heading": "A Trusted Guide on Your Literary Journey",
         "backgroundtransparent": false,
-        "paddingtop": 100,
+        "paddingtop": 80,
         "paddingtopmobile": 80,
-        "paddingbottom": 80,
+        "paddingbottom": 100,
         "paddingbottomMobile": 60
       }
     }
