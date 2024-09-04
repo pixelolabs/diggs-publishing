@@ -4,9 +4,10 @@
       <ul class="two-column-block">
         {%- for block in section.blocks -%}
           <li class="column">
-            <div class="iccon-section">
+            <div class="icon-section">
               {{ block.settings.icon | image_url: width: 100 | image_tag: loading: 'lazy', widths: '100x100' }}
             </div>
+            <h2 class="h3"></h2>
           </li>
         {% endfor %}
       </ul>
@@ -16,30 +17,7 @@
 {% schema %}
 {
   "name": "Two Column Content Banner",
-  "settings": [
-    {
-      "type": "text",
-      "id": "title",
-      "label": "Title"
-    },
-    {
-      "type": "richtext",
-      "id": "description",
-      "label": "Description"
-    },
-    {
-      "type": "image_picker",
-      "id": "image1",
-      "label": "Child Image First",
-      "info": "600 x 600px Recommended"
-    },
-    {
-      "type": "image_picker",
-      "id": "image2",
-      "label": "Child Image Second",
-      "info": "600 x 600px Recommended"
-    }
-  ],
+
   "blocks": [
     {
       "type": "column",
