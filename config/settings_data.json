@@ -150,7 +150,7 @@
           "announcement_UWp6dr": {
             "type": "announcement",
             "settings": {
-              "header_text": "<p>Sale! On the Newsest Collection<\/p>",
+              "header_text": "<p>Sale! On the Newsest Collection Sale! On the Newsest Collection Sale! On the Newsest Collection Sale! On the Newsest Collection Sale! On the Newsest Collection<\/p>",
               "announcement_link": "shopify:\/\/products\/cocoa-butter-baby",
               "announcement_link_text": "Shop Now"
             }
@@ -350,9 +350,9 @@
       },
       "scheme-2": {
         "settings": {
-          "background": "#ffffff",
+          "background": "rgba(0,0,0,0)",
           "background_gradient": "",
-          "text": "#000000",
+          "text": "#3b2900",
           "button": "#000000",
           "button_label": "#ffffff",
           "secondary_button_label": "#000000",
@@ -390,6 +390,17 @@
           "button_label": "#ffffff",
           "secondary_button_label": "#ffffff",
           "shadow": "rgba(0,0,0,0)"
+        }
+      },
+      "scheme-7772dde2-4ded-4c9a-aaae-0b71d2e9dd67": {
+        "settings": {
+          "background": "#fff6dc",
+          "background_gradient": "",
+          "text": "#3b2900",
+          "button": "#233107",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#1a1b1b",
+          "shadow": "#1a1b1b"
         }
       }
     }

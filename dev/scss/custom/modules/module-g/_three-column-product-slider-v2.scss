@@ -99,6 +99,11 @@
 
   &.pdp {
     padding: 0px 40px 250px;
+    @include MQ(MQ-480) {
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 150px;
+    }
     background: $color-off-white-light;
     .top-section {
       &::before {
