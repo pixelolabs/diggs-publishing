@@ -7,7 +7,12 @@
             <div class="icon-section">
               {{ block.settings.icon | image_url: width: 100 | image_tag: loading: 'lazy', widths: '100x100' }}
             </div>
-            <h2 class="h3"></h2>
+            <h2 class="h3">{{ block.settings.title }}</h2>
+            {% if block.settings.description != blank %}
+              <div class="description">
+                {{ block.settings.description }}
+              </div>
+            {% endif %}
           </li>
         {% endfor %}
       </ul>
