@@ -34,6 +34,33 @@
         "buttonLink": "shopify:\/\/pages\/about-us"
       }
     },
+    "two_column_content_banner_jAnqmw": {
+      "type": "two-column-content-banner",
+      "blocks": {
+        "column_eUCJa7": {
+          "type": "column",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/our-vision.svg",
+            "title": "Our Mission",
+            "description": "<p>Every child, regardless of background, deserves to see themselves as the hero of<br\/>their own story. At Diggs Publishing, we endeavor to make that vision a reality by fostering a rich collection of inclusive and diverse children's literature<\/p>"
+          }
+        },
+        "column_qVK7fz": {
+          "type": "column",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/our-mission.svg",
+            "title": "Our Mission",
+            "description": "<p>Every child, regardless of background, deserves to see themselves as the hero of their own story. At Diggs Publishing, we endeavor to make that vision a reality by fostering a rich collection of inclusive and diverse children's literature<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_eUCJa7",
+        "column_qVK7fz"
+      ],
+      "settings": {
+      }
+    },
     "three_column_card_section_XXU9Pt": {
       "type": "three-column-card-section",
       "blocks": {
@@ -181,22 +208,15 @@
         "address": "<p>3558 Round Barn Blvd, Suite\u2028200 Santa Rosa, CA 95403<\/p>",
         "bgColor": "#81c573"
       }
-    },
-    "content_banner_BNVPpd": {
-      "type": "content-banner",
-      "settings": {
-        "title": "",
-        "description": ""
-      }
     }
   },
   "order": [
     "innerBanner",
     "home_hero_banner_U4TPf8",
+    "two_column_content_banner_jAnqmw",
     "three_column_card_section_XXU9Pt",
     "logo_slider_TPawXG",
     "full_width_content_section_RiQPxM",
-    "contact_form_with_text_Ey44NQ",
-    "content_banner_BNVPpd"
+    "contact_form_with_text_Ey44NQ"
   ]
 }
