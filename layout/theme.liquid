@@ -56,9 +56,9 @@
       });
     </script>
     <script>
-      let url = window.location.href;
-      if (url.includes('/collections')) {
-        location.href = '/collections/all';
+      if (/collections$/.test(window.location.href)) {
+        var url = `${window.location.href}/all`;
+        window.location.href = url;
       }
     </script>
   </body>
