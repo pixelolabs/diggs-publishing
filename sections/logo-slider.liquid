@@ -14,7 +14,7 @@
   }
 {%- endstyle -%}
 {% if section.blocks.size > 0 %}
-  <div class="logo-slider section-{{ section.id }}-padding">
+  <div class="logo-slider section-{{ section.id }}-padding color-{{ section.settings.color_scheme }}">
     <div class="container-1260">
       {% if section.settings.title != blank %}
         <h2 class="medium">
@@ -52,6 +52,12 @@
 {
   "name": "Logo Slider",
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
     {
       "type": "text",
       "id": "title",
