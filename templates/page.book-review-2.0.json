@@ -102,11 +102,74 @@
         "paddingbottom": 100,
         "paddingbottomMobile": 60
       }
+    },
+    "half_image_half_cards_section_e6KbTy": {
+      "type": "half-image-half-cards-section",
+      "blocks": {
+        "card_T8Gy8Q": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/touch_of_authenticity.svg",
+            "title": "Narrative Nuances",
+            "carddescription": "<p>Crafting a story that flows seamlessly, captivating young readers from the first page to the last, requires meticulous attention. Our keen eyes ensure your tale maintains that mesmerizing rhythm.<\/p>",
+            "cardColor": "#d51f91"
+          }
+        },
+        "card_cdyNbJ": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/profiund_passion.svg",
+            "title": "Creating Memorable Characters",
+            "carddescription": "<p>Every child deserves a hero they can root for,relate to, and remember. Your characters will be assessed for depth, growth, and their ability to resonate with young hearts.<\/p>",
+            "cardColor": "#81c573"
+          }
+        },
+        "card_nqW646": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/perfect_partnership.svg",
+            "title": "Constructive Critique",
+            "carddescription": "<p>Feedback isn't just about pointing out flaws. It's about celebrating what works, understanding what doesn't, and envisioning how it can be better. Every suggestion aims to refine, reshape, and rejuvenate your narrative.<\/p>",
+            "cardColor": "#ff6520"
+          }
+        },
+        "card_jhdxpG": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/perfect_partnership.svg",
+            "title": "Empowering Your Voice",
+            "carddescription": "<p>Each story has a unique voice, a distinct echo. Our goal is to amplify that voice, ensuring it reaches its full potential and resonates with its intended audience.<\/p>",
+            "cardColor": "#49d1ef"
+          }
+        }
+      },
+      "block_order": [
+        "card_T8Gy8Q",
+        "card_cdyNbJ",
+        "card_nqW646",
+        "card_jhdxpG"
+      ],
+      "settings": {
+        "heading": "The Journey to Perfection",
+        "subTitle": "",
+        "description": "",
+        "image": "shopify:\/\/shop_images\/Vector_9f50d425-929a-45de-aa21-cf04700ae8e7.png",
+        "bottomdescription": "",
+        "btnText": "",
+        "btnLink": "",
+        "image_position": "left",
+        "wave_color": "blue-wave",
+        "paddingtop": 102,
+        "paddingtopmobile": 80,
+        "paddingbottom": 180,
+        "paddingbottomMobile": 80
+      }
     }
   },
   "order": [
     "innerBanner",
     "half_image_half_content_B7aej8",
-    "three_column_card_section_J3Pen9"
+    "three_column_card_section_J3Pen9",
+    "half_image_half_cards_section_e6KbTy"
   ]
 }
