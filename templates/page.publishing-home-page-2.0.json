@@ -181,6 +181,13 @@
         "address": "<p>3558 Round Barn Blvd, Suite\u2028200 Santa Rosa, CA 95403<\/p>",
         "bgColor": "#81c573"
       }
+    },
+    "content_banner_BNVPpd": {
+      "type": "content-banner",
+      "settings": {
+        "title": "",
+        "description": ""
+      }
     }
   },
   "order": [
@@ -189,6 +196,7 @@
     "three_column_card_section_XXU9Pt",
     "logo_slider_TPawXG",
     "full_width_content_section_RiQPxM",
-    "contact_form_with_text_Ey44NQ"
+    "contact_form_with_text_Ey44NQ",
+    "content_banner_BNVPpd"
   ]
 }
