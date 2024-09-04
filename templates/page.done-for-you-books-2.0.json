@@ -21,9 +21,60 @@
         "button_bg": "green",
         "content_alignment": "left"
       }
+    },
+    "half_image_half_content_FXTpyc": {
+      "type": "half-image-half-content",
+      "blocks": {
+        "image_fdRpnE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/6a7b283c7eb3cdbc7a746d26b1641195.png",
+            "showVideo": false,
+            "video": "",
+            "pretitle": "",
+            "title": "Craft Your Children's Book with Confidence",
+            "description": "<p>Understanding the publishing process is essential for turning your manuscript into a published book. Krystaelynne will demystify the world of publishing, guiding you through manuscript development, editing, design, and even marketing strategies. You'll learn the ins and outs of the industry, empowering you to make informed decisions about your work.<\/p>",
+            "buttonText": "Book Here",
+            "buttonLink": "shopify:\/\/pages\/publishing-checkout",
+            "background_color": "transparent-bg",
+            "fontSize": false,
+            "center": false
+          }
+        },
+        "image_aipNnV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/138e9e5a56d1f337db94a6d44239a389.png",
+            "showVideo": false,
+            "video": "",
+            "pretitle": "",
+            "title": "Elevate Your Children's Book with Personalized Mentorship",
+            "description": "<p>Are you ready to take your children's book writing to the next level? It all begins with a single step. Make an appointment with Krystaelynne Sanders Diggs for a mentoring session today to realize your full potential as a children's book author. Krystaelynne is here to help you succeed, whether you have a specific project in mind or simply want to improve your skills. Don't pass up this chance to transform your storytelling and leave a lasting impression on young readers. Your journey has just begun.<br\/><\/p>",
+            "buttonText": "Book Here",
+            "buttonLink": "shopify:\/\/pages\/publishing-checkout",
+            "background_color": "transparent-bg",
+            "fontSize": false,
+            "center": false
+          }
+        }
+      },
+      "block_order": [
+        "image_fdRpnE",
+        "image_aipNnV"
+      ],
+      "settings": {
+        "section_class": "",
+        "image_position": "left",
+        "wave_color": "transparent-wave",
+        "paddingtop": 0,
+        "paddingtopmobile": 0,
+        "paddingbottom": 0,
+        "paddingbottomMobile": 0
+      }
     }
   },
   "order": [
-    "innerBanner"
+    "innerBanner",
+    "half_image_half_content_FXTpyc"
   ]
 }
