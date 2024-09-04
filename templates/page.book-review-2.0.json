@@ -1,0 +1,63 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "innerBanner": {
+      "type": "inner-hero-section",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/book-review.jpg",
+        "mobileImage": "shopify:\/\/shop_images\/m-book-review.jpg",
+        "title": "Comprehensive Book Review",
+        "description": "<p>Constructive feedback to refine your narrative and enhancem its resonance.<\/p>",
+        "buttonText1": "Order Your Book Review",
+        "buttonLink1": "shopify:\/\/pages\/about-us",
+        "button_bg": "green",
+        "content_alignment": "left"
+      }
+    },
+    "half_image_half_content_B7aej8": {
+      "type": "half-image-half-content",
+      "blocks": {
+        "image_m3MNaG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/e0a2c48e7e904d600b190ec863aea9c3.png",
+            "showVideo": false,
+            "video": "",
+            "pretitle": "",
+            "title": "Turning Your Vision into a Masterpiece",
+            "description": "<p>Every author dreams of sharing their perfect story with the world. However, every masterpiece goes through stages of refinement and growth. It's this journey of perfection that truly shapes a story's soul.<\/p>",
+            "buttonText": "Order Now",
+            "buttonLink": "shopify:\/\/pages\/about-2-0",
+            "background_color": "blue",
+            "fontSize": false,
+            "center": false
+          }
+        }
+      },
+      "block_order": [
+        "image_m3MNaG"
+      ],
+      "settings": {
+        "section_class": "",
+        "image_position": "left",
+        "wave_color": "blue-wave",
+        "paddingtop": 0,
+        "paddingtopmobile": 0,
+        "paddingbottom": 0,
+        "paddingbottomMobile": 0
+      }
+    }
+  },
+  "order": [
+    "innerBanner",
+    "half_image_half_content_B7aej8"
+  ]
+}
