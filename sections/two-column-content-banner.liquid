@@ -4,9 +4,11 @@
       <ul class="two-column-block">
         {%- for block in section.blocks -%}
           <li class="column">
-            <div class="icon-section">
-              {{ block.settings.icon | image_url: width: 100 | image_tag: loading: 'lazy', widths: '100x100' }}
-            </div>
+            {% if block.settings.icon != blank %}
+              <div class="icon-section">
+                {{ block.settings.icon | image_url: width: 100 | image_tag: loading: 'lazy', widths: '100x100' }}
+              </div>
+            {% endif %}
             <h2 class="h3">{{ block.settings.title }}</h2>
             {% if block.settings.description != blank %}
               <div class="description">
