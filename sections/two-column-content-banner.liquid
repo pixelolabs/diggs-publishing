@@ -3,7 +3,11 @@
     <div class="box">
       <ul class="two-column-block">
         {%- for block in section.blocks -%}
-          <li></li>
+          <li class="column">
+            <div class="iccon-section">
+              {{ block.settings.icon | image_url: width: 100 | image_tag: loading: 'lazy', widths: '100x100' }}
+            </div>
+          </li>
         {% endfor %}
       </ul>
     </div>
