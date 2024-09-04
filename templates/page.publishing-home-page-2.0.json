@@ -128,8 +128,8 @@
         "backgroundtransparent": true,
         "paddingtop": 90,
         "paddingtopmobile": 90,
-        "paddingbottom": 48,
-        "paddingbottomMobile": 30
+        "paddingbottom": 58,
+        "paddingbottomMobile": 0
       }
     },
     "logo_slider_TPawXG": {
@@ -186,8 +186,8 @@
       "settings": {
         "color_scheme": "scheme-1",
         "title": "Charities Krystaelynne Works With and Supports",
-        "paddingtop": 100,
-        "paddingtopmobile": 80,
+        "paddingtop": 0,
+        "paddingtopmobile": 0,
         "paddingbottom": 100,
         "paddingbottomMobile": 80
       }
