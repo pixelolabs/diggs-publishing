@@ -25,6 +25,7 @@
   }
   .container-1260 {
     position: relative;
+    z-index: 3;
     &::after {
       width: 42px;
       height: 50px;
