@@ -128,8 +128,8 @@
         "backgroundtransparent": true,
         "paddingtop": 90,
         "paddingtopmobile": 90,
-        "paddingbottom": 58,
-        "paddingbottomMobile": 80
+        "paddingbottom": 48,
+        "paddingbottomMobile": 30
       }
     },
     "logo_slider_TPawXG": {
