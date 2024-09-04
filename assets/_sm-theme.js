@@ -2046,8 +2046,8 @@ jQuery(function () {
     loop: true,
     autoplay: {
       delay: 3000
-    },
-    direction: 'vertical'
+    } // direction: 'vertical',
+
   });
   /* Announcement 
   Close on Click  */
