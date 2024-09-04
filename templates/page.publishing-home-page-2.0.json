@@ -162,12 +162,24 @@
         "paddingbottom": 100,
         "paddingbottomMobile": 80
       }
+    },
+    "full_width_content_section_RiQPxM": {
+      "type": "full-width-content-section",
+      "settings": {
+        "title": "Dive into Our Book Collection",
+        "content": "<p>Explore our varied collections and take a creative journey through the pages of one-of-a-kind books. There's something for everyone, from children's book lovers to gift seekers.<br\/><\/p>",
+        "buttonText": "Shop The Collection",
+        "buttonLink": "shopify:\/\/collections\/books",
+        "backgroundcolor": false,
+        "bgColor": "#81c573"
+      }
     }
   },
   "order": [
     "innerBanner",
     "home_hero_banner_U4TPf8",
     "three_column_card_section_XXU9Pt",
-    "logo_slider_TPawXG"
+    "logo_slider_TPawXG",
+    "full_width_content_section_RiQPxM"
   ]
 }
