@@ -36,7 +36,7 @@
             "description": "<p>Every author dreams of sharing their perfect story with the world. However, every masterpiece goes through stages of refinement and growth. It's this journey of perfection that truly shapes a story's soul.<\/p>",
             "buttonText": "Order Now",
             "buttonLink": "shopify:\/\/pages\/about-2-0",
-            "background_color": "blue",
+            "background_color": "transparent-bg",
             "fontSize": false,
             "center": false
           }
@@ -48,16 +48,65 @@
       "settings": {
         "section_class": "",
         "image_position": "left",
-        "wave_color": "blue-wave",
+        "wave_color": "transparent-wave",
         "paddingtop": 0,
         "paddingtopmobile": 0,
         "paddingbottom": 0,
         "paddingbottomMobile": 0
       }
+    },
+    "three_column_card_section_J3Pen9": {
+      "type": "three-column-card-section",
+      "blocks": {
+        "cards_rdkkfk": {
+          "type": "cards",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Vector_1de0518a-01dc-4248-8ea4-fc1edc16b90a.svg",
+            "title": "A Passionate Storyteller",
+            "description": "<p>Our team isn't just comprised of reviewers. We are creators, storytellers, and most importantly, lovers of children's narratives. Our insights come from a place of passion, expertise, and genuine care for nurturing stories.<\/p>",
+            "btnText": "",
+            "btnLink": ""
+          }
+        },
+        "cards_QJ7NgT": {
+          "type": "cards",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Vector.svg",
+            "title": "Personalized Review",
+            "description": "<p>With us, your manuscript isn't just another book. We delve deep, understanding your vision, appreciating your voice, and offering feedback that aligns with your story's essence.<\/p>",
+            "btnText": "",
+            "btnLink": ""
+          }
+        },
+        "cards_GANVDg": {
+          "type": "cards",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Vector_f7e31356-c39e-4c9d-a55b-31336bdc61dd.svg",
+            "title": "Detailed Feedback",
+            "description": "<p>Beyond just a review, expect comprehensive insights. From thematic depths, narrative arcs, to the intricacies of character dynamics, we will guide you through every detail.<\/p>",
+            "btnText": "",
+            "btnLink": ""
+          }
+        }
+      },
+      "block_order": [
+        "cards_rdkkfk",
+        "cards_QJ7NgT",
+        "cards_GANVDg"
+      ],
+      "settings": {
+        "heading": "A Trusted Guide on Your Literary Journey",
+        "backgroundtransparent": false,
+        "paddingtop": 100,
+        "paddingtopmobile": 80,
+        "paddingbottom": 80,
+        "paddingbottomMobile": 60
+      }
     }
   },
   "order": [
     "innerBanner",
-    "half_image_half_content_B7aej8"
+    "half_image_half_content_B7aej8",
+    "three_column_card_section_J3Pen9"
   ]
 }
