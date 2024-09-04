@@ -164,12 +164,24 @@
         "paddingbottom": 180,
         "paddingbottomMobile": 80
       }
+    },
+    "full_width_content_section_jNjynR": {
+      "type": "full-width-content-section",
+      "settings": {
+        "title": "Embark on the Road to Excellence",
+        "content": "<p>Writing is an art, and like all arts, it thrives on feedback, introspection, and growth. If you're ready to see your children's book manuscript shine in its brightest light, let our team be your beacon. Refine, redefine, and realize your story's full potential. Begin your journey to literary brilliance today.<\/p>",
+        "buttonText": "Shop Now",
+        "buttonLink": "shopify:\/\/pages\/publishing-checkout",
+        "backgroundcolor": false,
+        "bgColor": "#81c573"
+      }
     }
   },
   "order": [
     "innerBanner",
     "half_image_half_content_B7aej8",
     "three_column_card_section_J3Pen9",
-    "half_image_half_cards_section_e6KbTy"
+    "half_image_half_cards_section_e6KbTy",
+    "full_width_content_section_jNjynR"
   ]
 }
