@@ -2,6 +2,9 @@
   padding: 24px 0 75px;
   background: $color-off-white-light;
   position: relative;
+  @include MQ(MQ-600) {
+    padding: 0 0 40px;
+  }
   &::before {
     background: url("graphic-wave-inner-banner.svg") repeat left / 2065px;
     height: 114px;
@@ -22,6 +25,7 @@
     top: -350px;
     content: "";
     z-index: 5;
+    @include MQ(MQ-600) {display: none;}
   }
   .container-1260 {
     position: relative;
