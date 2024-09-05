@@ -111,10 +111,10 @@
             </div>
           </li>
           <li>
-            <button aria-label="cart-icon" class="js__cart-expand js__update-cart-icon cart" title="cart">
+            <a class="js__cart-expand js__update-cart-icon cart" href="javascript:;" title="cart">
               {%- include 'icon-cart' %}
               <span class="js__ajax-cart-count cart-count"> {{ cart.item_count }}</span>
-            </button>
+            </a>
           </li>
           <li class="account">
             {% if customer %}
