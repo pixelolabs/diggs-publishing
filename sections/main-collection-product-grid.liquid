@@ -127,8 +127,9 @@
           {% for productRelated in collection.products %}
             <li class="product-card">
               {% include 'product_Card'  with  productRelated: productRelated , show_price: true, show_tags: true, show_auto_tags: true, show_title: true, show_fav: false, show_secondary_button: true %}
+              {% render 'product-modal', productData: productRelated %}
             </li>
-            {% render 'product-modal', productData: productRelated %}
+           
           {% else %}
             {% comment %}
               Add default products to help with onboarding for collections/all only.
