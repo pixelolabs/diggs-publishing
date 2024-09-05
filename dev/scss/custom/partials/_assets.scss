@@ -91,8 +91,8 @@
 
 .form-success,
 .form-message--success {
-  background: #9ad82e2e !important;
-  border: 1px solid #9ad82e !important;
+  background: #5ebf4f  !important;
+  border: 1px solid #5ebf4f  !important;
   padding: 0.8em 1em;
   color: #ffffff !important;
   opacity: 1 !important;
@@ -421,7 +421,7 @@ textarea.input--error {
     right: 0;
     top: 0;
     z-index: 1;
-    border: 2px solid $color-pink;
+    border: 2px solid $color-yellow;
   }
 
   .okeReviews
@@ -470,6 +470,11 @@ textarea.input--error {
   &:nth-child(3n) {
     &::before {
       border: 2px solid $color-green;
+    }
+  }
+  &:nth-child(4n) {
+    &::before {
+      border: 2px solid $color-pink;
     }
   }
   .image-section {
