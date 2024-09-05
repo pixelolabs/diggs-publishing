@@ -32,11 +32,11 @@
           <div class=" search-li block-980">
             <div class="header-search-section js__header-search-section">
               <div class="container-830">
-                <a href="javascript:;" class="js__search toggle-icon">
+                <button aria-label="search-icon" class="js__search toggle-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
                     <path d="M9.888 17.468c3.897 0 7.057-3.136 7.057-7.004 0-3.868-3.16-7.003-7.057-7.003-3.898 0-7.057 3.135-7.057 7.003 0 3.868 3.16 7.004 7.057 7.004zM18.71 19.218l-3.838-3.808" stroke="#3B2900" stroke-width="1.751" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
-                </a>
+                </button>
 
                 <form method="get" action="/search" class="flex-align-center relative" data-form-type="">
                   <input type="hidden" name="type" value="product">
@@ -87,7 +87,9 @@
         </div>
         <ul class="right-nav flex-align-center">
           <li class=" search-li none-980">
-            <a href="javascript:;" class="js__search search-icon" title="Search">{% include 'icon-search' %} </a>
+            <button aria-label="search" class="js__search search-icon" title="Search">
+              {% include 'icon-search' %}
+            </button>
 
             <div class="header-search-section js__header-search-section">
               <div class="container-830">
@@ -101,15 +103,15 @@
                   <input type="submit" aria-label="Submit" class="submit btn-submit" value="Search">
                 </form>
               </div>
-              <a href="#" title="close" id="search-close" class="close">
+              <button aria-label="close" id="search-close" class="close">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                   <path d="M9.902 18.786a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12.601 7.085l-5.4 5.4M7.201 7.085l5.4 5.4" stroke="#3B2900" stroke-width="1.326" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-              </a>
+              </button>
             </div>
           </li>
           <li>
-            <a class="js__cart-expand js__update-cart-icon cart" href="javascript:;" title="cart">
+            <a role="button" class="js__cart-expand js__update-cart-icon cart" href="javascript:;" title="cart">
               {%- include 'icon-cart' %}
               <span class="js__ajax-cart-count cart-count"> {{ cart.item_count }}</span>
             </a>

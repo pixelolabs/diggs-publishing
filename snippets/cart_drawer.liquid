@@ -4,7 +4,7 @@
     <div class="cart-sidebar__header">
       <div class="flex-space-between">
         <h4 class="flex-align-center">
-          <a href="javascript:void(0)" title="Close" class="icon-close" id="js__cart-close">
+          <a role="button" href="javascript:void(0)" title="Close" class="icon-close" id="js__cart-close">
             close cart
             {% include 'icon-cart-close' %}
           </a>
@@ -149,16 +149,19 @@
               <h5>
                 <a href="{{product1.url}}" title="{{product1.title}}">{{ product1.title }}</a>
               </h5>
-             
-            
-            <div class="add-link-price">
 
-              <a title="Add" data-attr-variantid="{{current_variant1.id}}" class="freq-add js__addon-add-to-cart ">
-                Add to cart
-              </a>
-              <p>{{ product1.price | money }}</p>
+              <div class="add-link-price">
+                <a
+                  role="button"
+                  title="Add"
+                  data-attr-variantid="{{current_variant1.id}}"
+                  class="freq-add js__addon-add-to-cart "
+                >
+                  Add to cart
+                </a>
+                <p>{{ product1.price | money }}</p>
+              </div>
             </div>
-          </div>
           </li>
           {% assign product2 = all_products[settings.product_2] %}
           {%- assign current_variant2 = product2.selected_or_first_available_variant -%}
@@ -177,14 +180,18 @@
               <h5>
                 <a href="{{product2.url}}" title="{{product2.title}}">{{ product2.title }}</a>
               </h5>
-            
-           
-            <div class="add-link-price">
-              <a title="Add" data-attr-variantid="{{current_variant2.id}}" class="freq-add js__addon-add-to-cart ">
-                Add to cart
-              </a>
-              <p>{{ product2.price | money }}</p>
-            </div>
+
+              <div class="add-link-price">
+                <a
+                  role="button"
+                  title="Add"
+                  data-attr-variantid="{{current_variant2.id}}"
+                  class="freq-add js__addon-add-to-cart "
+                >
+                  Add to cart
+                </a>
+                <p>{{ product2.price | money }}</p>
+              </div>
             </div>
           </li>
         </ul>
@@ -214,7 +221,9 @@
       <!-- Footer Actions -->
       <div class="js__top-cart-form-actions width-100">
         <form action="/cart" method="post" class="">
-          <button class="btn--primary yellow width-100" type="submit" id="checkout" name="checkout">Proceed to Checkout</button>
+          <button class="btn--primary yellow width-100" type="submit" id="checkout" name="checkout">
+            Proceed to Checkout
+          </button>
         </form>
         {% comment %} <a href="/cart" class="btn-black-border width-100" title="View Cart">VIEW MY CART</a> {% endcomment %}
       </div>
