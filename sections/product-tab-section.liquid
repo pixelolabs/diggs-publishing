@@ -1,9 +1,9 @@
 {% comment %} Tab Section {% endcomment %}
 <div class="product-frequently-bought-section js__product-frequently-bought-section"></div>
 {% if section.blocks.size > 0 %}
-  {% if product.metafields.custom.product_tab_first_category != blank %}
-    <div class="product-tab-section">
-      <div class="container-1260">
+  <div class="product-tab-section">
+    <div class="container-1260">
+      {% if product.metafields.custom.product_tab_first_category != blank %}
         <div class="tab-head none-980">
           <ul class="pdp-tab-head">
             {%- for block in section.blocks -%}
@@ -28,37 +28,37 @@
             {% endfor %}
           </ul>
         </div>
-        <div class="main-tab-content">
-          {% for block in section.blocks %}
-            {%- case block.type -%}
-              {%- when 'description' -%}
-                {% assign categorytitle = block.settings.category | replace: ' ', '-' %}
-                {% assign categorytitle = categorytitle | replace: "'", '-' %}
-                {% assign categorytitle = categorytitle | replace: '--', '-' %}
-                {% assign categorytitle = categorytitle | replace: '---', '-' %}
-                {% if block.settings.category != blank %}
-                  <div
-                    class="tab-content js-tab-content"
-                    id="{{ categorytitle | downcase }}"
+      {% endif %}
+      <div class="main-tab-content">
+        {% for block in section.blocks %}
+          {%- case block.type -%}
+            {%- when 'description' -%}
+              {% assign categorytitle = block.settings.category | replace: ' ', '-' %}
+              {% assign categorytitle = categorytitle | replace: "'", '-' %}
+              {% assign categorytitle = categorytitle | replace: '--', '-' %}
+              {% assign categorytitle = categorytitle | replace: '---', '-' %}
+              {% if block.settings.category != blank %}
+                <div
+                  class="tab-content js-tab-content"
+                  id="{{ categorytitle | downcase }}"
+                >
+                  <a
+                    class="accordion-link js___accordion"
+                    id="tab-link-{{ categorytitle | downcase }}"
+                    data-attr="{{ categorytitle | downcase }}"
                   >
-                    <a
-                      class="accordion-link js___accordion"
-                      id="tab-link-{{ categorytitle | downcase }}"
-                      data-attr="{{ categorytitle | downcase }}"
-                    >
-                      {{- block.settings.category -}}
-                    </a>
-                    <div class="inner-content accordion-con " data-attr="tab-link-{{ categorytitle | downcase }}">
-                      {{ block.settings.description }}
-                    </div>
+                    {{- block.settings.category -}}
+                  </a>
+                  <div class="inner-content accordion-con " data-attr="tab-link-{{ categorytitle | downcase }}">
+                    {{ block.settings.description }}
                   </div>
-                {% endif %}
-            {%- endcase -%}
-          {% endfor %}
-        </div>
+                </div>
+              {% endif %}
+          {%- endcase -%}
+        {% endfor %}
       </div>
     </div>
-  {% endif %}
+  </div>
 {% endif %}
 
 {% schema %}
