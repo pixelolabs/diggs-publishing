@@ -667,10 +667,18 @@
       }
     }
     .btn--primary {
-      max-width: 295px;
+      max-width: 201px;
       height: 45px;
-      padding: 0;
+      padding: 9.8px 60px 7.7px 32px;
       width: 100%;
+      &::before{
+        background: url("icon-shopping-bag.svg") no-repeat center / 100%;
+        width: 17px;
+        height: 17px;
+        top: calc(50% - 8.5px);
+        right: 31px;
+      }
+      
     }
     .btn--primary[disabled] {
       pointer-events: none;
@@ -1624,6 +1632,7 @@
   @include MQ(MQ-600) {
     padding-left: 30px;
     padding-right: 30px;
+    padding-bottom: 60px;
   }
   .cbb-mobile-view .cbb-frequently-bought-title {
     font-size: 30px !important;
@@ -1813,7 +1822,7 @@
       // margin-bottom: 12px;
 
       transition: 0.6s ease all !important;
-      background: url(button-pdp.png) no-repeat center / 90% 100% !important;
+      background: url(button-pdp.png) no-repeat center / 100% 100% !important;
       &:hover {
         color: $color-white !important;
         span {
