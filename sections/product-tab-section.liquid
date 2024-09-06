@@ -1,7 +1,7 @@
 {% comment %} Tab Section {% endcomment %}
 <div class="product-frequently-bought-section js__product-frequently-bought-section"></div>
 {% if section.blocks.size > 0 %}
-  {% if product.metafield.custom.product_tab_first_category %}
+  {% if product.metafield.custom.product_tab_first_category != blank %}
     <div class="product-tab-section">
       <div class="container-1260">
         <div class="tab-head none-980">
