@@ -17,8 +17,8 @@
       // height: 155px;
       // top: -100px;
       // height: 95px;
-      height: 187px;
-      top: -90px;
+      height: 214px;
+      top: -160px;
     }
     @include MQ(MQ-480) {
       height: 80px;
@@ -842,10 +842,10 @@
   }
 }
 .body-safety-2 {
-  &:before {
-    top: -75px;
-    height: 96px;
-  }
+  // &:before {
+  //   top: -75px;
+  //   height: 96px;
+  // }
   .half-image-half-content {
     padding-top: 150px;
     padding-top: 50px;
