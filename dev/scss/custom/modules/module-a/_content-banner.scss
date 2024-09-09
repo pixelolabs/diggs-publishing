@@ -47,6 +47,15 @@
       z-index: 1;
       top: -34px;
       background: url("planet.svg") no-repeat center / contain;
+      animation-name: rotate;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      @keyframes rotate {
+        50% {
+          transform: rotate(45deg);
+        }
+      }
+
       @include MQ(MQ-768) {
         width: 60px;
         height: 40px;
@@ -64,6 +73,14 @@
       z-index: 1;
       bottom: -31px;
       background: url("ufo.webp") no-repeat center / 100%;
+      animation-name: flo;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      @keyframes flo {
+        50% {
+          transform: translateY(30px);
+        }
+      }
       @include MQ(MQ-768) {
         width: 57px;
         height: 56px;
