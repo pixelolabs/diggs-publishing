@@ -8,6 +8,21 @@
       <meta name="description" content="Diggs publishing">
       <link rel="canonical" href="{{ canonical_url }}">
   
+      <!-- Content Security Policy -->
+      <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self' https:;
+        script-src 'self' https: 'unsafe-inline' 'unsafe-eval' https://tools.luckyorange.com https://cdn.shopify.com;
+        style-src 'self' 'unsafe-inline' https: https://fonts.googleapis.com;
+        img-src 'self' https: data:;
+        font-src 'self' https://fonts.gstatic.com https://cdn.shopify.com;
+        connect-src 'self' https://tools.luckyorange.com https://cdn.shopify.com;
+        object-src 'none';
+        frame-ancestors 'none';
+        form-action 'self';
+        base-uri 'self';
+        report-uri /csp-report-endpoint;
+      ">
+  
       {% include 'head' %}
       {% include 'sm-og-data' %}
       {% include 'scripts_head' %}
@@ -15,16 +30,13 @@
       {% render 'boost-sd-fallback' %}
       {{ content_for_header }}
   
-      <!-- Commented code removed for cleaner HTML -->
-      <!-- <link href='//hulkapps-wishlist.nyc3.digitaloceanspaces.com/assets/hulkapps-wishlist-styles.css' rel='stylesheet'> -->
-  
       <!-- Lazy load external script -->
       <script async defer src="https://tools.luckyorange.com/core/lo.js?site-id=8894106a"></script>
     </head>
   
     <body class="template-{{ request.page_type | handle }} transparent-header">
       <script>
-        // Redirect optimization - consider removing this if unnecessary
+        // Redirect optimization
         if (/collections$/.test(window.location.href)) {
           var url = `${window.location.href}/all`;
           window.location.href = url;
@@ -46,14 +58,10 @@
   
       {% include 'scripts_footer' %}
   
-      {% comment %}
-        <!-- Commented-out code removed -->
-      {% endcomment %}
-  
       {% include 'swym-custom' %}
   
       <script>
-        // Optimize AOS initialization and event handling
+        // Optimize AOS initialization
         AOS.init({ startEvent: 'DOMContentLoaded' });
         document.addEventListener('DOMContentLoaded', function () {
           var cloneDOMContentLoaded = new Event('cloneDOMContentLoaded');
