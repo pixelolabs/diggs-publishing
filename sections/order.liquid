@@ -1,8 +1,8 @@
 <div class="account-section">
   <div class="inner">
-    <div class="container-1340">
-      <div class="heading-section text-center">
-        <h1 class="h1">Order {{ order.name }}</h1>
+    <div class="container-1260">
+      <div class="heading-section ">
+        <h1 class="h2">Order {{ order.name }}</h1>
         <p>Placed on {{ order.created_at | date: '%B %d, %Y %I:%M%p' }}</p>
         {%- if order.cancelled -%}
           <div class="account-section__status cancelled">
@@ -12,16 +12,15 @@
           </div>
         {%- endif -%}
         <div class="account-section__links">
-          <a href="/account" class="backtoaccount link--secondary" title="eturn to Account Details"
+          <a href="/account" class="backtoaccount link--primary--small" title="eturn to Account Details"
             >← Back to Account Details</a
           >
           <span>|</span>
-          {{ 'layout.customer.log_out' | t | customer_logout_link }}
+          <a class="link--primary--small" href="/account/logout" title="logout">Logout</a>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="container-1340 ">
+    
+  
     <!-- END BREADCRUMB -->
     <div class="account-section__wrapper flex">
       <div class="account-section__table ">

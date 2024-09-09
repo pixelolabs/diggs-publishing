@@ -66,8 +66,8 @@
     }
     select {
       padding: 10px 45px 10px 23px;
-      background: url("icon-arrow-down.webp") no-repeat right 20px center / 13px
-        var(--input-border-background-color);
+      background: url("dropdown.svg") no-repeat right 20px center / 11px
+      $color-white;
       -webkit-text-fill-color: none !important;
       -webkit-box-shadow: none !important;
     }
@@ -101,7 +101,7 @@
           cursor: pointer;
           height: 20px;
           width: 20px;
-          top: 0px;
+          top: -4px;
           left: -17px;
           background: transparent;
           border-radius: 0px;
@@ -110,8 +110,8 @@
         }
       }
       input[type="checkbox"]:checked + label:after {
-        background: url("boost-icon-ui-check-mark-yes.webp") no-repeat center /
-          20px;
+        background: url("icon-checkmark.webp") no-repeat center /
+          15px;
       }
       input[type="checkbox"] {
         visibility: hidden;
