@@ -553,6 +553,10 @@ button {
   background: url("Isolation_mode-orange.webp") no-repeat center / 100%;
 }
 
+.btn--primary:hover{
+  background: url("btn-orange.svg") no-repeat center / 100% !important;
+}
+
 .btn--secondary {
   @include px-button;
   border-color: rgba(var(--color-button-text), 1);

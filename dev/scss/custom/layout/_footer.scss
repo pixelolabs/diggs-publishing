@@ -167,7 +167,16 @@ footer {
             align-items: center;
 
             &:hover {
-              opacity: 0.5;
+              svg{
+                path{
+                  &:first-child{
+                    fill: $color-pink;
+                  }
+                  &:nth-child(2){
+                    fill: $color-white;
+                  }
+                }
+              }
             }
 
             span {
@@ -664,7 +673,7 @@ footer {
           }
 
           &:hover {
-            color: rgba(255, 255, 255, 0.5);
+            color: $color-pink;
 
             svg {
               path {
