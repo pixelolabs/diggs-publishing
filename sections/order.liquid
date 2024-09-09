@@ -1,7 +1,7 @@
 <div class="account-section">
   <div class="inner">
     <div class="container-1260">
-      <div class="heading-section text-center">
+      <div class="heading-section ">
         <h1 class="h2">Order {{ order.name }}</h1>
         <p>Placed on {{ order.created_at | date: '%B %d, %Y %I:%M%p' }}</p>
         {%- if order.cancelled -%}
