@@ -19,6 +19,12 @@
 
     display: flex;
     align-items: center;
+    &:hover{
+      .btn--primary{
+        
+          background: url("btn-orange.svg") no-repeat center / 100% !important;
+      }
+    }
     @include MQ(MQ-1200) {
       padding-bottom: 132px;
     }
@@ -78,6 +84,8 @@
       top: 0;
       z-index: 8;
       height: 100%;
+
+      
     }
 
     .video-section {

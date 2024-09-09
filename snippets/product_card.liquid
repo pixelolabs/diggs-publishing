@@ -130,7 +130,7 @@
       data-slider_main="{%- for img in productRelated.images -%}{{- img | img_url: '355x355' -}}|{%- endfor -%}"
       data-slider_thumb="{%- for img in productRelated.images -%}{{- img | img_url: '150x150' -}}|{%- endfor -%}"
       data-var_images="{%- for var in productRelated.variants -%}{{- var.image | img_url: '150x150' -}}|{%- endfor -%}"
-      >Quick View</a
+      ><span>Quick View</span></a
     ></div>
     {% endif %}
   </div>
