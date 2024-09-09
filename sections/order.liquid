@@ -1,8 +1,8 @@
 <div class="account-section">
   <div class="inner">
-    <div class="container-1340">
+    <div class="container-1260">
       <div class="heading-section text-center">
-        <h1 class="h1">Order {{ order.name }}</h1>
+        <h1 class="h2">Order {{ order.name }}</h1>
         <p>Placed on {{ order.created_at | date: '%B %d, %Y %I:%M%p' }}</p>
         {%- if order.cancelled -%}
           <div class="account-section__status cancelled">
@@ -16,12 +16,11 @@
             >← Back to Account Details</a
           >
           <span>|</span>
-          {{ 'layout.customer.log_out' | t | customer_logout_link }}
+          <a class="link--primary--small" href="/account/logout" title="logout">Logout</a>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="container-1340 ">
+    
+  
     <!-- END BREADCRUMB -->
     <div class="account-section__wrapper flex">
       <div class="account-section__table ">
