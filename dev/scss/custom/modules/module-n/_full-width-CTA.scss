@@ -1,13 +1,17 @@
 .full-width-cta {
   padding: 50px 0;
   position: relative;
-  @include MQ(MQ-980){
-    &::after{
+  @include MQ(MQ-980) {
+    &::after {
       position: absolute;
       content: "";
       right: 32px;
       top: 23px;
       background: url(star-large.webp) repeat center / 100%;
+      animation-name: starRotate, blink;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
       width: 24.7px;
       height: 30px;
     }
@@ -15,34 +19,34 @@
   .btn--primary {
     margin: 20px auto 0;
   }
-  .container-900{
-    h2{
+  .container-900 {
+    h2 {
       margin-bottom: 18px;
-      @include MQ(MQ-980){
+      @include MQ(MQ-980) {
         font-size: 23px;
       }
     }
-    @include MQ(MQ-980){
+    @include MQ(MQ-980) {
       max-width: 604px;
     }
   }
-  &.responsive-text-left{
-    @include MQ(MQ-980){
-      &::after{
+  &.responsive-text-left {
+    @include MQ(MQ-980) {
+      &::after {
         right: 32px;
         top: unset;
         bottom: 46px;
       }
     }
     .btn--primary {
-      @include MQ(MQ-980){
+      @include MQ(MQ-980) {
         margin-left: 0;
       }
     }
-    .container-900{
-      @include MQ(MQ-980){
+    .container-900 {
+      @include MQ(MQ-980) {
         text-align: left;
-      }   
+      }
     }
   }
 }

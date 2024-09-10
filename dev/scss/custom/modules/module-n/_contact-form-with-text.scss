@@ -145,6 +145,8 @@
       z-index: 1;
       right: 83.33px;
       background: url(icon-cloud.webp) no-repeat center / 100%;
+      animation: 10s linear infinite;
+      animation-name: blink, animateCloud;
       @include MQ(MQ-980) {
         right: unset;
         left: 32px;
@@ -178,6 +180,7 @@
       z-index: 1;
       right: 0px;
       background: url(rocket.webp) no-repeat center / 100%;
+      animation: fly 10s 0.5s ease-in infinite;
       @include MQ(MQ-980) {
         display: none;
       }

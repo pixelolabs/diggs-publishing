@@ -467,6 +467,9 @@ h6,
     z-index: 10;
     top: -111px;
     background: url(ufo.webp) no-repeat center / 100%;
+    animation-name: flow;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
     @include MQ(MQ-480) {
       display: none;
     }
@@ -522,14 +525,12 @@ button {
     width: 21px;
     height: 24px;
     top: calc(50% - 12px);
-    content: '';
+    content: "";
     position: absolute;
     right: 35px;
   }
 
-
   &:hover {
-   
     &:after {
       display: none;
     }
@@ -543,7 +544,6 @@ button {
   color: $color-black !important;
   &:before {
     background: url("icon-arrow-brown.svg") no-repeat center / 100%;
-   
   }
 }
 .btn--primary.green {
@@ -553,7 +553,7 @@ button {
   background: url("Isolation_mode-orange.webp") no-repeat center / 100%;
 }
 
-.btn--primary:hover{
+.btn--primary:hover {
   background: url("btn-orange.svg") no-repeat center / 100% !important;
 }
 
@@ -665,9 +665,9 @@ button {
   background: url("icon-right-arrow.webp") no-repeat right center/ 13.5px;
   padding-right: 21.5px;
   transition: 0.3s ease;
-  &:hover{
+  &:hover {
     color: $color-orange;
-    background-image: url("icon-right-arrow-orange.webp")
+    background-image: url("icon-right-arrow-orange.webp");
   }
 }
 
@@ -739,7 +739,7 @@ button {
     &:last-child {
       padding-bottom: 0;
     }
-    + hr{
+    + hr {
       margin-top: 3px;
     }
   }
@@ -1760,5 +1760,78 @@ body.boost-sd__search-opening {
   .article-pagination,
   .date-category-section span {
     display: none !important;
+  }
+}
+
+// Animations
+@keyframes flow {
+  50% {
+    transform: translateY(15px);
+  }
+}
+@keyframes rotate {
+  50% {
+    transform: rotate(30deg);
+  }
+}
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes starRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes wstarRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes kites {
+  0% {
+    transform: translate(15px, 15px);
+  }
+  50% {
+    transform: translate(20px, 20px);
+  }
+  100% {
+    transform: translate(30px, 15px);
+  }
+}
+@keyframes fly {
+  0% {
+    bottom: 8px;
+  }
+
+  50% {
+    bottom: 80px;
+  }
+  100% {
+    bottom: 8px;
+  }
+}
+@keyframes animateCloud {
+  0% {
+    transform: translatex(0);
+  }
+  50% {
+    transform: translatex(-40px);
   }
 }

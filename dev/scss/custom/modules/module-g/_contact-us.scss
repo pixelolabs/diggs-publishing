@@ -1,209 +1,214 @@
 .contact-section {
-   
-    padding: 60px 0 190px 0;
-    position: relative;
+  padding: 60px 0 190px 0;
+  position: relative;
+  @include MQ(MQ-768) {
+    padding: 40px 0 100px;
+  }
+  &::before {
+    background: url(wave-transparent.svg) repeat-x center / 100%;
+    // height: 176px;
+    // top: -128px;
+    height: 214px;
+    content: "";
+    width: 100%;
+    left: 0;
+    position: absolute;
+    z-index: 3;
+    top: -160px;
+    @include MQ(MQ-1330) {
+      top: -130px;
+    }
+    @include MQ(MQ-980) {
+      height: 155px;
+      top: -100px;
+    }
+    @include MQ(MQ-480) {
+      height: 65px;
+      top: -55px;
+      background-size: cover;
+      background-position: left;
+    }
+  }
+
+  &::after {
+    background: url("thread-orange-4.svg") no-repeat center / 100%;
+    height: 668px;
+    width: 194px;
+    position: absolute;
+    right: 0;
+    top: -100px;
+    content: "";
+    z-index: 5;
     @include MQ(MQ-768) {
-        padding: 40px 0 100px;
+      display: none;
+    }
+  }
+
+  .container-1260 {
+    position: relative;
+    z-index: 7;
+    @include MQ(MQ-768) {
+      flex-direction: column;
+    }
+    &::after {
+      width: 30px;
+      height: 46px;
+      content: "";
+      position: absolute;
+      right: 300px;
+      z-index: 3;
+      top: -93px;
+      background: url("star-large.webp") no-repeat center / 100%;
+      animation-name: starRotate, blink;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      @include MQ(MQ-768) {
+        display: none;
+      }
     }
     &::before {
-        background: url(wave-transparent.svg) repeat-x center / 100%;
-        // height: 176px;
-        // top: -128px;
-        height: 214px;
-        content: '';
-        width: 100%;
-        left: 0;
-        position: absolute;
-        z-index: 3;
-        top: -160px;
-        @include MQ(MQ-1330) {
-          top: -130px;
-        }
-        @include MQ(MQ-980) {
-          height: 155px;
-          top: -100px;
-        }
-        @include MQ(MQ-480) {
-          height: 65px;
-          top: -55px;
-          background-size: cover;
-          background-position: left;
-        }
+      width: 82px;
+      height: 81px;
+      content: "";
+      position: absolute;
+      left: 37%;
+      z-index: 10;
+      top: -150px;
+      background: url(ufo.webp) no-repeat center / 100%;
+      animation-name: flow;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      @include MQ(MQ-480) {
+        display: none;
       }
+    }
+  }
 
-     
-  
-      &::after {
-        background: url("thread-orange-4.svg") no-repeat center / 100%;
-        height: 668px;
-        width: 194px;
-        position: absolute;
-        right: 0;
-        top: -100px;
-        content: "";
-        z-index: 5;
-        @include MQ(MQ-768) {
-            display: none;
-          }
-      }
-
-      .container-1260 {
-        position: relative;
-        z-index: 7;
-        @include MQ(MQ-768) {
-            flex-direction: column;
-        }
-        &::after {
-          width: 30px;
-          height: 46px;
-          content: "";
-          position: absolute;
-          right: 300px;
-          z-index: 3;
-          top: -93px;
-          background: url("star-large.webp") no-repeat center / 100%;
-          @include MQ(MQ-768) {
-            display: none;
-          }
-        }
-        &::before {
-            width: 82px;
-            height: 81px;
-            content: "";
-            position: absolute;
-            left: 37%;
-            z-index: 10;
-            top: -150px;
-            background: url(ufo.webp) no-repeat center / 100%;
-            @include MQ(MQ-480) {
-              display: none;
-            }
-          }
-      }
-
-      
-
-   .contact-info-section{
+  .contact-info-section {
     width: 260px;
     margin-right: 110px;
     flex: none;
     @include MQ(MQ-980) {
-        margin-right: 60px;
+      margin-right: 60px;
     }
     @include MQ(MQ-768) {
-        margin: 0 0 43px;
-        width: 100%;
+      margin: 0 0 43px;
+      width: 100%;
     }
     position: relative;
     &::after {
-        width: 36px;
-        height: 43px;
-        content: "";
-        position: absolute;
-        top: -100px;
-      
-  
-        z-index: 3;
-        left: 280px;
-  
-        background: url("star-large.webp") no-repeat center / 100%;
-        @include MQ(MQ-768) {
-            display: none;
-          }
+      width: 36px;
+      height: 43px;
+      content: "";
+      position: absolute;
+      top: -100px;
+
+      z-index: 3;
+      left: 280px;
+
+      background: url("star-large.webp") no-repeat center / 100%;
+      animation-name: starRotate, blink;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      @include MQ(MQ-768) {
+        display: none;
       }
-    h2{
-        margin-bottom: 9px;
     }
-    ul{
-        max-width: 260px;
-        margin-top: 45px;
-        @include MQ(MQ-480) {
-            margin-top: 38px;
-        }
-
-        li{
-            padding: 20px;
-            border: solid 1px rgba(255, 200, 43, 0.36);
-            background-image: linear-gradient(to bottom, #fff8e3 0%, #fff8e1 100%);
-            margin-bottom: 34px;
-            display: flex;
-            align-items: center;
-            position: relative;
-            &::before{
-                width: 100%;
-                height: 100%;
-                content: '';
-                position: absolute;
-                left: 10px;
-                top: -10px;
-                z-index: -1;
-                border: 1px solid $color-orange;
-            }
-            .icon{
-                width: 40px;
-                height: 40px;
-                margin-right: 20px;
-                flex: none;
-                border: 1px solid $color-black;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                svg{
-                    width: 20px;
-                    height: 20px;
-                }
-            }
-            &:last-child{
-                margin-bottom: 0;
-            }
-        }
+    h2 {
+      margin-bottom: 9px;
     }
-   }
+    ul {
+      max-width: 260px;
+      margin-top: 45px;
+      @include MQ(MQ-480) {
+        margin-top: 38px;
+      }
 
-   .form-section{
+      li {
+        padding: 20px;
+        border: solid 1px rgba(255, 200, 43, 0.36);
+        background-image: linear-gradient(to bottom, #fff8e3 0%, #fff8e1 100%);
+        margin-bottom: 34px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        &::before {
+          width: 100%;
+          height: 100%;
+          content: "";
+          position: absolute;
+          left: 10px;
+          top: -10px;
+          z-index: -1;
+          border: 1px solid $color-orange;
+        }
+        .icon {
+          width: 40px;
+          height: 40px;
+          margin-right: 20px;
+          flex: none;
+          border: 1px solid $color-black;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .form-section {
     width: 100%;
     position: relative;
-    h2{
-        margin-bottom: 30px;
-        @include MQ(MQ-480) {
-            margin-bottom: 16px;
-        }
+    h2 {
+      margin-bottom: 30px;
+      @include MQ(MQ-480) {
+        margin-bottom: 16px;
+      }
     }
-    .btn--primary{
-        margin-top: 15px;
+    .btn--primary {
+      margin-top: 15px;
     }
-    .half-and-half{
-        display: flex;
-        .half{
-            margin-bottom: 5px;
-            width: calc(50% - 11px);
-            margin-right: 22px;
-            &:last-child{
-                margin-right: 0;
-            }
-            @include MQ(MQ-600) {
-                width: 100%;
-                margin-right: 0;
-            }
-
+    .half-and-half {
+      display: flex;
+      .half {
+        margin-bottom: 5px;
+        width: calc(50% - 11px);
+        margin-right: 22px;
+        &:last-child {
+          margin-right: 0;
         }
         @include MQ(MQ-600) {
-            flex-direction: column;
+          width: 100%;
+          margin-right: 0;
         }
+      }
+      @include MQ(MQ-600) {
+        flex-direction: column;
+      }
     }
     &:after {
-        position: absolute;
-        content: "";
-        right: 23px;
-        bottom: -50px;
-        background: url(rocket.webp) no-repeat center / 100%;
-        width: 82px;
-        height: 85px;
-        z-index: -1;
-        @include MQ(MQ-768) {
-            display: none;
-          }
+      position: absolute;
+      content: "";
+      right: 23px;
+      bottom: -50px;
+      background: url(rocket.webp) no-repeat center / 100%;
+      animation: fly 10s 0.5s ease-in infinite;
+      width: 82px;
+      height: 85px;
+      z-index: -1;
+      @include MQ(MQ-768) {
+        display: none;
       }
-   }
+    }
+  }
 }

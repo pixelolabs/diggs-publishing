@@ -26,7 +26,7 @@
         padding: 12px 0;
       }
     }
-   
+
     .main-menu {
       .main-nav-list {
         li {
@@ -611,6 +611,8 @@ header {
               left: 25%;
               top: 92px;
               background: url(icon-cloud.webp) no-repeat center / 100%;
+              animation: 10s linear infinite;
+              animation-name: blink, animateCloud;
               width: 52px;
               height: 42px;
 
@@ -699,6 +701,10 @@ header {
                 z-index: 1;
                 top: 98px;
                 background: url(star-large.webp) no-repeat center right / 25px;
+                animation-name: starRotate, blink;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
                 @include MQ(MQ-980) {
                   display: none;
                 }
@@ -712,6 +718,10 @@ header {
                 bottom: 0;
                 z-index: 1;
                 background: url(star-large-white.webp) no-repeat center/24px;
+                animation-name: wstarRotate, blink;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
                 @include MQ(MQ-980) {
                   display: none;
                 }
@@ -1588,6 +1598,8 @@ header {
       position: absolute;
       content: "";
       background: url(icon-cloud.webp) no-repeat right / 50px;
+      animation: 10s linear infinite;
+      animation-name: blink, animateCloud;
       width: 59px;
       height: 83px;
       right: -24px;
@@ -1597,6 +1609,7 @@ header {
       position: absolute;
       content: "";
       background: url(rocket.webp) no-repeat right / 47px;
+      animation: fly 10s 0.5s ease-in infinite;
       width: 47px;
       height: 50px;
       right: 24px;

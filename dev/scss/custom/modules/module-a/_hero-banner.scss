@@ -19,10 +19,9 @@
 
     display: flex;
     align-items: center;
-    &:hover{
-      .btn--primary{
-        
-          background: url("btn-orange.svg") no-repeat center / 100% !important;
+    &:hover {
+      .btn--primary {
+        background: url("btn-orange.svg") no-repeat center / 100% !important;
       }
     }
     @include MQ(MQ-1200) {
@@ -44,6 +43,11 @@
       z-index: 1;
       bottom: 168px;
       background: url("thread-hero-white.webp") no-repeat center / 100%;
+      // background: url("thread-animation.gif") no-repeat center / 100%;
+      // animation-name: threadwidth;
+      // animation-duration: 5s;
+      // animation-iteration-count: infinite;
+      // animation-direction: alternate;
       @include MQ(MQ-1200) {
         bottom: 100px;
       }
@@ -84,8 +88,6 @@
       top: 0;
       z-index: 8;
       height: 100%;
-
-      
     }
 
     .video-section {
@@ -161,6 +163,7 @@
         z-index: 1;
         bottom: 8px;
         background: url("rocket.webp") no-repeat center / 100%;
+        animation: fly 10s 0.5s ease-in infinite;
         @include MQ(MQ-768) {
           display: none;
         }
@@ -187,6 +190,8 @@
         z-index: 1;
         right: 450px;
         background: url("icon-cloud.webp") no-repeat center / 100%;
+        animation: 10s linear infinite;
+        animation-name: blink, animateCloud;
         @include MQ(MQ-480) {
           top: auto;
           bottom: 270px;
@@ -206,6 +211,11 @@
         z-index: 1;
         top: 50px;
         background: url("star-large.webp") no-repeat center / 100%;
+
+        animation-name: starRotate, blink;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
         @include MQ(MQ-1024) {
           top: auto;
           bottom: 200px;
@@ -258,6 +268,12 @@
           z-index: 1;
           top: -27px;
           background: url("kite.svg") no-repeat center / 100%;
+          animation-duration: 6s;
+          animation-iteration-count: infinite;
+          -webkit-animation-direction: alternate-reverse;
+          animation-timing-function: linear;
+          animation-name: kites;
+
           @include MQ(MQ-480) {
             width: 54px;
             height: 70px;
@@ -284,6 +300,10 @@
             right: auto;
           }
           background: url("star-large-white.webp") no-repeat center / 100%;
+          animation-name: wstarRotate, blink;
+          animation-duration: 5s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
         }
         .pre-title {
           margin-bottom: 15px;

@@ -85,6 +85,8 @@
       left: 0;
       margin: 0 auto;
       background: url("icon-off-white-cloud.png") no-repeat center / 100%;
+      animation: 10s linear infinite;
+      animation-name: animateCloud;
       @include MQ(MQ-768) {
         top: -20px;
         left: auto;
@@ -92,10 +94,19 @@
         width: 53px;
         height: 70px;
         background: url("kite.svg") no-repeat center / 100%;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        -webkit-animation-direction: alternate-reverse;
+        animation-timing-function: linear;
+        animation-name: kites;
       }
     }
     &:before {
       background: url(icon-tilt-star.png) no-repeat center/42px;
+      animation-name: starRotate, blink;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
       width: 42.6px;
       height: 51.3px;
       right: 56px;
@@ -110,6 +121,10 @@
         width: 16px;
         height: 22px;
         background: url(star-large-white.webp) no-repeat center/100%;
+        animation-name: wstarRotate, blink;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
       }
     }
     &.center--align {

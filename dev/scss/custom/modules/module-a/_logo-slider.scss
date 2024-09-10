@@ -13,6 +13,10 @@
     left: 22px;
     top: 98px;
     background: url("star-large.webp") repeat center / 100%;
+    animation-name: starRotate, blink;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
     width: 33px;
     height: 39px;
     @include MQ(MQ-600) {
@@ -45,6 +49,7 @@
       right: -150px;
       top: -36px;
       background: url("rocket.webp") repeat center / 100%;
+      animation: fly 10s 0.5s ease-in infinite;
       width: 82px;
       height: 85px;
       @include MQ(MQ-600) {

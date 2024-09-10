@@ -25,7 +25,9 @@
     top: -350px;
     content: "";
     z-index: 5;
-    @include MQ(MQ-600) {display: none;}
+    @include MQ(MQ-600) {
+      display: none;
+    }
   }
   .container-1260 {
     position: relative;
@@ -39,6 +41,10 @@
       z-index: 3;
       top: -93px;
       background: url("star-large.webp") no-repeat center / 100%;
+      animation-name: starRotate, blink;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
       @include MQ(MQ-768) {
         display: none;
       }
