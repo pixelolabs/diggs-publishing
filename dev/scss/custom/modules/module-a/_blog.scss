@@ -48,7 +48,7 @@
     background-size: contain;
     z-index: 2;
     // filter: brightness(0) saturate(100%) invert(100%) sepia(56%) saturate(587%)
-      // hue-rotate(316deg) brightness(105%) contrast(114%);
+    // hue-rotate(316deg) brightness(105%) contrast(114%);
     @include MQ(MQ-1440) {
       height: 114px;
       top: -97px;
@@ -72,6 +72,9 @@
     z-index: 10;
     top: -110px;
     background: url(ufo.webp) no-repeat center / 100%;
+    animation-name: flow;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
     @include MQ(MQ-480) {
       display: none;
     }
@@ -111,7 +114,7 @@
     ul.accordion {
       margin-left: -20px;
       width: calc(100% + 20px);
-      margin-bottom:23px;
+      margin-bottom: 23px;
       // padding-right: 40px;
       li {
         padding-left: 20px;
@@ -545,8 +548,8 @@
         .date-category-section {
           display: flex;
           align-items: center;
-          svg{
-            width:13.5px;
+          svg {
+            width: 13.5px;
             height: 15px;
           }
           time {
@@ -569,8 +572,8 @@
             margin-left: 0;
             margin-top: 20px;
           }
-          svg{
-            width:13.5px;
+          svg {
+            width: 13.5px;
             height: 15px;
           }
           span {

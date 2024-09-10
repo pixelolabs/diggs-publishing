@@ -43,6 +43,8 @@ footer {
     width: 111px;
     height: 85px;
     background: url(icon-cloud.webp) no-repeat center / 100%;
+    animation: 10s linear infinite;
+    animation-name: animateCloud;
     top: -70px;
     left: 25%;
     background-size: contain;
@@ -167,12 +169,12 @@ footer {
             align-items: center;
 
             &:hover {
-              svg{
-                path{
-                  &:first-child{
+              svg {
+                path {
+                  &:first-child {
                     fill: $color-pink;
                   }
-                  &:nth-child(2){
+                  &:nth-child(2) {
                     fill: $color-white;
                   }
                 }
@@ -202,6 +204,8 @@ footer {
       width: 60px;
       height: 45px;
       background: url(icon-cloud.webp) no-repeat center / 100%;
+      animation: 10s linear infinite;
+      animation-name: animateCloud;
       top: -30px;
       right: 18%;
       background-size: contain;
@@ -217,6 +221,10 @@ footer {
       left: 35.7px;
       top: 93px;
       background: url(star-large-white.webp) no-repeat center / 100%;
+      animation-name: wstarRotate, blink;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
       width: 27.2px;
       height: 41.9px;
       @include MQ(MQ-480) {
@@ -282,6 +290,10 @@ footer {
         background: url(star-large-white.webp) no-repeat center / 100%;
         width: 27.2px;
         height: 41.9px;
+        animation-name: wstarRotate, blink;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
       }
       @include MQ(MQ-1280) {
         justify-content: space-between;

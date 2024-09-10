@@ -59,6 +59,10 @@
       top: 110px;
 
       background: url("star-large.webp") no-repeat center / 100%;
+      animation-name: starRotate, blink;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
       @include MQ(MQ-480) {
         top: auto;
         bottom: 30px;
@@ -109,6 +113,11 @@
       z-index: 1;
       top: -88px;
       background: url("kite.svg") no-repeat center / 100%;
+      animation-duration: 6s;
+      animation-iteration-count: infinite;
+      -webkit-animation-direction: alternate-reverse;
+      animation-timing-function: linear;
+      animation-name: kites;
       @include MQ(MQ-768) {
         width: 54px;
         height: 70px;
@@ -125,6 +134,8 @@
       z-index: 1;
       right: -184px;
       background: url("icon-cloud.webp") no-repeat center / 100%;
+      animation: 10s linear infinite;
+      animation-name: blink, animateCloud;
       @include MQ(MQ-480) {
         width: 40px;
         height: 32px;
@@ -256,6 +267,10 @@
       z-index: 3;
       top: -53px;
       background: url("star-large.webp") no-repeat center / 100%;
+      animation-name: starRotate, blink;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
       @include MQ(MQ-768) {
         display: none;
       }
@@ -284,11 +299,12 @@
     top: -125px;
     content: "";
     z-index: 2;
-    filter: brightness(0) saturate(100%) invert(100%) sepia(56%) saturate(587%) hue-rotate(316deg) brightness(105%) contrast(114%);
+    filter: brightness(0) saturate(100%) invert(100%) sepia(56%) saturate(587%)
+      hue-rotate(316deg) brightness(105%) contrast(114%);
     @include MQ(MQ-1440) {
-        height: 114px;
-        top: -97px;
-        background-size: cover;
+      height: 114px;
+      top: -97px;
+      background-size: cover;
     }
   }
   &::after {
@@ -302,6 +318,9 @@
     // top: -90px;
     top: -111px;
     background: url("ufo.webp") no-repeat center / 100%;
+    animation-name: flow;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
     @include MQ(MQ-768) {
       display: none;
     }
@@ -414,6 +433,8 @@
         z-index: 1;
         left: 160px;
         background: url("icon-cloud.webp") no-repeat center / 100%;
+        animation: 10s linear infinite;
+        animation-name: blink, animateCloud;
         @include MQ(MQ-768) {
           top: auto;
           bottom: -55px;
@@ -422,6 +443,10 @@
           width: 16px;
           height: 22px;
           background: url(star-large-white.webp) no-repeat center/100%;
+          animation-name: wstarRotate, blink;
+          animation-duration: 5s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
         }
       }
       &::after {
@@ -435,6 +460,10 @@
         top: 50px;
 
         background: url("star-large.webp") no-repeat center / 100%;
+        animation-name: starRotate, blink;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
         @include MQ(MQ-1024) {
           right: 20px;
         }
@@ -445,6 +474,11 @@
           width: 53px;
           height: 70px;
           background: url("kite.svg") no-repeat center / 100%;
+          animation-duration: 6s;
+          animation-iteration-count: infinite;
+          -webkit-animation-direction: alternate-reverse;
+          animation-timing-function: linear;
+          animation-name: kites;
         }
       }
     }
@@ -630,12 +664,14 @@
     padding: 9px 30px 7px 11px;
     background: url("shopping-bag.svg") no-repeat right 14px center / 12.3px
       $color-white;
-      &:hover{
-        background: url("shopping-bag.svg") no-repeat right 14px center / 12.3px $color-yellow;
-      }
+    &:hover {
+      background: url("shopping-bag.svg") no-repeat right 14px center / 12.3px
+        $color-yellow;
+    }
   }
-  &:hover{
-    background: url("shopping-bag.svg") no-repeat right 15.6px center / 15px $color-yellow;
+  &:hover {
+    background: url("shopping-bag.svg") no-repeat right 15.6px center / 15px
+      $color-yellow;
   }
 }
 
@@ -659,14 +695,13 @@
     width: 38px;
     height: 34px;
     background: url("eye.svg") no-repeat center right 14px/ 12.3px $color-white;
-    &:hover{
-      background: url("eye.svg") no-repeat center right 14px/ 12.3px $color-yellow
+    &:hover {
+      background: url("eye.svg") no-repeat center right 14px/ 12.3px $color-yellow;
     }
   }
-  &:hover{
+  &:hover {
     background: url("eye.svg") no-repeat center right 14px / 15px $color-yellow;
   }
-
 }
 
 .collection-top-section {

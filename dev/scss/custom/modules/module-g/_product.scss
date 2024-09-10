@@ -585,7 +585,7 @@
   &__actions {
     align-items: center;
     position: relative;
-  
+
     @include MQ(MQ-980) {
       padding-top: 0;
       flex-wrap: wrap;
@@ -671,14 +671,13 @@
       height: 45px;
       padding: 9.8px 60px 7.7px 32px;
       width: 100%;
-      &::before{
+      &::before {
         background: url("icon-shopping-bag.svg") no-repeat center / 100%;
         width: 17px;
         height: 17px;
         top: calc(50% - 8.5px);
         right: 31px;
       }
-      
     }
     .btn--primary[disabled] {
       pointer-events: none;
@@ -1934,6 +1933,10 @@
       z-index: 1;
       top: -50px;
       background: url("star-large.webp") no-repeat center / 100%;
+      animation-name: starRotate, blink;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
       @include MQ(MQ-768) {
         display: none;
       }
@@ -1993,6 +1996,8 @@
       z-index: 1;
       top: -39px;
       background: url("icon-cloud.webp") no-repeat center / 100%;
+      animation: 10s linear infinite;
+      animation-name: blink, animateCloud;
       @include MQ(MQ-768) {
         display: none;
       }
@@ -2008,6 +2013,10 @@
     z-index: 1;
     bottom: -13px;
     background: url("star-large.webp") no-repeat center / 100%;
+    animation-name: starRotate, blink;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
     @include MQ(MQ-768) {
       display: none;
     }

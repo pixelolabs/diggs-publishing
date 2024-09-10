@@ -433,6 +433,10 @@
       right: 54px;
       top: 37px;
       background: url(star-large.webp) no-repeat center / 100%;
+      animation-name: starRotate, blink;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
       width: 35px;
       height: 47px;
       z-index: 2;
@@ -512,6 +516,9 @@
     z-index: 10;
     top: -110px;
     background: url(ufo.webp) no-repeat center / 100%;
+    animation-name: flow;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
     @include MQ(MQ-480) {
       display: none;
     }
@@ -532,6 +539,10 @@
       background: url(star-large-white.webp) repeat center / 100%;
       width: 31.4px;
       height: 38.2px;
+      animation-name: wstarRotate, blink;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
       @include MQ(MQ-767) {
         display: none;
       }
@@ -542,6 +553,8 @@
       right: 100px;
       top: 20px;
       background: url(icon-cloud.webp) no-repeat center / 100%;
+      animation: 10s linear infinite;
+      animation-name: blink, animateCloud;
       width: 65px;
       height: 52px;
       z-index: -1;
@@ -777,6 +790,8 @@
     right: calc(50% - 150px);
     top: 20px;
     background: url(icon-cloud.webp) no-repeat center / 100%;
+    animation: 10s linear infinite;
+    animation-name: blink, animateCloud;
     width: 53.46px;
     height: 42.63px;
     z-index: 0;
@@ -972,6 +987,10 @@
       z-index: 1;
       top: 12px;
       background: url(star-large.webp) no-repeat center right / 30px;
+      animation-name: starRotate, blink;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
       @include MQ(MQ-768) {
         display: none;
       }

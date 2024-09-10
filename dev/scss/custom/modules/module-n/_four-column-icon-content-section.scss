@@ -30,6 +30,8 @@
       z-index: 1;
       left: 0px;
       background: url(icon-cloud.webp) no-repeat center / 100%;
+      animation: 10s linear infinite;
+      animation-name: blink, animateCloud;
       @include MQ(MQ-480) {
         top: -75px;
       }

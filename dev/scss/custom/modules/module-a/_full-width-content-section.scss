@@ -119,6 +119,8 @@
       z-index: 1;
       top: 210px;
       background: url("icon-cloud.webp") no-repeat center / 100%;
+      animation: 10s linear infinite;
+      animation-name: blink, animateCloud;
       @include MQ(MQ-980) {
         display: none;
       }
@@ -132,6 +134,9 @@
       z-index: 1;
       top: 110px;
       background: url("graphic-planet.png") no-repeat center / 100%;
+      animation-name: rotate;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
       @include MQ(MQ-768) {
         width: 57px;
         height: 40px;
@@ -153,6 +158,9 @@
       z-index: 1;
       bottom: -150px;
       background: url("ufo.webp") no-repeat center / 100%;
+      animation-name: flow;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
       @include MQ(MQ-768) {
         width: 60px;
         height: 60px;
@@ -169,6 +177,10 @@
       z-index: -1;
       bottom: -13px;
       background: url("star-large.webp") no-repeat center / 100%;
+      animation-name: starRotate, blink;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
       @include MQ(MQ-980) {
         display: none;
       }
@@ -204,6 +216,11 @@
       z-index: 1;
       top: -180px;
       background: url("kite.svg") no-repeat center / 100%;
+      animation-duration: 6s;
+      animation-iteration-count: infinite;
+      -webkit-animation-direction: alternate-reverse;
+      animation-timing-function: linear;
+      animation-name: kites;
       @include MQ(MQ-768) {
         width: 49px;
         height: 64px;
@@ -220,6 +237,8 @@
       z-index: 1;
       right: 150px;
       background: url("icon-cloud.webp") no-repeat center / 100%;
+      animation: 10s linear infinite;
+      animation-name: blink, animateCloud;
       @include MQ(MQ-980) {
         display: none;
       }

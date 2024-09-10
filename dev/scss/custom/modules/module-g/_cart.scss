@@ -14,6 +14,9 @@
     z-index: 2;
     top: -110px;
     background: url("ufo.webp") no-repeat left / 82px;
+    animation-name: flow;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
     @include MQ(MQ-768) {
       display: none;
     }
@@ -30,22 +33,24 @@
   }
   padding: 52px 0 135px;
   background: $color-off-white-light;
-.container-1260{
-  position: relative;
-  &::after {
-    width: 63.9px;
-    height: 51px;
-    content: "";
-    position: absolute;
-    top: -100px;
-    z-index: 2;
-    right: 280px;
-    background: url("icon-cloud.webp") no-repeat center / 100%;
-    @include MQ(MQ-480) {
-   display: none;
+  .container-1260 {
+    position: relative;
+    &::after {
+      width: 63.9px;
+      height: 51px;
+      content: "";
+      position: absolute;
+      top: -100px;
+      z-index: 2;
+      right: 280px;
+      background: url("icon-cloud.webp") no-repeat center / 100%;
+      animation: 10s linear infinite;
+      animation-name: blink, animateCloud;
+      @include MQ(MQ-480) {
+        display: none;
+      }
     }
   }
-}
 
   .title-shipping-section {
     display: flex;
@@ -73,7 +78,7 @@
   @include MQ(MQ-480) {
     padding: 40px 0 83px;
   }
- 
+
   .free-shipping {
     @include MQ(MQ-980) {
       margin-top: 20px;
@@ -134,9 +139,9 @@
       margin-bottom: 20px;
       background: $color-white;
       position: relative;
-     @include MQ(MQ-980) {
-      flex-wrap: wrap;
-      padding: 13px 16px 14px 0px;
+      @include MQ(MQ-980) {
+        flex-wrap: wrap;
+        padding: 13px 16px 14px 0px;
       }
       .remove {
         margin: 0;
@@ -147,8 +152,8 @@
         top: calc(50% - 8.5px);
         background: url("icon-cross.webp") no-repeat center / 17px;
         @include MQ(MQ-980) {
-        right: 16px;
-        top: 13px;
+          right: 16px;
+          top: 13px;
         }
       }
 
@@ -179,21 +184,18 @@
           width: auto;
           &.total-price {
             padding-left: 10px;
-           
           }
           @include MQ(MQ-480) {
-          &.total-price {
-            display: none !important;
+            &.total-price {
+              display: none !important;
+            }
           }
-        }
           &:nth-child(2) {
-           
-             padding-left: 96px;
+            padding-left: 96px;
           }
           &:nth-child(3) {
-          
             max-width: none;
-           
+
             @include MQ(MQ-480) {
               padding-left: 0px;
             }
@@ -218,9 +220,8 @@
             align-items: flex-start;
             width: 100% !important;
             max-width: 100% !important;
-            
           }
-         
+
           .image-section {
             width: 72px;
             height: 65px;
@@ -230,9 +231,9 @@
               @include img-object-contain;
             }
             @include MQ(MQ-980) {
-            position: absolute;
-            left: 13px;
-            top: 13px;
+              position: absolute;
+              left: 13px;
+              top: 13px;
             }
           }
           /* First columns for the item information */
@@ -318,7 +319,6 @@
         letter-spacing: normal;
         color: $color-black;
       }
-    
     }
   }
   /* Total */
@@ -327,14 +327,14 @@
     width: 357px;
     margin-left: 30px;
     margin-top: 27px;
- @include MQ(MQ-1200) {
-  width: 300px;
- }
- @include MQ(MQ-980) {
-  width: 360px;
-  max-width: 100%;
- }
-   
+    @include MQ(MQ-1200) {
+      width: 300px;
+    }
+    @include MQ(MQ-980) {
+      width: 360px;
+      max-width: 100%;
+    }
+
     @include MQ(MQ-980) {
       margin-left: 0px;
       margin-top: 60px;
@@ -383,69 +383,69 @@
       border: 1px solid $color-black;
       margin-top: 19px;
       padding: 26px 24px 31px;
-      .coupon-section{
-      label{
-        font-family: var(--font-family-primary);
-  font-size: 12px;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: 1px;
-text-transform: uppercase;
-  color: $color-black;;
-      }
-      p{
-        font-family: var(--font-family-primary);
-  font-size: 12px;
-  font-weight: normal;
-  line-height: 1.67;
-  letter-spacing: normal;
-  text-align: left;
-  color: $color-black;;
-      }
-      .form{
-        margin-bottom: 8px;
-        margin-top: 13px;
-        position: relative;
-        input[type="text"]{
-          width: 100%;
-          height: 48px;
-          padding: 5.9px 6.3px 5.9px 19.3px;
-          border-radius: 30px;
-          border: solid 1px $color-black;
+      .coupon-section {
+        label {
           font-family: var(--font-family-primary);
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.57;
-  letter-spacing: normal;
-  color: $color-black;
-  &::placeholder {
-    opacity: 1;
-    font-size: 14px;
-  font-weight: normal;
-  line-height: 1.57;
-  letter-spacing: normal;
-  color: $color-black;
-}
-        }
-        .btn-coupon{
-          width: 73px;
-          height: calc(100% - 10px);
-          border: none;
-          padding: 11.5px 0px 10.8px 0px;
-          border-radius: 30px;
-          background-color: $color-yellow;
-          font-family: var(--font-family-primary);
-          font-size: 10px;
+          font-size: 12px;
           font-weight: 500;
-          text-transform: uppercase;
-          line-height: 1.5;
+          line-height: normal;
           letter-spacing: 1px;
-          color: $color-black !important;
-          position: absolute;
-          top: 5px;
-          right: 5px;
+          text-transform: uppercase;
+          color: $color-black;
         }
-      }
+        p {
+          font-family: var(--font-family-primary);
+          font-size: 12px;
+          font-weight: normal;
+          line-height: 1.67;
+          letter-spacing: normal;
+          text-align: left;
+          color: $color-black;
+        }
+        .form {
+          margin-bottom: 8px;
+          margin-top: 13px;
+          position: relative;
+          input[type="text"] {
+            width: 100%;
+            height: 48px;
+            padding: 5.9px 6.3px 5.9px 19.3px;
+            border-radius: 30px;
+            border: solid 1px $color-black;
+            font-family: var(--font-family-primary);
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 1.57;
+            letter-spacing: normal;
+            color: $color-black;
+            &::placeholder {
+              opacity: 1;
+              font-size: 14px;
+              font-weight: normal;
+              line-height: 1.57;
+              letter-spacing: normal;
+              color: $color-black;
+            }
+          }
+          .btn-coupon {
+            width: 73px;
+            height: calc(100% - 10px);
+            border: none;
+            padding: 11.5px 0px 10.8px 0px;
+            border-radius: 30px;
+            background-color: $color-yellow;
+            font-family: var(--font-family-primary);
+            font-size: 10px;
+            font-weight: 500;
+            text-transform: uppercase;
+            line-height: 1.5;
+            letter-spacing: 1px;
+            color: $color-black !important;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+          }
+        }
       }
       @include MQ(MQ-480) {
         max-width: 100%;
@@ -540,7 +540,12 @@ text-transform: uppercase;
 
 .empty-cart-section {
   padding-top: 205px;
-  background-image: linear-gradient(98deg, #5ebe55 1%, #a8d24e 51%, #5abe50 101%);
+  background-image: linear-gradient(
+    98deg,
+    #5ebe55 1%,
+    #a8d24e 51%,
+    #5abe50 101%
+  );
   @include MQ(MQ-768) {
     padding-top: 130px;
   }
@@ -562,7 +567,7 @@ text-transform: uppercase;
       }
     }
 
-    .container-1260{
+    .container-1260 {
       position: relative;
       z-index: 3;
       &::after {
@@ -574,8 +579,12 @@ text-transform: uppercase;
         z-index: 2;
         right: 150px;
         background: url("star-large.webp") no-repeat center / 100%;
+        animation-name: starRotate, blink;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
         @include MQ(MQ-768) {
-       display: none;
+          display: none;
         }
       }
       &::before {
@@ -587,12 +596,16 @@ text-transform: uppercase;
         z-index: 2;
         left: 74px;
         background: url("star-large-white.webp") no-repeat center / 100%;
+        animation-name: wstarRotate, blink;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
         @include MQ(MQ-768) {
-       display: none;
+          display: none;
         }
       }
     }
-    
+
     @include MQ(MQ-768) {
       padding: 40px 0 60px;
     }
@@ -619,10 +632,10 @@ text-transform: uppercase;
   border: 1px solid $color-black;
   border-radius: 30px;
   background: $color-white;
-    @include MQ(MQ-480) {
-     max-width: 61px;
-       height: 19px;
-    }
+  @include MQ(MQ-480) {
+    max-width: 61px;
+    height: 19px;
+  }
   .cart__quantity-selector,
   .quantity-selector {
     border: none;
@@ -640,10 +653,10 @@ text-transform: uppercase;
     background: transparent !important;
     border-left: 1px solid $color-black;
     border-right: 1px solid $color-black;
-     @include MQ(MQ-480) {
-        width: 21px;
-       height: 19px;
-        font-size: 10.1px;
+    @include MQ(MQ-480) {
+      width: 21px;
+      height: 19px;
+      font-size: 10.1px;
     }
   }
   .minus-qty,
@@ -653,10 +666,10 @@ text-transform: uppercase;
     display: flex;
     align-items: center;
     justify-content: center;
-     @include MQ(MQ-480) {
-       height: 19px;
-       width: 19px;
-     }
+    @include MQ(MQ-480) {
+      height: 19px;
+      width: 19px;
+    }
   }
 }
 
@@ -752,7 +765,6 @@ text-transform: uppercase;
         text-align: center;
         img {
           width: 11.3px;
-         
         }
         &.car {
           img {

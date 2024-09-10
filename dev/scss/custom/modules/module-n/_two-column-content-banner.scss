@@ -58,6 +58,9 @@
       z-index: 1;
       top: -34px;
       background: url("planet.svg") no-repeat center / contain;
+      animation-name: rotate;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
       @include MQ(MQ-768) {
         width: 60px;
         height: 40px;

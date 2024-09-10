@@ -175,6 +175,10 @@
       left: 325px;
       top: -4px;
       background: url("star-large.webp") no-repeat center / 100%;
+      animation-name: starRotate, blink;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
       width: 30px;
       height: 35px;
       z-index: 2;
@@ -192,6 +196,8 @@
       right: 20px;
       top: 155px;
       background: url("icon-cloud.webp") no-repeat center / 100%;
+      animation: 10s linear infinite;
+      animation-name: blink, animateCloud;
       width: 65px;
       height: 51px;
       @include MQ(MQ-768) {
