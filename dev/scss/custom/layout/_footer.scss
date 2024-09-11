@@ -364,6 +364,9 @@ footer {
           line-height: 1.67;
           letter-spacing: normal;
           position: relative;
+          &:hover {
+            color: $color-pink;
+          }
         }
         span {
           position: relative;
@@ -618,6 +621,7 @@ footer {
           letter-spacing: 1px;
           text-align: left;
           text-transform: uppercase;
+          color: $color-black;
           @include MQ(MQ-480) {
             font-size: 15px;
           }

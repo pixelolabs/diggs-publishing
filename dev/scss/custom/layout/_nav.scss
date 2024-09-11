@@ -37,28 +37,16 @@
     .right-nav {
       li {
         a {
-          svg {
-            &.icon-heart {
-              path {
-                stroke: $color-white !important;
+          &:hover {
+            svg {
+              path:first-child {
+                fill: $color-pink;
+              }
+              path:nth-child(2) {
+                fill: $color-white;
               }
             }
-            path {
-              fill: $color-white !important;
-            }
           }
-          // &:hover {
-          //   svg {
-          //     &.icon-heart {
-          //       path {
-          //         stroke: #1a1b1bb3 !important;
-          //       }
-          //     }
-          //     path {
-          //       fill: #1a1b1bb3 !important;
-          //     }
-          //   }
-          // }
         }
       }
     }
@@ -113,6 +101,19 @@
     padding-left: 25px;
     @include MQ(MQ-1280) {
       padding-left: 10px;
+    }
+    li a:hover,
+    button:hover {
+      svg {
+        path {
+          &:nth-child(1) {
+            fill: $color-pink;
+          }
+          &:nth-child(2) {
+            stroke: $color-white;
+          }
+        }
+      }
     }
   }
   .navbar-collapse {
@@ -202,50 +203,14 @@ header.fixed {
 header {
   /****** Header - Top Header ******/
 
-  // &:before {
-  //   width: 100%;
-  //   height: 30px;
-  //   background-color: #1a1b1b;
-  //   left: 0;
-  //   top: 0;
-  //   z-index: -1;
-  //   position: absolute;
-  //   content: "";
-  // }
-
   .main-header {
     position: relative;
     padding-left: 256px;
-    // background-color: $color-white;
-    // border-top-right-radius: 20px;
-    // border-top-left-radius: 20px;
-    // border-bottom: 1px solid #efefef;
+
     transition: 0.3s ease all;
     @include MQ(MQ-1280) {
       padding-left: 200px;
     }
-
-    // &.active {
-    //   // background-color: $color-white;
-    //   transition: 0.3s ease all;
-    //   // .right-nav {
-    //   //   li {
-    //   //     a {
-    //   //       svg {
-    //   //         path {
-    //   //           fill: $color-black;
-    //   //         }
-    //   //         &.icon-heart {
-    //   //           path {
-    //   //             stroke: $color-black;
-    //   //             fill: $color-black;
-    //   //           }
-    //   //         }
-    //   //       }
-    //   //     }
-    //   //   }
-    //   // }
-    // }
 
     @include MQ(MQ-980) {
       padding: 12px 0;
@@ -254,12 +219,6 @@ header {
 
   .right-nav {
     li {
-      // margin-left: 22.5px;
-      // width: 45px;
-      // height: 78px;
-
-      // padding: 0px 5px;
-      // margin-right: 8px;
       width: 39px;
       height: 39px;
       margin-right: 10px;
@@ -281,14 +240,9 @@ header {
           margin-right: 8.8px;
         }
       }
-      // @include MQ(MQ-1100) {
-      //   // margin-left: 20px;
-      // }
+
       &:last-child {
         margin-right: 0;
-      }
-      @include MQ(MQ-768) {
-        // margin-left: 15px;
       }
     }
     a {
@@ -297,32 +251,15 @@ header {
       &:after {
         display: none;
       }
-      // svg {
-      //   path {
-      //     fill: $color-black !important;
-      //   }
-      //   &.icon-heart {
-      //     path {
-      //       stroke: $color-black;
-      //     }
-      //   }
-      // }
+
       &:hover {
-        // &:hover {
-        //   svg {
-        //     &.icon-heart {
-        //       path {
-        //         stroke: #1a1b1b7e !important;
-        //       }
-        //     }
-        //     path {
-        //       fill: #1a1b1b7e !important;
-        //     }
-        //   }
-        // }
-        &::after {
-          width: 100%;
-          transition: 0.4s ease-in;
+        svg {
+          path:nth-child(1) {
+            fill: $color-pink;
+          }
+          path:nth-child(2) {
+            fill: $color-white;
+          }
         }
       }
     }
@@ -340,11 +277,6 @@ header {
       &:after {
         display: none;
       }
-      // @include MQ(MQ-980) {
-      //   // width: 40px;
-      //   // height: 40px;
-      //   justify-content: flex-end;
-      // }
     }
     .user {
       &:after {
@@ -738,6 +670,17 @@ header {
                   margin-left: 37px;
                   .product-wrapper {
                     padding: 0 !important;
+                    &:hover {
+                      .image-section {
+                        img {
+                          width: 100% !important;
+                          height: 100% !important;
+                          position: relative !important;
+                          left: 0 !important;
+                          top: 0 !important;
+                        }
+                      }
+                    }
                   }
                   &:first-child {
                     &:before {
