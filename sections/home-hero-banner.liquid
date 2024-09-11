@@ -37,7 +37,12 @@
               class="content"
             >
               {% if section.settings.pretitle != blank %}
-                <span class="pre-title">{{ section.settings.pretitle }}</span>
+                <span
+                  class="pre-title"
+                  style="color:{% if section.settings.pretitle_color != blank %} {{ section.settings.pretitle_color }}{% endif %}"
+                >
+                  {{- section.settings.pretitle -}}
+                </span>
               {% endif %}
               <h1>{{ section.settings.title }}</h1>
 
