@@ -1,5 +1,6 @@
 .full-width-content-section {
   position: relative;
+
   .top-wave {
     position: relative;
     // &::after {
@@ -87,12 +88,13 @@
     background: url(white-thread-2.0.svg) no-repeat center / contain;
     @include MQ(MQ-980) {
       top: -150px;
+      right: 0;
     }
     @include MQ(MQ-768) {
       width: 125px;
       height: 426px;
       top: -130px;
-      right: -20px;
+      // right: -20px;
     }
     @include MQ(MQ-500) {
       width: 95px;
@@ -204,6 +206,7 @@
   }
   text-align: center;
   background: url("graphic_tarnsperant-rays.png") repeat center / 100%;
+  background-size: cover;
   h2 {
     margin-bottom: 20px;
     position: relative;

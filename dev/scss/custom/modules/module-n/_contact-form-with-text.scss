@@ -42,6 +42,21 @@
   //       top: -33px;
   //     }
   //   }
+  &:before {
+    position: absolute;
+    content: "";
+    width: 65px;
+    height: 87px;
+    left: 25%;
+    top: 80px;
+    background: url(kits-2.svg) no-repeat center / 65px;
+    z-index: 2;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate-reverse;
+    animation-timing-function: linear;
+    animation-name: kites;
+  }
 }
 .contact-form-with-text {
   position: relative;
@@ -77,7 +92,7 @@
     }
     @include MQ(MQ-500) {
       top: -240px;
-      right: -48px;
+      right: 0px;
     }
   }
   .container-1260 {
@@ -214,6 +229,9 @@
     height: 330px;
     bottom: 0px;
     z-index: 0;
+    @include MQ(MQ-980) {
+      right: 0;
+    }
     img {
       @include img-object-contain;
     }

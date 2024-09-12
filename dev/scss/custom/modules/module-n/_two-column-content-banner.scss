@@ -23,6 +23,16 @@
       top: -18px;
     }
   }
+  &:after {
+    position: absolute;
+    content: "";
+    height: 501px;
+    width: 309px;
+    right: 0;
+    top: 51px;
+    background: url(orange-thread.svg) no-repeat right / 309px;
+    z-index: 2;
+  }
   .box {
     max-width: 1030px;
     z-index: 4;
