@@ -12,26 +12,23 @@
                   class="image-section"
                   title="{{ block.settings.InstaLink }}"
                 >
-                  <picture>
-                    <source type="image/webp" srcset="{{ block.settings.instaImage | image_url: width: 1262, format: 'webp' }}">
-                    <img src="{{ block.settings.instaImage | image_url: width: 1262 }}" alt="Instagram Image" loading="lazy" />
-                  </picture>
+                  {{
+                    block.settings.instaImage
+                    | image_url: width: 1262
+                    | image_tag: loading: 'lazy', widths: '1262x1000'
+                  }}
                 </a>
               </li>
             {% endif %}
           {% endfor %}
         </ul>
-
         <div class="middle-section">
           {% if section.settings.sstext != blank %}
             <span>{{ section.settings.sstext }}</span>
           {% endif %}
           {% if section.settings.logo != blank %}
             <div class="footer-logo">
-              <picture>
-                <source type="image/webp" srcset="{{ section.settings.logo | image_url: width: 200, format: 'webp' }}">
-                <img src="{{ section.settings.logo | image_url: width: 200 }}" alt="Logo" loading="lazy" />
-              </picture>
+              {{ section.settings.logo | image_url: width: 200 | image_tag: loading: 'lazy', widths: '200x200' }}
             </div>
           {% endif %}
           <div class="social-icons">
@@ -49,21 +46,23 @@
                   class="image-section"
                   title="{{ block.settings.InstaLink }}"
                 >
-                  <picture>
-                    <source type="image/webp" srcset="{{ block.settings.instaImage | image_url: width: 1262, format: 'webp' }}">
-                    <img src="{{ block.settings.instaImage | image_url: width: 1262 }}" alt="Instagram Image" loading="lazy" />
-                  </picture>
+                  {{
+                    block.settings.instaImage
+                    | image_url: width: 1262
+                    | image_tag: loading: 'lazy', widths: '1262x1000'
+                  }}
                 </a>
               </li>
             {% endif %}
           {% endfor %}
         </ul>
       </div>
-
       <div class="main-footer__middle flex">
+        <!-- Footer Menu -->
         <div class="main-footer__nav flex">
           {% assign fotterMenu = linklists[section.settings.footerMenu] %}
           {% for link in fotterMenu.links %}
+            {% assign linkTitle = link.title | downcase | remove: ' ' %}
             <div class="footer-links">
               <p class="title">
                 <a href="javascript:;" title="{{ link.title | escape }}"> {{ link.title | escape }}</a>
@@ -78,7 +77,6 @@
             </div>
           {% endfor %}
         </div>
-
         <div class="right-section">
           <div class="main-footer__newsletter">
             <div class="news-content">
@@ -87,51 +85,58 @@
               {% endif %}
 
               {% if section.settings.description != blank %}
-                <div class="description">
+                <div class="description ">
                   {{ section.settings.description }}
                 </div>
               {% endif %}
             </div>
             <div class="newsletter-form">
               {% render 'newsletter-form' %}
+              {% comment %}
+                <form action="">
+                  <input type="email" name="Email" id="email" placeholder="Enter Email Address">
+                  <button type="submit" class="btn-submit" value="Subscribe">Subscribe</button>
+                </form>
+              {% endcomment %}
             </div>
           </div>
         </div>
-      </div>
+        {% comment %}
+          <div class=" block-980">
+            {% if section.settings.description != blank %}
+              <div class="description">
+                {{ section.settings.description }}
+              </div>
+            {% endif %}
 
+          </div>
+        {% endcomment %}
+      </div>
       <div class="main-footer__bottom">
         {% assign legalMenu = linklists[section.settings.legalMenu] %}
         {% if legalMenu != blank %}
           <div class="legal-menu">
             {% for link in legalMenu.links %}
               <span>
-                <a href="{{ link.url }}" title="{{ link.title | escape }}">{{ link.title | escape }}</a>
-              </span>
+                <a href="{{ link.url }}" title="{{ link.title | escape }}">{{ link.title | escape }}</a></span
+              >
             {% endfor %}
           </div>
         {% endif %}
-        
+        <!-- Copyright -->
         <div class="copyright">
           <div class="copyright-section flex-wrap">
             <p>© {{ 'now' | date: '%Y' }} All Rights Reserved by Diggs Publishing</p>
             <a href="">Designed by PixeloLabs</a>
           </div>
         </div>
-
         <div class="footer-cartoon">
-          <picture>
-            <!-- WebP version -->
-            <source type="image/webp" srcset="{{ 'Footer-cartoon.webp' | asset_url }}" sizes="100vw">
-            <!-- Fallback for non-WebP browsers (JPG) -->
-            <img src="{{ 'Footer-cartoon.jpg' | asset_url }}" loading="lazy" decoding="async" alt="Cartoon figures" style="width: 100%; height: auto; display: block;">
-          </picture>
+          <img src="{{ "Footer-cartoon.jpg" |asset_url}}" alt="cartoon-figures">
         </div>
       </div>
     </div>
   </div>
 </footer>
-
-
 {% schema %}
 {
   "name": "Footer",
