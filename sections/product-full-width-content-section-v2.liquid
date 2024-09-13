@@ -1,28 +1,30 @@
 {% if section.settings.title != blank %}
   <div class="full-width-content-section-v2">
-    <div class="container-1440">
-      <div class="container-840">
-        <div class="inner">
-          {% if section.settings.icon != blank %}
-            <div class="thumb-images">
-              {% comment %} <img src="{{ 'icon-thumpup.webp' | asset_url }}"> {% endcomment %}
-              {{ section.settings.icon | image_url: width: 200 | image_tag: loading: 'lazy', widths: '200x200' }}
-            </div>
-          {% endif %}
-          <h2>{{ section.settings.title }}</h2>
-          {% if section.settings.description != blank %}
-            {{ section.settings.description }}
-          {% endif %}
-          {% if section.settings.btnLink != blank and section.settings.btnText != blank %}
-            <a
-              href="{{section.settings.btnLink}}"
-              title="{{ section.settings.btnText }}"
-              aria-label="{{ section.settings.btnText }}"
-              class="btn--primary yellow"
-            >
-              {{ section.settings.btnText -}}
-            </a>
-          {% endif %}
+    <div class="top-wave">
+      <div class="container-1440">
+        <div class="container-840">
+          <div class="inner">
+            {% if section.settings.icon != blank %}
+              <div class="thumb-images">
+                {% comment %} <img src="{{ 'icon-thumpup.webp' | asset_url }}"> {% endcomment %}
+                {{ section.settings.icon | image_url: width: 200 | image_tag: loading: 'lazy', widths: '200x200' }}
+              </div>
+            {% endif %}
+            <h2>{{ section.settings.title }}</h2>
+            {% if section.settings.description != blank %}
+              {{ section.settings.description }}
+            {% endif %}
+            {% if section.settings.btnLink != blank and section.settings.btnText != blank %}
+              <a
+                href="{{section.settings.btnLink}}"
+                title="{{ section.settings.btnText }}"
+                aria-label="{{ section.settings.btnText }}"
+                class="btn--primary yellow"
+              >
+                {{ section.settings.btnText -}}
+              </a>
+            {% endif %}
+          </div>
         </div>
       </div>
     </div>
