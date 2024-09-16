@@ -654,7 +654,7 @@ button {
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-  line-height: normal;
+  line-height: 1.25;
   letter-spacing: 2px;
   text-align: left;
   max-width: fit-content;
@@ -665,10 +665,15 @@ button {
   background: url("icon-right-arrow.webp") no-repeat right center/ 13.5px;
   padding-right: 21.5px;
   transition: 0.3s ease;
+
   &:hover {
     color: $color-orange;
     background-image: url("icon-right-arrow-orange.webp");
   }
+}
+.mac-os .link--primary{
+ 
+  padding-top: 4px;
 }
 
 .link--secondary {
