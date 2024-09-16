@@ -225,9 +225,29 @@
           width: 100%;
         }
       }
-      &:nth-child(2n) {
+      &:nth-child(5n+1) {
+        .article-card::before {
+          border: 2px solid $color-green !important;
+        }
+      }
+      &:nth-child(5n+2) {
+        .article-card::before {
+          border: 2px solid $color-pink;
+        }
+      }
+      &:nth-child(5n+3){
         .article-card:before {
-          border: 2px solid #5fbf50 !important;
+          border: 2px solid $color-orange;
+        }
+      }
+      &:nth-child(5n+4){
+        .article-card:before {
+          border: 2px solid $color-yellow;
+        }
+      }
+      &:nth-child(5n){
+        .article-card::before{
+          border: 2px solid $color-purple;
         }
       }
       &:last-child {

@@ -168,20 +168,7 @@
     height: 100%;
     border: 2px solid $color-green;
   }
-  &:first-child {
-    &::before {
-      border: 2px solid $color-green !important;
-    }
-  }
-  &:nth-child(2n) {
-    &::before {
-      border: 2px solid $color-pink;
-    }
-  }
-  &:nth-child(3n):before {
-    border: 2px solid $color-orange;
-  }
-
+  
   // @include MQ(MQ-980) {
   //   padding: 28px 30px 30px 30px;
   // }
@@ -352,7 +339,6 @@
     }
   }
 }
-
 .article-hero-banner-section {
   text-align: center;
   padding-top: 54px;
@@ -584,6 +570,7 @@
       background: white;
       margin-left: 15px;
       margin-bottom: 10px;
+      text-transform: uppercase;
     }
   }
   .article-pagination {
