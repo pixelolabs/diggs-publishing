@@ -51,7 +51,7 @@
     // hue-rotate(316deg) brightness(105%) contrast(114%);
     @include MQ(MQ-1440) {
       height: 114px;
-      top: -97px;
+      top: -95px;
       background-size: cover;
     }
     @include MQ(MQ-768) {
@@ -119,6 +119,7 @@
       li {
         padding-left: 20px;
         margin-bottom: 25px;
+        &:hover,
         &.current {
           a {
             background: $color-pale-peach;
@@ -216,6 +217,7 @@
     justify-content: center;
 
     li {
+      display: flex;
       padding-left: 44px;
       width: 33.33%;
       margin-bottom: 37px;
@@ -225,9 +227,29 @@
           width: 100%;
         }
       }
-      &:nth-child(2n) {
+      &:nth-child(5n+1) {
+        .article-card::before {
+          border: 2px solid $color-green !important;
+        }
+      }
+      &:nth-child(5n+2) {
+        .article-card::before {
+          border: 2px solid $color-pink;
+        }
+      }
+      &:nth-child(5n+3){
         .article-card:before {
-          border: 2px solid #5fbf50 !important;
+          border: 2px solid $color-orange;
+        }
+      }
+      &:nth-child(5n+4){
+        .article-card:before {
+          border: 2px solid $color-yellow;
+        }
+      }
+      &:nth-child(5n){
+        .article-card::before{
+          border: 2px solid $color-purple;
         }
       }
       &:last-child {
@@ -489,12 +511,12 @@
   // }
   .half-image-half-content {
     padding-top: 20px !important;
-    padding-bottom: 0 !important;
+    padding-bottom: 40px !important;
     .image-wrapper {
       width: 715px;
       margin-right: 100px;
       &::after {
-        display: none;
+        // display: none;
       }
       @include MQ(MQ-980) {
         width: 100%;

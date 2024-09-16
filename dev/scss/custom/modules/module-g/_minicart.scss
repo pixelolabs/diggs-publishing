@@ -122,6 +122,9 @@
   text-decoration: underline;
   letter-spacing: 1px;
   color: $color-black;
+  &:hover{
+    color: $color-orange;
+  }
     }
     .icon-close {
       font-size: 0 !important;
@@ -129,6 +132,16 @@
       margin-right: 16px;
       width: 20px;
       height: 20px;
+      &:hover{
+        svg{
+          path{
+            fill: $color-black;
+            &:nth-child(2){
+stroke: $color-white;
+            }
+          }
+        }
+      }
       svg {
         width: 20px;
         height: 20px;
@@ -166,6 +179,16 @@
           svg{
             width: 18px;
             height: 18px;
+          }
+          &:hover{
+            svg{
+              path{
+                fill: $color-black;
+                &:nth-child(2){
+    stroke: $color-white;
+                }
+              }
+            }
           }
         }
         &.empty-cart-section {
@@ -255,6 +278,7 @@
             a {
               font: inherit;
               color: inherit;
+              letter-spacing: 1px;
             }
           }
           p {
@@ -347,10 +371,12 @@
       margin-top: 11px;
     }
     .btn--primary {
-      max-width: 100%;
+      max-width: 275px;
       width: 100%;
+      margin: 0 auto;
       margin-top: 32px;
-      background-image: url(full-width-button.webp);
+      padding-right: 61px;
+     
     }
     .cart-total {
       align-items: center;
@@ -452,6 +478,7 @@
           a {
             font: inherit;
             color: inherit;
+            letter-spacing: 1px;
           }
         }
         p {
@@ -480,6 +507,9 @@
             color: $color-black;
             padding-bottom: 3px;
             border-bottom: 2px solid $color-yellow;
+            &:hover{
+              border-bottom: 2px solid $color-orange;
+            }
           }
 
         }
