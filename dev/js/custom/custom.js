@@ -19,6 +19,7 @@ jQuery(function() {
         spaceBetween: 39,
         // centeredSlides: true,
         // resistance: false,
+        threshold:5,
         loop:true,
         resistance: false,
         shortSwipes: true,
@@ -50,6 +51,7 @@ var productSectionSlider = new Swiper(".js__article-slider", {
     spaceBetween: 30,
     // centeredSlides: true,
     // resistance: false,
+    threshold:5,
     loop:true,
     resistance: false,
     shortSwipes: true,
@@ -212,7 +214,7 @@ var productSectionSlider = new Swiper(".js__article-slider", {
         slidesPerView: 1,
 
         resistance: false,
-
+        threshold:5,
         loop: true,
         spaceBetween: 30,
         // autoplay: {
@@ -232,7 +234,7 @@ var productSectionSlider = new Swiper(".js__article-slider", {
         spaceBetween: 20,
         threshold: 1,
         loop: true,
-
+        threshold:5,
         breakpoints: {
 
             1920: {
@@ -250,6 +252,7 @@ var productSectionSlider = new Swiper(".js__article-slider", {
         slidesPerView: 3,
         spaceBetween: 25,
         loop: true,
+        threshold:5,
         threshold: 1,
         breakpoints: {
             '1025': {
