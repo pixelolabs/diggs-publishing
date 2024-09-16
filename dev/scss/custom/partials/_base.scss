@@ -1157,6 +1157,23 @@ button {
       list-style-type: decimal !important;
     }
   }
+  table {
+    border: 1px solid $color-orange;
+    min-width: 600px;
+    border-collapse: collapse;
+    th {
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: 700;
+      border-bottom: 1px solid $color-orange;
+      padding: 9px 15px;
+      text-align: left;
+    }
+    td {
+      border-bottom: 1px solid $color-orange;
+      padding: 9px 15px;
+    }
+  }
 }
 
 /****** CONTAINERS ******/
