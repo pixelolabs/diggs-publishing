@@ -906,8 +906,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 jQuery(function () {
   var _Swiper;
 
-  console.log("navigator.userAgent" + navigator.userAgent);
-
   if (navigator.userAgent.indexOf('Mac') > 0) {
     $('body').addClass('mac-os');
   }
