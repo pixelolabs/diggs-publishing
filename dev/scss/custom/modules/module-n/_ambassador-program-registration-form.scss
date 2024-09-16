@@ -74,8 +74,8 @@
     }
   }
   .container-970 {
-    padding-top: 110px;
-    padding-bottom: 116px;
+    padding-top: 150px;
+    padding-bottom: 150px;
     position: relative;
     &::after {
       width: 41px;
@@ -86,7 +86,7 @@
       z-index: 1;
       bottom: 200px;
       background: url(star-large.webp) no-repeat center / 100%;
-      animation-name: starRotate, blink;
+      animation-name: starRotate;
       animation-duration: 5s;
       animation-iteration-count: infinite;
       animation-direction: alternate;
@@ -120,7 +120,7 @@
       left: -84px;
       background: url(icon-cloud.webp) no-repeat center / 100%;
       animation: 10s linear infinite;
-      animation-name: blink, animateCloud;
+      animation-name: animateCloud;
       @include MQ(MQ-1300) {
         left: -24px;
       }

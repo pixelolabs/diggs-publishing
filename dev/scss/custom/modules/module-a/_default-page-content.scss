@@ -1,5 +1,5 @@
 .default-page-content {
-  padding: 73px 0 200px;
+  padding: 73px 0 100px;
   position: relative;
   &:before {
     background: url(yellow-wave.webp) repeat-x top / 100%;
@@ -55,7 +55,7 @@
       top: -126px;
       background: url(icon-cloud.webp) no-repeat center / 100%;
       animation: 10s linear infinite;
-      animation-name: blink, animateCloud;
+      animation-name: animateCloud;
       width: 65px;
       height: 52px;
       z-index: 2;
@@ -117,12 +117,12 @@
         right: 25%;
         top: -106px;
       }
-      .full-format {
-        padding-bottom: 66px;
-        @include MQ(MQ-500) {
-          padding-bottom: 50px;
-        }
-      }
+      // .full-format {
+      //   padding-bottom: 66px;
+      //   @include MQ(MQ-500) {
+      //     padding-bottom: 50px;
+      //   }
+      // }
     }
   }
 }

@@ -50,7 +50,9 @@
                 </h2>
               {% endif %}
               {% if block.settings.description != blank %}
-                {{ block.settings.description }}
+                <div class="description">
+                  {{ block.settings.description }}
+                </div>
               {% endif %}
               {% if block.settings.buttonText != blank and block.settings.buttonLink != blank %}
                 <a

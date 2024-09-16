@@ -91,8 +91,8 @@
 
 .form-success,
 .form-message--success {
-  background: #5ebf4f  !important;
-  border: 1px solid #5ebf4f  !important;
+  background: #5ebf4f !important;
+  border: 1px solid #5ebf4f !important;
   padding: 0.8em 1em;
   color: #ffffff !important;
   opacity: 1 !important;
@@ -408,22 +408,18 @@ textarea.input--error {
     margin-top: 22px;
     .btn--quick-view {
       margin-left: 21px;
-      span{
+      span {
         display: none;
       }
-      
     }
   }
-  &:hover{
+  &:hover {
     .btn--quick-view {
-      span{
-      display: block;
+      span {
+        display: block;
       }
       width: auto !important;
-     padding-right: 40px
-     
-     
-     
+      padding-right: 40px;
     }
   }
   padding-right: 12px;
@@ -448,7 +444,7 @@ textarea.input--error {
   .product-wrapper {
     display: block;
     height: 100%;
-    
+
     border: solid 1px rgba(255, 200, 43, 0.36);
     background-image: linear-gradient(to bottom, #fff8e3, #fff8e1);
     padding: 18px 18px 35px;
@@ -463,12 +459,8 @@ textarea.input--error {
     position: relative;
     &:hover {
       .image-section {
-        
         img {
-         
-         
           &:last-child {
-           
             opacity: 1;
             z-index: 4;
             position: absolute;
@@ -485,8 +477,8 @@ textarea.input--error {
       }
       h3 {
         color: $color-dark-gray;
-        a{
-        text-decoration: underline !important;
+        a {
+          text-decoration: underline !important;
         }
       }
     }
@@ -507,7 +499,6 @@ textarea.input--error {
     }
   }
   .image-section {
-   
     position: relative !important;
     height: 277px;
     width: 100%;
@@ -945,7 +936,7 @@ textarea.input--error {
       letter-spacing: 0.01px !important;
       text-align: center !important;
       position: absolute;
-      right: 6.5px;
+      right: 8.5px;
       width: 52px;
       height: 36px;
       background: white;
@@ -962,6 +953,14 @@ textarea.input--error {
         background: url("icon-mail.png") no-repeat center/22px;
         width: 22px;
         height: 22px;
+      }
+      &:hover,
+      &:focus {
+        background: $color-pink;
+        &:before {
+          filter: brightness(0) saturate(100%) invert(99%) sepia(100%)
+            saturate(2%) hue-rotate(300deg) brightness(112%) contrast(101%);
+        }
       }
       @include MQ(MQ-480) {
         right: 10px;

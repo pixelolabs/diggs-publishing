@@ -544,7 +544,7 @@ header {
               top: 92px;
               background: url(icon-cloud.webp) no-repeat center / 100%;
               animation: 10s linear infinite;
-              animation-name: blink, animateCloud;
+              animation-name: animateCloud;
               width: 52px;
               height: 42px;
 
@@ -611,7 +611,7 @@ header {
                         width: 0%;
                         background-color: $color-black;
                         left: 0;
-                        bottom: 2px;
+                        bottom: -2px;
                         transition: 0.5s ease-in;
                       }
                       &:hover {
@@ -633,7 +633,7 @@ header {
                 z-index: 1;
                 top: 98px;
                 background: url(star-large.webp) no-repeat center right / 25px;
-                animation-name: starRotate, blink;
+                animation-name: starRotate;
                 animation-duration: 5s;
                 animation-iteration-count: infinite;
                 animation-direction: alternate;
@@ -650,7 +650,7 @@ header {
                 bottom: 0;
                 z-index: 1;
                 background: url(star-large-white.webp) no-repeat center/24px;
-                animation-name: wstarRotate, blink;
+                animation-name: wstarRotate;
                 animation-duration: 5s;
                 animation-iteration-count: infinite;
                 animation-direction: alternate;
@@ -1261,7 +1261,7 @@ header {
                     width: 0%;
                     background-color: $color-black;
                     left: 0;
-                    bottom: 2px;
+                    bottom: -2px;
                     transition: 0.5s ease-in;
                   }
                   &:hover {
@@ -1542,7 +1542,7 @@ header {
       content: "";
       background: url(icon-cloud.webp) no-repeat right / 50px;
       animation: 10s linear infinite;
-      animation-name: blink, animateCloud;
+      animation-name: animateCloud;
       width: 59px;
       height: 83px;
       right: -24px;

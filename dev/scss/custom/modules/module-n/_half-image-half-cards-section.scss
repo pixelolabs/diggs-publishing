@@ -63,7 +63,7 @@
       top: -200px;
       background: url(icon-cloud.webp) no-repeat center / 100%;
       animation: 10s linear infinite;
-      animation-name: blink, animateCloud;
+      animation-name: animateCloud;
       width: 65px;
       height: 52px;
       z-index: 2;
@@ -91,7 +91,7 @@
       top: -20px;
       background: url(icon-cloud.webp) no-repeat center / 100%;
       animation: 10s linear infinite;
-      animation-name: blink, animateCloud;
+      animation-name: animateCloud;
       width: 65px;
       height: 52px;
     }
