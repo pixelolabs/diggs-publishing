@@ -127,7 +127,11 @@
         <div class="copyright">
           <div class="copyright-section flex-wrap">
             <p>© {{ 'now' | date: '%Y' }} All Rights Reserved by Diggs Publishing</p>
-            <a href="">Designed by PixeloLabs</a>
+            {% if section.settings.creditText != blank and section.settings.credit != blank %}
+              <a href="{{ section.settings.credit }}" title="{{section.settings.creditText }}" target="_blank"
+                >Designed by PixeloLabs</a
+              >
+            {% endif %}
           </div>
         </div>
         <div class="footer-cartoon">
@@ -175,6 +179,16 @@
       "type": "link_list",
       "id": "legalMenu",
       "label": "Legal Menu"
+    },
+    {
+      "type": "text",
+      "id": "creditText",
+      "label": "Credit Text"
+    },
+    {
+      "type": "url",
+      "id": "credit",
+      "label": "Credit Link"
     }
   ],
 

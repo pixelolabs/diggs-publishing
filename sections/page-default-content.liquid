@@ -1,4 +1,19 @@
-<div class="default-page-content {{ section.settings.section_class | schema }}">
+{%- style -%}
+  .section-{{ section.id }}-padding{
+      padding-top: {{ section.settings.paddingtop | round: 0 }}px;
+      padding-bottom: {{ section.settings.paddingbottom | round: 0 }}px;
+    }
+
+
+    @media screen and (max-width: 768px) {
+    .section-{{ section.id }}-padding{
+      padding-top: {{ section.settings.paddingtopmobile | round: 0 }}px;
+      padding-bottom: {{ section.settings.paddingbottomMobile | round: 0 }}px;
+    }
+
+  }
+{%- endstyle -%}
+<div class="default-page-content {{ section.settings.section_class | schema }} section-{{ section.id }}-padding">
   <div class="container-1240">
     <div class="inner-box full-format wrap-text">
       {{ page.content }}
@@ -8,7 +23,7 @@
 {% schema %}
 {
   "name": "Default Page Content",
-  "settings":[
+  "settings": [
     {
       "type": "header",
       "content": "Extra Settings",
@@ -18,6 +33,50 @@
       "type": "text",
       "id": "section_class",
       "label": "Add custom class"
+    },
+    {
+      "type": "header",
+      "content": "Top/Bottom Section Space"
+    },
+    {
+      "type": "range",
+      "id": "paddingtop",
+      "min": 0,
+      "max": 300,
+      "step": 3,
+      "unit": "px",
+      "label": "Padding Top (Desktop)",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "paddingtopmobile",
+      "min": 0,
+      "max": 140,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top (Mobile)",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "paddingbottom",
+      "min": 0,
+      "max": 300,
+      "step": 3,
+      "unit": "px",
+      "label": "Padding Bottom (Desktop)",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "paddingbottomMobile",
+      "min": 0,
+      "max": 140,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom (Mobile)",
+      "default": 0
     }
   ],
   "presets": [
