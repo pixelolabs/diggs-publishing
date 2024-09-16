@@ -79,6 +79,18 @@
       top: calc(50% - 9.5px);
       z-index: 10;
       cursor: pointer;
+      svg{
+         path{
+          transition: 0.3s ease fill;
+         }
+      }
+      &:hover{
+        svg{
+          path{
+            fill: $color-orange;
+          }
+        }
+      }
       @include MQ(MQ-480) {
         width: 15px;
         height: 24px;
