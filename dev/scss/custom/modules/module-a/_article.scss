@@ -169,7 +169,9 @@
     border: 2px solid $color-green;
   }
   &:first-child {
-    border: 2px solid $color-green !important;
+    &::before {
+      border: 2px solid $color-green !important;
+    }
   }
   &:nth-child(2n) {
     &::before {
@@ -297,7 +299,7 @@
     .artical-date-author {
       display: flex;
       align-items: center;
-      margin-bottom: 10px;
+      margin-bottom: 4px;
       flex-wrap: wrap;
       svg {
         width: 13px;
@@ -317,7 +319,7 @@
         display: flex;
         align-items: center;
         margin-right: 38px;
-        margin-bottom: 12px;
+        margin-bottom: 10px;
       }
       .author {
         display: flex;
@@ -646,7 +648,7 @@
     }
     time,
     span {
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 600;
       font-stretch: normal;
       font-style: normal;
@@ -655,6 +657,7 @@
       text-align: left;
       text-transform: uppercase;
       margin-left: 12px;
+      color: $color-original-black;
     }
     .date-category-section {
       display: flex;
@@ -863,11 +866,20 @@
       padding-right: 12px;
       padding-top: 12px;
       position: relative;
-      &:nth-child(odd) {
-        .article-card {
-          &:before {
-            border: 2px solid $color-green !important;
-          }
+      height: auto;
+      &:nth-child(3n + 1) {
+        .article-card::before {
+          border: 2px solid $color-green !important;
+        }
+      }
+      &:nth-child(3n + 2){
+        .article-card::before{
+            border: 2px solid $color-pink;
+        }
+      }
+      &:nth-child(3n){
+        .article-card::before{
+          border: 2px solid $color-orange;
         }
       }
 
@@ -875,6 +887,7 @@
         position: initial;
         margin-top: 0;
         max-width: 100%;
+        height: 100%;
         @include MQ(MQ-1024) {
           .image-section {
             height: 32vw;
@@ -925,6 +938,18 @@
     top: calc(50% - 9.5px);
     z-index: 10;
     cursor: pointer;
+      svg{
+        path{
+        transition: 0.3s ease fill;
+        }
+      }
+      &:hover{
+        svg{
+          path{
+            fill: $color-orange;
+          }
+        }
+      }
     @include MQ(MQ-1280) {
       right: -40px;
     }

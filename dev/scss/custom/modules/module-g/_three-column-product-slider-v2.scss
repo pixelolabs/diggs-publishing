@@ -1,6 +1,7 @@
 .three-column-product-slider-v2 {
   background: $color-sky-blue;
-  padding: 36px 40px 172px;
+  // padding: 36px 40px 172px;
+  padding: 36px 40px 238px;
   &::before {
     background: url("wave-sky-blue.webp") repeat left / 1452px;
     height: 85px;
@@ -12,7 +13,7 @@
   }
   transform: translate3d(0, 50px, 0) !important;
   @include MQ(MQ-480) {
-    padding: 5px 0px 100px;
+    padding: 5px 0px 140px;
   }
   &.aos-animate {
     transform: none !important;
@@ -79,6 +80,18 @@
       top: calc(50% - 9.5px);
       z-index: 10;
       cursor: pointer;
+      svg{
+         path{
+          transition: 0.3s ease fill;
+         }
+      }
+      &:hover{
+        svg{
+          path{
+            fill: $color-orange;
+          }
+        }
+      }
       @include MQ(MQ-480) {
         width: 15px;
         height: 24px;
