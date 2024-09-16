@@ -671,8 +671,7 @@ button {
     background-image: url("icon-right-arrow-orange.webp");
   }
 }
-.mac-os .link--primary{
- 
+.mac-os .link--primary {
   padding-top: 4px;
 }
 
@@ -735,7 +734,6 @@ button {
 
   h2,
   h3,
-  h4,
   h5,
   h6,
   h1 {
@@ -763,12 +761,13 @@ button {
   }
   h4,
   .h4 {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: normal;
     line-height: 1.4;
     letter-spacing: 0.5px;
+    margin-bottom: 8px;
     @include MQ(MQ-480) {
-      font-size: 18px;
+      font-size: 16px;
       line-height: 1.94;
       letter-spacing: 0.36px;
     }
