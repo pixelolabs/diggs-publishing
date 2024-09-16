@@ -1,4 +1,9 @@
 jQuery(function() {
+   
+    if(navigator.userAgent.indexOf('Mac') > 0){
+        $('body').addClass('mac-os');
+    }
+       
     $(window).scroll(function() {
         // var targetScroll = $('.product__actions').position().top;
         var targetScroll = $('.product__actions').offset().top - $('.product__actions').outerHeight() + 20;
