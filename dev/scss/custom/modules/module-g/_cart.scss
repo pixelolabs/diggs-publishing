@@ -105,7 +105,7 @@
         span {
           display: block;
           font-family: var(--font-family-primary);
-          font-size: 10px;
+          font-size: 12px;
           font-weight: 500;
           line-height: 1.5;
           letter-spacing: 1px;
@@ -163,6 +163,8 @@
       &__columns {
         min-width: 53px;
         flex: none;
+        align-items: center;
+        display: flex;
         &:nth-child(3) {
           justify-content: center;
           display: flex;
@@ -281,7 +283,7 @@
         .price {
           display: block;
           font-family: var(--font-family-primary);
-          font-size: 12px;
+          font-size: 14px;
           font-weight: normal;
           line-height: 1.67;
           letter-spacing: normal;
@@ -632,6 +634,7 @@
   height: 22px;
   border: 1px solid $color-black;
   border-radius: 30px;
+  overflow: hidden;
   background: $color-white;
   @include MQ(MQ-480) {
     max-width: 61px;
@@ -639,6 +642,7 @@
   }
   .cart__quantity-selector,
   .quantity-selector {
+   
     border: none;
     text-align: center;
     font-family: var(--font-family-primary);
@@ -662,7 +666,7 @@
   }
   .minus-qty,
   .plus-qty {
-    width: 22px;
+    width: 23px;
     height: 22px;
     display: flex;
     align-items: center;
@@ -670,6 +674,12 @@
     @include MQ(MQ-480) {
       height: 19px;
       width: 19px;
+    }
+    &:hover{
+      background: $color-black;
+svg path{
+  stroke: $color-white;
+}
     }
   }
 }
