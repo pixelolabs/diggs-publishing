@@ -543,7 +543,7 @@ button {
   background: url("btn-yellow.svg") no-repeat center / 100%;
   color: $color-black !important;
   &:before {
-    background: url("icon-arrow-brown.svg") no-repeat center / 100%;
+    background: url("icon-arrow-brown.png") no-repeat center / 100%;
   }
 }
 .btn--primary.green {
@@ -823,16 +823,6 @@ button {
     }
   }
 
-  /* h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-size: 18px;
-        a {
-            font-size: 18px;
-        }
-    }*/
   p {
     padding-bottom: 25px;
     @include MQ(MQ-768) {
@@ -989,52 +979,6 @@ button {
     color: $color-white;
   }
 
-  // blockquote {
-  //   font-size: 20px;
-  //   font-weight: 800;
-  //   line-height: 1.6;
-  //   letter-spacing: normal;
-  //   text-align: left;
-  //   color: $color-black;
-  //   margin: 0;
-  //   // padding-top: 45px;
-  //   margin-top: 31px;
-  //   margin-bottom: 50px;
-  //   background: $color-off-white;
-  //   padding: 33px 57px 35px 57px;
-  //   text-transform: uppercase;
-  //   font-family: var(--font-family-secondary);
-
-  //   @include MQ(MQ-768) {
-  //     padding: 20px 20px 20px 50px !important;
-
-  //     margin-bottom: 35px;
-  //   }
-
-  //   @include MQ(MQ-768) {
-  //     font-size: 14px;
-  //     line-height: 1.57;
-  //     letter-spacing: normal;
-  //   }
-
-  //   p {
-  //     font-size: 20px;
-  //     font-weight: 800;
-  //     line-height: 1.6;
-  //     letter-spacing: normal;
-  //     text-align: left;
-  //     text-transform: uppercase;
-  //     font-family: var(--font-family-secondary);
-  //     padding-bottom: 0;
-
-  //     @include MQ(MQ-768) {
-  //       font-size: 14px;
-  //       line-height: 1.57;
-  //       letter-spacing: normal;
-  //     }
-  //   }
-  // }
-
   @include MQ(MQ-980) {
     .alignleft,
     .alignright {
@@ -1111,6 +1055,9 @@ button {
     text-decoration: underline;
     // color: $color-black;
     color: $color-pink;
+    &:hover {
+      color: $color-orange !important;
+    }
   }
 
   a.btn--primary {
@@ -1181,37 +1128,7 @@ button {
     margin-bottom: 16px;
     height: 1px;
     background: $color-orange;
-
-    // @include MQ(MQ-980) {
-    //   margin-bottom: 20px;
-    // }
   }
-
-  // ol,
-  // ul {
-  //   padding-left: 30px;
-  //   // margin: 0 0 24px;
-  //   padding-bottom: 20px;
-  //   margin-top: 0;
-
-  //   &:last-child {
-  //     margin-bottom: 0;
-  //   }
-
-  //   li {
-  //     padding-left: 10px;
-  //     list-style-type: decimal;
-  //     font-size: 16px;
-  //     line-height: 1.63;
-  //     letter-spacing: 0.02px;
-  //     color: $color-black;
-  //     font-weight: 500;
-  //     margin-bottom: 24px;
-  //     // &:last-child {
-  //     //   margin-bottom: 0px;
-  //     // }
-  //   }
-  // }
 
   ul {
     padding-left: 0px;
@@ -1241,6 +1158,24 @@ button {
     li {
       padding-left: 0px !important;
       list-style-type: decimal !important;
+    }
+  }
+  table {
+    border: 1px solid $color-orange;
+    min-width: 600px;
+    border-collapse: collapse;
+    margin-bottom: 20px !important;
+    th {
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: 700;
+      border-bottom: 1px solid $color-orange;
+      padding: 9px 15px;
+      text-align: left;
+    }
+    td {
+      border-bottom: 1px solid $color-orange;
+      padding: 9px 15px;
     }
   }
 }

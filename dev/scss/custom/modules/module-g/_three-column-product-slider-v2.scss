@@ -1,19 +1,18 @@
 .three-column-product-slider-v2 {
   background: $color-sky-blue;
-  // padding: 36px 40px 172px;
-  padding: 36px 40px 238px;
+  padding: 76px 40px 253px;
   &::before {
     background: url("wave-sky-blue.webp") repeat left / 1452px;
     height: 85px;
     width: 100%;
     position: absolute;
     left: 0;
-    top: -85px;
+    top: -45px;
     content: "";
   }
   transform: translate3d(0, 50px, 0) !important;
   @include MQ(MQ-480) {
-    padding: 5px 0px 140px;
+    padding: 5px 0px 154px;
   }
   &.aos-animate {
     transform: none !important;
@@ -31,7 +30,7 @@
       content: "";
       position: absolute;
       top: -55px;
-      z-index: 1;
+      z-index: 2;
       left: 226px;
       background: url("icon-cloud.webp") no-repeat center / 100%;
       animation: 10s linear infinite;
