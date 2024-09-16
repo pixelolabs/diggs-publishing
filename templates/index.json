@@ -16,6 +16,7 @@
         "backgroundImage": "shopify:\/\/shop_images\/hero-baby.webp",
         "backgroundImageMobile": "shopify:\/\/shop_images\/hero-baby.webp",
         "pretitle": "Welcome to Diggs Publishing",
+        "pretitle_color": "",
         "title": "Diverse Children’s Books collections",
         "description": "<p>In a word filled with countless stories, Diggs Publishing celebrates the unique tales that often go untold.<\/p>",
         "buttonText": "Order Now",
@@ -105,7 +106,7 @@
       ],
       "settings": {
         "section_class": "",
-        "image_position": "right",
+        "image_position": "left",
         "wave_color": "blue-wave",
         "paddingtop": 0,
         "paddingtopmobile": 0,
