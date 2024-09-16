@@ -654,7 +654,7 @@ button {
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-  line-height: normal;
+  line-height: 1.25;
   letter-spacing: 2px;
   text-align: left;
   max-width: fit-content;
@@ -665,10 +665,14 @@ button {
   background: url("icon-right-arrow.webp") no-repeat right center/ 13.5px;
   padding-right: 21.5px;
   transition: 0.3s ease;
+
   &:hover {
     color: $color-orange;
     background-image: url("icon-right-arrow-orange.webp");
   }
+}
+.mac-os .link--primary {
+  padding-top: 4px;
 }
 
 .link--secondary {
@@ -730,7 +734,6 @@ button {
 
   h2,
   h3,
-  h4,
   h5,
   h6,
   h1 {
@@ -758,13 +761,14 @@ button {
   }
   h4,
   .h4 {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: normal;
     line-height: 1.4;
     letter-spacing: 0.5px;
+    margin-bottom: 8px;
     @include MQ(MQ-480) {
-      font-size: 18px;
-      line-height: 1.94;
+      font-size: 16px;
+      line-height: 1.2;
       letter-spacing: 0.36px;
     }
   }
@@ -1055,7 +1059,8 @@ button {
     text-decoration: underline;
     // color: $color-black;
     color: $color-pink;
-    &:hover {
+    &:hover,
+    &:focus {
       color: $color-orange !important;
     }
   }

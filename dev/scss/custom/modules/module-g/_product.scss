@@ -7,22 +7,47 @@
     #a8d24e 51%,
     #5abe50 101%
   );
+  @include MQ(MQ-980) {
+    padding-top: 180px;
+  }
   @include MQ(MQ-768) {
-    padding-top: 130px;
+    padding-top: 150px;
   }
   .inner {
     background: $color-off-white-light;
     padding: 45px 0 210px;
     position: relative;
-    &::before {
-      background: url("graphic-wave-inner-banner.svg") repeat left / 2065px;
-      height: 114px;
+    // &::before {
+    //   background: url("graphic-wave-inner-banner.svg") repeat left / 2065px;
+    //   height: 114px;
+    //   width: 100%;
+    //   position: absolute;
+    //   left: 0;
+    //   top: -90px;
+    //   content: "";
+    //   z-index: 2;
+    // }
+    &:before {
+      background: url(yellow-wave.webp) repeat-x top / 100% 100%;
+      height: 150px;
       width: 100%;
       position: absolute;
       left: 0;
-      top: -90px;
+      top: -110px;
       content: "";
-      z-index: 2;
+      background-size: contain;
+      z-index: 0;
+      filter: brightness(0) saturate(100%) invert(100%) sepia(56%)
+        saturate(587%) hue-rotate(316deg) brightness(105%) contrast(114%);
+      @include MQ(MQ-980) {
+        height: 130px;
+        background: url(yellow-wave.webp) repeat-x bottom / 100% 100%;
+        background-size: cover;
+      }
+      @include MQ(MQ-768) {
+        top: -66px;
+        height: 100px;
+      }
     }
     @include MQ(MQ-980) {
       padding-bottom: 150px;
@@ -48,7 +73,7 @@
     display: none !important;
   }
   @include MQ(MQ-980) {
-    padding: 20px 0 0px;
+    // padding: 20px 0 0px;
     margin-bottom: 0;
   }
   // @include MQ(MQ-768) {
