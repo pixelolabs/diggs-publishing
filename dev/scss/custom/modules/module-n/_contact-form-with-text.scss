@@ -61,7 +61,7 @@
 .contact-form-with-text {
   position: relative;
   text-align: center;
-  background: url(full_width_bg_orange.webp) repeat center / 100%;
+  background: url(full_width_bg_orange.webp) no-repeat center / cover;
   @include MQ(MQ-768) {
     background-size: cover;
   }
@@ -97,7 +97,7 @@
   }
   .container-1260 {
     padding-top: 162px;
-    padding-bottom: 116px;
+    padding-bottom: 136px;
     position: relative;
     @include MQ(MQ-980) {
       flex-wrap: wrap;
@@ -179,12 +179,14 @@
   .contact-info-section {
     text-align: left;
     width: 31.34%;
+    margin-top: 24px;
     position: relative;
     @include MQ(MQ-1200) {
       width: 40%;
     }
     @include MQ(MQ-980) {
       width: 100%;
+      margin-top: 0px;
     }
     &::after {
       width: 81px;
@@ -203,14 +205,16 @@
     h2 {
       margin-bottom: 20px;
       font-size: 30px;
+      letter-spacing: 0.02em;
     }
     ul {
       li,
       a {
         margin-bottom: 20px;
-        letter-spacing: 2px;
+        letter-spacing: 0.02em;
         font-weight: 400;
         .title {
+          font-size: 14px;
           display: block;
           margin-bottom: 10px;
           letter-spacing: 1px;
