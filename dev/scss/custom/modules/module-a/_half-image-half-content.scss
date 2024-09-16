@@ -277,7 +277,7 @@
       background: url("star-large-white.webp") repeat center / 100%;
       width: 31.4px;
       height: 38.2px;
-      animation-name: wstarRotate, blink;
+      animation-name: wstarRotate;
       animation-duration: 5s;
       animation-iteration-count: infinite;
       animation-direction: alternate;
@@ -311,12 +311,17 @@
       top: 53%;
       left: 54%;
 
-      width: 50px;
-      height: 50px;
+      width: 63px;
+      height: 63px;
       transform: translate(-50%, -50%);
       z-index: 1;
       cursor: pointer;
-      background: url(icon-play-white.svg) no-repeat center/50px;
+      background: url(icon-play-white.svg) no-repeat center/63px;
+      @include MQ(MQ-980) {
+        width: 50px;
+        height: 50px;
+        background: url(icon-play-white.svg) no-repeat center/50px;
+      }
     }
   }
   .image-wrapper {
@@ -354,7 +359,7 @@
         top: -72px;
         background: url("icon-cloud.webp") no-repeat center / 100%;
         animation: 10s linear infinite;
-        animation-name: blink, animateCloud;
+        animation-name: animateCloud;
         width: 65px;
         height: 52px;
       }
@@ -471,10 +476,10 @@
     &::after {
       position: absolute;
       content: "";
-      right: 173px;
+      right: 130px;
       bottom: 27px;
       background: url("star-large.webp") repeat center / 100%;
-      animation-name: starRotate, blink;
+      animation-name: starRotate;
       animation-duration: 5s;
       animation-iteration-count: infinite;
       animation-direction: alternate;
@@ -491,11 +496,18 @@
       top: 20px;
       background: url("icon-cloud.webp") no-repeat center / 100%;
       animation: 10s linear infinite;
-      animation-name: blink, animateCloud;
+      animation-name: animateCloud;
       width: 65px;
       height: 52px;
       @include MQ(MQ-980) {
         display: none;
+      }
+    }
+    .description {
+      max-width: 423px;
+      width: 100%;
+      @include MQ(MQ-768) {
+        max-width: 100%;
       }
     }
     h2 {
@@ -519,7 +531,7 @@
       padding-right: 80px;
     }
     @include MQ(MQ-980) {
-      padding-right: 40px;
+      padding-right: 0px;
     }
     @include MQ(MQ-768) {
       width: 100%;
@@ -541,6 +553,9 @@
     }
     .btn--primary {
       margin-top: 30px;
+      &:hover {
+        color: $color-white !important;
+      }
     }
   }
   // &:nth-child(even) {
@@ -703,10 +718,16 @@
     @include MQ(MQ-480) {
       padding-bottom: 45px;
     }
+    .btn--primary {
+      &:hover {
+        color: $color-white !important;
+      }
+    }
     &:nth-child(1) {
       .content {
         .btn--primary {
           background: url(Isolation_mode-pink.webp) no-repeat center / 100%;
+          color: $color-white !important;
         }
       }
     }
@@ -886,7 +907,7 @@
           display: block;
           background: url(icon-cloud.webp) no-repeat center / 100%;
           animation: 10s linear infinite;
-          animation-name: blink, animateCloud;
+          animation-name: animateCloud;
           width: 47px;
           height: 37px;
           left: unset;
@@ -982,7 +1003,7 @@
       @include MQ(MQ-980) {
         display: block;
         background-image: url(star-large.webp);
-        animation-name: starRotate, blink;
+        animation-name: starRotate;
         animation-duration: 5s;
         animation-iteration-count: infinite;
         animation-direction: alternate;
@@ -1038,7 +1059,7 @@
           left: -44px;
           @include MQ(MQ-980) {
             background: url(star-large.webp) no-repeat center / 100%;
-            animation-name: starRotate, blink;
+            animation-name: starRotate;
             animation-duration: 5s;
             animation-iteration-count: infinite;
             animation-direction: alternate;
@@ -1089,7 +1110,7 @@
         &:before {
           display: block;
           background: url(star-large.webp) no-repeat center / 100%;
-          animation-name: starRotate, blink;
+          animation-name: starRotate;
           animation-duration: 5s;
           animation-iteration-count: infinite;
           animation-direction: alternate;

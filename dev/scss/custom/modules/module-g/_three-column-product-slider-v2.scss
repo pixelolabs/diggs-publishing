@@ -34,7 +34,7 @@
       left: 226px;
       background: url("icon-cloud.webp") no-repeat center / 100%;
       animation: 10s linear infinite;
-      animation-name: blink, animateCloud;
+      animation-name: animateCloud;
       @include MQ(MQ-480) {
         width: 43px;
         height: 33px;
@@ -98,6 +98,13 @@
         svg {
           width: 15px;
           height: 24px;
+        }
+      }
+      &:hover {
+        svg {
+          path {
+            fill: $color-orange;
+          }
         }
       }
     }

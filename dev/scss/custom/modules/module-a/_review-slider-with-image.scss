@@ -72,6 +72,14 @@
     @include MQ(MQ-480) {
       right: -22px;
     }
+    &:hover,
+    &:focus {
+      svg {
+        path {
+          fill: $color-orange;
+        }
+      }
+    }
   }
   .swiper-button-prev-review-slider {
     transform: rotate(180deg);
@@ -88,6 +96,7 @@
       padding-right: 14px;
       padding-top: 14px;
       position: relative;
+      height: auto;
       &:nth-child(even) {
         &:before {
           border: 2px solid $color-green;
@@ -116,6 +125,7 @@
         text-align: center;
         position: relative;
         z-index: 2;
+        height: 100%;
         .icon {
           width: 99.8px;
           margin: 0 auto;
@@ -175,7 +185,7 @@
       left: 325px;
       top: -4px;
       background: url("star-large.webp") no-repeat center / 100%;
-      animation-name: starRotate, blink;
+      animation-name: starRotate;
       animation-duration: 5s;
       animation-iteration-count: infinite;
       animation-direction: alternate;
@@ -197,7 +207,7 @@
       top: 155px;
       background: url("icon-cloud.webp") no-repeat center / 100%;
       animation: 10s linear infinite;
-      animation-name: blink, animateCloud;
+      animation-name: animateCloud;
       width: 65px;
       height: 51px;
       @include MQ(MQ-768) {

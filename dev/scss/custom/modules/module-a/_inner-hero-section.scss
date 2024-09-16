@@ -103,7 +103,7 @@
     }
     &:before {
       background: url(icon-tilt-star.png) no-repeat center/42px;
-      animation-name: starRotate, blink;
+      animation-name: starRotate;
       animation-duration: 5s;
       animation-iteration-count: infinite;
       animation-direction: alternate;
@@ -121,7 +121,7 @@
         width: 16px;
         height: 22px;
         background: url(star-large-white.webp) no-repeat center/100%;
-        animation-name: wstarRotate, blink;
+        animation-name: wstarRotate;
         animation-duration: 5s;
         animation-iteration-count: infinite;
         animation-direction: alternate;

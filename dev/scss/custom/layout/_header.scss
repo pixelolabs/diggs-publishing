@@ -105,6 +105,11 @@
     &::after {
       display: none;
     }
+    &:hover,
+    &:focus {
+      filter: brightness(0) saturate(100%) invert(20%) sepia(100%)
+        saturate(2354%) hue-rotate(304deg) brightness(92%) contrast(97%);
+    }
     svg {
       width: 20px;
       height: 20px;
@@ -578,7 +583,14 @@ header {
       height: 87px;
     }
   }
-
+  .main-header {
+    &.active {
+      .header-logo {
+        height: 114px;
+        width: 190px;
+      }
+    }
+  }
   /****** Fixed Header ******/
 
   /****** Mobile Hamburger ******/

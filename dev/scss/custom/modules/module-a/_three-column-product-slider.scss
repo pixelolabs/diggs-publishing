@@ -71,6 +71,10 @@
         letter-spacing: 1px;
         text-align: center;
         text-transform: uppercase;
+        &:hover {
+          background: $color-white !important;
+          color: $color-black !important;
+        }
       }
       .btn--quick-view {
         @include MQ(MQ-350) {
@@ -360,7 +364,7 @@
       z-index: 1;
       top: 12px;
       background: url("star-large.webp") no-repeat center right / 30px;
-      animation-name: starRotate, blink;
+      animation-name: starRotate;
       animation-duration: 5s;
       animation-iteration-count: infinite;
       animation-direction: alternate;
@@ -391,7 +395,7 @@
         margin: 0;
         top: 0px;
         background: url("star-large.webp") no-repeat center right / 25px;
-        animation-name: starRotate, blink;
+        animation-name: starRotate;
         animation-duration: 5s;
         animation-iteration-count: infinite;
         animation-direction: alternate;
@@ -459,6 +463,13 @@
         svg {
           width: 24.25px;
           height: 15px;
+        }
+      }
+      &:hover {
+        svg {
+          path {
+            fill: $color-orange;
+          }
         }
       }
     }

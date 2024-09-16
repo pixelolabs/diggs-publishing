@@ -84,6 +84,7 @@ var productSectionSlider = new Swiper(".js__article-slider", {
         spaceBetween: 14,
         // centeredSlides: true,
         // resistance: false,
+        
         loop:true,
         resistance: false,
         shortSwipes: true,
