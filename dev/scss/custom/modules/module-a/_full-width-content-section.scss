@@ -52,6 +52,16 @@
       //   top: -33px;
       // }
     }
+    // &:after {
+    //   // graphic-thread-curve.svg
+    //   position: absolute;
+    //   content: "";
+    //   background: url(graphic-thread-curve.svg) no-repeat;
+    //   width: 233px;
+    //   height: 203px;
+    //   bottom: 0;
+    //   left: 391px;
+    // }
   }
   &::before {
     // width: 620px;
@@ -64,13 +74,15 @@
     // background: url("thread-multi-white.webp") no-repeat center / 100%;
     // transform: (40deg) translate(-32%, -50px);
     width: 603px;
-    height: 840px;
+    height: 900px;
     content: "";
     position: absolute;
-    -webkit-transform: rotate(35.9deg);
-    transform: rotate(35.9deg);
-    top: -129px;
-    left: -148px;
+    // -webkit-transform: rotate(35.9deg);
+    // transform: rotate(35.9deg);
+    // top: -129px;
+    // left: -148px;
+    top: -42px;
+    left: -13px;
     z-index: 0;
     background: url(thread-multi-white.webp) no-repeat center / 100%;
     @include MQ(MQ-768) {
@@ -122,7 +134,7 @@
       top: 210px;
       background: url("icon-cloud.webp") no-repeat center / 100%;
       animation: 10s linear infinite;
-      animation-name: blink, animateCloud;
+      animation-name: animateCloud;
       @include MQ(MQ-980) {
         display: none;
       }
@@ -179,7 +191,7 @@
       z-index: -1;
       bottom: -13px;
       background: url("star-large.webp") no-repeat center / 100%;
-      animation-name: starRotate, blink;
+      animation-name: starRotate;
       animation-duration: 5s;
       animation-iteration-count: infinite;
       animation-direction: alternate;
@@ -241,7 +253,7 @@
       right: 150px;
       background: url("icon-cloud.webp") no-repeat center / 100%;
       animation: 10s linear infinite;
-      animation-name: blink, animateCloud;
+      animation-name: animateCloud;
       @include MQ(MQ-980) {
         display: none;
       }

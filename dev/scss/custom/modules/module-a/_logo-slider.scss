@@ -12,8 +12,8 @@
     content: "";
     left: 22px;
     top: 98px;
-    background: url("star-large.webp") repeat center / 100%;
-    animation-name: starRotate, blink;
+    background: url("star-large.webp") no-repeat center / 100%;
+    animation-name: starRotate;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
@@ -23,6 +23,7 @@
       display: none;
     }
   }
+
   // &::after{
   //   background: url("shape.svg") repeat left / 1452px;
   //   height: 101px;
@@ -33,7 +34,25 @@
   //   z-index: 2;
   //   content: '';
   // }
-
+  .container-1260 {
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      right: -25px;
+      top: -140px;
+      background: url("star-large.webp") no-repeat center / 100%;
+      animation-name: starRotate;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      width: 52px;
+      height: 70px;
+      @include MQ(MQ-600) {
+        display: none;
+      }
+    }
+  }
   h2 {
     max-width: 411px;
     width: 100%;

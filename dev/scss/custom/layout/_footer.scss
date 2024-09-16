@@ -66,7 +66,7 @@ footer {
       display: flex;
       flex-wrap: wrap;
       width: calc(100% + 11px);
-      max-width: 428px;
+      max-width: 490px;
       margin-left: -11px;
       @include MQ(MQ-1200) {
         margin-left: -8px;
@@ -80,12 +80,12 @@ footer {
 
       li {
         margin-left: 11px;
-        width: calc(135px - 11px);
+        width: 135px;
         height: 135px;
         margin-bottom: 11px;
         @include MQ(MQ-1200) {
           margin-left: 8px;
-          width: calc(120px - 8px);
+          width: 135px;
           height: 120px;
           margin-bottom: 8px;
         }
@@ -96,6 +96,30 @@ footer {
         .image-section {
           width: 100%;
           height: 100%;
+          position: relative;
+          // display: block;
+          &::after {
+            position: absolute;
+            display: block !important;
+            content: "";
+            width: 100%;
+            height: 0;
+            transition: 0.4s ease all;
+            left: 0;
+            bottom: 0;
+            z-index: 2;
+            background: linear-gradient(
+              180.22deg,
+              #d51f9100 -0.64%,
+              #d51f91 85.13%
+            );
+          }
+          &:hover {
+            &::after {
+              height: 100%;
+              transition: 0.4s ease all;
+            }
+          }
           img {
             width: 100%;
             height: 100%;
@@ -221,7 +245,7 @@ footer {
       left: 35.7px;
       top: 93px;
       background: url(star-large-white.webp) no-repeat center / 100%;
-      animation-name: wstarRotate, blink;
+      animation-name: wstarRotate;
       animation-duration: 5s;
       animation-iteration-count: infinite;
       animation-direction: alternate;
@@ -290,7 +314,7 @@ footer {
         background: url(star-large-white.webp) no-repeat center / 100%;
         width: 27.2px;
         height: 41.9px;
-        animation-name: wstarRotate, blink;
+        animation-name: wstarRotate;
         animation-duration: 5s;
         animation-iteration-count: infinite;
         animation-direction: alternate;
@@ -327,6 +351,7 @@ footer {
         position: absolute;
         bottom: 0;
         right: 0;
+
         img {
           width: 100%;
           height: 100%;
@@ -335,6 +360,9 @@ footer {
         }
         @include MQ(MQ-1200) {
           height: 28vw;
+        }
+        @include MQ(MQ-1100) {
+          max-width: 600px;
         }
         @include MQ(MQ-768) {
           left: 0;
@@ -349,12 +377,16 @@ footer {
       .legal-menu {
         // margin-left: 80px;
         margin-top: 29px;
+        width: calc(100% - 886px);
         @include MQ(MQ-768) {
           margin-top: 39px;
         }
-        // @include MQ(MQ-1225) {
-        //   margin-left: 50px;
-        // }
+        @include MQ(MQ-1100) {
+          width: calc(100% - 600px);
+        }
+        @include MQ(MQ-768) {
+          width: 100%;
+        }
 
         a {
           font-size: 12px;
@@ -371,6 +403,7 @@ footer {
         span {
           position: relative;
           margin-right: 20px;
+          white-space: nowrap;
           &::before {
             position: absolute;
             content: "";
@@ -655,7 +688,7 @@ footer {
 
       ul {
         li {
-          margin-bottom: 20px;
+          margin-bottom: 25px;
 
           @include MQ(MQ-768) {
             margin-bottom: 15px;
@@ -677,7 +710,7 @@ footer {
         a {
           font-family: var(--font-family-primary);
           font-size: 14px;
-          font-weight: 500;
+          font-weight: 400;
           line-height: 1;
           letter-spacing: 0.02px;
           color: $color-black;

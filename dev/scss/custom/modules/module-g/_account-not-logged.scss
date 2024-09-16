@@ -67,7 +67,7 @@
         width: 31px;
         height: 42px;
         background: url(star-large-white.webp) no-repeat center/contain;
-        animation-name: wstarRotate, blink;
+        animation-name: wstarRotate;
         animation-duration: 5s;
         animation-iteration-count: infinite;
         animation-direction: alternate;
@@ -86,7 +86,7 @@
         z-index: 1;
         top: 93px;
         background: url("star-large.webp") no-repeat center / 100%;
-        animation-name: starRotate, blink;
+        animation-name: starRotate;
         animation-duration: 5s;
         animation-iteration-count: infinite;
         animation-direction: alternate;
@@ -112,7 +112,7 @@
         left: 130px;
         background: url("icon-cloud.webp") no-repeat center / contain;
         animation: 10s linear infinite;
-        animation-name: blink, animateCloud;
+        animation-name: animateCloud;
         @include MQ(MQ-768) {
           display: none;
         }
