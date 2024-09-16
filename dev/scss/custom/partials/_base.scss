@@ -1055,7 +1055,8 @@ button {
     text-decoration: underline;
     // color: $color-black;
     color: $color-pink;
-    &:hover {
+    &:hover,
+    &:focus {
       color: $color-orange !important;
     }
   }

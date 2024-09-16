@@ -24,6 +24,21 @@
       content: "";
       z-index: 2;
     }
+    // &:before {
+    //   background: url(yellow-wave.webp) repeat-x top / 100% 100%;
+    //   height: 200px;
+    //   width: 100%;
+    //   position: absolute;
+    //   left: 0;
+    //   top: -125px;
+    //   content: "";
+    //   background-size: contain;
+    //   z-index: 2;
+    //   -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(56%)
+    //     saturate(587%) hue-rotate(316deg) brightness(105%) contrast(114%);
+    //   filter: brightness(0) saturate(100%) invert(100%) sepia(56%)
+    //     saturate(587%) hue-rotate(316deg) brightness(105%) contrast(114%);
+    // }
     @include MQ(MQ-980) {
       padding-bottom: 150px;
     }
