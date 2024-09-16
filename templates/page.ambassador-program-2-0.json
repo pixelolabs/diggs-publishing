@@ -25,7 +25,11 @@
     "page_default_content_LpFCxz": {
       "type": "page-default-content",
       "settings": {
-        "section_class": "ambassador-program"
+        "section_class": "ambassador-program",
+        "paddingtop": 75,
+        "paddingtopmobile": 60,
+        "paddingbottom": 102,
+        "paddingbottomMobile": 80
       }
     },
     "ambassador_program_registration_form_RgLPPe": {
