@@ -96,14 +96,12 @@
         },
         "tabs_NRTHVG": {
           "type": "tabs",
-          "disabled": true,
           "settings": {
             "heading": "{{ product.metafields.custom.product_tab_fourth_category.value }}"
           }
         },
         "description_pRXqni": {
           "type": "description",
-          "disabled": true,
           "settings": {
             "category": "{{ product.metafields.custom.product_tab_fourth_category.value }}",
             "description": "<p>{{ product.metafields.custom.product_tab_fourth_category_description | metafield_tag }}<\/p>"

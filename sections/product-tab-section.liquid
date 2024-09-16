@@ -49,7 +49,10 @@
                   >
                     {{- block.settings.category -}}
                   </a>
-                  <div class="inner-content accordion-con " data-attr="tab-link-{{ categorytitle | downcase }}">
+                  <div
+                    class="inner-content accordion-con full-format"
+                    data-attr="tab-link-{{ categorytitle | downcase }}"
+                  >
                     {{ block.settings.description }}
                   </div>
                 </div>
