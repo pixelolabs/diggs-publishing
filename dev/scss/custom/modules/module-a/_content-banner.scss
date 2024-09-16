@@ -21,7 +21,7 @@
     width: 100%;
 
     margin: 0 auto;
-    margin-top: -133px;
+    margin-top: -140px;
     @include MQ(MQ-480) {
       margin-top: -55px;
     }
@@ -102,6 +102,7 @@
       }
     }
     p {
+      font-size: 14px;
       @include MQ(MQ-480) {
         padding: 0 23px;
       }
