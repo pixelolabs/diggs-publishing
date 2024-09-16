@@ -93,11 +93,9 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
             <path d="M12.867 3.189h-10.5a1.5 1.5 0 0 0-1.5 1.5v10.5a1.5 1.5 0 0 0 1.5 1.5h10.5a1.5 1.5 0 0 0 1.5-1.5v-10.5a1.5 1.5 0 0 0-1.5-1.5zM10.615 1.689v3M4.617 1.689v3M.867 7.689h13.5" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-          {{- article.published_at | time_tag: format: 'date' -}}
           <time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">
             {{ article.published_at | date: '%b %d, %Y' }}
           </time>
-
         </div>
         <div class="author">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
