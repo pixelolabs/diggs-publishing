@@ -25,7 +25,11 @@
     "page_default_content_6YCngU": {
       "type": "page-default-content",
       "settings": {
-        "section_class": ""
+        "section_class": "",
+        "paddingtop": 72,
+        "paddingtopmobile": 60,
+        "paddingbottom": 201,
+        "paddingbottomMobile": 0
       }
     }
   },
