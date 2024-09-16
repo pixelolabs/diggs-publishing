@@ -1118,6 +1118,7 @@ button {
       text-align: left;
       text-transform: none;
       font-family: var(--font-family-primary);
+      padding-bottom: 8px;
     }
 
     @include MQ(MQ-480) {
