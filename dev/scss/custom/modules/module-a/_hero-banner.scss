@@ -25,7 +25,7 @@
       }
     }
     @include MQ(MQ-1200) {
-      padding-bottom: 132px;
+      padding-bottom: 200px;
     }
     @include MQ(MQ-1024) {
       padding-bottom: 118px;
@@ -306,14 +306,14 @@
           animation-direction: alternate;
         }
         .pre-title {
-          margin-bottom: 15px;
+          margin-bottom: 20px;
           color: $color-pink;
           @include MQ(MQ-480) {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
           }
         }
         h1 {
-          margin-bottom: 18px;
+          margin-bottom: 10px;
           @include MQ(MQ-480) {
             margin-bottom: 8px;
           }
