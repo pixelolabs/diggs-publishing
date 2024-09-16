@@ -52,7 +52,7 @@
   }
 
   .pdp-tab-head {
-    text-transform: uppercase;
+    
     border-bottom: solid 1px $color-black;
     display: flex;
     li {
@@ -114,6 +114,10 @@
 
   .main-tab-content {
     padding-top: 33px;
+    padding-right: 60px;
+    @include MQ(MQ-980) {
+      padding-right: 0;
+    }
     .tab-content {
       &.active {
         // display: block !important;

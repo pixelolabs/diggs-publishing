@@ -101,7 +101,7 @@
   }
   .description {
     max-width: 400px;
-    margin-bottom: 24px;
+    margin-bottom: 14px;
     @include MQ(MQ-480) {
       margin-bottom: 0;
     }
@@ -119,7 +119,8 @@
     .more-link {
       font-family: var(--font-family-primary);
       font-size: 12px;
-      line-height: normal;
+      margin-left: 8px;
+      line-height: 1.4;
       letter-spacing: 1px;
       color: $color-pink;
       text-transform: uppercase;
@@ -644,7 +645,7 @@
       .minus-qty,
       .plus-qty {
         width: 32px;
-        height: 32px;
+        height: 34px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1711,6 +1712,19 @@
         left: 0;
         top: 10px;
         margin: 0;
+        border-radius: 0px;
+        width: 14px !important;
+        height: 14px !important;
+        background: #ffffff;
+        appearance: none !important; 
+        -webkit-appearance: none !important;
+        /* border: 1px solid red; */
+        appearance: none !important;
+        border: solid 1px #dcdcdc;
+        &:checked{
+          background: url("icon-checkmark.webp") no-repeat center /
+          10px #ffffff;
+        }
       }
       > a,
       > span {
@@ -1845,10 +1859,23 @@
       // height: 40px !important;
       // margin-bottom: 12px;
 
+      position: relative;
       transition: 0.6s ease all !important;
-      background: url(button-pdp.png) no-repeat center / 100% 100% !important;
+      background: url("btn-pink.svg") no-repeat center / 100% !important;
+      &:before {
+        background: url("icon-shopping-bag.svg") no-repeat center / 100%;
+        width: 17px;
+        height: 17px;
+        top: calc(50% - 8.5px);
+        content: "";
+        position: absolute;
+        right: 31px;
+        filter: brightness(0) invert(1);
+      }
+      
       &:hover {
         color: $color-white !important;
+        background: url("btn-orange.svg") no-repeat center / 100% !important;
         span {
           color: $color-white !important;
         }
