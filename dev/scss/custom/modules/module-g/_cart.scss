@@ -31,6 +31,24 @@
     content: "";
     z-index: 2;
   }
+
+  .back-button{
+    margin-bottom: 30px;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-align: left;
+    min-height: 12px;
+    color: $color-original-black;
+    padding-left: 16px;
+    text-transform: uppercase;
+    background: url("icon-left-arrow.svg") no-repeat left center/ 7px;
+    
+  }
   padding: 52px 0 135px;
   background: $color-off-white-light;
   .container-1260 {
@@ -328,7 +346,7 @@
     flex: none;
     width: 357px;
     margin-left: 30px;
-    margin-top: 27px;
+    margin-top: 34px;
     @include MQ(MQ-1200) {
       width: 300px;
     }

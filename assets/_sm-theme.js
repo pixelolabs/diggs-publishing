@@ -904,7 +904,7 @@ function recharge2020(key, value) {
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 jQuery(function () {
-  var _Swiper;
+  var _Swiper, _Swiper2, _Swiper3;
 
   if (navigator.userAgent.indexOf('Mac') > 0) {
     $('body').addClass('mac-os');
@@ -925,6 +925,7 @@ jQuery(function () {
     spaceBetween: 39,
     // centeredSlides: true,
     // resistance: false,
+    threshold: 5,
     loop: true,
     resistance: false,
     shortSwipes: true,
@@ -953,6 +954,7 @@ jQuery(function () {
     spaceBetween: 30,
     // centeredSlides: true,
     // resistance: false,
+    threshold: 5,
     loop: true,
     resistance: false,
     shortSwipes: true,
@@ -1055,6 +1057,7 @@ jQuery(function () {
   var halfcontentSlider = new Swiper(".js_half-content-half-image-slider", {
     slidesPerView: 1,
     resistance: false,
+    threshold: 5,
     loop: true,
     spaceBetween: 30,
     // autoplay: {
@@ -1066,49 +1069,45 @@ jQuery(function () {
       prevEl: ".swiper-button-prev-content-slider"
     }
   });
-  var blogSlider = new Swiper(".js__blog-slider", {
+  var blogSlider = new Swiper(".js__blog-slider", (_Swiper2 = {
     slidesPerView: "auto",
     spaceBetween: 20,
     threshold: 1,
-    loop: true,
-    breakpoints: {
-      1920: {
-        slidesPerView: "auto"
-      }
-    },
-    navigation: {
-      nextEl: ".swiper-button-next-blog-slider",
-      prevEl: ".swiper-button-prev-blog-slider "
+    loop: true
+  }, _defineProperty(_Swiper2, "threshold", 5), _defineProperty(_Swiper2, "breakpoints", {
+    1920: {
+      slidesPerView: "auto"
     }
-  });
-  var productSlider = new Swiper(".js__small-product-slider", {
+  }), _defineProperty(_Swiper2, "navigation", {
+    nextEl: ".swiper-button-next-blog-slider",
+    prevEl: ".swiper-button-prev-blog-slider "
+  }), _Swiper2));
+  var productSlider = new Swiper(".js__small-product-slider", (_Swiper3 = {
     slidesPerView: 3,
     spaceBetween: 25,
     loop: true,
-    threshold: 1,
-    breakpoints: {
-      '1025': {
-        slidesPerView: 3,
-        spaceBetween: 25
-      },
-      '981': {
-        slidesPerView: 2,
-        spaceBetween: 25
-      },
-      '480': {
-        slidesPerView: 3,
-        spaceBetween: 25
-      },
-      '0': {
-        slidesPerView: 2,
-        spaceBetween: 25
-      }
+    threshold: 5
+  }, _defineProperty(_Swiper3, "threshold", 1), _defineProperty(_Swiper3, "breakpoints", {
+    '1025': {
+      slidesPerView: 3,
+      spaceBetween: 25
     },
-    navigation: {
-      nextEl: ".swiper-button-next-small-product-slider",
-      prevEl: ".swiper-button-prev-small-product-slider "
+    '981': {
+      slidesPerView: 2,
+      spaceBetween: 25
+    },
+    '480': {
+      slidesPerView: 3,
+      spaceBetween: 25
+    },
+    '0': {
+      slidesPerView: 2,
+      spaceBetween: 25
     }
-  });
+  }), _defineProperty(_Swiper3, "navigation", {
+    nextEl: ".swiper-button-next-small-product-slider",
+    prevEl: ".swiper-button-prev-small-product-slider "
+  }), _Swiper3));
 
   if (window.location.href.indexOf("article&") > -1) {
     $(".search-item").val("article");
