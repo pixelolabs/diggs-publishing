@@ -67,7 +67,7 @@
       {%- if productData.description != blank -%}
         <div class="description">
           <p>{{ productData.description | strip_html | truncate: 150 }}</p>
-          <a href="{{productData.url }}" aria-label="Learn More About {{ productData.title }}" class="more-link">Learn More</a>
+          <a href="{{productData.url }}" title="Learn More About {{ productData.title }}" aria-label="Learn More About {{ productData.title }}" class="more-link">Learn More</a>
         </div>
       {%- endif -%}
         
