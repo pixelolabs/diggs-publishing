@@ -109,6 +109,12 @@ var productSectionSlider = new Swiper(".js__article-slider", {
             769: {
                 slidesPerView: 2,
             },
+            981: {
+                slidesPerView: 1,
+            },
+            1100: {
+                slidesPerView: 1,
+            },
             1440: {
                 slidesPerView: 2,
                 spaceBetween: 14,

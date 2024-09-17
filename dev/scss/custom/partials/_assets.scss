@@ -294,7 +294,6 @@ textarea.input--error {
   border-radius: 30px;
   background: transparent;
   opacity: 1;
-  text-transform: uppercase;
   padding: 7.5px 40px 8.5px 17px;
   background: url("dropdown.svg") no-repeat right 20px center / 11px
     $color-white;
@@ -598,7 +597,9 @@ textarea.input--error {
     color: $color-black;
     display: flex !important;
     align-items: center;
-
+.starting{
+  font-weight: normal !important;
+}
     span,
     s {
       font-weight: 700;

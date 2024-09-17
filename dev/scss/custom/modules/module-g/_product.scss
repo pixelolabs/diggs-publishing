@@ -128,6 +128,10 @@
       text-decoration: underline !important;
       font-weight: 500 !important;
       cursor: pointer;
+      &:hover{
+        color: $color-orange;
+      }
+      cursor: pointer;
       &::before,
       &::after {
         display: none !important;

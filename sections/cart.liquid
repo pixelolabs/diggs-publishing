@@ -36,9 +36,9 @@
       </div>
     </div>
   {% endif %}
-  <div id="cart" class="cart-section   ipad-none">
+  <div id="cart" class="cart-section   ">
     <div class="container-1260 container-section">
-      <a href="javascript:history.back()" class="back-button" >Back</a>
+      <a href="javascript:history.back()" class="back-button ipad-none" >Back</a>
       <form action="/cart" method="post">
         <div class="free-shipping js__progressbar_visiblity hide" style="display:none !important">
           <!-- Free Shipping Values from Schema -->
@@ -130,14 +130,10 @@
               </ul>
             </div>
             <div class="total">
-              <div class="coupon-section">
-                <label>Coupon Code</label>
-                <div class="form">
-                  <input type="text" placeholder="Coupon Code">
-                  <input type="button" value="Apply" class="btn-coupon">
-                </div>
-                <p>Coupon code will be applied on the checkout page</p>
-              </div>
+              {% if section.settings.coupon_code_enable %}
+                {% render 'plus_cart_discount_code' %}
+              {% endif %}
+           
 
               <textarea
                 id="note"
@@ -178,7 +174,7 @@
                 <span>Taxes and shipping calculated at checkout</span>
               </div>
               <div class="btn-wrapper">
-                <button class="btn--primary yellow" type="submit" id="checkout" name="checkout">Checkout Now</button>
+                <button class="btn--primary btn--cart-checkout yellow" type="submit" id="checkout" name="checkout">Checkout Now</button>
                 <a class="link--primary" href="/collections/all" title="Continue Shopping">Continue Shopping</a>
               </div>
             </div>
@@ -236,7 +232,29 @@
       "type": "richtext",
       "id": "description",
       "label": "Banner Description"
-    }
+    },
+    {
+      "type": "header",
+      "content": "Coupon Code"
+    },
+    {
+      "type": "checkbox",
+      "id": "coupon_code_enable",
+      "label": "Enable?",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "coupon_title",
+      "label": "Title",
+      "default": "Coupon Code:"
+    },
+    {
+      "type": "text",
+      "id": "coupon_content",
+      "label": "Content",
+      "default": "Coupon code will be applied on the checkout page"
+    },
   ],
   "presets": [
     {

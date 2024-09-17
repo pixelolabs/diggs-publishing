@@ -53,7 +53,7 @@
       }
     }
 
-    @include MQ(MQ-1100) {
+    @include MQ(MQ-980) {
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -171,8 +171,12 @@
     padding-top: 74px;
     position: relative;
     @include MQ(MQ-1100) {
+      max-width: 500px;
+    }
+    @include MQ(MQ-980) {
       justify-content: flex-start;
       margin-bottom: 80px;
+      max-width: 100%;
     }
     @include MQ(MQ-480) {
       margin-bottom: 25px;
@@ -238,7 +242,7 @@
     @include MQ(MQ-1280) {
       margin-right: 70px;
     }
-    @include MQ(MQ-1100) {
+    @include MQ(MQ-980) {
       margin: 0px 0 80px;
       width: 100%;
       max-width: 722px;
