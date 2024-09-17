@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <script> 
 jQuery(function() {
   
@@ -24,4 +25,32 @@ jQuery(function() {
       {% endcomment %}
     </div>
     <p>{{ section.settings.coupon_content }}</p>
+=======
+<script> 
+jQuery(function() {
+  
+ 
+    if (localStorage.getItem('storedDiscount')){  
+      var discountStored = localStorage.getItem('storedDiscount');   
+      $('input[name="discount"]').val(localStorage.getItem('storedDiscount'));  
+    }  
+
+    $(document).on("click", ".btn--cart-checkout", function(e) {
+        var $discountCode = $('input[name="discount"]').val(); 
+      localStorage.setItem('storedDiscount', $discountCode);  
+    })
+  
+})(jQuery);   
+</script> 
+
+<div class="coupon-section">
+    <label>{{ section.settings.coupon_title }}</label>
+    <div class="form">
+      <input type="text"  autocomplete="off" placeholder="Coupon Code" name="discount">
+      {% comment %}
+      <input type="button" value="Apply" class="btn-coupon">
+      {% endcomment %}
+    </div>
+    <p>{{ section.settings.coupon_content }}</p>
+>>>>>>> 46b3aba0af5ca5f9040fa1bee244760204e8c6c9
   </div>
