@@ -11,7 +11,7 @@
     }
   }
 {%- endstyle -%}
-<div class="inner-hero-section {% if section.settings.smallHeight == true %} small {% endif %} section-{{ section.id }}-padding color-{{ section.settings.color_scheme }}">
+<div class="inner-hero-section {% if section.settings.height == true %} max-height{% endif %} {% if section.settings.smallHeight == true %} small {% endif %} section-{{ section.id }}-padding color-{{ section.settings.color_scheme }}">
   {% comment %}
     {%- if section.settings.videobanner -%}
       <div class="video-section {% if section.settings.gradient == true %} gradient{%endif%}">
