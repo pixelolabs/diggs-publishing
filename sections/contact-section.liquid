@@ -10,7 +10,11 @@
       <ul>
         <li>
           <div class="icon">{% include 'icon-phone-contact' %}</div>
-          <a href="tel:+{{ settings.textnumber }}" title="phone-number">{{ settings.textnumber }}</a>
+          {% assign phone_number =settings.textnumber %}
+<!-- Replace each symbol with nothing -->
+{% assign clean_phone_number = phone_number | replace: "+", "" | replace: "(", "" | replace: ")", "" | replace: "-", "" | replace: " ", "" %}
+
+          <a href="tel:{{ clean_phone_number }}" title="phone-number">{{ settings.textnumber }}</a>
         </li>
         <li>
           <div class="icon">{% include 'icon-email-contact' %}</div>
