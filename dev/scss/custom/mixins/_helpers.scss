@@ -19,6 +19,7 @@ $MQ-600: 600px;
 $MQ-767: 767px;
 $MQ-768: 768px;
 $MQ-840: 840px;
+$MQ-870: 870px;
 $MQ-980: 980px;
 $MQ-992: 992px;
 $MQ-1024: 1024px;
@@ -80,6 +81,10 @@ $MQ-1920: 1920px;
     }
   } @else if $canvas==MQ-840 {
     @media only screen and (max-width: $MQ-840) {
+      @content;
+    }
+  } @else if $canvas==MQ-870 {
+    @media only screen and (max-width: $MQ-870) {
       @content;
     }
   } @else if $canvas==MQ-980 {
