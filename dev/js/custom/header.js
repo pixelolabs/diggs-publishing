@@ -272,6 +272,7 @@ jQuery(function() {
         $(".js__search").removeClass("active");
         $("body .boost-pfs-search-suggestion").css("display","none");
         $("body #boost-sd__search-widget-init-wrapper-1").css("display","none");
+        $(".js__main-header").removeClass("active");
     });
 
     $(".js__search").on("click", function(e) {
@@ -321,7 +322,7 @@ jQuery(function() {
 jQuery(function() {
 var newsHeight = $('.announcement-bar').height();
 $('.header-logo').css("top", '-' + (newsHeight ) + 'px');
-$('.navbar-collapse').css("top",  + (newsHeight + 54 + 4) + 'px');
+$('.navbar-collapse').css("top",  + (newsHeight + 54 ) + 'px');
 
 });
 
@@ -344,6 +345,7 @@ $(window).scroll(function() {
 
             // $("body").removeClass("transparent-header");
             $(".main-header").addClass("active");
+            $(".main-header").addClass("gradient");
             
         } 
         // else {
@@ -392,6 +394,7 @@ $(window).scroll(function() {
                 $(".js__mobile-menu-open-hide").toggleClass("active");
                 $(".js__mobile-announcement-text").toggleClass("active");
                 $(".main-header").toggleClass("active");
+                $(".main-header").toggleClass("gradient");
                 // $(".announcement-bar").toggleClass("active");
                 // $("body").removeClass("transparent-header");
 
@@ -404,6 +407,7 @@ $(window).scroll(function() {
                     $(".js__logo").addClass("active");
                     // $(".template-index").removeClass("transparent-header");
                     $(".main-header").addClass("active");
+                    $(".main-header").addClass("gradient");
                     if ($(window).width() < 980) {
                         $("html").css("overflow", "hidden");
                         $("html").addClass("scroll-stop");
@@ -415,6 +419,7 @@ $(window).scroll(function() {
                 } else {
                     $(".js__logo").toggleClass("active");
                     $(".main-header").removeClass("active");
+                    $(".main-header").removeClass("gradient");
                     // if ($("body").hasClass("fixed-header")) {
                     //     $(".template-index").removeClass("transparent-header");
                     // } else {
