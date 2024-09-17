@@ -7,7 +7,7 @@ jQuery(function() {
       $('input[name="discount"]').val(localStorage.getItem('storedDiscount'));  
     }  
 
-    $(document).on("click", "btn--cart-checkout", function(e) {
+    $(document).on("click", ".btn--cart-checkout", function(e) {
         var $discountCode = $('input[name="discount"]').val(); 
       localStorage.setItem('storedDiscount', $discountCode);  
     })
