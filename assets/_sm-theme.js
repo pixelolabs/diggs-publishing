@@ -2380,7 +2380,8 @@ $(window).scroll(function () {
       $("#navbarNavDropdown").toggleClass("active");
       $(".js__mobile-menu-open-hide").toggleClass("active");
       $(".js__mobile-announcement-text").toggleClass("active");
-      $(".main-header").toggleClass("active"); // $(".announcement-bar").toggleClass("active");
+      $(".main-header").toggleClass("active");
+      $(".main-header").addClass("gradient"); // $(".announcement-bar").toggleClass("active");
       // $("body").removeClass("transparent-header");
       // if ($("body").hasClass("transparent-header")) {
       //     $("body").removeClass("transparent-header");
@@ -2390,6 +2391,7 @@ $(window).scroll(function () {
         $(".js__logo").addClass("active"); // $(".template-index").removeClass("transparent-header");
 
         $(".main-header").addClass("active");
+        $(".main-header").addClass("gradient");
 
         if ($(window).width() < 980) {
           $("html").css("overflow", "hidden");
