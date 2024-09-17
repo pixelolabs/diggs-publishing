@@ -18,7 +18,8 @@
         "buttonText1": "Book Now",
         "buttonLink1": "#",
         "button_bg": "green",
-        "content_alignment": "left"
+        "content_alignment": "left",
+        "height": false
       }
     },
     "half_image_half_content_zRnrfB": {
@@ -75,7 +76,7 @@
             "video": "",
             "pretitle": "",
             "title": "Body Safety Wise",
-            "description": "<p>The Body Safety Wise presentation is a PK-8 curriculum that teaches students about body safety, consent, and boundaries. It includes an engaging introduction, a book reading, giveaways, book signing, and a brief Q&A.<br\/><br\/><strong>Benefits<\/strong><\/p><p>Promote and raise awareness about the importance of body safety education and literacy in your community through social media, school events, and other platforms.<br\/><br\/>Agree to at least one interview, or photoshoot, promoting body safety education and literacy.<br\/><br\/>Submit any feedback you have received from your community, report on your activities as an ambassador, including any events or activities you have hosted, any social media posts you have made, and any feedback you have received from your community.<\/p>",
+            "description": "<p>The Body Safety Wise presentation is a PK-8 curriculum that teaches students about body safety, consent, and boundaries. It includes an engaging introduction, a<strong> book<\/strong> reading, giveaways, book signing, and a brief Q&A.<br\/><br\/><strong>Benefits<\/strong><\/p><p>Promote and raise awareness about the importance of body safety education and literacy in your community through social media, school events, and other platforms.<br\/><br\/>Agree to at least one interview, or photoshoot, promoting body safety education and literacy.<br\/><br\/>Submit any feedback you have received from your community, report on your activities as an ambassador, including any events or activities you have hosted, any social media posts you have made, and any feedback you have received from your community.<\/p>",
             "buttonText": "Book Now",
             "buttonLink": "#",
             "background_color": "transparent-bg",
@@ -138,8 +139,7 @@
         "content": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took<\/p>",
         "buttonText": "Book Now",
         "buttonLink": "shopify:\/\/pages\/author-visits",
-        "backgroundcolor": false,
-        "bgColor": "#648fff"
+        "bgColor": "#8babff"
       }
     }
   },
