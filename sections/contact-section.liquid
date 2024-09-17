@@ -5,22 +5,31 @@
         <h2 class="h4">{{ section.settings.sidebartitle }}</h2>
       {% endif %}
       {% if section.settings.sidebardescription != blank %}
-        <p class="medium">{{ section.settings.sidebardescription }}</p>
+        <div class="decs">
+          {{ section.settings.sidebardescription }}
+          </div>
       {% endif %}
       <ul>
         <li>
           <div class="icon">{% include 'icon-phone-contact' %}</div>
-          <a href="tel:+{{ settings.textnumber }}" title="phone-number">{{ settings.textnumber }}</a>
+          {% assign phone_number =settings.textnumber %}
+<!-- Replace each symbol with nothing -->
+{% assign clean_phone_number = phone_number | replace: "+", "" | replace: "(", "" | replace: ")", "" | replace: "-", "" | replace: " ", "" %}
+
+          <a href="tel:{{ clean_phone_number }}" title="phone-number">{{ settings.textnumber }}</a>
         </li>
         <li>
           <div class="icon">{% include 'icon-email-contact' %}</div>
-          <a href="{{ settings.email }}" title="mail id"> {{ settings.email }}</a>
+          <a href="mailto:{{ settings.email }}" title="mail id"> {{ settings.email }}</a>
         </li>
         <li>
           <div class="icon">{% include 'icon-address-contact' %}</div>
-          <a href="{{ settings.addresslink }}" title="address">
+          {% if settings.addresslink  != blank %}
+          <a href="{{ settings.addresslink }}" title="address" target="_blank">
+          {% endif %}
             <p>{{ settings.address }}</p>
-          </a>
+            {% if settings.addresslink  != blank %}
+          </a>   {% endif %}
         </li>
       </ul>
     </div>
