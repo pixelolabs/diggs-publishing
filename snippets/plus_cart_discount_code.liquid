@@ -1,10 +1,25 @@
+<script> 
+(function($) { 
+  $(document).on('page:load page:change', function () {  
+    if (localStorage.getItem('storedDiscount')){  
+      var discountStored = localStorage.getItem('storedDiscount');   
+      $('input[name="discount"]').val(localStorage.getItem('storedDiscount'));  
+    }  
+    $('form[action="/cart"]').on('submit', function(){ 
+      var $discountCode = $('input[name="discount"]').val(); 
+      localStorage.setItem('storedDiscount', $discountCode);  
+    });   
+  });   
+})(jQuery);   
+</script> 
+
 <div class="coupon-section">
-    <label>Coupon Code</label>
+    <label>{{ section.settings.coupon_title }}</label>
     <div class="form">
-      <input type="text" placeholder="Coupon Code">
+      <input type="text"  autocomplete="off" placeholder="Coupon Code" name="discount">
       {% comment %}
       <input type="button" value="Apply" class="btn-coupon">
       {% endcomment %}
     </div>
-    <p>Coupon code will be applied on the checkout page</p>
+    <p>{{ section.settings.coupon_content }}</p>
   </div>
