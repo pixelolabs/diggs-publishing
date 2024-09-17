@@ -2332,7 +2332,7 @@ jQuery(function () {
 jQuery(function () {
   var newsHeight = $('.announcement-bar').height();
   $('.header-logo').css("top", '-' + newsHeight + 'px');
-  $('.navbar-collapse').css("top", +(newsHeight + 54 + 4) + 'px');
+  $('.navbar-collapse').css("top", +(newsHeight + 54) + 'px');
 });
 $(window).scroll(function () {
   var sticky = $("header"),
@@ -2402,7 +2402,8 @@ $(window).scroll(function () {
         }
       } else {
         $(".js__logo").toggleClass("active");
-        $(".main-header").removeClass("active"); // if ($("body").hasClass("fixed-header")) {
+        $(".main-header").removeClass("active");
+        $(".main-header").removeClass("gradient"); // if ($("body").hasClass("fixed-header")) {
         //     $(".template-index").removeClass("transparent-header");
         // } else {
         //     $(".template-index").addClass("transparent-header");
