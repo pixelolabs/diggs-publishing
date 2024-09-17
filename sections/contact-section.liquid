@@ -5,7 +5,9 @@
         <h2 class="h4">{{ section.settings.sidebartitle }}</h2>
       {% endif %}
       {% if section.settings.sidebardescription != blank %}
-        <p class="medium">{{ section.settings.sidebardescription }}</p>
+        <div class="decs">
+          {{ section.settings.sidebardescription }}
+          </div>
       {% endif %}
       <ul>
         <li>
