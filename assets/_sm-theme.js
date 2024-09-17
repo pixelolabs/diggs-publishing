@@ -2348,6 +2348,7 @@ $(window).scroll(function () {
     if ($("#navbarNavDropdown").hasClass("active")) {
       // $("body").removeClass("transparent-header");
       $(".main-header").addClass("active");
+      $(".main-header").addClass("gradient");
     } // else {
     //     if($("div").hasClass("hero-banner") || $("div").hasClass("error-page")  || $("div").hasClass("inner-hero-section") ){
     //         $("body").addClass("transparent-header");
