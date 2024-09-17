@@ -1,12 +1,3 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "innerBanner": {
@@ -31,7 +22,6 @@
             "image": "shopify:\/\/shop_images\/body-safety-video-poster.png",
             "showVideo": false,
             "video": "",
-            "videoPopup": false,
             "pretitle": "",
             "title": "Programs",
             "description": "<p>Welcome to my Body Safety Wise programs! I am excited to offer two unique initiatives that promote literacy, education, diversity, and body safety awareness. The first initiative is the Body Safety Wise Author Visit Program. This program is dedicated to providing age-appropriate resources and lessons that empower children with the knowledge and skills to stay safe and healthy. Through engaging presentations and interactive activities, students PK-8th grade will learn about body safety, boundaries, and consent in a fun and approachable way. As an author and educator, I am committed to helping children develop the tools they need to stay safe and healthy, both physically and emotionally. <\/p>",
@@ -75,7 +65,6 @@
             "image": "shopify:\/\/shop_images\/body_safety_wise.webp",
             "showVideo": false,
             "video": "",
-            "videoPopup": true,
             "pretitle": "",
             "title": "Body Safety Wise Author Visits",
             "description": "<p>Body Safety Wise Author Visit presentation provides a PK-8 curriculum that teaches students about body safety, consent, and boundaries. It includes an engaging introduction, a book reading, giveaways, book signing, and a brief Q&A. The presentation is approximately 30-45 minutes.<\/p>",
@@ -109,7 +98,6 @@
             "image": "shopify:\/\/shop_images\/ambassador_program_1c27154d-dbdb-488e-bd7e-b80ba7915e60.webp",
             "showVideo": false,
             "video": "",
-            "videoPopup": true,
             "pretitle": "",
             "title": "Ambassador Program",
             "description": "<p>The Ambassador Program is a unique opportunity for children and young adults ages 0-18 to become advocates for body safety education! Ambassadors will have the opportunity to share their love of reading and raise awareness about body safety education in their community.<\/p>",

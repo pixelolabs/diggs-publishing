@@ -1,12 +1,3 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "product_gDBkfE": {
@@ -14,18 +5,15 @@
       "blocks": {
         "title_6qDmLq": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "price_npmjnD": {
           "type": "price",
-          "settings": {
-          }
+          "settings": {}
         },
         "description_akCmxJ": {
           "type": "description",
-          "settings": {
-          }
+          "settings": {}
         },
         "three_column_info_aqKn7k": {
           "type": "three-column-info",
@@ -118,8 +106,7 @@
         "tabs_NRTHVG",
         "description_pRXqni"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "product_half_image_half_content_KJNQBb": {
       "type": "product-half-image-half-content",
@@ -185,8 +172,7 @@
     },
     "product_reviews_section_HHXAiU": {
       "type": "product-reviews-section",
-      "settings": {
-      }
+      "settings": {}
     },
     "product_recommendations_YxCiEQ": {
       "type": "product-recommendations",
