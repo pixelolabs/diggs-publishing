@@ -12,16 +12,49 @@
                   class="image-section"
                   title="{{ block.settings.InstaLink }}"
                 >
-                  {{
-                    block.settings.instaImage
-                    | image_url: width: 1262
-                    | image_tag: loading: 'lazy', widths: '1262x1000'
-                  }}
+                  <picture>
+                    <!-- Mobile sizes WebP -->
+                    <source
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                      srcset="{{ block.settings.instaImage | image_url: width: 375, format: 'webp' }} 375w,
+                              {{ block.settings.instaImage | image_url: width: 550, format: 'webp' }} 550w,
+                              {{ block.settings.instaImage | image_url: width: 1262, format: 'webp' }} 1262w"
+                      sizes="100vw">
+  
+                    <!-- Tablet sizes WebP -->
+                    <source
+                      type="image/webp"
+                      media="(min-width: 768px) and (max-width: 1023px)"
+                      srcset="{{ block.settings.instaImage | image_url: width: 768, format: 'webp' }} 768w,
+                              {{ block.settings.instaImage | image_url: width: 1024, format: 'webp' }} 1024w,
+                              {{ block.settings.instaImage | image_url: width: 1262, format: 'webp' }} 1262w"
+                      sizes="100vw">
+  
+                    <!-- Desktop sizes WebP -->
+                    <source
+                      type="image/webp"
+                      media="(min-width: 1024px)"
+                      srcset="{{ block.settings.instaImage | image_url: width: 1000, format: 'webp' }} 1000w,
+                              {{ block.settings.instaImage | image_url: width: 1262, format: 'webp' }} 1262w"
+                      sizes="100vw">
+  
+                    <!-- Fallback for non-WebP support -->
+                    <img src="{{ block.settings.instaImage | image_url: width: 1262 }}"
+                         srcset="{{ block.settings.instaImage | image_url: width: 1262 }} 1262w"
+                         sizes="100vw"
+                         loading="lazy"
+                         decoding="async"
+                         alt="Instagram Image"
+                         style="width: 100%; height: auto;">
+                  </picture>
                 </a>
               </li>
             {% endif %}
           {% endfor %}
         </ul>
+
+        <!-- Middle section remains the same -->
         <div class="middle-section">
           {% if section.settings.sstext != blank %}
             <span>{{ section.settings.sstext }}</span>
@@ -46,102 +79,83 @@
                   class="image-section"
                   title="{{ block.settings.InstaLink }}"
                 >
-                  {{
-                    block.settings.instaImage
-                    | image_url: width: 1262
-                    | image_tag: loading: 'lazy', widths: '1262x1000'
-                  }}
+                  <picture>
+                    <!-- Same optimization logic for right section images -->
+                    <source type="image/webp"
+                            media="(max-width: 767px)"
+                            srcset="{{ block.settings.instaImage | image_url: width: 375, format: 'webp' }} 375w,
+                                    {{ block.settings.instaImage | image_url: width: 550, format: 'webp' }} 550w,
+                                    {{ block.settings.instaImage | image_url: width: 1262, format: 'webp' }} 1262w"
+                            sizes="100vw">
+                    <source type="image/webp"
+                            media="(min-width: 768px) and (max-width: 1023px)"
+                            srcset="{{ block.settings.instaImage | image_url: width: 768, format: 'webp' }} 768w,
+                                    {{ block.settings.instaImage | image_url: width: 1024, format: 'webp' }} 1024w,
+                                    {{ block.settings.instaImage | image_url: width: 1262, format: 'webp' }} 1262w"
+                            sizes="100vw">
+                    <source type="image/webp"
+                            media="(min-width: 1024px)"
+                            srcset="{{ block.settings.instaImage | image_url: width: 1000, format: 'webp' }} 1000w,
+                                    {{ block.settings.instaImage | image_url: width: 1262, format: 'webp' }} 1262w"
+                            sizes="100vw">
+                    <img src="{{ block.settings.instaImage | image_url: width: 1262 }}"
+                         srcset="{{ block.settings.instaImage | image_url: width: 1262 }} 1262w"
+                         sizes="100vw"
+                         loading="lazy"
+                         decoding="async"
+                         alt="Instagram Image"
+                         style="width: 100%; height: auto;">
+                  </picture>
                 </a>
               </li>
             {% endif %}
           {% endfor %}
         </ul>
       </div>
-      <div class="main-footer__middle flex">
-        <!-- Footer Menu -->
-        <div class="main-footer__nav flex">
-          {% assign fotterMenu = linklists[section.settings.footerMenu] %}
-          {% for link in fotterMenu.links %}
-            {% assign linkTitle = link.title | downcase | remove: ' ' %}
-            <div class="footer-links">
-              <p class="title">
-                <a href="javascript:;" title="{{ link.title | escape }}"> {{ link.title | escape }}</a>
-              </p>
-              <ul class="accordion-content">
-                {% for childlink in link.links %}
-                  <li>
-                    <a href="{{ childlink.url }}" title="{{ childlink.title }}">{{ childlink.title }}</a>
-                  </li>
-                {% endfor %}
-              </ul>
-            </div>
-          {% endfor %}
-        </div>
-        <div class="right-section">
-          <div class="main-footer__newsletter">
-            <div class="news-content">
-              {% if section.settings.newsTitle != blank %}
-                <span class="newsletter-title uppercase">{{ section.settings.newsTitle }}</span>
-              {% endif %}
 
-              {% if section.settings.description != blank %}
-                <div class="description ">
-                  {{ section.settings.description }}
-                </div>
-              {% endif %}
-            </div>
-            <div class="newsletter-form">
-              <div class="klaviyo-form-TBi3KA"></div>
-              {% comment %} {% render 'newsletter-form' %} {% endcomment %}
-              {% comment %}
-                <form action="">
-                  <input type="email" name="Email" id="email" placeholder="Enter Email Address">
-                  <button type="submit" class="btn-submit" value="Subscribe">Subscribe</button>
-                </form>
-              {% endcomment %}
-            </div>
-          </div>
-        </div>
-        {% comment %}
-          <div class=" block-980">
-            {% if section.settings.description != blank %}
-              <div class="description">
-                {{ section.settings.description }}
-              </div>
-            {% endif %}
+      <!-- Footer Cartoon Optimization -->
+      <div class="footer-cartoon">
+        <picture>
+          <!-- Mobile sizes WebP -->
+          <source
+            type="image/webp"
+            media="(max-width: 767px)"
+            srcset="{{ 'Footer-cartoon.jpg' | asset_url | image_url: width: 375, format: 'webp' }} 375w,
+                    {{ 'Footer-cartoon.jpg' | asset_url | image_url: width: 550, format: 'webp' }} 550w"
+            sizes="100vw">
+          
+          <!-- Tablet sizes WebP -->
+          <source
+            type="image/webp"
+            media="(min-width: 768px) and (max-width: 1023px)"
+            srcset="{{ 'Footer-cartoon.jpg' | asset_url | image_url: width: 768, format: 'webp' }} 768w,
+                    {{ 'Footer-cartoon.jpg' | asset_url | image_url: width: 1024, format: 'webp' }} 1024w"
+            sizes="100vw">
+          
+          <!-- Desktop sizes WebP -->
+          <source
+            type="image/webp"
+            media="(min-width: 1024px)"
+            srcset="{{ 'Footer-cartoon.jpg' | asset_url | image_url: width: 1000, format: 'webp' }} 1000w,
+                    {{ 'Footer-cartoon.jpg' | asset_url | image_url: width: 1262, format: 'webp' }} 1262w"
+            sizes="100vw">
 
-          </div>
-        {% endcomment %}
-      </div>
-      <div class="main-footer__bottom">
-        {% assign legalMenu = linklists[section.settings.legalMenu] %}
-        {% if legalMenu != blank %}
-          <div class="legal-menu">
-            {% for link in legalMenu.links %}
-              <span>
-                <a href="{{ link.url }}" title="{{ link.title | escape }}">{{ link.title | escape }}</a></span
-              >
-            {% endfor %}
-          </div>
-        {% endif %}
-        <!-- Copyright -->
-        <div class="copyright">
-          <div class="copyright-section flex-wrap">
-            <p>© {{ 'now' | date: '%Y' }} All Rights Reserved by Diggs Publishin</p>
-            {% if section.settings.creditText != blank and section.settings.credit != blank %}
-              <a href="{{ section.settings.credit }}" title="{{section.settings.creditText }}" target="_blank"
-                >Designed by PixeloLabs</a
-              >
-            {% endif %}
-          </div>
-        </div>
-        <div class="footer-cartoon">
-          <img src="{{ "Footer-cartoon.jpg" |asset_url}}" alt="cartoon-figures">
-        </div>
+          <!-- Fallback for non-WebP support -->
+          <img src="{{ 'Footer-cartoon.jpg' | asset_url }}"
+               srcset="{{ 'Footer-cartoon.jpg' | asset_url | image_url: width: 375 }} 375w,
+                       {{ 'Footer-cartoon.jpg' | asset_url | image_url: width: 550 }} 550w,
+                       {{ 'Footer-cartoon.jpg' | asset_url | image_url: width: 1262 }} 1262w"
+               sizes="100vw"
+               loading="lazy"
+               decoding="async"
+               alt="cartoon-figures"
+               style="width: 100%; height: auto;">
+        </picture>
       </div>
     </div>
   </div>
 </footer>
+
 {% schema %}
 {
   "name": "Footer",
