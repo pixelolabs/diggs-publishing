@@ -1,38 +1,38 @@
 .full-width-content {
-    overflow: hidden;
+  overflow: hidden;
+  position: relative;
+  padding-top: 136px;
+  @include MQ(MQ-480) {
+    padding-top: 80px;
+  }
+  .container-1010 {
     position: relative;
-    padding-top: 136px;
-    @include MQ(MQ-480) {
-        padding-top: 80px;
+    // z-index: 2;
+  }
+  .content {
+    position: relative;
+    z-index: 3;
+    h2 {
+      // margin-bottom: 20px;
+      // line-height: 0.93;
+      position: relative;
+      @include MQ(MQ-480) {
+        // margin-bottom: 32px;
+      }
     }
-    .container-1010 {
-        position: relative;
-        z-index: 2;
+    p {
+      max-width: 860px;
+      margin: 0 auto;
     }
-    .content {
-        position: relative;
-        z-index: 3;
-        h2 {
-            // margin-bottom: 20px;
-            // line-height: 0.93;
-            position: relative;
-            @include MQ(MQ-480) {
-                // margin-bottom: 32px;
-            }
-        }
-        p {
-            max-width: 860px;
-            margin: 0 auto;
-        }
-        .full-format p {
-            padding-bottom: 0;
-        }
-        .btn--primary {
-            margin: 0 auto;
-            margin-top: 35px;
-            @include MQ(MQ-480) {
-                margin-top: 20px;
-            }
-        }
+    .full-format p {
+      padding-bottom: 0;
     }
+    .btn--primary {
+      margin: 0 auto;
+      margin-top: 35px;
+      @include MQ(MQ-480) {
+        margin-top: 20px;
+      }
+    }
+  }
 }

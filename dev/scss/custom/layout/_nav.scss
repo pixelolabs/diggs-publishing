@@ -568,7 +568,7 @@ header {
               margin: 0 auto;
               position: relative;
               @include MQ(MQ-980) {
-                padding: 0;
+                padding: 0 !important;
               }
               .big-nav-menu {
                 .sub-nav-links {
@@ -1141,7 +1141,7 @@ header {
             svg {
               margin-left: 3px;
               path {
-                stroke: $color-black;
+                stroke: $color-white;
               }
             }
             &.block-980 {
