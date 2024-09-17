@@ -100,6 +100,12 @@
       left: 0;
       img {
         @include img-object-contain;
+        filter: brightness(0) saturate(100%) invert(17%) sepia(38%) saturate(1114%) hue-rotate(8deg) brightness(97%) contrast(104%);
+      }
+      &:hover{
+        img{
+        filter: none;
+        }
       }
     }
     .full-link {
