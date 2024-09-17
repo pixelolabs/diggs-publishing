@@ -1,15 +1,17 @@
 <script> 
-(function($) { 
-  $(document).on('page:load page:change', function () {  
+jQuery(function() {
+  
+ 
     if (localStorage.getItem('storedDiscount')){  
       var discountStored = localStorage.getItem('storedDiscount');   
       $('input[name="discount"]').val(localStorage.getItem('storedDiscount'));  
     }  
-    $('form[action="/cart"]').on('submit', function(){ 
-      var $discountCode = $('input[name="discount"]').val(); 
+
+    $(document).on("click", "btn--cart-checkout", function(e) {
+        var $discountCode = $('input[name="discount"]').val(); 
       localStorage.setItem('storedDiscount', $discountCode);  
-    });   
-  });   
+    })
+  
 })(jQuery);   
 </script> 
 
