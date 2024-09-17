@@ -492,10 +492,15 @@ h6,
       background-size: cover;
     }
     @include MQ(MQ-768) {
-      height: 80px;
-      top: -86px;
+      // height: 80px;
+      // top: -86px;
+      // background-size: cover;
+      // background-position-x: right;
+      height: 100px;
+      top: -101px;
       background-size: cover;
-      background-position-x: right;
+      background-position-x: left;
+      background-repeat: no-repeat;
     }
   }
 }

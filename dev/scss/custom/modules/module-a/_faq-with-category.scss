@@ -39,7 +39,7 @@
     }
   }
   @include MQ(MQ-768) {
-    padding-top: 0;
+    padding-top: 20px;
     margin-top: 30px;
     // padding-bottom: 60px;
   }
@@ -71,6 +71,16 @@
           letter-spacing: 1px;
           text-align: center;
           text-transform: uppercase;
+          &:hover,
+          &:focus {
+            background: $color-yellow;
+            background-image: linear-gradient(
+              to bottom,
+              $color-yellow 0%,
+              $color-yellow 100%
+            );
+            border-color: $color-yellow;
+          }
         }
       }
       @include MQ(MQ-768) {
@@ -89,7 +99,7 @@
         background-image: linear-gradient(to bottom, #fff8e3 0%, #fff8e1 100%);
         font-family: var(--font-family-primary);
         font-size: 14px;
-        font-weight: 900;
+        font-weight: 600;
         line-height: 1.29;
         letter-spacing: 1px;
         width: 100%;
@@ -114,7 +124,7 @@
       top: 37%;
       background: url(rocket.webp) no-repeat center / 100%;
       animation: fly 10s 0.5s ease-in infinite;
-      @include MQ(MQ-768) {
+      @include MQ(MQ-980) {
         display: none;
       }
     }
@@ -130,6 +140,19 @@
       @include MQ(MQ-768) {
         margin-bottom: 15px;
         padding: 13px 0px 10px;
+      }
+      ul li,
+      ol li {
+        border: 0 !important;
+        margin-bottom: 0;
+        padding-top: 0;
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+      ul,
+      ol {
+        padding-bottom: 20px !important;
       }
       &.heading {
         padding-top: 20px;
@@ -215,7 +238,7 @@
       }
       .content {
         line-height: 1.5;
-        padding-top: 13px;
+        padding-top: 22px;
         padding-left: 28px;
         padding-right: 18px;
         border-top: 1px solid $color-black;
@@ -224,6 +247,7 @@
         display: none;
         @include MQ(MQ-768) {
           padding-left: 22px;
+          padding-top: 13px;
         }
         p {
           font-size: 14px;
