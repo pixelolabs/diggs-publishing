@@ -66,8 +66,8 @@
         "section_class": "responsive-text-left",
         "paddingtop": 50,
         "paddingtopmobile": 50,
-        "paddingbottom": 80,
-        "paddingbottomMobile": 80
+        "paddingbottom": 130,
+        "paddingbottomMobile": 30
       }
     },
     "half_image_half_content_AfYRJH": {
