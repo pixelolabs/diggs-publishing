@@ -2381,7 +2381,7 @@ $(window).scroll(function () {
       $(".js__mobile-menu-open-hide").toggleClass("active");
       $(".js__mobile-announcement-text").toggleClass("active");
       $(".main-header").toggleClass("active");
-      $(".main-header").addClass("gradient"); // $(".announcement-bar").toggleClass("active");
+      $(".main-header").toggleClass("gradient"); // $(".announcement-bar").toggleClass("active");
       // $("body").removeClass("transparent-header");
       // if ($("body").hasClass("transparent-header")) {
       //     $("body").removeClass("transparent-header");
