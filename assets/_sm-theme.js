@@ -926,7 +926,7 @@ jQuery(function () {
     // centeredSlides: true,
     // resistance: false,
     threshold: 5,
-    loop: true,
+    loop: false,
     resistance: false,
     shortSwipes: true,
     longSwipes: false,
