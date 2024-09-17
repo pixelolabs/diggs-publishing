@@ -859,6 +859,7 @@
       padding-top: 12px;
       position: relative;
       height: auto;
+      margin-bottom: 14px;
       &:nth-child(3n + 1) {
         .article-card::before {
           border: 2px solid $color-green !important;
@@ -880,6 +881,10 @@
         margin-top: 0;
         max-width: 100%;
         height: 100%;
+        transition: 0.3s ease box-shadow;
+        &:hover{
+          box-shadow: 0px 4px 14px 0px #FFC82B5C;
+        }
         @include MQ(MQ-1024) {
           .image-section {
             height: 32vw;
