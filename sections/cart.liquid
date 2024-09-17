@@ -130,16 +130,10 @@
               </ul>
             </div>
             <div class="total">
-              <div class="coupon-section">
-                <label>Coupon Code</label>
-                <div class="form">
-                  <input type="text" placeholder="Coupon Code">
-                  {% comment %}
-                  <input type="button" value="Apply" class="btn-coupon">
-                  {% endcomment %}
-                </div>
-                <p>Coupon code will be applied on the checkout page</p>
-              </div>
+              {% if section.settings.coupon_code_enable %}
+                {% render 'plus_cart_discount_code' %}
+              {% endif %}
+           
 
               <textarea
                 id="note"
