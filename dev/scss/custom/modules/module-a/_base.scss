@@ -52,6 +52,16 @@
                 top: 21px;
                 right: 18px;
                 z-index: 7;
+                &:hover{
+                    svg{
+                      path{
+                        fill: $color-black;
+                        &:nth-child(2), &:nth-child(3){
+            stroke: $color-white;
+                        }
+                      }
+                    }
+                  }
                 @include MQ(MQ-480) {
                     top: 11px;
                     right: 11px;
