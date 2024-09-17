@@ -299,7 +299,9 @@
           "newsTitle": "Our Newsletter",
           "description": "<p>Sign up for the latest book offers and exclusives.<\/p>",
           "footerMenu": "footer-2-0",
-          "legalMenu": "footer-legal-menu-2-0"
+          "legalMenu": "footer-legal-menu-2-0",
+          "creditText": "Designed by PixeloLabs",
+          "credit": "https:\/\/www.pixelolabs.com\/"
         }
       },
       "inner-hero-section": {
