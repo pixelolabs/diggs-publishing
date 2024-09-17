@@ -12,51 +12,15 @@
                   class="image-section"
                   title="{{ block.settings.InstaLink }}"
                 >
-                  <picture>
-                    <!-- Mobile sizes WebP -->
-                    <source
-                      type="image/webp"
-                      media="(max-width: 767px)"
-                      srcset="{{ block.settings.instaImage | image_url: width: 375, format: 'webp' }} 375w,
-                              {{ block.settings.instaImage | image_url: width: 550, format: 'webp' }} 550w,
-                              {{ block.settings.instaImage | image_url: width: 750, format: 'webp' }} 750w"
-                      sizes="100vw">
-                    
-                    <!-- Tablet sizes WebP -->
-                    <source
-                      type="image/webp"
-                      media="(min-width: 768px) and (max-width: 1023px)"
-                      srcset="{{ block.settings.instaImage | image_url: width: 768, format: 'webp' }} 768w,
-                              {{ block.settings.instaImage | image_url: width: 1024, format: 'webp' }} 1024w,
-                              {{ block.settings.instaImage | image_url: width: 1200, format: 'webp' }} 1200w"
-                      sizes="100vw">
-                    
-                    <!-- Desktop sizes WebP -->
-                    <source
-                      type="image/webp"
-                      media="(min-width: 1024px)"
-                      srcset="{{ block.settings.instaImage | image_url: width: 1000, format: 'webp' }} 1000w,
-                              {{ block.settings.instaImage | image_url: width: 1262, format: 'webp' }} 1262w,
-                              {{ block.settings.instaImage | image_url: width: 1400, format: 'webp' }} 1400w"
-                      sizes="100vw">
-                    
-                    <!-- Fallback for non-WebP support -->
-                    <img src="{{ block.settings.instaImage | image_url: width: 750 }}"
-                         srcset="{{ block.settings.instaImage | image_url: width: 750 }} 750w,
-                                 {{ block.settings.instaImage | image_url: width: 1200 }} 1200w,
-                                 {{ block.settings.instaImage | image_url: width: 1400 }} 1400w"
-                         sizes="(max-width: 767px) 100vw, (max-width: 1023px) 100vw, 100vw"
-                         width="750"
-                         height="{{ 750 | divided_by: block.settings.instaImage.aspect_ratio | round }}"
-                         loading="lazy"
-                         decoding="async"
-                         alt="Instagram Image"
-                         style="width: 100%; height: auto; display: block;">
-                  </picture>
+                  {{
+                    block.settings.instaImage
+                    | image_url: width: 1262
+                    | image_tag: loading: 'lazy', widths: '1262x1000'
+                  }}
                 </a>
               </li>
             {% endif %}
-          {%- endfor %}
+          {% endfor %}
         </ul>
         <div class="middle-section">
           {% if section.settings.sstext != blank %}
