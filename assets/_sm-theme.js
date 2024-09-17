@@ -1005,6 +1005,12 @@ jQuery(function () {
       769: {
         slidesPerView: 2
       },
+      980: {
+        slidesPerView: 2
+      },
+      1100: {
+        slidesPerView: 1
+      },
       1440: {
         slidesPerView: 2,
         spaceBetween: 14
