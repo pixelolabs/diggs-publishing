@@ -152,9 +152,13 @@
       animation-duration: 10s;
       animation-iteration-count: infinite;
       @include MQ(MQ-768) {
-        width: 57px;
-        height: 40px;
-        top: 40px;
+        width: 100px;
+        height: 70px;
+        top: 70px;
+        right: 50px;
+      }
+      @include MQ(MQ-480) {
+        right: 30px;
       }
     }
   }
@@ -176,10 +180,14 @@
       animation-duration: 10s;
       animation-iteration-count: infinite;
       @include MQ(MQ-768) {
+        width: 80px;
+        height: 80px;
+        left: 23px;
+        bottom: -94px;
+      }
+      @include MQ(MQ-480) {
         width: 60px;
         height: 60px;
-        left: 23px;
-        bottom: -66px;
       }
     }
     &::after {
@@ -237,10 +245,11 @@
       animation-timing-function: linear;
       animation-name: kites;
       @include MQ(MQ-768) {
-        width: 49px;
-        height: 64px;
-        left: 18px;
-        top: -63px;
+        width: 69px;
+        height: 90px;
+        left: -25px;
+        top: -50px;
+        z-index: -2;
       }
     }
     &::after {
@@ -273,27 +282,33 @@
   .full-width-content-section {
     .top-wave {
       &:before {
-        background: url(wave-fullwidth-body-bgcolor.svg) no-repeat center / 100%;
-        // height: 12vw;
-        height: 94px;
+        background: url(wave-fullwidth-body-bgcolor.svg) no-repeat center /
+          1452px;
         width: 100%;
         position: absolute;
         left: 0;
-        top: -20px;
+        top: -15px;
+        z-index: 2;
+        // background-size: contain;
+        height: 109px;
         z-index: 2;
         content: "";
 
         filter: brightness(0) saturate(100%) invert(97%) sepia(90%)
           saturate(332%) hue-rotate(309deg) brightness(102%) contrast(102%);
         @media (min-width: 1440px) {
-          background: url(wave-fullwidth-body-bgcolor.svg) repeat-x center /
-            100%;
+          background: url(wave-fullwidth-body-bgcolor.svg) repeat-x top/ 100%;
           // height: 6vw;
-          top: -6px;
+          top: -2px;
+          height: 129px;
         }
-        @include MQ(MQ-980) {
-          top: -25px;
+        @include MQ(MQ-1300) {
+          height: 153px;
+          top: -37px;
         }
+        // @include MQ(MQ-980) {
+        //   top: -25px;
+        // }
         // @include MQ(MQ-1300) {
         //   top: -12px;
         // }
@@ -301,16 +316,16 @@
         //   top: -22px;
         // // }
         @include MQ(MQ-768) {
-          top: -32px;
-          height: 100px;
+          height: 84px;
+          top: -1px;
         }
-        @include MQ(MQ-600) {
-          height: 85px;
-          top: -31px;
-        }
-        @include MQ(MQ-480) {
-          height: 81px;
-        }
+        // @include MQ(MQ-600) {
+        //   height: 85px;
+        //   top: -31px;
+        // }
+        // @include MQ(MQ-480) {
+        //   height: 81px;
+        // }
       }
     }
   }

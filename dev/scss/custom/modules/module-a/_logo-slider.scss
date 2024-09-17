@@ -48,8 +48,33 @@
       animation-direction: alternate;
       width: 52px;
       height: 70px;
+      @include MQ(MQ-1280) {
+        right: 0;
+      }
+      @include MQ(MQ-980) {
+        width: 32px;
+        height: 50px;
+      }
       @include MQ(MQ-600) {
         display: none;
+      }
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      right: -150px;
+      top: -36px;
+      background: url("rocket.webp") no-repeat center / 100%;
+      animation: fly 10s 0.5s ease-in infinite;
+      width: 82px;
+      height: 85px;
+      display: none;
+      @include MQ(MQ-600) {
+        width: 46px;
+        display: block;
+        height: 50px;
+        right: 10px;
+        top: -2px;
       }
     }
   }
@@ -58,22 +83,26 @@
     width: 100%;
     position: relative;
     @include MQ(MQ-600) {
-      max-width: 100%;
+      max-width: 430px;
       width: 100%;
       padding-right: 42px;
+    }
+    @include MQ(MQ-480) {
+      max-width: 320px;
     }
     &::after {
       position: absolute;
       content: "";
       right: -150px;
       top: -36px;
-      background: url("rocket.webp") repeat center / 100%;
+      background: url("rocket.webp") no-repeat center / 100%;
       animation: fly 10s 0.5s ease-in infinite;
       width: 82px;
       height: 85px;
       @include MQ(MQ-600) {
+        display: none;
         width: 46px;
-        height: 47px;
+        height: 50px;
         right: -12px;
         top: -2px;
       }
@@ -100,11 +129,12 @@
       left: 0;
       img {
         @include img-object-contain;
-        filter: brightness(0) saturate(100%) invert(17%) sepia(38%) saturate(1114%) hue-rotate(8deg) brightness(97%) contrast(104%);
+        filter: brightness(0) saturate(100%) invert(17%) sepia(38%)
+          saturate(1114%) hue-rotate(8deg) brightness(97%) contrast(104%);
       }
-      &:hover{
-        img{
-        filter: none;
+      &:hover {
+        img {
+          filter: none;
         }
       }
     }

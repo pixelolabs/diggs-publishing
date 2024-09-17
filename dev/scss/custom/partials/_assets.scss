@@ -750,7 +750,12 @@ textarea.input--error {
     line-height: normal;
     letter-spacing: normal;
     text-align: center;
-
+    a {
+      &:hover span,
+      &:focus span {
+        background: #e0ffda;
+      }
+    }
     span {
       width: 40px;
       height: 40px;
@@ -774,6 +779,7 @@ textarea.input--error {
       &.current {
         background: #e0ffda;
       }
+
       &.more {
         border: none;
       }
@@ -784,8 +790,8 @@ textarea.input--error {
     border: none;
     width: 40px;
     height: 40px;
-    border: 1px solid $color-black;
-    background: url(left-arrow.svg) no-repeat center / 8px;
+    // border: 1px solid $color-black;
+    // background: url(left-arrow.svg) no-repeat center / 8px;
     // transform: rotate(-90deg);
     @include MQ(MQ-480) {
       width: 35px;
@@ -795,6 +801,12 @@ textarea.input--error {
       display: block;
       width: 40px;
       height: 40px;
+      background: url(left-arrow.svg) no-repeat center / 8px;
+      border: 1px solid #3b2900;
+      &:hover,
+      &:focus {
+        background: url(left-arrow.svg) no-repeat center / 8px #e0ffda;
+      }
     }
     .disabled {
       opacity: 0.5;

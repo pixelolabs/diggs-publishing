@@ -12,18 +12,39 @@
   }
 
   &.blue-wave::before {
-    background: url("wave-sky-blue.svg") repeat-x left / 100%;
-    @include MQ(MQ-980) {
-      // height: 155px;
-      // top: -100px;
-      // height: 95px;
-      height: 214px;
-      top: -160px;
+    // background: url("wave-sky-blue.svg") repeat-x left / 100%;
+    background: url(wave-transparent.svg) repeat-x center / 100%;
+    // height: 176px;
+    // top: -128px;
+    height: 214px;
+    top: -162px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(89%) saturate(7072%)
+      hue-rotate(175deg) brightness(108%) contrast(103%);
+    @include MQ(MQ-1440) {
+      // height: 200px;
+      top: -140px;
     }
-    @include MQ(MQ-480) {
-      height: 80px;
-      top: -44px;
+    @include MQ(MQ-1200) {
+      height: 200px;
+      top: -130px;
+    }
+    // @include MQ(MQ-980) {
+    //   // height: 155px;
+    //   // top: -100px;
+    //   // height: 95px;
+    //   height: 214px;
+    //   top: -160px;
+    // }
+    // @include MQ(MQ-480) {
+    //   height: 80px;
+    //   top: -44px;
+    //   background-size: cover;
+    // }
+    @include MQ(MQ-768) {
+      height: 65px;
+      top: -55px;
       background-size: cover;
+      background-position: left;
     }
   }
   &.transparent-wave::before {
@@ -478,13 +499,13 @@
       content: "";
       right: 130px;
       bottom: 27px;
-      background: url("star-large.webp") repeat center / 100%;
+      background: url("star-large.webp") no-repeat center / 100%;
       animation-name: starRotate;
       animation-duration: 5s;
       animation-iteration-count: infinite;
       animation-direction: alternate;
-      width: 42px;
-      height: 51px;
+      width: 37px;
+      height: 47px;
       z-index: -1;
       @include MQ(MQ-980) {
         display: none;
@@ -514,6 +535,7 @@
     h2 {
       margin: 0 0 13px;
       padding-bottom: 0;
+      max-width: 500px;
     }
     .inner {
       max-width: 544px;
