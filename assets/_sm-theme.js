@@ -2292,6 +2292,7 @@ jQuery(function () {
     $(".js__search").removeClass("active");
     $("body .boost-pfs-search-suggestion").css("display", "none");
     $("body #boost-sd__search-widget-init-wrapper-1").css("display", "none");
+    $(".js__main-header").removeClass("active");
   });
   $(".js__search").on("click", function (e) {
     e.preventDefault();
