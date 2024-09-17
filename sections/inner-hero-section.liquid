@@ -9,6 +9,15 @@
       padding-top: {{ section.settings.paddingtopmobile | round: 0 }}px;
       padding-bottom: {{ section.settings.paddingbottomMobile | round: 0 }}px;
     }
+
+  }
+  @media screen and (max-width: 480px) {
+    .max-height{
+      min-height:480px;
+  }
+  .max-height .image-section img{
+    object-position: bottom;
+  }
   }
 {%- endstyle -%}
 <div class="inner-hero-section {% if section.settings.height == true %} max-height{% endif %} {% if section.settings.smallHeight == true %} small {% endif %} section-{{ section.id }}-padding color-{{ section.settings.color_scheme }}">
@@ -159,7 +168,7 @@
     {
       "type": "checkbox",
       "id": "height",
-      "label": "Increase Height of The Banner by 100px "
+      "label": "Increase Height of The Banner by 100px in Mobile"
     }
   ],
   "presets": [
