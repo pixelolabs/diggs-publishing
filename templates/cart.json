@@ -15,7 +15,10 @@
         "title": "Cart",
         "bannerImage": "shopify:\/\/shop_images\/Rectangle_2871_2x_259cdd64-c965-43a0-9eb6-bb12fe6f4d4c.jpg",
         "bannerImageM": "shopify:\/\/shop_images\/Rectangle_2871_2x_2.webp",
-        "description": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s<\/p>"
+        "description": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s<\/p>",
+        "coupon_code_enable": true,
+        "coupon_title": "Coupon Code",
+        "coupon_content": "Coupon code will be applied on the checkout page"
       }
     },
     "cart_product_section_XpwJcE": {
