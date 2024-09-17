@@ -1006,7 +1006,7 @@ jQuery(function () {
         slidesPerView: 2
       },
       980: {
-        slidesPerView: 2
+        slidesPerView: 1
       },
       1100: {
         slidesPerView: 1
