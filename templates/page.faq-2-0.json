@@ -19,7 +19,8 @@
         "buttonText1": "",
         "buttonLink1": "",
         "button_bg": "pink",
-        "content_alignment": "left"
+        "content_alignment": "left",
+        "height": true
       }
     },
     "faq_accordion_with_category_h3NLVb": {
