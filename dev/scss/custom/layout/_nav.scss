@@ -1373,13 +1373,23 @@ header {
       z-index: -1;
 
       &:before {
+        // position: absolute;
+        // content: "";
+        // background: url(graphic-mobile-menu-border.svg) no-repeat;
+        // width: 97px;
+        // height: 347px;
+        // right: -30px;
+        // top: 25%;
+
         position: absolute;
         content: "";
-        background: url(graphic-mobile-menu-border.svg) no-repeat;
-        width: 97px;
-        height: 347px;
-        right: -30px;
-        top: 25%;
+        background: url(rocket.webp) no-repeat right / 47px;
+        -webkit-animation: fly 10s 0.5s ease-in infinite;
+        animation: fly 10s 0.5s ease-in infinite;
+        width: 47px;
+        height: 50px;
+        right: 24px;
+        bottom: -90px;
       }
       &:after {
         position: sticky;
@@ -1420,7 +1430,7 @@ header {
           width: 178px;
           height: 144px;
           left: 0;
-          bottom: -101px;
+          bottom: -80px;
           z-index: -1;
           background: url(graphic-mobile-menu-bottom-border.svg) no-repeat
             center left/178px;
@@ -1562,6 +1572,11 @@ header {
 .main-menu {
   @include MQ(MQ-980) {
     position: relative;
+    height: 60vh;
+    .main-nav-list {
+      height: 100%;
+    }
+
     &:before {
       position: absolute;
       content: "";
@@ -1574,14 +1589,21 @@ header {
       top: -38px;
     }
     &:after {
+      // position: absolute;
+      // content: "";
+      // background: url(rocket.webp) no-repeat right / 47px;
+      // animation: fly 10s 0.5s ease-in infinite;
+      // width: 47px;
+      // height: 50px;
+      // right: 24px;
+      // bottom: -90px;
       position: absolute;
       content: "";
-      background: url(rocket.webp) no-repeat right / 47px;
-      animation: fly 10s 0.5s ease-in infinite;
-      width: 47px;
-      height: 50px;
-      right: 24px;
-      bottom: -90px;
+      background: url(graphic-mobile-menu-border.svg) no-repeat;
+      width: 97px;
+      height: 347px;
+      right: -30px;
+      top: 25%;
     }
   }
 }

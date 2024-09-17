@@ -37,8 +37,16 @@
     position: absolute;
     left: 0px;
     z-index: 2;
-    bottom: 100px;
+    bottom: 120px;
     background: url("thread-hero-white.webp") no-repeat center / 100%;
+    @include MQ(MQ-980) {
+      bottom: 80px;
+      width: 267.6px;
+    }
+    @include MQ(MQ-768) {
+      bottom: 60px;
+      width: 200.6px;
+    }
     @include MQ(MQ-480) {
       display: none;
     }
@@ -76,7 +84,7 @@
     z-index: 2;
     &::after {
       width: 60.4px;
-      height: 46.2px;
+      height: 60.2px;
       content: "";
       position: absolute;
       top: -90px;
@@ -154,7 +162,7 @@
     * {
       color: #ffffff;
     }
-    p{
+    p {
       max-width: 365.16px;
     }
     h1,
@@ -170,7 +178,6 @@
         margin-bottom: 7px;
       }
     }
-   
   }
 }
 

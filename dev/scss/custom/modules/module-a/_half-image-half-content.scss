@@ -39,7 +39,7 @@
       height: 155px;
       top: -100px;
     }
-    @include MQ(MQ-480) {
+    @include MQ(MQ-768) {
       height: 65px;
       top: -55px;
       background-size: cover;
@@ -83,7 +83,7 @@
           &:after {
             right: 0;
             bottom: unset;
-            top: 27px;
+            top: -18px;
           }
         }
         .image-wrapper {
@@ -225,7 +225,7 @@
 }
 .half-image-half-content {
   position: relative;
-  z-index: 1;
+  // z-index: 1;
   padding: 0px 0 160px;
   &.bg-blue {
     background-color: $color-sky-blue;
@@ -485,6 +485,7 @@
       animation-direction: alternate;
       width: 42px;
       height: 51px;
+      z-index: -1;
       @include MQ(MQ-980) {
         display: none;
       }
@@ -504,7 +505,7 @@
       }
     }
     .description {
-      max-width: 423px;
+      max-width: 440px;
       width: 100%;
       @include MQ(MQ-768) {
         max-width: 100%;
@@ -516,6 +517,7 @@
     }
     .inner {
       max-width: 544px;
+      width: 100%;
     }
     &.center {
       @include MQ(MQ-768) {
@@ -527,9 +529,7 @@
       width: 100% !important;
       margin-right: 0;
     }
-    @include MQ(MQ-1200) {
-      padding-right: 80px;
-    }
+
     @include MQ(MQ-980) {
       padding-right: 0px;
     }
@@ -537,12 +537,12 @@
       width: 100%;
       max-width: 100%;
       order: 2;
-      padding-top: 60px;
-      margin: 0;
+      // padding-top: 60px;
+      margin: 80px 0 0;
       padding-right: 0;
     }
     @include MQ(MQ-500) {
-      padding-top: 35px;
+      margin-top: 60px;
     }
     .pre-title {
       margin-bottom: 20px;
@@ -654,10 +654,10 @@
   }
   .full-format {
     p {
-      padding-bottom: 0;
-      @include MQ(MQ-768) {
-        padding-bottom: 0;
-      }
+      // padding-bottom: 0;
+      // @include MQ(MQ-768) {
+      //   padding-bottom: 0;
+      // }
       strong {
         text-transform: uppercase;
       }
@@ -752,9 +752,9 @@
       &:after {
         right: 0;
       }
-      @include MQ(MQ-768) {
-        padding-top: 45px;
-      }
+      // @include MQ(MQ-768) {
+      //   padding-top: 45px;
+      // }
     }
     &:nth-child(1) {
       .content {
@@ -850,7 +850,7 @@
       }
       &:after {
         right: 29px;
-        bottom: 44px;
+        bottom: -33px;
       }
     }
     .image-wrapper {
@@ -1046,10 +1046,10 @@
     }
   }
   .half-image-half-content {
-    padding-bottom: 75px;
+    // padding-bottom: 75px;
     @include MQ(MQ-980) {
       padding-top: 0;
-      padding-bottom: 50px;
+      // padding-bottom: 50px;
     }
     &:first-child {
       .container-1260 {
