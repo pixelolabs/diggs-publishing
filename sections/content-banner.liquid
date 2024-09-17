@@ -1,8 +1,4 @@
-{% if section.settings.title != blank
-  or section.settings.description != blank
-  or section.settings.image1 != blank
-  or section.settings.image2 != blank
-%}
+{% if section.settings.title != blank or section.settings.description != blank or section.settings.image1 != blank or section.settings.image2 != blank %}
   <div class="content-banner">
     <div class="box">
       {% if section.settings.image1 != blank %}
@@ -43,7 +39,6 @@
               "
               sizes="100vw"
             >
-
             <!-- Tablet sizes WebP -->
             <source
               type="image/webp"
@@ -54,7 +49,6 @@
               "
               sizes="100vw"
             >
-
             <!-- Desktop sizes WebP -->
             <source
               type="image/webp"
@@ -65,7 +59,6 @@
               "
               sizes="100vw"
             >
-
             <!-- Fallback for non-WebP support -->
             <img
               src="{{ mobile_image1 | image_url: width: mobile_width }}"
@@ -79,7 +72,7 @@
               height="{{ mobile_width | divided_by: mobile_image1.aspect_ratio | round }}"
               loading="lazy"
               decoding="async"
-
+              alt="{% if section.settings.title != blank %}{{ section.settings.title | escape }}{% else %}Image{% endif %}"
               style="width: 100%;  display: block;"
             >
           </picture>
@@ -133,7 +126,6 @@
               "
               sizes="100vw"
             >
-
             <!-- Tablet sizes WebP -->
             <source
               type="image/webp"
@@ -144,7 +136,6 @@
               "
               sizes="100vw"
             >
-
             <!-- Desktop sizes WebP -->
             <source
               type="image/webp"
@@ -155,7 +146,6 @@
               "
               sizes="100vw"
             >
-
             <!-- Fallback for non-WebP support -->
             <img
               src="{{ mobile_image2 | image_url: width: mobile_width }}"
@@ -169,7 +159,7 @@
               height="{{ mobile_width | divided_by: mobile_image2.aspect_ratio | round }}"
               loading="lazy"
               decoding="async"
-              alt="{{ section.settings.title | escape }}"
+              alt="{% if section.settings.description != blank %}{{ section.settings.description | escape }}{% else %}Image{% endif %}"
               style="width: 100%; height: auto; display: block;"
             >
           </picture>
