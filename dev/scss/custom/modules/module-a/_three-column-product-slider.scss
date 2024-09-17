@@ -110,7 +110,7 @@
         transition: 0.35s ease;
       }
       &::after {
-        display: none;
+        display: none !important;
       }
       z-index: 2;
       position: relative;
