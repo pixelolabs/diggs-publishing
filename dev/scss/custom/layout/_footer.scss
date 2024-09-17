@@ -450,6 +450,13 @@ footer {
         a {
           opacity: 0.6;
         }
+        a {
+          &:hover {
+            opacity: 1;
+            text-decoration: underline;
+            color: $color-pink;
+          }
+        }
         p {
           margin-bottom: 7px;
         }

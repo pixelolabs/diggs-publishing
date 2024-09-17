@@ -597,9 +597,9 @@ textarea.input--error {
     color: $color-black;
     display: flex !important;
     align-items: center;
-.starting{
-  font-weight: normal !important;
-}
+    .starting {
+      font-weight: normal !important;
+    }
     span,
     s {
       font-weight: 700;
@@ -893,20 +893,27 @@ textarea.input--error {
         display: block;
       }
     }
+    h1 span {
+      font-family: var(--font-family-secondary) !important;
+      margin-bottom: 21px !important;
+      font-size: 18px !important;
+      font-weight: normal !important;
+    }
     p,
     span {
       color: $color-black !important;
       font-family: var(--font-family-primary) !important;
-      font-size: 18px !important;
+      font-size: 16px !important;
       text-align: left !important;
-      font-weight: 600;
-      line-height: 1.39;
-      letter-spacing: 1px;
       display: block;
       width: 100%;
-      // @include MQ(MQ-980) {
-      //   text-align: center !important;
-      // }
+
+      font-weight: 400;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.43;
+      letter-spacing: 0.01px;
+      text-transform: none;
     }
     span[role="alert"] {
       color: rgb(208, 51, 31) !important;
@@ -925,7 +932,7 @@ textarea.input--error {
       font-style: normal !important;
       line-height: 16px !important;
       letter-spacing: normal !important;
-      color: $color-original-black !important;
+      color: $color-black !important;
       -webkit-appearance: none;
 
       font-family: var(--font-family-primary) !important;
@@ -937,6 +944,7 @@ textarea.input--error {
       padding: 15px 90px 15px 20px !important;
       border-radius: 40px !important;
       background: transparent !important;
+      height: fit-content !important;
       @include MQ(MQ-480) {
         padding: 17px 80px 17px 10px !important;
       }
@@ -955,8 +963,8 @@ textarea.input--error {
       &:-webkit-autofill:hover,
       &:-webkit-autofill:focus,
       &:-webkit-autofill:active {
-        -webkit-box-shadow: 0 0 0 30px #ffffff inset !important;
-        -webkit-text-fill-color: $color-original-black;
+        -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+        -webkit-text-fill-color: $color-black;
         font-family: var(--font-family-primary) !important;
         font-size: 14px;
       }
@@ -979,8 +987,8 @@ textarea.input--error {
       position: absolute;
       right: 8.5px;
       width: 52px;
-      height: 36px;
-      background: white;
+      height: 36px !important;
+      background: $color-white !important;
       top: 6px;
       cursor: pointer;
       align-items: center;
@@ -997,7 +1005,7 @@ textarea.input--error {
       }
       &:hover,
       &:focus {
-        background: $color-pink;
+        background: $color-pink !important;
         &:before {
           filter: brightness(0) saturate(100%) invert(99%) sepia(100%)
             saturate(2%) hue-rotate(300deg) brightness(112%) contrast(101%);
