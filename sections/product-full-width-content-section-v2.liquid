@@ -5,7 +5,7 @@
         <div class="container-840">
           <div class="inner">
             {% if section.settings.icon != blank %}
-              <div class="thumb-images hide">
+              <div class="thumb-images">
                 {% comment %} <img src="{{ 'icon-thumpup.webp' | asset_url }}"> {% endcomment %}
                 {{ section.settings.icon | image_url: width: 200 | image_tag: loading: 'lazy', widths: '200x200' }}
               </div>
