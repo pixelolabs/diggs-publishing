@@ -15,18 +15,19 @@
         "image": "shopify:\/\/shop_images\/contact-banner.jpg",
         "mobileImage": "shopify:\/\/shop_images\/Rectangle_2871_2x_2.webp",
         "title": "Contact",
-        "description": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s<\/p>",
+        "description": "<p>Have a question, inquiry, or feedback? We're here to help! Reach out to us for any questions about our books, partnerships, or events.<\/p>",
         "buttonText1": "",
         "buttonLink1": "",
         "button_bg": "pink",
-        "content_alignment": "left"
+        "content_alignment": "left",
+        "height": false
       }
     },
     "contact_section_RHMnDG": {
       "type": "contact-section",
       "settings": {
-        "sidebartitle": "Contact Information",
-        "sidebardescription": "<p>Ignite change with your stories. Reach out us and embark on a publishing journey where diversity and creativity know no bounds<\/p>",
+        "sidebartitle": "Contact Us",
+        "sidebardescription": "<p>We'd love to hear from you! Whether it's feedback on our books, questions about our events, or inquiries about partnerships, please don't hesitate to reach out.<\/p>",
         "title": "Get In touch"
       }
     }

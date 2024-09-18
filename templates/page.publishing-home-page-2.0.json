@@ -19,7 +19,8 @@
         "buttonText1": "{{ page.metafields.custom.hero_banner_button_text.value }}",
         "buttonLink1": "{{ page.metafields.custom.hero_banner_button_link.value }}",
         "button_bg": "pink",
-        "content_alignment": "left"
+        "content_alignment": "left",
+        "height": false
       }
     },
     "home_hero_banner_U4TPf8": {
@@ -31,7 +32,7 @@
         "pretitle_color": "#ff6520",
         "title": "WHERE DIVERSE STORIES COME TO LIFE!",
         "description": "<p>In a word filled with countless stories, Diggs Publishing celebrates the unique tales thaIn a world filled with countless stories, Diggs Publishing celebrates the unique tales that often go untold. Dive into our universe, where each page brings to life characters that truly reflect the world's diverse tapestry.<\/p>",
-        "buttonText": "Join Now",
+        "buttonText": "Learn More",
         "buttonLink": "shopify:\/\/pages\/about-us",
         "bluegradient": true
       }

@@ -50,10 +50,10 @@
 .ambassador-program-form {
   position: relative;
   text-align: center;
-  background: url(full_width_bg_vilot.webp) repeat center / 100%;
-  @include MQ(MQ-768) {
-    background-size: cover;
-  }
+  background: url(full_width_bg_vilot.webp) no-repeat center / cover;
+  // @include MQ(MQ-768) {
+  //   background-size: cover;
+  // }
   &:before {
     width: 603px;
     height: 840px;

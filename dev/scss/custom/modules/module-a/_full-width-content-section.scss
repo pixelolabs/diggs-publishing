@@ -225,8 +225,7 @@
     z-index: 0;
   }
   text-align: center;
-  background: url("graphic_tarnsperant-rays.png") repeat center / 100%;
-  background-size: cover;
+  background: url("graphic_tarnsperant-rays.png") no-repeat center / cover;
   h2 {
     margin-bottom: 20px;
     position: relative;

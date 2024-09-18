@@ -16,7 +16,7 @@
         "title": "Are you ready?",
         "description": "<p>Engage and inspire your students with Author  visits for grades PK-8!<\/p>",
         "buttonText1": "Book Now",
-        "buttonLink1": "#",
+        "buttonLink1": "https:\/\/calendly.com\/authorksd\/onsite-reading",
         "button_bg": "green",
         "content_alignment": "left",
         "height": false
@@ -62,7 +62,11 @@
         "content": "As a children's book author, I offer various types of school visits to meet the unique needs of different schools and grade levels. My author visits have been shown to have a profound impact on students, improving literacy, encouraging reading for pleasure, inspiring reluctant readers, enthusing pupils in their own writing, giving confidence, broadening knowledge of literature, allowing pupils to meet a favorite author, and providing an opportunity for children to ask questions. Additionally, author visits have a positive impact on teachers who can gain professionally and personally from the experience, providing new insights into literature, new methods for encouraging pupil engagement, and renewed enthusiasm for promoting reading for pleasure.",
         "buttonText": "",
         "buttonLink": "",
-        "section_class": ""
+        "section_class": "",
+        "paddingtop": 50,
+        "paddingtopmobile": 50,
+        "paddingbottom": 26,
+        "paddingbottomMobile": 26
       }
     },
     "half_image_half_content_gL8kEy": {
@@ -78,7 +82,7 @@
             "title": "Body Safety Wise",
             "description": "<p>The Body Safety Wise presentation is a PK-8 curriculum that teaches students about body safety, consent, and boundaries. It includes an engaging introduction, a<strong> book<\/strong> reading, giveaways, book signing, and a brief Q&A.<br\/><br\/><strong>Benefits<\/strong><\/p><p>Promote and raise awareness about the importance of body safety education and literacy in your community through social media, school events, and other platforms.<br\/><br\/>Agree to at least one interview, or photoshoot, promoting body safety education and literacy.<br\/><br\/>Submit any feedback you have received from your community, report on your activities as an ambassador, including any events or activities you have hosted, any social media posts you have made, and any feedback you have received from your community.<\/p>",
             "buttonText": "Book Now",
-            "buttonLink": "#",
+            "buttonLink": "https:\/\/calendly.com\/authorksd\/onsite-reading",
             "background_color": "transparent-bg",
             "fontSize": false,
             "center": false
@@ -94,7 +98,7 @@
             "title": "General Assembly",
             "description": "<p>General Assembly Style Visit: These presentations are 45-60 minutes in length for elementary-aged children, usually in a classroom or library setting. This program is perfect for large groups of children PK-8. It includes an engaging introduction, a reading of selected books, giveaways, book signing, and a brief Q&A with the children.<br\/><br\/><strong>Benefits<\/strong><br\/><br\/>Promote and raise awareness about the importance of body safety education and literacy in your community through social media, school events, and other platforms.<br\/><br\/>Agree to at least one interview, or photoshoot, promoting body safety education and literacy.<br\/><br\/>Submit any feedback you have received from your community, report on your activities as an ambassador, including any events or activities you have hosted, any social media posts you have made, and any feedback you have received from your community.<\/p>",
             "buttonText": "Book Now",
-            "buttonLink": "#",
+            "buttonLink": "https:\/\/calendly.com\/authorksd\/onsite-reading",
             "background_color": "transparent-bg",
             "fontSize": false,
             "center": false
@@ -105,7 +109,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/custom_visit.webp",
             "showVideo": false,
-            "video": "",
+            "video": "https:\/\/calendly.com\/authorksd\/onsite-reading",
             "pretitle": "",
             "title": "Custom Visit",
             "description": "<p>Customer visits are tailored to meet your school's unique needs. I provide engaging presentations for students in K-8, which include an interactive book reading, exciting giveaways, book signing, and a brief Q&A session..<br\/><br\/><strong>Benefits<\/strong><br\/><br\/>Promote and raise awareness about the importance of body safety education and literacy in your community through social media, school events, and other platforms.<br\/><br\/>Agree to at least one interview, or photoshoot, promoting body safety education and literacy.<br\/><br\/>Submit any feedback you have received from your community, report on your activities as an ambassador, including any events or activities you have hosted, any social media posts you have made, and any feedback you have received from your community.<\/p>",
@@ -135,10 +139,10 @@
     "full_width_content_section_7z9FmL": {
       "type": "full-width-content-section",
       "settings": {
-        "title": "When an unknown printer took a galley of type and scrambled",
-        "content": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took<\/p>",
+        "title": "Schedule an Author Visit",
+        "content": "<p>Bring a unique learning experience to your school or community event with an author visit that promotes social and emotional learning through engaging storytelling. Perfect for enhancing curriculum themes around diversity, body safety, self-esteem, and self-respect, these visits offer interactive sessions that inspire young minds to discover and discuss important topics.<\/p>",
         "buttonText": "Book Now",
-        "buttonLink": "shopify:\/\/pages\/author-visits",
+        "buttonLink": "https:\/\/calendly.com\/authorksd\/onsite-reading",
         "bgColor": "#8babff"
       }
     }

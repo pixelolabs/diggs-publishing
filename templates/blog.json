@@ -19,14 +19,15 @@
         "buttonText1": "{{ blog.metafields.custom.button_text.value }}",
         "buttonLink1": "{{ blog.metafields.custom.button_link.value }}",
         "button_bg": "pink",
-        "content_alignment": "left"
+        "content_alignment": "left",
+        "height": false
       }
     },
     "main": {
       "type": "blog-template",
       "settings": {
         "show_featured_article": true,
-        "featured_article": "blog\/what-age-should-kids-learn-about-consent",
+        "featured_article": "blog\/body-safety-why-it-should-never-be-a-taboo-topic",
         "featured_article2": "",
         "blogItems": 6
       }

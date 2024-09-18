@@ -192,12 +192,12 @@
   }
 }
 .blog_wrapper {
-  padding-top: 23.5px;
+  padding-top: 46.75px;
   @include MQ(MQ-980) {
-    padding-top: 70px;
+    padding-top: 0px;
   }
   @include MQ(MQ-768) {
-    padding-top: 40px;
+    padding-top: 22px;
   }
 
   .heading {
