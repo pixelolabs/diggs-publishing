@@ -139,10 +139,10 @@
     "full_width_content_section_7z9FmL": {
       "type": "full-width-content-section",
       "settings": {
-        "title": "When an unknown printer took a galley of type and scrambled",
-        "content": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took<\/p>",
+        "title": "Schedule an Author Visit",
+        "content": "<p>Bring a unique learning experience to your school or community event with an author visit that promotes social and emotional learning through engaging storytelling. Perfect for enhancing curriculum themes around diversity, body safety, self-esteem, and self-respect, these visits offer interactive sessions that inspire young minds to discover and discuss important topics.<\/p>",
         "buttonText": "Book Now",
-        "buttonLink": "shopify:\/\/pages\/author-visits",
+        "buttonLink": "https:\/\/calendly.com\/authorksd\/onsite-reading",
         "bgColor": "#8babff"
       }
     }
