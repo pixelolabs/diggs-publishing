@@ -26,10 +26,12 @@
             <a href="tel:{{ clean_phone_number }}" title="phone-number">{{ settings.textnumber }}</a>
           </li>
         {% endif %}
-        <li>
-          <div class="icon">{% include 'icon-email-contact' %}</div>
-          <a href="mailto:{{ settings.email }}" title="mail id"> {{ settings.email }}</a>
-        </li>
+        {% if settings.email != blank %}
+          <li>
+            <div class="icon">{% include 'icon-email-contact' %}</div>
+            <a href="mailto:{{ settings.email }}" title="mail id"> {{ settings.email }}</a>
+          </li>
+        {% endif %}
         <li>
           <div class="icon">{% include 'icon-address-contact' %}</div>
           {% if settings.addresslink != blank %}
