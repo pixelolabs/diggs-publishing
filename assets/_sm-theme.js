@@ -2787,7 +2787,21 @@ var secondOptionVariantValue = "";
 var thirdOptionVariantValue = "";
 var selectedVariantID;
 $(document).ready(function ($) {
+  /*Sold out*/
+  var soldOutProduct = $(".js__sold_product").attr("data-items");
+  var soldOutHours = $(".js__sold_product").attr("data-hours");
+
+  if (soldOutProduct != "" && soldOutHours != "") {
+    var arraySoldOutProduct = soldOutProduct.split(",");
+    var arraySoldOutHours = soldOutHours.split(",");
+    var randomProduct = Math.floor(Math.random() * arraySoldOutProduct.length);
+    var randomHour = Math.floor(Math.random() * arraySoldOutHours.length);
+    $(".js__sold_product").find(".items-count").html(arraySoldOutProduct[randomProduct]);
+    $(".js__sold_product").find(".hours-num").html(arraySoldOutHours[randomHour]);
+  }
   /* if no varient then active class added in product image section*/
+
+
   if (prodLib.length == 0) {
     $(".js-pdp-media").addClass("active");
     $(".js__pdp-thumbnail-slider li:first-child").addClass("active");

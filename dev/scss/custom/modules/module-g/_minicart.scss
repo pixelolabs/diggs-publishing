@@ -229,7 +229,7 @@ stroke: $color-white;
         }
         .content {
           padding-left: 12px;
-          padding-right: 25px;
+          padding-right: 35px;
           width: calc(100% - 72px);
           * {
             color: $color-black;
@@ -272,9 +272,9 @@ stroke: $color-white;
             text-transform: uppercase;
             text-overflow: ellipsis;
             width: 100%;
-            -webkit-line-clamp: 1;
+          /*  -webkit-line-clamp: 1;
             overflow: hidden;
-            white-space: nowrap;
+            white-space: nowrap;*/
             a {
               font: inherit;
               color: inherit;

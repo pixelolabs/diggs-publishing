@@ -47,6 +47,9 @@
     padding-left: 16px;
     text-transform: uppercase;
     background: url("icon-left-arrow.svg") no-repeat left center/ 7px;
+    &:hover{
+      filter: brightness(0) saturate(100%) invert(50%) sepia(60%) saturate(3783%) hue-rotate(347deg) brightness(105%) contrast(102%);
+    }
     
   }
   padding: 52px 0 135px;

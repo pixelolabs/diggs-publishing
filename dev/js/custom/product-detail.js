@@ -3,6 +3,20 @@ var secondOptionVariantValue = "";
 var thirdOptionVariantValue = "";
 var selectedVariantID;
 $(document).ready(function($) {
+
+    /*Sold out*/
+    var soldOutProduct=$(".js__sold_product").attr("data-items");
+    var soldOutHours=$(".js__sold_product").attr("data-hours");
+    if(soldOutProduct !="" && soldOutHours !="")
+    {
+        let arraySoldOutProduct = soldOutProduct.split(","); 
+        let arraySoldOutHours = soldOutHours.split(","); 
+        let randomProduct = Math.floor(Math.random() * arraySoldOutProduct.length);
+        let randomHour = Math.floor(Math.random() * arraySoldOutHours.length);
+        $(".js__sold_product").find(".items-count").html(arraySoldOutProduct[randomProduct]);
+        $(".js__sold_product").find(".hours-num").html(arraySoldOutHours[randomHour]);
+
+    }
     /* if no varient then active class added in product image section*/
     if (prodLib.length == 0) {
         $(".js-pdp-media").addClass("active");

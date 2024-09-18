@@ -13,6 +13,20 @@
   @include MQ(MQ-768) {
     padding-top: 150px;
   }
+  .sold_product{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    svg{
+     flex: none;
+     width: 20px;
+     height: 20px;
+     
+    }
+    span{
+      margin: 0 5px;
+    }
+  }
   .inner {
     background: $color-off-white-light;
     padding: 45px 0 210px;

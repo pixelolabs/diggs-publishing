@@ -90,7 +90,7 @@
       <li class="grid__item product-card">
         {% if item.object_type == 'product' %}
           {% include 'product_Card'  with  productRelated: item , show_price: true, show_tags: true, show_auto_tags: true, show_title: true, show_fav: false, show_secondary_button: true %}
-          {% render 'product-modal', productData: item %}
+        
           {% else %}
         <div class="product-wrapper" title="{{ item.title }}" href="{{ item.url }}" tabindex="0">
           <div class=" hide blog-content" id="blog-content-{{ item.id }}">{{ item.content }}</div>
@@ -146,9 +146,18 @@
     {% if search.results_count < 2  %}
     <div class="search--less-than-2-results"></div>
     {% endif %}
-    {% endpaginate %}
+   
   </div>
 </div>
+{% if search.performed %}
+{% for item in search.results %}
+  {% if item.object_type == 'product' %}
+      {% render 'product-modal', productData: item %}
+    {% endif %}
+  {% endfor %}
+  {% endif %}
+    
+{% endpaginate %}
 
 
 
