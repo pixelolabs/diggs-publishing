@@ -662,7 +662,7 @@ function progressBar() {
                 var freeShippingAmount = parseFloat(
                     $(".js__free-shipping-limit").html()
                 );
-                console.log("totalAmount"+totalAmount)
+               
                 $(".js__free-shipping__icon").removeClass("active");
                 $(".js__free-gift-1__icon").removeClass("active");
                 $(".js__free-gift-2__icon").removeClass("active");
@@ -691,7 +691,7 @@ function progressBar() {
                     "data-percentage",
                     freeShippingPercentage
                 );
-console.log("freeShippingPercentage"+freeShippingPercentage)
+
                 
                
                 
