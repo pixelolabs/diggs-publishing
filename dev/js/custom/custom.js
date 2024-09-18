@@ -18,6 +18,7 @@ jQuery(function() {
         catch{
             
         }
+        
        
     });
     var productSectionSlider = new Swiper(".js__product-slider", {
@@ -120,6 +121,9 @@ var productSectionSlider = new Swiper(".js__article-slider", {
             },
             1100: {
                 slidesPerView: 1,
+            },
+            1101: {
+                slidesPerView: 2,
             },
             1440: {
                 slidesPerView: 2,
