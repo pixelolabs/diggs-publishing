@@ -56,7 +56,7 @@
     @include MQ(MQ-1330) {
       top: -145px;
     }
-    @include MQ(MQ-768) {
+    @include MQ(MQ-980) {
       height: 155px;
       top: -100px;
     }
@@ -362,7 +362,6 @@
     }
     @include MQ(MQ-840) {
       width: 400px;
-     
     }
     @include MQ(MQ-768) {
       width: 100%;
@@ -383,7 +382,7 @@
       width: 352px;
       height: 81px;
       @include MQ(MQ-840) {
-display: none;
+        display: none;
       }
       @include MQ(MQ-768) {
         position: absolute;
@@ -412,7 +411,6 @@ display: none;
       @include MQ(MQ-980) {
         width: 500px;
         height: 424px;
-       
       }
       @include MQ(MQ-840) {
         width: 400px;

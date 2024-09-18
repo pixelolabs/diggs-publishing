@@ -477,6 +477,10 @@
       margin-left: 15px;
       margin-bottom: 10px;
       text-transform: uppercase;
+      @include MQ(MQ-480) {
+        font-size: 12px;
+        padding: 9px 15px;
+      }
       &:hover,
       &:focus {
         background: $color-pale-peach;
