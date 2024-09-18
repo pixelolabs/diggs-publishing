@@ -90,8 +90,23 @@
     z-index: 0;
     bottom: -60px;
     background: url("thread-multi-white.webp") no-repeat center / 100%;
+    @include MQ(MQ-980) {
+      bottom: 10px;
+      height: 673px;
+      width: 520px;
+    }
     @include MQ(MQ-768) {
-      display: none;
+      bottom: auto;
+      top: 10px;
+      background-size: cover;
+      // width:;
+      height: 100%;
+      left: -20px;
+      z-index: 0;
+      background-position: right;
+    }
+    @include MQ(MQ-600) {
+      width: 80%;
     }
   }
   &::after {
@@ -104,19 +119,23 @@
     top: -36.73px;
     background: url(white-thread-2.0.svg) no-repeat center / contain;
     @include MQ(MQ-980) {
-      top: -150px;
+      top: 0px;
       right: 0;
+      width: 312px;
+      height: 602px;
+      background: url(white-thread-2.0.svg) no-repeat center/cover;
     }
     @include MQ(MQ-768) {
-      width: 125px;
-      height: 426px;
-      top: -130px;
+      width: 200px;
+      height: 300px;
+      top: -10px;
+      // display: none;
       // right: -20px;
     }
-    @include MQ(MQ-500) {
-      width: 95px;
-      height: 396px;
-    }
+    // @include MQ(MQ-480) {
+    //   width: 143px;
+    //   height: 300px;
+    // }
   }
 
   .container-1440 {
@@ -156,6 +175,9 @@
       animation-name: rotate;
       animation-duration: 10s;
       animation-iteration-count: infinite;
+      @include MQ(MQ-980) {
+        right: 180px;
+      }
       @include MQ(MQ-768) {
         width: 100px;
         height: 70px;
