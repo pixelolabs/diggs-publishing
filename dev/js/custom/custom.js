@@ -53,7 +53,7 @@ jQuery(function() {
     });
 
 //RElated Article slider
-var productSectionSlider = new Swiper(".js__article-slider", {
+var articleSectionSlider = new Swiper(".js__article-slider", {
     slidesPerView: 3,
     spaceBetween: 30,
     // centeredSlides: true,
@@ -69,9 +69,10 @@ var productSectionSlider = new Swiper(".js__article-slider", {
         0: {
             slidesPerView: 1,
         },
-        601: {
+        769: {
             slidesPerView: 2,
         },
+        
         1025: {
             slidesPerView: 3,
            

@@ -25,7 +25,7 @@
       }
     }
     @include MQ(MQ-1200) {
-      padding-bottom: 200px;
+      padding-bottom: 160px;
     }
     @include MQ(MQ-1024) {
       padding-bottom: 118px;
@@ -143,6 +143,7 @@
       order: 2;
       @include MQ(MQ-1200) {
         max-width: 450px;
+        margin-bottom: -20px;
       }
       @include MQ(MQ-1024) {
         width: 450px;

@@ -269,9 +269,13 @@
       &:last-child {
         padding-bottom: 0;
       }
-      @include MQ(MQ-768) {
+      @include MQ(MQ-980) {
         width: 50%;
         .article-card {
+          max-width: 100%;
+          &:before {
+            max-width: 100%;
+          }
           .image-section {
             height: 32vw;
           }
@@ -279,6 +283,7 @@
       }
       @include MQ(MQ-600) {
         width: 100%;
+        max-width: 400px;
         .article-card {
           margin: 0 auto;
           .image-section {
