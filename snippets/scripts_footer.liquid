@@ -104,27 +104,3 @@
 
 
 
-<span
-  class="js__free-gift-1"
-  style="
-    position: fixed;
-    visibility: hidden;
-  "
->
-  {{- settings.freeGift1ThresholdValue -}}
-</span>
-<span
-  class="js__free-gift-2"
-  style="
-    position: fixed;
-    visibility: hidden;
-  "
->
-  {{- settings.freeGift2ThresholdValue -}}
-</span>
-{% assign freeGiftProduct1 = all_products[settings.freeProduct1] %}
-{%- assign current_freeGiftProduct1Variant = freeGiftProduct1.selected_or_first_available_variant -%}
-<span class="js__free-gift-product-1" data-attr-variantid="{{current_freeGiftProduct1Variant.id}}"></span>
-{% assign freeGiftProduct2 = all_products[settings.freeProduct2] %}
-{%- assign current_freeGiftProduct2Variant = freeGiftProduct2.selected_or_first_available_variant -%}
-<span class="js__free-gift-product-2" data-attr-variantid="{{current_freeGiftProduct2Variant.id}}"></span>
