@@ -2079,65 +2079,7 @@
       }
     ]
   },
-  {
-    "name": "Product Page",
-    "settings": [
-      {
-        "type": "text",
-        "id": "tag1",
-        "label": "Tag 1"
-      },
-      {
-        "type": "text",
-        "id": "tagLabel1",
-        "label": "Tag Label 1"
-      },
-      {
-        "type": "color",
-        "id": "tagColor1",
-        "label": "Tag Color",
-        "default": "#191919"
-      },
-      {
-        "type": "text",
-        "id": "tag2",
-        "label": "Tag 2"
-      },
-      {
-        "type": "text",
-        "id": "tagLabel2",
-        "label": "Tag Label 2"
-      },
-      {
-        "type": "color",
-        "id": "tagColor2",
-        "label": "Tag Color",
-        "default": "#191919"
-      },
-      {
-        "type": "text",
-        "id": "tag3",
-        "label": "Tag 3"
-      },
-      {
-        "type": "text",
-        "id": "tagLabel3",
-        "label": "Tag Label 3"
-      },
-      {
-        "type": "color",
-        "id": "tagColor3",
-        "label": "Tag Color",
-        "default": "#191919"
-      },
-      {
-        "type": "text",
-        "id": "product_recommendation_limit",
-        "label": "Product Recommendation products limit (if no slider)",
-        "default": "4"
-      }
-    ]
-  },
+  
   {
     "name": "Frequently Bought Together Products",
     "settings": [
