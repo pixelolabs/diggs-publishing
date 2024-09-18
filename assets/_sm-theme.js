@@ -2205,7 +2205,7 @@ jQuery(function () {
   (function ($) {
     $(function () {
       var navLink = false;
-      $(".accordion-toggle").on("click", function (e) {
+      $(".accordion-toggle").on("mousedown", function (e) {
         "use strict";
 
         e.stopImmediatePropagation();
