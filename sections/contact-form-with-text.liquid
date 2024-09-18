@@ -103,12 +103,12 @@
               <div class="address">{{ section.settings.address }}</div>
             </li>
           {% endif %}
-          {% if settings.emailAddress != blank %}
+          {% if settings.email != blank %}
             <li>
               <div class="title uppercase">Email us on:</div>
               <div>
-                <a href="mailto:{{settings.emailAddress}}" title="{{ settings.emailAddress }}">
-                  {{- settings.emailAddress -}}
+                <a href="mailto:{{settings.email}}" title="{{ settings.email }}">
+                  {{- settings.email -}}
                 </a>
               </div>
             </li>
