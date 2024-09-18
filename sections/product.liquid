@@ -289,7 +289,41 @@
       "type": "text",
       "id": "subscribeText",
       "label": "Subscribe info"
-    }
+    },
+    {
+      "type" : "header",
+      "content" : "The number of products has been sold"
+  },
+  {
+      "type" : "checkbox",
+      "id" : "show_sold_in",
+      "label" : "Enabled",
+      "default" : true
+  },
+  {
+      "type" : "textarea",
+      "id" : "item_prd",
+      "label" : "The number of products",
+      "default" : "3,5,6,7,8,10,12,15"
+  },
+  {
+      "type" : "text",
+      "id" : "item_prds",
+      "label" : "Text Sold in",
+      "default" : "sold in last"
+  },
+  {
+      "type" : "textarea",
+      "id" : "hours_prs",
+      "label" : "Hours",
+      "default" : "10,15,16,17,18,20,25,35"
+  },
+  {
+      "type" : "text",
+      "id" : "item_hours",
+      "label" : "Text Hours",
+      "default" : "hours"
+  }
   ],
   "blocks": [
     {
@@ -310,6 +344,7 @@
       "name": "Description",
       "limit": 1
     },
+
 
     {
       "type": "three-column-info",
