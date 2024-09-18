@@ -140,7 +140,7 @@
       "type": "contact-form-with-text",
       "settings": {
         "title": "Reach out to us",
-        "bgColor": "rgba(0,0,0,0)"
+        "bgColor": ""
       }
     }
   },
