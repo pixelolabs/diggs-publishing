@@ -161,7 +161,7 @@
           "type": "logo",
           "settings": {
             "image": "shopify:\/\/shop_images\/c1.png",
-            "link": "",
+            "link": "http:\/\/kidsagain.org",
             "title": ""
           }
         },
@@ -169,7 +169,7 @@
           "type": "logo",
           "settings": {
             "image": "shopify:\/\/shop_images\/c2.png",
-            "link": "",
+            "link": "https:\/\/sohlv.org",
             "title": ""
           }
         },
@@ -177,7 +177,7 @@
           "type": "logo",
           "settings": {
             "image": "shopify:\/\/shop_images\/c3.png",
-            "link": "",
+            "link": "https:\/\/www.journey2self.net",
             "title": ""
           }
         },
@@ -185,7 +185,7 @@
           "type": "logo",
           "settings": {
             "image": "shopify:\/\/shop_images\/c4.png",
-            "link": "",
+            "link": "https:\/\/roomredux.org\/?_ga=2.54568173.710467861.1662813947-313543959.1662529482",
             "title": ""
           }
         },
@@ -196,6 +196,14 @@
             "link": "",
             "title": ""
           }
+        },
+        "logo_cEDYQ3": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/kids-2_4.png",
+            "link": "https:\/\/www.bearapy.org",
+            "title": ""
+          }
         }
       },
       "block_order": [
@@ -203,7 +211,8 @@
         "logo_qmTtnb",
         "logo_nfBUJE",
         "logo_8icidq",
-        "logo_jCikGR"
+        "logo_jCikGR",
+        "logo_cEDYQ3"
       ],
       "settings": {
         "color_scheme": "scheme-7772dde2-4ded-4c9a-aaae-0b71d2e9dd67",
