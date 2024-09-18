@@ -191,7 +191,6 @@
         },
         "logo_jCikGR": {
           "type": "logo",
-          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/c5.png",
             "link": "",
@@ -200,6 +199,7 @@
         },
         "logo_cEDYQ3": {
           "type": "logo",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/kids-2_4.png",
             "link": "https:\/\/www.bearapy.org",
