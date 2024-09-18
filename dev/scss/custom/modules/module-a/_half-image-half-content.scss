@@ -217,7 +217,7 @@
             margin-left: -250px;
           }
           @include MQ(MQ-980) {
-            margin-right: -100px;
+            margin-left: -100px;
           }
           @include MQ(MQ-768) {
             width: 100%;
@@ -388,6 +388,9 @@
       background: url("thread-blue.webp") no-repeat center / 100%;
       width: 352px;
       height: 81px;
+      @include MQ(MQ-980) {
+        bottom: -16px;
+      }
       @include MQ(MQ-840) {
 display: none;
       }
