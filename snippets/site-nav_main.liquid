@@ -175,7 +175,7 @@
           title="{{ link.title | escape }}"
           class="{% if linkTitle contains 'support' %}site-nav__link none-980{%endif%} first-link"
         >
-          {{ link.title | escape }}
+          <span>{{ link.title | escape }}</span>
         </a>
       </li>
     {% endif %}
