@@ -1,14 +1,14 @@
 <div class="ambassador-program-form-outer">
+  <svg viewBox="0 0 1440 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill="{% if section.settings.bgColor != blank  %} {{ section.settings.bgColor }} {% else %} #fffcf3{% endif %}" d="M2430.9-58.8l-1216.1,2.8l0-2.8l-1451,3.4l1.1,68.2C-196.4,45.2-91.7,97,17.4,45.6C126.5-5.8,252,24.4,301.1,46 c44.4,25,167.1,60.9,302.2,4c135.1-56.9,262-56.3,346.3-26.1c68.7,24.6,172.6,71.3,254.2,33.2c9.8-3.1,19.7-6.9,29.7-11.6 c109.1-51.4,234.6-21.2,283.7,0.4c44.4,25,167.1,60.9,302.2,4s262-56.3,346.3-26.1c72.2,25.9,183.3,76.1,266.5,26.7L2430.9-58.8z"/>
+  </svg>
   <div class="ambassador-program-form relative">
     <div class="container-970 flex">
       <div class="form-section text-left">
         {%- assign formId = 'AmbassadorProgramForm' -%}
-        {% form 'contact'
-          , id: formId %}
-          {% include 'form-status'
-            , form: form
-            , form_id: formId %}
-           
+        {% form 'contact', id: formId %}
+          {% include 'form-status', form: form, form_id: formId %}
+
           <div class="flex">
             <div class="input-field half-width-col">
               <label for="Parents_First_Name">Parents First Name</label>
@@ -16,7 +16,8 @@
                 type="text"
                 id="Parents_First_Name"
                 placeholder="Parents First Name"
-                name="contact[Parents First Name]">
+                name="contact[Parents First Name]"
+              >
             </div>
             <div class="input-field half-width-col">
               <label for="Parents_First_Name">Parents Last Name</label>
@@ -24,18 +25,20 @@
                 type="text"
                 id="Parents_Last_Name"
                 placeholder="Parents Last Name"
-                name="contact[Parents Last Name]">
+                name="contact[Parents Last Name]"
+              >
             </div>
-           
+
             <div class="input-field half-width-col">
               <label for="Address">Address</label>
               <input
                 type="text"
                 id="Address"
                 placeholder="Address"
-                name="contact[Address]">
+                name="contact[Address]"
+              >
             </div>
-          
+
             <div class="input-field half-width-col">
               <label for="Phone_number">Phone Number</label>
               <input
@@ -45,9 +48,9 @@
                 name="contact[Phone number]"
                 pattern="[0-9\-]*"
                 aria-required="true"
-                >
+              >
             </div>
-          
+
             <div class="input-field half-width-col">
               <label for="email">Enter your Email address*</label>
               <input
@@ -58,81 +61,92 @@
                 name="contact[email]"
                 autocorrect="off"
                 autocapitalize="off"
-                
+
                 aria-required="true"
                 {%- if form.errors contains 'email' -%}
-                class="input--error"
-                aria-invalid="true"
-                aria-describedby="{{ formId }}-email-error"
-                {%- endif -%}>
+                  class="input--error"
+                  aria-invalid="true"
+                  aria-describedby="{{ formId }}-email-error"
+                {%- endif -%}
+              >
               {%- if form.errors contains 'email' -%}
                 <span id="{{ formId}}-email-error" class="input-error-message">
                   <span class="visually-hidden">{{ 'general.accessibility.error' | t }}</span>
                   <span>
                     {{- form.errors.translated_fields.email | capitalize }}
-                    {{ form.errors.messages.email }}.</span>
+                    {{ form.errors.messages.email }}.</span
+                  >
                 </span>
               {%- endif -%}
             </div>
-          
+
             <div class="input-field half-width-col">
               <label for="Childs_Full_Name">Childs Full Name</label>
               <input
                 type="text"
                 id="Childs_Full_Name"
                 placeholder="Childs Full Name"
-                name="contact[Childs Full Name]">
+                name="contact[Childs Full Name]"
+              >
             </div>
-            
+
             <div class="input-field half-width-col">
               <label for="Childs_Age">Childs Age</label>
               <input
                 type="text"
                 id="Childs_Age"
                 placeholder="Childs Age"
-                name="contact[Childs Age]">
+                name="contact[Childs Age]"
+              >
             </div>
-           
+
             <div class="input-field half-width-col">
               <label for="Childs_Grade_and_Reading_Level">Childs Grade and Reading Level</label>
               <input
                 type="text"
                 id="Childs_Grade_and_Reading_Level"
                 placeholder="Childs Grade and Reading Level"
-                name="contact[Childs Grade and Reading Level]">
+                name="contact[Childs Grade and Reading Level]"
+              >
             </div>
-           
+
             <div class="input-field half-width-col">
               <label for="Social_Media_Handles">Social Media Handles</label>
               <input
                 type="text"
                 id="Social_Media_Handles"
                 placeholder="Social Media Handles"
-                name="contact[Social Media Handles]">
+                name="contact[Social Media Handles]"
+              >
             </div>
-          
+
             <div class="input-field half-width-col">
-              <label for="Why_do_you_think_this_child_will_make_a_good_ambassador">Why do you think this child will make a good ambassador?</label>
+              <label for="Why_do_you_think_this_child_will_make_a_good_ambassador"
+                >Why do you think this child will make a good ambassador?</label
+              >
               <input
                 type="text"
                 id="Why_do_you_think_this_child_will_make_a_good_ambassador"
                 placeholder="Why do you think this child will make a good ambassador?"
-                name="contact[Why do you think this child will make a good ambassador?]">
+                name="contact[Why do you think this child will make a good ambassador?]"
+              >
             </div>
-            
+
             <div class="input-field full-width-col">
               <label for="What_else_should_the_committee_consider">hat else should the committee consider?</label>
               <input
                 type="text"
                 id="What_else_should_the_committee_consider"
                 placeholder="hat else should the committee consider?"
-                name="contact[EWhat else should the committee consider?]">
+                name="contact[EWhat else should the committee consider?]"
+              >
             </div>
             <div class="submit-field full-width-col">
-            <input
-              type="submit"
-              class="btn--primary yellow"
-              value="Submit Now">
+              <input
+                type="submit"
+                class="btn--primary yellow"
+                value="Submit Now"
+              >
             </div>
           </div>
         {% endform %}
