@@ -19,14 +19,15 @@
         "buttonText1": "",
         "buttonLink1": "",
         "button_bg": "pink",
-        "content_alignment": "left"
+        "content_alignment": "left",
+        "height": false
       }
     },
     "contact_section_RHMnDG": {
       "type": "contact-section",
       "settings": {
-        "sidebartitle": "Contact Information",
-        "sidebardescription": "<p>Ignite change with your stories. Reach out us and embark on a publishing journey where diversity and creativity know no bounds<\/p>",
+        "sidebartitle": "Contact Us",
+        "sidebardescription": "<p>We'd love to hear from you! Whether it's feedback on our books, questions about our events, or inquiries about partnerships, please don't hesitate to reach out.<\/p>",
         "title": "Get In touch"
       }
     }
