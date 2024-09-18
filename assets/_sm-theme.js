@@ -912,13 +912,15 @@ jQuery(function () {
 
   $(window).scroll(function () {
     // var targetScroll = $('.product__actions').position().top;
-    var targetScroll = $('.product__actions').offset().top - $('.product__actions').outerHeight() + 20;
+    try {
+      var targetScroll = $('.product__actions').offset().top - $('.product__actions').outerHeight() + 20;
 
-    if ($(window).scrollTop() > targetScroll) {
-      $(".top-banner").addClass("active");
-    } else {
-      $(".top-banner").removeClass("active");
-    }
+      if ($(window).scrollTop() > targetScroll) {
+        $(".top-banner").addClass("active");
+      } else {
+        $(".top-banner").removeClass("active");
+      }
+    } catch (_unused) {}
   });
   var productSectionSlider = new Swiper(".js__product-slider", {
     slidesPerView: 3,
@@ -1174,7 +1176,7 @@ jQuery(function () {
     }
 
     $(".js__page-range").html(itemStart + " - " + itemEnd);
-  } catch (_unused) {}
+  } catch (_unused2) {}
   /* PDP
   Tab working */
 
@@ -1574,7 +1576,7 @@ jQuery(function () {
         $("#modal-" + id).find(".js__popup-collection-slider").children(".swiper-wrapper").append('<div class="swiper-slide slide">  <div class="image-section video-section" >' + $(this).html() + ' </div> </div>');
         $("#modal-" + id).find(".js__popup-collection-slider-thumbnail").children(".swiper-wrapper").append(' <div class="swiper-slide slide">  <div class="image-section video-section" > </div> </div>  ');
       });
-    } catch (_unused2) {}
+    } catch (_unused3) {}
 
     try {
       if (typeof popupCollectionSliderThumbnail !== "undefined") {
@@ -1599,7 +1601,7 @@ jQuery(function () {
         slidesPerView: 1,
         spaceBetween: 20
       });
-    } catch (_unused3) {}
+    } catch (_unused4) {}
   });
   $(document).on("click", ".modal", function (e) {
     if (!($(e.target).closest(".modal-content").length > 0 || $(e.target).closest(".close").length > 0)) {
@@ -2853,17 +2855,19 @@ var thirdOptionVariantValue = "";
 var selectedVariantID;
 $(document).ready(function ($) {
   /*Sold out*/
-  var soldOutProduct = $(".js__sold_product").attr("data-items");
-  var soldOutHours = $(".js__sold_product").attr("data-hours");
+  try {
+    var soldOutProduct = $(".js__sold_product").attr("data-items");
+    var soldOutHours = $(".js__sold_product").attr("data-hours");
 
-  if (soldOutProduct != "" && soldOutHours != "") {
-    var arraySoldOutProduct = soldOutProduct.split(",");
-    var arraySoldOutHours = soldOutHours.split(",");
-    var randomProduct = Math.floor(Math.random() * arraySoldOutProduct.length);
-    var randomHour = Math.floor(Math.random() * arraySoldOutHours.length);
-    $(".js__sold_product").find(".items-count").html(arraySoldOutProduct[randomProduct]);
-    $(".js__sold_product").find(".hours-num").html(arraySoldOutHours[randomHour]);
-  }
+    if (soldOutProduct != "" && soldOutHours != "") {
+      var arraySoldOutProduct = soldOutProduct.split(",");
+      var arraySoldOutHours = soldOutHours.split(",");
+      var randomProduct = Math.floor(Math.random() * arraySoldOutProduct.length);
+      var randomHour = Math.floor(Math.random() * arraySoldOutHours.length);
+      $(".js__sold_product").find(".items-count").html(arraySoldOutProduct[randomProduct]);
+      $(".js__sold_product").find(".hours-num").html(arraySoldOutHours[randomHour]);
+    }
+  } catch (_unused) {}
   /* if no varient then active class added in product image section*/
 
 
@@ -2942,12 +2946,12 @@ $(document).ready(function ($) {
       if (optionType == FilterType) {
         imageFilter(optionValue);
       }
-    } catch (_unused) {} // button  - Sold out and add to cart
+    } catch (_unused2) {} // button  - Sold out and add to cart
 
 
     try {
       SoldOutUnavailableOnColorSwatches(colorSelected);
-    } catch (_unused2) {} //color swatch - sold out working
+    } catch (_unused3) {} //color swatch - sold out working
 
   });
   $(".js__pdp-variant-select li.active").click();
@@ -3227,7 +3231,7 @@ $(document).ready(function ($) {
 
     try {
       colorSelected = colorSelected.toLowerCase();
-    } catch (_unused3) {}
+    } catch (_unused4) {}
   }
 
   function setColorSwatchOutofStock(prodColor, prodQuantity, prodAvailability) {

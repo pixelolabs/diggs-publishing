@@ -6,13 +6,19 @@ jQuery(function() {
        
     $(window).scroll(function() {
         // var targetScroll = $('.product__actions').position().top;
-        var targetScroll = $('.product__actions').offset().top - $('.product__actions').outerHeight() + 20;
-        if($(window).scrollTop() > targetScroll ) {
-            $(".top-banner").addClass("active");
-        } 
-        else{
-            $(".top-banner").removeClass("active");
+        try{
+            var targetScroll = $('.product__actions').offset().top - $('.product__actions').outerHeight() + 20;
+            if($(window).scrollTop() > targetScroll ) {
+                $(".top-banner").addClass("active");
+            } 
+            else{
+                $(".top-banner").removeClass("active");
+            }
         }
+        catch{
+            
+        }
+       
     });
     var productSectionSlider = new Swiper(".js__product-slider", {
         slidesPerView: 3,
