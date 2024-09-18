@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "innerBanner": {
@@ -69,7 +78,7 @@
             "title": "Body Safety Wise Author Visits",
             "description": "<p>Body Safety Wise Author Visit presentation provides a PK-8 curriculum that teaches students about body safety, consent, and boundaries. It includes an engaging introduction, a book reading, giveaways, book signing, and a brief Q&A. The presentation is approximately 30-45 minutes.<\/p>",
             "buttonText": "Book Now",
-            "buttonLink": "#",
+            "buttonLink": "shopify:\/\/pages\/author-visits-in-depth",
             "background_color": "blue",
             "fontSize": false,
             "center": false
@@ -126,7 +135,8 @@
       "type": "contact-form-with-text",
       "settings": {
         "title": "Reach out to us",
-        "address": "<p>3558 Round Barn Blvd, Suite \u2028200 Santa Rosa, CA 95403<\/p>"
+        "address": "<p>3558 Round Barn Blvd, Suite \u2028200 Santa Rosa, CA 95403<\/p>",
+        "bgColor": ""
       }
     }
   },
