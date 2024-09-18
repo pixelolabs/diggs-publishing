@@ -228,8 +228,7 @@ textarea.input--error {
     &::after {
       content: "";
       position: absolute;
-      background: url(icon-dropdown-arrow-black.png) no-repeat center
-        center/contain;
+      
       width: 15px;
       height: 15px;
       right: 0;
@@ -420,6 +419,14 @@ textarea.input--error {
       width: auto !important;
       padding-right: 40px;
       height: auto;
+      @include MQ(MQ-480) {
+        width: 42px !important;
+        height: 34px !important;
+        padding-right: 0px;
+        span {
+          display: none !important;
+        }
+      }
     }
   }
   padding-right: 12px;
@@ -750,6 +757,8 @@ textarea.input--error {
   //   @include MQ(MQ-480) {
   //     padding: 15px 0 0;
   //   }
+  flex-wrap: nowrap;
+  align-items: flex-start;
   li {
     width: auto;
     height: auto;
@@ -762,6 +771,9 @@ textarea.input--error {
     line-height: normal;
     letter-spacing: normal;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -10px;
     a {
       &:hover span,
       &:focus span {
@@ -782,6 +794,7 @@ textarea.input--error {
       line-height: normal;
       letter-spacing: normal;
       text-align: center;
+      margin-bottom: 10px;
       border: 1px solid $color-black;
       @include MQ(MQ-480) {
         width: 35px;
@@ -813,6 +826,10 @@ textarea.input--error {
       display: block;
       width: 40px;
       height: 40px;
+      @include MQ(MQ-480) {
+        width: 35px;
+        height: 35px;
+      }
       background: url(left-arrow.svg) no-repeat center / 8px;
       border: 1px solid #3b2900;
       &:hover,
@@ -834,6 +851,7 @@ textarea.input--error {
     margin-left: 0px;
     transform: rotate(180deg);
   }
+  
 }
 
 /* Video Popup and Play Button */

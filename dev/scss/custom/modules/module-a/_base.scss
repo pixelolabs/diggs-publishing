@@ -337,7 +337,8 @@
         }
         .description{
             @include MQ(MQ-480) {
-                display: none;
+                margin-bottom: 17px !important;
+               // display: none;
             }
         }
         .description p {
@@ -601,8 +602,8 @@
                             }
                         }
                         .video-section {
-                            background: url("icon-play.png") no-repeat center / 22px rgba(51, 51, 51, 0.2);
-                        }
+                            background: url("icon-play-white.svg") no-repeat center / 24px;
+                          }
                     }
                 }
             }

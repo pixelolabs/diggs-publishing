@@ -85,6 +85,13 @@
           margin-left: 0;
           margin-top: 10px;
         }
+        @include MQ(MQ-480) {
+         width: auto !important;
+         height: 37px !important;
+          span {
+            display: block !important;
+          }
+        }
       }
     }
 

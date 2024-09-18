@@ -147,9 +147,20 @@
     * {
       color: #ffffff;
     }
-    h1 {
+    h1,
+    .h1 {
       margin: 0 0 16px;
+      font-size: 40px;
+      font-weight: normal;
+      line-height: 1;
+      letter-spacing: 0.8px;
+      // text-align: left;
+      @include MQ(MQ-480) {
+        font-size: 30px;
+        margin-bottom: 7px;
+      }
     }
+   
   }
 }
 
@@ -237,11 +248,15 @@
     padding: 0 20px;
   }
   padding: 60px 0 200px 0px;
+ 
   position: relative;
   background: $color-off-white-light;
   z-index: 3;
   @include MQ(MQ-768) {
     padding-bottom: 150px;
+  }
+  @include MQ(MQ-480) {
+    padding-top: 20px;
   }
   .container-1260.graphics {
     position: relative;
@@ -605,7 +620,7 @@
         span {
           border: none !important;
         }
-        background: url("icon-arrow-right.png") no-repeat center / 8px !important;
+       // background: url("icon-arrow-right.png") no-repeat center / 8px !important;
       }
       .prev {
         margin-right: 10px;
