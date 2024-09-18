@@ -159,7 +159,7 @@
     padding-right: 30px;
     @include MQ(MQ-480) {
       padding-right: 0px;
-      margin-top: 35px;
+      margin-top: 30px;
     }
   }
 
@@ -221,10 +221,14 @@
     }
     .heading {
       max-width: 400px;
+      @include MQ(MQ-480) {
+        max-width: 300px;
+      }
       .pre-title {
         color: $color-orange;
         margin-bottom: 20px;
         @include MQ(MQ-480) {
+        
           margin-bottom: 10px;
         }
       }
