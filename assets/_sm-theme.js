@@ -912,13 +912,15 @@ jQuery(function () {
 
   $(window).scroll(function () {
     // var targetScroll = $('.product__actions').position().top;
-    var targetScroll = $('.product__actions').offset().top - $('.product__actions').outerHeight() + 20;
+    try {
+      var targetScroll = $('.product__actions').offset().top - $('.product__actions').outerHeight() + 20;
 
-    if ($(window).scrollTop() > targetScroll) {
-      $(".top-banner").addClass("active");
-    } else {
-      $(".top-banner").removeClass("active");
-    }
+      if ($(window).scrollTop() > targetScroll) {
+        $(".top-banner").addClass("active");
+      } else {
+        $(".top-banner").removeClass("active");
+      }
+    } catch (_unused) {}
   });
   var productSectionSlider = new Swiper(".js__product-slider", {
     slidesPerView: 3,
@@ -1174,7 +1176,7 @@ jQuery(function () {
     }
 
     $(".js__page-range").html(itemStart + " - " + itemEnd);
-  } catch (_unused) {}
+  } catch (_unused2) {}
   /* PDP
   Tab working */
 
@@ -1574,7 +1576,7 @@ jQuery(function () {
         $("#modal-" + id).find(".js__popup-collection-slider").children(".swiper-wrapper").append('<div class="swiper-slide slide">  <div class="image-section video-section" >' + $(this).html() + ' </div> </div>');
         $("#modal-" + id).find(".js__popup-collection-slider-thumbnail").children(".swiper-wrapper").append(' <div class="swiper-slide slide">  <div class="image-section video-section" > </div> </div>  ');
       });
-    } catch (_unused2) {}
+    } catch (_unused3) {}
 
     try {
       if (typeof popupCollectionSliderThumbnail !== "undefined") {
@@ -1599,7 +1601,7 @@ jQuery(function () {
         slidesPerView: 1,
         spaceBetween: 20
       });
-    } catch (_unused3) {}
+    } catch (_unused4) {}
   });
   $(document).on("click", ".modal", function (e) {
     if (!($(e.target).closest(".modal-content").length > 0 || $(e.target).closest(".close").length > 0)) {
