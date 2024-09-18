@@ -27,6 +27,9 @@
     bottom: 45px;
     content: "";
     z-index: 2;
+    @include MQ(MQ-480) {
+      bottom: 30px;
+    }
   }
 
   .container-1260 {
@@ -246,6 +249,7 @@
     margin-right: -190px;
     @include MQ(MQ-1280) {
       margin-right: 70px;
+      width: 500px;
     }
     @include MQ(MQ-980) {
       margin: 0px 0 80px;
@@ -274,8 +278,12 @@
       opacity: 1;
       transform: rotate(351deg);
       z-index: 1;
-
-      @include MQ(MQ-768) {
+      @include MQ(MQ-1280) {
+        width: 500px;
+        height: 424px;
+      
+      }
+      @include MQ(MQ-980) {
         width: 500px;
         height: 424px;
         left: 0;
@@ -319,7 +327,7 @@
     z-index: 2;
     position: relative;
     overflow: hidden;
-    @include MQ(MQ-768) {
+    @include MQ(MQ-1280) {
       width: 500px;
       height: 454px;
     }

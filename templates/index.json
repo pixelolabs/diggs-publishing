@@ -39,19 +39,19 @@
         "product_QdJg9b": {
           "type": "product",
           "settings": {
-            "product": "body-safety-wise-coloring-book"
+            "product": "body-safety-box-set-i-four-book-set-2"
           }
         },
         "product_kqjaAK": {
           "type": "product",
           "settings": {
-            "product": "bebe-de-piel-morena"
+            "product": "where-hands-go-an-introduction-to-safe-and-unsafe-touch"
           }
         },
         "product_7w7YGy": {
           "type": "product",
           "settings": {
-            "product": "donation-where-hands-go-the-power-of-no"
+            "product": "where-hands-go-the-power-of-no"
           }
         },
         "product_RbJU3i": {
@@ -63,7 +63,7 @@
         "product_WCmKJP": {
           "type": "product",
           "settings": {
-            "product": "rainbow-ebook"
+            "product": "dont-eat-it"
           }
         }
       },
@@ -94,7 +94,7 @@
             "title": "My Mission is to prevent child sexual abuse",
             "description": "<p>In a world filled with countless stories, Diggs Publishing celebrates the unique tales that often go untold. Dive into our universe, where each page brings to life characters that truly reflect the world’s diverse tapestry.<\/p>",
             "buttonText": "Read More",
-            "buttonLink": "shopify:\/\/pages\/about-2-0",
+            "buttonLink": "shopify:\/\/pages\/about-me",
             "background_color": "blue",
             "fontSize": false,
             "center": false
@@ -231,7 +231,7 @@
         "content": "",
         "image": "shopify:\/\/shop_images\/kids-images.webp",
         "buttonText": "Read More",
-        "buttonLink": "shopify:\/\/pages\/author-visits-2-0",
+        "buttonLink": "shopify:\/\/pages\/author-visits",
         "bgColor": "#77c85a"
       }
     }

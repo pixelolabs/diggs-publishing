@@ -6,13 +6,20 @@ jQuery(function() {
        
     $(window).scroll(function() {
         // var targetScroll = $('.product__actions').position().top;
-        var targetScroll = $('.product__actions').offset().top - $('.product__actions').outerHeight() + 20;
-        if($(window).scrollTop() > targetScroll ) {
-            $(".top-banner").addClass("active");
-        } 
-        else{
-            $(".top-banner").removeClass("active");
+        try{
+            var targetScroll = $('.product__actions').offset().top - $('.product__actions').outerHeight() + 20;
+            if($(window).scrollTop() > targetScroll ) {
+                $(".top-banner").addClass("active");
+            } 
+            else{
+                $(".top-banner").removeClass("active");
+            }
         }
+        catch{
+            
+        }
+        
+       
     });
     var productSectionSlider = new Swiper(".js__product-slider", {
         slidesPerView: 3,
@@ -114,6 +121,9 @@ var productSectionSlider = new Swiper(".js__article-slider", {
             },
             1100: {
                 slidesPerView: 1,
+            },
+            1101: {
+                slidesPerView: 2,
             },
             1440: {
                 slidesPerView: 2,

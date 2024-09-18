@@ -9,7 +9,7 @@
 */
 {
   "current": {
-    "fontScript": "<link rel=\"preconnect\" href=\"https:\/\/fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https:\/\/fonts.gstatic.com\" crossorigin=\"\">\n<link href=\"https:\/\/fonts.googleapis.com\/css2?family=Over+the+Rainbow&amp;display=swap\" rel=\"stylesheet\">\n<link href=\"https:\/\/fonts.googleapis.com\/css2?family=Luckiest+Guy&amp;display=swap\" rel=\"stylesheet\">\n<link href=\"https:\/\/fonts.googleapis.com\/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap\" rel=\"stylesheet\">",
+    "fontScript": "<link rel=\"preconnect\" href=\"https:\/\/fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https:\/\/fonts.gstatic.com\" crossorigin=\"\">\n<link href=\"https:\/\/fonts.googleapis.com\/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap\" rel=\"stylesheet\">",
     "bodyFontCode": "\"Roboto\", sans-serif;",
     "headingFontCode": "\"Luckiest Guy\", cursive;",
     "subheadingFontCode": "\"Over the Rainbow\", cursive;",
@@ -92,11 +92,11 @@
     "email": "author@ksdiggs.com",
     "textnumber": "",
     "address": "<p>3558 Round Barn Bl Ste 200, Santa Rosa, CA 95403<\/p>",
-    "social_facebook_link": "#",
+    "social_facebook_link": "https:\/\/www.facebook.com\/ksandersdiggs\/",
     "social_twitter_link": "#",
     "social_instagram_link": "https:\/\/www.instagram.com\/allthingsdiggs\/",
-    "social_tiktok_link": "#",
-    "social_youtube_link": "#",
+    "social_tiktok_link": "https:\/\/www.tiktok.com\/@authorksandersdiggs",
+    "social_youtube_link": "https:\/\/www.youtube.com\/@krystaelynnesandersdiggs1162",
     "share_facebook": true,
     "share_twitter": true,
     "share_pinterest": true,
@@ -126,8 +126,8 @@
         "settings": {
           "title": "404",
           "subtitle": "Page not found",
-          "buttonText": "Button Text",
-          "buttonUrl": "\/"
+          "buttonText": "Continue Shopping",
+          "buttonUrl": "shopify:\/\/collections\/books"
         }
       },
       "article-template": {
@@ -347,11 +347,11 @@
       },
       "15683396631634586217": {
         "type": "shopify:\/\/apps\/inbox\/blocks\/chat\/841fc607-4181-4ad1-842d-e24d7f8bad6b",
-        "disabled": true,
+        "disabled": false,
         "settings": {
-          "button_color": "#000000",
-          "secondary_color": "#FFFFFF",
-          "ternary_color": "#6A6A6A",
+          "button_color": "#d51f91",
+          "secondary_color": "#ffffff",
+          "ternary_color": "#6a6a6a",
           "button_icon": "chat_bubble",
           "button_text": "no_text",
           "button_horizontal_position": "bottom_right",

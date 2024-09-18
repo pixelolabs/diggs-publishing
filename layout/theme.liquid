@@ -11,8 +11,6 @@
       {% include 'head' %}
       {% include 'sm-og-data' %}
       {% include 'scripts_head' %}
-  
-      {% render 'boost-sd-fallback' %}
       {{ content_for_header }}
   
       <!-- Commented code removed for cleaner HTML -->
@@ -48,9 +46,10 @@
   
       {% comment %}
         <!-- Commented-out code removed -->
+         {% include 'swym-custom' %}
       {% endcomment %}
   
-      {% include 'swym-custom' %}
+     
   
       <script>
         // Optimize AOS initialization and event handling
