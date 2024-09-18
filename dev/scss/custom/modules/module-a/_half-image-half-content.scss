@@ -28,7 +28,7 @@
       height: 200px;
       top: -130px;
     }
-    // @include MQ(MQ-980) {
+    // @include MQ(MQ-768) {
     //   // height: 155px;
     //   // top: -100px;
     //   // height: 95px;
@@ -56,7 +56,7 @@
     @include MQ(MQ-1330) {
       top: -145px;
     }
-    @include MQ(MQ-980) {
+    @include MQ(MQ-768) {
       height: 155px;
       top: -100px;
     }
@@ -72,7 +72,7 @@
     background: url(yellow-wave.webp) repeat-x left / 1327px;
     height: 156.5px;
     top: -90px;
-    @include MQ(MQ-980) {
+    @include MQ(MQ-768) {
       height: 155px;
       top: -100px;
     }
@@ -88,7 +88,7 @@
         overflow-x: clip;
         .container-1260 {
           flex-direction: row-reverse;
-          @include MQ(MQ-980) {
+          @include MQ(MQ-768) {
             flex-direction: column;
           }
           &:before {
@@ -145,7 +145,7 @@
           @include MQ(MQ-1100) {
             margin-right: -250px;
           }
-          @include MQ(MQ-980) {
+          @include MQ(MQ-768) {
             width: 100%;
             max-width: 722px;
             margin: 0;
@@ -162,7 +162,7 @@
         overflow-x: clip;
         .container-1260 {
           flex-direction: row;
-          @include MQ(MQ-980) {
+          @include MQ(MQ-768) {
             flex-direction: column;
           }
         }
@@ -213,7 +213,7 @@
           @include MQ(MQ-1100) {
             margin-left: -250px;
           }
-          @include MQ(MQ-980) {
+          @include MQ(MQ-768) {
             width: 100%;
             max-width: 722px;
             margin: 0;
@@ -278,12 +278,12 @@
     width: 284px;
     height: 642px;
     z-index: 1;
-    @include MQ(MQ-980) {
+    @include MQ(MQ-768) {
       display: none;
     }
   }
   .container-1260 {
-    @include MQ(MQ-980) {
+    @include MQ(MQ-768) {
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -302,7 +302,7 @@
       animation-duration: 5s;
       animation-iteration-count: infinite;
       animation-direction: alternate;
-      @include MQ(MQ-980) {
+      @include MQ(MQ-768) {
         display: none;
       }
     }
@@ -338,7 +338,7 @@
       z-index: 1;
       cursor: pointer;
       background: url(icon-play-white.svg) no-repeat center/63px;
-      @include MQ(MQ-980) {
+      @include MQ(MQ-768) {
         width: 50px;
         height: 50px;
         background: url(icon-play-white.svg) no-repeat center/50px;
@@ -356,6 +356,14 @@
       margin-left: -250px;
     }
     @include MQ(MQ-980) {
+      width: 500px;
+      margin-left: -100px;
+    }
+    @include MQ(MQ-840) {
+      width: 400px;
+     
+    }
+    @include MQ(MQ-768) {
       width: 100%;
       max-width: 722px;
       margin: 0;
@@ -373,7 +381,10 @@
       background: url("thread-blue.webp") no-repeat center / 100%;
       width: 352px;
       height: 81px;
-      @include MQ(MQ-980) {
+      @include MQ(MQ-840) {
+display: none;
+      }
+      @include MQ(MQ-768) {
         position: absolute;
         content: "";
         right: 0px;
@@ -397,6 +408,15 @@
     &::before {
       width: 726px;
       height: 617px;
+      @include MQ(MQ-980) {
+        width: 500px;
+        height: 424px;
+       
+      }
+      @include MQ(MQ-840) {
+        width: 400px;
+        height: 341px;
+      }
       @include MQ(MQ-768) {
         width: 500px;
         height: 424px;
@@ -447,6 +467,14 @@
     width: 722px;
     height: 654px;
     display: block;
+    @include MQ(MQ-980) {
+      width: 500px;
+      height: 454px;
+    }
+    @include MQ(MQ-840) {
+      width: 400px;
+      height: 365px;
+    }
     @include MQ(MQ-768) {
       width: 500px;
       height: 454px;
@@ -492,7 +520,11 @@
     align-items: center;
     position: relative;
     @include MQ(MQ-980) {
+      padding-top: 80px;
+    }
+    @include MQ(MQ-768) {
       margin-top: 80px;
+      padding-top: 0px;
     }
     &::after {
       position: absolute;
@@ -507,7 +539,7 @@
       width: 37px;
       height: 47px;
       z-index: -1;
-      @include MQ(MQ-980) {
+      @include MQ(MQ-768) {
         display: none;
       }
     }
@@ -521,7 +553,7 @@
       animation-name: animateCloud;
       width: 65px;
       height: 52px;
-      @include MQ(MQ-980) {
+      @include MQ(MQ-768) {
         display: none;
       }
     }
@@ -540,6 +572,7 @@
     .inner {
       max-width: 544px;
       width: 100%;
+      z-index: 5;
     }
     &.center {
       @include MQ(MQ-768) {
@@ -552,7 +585,7 @@
       margin-right: 0;
     }
 
-    @include MQ(MQ-980) {
+    @include MQ(MQ-768) {
       padding-right: 0px;
     }
     @include MQ(MQ-768) {
@@ -585,7 +618,7 @@
   //     order: 2;
   //     // padding-left: 113px;
   //     padding-right: 0;
-  //     @include MQ(MQ-980) {
+  //     @include MQ(MQ-768) {
   //       // padding-left: 40px;
   //     }
   //     @include MQ(MQ-1200) {
@@ -607,7 +640,7 @@
     overflow-x: clip;
     .container-1260 {
       flex-direction: row-reverse;
-      @include MQ(MQ-980) {
+      @include MQ(MQ-768) {
         flex-direction: column;
       }
     }
@@ -660,6 +693,9 @@
         margin-right: -250px;
       }
       @include MQ(MQ-980) {
+        margin-right: -100px;
+      }
+      @include MQ(MQ-768) {
         width: 100%;
         max-width: 722px;
         margin: 0;
@@ -701,7 +737,7 @@
     animation-name: flow;
     animation-duration: 10s;
     animation-iteration-count: infinite;
-    @include MQ(MQ-980) {
+    @include MQ(MQ-768) {
       top: -57px;
     }
     @include MQ(MQ-480) {
@@ -732,7 +768,7 @@
   //   }
   // }
   .half-image-half-content {
-    @include MQ(MQ-980) {
+    @include MQ(MQ-768) {
       padding-bottom: 65px;
     }
     @include MQ(MQ-480) {
@@ -779,7 +815,7 @@
     &:nth-child(1) {
       .content {
         &:after {
-          @include MQ(MQ-980) {
+          @include MQ(MQ-768) {
             display: block;
             bottom: -55px;
           }
@@ -789,7 +825,7 @@
     &:nth-child(2) {
       .content {
         &:after {
-          @include MQ(MQ-980) {
+          @include MQ(MQ-768) {
             display: block;
             bottom: -70px;
             top: unset;
@@ -801,7 +837,7 @@
       &:nth-child(3) {
         .content {
           &:after {
-            @include MQ(MQ-980) {
+            @include MQ(MQ-768) {
               display: none;
             }
           }
@@ -813,7 +849,7 @@
       @include MQ(MQ-1200) {
         padding-right: 20px;
       }
-      @include MQ(MQ-980) {
+      @include MQ(MQ-768) {
         padding-right: 40px;
       }
       @include MQ(MQ-768) {
@@ -821,7 +857,7 @@
       }
     }
     .image-wrapper:after {
-      @include MQ(MQ-980) {
+      @include MQ(MQ-768) {
         display: none;
       }
     }
@@ -831,7 +867,7 @@
 .body-safety-1,
 .author-visit-1 {
   overflow-x: clip;
-  @include MQ(MQ-980) {
+  @include MQ(MQ-768) {
     margin-bottom: -20px;
   }
   &:after {
@@ -849,7 +885,7 @@
     animation-name: flow;
     animation-duration: 10s;
     animation-iteration-count: infinite;
-    @include MQ(MQ-980) {
+    @include MQ(MQ-768) {
       top: -57px;
     }
     @include MQ(MQ-480) {
@@ -858,7 +894,7 @@
   }
   .half-image-half-content {
     padding-bottom: 70px;
-    @include MQ(MQ-980) {
+    @include MQ(MQ-768) {
       padding-bottom: 0px;
     }
     .content {
@@ -910,12 +946,12 @@
     padding-top: 50px;
     margin-top: 75px;
     overflow-x: clip;
-    @include MQ(MQ-980) {
+    @include MQ(MQ-768) {
       padding-bottom: 100px;
     }
     .container-1260 {
       flex-direction: row-reverse;
-      @include MQ(MQ-980) {
+      @include MQ(MQ-768) {
         flex-direction: column;
       }
       &:before {
@@ -923,7 +959,7 @@
         left: -290px;
         transform: rotate(166.2deg);
         top: -269px;
-        @include MQ(MQ-980) {
+        @include MQ(MQ-768) {
           display: block;
           background: url(icon-cloud.webp) no-repeat center / 100%;
           animation: 10s linear infinite;
@@ -984,7 +1020,7 @@
         @include MQ(MQ-1100) {
           margin-right: -250px;
         }
-        @include MQ(MQ-980) {
+        @include MQ(MQ-768) {
           width: 100%;
           max-width: 722px;
           margin: 0;
@@ -1020,7 +1056,7 @@
       }
     }
     &:after {
-      @include MQ(MQ-980) {
+      @include MQ(MQ-768) {
         display: block;
         background-image: url(star-large.webp);
         animation-name: starRotate;
@@ -1040,7 +1076,7 @@
 }
 
 .author-visit-1 {
-  @include MQ(MQ-980) {
+  @include MQ(MQ-768) {
     margin-bottom: 5px;
   }
   .image-wrapper {
@@ -1048,7 +1084,7 @@
     @include MQ(MQ-1280) {
       margin-right: 70px;
     }
-    @include MQ(MQ-980) {
+    @include MQ(MQ-768) {
       margin: 0;
     }
     &:after {
@@ -1067,7 +1103,7 @@
   }
   .half-image-half-content {
     // padding-bottom: 75px;
-    @include MQ(MQ-980) {
+    @include MQ(MQ-768) {
       padding-top: 0;
       // padding-bottom: 50px;
     }
@@ -1077,7 +1113,7 @@
           top: unset;
           bottom: 65px;
           left: -44px;
-          @include MQ(MQ-980) {
+          @include MQ(MQ-768) {
             background: url(star-large.webp) no-repeat center / 100%;
             animation-name: starRotate;
             animation-duration: 5s;
@@ -1143,7 +1179,7 @@
           @include MQ(MQ-1280) {
             right: 0 !important;
           }
-          @include MQ(MQ-980) {
+          @include MQ(MQ-768) {
             display: none;
           }
         }

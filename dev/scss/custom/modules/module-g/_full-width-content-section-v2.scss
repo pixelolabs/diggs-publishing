@@ -49,6 +49,7 @@
     height: 84px;
     margin: 0 auto;
     margin-bottom: 34px;
+    opacity: 0;
     img {
       @include img-object-contain;
     }
