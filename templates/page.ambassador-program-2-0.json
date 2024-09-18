@@ -17,9 +17,10 @@
         "title": "Ambassador Program",
         "description": "<p>Join our Body Safety Wise Ambassador Program, empowering children ages 0-18 as advocates for body safety and literacy in your community!<br\/><\/p>",
         "buttonText1": "Contact Us",
-        "buttonLink1": "#",
+        "buttonLink1": "shopify:\/\/pages\/contact-2-0",
         "button_bg": "pink",
-        "content_alignment": "left"
+        "content_alignment": "left",
+        "height": false
       }
     },
     "page_default_content_LpFCxz": {
