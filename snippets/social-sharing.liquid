@@ -71,16 +71,17 @@ shop.metafields.global.description_tag | url_param_escape }}{% else %}{{ shop.na
       </a>
     </li>
   {% endif %}
-  {% if settings.share_pinterest %}
+
+  {% if settings.share_instagram %}
     <li>
       <a
         target="_blank"
-        href="http://pinterest.com/pin/create/link/?url={{ permalinkURL }}"
-        class="share-pinterest"
-        title="{{ 'general.social.alt_text.share_on_pinterest' | t }}"
+        href="https://www.instagram.com/sharer.php?u={{ permalinkURL }}"
+        class="share-instagram"
+        title="{{ 'general.social.alt_text.share_on_instagram' | t }}"
       >
-        {% include 'icon-pinterest' %}
-        <span class="visually-hidden">{{ 'general.social.alt_text.share_on_pinterest' | t }}</span>
+        {% include 'icon-instagram-black' %}
+        <span class="visually-hidden">{{ 'general.social.alt_text.share_on_instagram' | t }}</span>
       </a>
     </li>
   {% endif %}
