@@ -17,7 +17,7 @@
         "title": "Children’s Book Mentoring Young Minds",
         "description": "<p>Every writer begins as a storyteller. Hone your skills and craft stories that leave a mark.<\/p>",
         "buttonText1": "Book Now",
-        "buttonLink1": "shopify:\/\/pages\/ambassador-program-2-0",
+        "buttonLink1": "shopify:\/\/pages\/ambassador-program-1",
         "button_bg": "green",
         "content_alignment": "left"
       }
@@ -35,7 +35,7 @@
             "title": "Your Unique Children's Book Journey",
             "description": "<p>You can expect an engaging and informative experience tailored to your specific needs and goals during the one-hour Children's Book Mentoring Session with Krystaelynne Diggs. The goal of this mentoring session is to provide you with knowledge, inspiration, and confidence to continue your journey in the world of children's literature.<\/p>",
             "buttonText": "Book Now",
-            "buttonLink": "shopify:\/\/pages\/ambassador-program-2-0",
+            "buttonLink": "shopify:\/\/pages\/ambassador-program-1",
             "background_color": "transparent-bg",
             "fontSize": false,
             "center": false
@@ -178,7 +178,6 @@
       "type": "contact-form-with-text",
       "settings": {
         "title": "Reach out to us",
-        "address": "<p>3558 Round Barn Blvd, Suite<br\/>200 Santa Rosa, CA 95403<\/p>",
         "bgColor": ""
       }
     }

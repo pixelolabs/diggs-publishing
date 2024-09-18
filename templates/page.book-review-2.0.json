@@ -35,7 +35,7 @@
             "title": "Turning Your Vision into a Masterpiece",
             "description": "<p>Every author dreams of sharing their perfect story with the world. However, every masterpiece goes through stages of refinement and growth. It's this journey of perfection that truly shapes a story's soul.<\/p>",
             "buttonText": "Order Now",
-            "buttonLink": "shopify:\/\/pages\/about-2-0",
+            "buttonLink": "shopify:\/\/pages\/about-me-1",
             "background_color": "transparent-bg",
             "fontSize": false,
             "center": false
@@ -172,7 +172,6 @@
         "content": "<p>Writing is an art, and like all arts, it thrives on feedback, introspection, and growth. If you're ready to see your children's book manuscript shine in its brightest light, let our team be your beacon. Refine, redefine, and realize your story's full potential. Begin your journey to literary brilliance today.<\/p>",
         "buttonText": "Shop Now",
         "buttonLink": "shopify:\/\/pages\/publishing-checkout",
-        "backgroundcolor": false,
         "bgColor": "#81c573"
       }
     }
