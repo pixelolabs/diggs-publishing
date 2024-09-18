@@ -220,6 +220,7 @@
           top: auto;
           bottom: 200px;
           right: 60px;
+          z-index: 0;
         }
         @include MQ(MQ-480) {
           // width: 26px;
@@ -291,6 +292,9 @@
           bottom: 124px;
           @include MQ(MQ-1200) {
             bottom: 50px;
+          }
+          @include MQ(MQ-768) {
+            bottom: -100px;
           }
           @include MQ(MQ-480) {
             width: 20px;

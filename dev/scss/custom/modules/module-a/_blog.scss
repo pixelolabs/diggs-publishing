@@ -607,6 +607,10 @@
           svg {
             width: 13.5px;
             height: 15px;
+            @include MQ(MQ-480) {
+              width: 11px;
+              height: 13px;
+            }
           }
           time {
             font-size: 12px;
@@ -618,6 +622,9 @@
             text-align: left;
             text-transform: uppercase;
             margin-left: 12px;
+            @include MQ(MQ-480) {
+              font-size: 10px;
+            }
           }
         }
         .author {
@@ -632,6 +639,10 @@
           svg {
             width: 13.5px;
             height: 15px;
+            @include MQ(MQ-480) {
+              width: 11px;
+              height: 13px;
+            }
           }
           span {
             font-size: 12px;
@@ -643,6 +654,9 @@
             text-align: left;
             text-transform: uppercase;
             margin-left: 12px;
+            @include MQ(MQ-480) {
+              font-size: 10px;
+            }
           }
         }
       }

@@ -91,7 +91,7 @@
   }
   .swiper-initialized {
     overflow: hidden;
-   padding-left:   170px;
+    padding-left: 170px;
     @include MQ(MQ-768) {
       width: calc(100% - 122px);
       margin-left: 122px;
@@ -646,6 +646,26 @@ header {
     #hamburger {
       height: 40px;
       width: 40px;
+      &:hover,
+      &:focus {
+        svg {
+          path:nth-child(1) {
+            fill: $color-pink;
+          }
+          path:nth-child(2) {
+            fill: $color-white;
+            stroke: $color-white;
+          }
+          path:nth-child(3) {
+            fill: $color-white;
+            stroke: $color-white;
+          }
+          path:nth-child(4) {
+            fill: $color-white;
+            stroke: $color-white;
+          }
+        }
+      }
       .hamburger {
         height: 100%;
         display: flex;
@@ -675,8 +695,12 @@ header {
           &.close {
             display: flex;
             svg {
-              width: 28px;
-              height: 28px;
+              width: 32px;
+              height: 32px;
+              @include MQ(MQ-480) {
+                width: 30px;
+                height: 30px;
+              }
             }
           }
         }

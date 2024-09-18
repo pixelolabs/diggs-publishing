@@ -279,6 +279,9 @@
       margin-bottom: 20px;
       font-size: 30px;
       letter-spacing: 0.02em;
+      @include MQ(MQ-480) {
+        font-size: 25px;
+      }
     }
     ul {
       li,

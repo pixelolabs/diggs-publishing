@@ -1770,14 +1770,14 @@ body.boost-sd__search-opening {
 }
 @keyframes fly {
   0% {
-    bottom: 8px;
+    transform: translate(0px, 0px);
   }
 
   50% {
-    bottom: 80px;
+    transform: translate(20px, 20px);
   }
   100% {
-    bottom: 8px;
+    transform: translate(0px, 0px);
   }
 }
 @keyframes animateCloud {

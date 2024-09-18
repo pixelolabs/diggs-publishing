@@ -117,6 +117,7 @@ jQuery(function() {
             // Remove transparent header from index page when big nav menu open
             // $("body").removeClass("transparent-header");
             $(".main-header").addClass("active");
+            $(".main-header").addClass("gradient");
             if($(".js__search").hasClass("active") == true){
                 $(".js__header-search-section").removeClass("active");
                 $(".js__search").removeClass("active");
@@ -133,9 +134,11 @@ jQuery(function() {
             $(".has-big-nav").children(".big-nav").removeClass("active");
             if($(".js__header-search-section").hasClass("active") === true){
                 $(".main-header").addClass("active");
+                $(".main-header").addClass("gradient");
             }
             else{
                 $(".main-header").removeClass("active");  
+                $(".main-header").removeClass("gradient");
             }
             
             // Add transparent header from index page when sub menu open
