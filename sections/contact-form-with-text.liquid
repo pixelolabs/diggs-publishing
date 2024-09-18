@@ -97,18 +97,22 @@
           <h2>{{ section.settings.title }}</h2>
         {% endif %}
         <ul>
-          <li>
-            <div class="title uppercase">Location:</div>
-            <div class="address">{{ section.settings.address }}</div>
-          </li>
-          <li>
-            <div class="title uppercase">Email us on:</div>
-            <div>
-              <a href="mailto:{{settings.emailAddress}}" title="{{ settings.emailAddress }}">
-                {{- settings.emailAddress -}}
-              </a>
-            </div>
-          </li>
+          {% if section.settings.address != blank %}
+            <li>
+              <div class="title uppercase">Location:</div>
+              <div class="address">{{ section.settings.address }}</div>
+            </li>
+          {% endif %}
+          {% if settings.emailAddress != blank %}
+            <li>
+              <div class="title uppercase">Email us on:</div>
+              <div>
+                <a href="mailto:{{settings.emailAddress}}" title="{{ settings.emailAddress }}">
+                  {{- settings.emailAddress -}}
+                </a>
+              </div>
+            </li>
+          {% endif %}
         </ul>
       </div>
       <div class="kids-images">
