@@ -14,8 +14,8 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/contact-banner.jpg",
         "mobileImage": "shopify:\/\/shop_images\/Rectangle_2871_2x_2.webp",
-        "title": "Contact",
-        "description": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s<\/p>",
+        "title": "Contact Us",
+        "description": "<p>We'd love to hear from you! Whether it's feedback on our books, questions about our events, or inquiries about partnerships, please don't hesitate to reach out.<\/p>",
         "buttonText1": "",
         "buttonLink1": "",
         "button_bg": "pink",
