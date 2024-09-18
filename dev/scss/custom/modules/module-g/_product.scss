@@ -1715,6 +1715,7 @@
       margin-bottom: 24px !important;
       width: calc(50% - 30px);
       margin-right: 60px !important;
+      opacity: 1 !important;
       @include MQ(MQ-768) {
         width: 100%;
         margin-right: 0;
