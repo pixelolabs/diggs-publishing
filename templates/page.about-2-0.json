@@ -19,7 +19,8 @@
         "buttonText1": "",
         "buttonLink1": "",
         "button_bg": "pink",
-        "content_alignment": "left"
+        "content_alignment": "left",
+        "height": false
       }
     },
     "half_image_half_content_8FKJK6": {
@@ -35,7 +36,7 @@
             "title": "Let me introduce myself...",
             "description": "<p>I was born and raised in Sonoma County, California. I attended California State University, East Bay, and somehow graduated with three bachelors degrees. After graduation, I moved to New York to attend Binghamton University. After graduating with my Masters Degree in Political Science, I moved back to California to be close to family. Throughout my career I've specialized in Digital Marketing, but have always secretly dreamed of being a writer.<\/p>",
             "buttonText": "Contact Me",
-            "buttonLink": "shopify:\/\/pages\/contact-us-old",
+            "buttonLink": "shopify:\/\/pages\/contact-us",
             "background_color": "transparent-bg",
             "fontSize": false,
             "center": false
@@ -51,7 +52,7 @@
             "title": "My beautiful family...",
             "description": "<p>In October of 2018, I married the love of my life, Timothy, and in September of 2019, we had our first baby boy, Caleb. My family is everything to me. They are my inspiration and support. Our toddler keeps us busy outside of jobs, but in our free time, we enjoy watching movies and traveling. In early 2021, my life was upended when I found out a child in my family was being sexually abused. The news shattered my heart and hurled me into a deep depression. I took time off work to focus on healing my family and myself.<\/p>",
             "buttonText": "Contact Me",
-            "buttonLink": "shopify:\/\/pages\/contact-us-old",
+            "buttonLink": "shopify:\/\/pages\/contact-us",
             "background_color": "transparent-bg",
             "fontSize": false,
             "center": false
