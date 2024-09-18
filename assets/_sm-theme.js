@@ -2790,7 +2790,10 @@ $(document).ready(function ($) {
   /*Sold out*/
   var soldOutProduct = $(".js__sold_product").attr("data-items");
   var soldOutHours = $(".js__sold_product").attr("data-hours");
+
+  if (soldOutProduct != "" && soldOutHours != "") {}
   /* if no varient then active class added in product image section*/
+
 
   if (prodLib.length == 0) {
     $(".js-pdp-media").addClass("active");
