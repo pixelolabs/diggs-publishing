@@ -560,6 +560,7 @@ function progressBar() {
 
       $(".js__free-shipping-remaning-amount").html(formatter.format(freeShippingRemaningAmount));
       $(".js__free-shipping__progress-bar").attr("data-percentage", freeShippingPercentage);
+      console.log("freeShippingPercentage" + freeShippingPercentage);
       var boolAddProduct = true;
       var boolFreeGIft1 = true;
       var boolFreeGIft2 = true;
