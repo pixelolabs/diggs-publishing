@@ -22,7 +22,65 @@
             {% if block.settings.showVideo == true %}
               {% if block.settings.video != blank %}
                 <a class="video-section " data-lity href="{{block.settings.video}}" role="button">
-                  {{ block.settings.image | image_url: width: 1262 | image_tag: loading: 'lazy', widths: '1262x1000' }}
+                  {% assign mobile_image = block.settings.image | default: block.settings.image %}
+                  {% assign tablet_image = block.settings.image | default: block.settings.image %}
+                  {% assign desktop_image = block.settings.image %}
+                  {% assign mobile_width = 750 %}
+                  {% assign tablet_width = 1200 %}
+                  {% assign desktop_width = 1400 %}
+                  
+                  {% if forloop.first %}
+                    {{ mobile_image | image_url: width: mobile_width, format: 'webp' | preload_tag: as: 'image', media: '(max-width: 767px)' }}
+                    {{ tablet_image | image_url: width: tablet_width, format: 'webp' | preload_tag: as: 'image', media: '(min-width: 768px) and (max-width: 1023px)' }}
+                    {{ desktop_image | image_url: width: desktop_width, format: 'webp' | preload_tag: as: 'image', media: '(min-width: 1024px)' }}
+                  {% endif %}
+                  
+                  <picture>
+                    <!-- Mobile sizes WebP -->
+                    <source
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                      srcset="{{ mobile_image | image_url: width: 375, format: 'webp' }} 375w,
+                              {{ mobile_image | image_url: width: 550, format: 'webp' }} 550w,
+                              {{ mobile_image | image_url: width: mobile_width, format: 'webp' }} {{ mobile_width }}w"
+                      sizes="100vw">
+                    
+                    <!-- Tablet sizes WebP -->
+                    <source
+                      type="image/webp"
+                      media="(min-width: 768px) and (max-width: 1023px)"
+                      srcset="{{ tablet_image | image_url: width: 768, format: 'webp' }} 768w,
+                              {{ tablet_image | image_url: width: 1024, format: 'webp' }} 1024w,
+                              {{ tablet_image | image_url: width: tablet_width, format: 'webp' }} {{ tablet_width }}w"
+                      sizes="100vw">
+                  
+                    <!-- Desktop sizes WebP -->
+                    <source
+                      type="image/webp"
+                      media="(min-width: 1024px)"
+                      srcset="{{ desktop_image | image_url: width: 1000, format: 'webp' }} 1000w,
+                              {{ desktop_image | image_url: width: desktop_width, format: 'webp' }} {{ desktop_width }}w,
+                              {{ desktop_image | image_url: width: 1800, format: 'webp' }} 1800w"
+                      sizes="100vw">
+                  
+                    <!-- Fallback for non-WebP support -->
+                    <img src="{{ mobile_image | image_url: width: mobile_width }}"
+                         srcset="{{ mobile_image | image_url: width: mobile_width }} {{ mobile_width }}w,
+                                 {{ tablet_image | image_url: width: tablet_width }} {{ tablet_width }}w,
+                                 {{ desktop_image | image_url: width: desktop_width }} {{ desktop_width }}w"
+                         sizes="(max-width: 767px) 100vw, (max-width: 1023px) 100vw, 100vw"
+                         width="{{ mobile_width }}"
+                         height="{{ mobile_width | divided_by: mobile_image.aspect_ratio | round }}"
+                         {% if forloop.first %}
+                           fetchpriority="high"
+                         {% else %}
+                           loading="lazy"
+                         {% endif %}
+                         decoding="async"
+                         alt="{{ block.settings.title  }}"
+                         style="width: 100%;  display: block;">
+                  </picture>
+                  
                   <div class="play-icon"></div>
                 </a>
               {% endif %}
