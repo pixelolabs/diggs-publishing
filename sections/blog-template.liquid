@@ -54,6 +54,12 @@
         <div class="half-image-half-content-outer featured-blog">
           <div class="half-image-half-content">
             <div class="container-1260 flex">
+              <a
+                href="{{ featuredArticle.url }}"
+                class="img-link"
+                aria-label="Read More About {{ featuredArticle.title }}"
+                title="Read More About {{ featuredArticle.title }}"
+              ></a>
               <div class="image-wrapper">
                 {% capture img_id %}ArticleImage-{{ featuredArticle.image.id }}{% endcapture %}
                 {% capture img_wrapper_id %}ArticleImageWrapper-{{ article.image.id }}{% endcapture %}
