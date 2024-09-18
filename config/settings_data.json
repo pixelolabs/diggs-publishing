@@ -106,6 +106,8 @@
     "share_facebook": true,
     "share_twitter": true,
     "share_pinterest": true,
+    "share_insta": true,
+    "share_linkedin": true,
     "copy_link": true,
     "favicon": "shopify:\/\/shop_images\/diggs-favicon.png",
     "hidden_default": true,
