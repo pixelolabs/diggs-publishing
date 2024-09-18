@@ -15,18 +15,15 @@
     // }
     &:before {
       background: url(wave-fullwidth-body-bgcolor.svg) repeat-x center / 1452px;
-      // height: 6vw;
       width: 100%;
       position: absolute;
       left: 0;
       top: -15px;
       z-index: 2;
-      // background-size: contain;
       height: 109px;
       content: "";
       @media (min-width: 1440px) {
         background: url(wave-fullwidth-body-bgcolor.svg) repeat-x top / 100%;
-        // height: 6vw;
         top: -2px;
         height: 129px;
       }
@@ -34,23 +31,10 @@
         height: 153px;
         top: -37px;
       }
-      // @include MQ(MQ-1100) {
-      //   top: -47px;
-      // }
       @include MQ(MQ-768) {
-        // background-size: calc(1452px / 2);
-        // top: -32px;
         height: 84px;
         top: -1px;
-        // height: 11vw;
       }
-      // @include MQ(MQ-600) {
-      //   height: 85px;
-      //   top: -32px;
-      // }
-      // @include MQ(MQ-350) {
-      //   top: -33px;
-      // }
     }
     // &:after {
     //   // graphic-thread-curve.svg
@@ -77,10 +61,7 @@
     height: 900px;
     content: "";
     position: absolute;
-    // -webkit-transform: rotate(35.9deg);
-    // transform: rotate(35.9deg);
-    // top: -129px;
-    // left: -148px;
+
     top: -42px;
     left: -13px;
     z-index: 0;
@@ -229,28 +210,28 @@
   h2 {
     margin-bottom: 20px;
     position: relative;
-    &::before {
-      width: 90px;
-      height: 119px;
-      content: "";
-      position: absolute;
-      left: 158px;
-      z-index: 1;
-      top: -180px;
-      background: url("kite.svg") no-repeat center / 100%;
-      animation-duration: 6s;
-      animation-iteration-count: infinite;
-      -webkit-animation-direction: alternate-reverse;
-      animation-timing-function: linear;
-      animation-name: kites;
-      @include MQ(MQ-768) {
-        width: 69px;
-        height: 90px;
-        left: -25px;
-        top: -50px;
-        z-index: -2;
-      }
-    }
+    // &::before {
+    //   width: 90px;
+    //   height: 119px;
+    //   content: "";
+    //   position: absolute;
+    //   left: 158px;
+    //   z-index: 1;
+    //   top: -180px;
+    //   background: url("kite.svg") no-repeat center / 100%;
+    //   animation-duration: 6s;
+    //   animation-iteration-count: infinite;
+    //   -webkit-animation-direction: alternate-reverse;
+    //   animation-timing-function: linear;
+    //   animation-name: kites;
+    //   @include MQ(MQ-768) {
+    //     width: 69px;
+    //     height: 90px;
+    //     left: -25px;
+    //     top: -50px;
+    //     z-index: -2;
+    //   }
+    // }
     &::after {
       width: 63.9px;
       height: 51px;
@@ -305,26 +286,11 @@
           height: 153px;
           top: -37px;
         }
-        // @include MQ(MQ-980) {
-        //   top: -25px;
-        // }
-        // @include MQ(MQ-1300) {
-        //   top: -12px;
-        // }
-        // @include MQ(MQ-1100) {
-        //   top: -22px;
-        // // }
+
         @include MQ(MQ-768) {
           height: 84px;
           top: -1px;
         }
-        // @include MQ(MQ-600) {
-        //   height: 85px;
-        //   top: -31px;
-        // }
-        // @include MQ(MQ-480) {
-        //   height: 81px;
-        // }
       }
     }
   }

@@ -97,18 +97,34 @@
           <h2>{{ section.settings.title }}</h2>
         {% endif %}
         <ul>
-          {% if section.settings.address != blank %}
+          {% comment %}
+            {% if section.settings.address != blank %}
+              <li>
+                <div class="title uppercase">Location:</div>
+                <div class="address">{{ section.settings.address }}</div>
+              </li>
+            {% endif %}
+          {% endcomment %}
+          {% if settings.address != blank %}
             <li>
               <div class="title uppercase">Location:</div>
-              <div class="address">{{ section.settings.address }}</div>
+              <div class="address">
+                {% if settings.addresslink != blank %}
+                  <a href="{{ settings.addresslink }}" title="address" target="_blank">
+                {% endif %}
+                <p>{{ settings.address }}</p>
+                {% if settings.addresslink != blank %}
+                  </a>
+                {% endif %}
+              </div>
             </li>
           {% endif %}
-          {% if settings.emailAddress != blank %}
+          {% if settings.email != blank %}
             <li>
               <div class="title uppercase">Email us on:</div>
               <div>
-                <a href="mailto:{{settings.emailAddress}}" title="{{ settings.emailAddress }}">
-                  {{- settings.emailAddress -}}
+                <a href="mailto:{{settings.email}}" title="{{ settings.email }}">
+                  {{- settings.email -}}
                 </a>
               </div>
             </li>
@@ -165,11 +181,7 @@
       "id": "title",
       "label": "Title"
     },
-    {
-      "type": "richtext",
-      "id": "address",
-      "label": "Add Location"
-    },
+
     {
       "type": "header",
       "content": "Extra Settings"
