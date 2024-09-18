@@ -70,52 +70,7 @@
   ];
 </script>
 
-{% if template.name != 'collection' and template.name != 'search' %}
-  <script>
-    var relProdLib = [
-    {% paginate collections['all'].products by 1000 %}
-    {% for product in collections['all'].products %}
-     {% for variant in product.variants %}
-        {
-          "productID":"{{product.id}}",
-          "id":"{{variant.id}}",
-          "handle":"{{variant.handle}}",
-          "option1":"{{variant.option1}}",
-          "option2":"{{variant.option2}}",
-          "option3":"{{variant.option3}}",
-          "image":"{{variant.image | img_url}}",
-          "quantity":"{{variant.inventory_quantity}}",
-          "price":"{{variant.price}}",
-          "priceCompared":"{{variant.compare_at_price}}",
-          "available":"{{variant.available}}"
-        }
-        {% unless forloop.last %},{% endunless %}
-        {% endfor %}
-        {% unless forloop.last %},{% endunless %}
-        {% endfor %}
-        {% endpaginate %}
-        ];
-         /*Collection object*/
-         var collectionLibrary = [
-        {% paginate collections['all'].products by 1000 %}
-        {% for _product in collections['all'].products %}
-        {
-          id: "{{_product.id}}",
-       title: "{{_product.title}}",
-          images: [
-          {% for image in _product.images %}
-            {
-             image: "{{image.src | img_url: 'master'}}",
-             alt: "{{ image.alt | escape }}"
-            }{% unless forloop.last %},{% endunless %}
-            {% endfor %}
-          ]
-        }{% unless forloop.last %},{% endunless %}
-        {% endfor %}
-        {% endpaginate %}
-      ];
-  </script>
-{% endif %}
+
 
 <script>
   var globalLib = [
