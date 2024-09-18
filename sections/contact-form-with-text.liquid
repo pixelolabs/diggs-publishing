@@ -97,10 +97,25 @@
           <h2>{{ section.settings.title }}</h2>
         {% endif %}
         <ul>
-          {% if section.settings.address != blank %}
+          {% comment %}
+            {% if section.settings.address != blank %}
+              <li>
+                <div class="title uppercase">Location:</div>
+                <div class="address">{{ section.settings.address }}</div>
+              </li>
+            {% endif %}
+          {% endcomment %}
+          {% if settings.address != blank %}
             <li>
               <div class="title uppercase">Location:</div>
-              <div class="address">{{ section.settings.address }}</div>
+
+              {% if settings.addresslink != blank %}
+                <a href="{{ settings.addresslink }}" title="address" target="_blank">
+              {% endif %}
+              <p>{{ settings.address }}</p>
+              {% if settings.addresslink != blank %}
+                </a>
+              {% endif %}
             </li>
           {% endif %}
           {% if settings.email != blank %}
