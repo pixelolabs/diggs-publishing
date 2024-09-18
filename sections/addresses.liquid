@@ -78,7 +78,7 @@
                 <label for="address_default_address_{{form.id}}" class="inline">{{ 'customer.addresses.set_default' | t }}</label>
               </div>
               <div class="btn-wrapper">
-              <input type="submit" class="btn--primary" value="{{ 'customer.addresses.update' | t }}"></p><a href="#"  class="link--primary" onclick="Shopify.CustomerAddress.toggleForm({{form.id}}); return false;">{{ 'customer.addresses.cancel' | t }}</a></div>
+              <button type="submit" class="btn--primary" >{{ 'customer.addresses.update' | t }}</button></p><a href="#"  class="link--primary" onclick="Shopify.CustomerAddress.toggleForm({{form.id}}); return false;">{{ 'customer.addresses.cancel' | t }}</a></div>
             </div>
               {% endform %}
             </li>
