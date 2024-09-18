@@ -2219,6 +2219,7 @@ jQuery(function () {
       // $("body").removeClass("transparent-header");
 
       $(".main-header").addClass("active");
+      $(".main-header").addClass("gradient");
 
       if ($(".js__search").hasClass("active") == true) {
         $(".js__header-search-section").removeClass("active");
@@ -2238,8 +2239,10 @@ jQuery(function () {
 
       if ($(".js__header-search-section").hasClass("active") === true) {
         $(".main-header").addClass("active");
+        $(".main-header").addClass("gradient");
       } else {
         $(".main-header").removeClass("active");
+        $(".main-header").removeClass("gradient");
       } // Add transparent header from index page when sub menu open
       // if ($("body").hasClass("fixed-header")) {
       //     $("body").removeClass("transparent-header");

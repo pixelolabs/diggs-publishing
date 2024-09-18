@@ -230,6 +230,7 @@
         padding-left: 28px;
         z-index: 1;
         position: relative;
+        text-transform: none;
         cursor: pointer;
         @include MQ(MQ-768) {
           padding-left: 20px;

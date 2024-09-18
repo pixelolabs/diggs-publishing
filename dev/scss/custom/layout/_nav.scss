@@ -64,9 +64,13 @@
       display: none;
       // margin-right: 25px;
       #hamburger {
-        height: 30px;
-        width: 30px;
+        height: 32px;
+        width: 32px;
         margin-left: 8.8px;
+        @include MQ(MQ-480) {
+          height: 30px;
+          width: 30px;
+        }
         svg {
           width: 100%;
           height: 100%;
@@ -202,7 +206,47 @@ header.fixed {
 }
 header {
   /****** Header - Top Header ******/
-
+  .main-nav-list {
+    li {
+      padding: 0 !important;
+      .first-link {
+        padding: 30px 25px;
+        @include MQ(MQ-1100) {
+          padding: 30px 20px;
+        }
+        &:after {
+          display: none;
+        }
+        span {
+          position: relative;
+          &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            background-color: #fff;
+            height: 1.5px;
+            width: 0;
+            -webkit-transition: 0.4s ease-in;
+            transition: 0.4s ease-in;
+            @include MQ(MQ-980) {
+              background-color: $color-black;
+            }
+          }
+        }
+        &:hover,
+        &:focus {
+          span {
+            &:after {
+              width: 100%;
+              -webkit-transition: 0.4s ease-in;
+              transition: 0.4s ease-in;
+            }
+          }
+        }
+      }
+    }
+  }
   .main-header {
     position: relative;
     padding-left: 256px;
@@ -230,7 +274,11 @@ header {
         width: 100%;
         height: 100%;
       }
-      @include MQ(MQ-1200) {
+      @include MQ(MQ-980) {
+        width: 32px;
+        height: 32px;
+      }
+      @include MQ(MQ-480) {
         width: 30px;
         height: 30px;
       }
@@ -270,7 +318,11 @@ header {
       align-items: center;
       justify-content: center;
       // margin-bottom: 4px;
-      @include MQ(MQ-1200) {
+      @include MQ(MQ-980) {
+        width: 32px;
+        height: 32px;
+      }
+      @include MQ(MQ-480) {
         width: 30px;
         height: 30px;
       }
@@ -534,34 +586,49 @@ header {
             pointer-events: none;
             border-bottom: solid 1px #f0d687;
             &:after {
-              position: absolute;
-              content: "";
-              height: 259px;
-              width: 530px;
-              background: url(graphic-big-nav-boder.svg) no-repeat center left /
-                571px;
-              left: 22%;
-              top: 0;
+              // position: absolute;
+              // content: "";
+              // height: 259px;
+              // width: 530px;
+              // background: url(graphic-big-nav-boder.svg) no-repeat center left /
+              //   571px;
+              // left: 22%;
+              // top: 0;
 
+              // @include MQ(MQ-980) {
+              //   display: none;
+              // }
+              // width: 24px;
+              // height: 32px;
+              // content: "";
+              // position: absolute;
+              // left: 157px;
+              // bottom: 0;
+              // z-index: 1;
+              // background: url(star-large-white.webp) no-repeat center/24px;
+              // animation-name: wstarRotate;
+              // animation-duration: 5s;
+              // animation-iteration-count: infinite;
+              // animation-direction: alternate;
               @include MQ(MQ-980) {
                 display: none;
               }
             }
-            &:before {
-              position: absolute;
-              content: "";
-              left: 25%;
-              top: 92px;
-              background: url(icon-cloud.webp) no-repeat center / 100%;
-              animation: 10s linear infinite;
-              animation-name: animateCloud;
-              width: 52px;
-              height: 42px;
+            // &:before {
+            //   position: absolute;
+            //   content: "";
+            //   left: 25%;
+            //   top: 92px;
+            //   background: url(icon-cloud.webp) no-repeat center / 100%;
+            //   animation: 10s linear infinite;
+            //   animation-name: animateCloud;
+            //   width: 52px;
+            //   height: 42px;
 
-              @include MQ(MQ-980) {
-                display: none;
-              }
-            }
+            //   @include MQ(MQ-980) {
+            //     display: none;
+            //   }
+            // }
             .container-1160 {
               max-width: 1160px;
               width: 100%;
@@ -586,6 +653,7 @@ header {
                     margin-bottom: 16px;
                     position: relative;
                     padding-bottom: 20px !important;
+                    text-transform: uppercase;
                     svg {
                       display: block;
                       position: absolute;
@@ -655,20 +723,67 @@ header {
                 }
               }
               &:before {
-                width: 24px;
-                height: 32px;
-                content: "";
                 position: absolute;
-                left: 157px;
-                bottom: 0;
-                z-index: 1;
-                background: url(star-large-white.webp) no-repeat center/24px;
-                animation-name: wstarRotate;
-                animation-duration: 5s;
-                animation-iteration-count: infinite;
-                animation-direction: alternate;
+                content: "";
+                height: 259px;
+                width: 530px;
+                background: url(graphic-big-nav-boder.svg) no-repeat center left /
+                  571px;
+                left: 15.3%;
+                top: -83px;
+
                 @include MQ(MQ-980) {
                   display: none;
+                }
+                // width: 24px;
+                // height: 32px;
+                // content: "";
+                // position: absolute;
+                // left: 157px;
+                // bottom: 0;
+                // z-index: 1;
+                // background: url(star-large-white.webp) no-repeat center/24px;
+                // animation-name: wstarRotate;
+                // animation-duration: 5s;
+                // animation-iteration-count: infinite;
+                // animation-direction: alternate;
+                // @include MQ(MQ-980) {
+                //   display: none;
+                // }
+              }
+              .inner-wrapper-outer {
+                position: relative;
+                &:after {
+                  width: 24px;
+                  height: 32px;
+                  content: "";
+                  position: absolute;
+                  left: 157px;
+                  bottom: 0;
+                  z-index: 1;
+                  background: url(star-large-white.webp) no-repeat center/24px;
+                  animation-name: wstarRotate;
+                  animation-duration: 5s;
+                  animation-iteration-count: infinite;
+                  animation-direction: alternate;
+                  @include MQ(MQ-980) {
+                    display: none;
+                  }
+                }
+                &:before {
+                  position: absolute;
+                  content: "";
+                  left: 300px;
+                  top: 9px;
+                  background: url(icon-cloud.webp) no-repeat center / 100%;
+                  animation: 10s linear infinite;
+                  animation-name: animateCloud;
+                  width: 52px;
+                  height: 42px;
+
+                  @include MQ(MQ-980) {
+                    display: none;
+                  }
                 }
               }
               .two-column-product-section {
@@ -683,6 +798,7 @@ header {
                   margin-left: 37px;
                   .product-wrapper {
                     padding: 0 !important;
+                    cursor: auto;
                     &:hover {
                       .image-section {
                         img {
@@ -1257,7 +1373,7 @@ header {
               // max-width: 303px;
               li {
                 margin: 0;
-                padding: 0 0 20px 0;
+                padding: 0 0 20px 0 !important;
                 height: auto;
                 a {
                   font-size: 14px;

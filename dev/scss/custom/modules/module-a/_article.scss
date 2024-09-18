@@ -166,6 +166,9 @@
         text-align: left;
         color: #3b2900;
         text-transform: none;
+        @include MQ(MQ-480) {
+          font-size: 14px;
+        }
       }
     }
     p {
@@ -179,6 +182,10 @@
       svg {
         width: 13px;
         height: 15px;
+        @include MQ(MQ-480) {
+          width: 11px;
+          height: 13px;
+        }
       }
       time,
       span {
@@ -189,6 +196,9 @@
         text-align: left;
         text-transform: uppercase;
         margin-left: 12px;
+        @include MQ(MQ-480) {
+          font-size: 10px;
+        }
       }
       .date-category-section {
         display: flex;
@@ -308,13 +318,13 @@
       content: "";
       right: 54px;
       top: 37px;
-      background: url(star-large.webp) no-repeat center / 100%;
+      background: url(icon-star-svg.svg) no-repeat center / 100%;
       animation-name: starRotate;
       animation-duration: 5s;
       animation-iteration-count: infinite;
       animation-direction: alternate;
-      width: 35px;
-      height: 47px;
+      width: 41px;
+      height: 50px;
       z-index: 2;
       @include MQ(MQ-480) {
         display: none;
@@ -586,7 +596,7 @@
       // height: 570px;
       width: 576px;
       height: 519px;
-      right: -200px;
+      right: -80px;
       position: relative;
       padding-bottom: 0 !important;
       float: right;
