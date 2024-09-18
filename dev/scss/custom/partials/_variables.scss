@@ -6,9 +6,21 @@
 //var(--font-family-secondary): "Prata", serif;
 @font-face {
   font-family: "ReallyBetter";
+  font-display: swap;
   src: url("ReallyBetter.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "Luckiest Guy";
+  font-display: swap;
+  src: url("LuckiestGuy-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Over the Rainbow";
+  font-display: swap;
+  src: url("OvertheRainbow-Regular.ttf") format("truetype");
+}
 /* Colors */
 
 $color-original-black: #000000;

@@ -2886,10 +2886,8 @@ $(document).ready(function ($) {
 
     $(".pdp-slider").find(".slide").addClass("remove-slide").removeClass("swiper-slide").removeAttr("aria-label");
     $(".js__pdp-thumbnail-slider").find(".slide").addClass("remove-slide").removeClass("swiper-slide").removeAttr("aria-label");
-    $(".pdp-slider").find(".slide").children(".image-section").removeAttr("data-fancybox");
     $(".pdp-slider").find("." + thumbColorSelected.toLowerCase()).removeClass("remove-slide").addClass("swiper-slide");
     $(".js__pdp-thumbnail-slider").find("." + thumbColorSelected.toLowerCase()).removeClass("remove-slide").addClass("swiper-slide");
-    $(".pdp-slider").find("." + thumbColorSelected.toLowerCase()).children(".image-section").attr("data-fancybox", "product");
     pdpThumbnail.destroy();
     pdpSlider.destroy();
 
