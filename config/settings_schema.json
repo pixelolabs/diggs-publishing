@@ -2213,30 +2213,6 @@
         "type": "product",
         "id": "product4",
         "label": "Product 4"
-      },
-      {
-        "type": "header",
-        "content": "Free Gift"
-      },
-      {
-        "type": "text",
-        "id": "freeGift1ThresholdValue",
-        "label": "Free Gift 1 Threshold Value"
-      },
-      {
-        "type": "product",
-        "id": "freeProduct1",
-        "label": "Free Product 1"
-      },
-      {
-        "type": "text",
-        "id": "freeGift2ThresholdValue",
-        "label": "Free Gift 2 Threshold Value"
-      },
-      {
-        "type": "product",
-        "id": "freeProduct2",
-        "label": "Free Product 2"
       }
     ]
   },
