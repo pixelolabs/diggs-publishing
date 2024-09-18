@@ -534,6 +534,7 @@ function progressBar() {
     }).then(function (data) {
       totalAmount = data.total_price / 100;
       var freeShippingAmount = parseFloat($(".js__free-shipping-limit").html());
+      console.log("totalAmount" + totalAmount);
       $(".js__free-shipping__icon").removeClass("active");
       $(".js__free-gift-1__icon").removeClass("active");
       $(".js__free-gift-2__icon").removeClass("active");
@@ -604,8 +605,6 @@ function progressBar() {
         }
       });
       $(".js__free-shipping__progress-bar").children("span").css("width", freeShippingPercentage + "%");
-      var gifrProduct1 = $(".js__free-gift-product-1").attr("data-attr-variantid");
-      var gifrProduct2 = $(".js__free-gift-product-2").attr("data-attr-variantid");
       /*Free gift 1 */
 
       if (freeShippingPercentage == 100) {
