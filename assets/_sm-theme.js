@@ -1873,7 +1873,72 @@ jQuery(document).ready(function ($) {
       }
     }
   });
-});
+})(function ($) {
+  $(function () {
+    var navLink = false;
+    $(".accordion-toggle").on("mousedown", function (e) {
+      "use strict";
+
+      e.stopImmediatePropagation();
+
+      if ($(this).parent("div").hasClass("footer-links")) {
+        if ($(window).width() < 981) {
+          if ($(this).hasClass("active")) {
+            $(this).removeClass("active");
+            $(this).siblings(".accordion-content").slideUp(300);
+          } else {
+            $(".accordion-toggle").removeClass("active");
+            $(this).addClass("active");
+            $(".accordion-content").slideUp(300);
+            $(this).siblings(".accordion-content").slideDown(300);
+          }
+        }
+      } else {
+        if ($(this).hasClass("active")) {
+          $(this).removeClass("active");
+          $(this).siblings(".accordion-content").slideUp(300);
+        } else {
+          $(".accordion-toggle").removeClass("active");
+          $(this).addClass("active");
+          $(".accordion-content").slideUp(300);
+          $(this).siblings(".accordion-content").slideDown(300);
+        }
+      }
+
+      navLink = true;
+    }).focus(function (e) {
+      "use strict";
+
+      if (navLink) {
+        navLink = false;
+      } else {
+        if ($(this).parent("div").hasClass("footer-links")) {
+          if ($(window).width() < 980) {
+            if ($(this).hasClass("active")) {
+              $(this).removeClass("active");
+              $(this).siblings(".accordion-content").slideUp(300);
+            } else {
+              $(".accordion-toggle").removeClass("active");
+              $(this).addClass("active");
+              $(".accordion-content").slideUp(300);
+              $(this).siblings(".accordion-content").slideDown(300);
+            }
+          }
+        } else {
+          if ($(this).hasClass("active")) {
+            $(this).removeClass("active");
+            $(this).siblings(".accordion-content").slideUp(300);
+          } else {
+            $(".accordion-toggle").removeClass("active");
+            $(this).addClass("active");
+            $(".accordion-content").slideUp(300);
+            $(this).siblings(".accordion-content").slideDown(300);
+          }
+        }
+      }
+    });
+  });
+})(jQuery);
 "use strict";
 
 var showCartMessage = true;
@@ -2200,46 +2265,71 @@ jQuery(function () {
 
   /* SubMenu
      Accordion JS */
-
-
-  (function ($) {
-    $(function () {
-      var navLink = false;
-      $(".accordion-toggle").on("mousedown", function (e) {
-        "use strict";
-
-        e.stopImmediatePropagation();
-
-        if ($(this).hasClass("active")) {
-          $(this).removeClass("active");
-          $(this).siblings(".accordion-content").slideUp(300);
-        } else {
-          $(".accordion-toggle").removeClass("active");
-          $(this).addClass("active");
-          $(".accordion-content").slideUp(300);
-          $(this).siblings(".accordion-content").slideDown(300);
-        }
-
-        navLink = true;
-      }).focus(function (e) {
-        "use strict";
-
-        if (navLink) {
-          navLink = false;
-        } else {
-          if ($(this).hasClass("active")) {
-            $(this).removeClass("active");
-            $(this).siblings(".accordion-content").slideUp(300);
-          } else {
-            $(".accordion-toggle").removeClass("active");
-            $(this).addClass("active");
-            $(".accordion-content").slideUp(300);
-            $(this).siblings(".accordion-content").slideDown(300);
-          }
-        }
-      });
-    });
-  })(jQuery); // sEARCH BAR
+  // (function($) {
+  //     $(function() {
+  //         var navLink = false;
+  //         $(".accordion-toggle")
+  //             .on("mousedown", function(e) {
+  //                 "use strict";
+  //                 e.stopImmediatePropagation();
+  //                 if ($(this).parent("div").hasClass("footer-links")) {
+  //                     if ($(window).width() < 981) {
+  //                         if ($(this).hasClass("active")) {
+  //                             $(this).removeClass("active");
+  //                             $(this).siblings(".accordion-content").slideUp(300);
+  //                         } else {
+  //                             $(".accordion-toggle").removeClass("active");
+  //                             $(this).addClass("active");
+  //                             $(".accordion-content").slideUp(300);
+  //                             $(this).siblings(".accordion-content").slideDown(300);
+  //                         }
+  //                     }
+  //                 } else {
+  //                     if ($(this).hasClass("active")) {
+  //                         $(this).removeClass("active");
+  //                         $(this).siblings(".accordion-content").slideUp(300);
+  //                     } else {
+  //                         $(".accordion-toggle").removeClass("active");
+  //                         $(this).addClass("active");
+  //                         $(".accordion-content").slideUp(300);
+  //                         $(this).siblings(".accordion-content").slideDown(300);
+  //                     }
+  //                 }
+  //                 navLink = true;
+  //             })
+  //             .focus(function(e) {
+  //                 "use strict";
+  //                 if (navLink) {
+  //                     navLink = false;
+  //                 } else {
+  //                     if ($(this).parent("div").hasClass("footer-links")) {
+  //                         if ($(window).width() < 980) {
+  //                             if ($(this).hasClass("active")) {
+  //                                 $(this).removeClass("active");
+  //                                 $(this).siblings(".accordion-content").slideUp(300);
+  //                             } else {
+  //                                 $(".accordion-toggle").removeClass("active");
+  //                                 $(this).addClass("active");
+  //                                 $(".accordion-content").slideUp(300);
+  //                                 $(this).siblings(".accordion-content").slideDown(300);
+  //                             }
+  //                         }
+  //                     } else {
+  //                         if ($(this).hasClass("active")) {
+  //                             $(this).removeClass("active");
+  //                             $(this).siblings(".accordion-content").slideUp(300);
+  //                         } else {
+  //                             $(".accordion-toggle").removeClass("active");
+  //                             $(this).addClass("active");
+  //                             $(".accordion-content").slideUp(300);
+  //                             $(this).siblings(".accordion-content").slideDown(300);
+  //                         }
+  //                     }
+  //                 }
+  //             });
+  //     });
+  // })(jQuery);
+  // sEARCH BAR
 
 
   $(document).click(function (e) {
