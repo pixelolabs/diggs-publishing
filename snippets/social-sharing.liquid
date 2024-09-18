@@ -31,36 +31,34 @@ shop.metafields.global.description_tag | url_param_escape }}{% else %}{{ shop.na
     </li>
   {% endif %}
 
-  {% comment %}
-    {% if settings.share_twitter %}
-      <li>
-        <a
-          target="_blank"
-          href="//twitter.com/share?text={{ shareTitle }}&amp;url={{ permalinkURL }}"
-          class="share-twitter"
-          title="{{ 'general.social.alt_text.share_on_twitter' | t }}"
-        >
-          {% include 'icon-social-twitter-black' %}
-          <span class="visually-hidden">{{ 'general.social.alt_text.share_on_twitter' | t }}</span>
-        </a>
-      </li>
-    {% endif %}
-  {% endcomment %}
-  {% comment %}
-    {% if settings.share_pinterest %}
-      <li>
-        <a
-          target="_blank"
-          href="http://pinterest.com/pin/create/link/?url={{ permalinkURL }}"
-          class="share-pinterest"
-          title="{{ 'general.social.alt_text.share_on_pinterest' | t }}"
-        >
-          {% include 'icon-social-pinterest-black' %}
-          <span class="visually-hidden">{{ 'general.social.alt_text.share_on_pinterest' | t }}</span>
-        </a>
-      </li>
-    {% endif %}
-  {% endcomment %}
+  {% if settings.share_twitter %}
+    <li>
+      <a
+        target="_blank"
+        href="//twitter.com/share?text={{ shareTitle }}&amp;url={{ permalinkURL }}"
+        class="share-twitter"
+        title="{{ 'general.social.alt_text.share_on_twitter' | t }}"
+      >
+        {% include 'icon-social-twitter-black' %}
+        <span class="visually-hidden">{{ 'general.social.alt_text.share_on_twitter' | t }}</span>
+      </a>
+    </li>
+  {% endif %}
+
+  {% if settings.share_pinterest %}
+    <li>
+      <a
+        target="_blank"
+        href="http://pinterest.com/pin/create/link/?url={{ permalinkURL }}"
+        class="share-pinterest"
+        title="{{ 'general.social.alt_text.share_on_pinterest' | t }}"
+      >
+        {% include 'icon-social-pinterest-black' %}
+        <span class="visually-hidden">{{ 'general.social.alt_text.share_on_pinterest' | t }}</span>
+      </a>
+    </li>
+  {% endif %}
+
   {% comment %}
     {% if settings.copy_link %}
       <li>
