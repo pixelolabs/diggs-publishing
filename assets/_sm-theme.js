@@ -840,7 +840,7 @@ jQuery(function () {
     }
   }); //RElated Article slider
 
-  var articleSectionSlider = new Swiper(".js__article-slider", {
+  var productSectionSlider = new Swiper(".js__article-slider", {
     slidesPerView: 3,
     spaceBetween: 30,
     // centeredSlides: true,
@@ -856,7 +856,7 @@ jQuery(function () {
       0: {
         slidesPerView: 1
       },
-      769: {
+      601: {
         slidesPerView: 2
       },
       1025: {
@@ -2889,10 +2889,8 @@ $(document).ready(function ($) {
 
     $(".pdp-slider").find(".slide").addClass("remove-slide").removeClass("swiper-slide").removeAttr("aria-label");
     $(".js__pdp-thumbnail-slider").find(".slide").addClass("remove-slide").removeClass("swiper-slide").removeAttr("aria-label");
-    $(".pdp-slider").find(".slide").children(".image-section").removeAttr("data-fancybox");
     $(".pdp-slider").find("." + thumbColorSelected.toLowerCase()).removeClass("remove-slide").addClass("swiper-slide");
     $(".js__pdp-thumbnail-slider").find("." + thumbColorSelected.toLowerCase()).removeClass("remove-slide").addClass("swiper-slide");
-    $(".pdp-slider").find("." + thumbColorSelected.toLowerCase()).children(".image-section").attr("data-fancybox", "product");
     pdpThumbnail.destroy();
     pdpSlider.destroy();
 
