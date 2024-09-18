@@ -525,7 +525,7 @@
                     .image-section,
                     .video-setion {
                         width: 407px !important;
-                        height: 336px !important;
+                        height: 407px !important;
                         @include MQ(MQ-840) {
                             width: 340px !important;
                             height: 300px !important;
@@ -540,8 +540,13 @@
                         }
                         @include MQ(MQ-768) {
                             width: 100% !important;
-                            height: 80vw !important;
+                            height: calc(100vw - 110px) !important;
                             border-radius: 0px;
+                        }
+                        @include MQ(MQ-480) {
+                         
+                            height: calc(100vw - 68px) !important;
+                           
                         }
                     }
                 }
@@ -627,11 +632,17 @@
                     margin-top: 0px !important;
                     opacity: 1 !important;
                     margin-left: 26px !important;
+
                     @include MQ(MQ-480) {
                         margin-left: 15px !important;
                         font-size: 17.6px !important;
                         letter-spacing: 0.53px !important;
                     }
+                }
+                .btn--primary[disabled] {
+                  
+                    opacity: 0.5 !important;
+                    margin-left: 0px !important;
                 }
                 // .okeReviews
                 //   .okeReviews-starRating--small
