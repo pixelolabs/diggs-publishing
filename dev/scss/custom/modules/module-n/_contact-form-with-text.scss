@@ -42,21 +42,21 @@
   //       top: -33px;
   //     }
   //   }
-  &:before {
-    position: absolute;
-    content: "";
-    width: 65px;
-    height: 87px;
-    left: 25%;
-    top: 80px;
-    background: url(kits-2.svg) no-repeat center / 65px;
-    z-index: 2;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
-    -webkit-animation-direction: alternate-reverse;
-    animation-timing-function: linear;
-    animation-name: kites;
-  }
+  // &:before {
+  //   position: absolute;
+  //   content: "";
+  //   width: 65px;
+  //   height: 87px;
+  //   left: 25%;
+  //   top: 80px;
+  //   background: url(kits-2.svg) no-repeat center / 65px;
+  //   z-index: 2;
+  //   animation-duration: 6s;
+  //   animation-iteration-count: infinite;
+  //   -webkit-animation-direction: alternate-reverse;
+  //   animation-timing-function: linear;
+  //   animation-name: kites;
+  // }
 }
 .contact-form-with-text {
   position: relative;
@@ -75,7 +75,20 @@
     bottom: 0;
     background: url(thread-multi-white.webp) no-repeat center / 100%;
     @include MQ(MQ-980) {
-      display: none;
+      bottom: 10px;
+      height: 673px;
+      width: 520px;
+    }
+    @include MQ(MQ-768) {
+      // bottom: auto;
+      bottom: 10px;
+      background-size: cover;
+      // width:;
+      width: 100%;
+      height: 80%;
+      left: 0px;
+      z-index: 0;
+      // background-position: center;
     }
   }
   &:after {
@@ -87,18 +100,49 @@
     z-index: 1;
     top: -58px;
     background: url(thread-white-2.svg) no-repeat center / 100%;
-    @include MQ(MQ-980) {
-      top: -220px;
-    }
-    @include MQ(MQ-500) {
-      top: -240px;
-      right: 0px;
-    }
+    // @include MQ(MQ-980) {
+    //   top: -220px;
+    // }
+    // @include MQ(MQ-500) {
+    //   top: -240px;
+    //   right: 0px;
+    // }
   }
   .container-1260 {
     padding-top: 162px;
     padding-bottom: 136px;
     position: relative;
+    &::after {
+      width: 124px;
+      height: 85px;
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 90px;
+      z-index: 2;
+      background: url(planet-orange.svg) no-repeat center/100%;
+      -webkit-animation-name: rotate;
+      animation-name: rotate;
+      -webkit-animation-duration: 10s;
+      animation-duration: 10s;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      display: none;
+      @include MQ(MQ-980) {
+        display: block;
+        right: 30px;
+        top: 60px;
+      }
+      @include MQ(MQ-768) {
+        // right: 00px;
+        width: 90px;
+        height: 75px;
+        transform: none;
+      }
+      @include MQ(MQ-480) {
+        right: 10px;
+      }
+    }
     @include MQ(MQ-980) {
       flex-wrap: wrap;
     }
@@ -114,6 +158,10 @@
     width: 68.66%;
     padding-right: 72px;
     position: relative;
+    form {
+      position: relative;
+      z-index: 3;
+    }
     @include MQ(MQ-1200) {
       padding-right: 40px;
       width: 60%;
@@ -124,57 +172,82 @@
       padding-bottom: 45px;
     }
     &::before {
-      width: 65.6px;
-      height: 87px;
-      content: "";
-      position: absolute;
-      left: 272px;
-      z-index: 1;
-      top: -8.7px;
-      transform: translateY(-100%);
-      background: url(kite-orange.webp) no-repeat center / 100%;
-      @include MQ(MQ-980) {
-        background-image: url(planet-orange.svg);
-        width: 57px;
-        height: 39.24px;
-        left: unset;
-        right: 110px;
-        top: -40px;
-      }
-      @include MQ(MQ-768) {
-        top: -11px;
-        right: 72px;
-      }
-      @include MQ(MQ-500) {
-        top: -21px;
-        right: 62px;
-      }
-    }
-    &::after {
       width: 64px;
       height: 51px;
       content: "";
       position: absolute;
-      top: -45.5px;
-      transform: translateY(-100%);
+      top: 30px;
+      -webkit-transform: translateX(-100%);
+      transform: translate(-100%);
       z-index: 1;
-      right: 83.33px;
-      background: url(icon-cloud.webp) no-repeat center / 100%;
+      left: -84px;
+      background: url(icon-cloud.webp) no-repeat center/100%;
+      -webkit-animation: 10s linear infinite;
       animation: 10s linear infinite;
+      -webkit-animation-name: animateCloud;
       animation-name: animateCloud;
-      @include MQ(MQ-980) {
-        right: unset;
-        left: 32px;
-        width: 40.83px;
-        height: 32.43px;
+      @include MQ(MQ-1300) {
+        left: -24px;
       }
       @include MQ(MQ-768) {
-        top: -23px;
+        left: 13px;
+        top: -54px;
+        width: 50px;
+        height: 43px;
+        transform: none;
       }
-      @include MQ(MQ-500) {
-        top: -36px;
-      }
+      // width: 65.6px;
+      // height: 87px;
+      // content: "";
+      // position: absolute;
+      // left: 272px;
+      // z-index: 1;
+      // top: -8.7px;
+      // transform: translateY(-100%);
+      // background: url(kite-orange.webp) no-repeat center / 100%;
+      // @include MQ(MQ-980) {
+      //   background-image: url(planet-orange.svg);
+      //   width: 57px;
+      //   height: 39.24px;
+      //   left: unset;
+      //   right: 110px;
+      //   top: -40px;
+      // }
+      // @include MQ(MQ-768) {
+      //   top: -11px;
+      //   right: 72px;
+      // }
+      // @include MQ(MQ-500) {
+      //   top: -21px;
+      //   right: 62px;
+      // }
     }
+    // &::after {
+    //   width: 124px;
+    //   height: 85px;
+    //   content: "";
+    //   position: absolute;
+    //   right: -20%;
+    //   top: -90px;
+    //   z-index: 1;
+    //   background: url(planet-orange.svg) no-repeat center/100%;
+    //   -webkit-animation-name: rotate;
+    //   animation-name: rotate;
+    //   -webkit-animation-duration: 10s;
+    //   animation-duration: 10s;
+    //   -webkit-animation-iteration-count: infinite;
+    //   animation-iteration-count: infinite;
+    //   @include MQ(MQ-1100) {
+    //     right: 0;
+    //     top: -50px;
+    //   }
+    //   @include MQ(MQ-768) {
+    //     right: 00px;
+    //     width: 90px;
+    //     height: 75px;
+    //     transform: none;
+    //   }
+    // }
   }
   .contact-info-section {
     text-align: left;

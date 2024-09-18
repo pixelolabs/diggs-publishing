@@ -323,6 +323,7 @@ footer {
       margin: 0 auto;
       justify-content: space-between;
       position: relative;
+      z-index: 6;
       &:before {
         position: absolute;
         content: "";
