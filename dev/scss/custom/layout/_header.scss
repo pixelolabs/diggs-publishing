@@ -26,10 +26,21 @@
   .header-logo {
     top: 0px !important;
   }
+  @include MQ(MQ-980) {
+    header {
+      .main-header.active {
+        .header-logo {
+          height: 70px;
+          width: 119px;
+          transition: 0.4s all ease;
+        }
+      }
+    }
+  }
   .navbar-collapse {
     @include MQ(MQ-980) {
       height: calc(100vh - 54px);
-      top: 72px !important;
+      top: 55px !important;
     }
   }
 }

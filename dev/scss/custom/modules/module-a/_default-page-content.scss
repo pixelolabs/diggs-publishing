@@ -2,7 +2,7 @@
   padding: 73px 0 100px;
   position: relative;
   &:before {
-    background: url(yellow-wave.webp) repeat-x center / 100%;
+    background: url(body-default-wave.svg) repeat-x center / 100%;
     // height: 200px;
     width: 100%;
     position: absolute;
@@ -11,15 +11,19 @@
     content: "";
     height: 214px;
     top: -158px;
-    background-size: contain;
+    // background-size: contain;
     z-index: 2;
-    filter: brightness(0) saturate(100%) invert(100%) sepia(56%) saturate(587%)
-      hue-rotate(316deg) brightness(105%) contrast(114%);
+    // filter: brightness(0) saturate(100%) invert(100%) sepia(56%) saturate(587%)
+    //   hue-rotate(316deg) brightness(105%) contrast(114%);
     // @include MQ(MQ-1440) {
     //   height: 114px;
     //   top: -97px;
     //   background-size: cover;
     // }
+    @media (min-width: 1440px) {
+      height: 260px;
+      top: -190px;
+    }
     @include MQ(MQ-1330) {
       top: -145px;
     }

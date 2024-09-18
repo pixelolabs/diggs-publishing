@@ -98,39 +98,45 @@ footer {
           width: 100%;
           height: 100%;
           position: relative;
+          overflow: hidden;
           // display: block;
-          &::after {
-            position: absolute;
-            display: block !important;
-            content: "";
-            width: 100%;
-            height: 0;
-            transition: 0.4s ease all;
-            left: 0;
-            bottom: 0;
-            z-index: 2;
-            background: linear-gradient(
-              180.22deg,
-              #d51f9100 -0.64%,
-              #d51f91 85.13%
-            );
-            @include MQ(MQ-768) {
-              background: linear-gradient(
-                180.22deg,
-                #d51f9100 -0.64%,
-                #d51f91 97.13%
-              );
-            }
-          }
+          // &::after {
+          //   position: absolute;
+          //   display: block !important;
+          //   content: "";
+          //   width: 100%;
+          //   height: 0;
+          //   transition: 0.4s ease all;
+          //   left: 0;
+          //   bottom: 0;
+          //   z-index: 2;
+          //   background: linear-gradient(
+          //     180.22deg,
+          //     #d51f9100 -0.64%,
+          //     #d51f91 85.13%
+          //   );
+          //   @include MQ(MQ-768) {
+          //     background: linear-gradient(
+          //       180.22deg,
+          //       #d51f9100 -0.64%,
+          //       #d51f91 97.13%
+          //     );
+          //   }
+          // }
           &:hover {
-            &::after {
-              height: 100%;
+            img {
+              transform: scale(1.2);
               transition: 0.4s ease all;
             }
+            // &::after {
+            //   height: 100%;
+            //   transition: 0.4s ease all;
+            // }
           }
           img {
             width: 100%;
             height: 100%;
+            transition: 0.4s ease all;
             object-fit: cover;
           }
         }
@@ -396,7 +402,8 @@ footer {
       .legal-menu {
         // margin-left: 80px;
         margin-top: 29px;
-        width: calc(100% - 886px);
+        // width: calc(100% - 886px);
+        max-width: 600px;
         @include MQ(MQ-768) {
           margin-top: 15px;
         }

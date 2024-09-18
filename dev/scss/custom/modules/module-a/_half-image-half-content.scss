@@ -267,6 +267,7 @@
       background: url("thread-orange.svg") no-repeat center / 100%;
       width: 221.6px;
       height: 182.06px;
+      z-index: 0;
     }
   }
   &::before {
@@ -558,7 +559,7 @@ display: none;
       }
     }
     .description {
-      max-width: 440px;
+      // max-width: 440px;
       width: 100%;
       @include MQ(MQ-768) {
         max-width: 100%;
