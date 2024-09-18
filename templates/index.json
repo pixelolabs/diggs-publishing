@@ -191,6 +191,7 @@
         },
         "logo_jCikGR": {
           "type": "logo",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/c5.png",
             "link": "",
