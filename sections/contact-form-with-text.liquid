@@ -108,14 +108,15 @@
           {% if settings.address != blank %}
             <li>
               <div class="title uppercase">Location:</div>
-
-              {% if settings.addresslink != blank %}
-                <a href="{{ settings.addresslink }}" title="address" target="_blank">
-              {% endif %}
-              <p>{{ settings.address }}</p>
-              {% if settings.addresslink != blank %}
-                </a>
-              {% endif %}
+              <div class="address">
+                {% if settings.addresslink != blank %}
+                  <a href="{{ settings.addresslink }}" title="address" target="_blank">
+                {% endif %}
+                <p>{{ settings.address }}</p>
+                {% if settings.addresslink != blank %}
+                  </a>
+                {% endif %}
+              </div>
             </li>
           {% endif %}
           {% if settings.email != blank %}
