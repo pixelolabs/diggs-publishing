@@ -1045,7 +1045,8 @@ jQuery(function () {
     grabCursor: false
   }, _defineProperty(_Swiper, "slidesPerView", 5), _defineProperty(_Swiper, "breakpoints", {
     0: {
-      slidesPerView: 2
+      slidesPerView: 2,
+      spaceBetween: 90
     },
     601: {
       slidesPerView: 3,
