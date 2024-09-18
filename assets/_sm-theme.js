@@ -534,7 +534,6 @@ function progressBar() {
     }).then(function (data) {
       totalAmount = data.total_price / 100;
       var freeShippingAmount = parseFloat($(".js__free-shipping-limit").html());
-      console.log("totalAmount" + totalAmount);
       $(".js__free-shipping__icon").removeClass("active");
       $(".js__free-gift-1__icon").removeClass("active");
       $(".js__free-gift-2__icon").removeClass("active");
@@ -560,7 +559,6 @@ function progressBar() {
 
       $(".js__free-shipping-remaning-amount").html(formatter.format(freeShippingRemaningAmount));
       $(".js__free-shipping__progress-bar").attr("data-percentage", freeShippingPercentage);
-      console.log("freeShippingPercentage" + freeShippingPercentage);
       /*Free gift 1 */
 
       if (freeShippingPercentage == 100) {
