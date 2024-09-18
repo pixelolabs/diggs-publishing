@@ -615,7 +615,7 @@ textarea.input--error {
     color: $color-black;
     display: flex !important;
     align-items: center;
-    .starting {
+    .starting,s {
       font-weight: normal !important;
     }
     span,
@@ -631,6 +631,9 @@ textarea.input--error {
       &:last-child {
         margin-right: 0;
       }
+    }
+    s {
+      opacity: 0.8;
     }
   }
   .btn--primary {
