@@ -79,12 +79,6 @@
     "inputsletterspacing": "1px",
     "inputsfontweight": "500",
     "inputstexttransform": "capitalize",
-    "tag1": "best seller",
-    "tagLabel1": "best seller",
-    "tagColor1": "#fcefef",
-    "tag2": "",
-    "tag3": "",
-    "product_recommendation_limit": "2",
     "freqBoughtTitle": "YOU MAY ALSO LIKE",
     "product_1": "i-am-a-gift",
     "product_2": "a-girl-named-rainbow",
@@ -116,6 +110,12 @@
     "popup_newsletter_title": "Join Our Mailing List",
     "popup_newsletter_des": "Sign Up for exclusive updates,  <br>new arrivals & insider-only discounts",
     "popup_newsletter_text_note": "No, thanks",
+    "tag1": "best seller",
+    "tagLabel1": "best seller",
+    "tagColor1": "#fcefef",
+    "tag2": "",
+    "tag3": "",
+    "product_recommendation_limit": "2",
     "freeProduct1": "free-gift",
     "emailAddress": "shop@store.com",
     "number": "1-888-819-4640",
@@ -343,6 +343,20 @@
         "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {
+        }
+      },
+      "15683396631634586217": {
+        "type": "shopify:\/\/apps\/inbox\/blocks\/chat\/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+        "disabled": true,
+        "settings": {
+          "button_color": "#000000",
+          "secondary_color": "#FFFFFF",
+          "ternary_color": "#6A6A6A",
+          "button_icon": "chat_bubble",
+          "button_text": "no_text",
+          "button_horizontal_position": "bottom_right",
+          "button_vertical_position": "lowest",
+          "greeting_message": ""
         }
       }
     },

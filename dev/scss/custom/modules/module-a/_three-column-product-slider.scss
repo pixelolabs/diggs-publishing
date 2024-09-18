@@ -180,11 +180,18 @@
       overflow: hidden !important;
       position: relative !important;
       // height: 304px;
-      height: 362px;
+      max-height: 362px;
+      height: calc(33.333vw - 84.66px);
       width: 100%;
-      @include MQ(MQ-480) {
-        height: 266px;
+      @include MQ(MQ-1024) {
+        height: calc(50vw - 101.5px);
+        max-height: none;
       }
+      @include MQ(MQ-768) {
+        height: calc(100vw - 72px);
+        max-height: 368px;
+      }
+      
       img {
         @include img-object-cover;
         visibility: visible !important;
@@ -443,6 +450,10 @@
     .slider {
       position: relative;
       overflow: hidden;
+      @include MQ(MQ-768) {
+        margin: 0 auto;
+        max-width: 380px;
+      }
     }
 
     .swiper-slide {
