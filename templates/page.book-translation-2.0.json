@@ -19,7 +19,8 @@
         "buttonText1": "Reach your Audience",
         "buttonLink1": "shopify:\/\/pages\/publishing-checkout",
         "button_bg": "pink",
-        "content_alignment": "left"
+        "content_alignment": "left",
+        "height": false
       }
     },
     "half_image_half_cards_section_B9RFyx": {
@@ -62,7 +63,7 @@
         "heading": "Meet Esther Barriga",
         "subTitle": "Our Linguistic Maestro",
         "description": "",
-        "image": "shopify:\/\/shop_images\/Meet_Esther_Barriga.png",
+        "image": "shopify:\/\/shop_images\/esther.jpg",
         "bottomdescription": "",
         "btnText": "",
         "btnLink": "",
@@ -81,7 +82,6 @@
         "content": "<p>Every captivating story deserves to spread its enchantment. With the depth and richness of the Spanish language, your story has the potential to touch many more hearts.<\/p>",
         "buttonText": "Translate Now",
         "buttonLink": "shopify:\/\/pages\/publishing-checkout",
-        "backgroundcolor": false,
         "bgColor": "#c192ff"
       }
     },
