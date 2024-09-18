@@ -366,14 +366,17 @@
         margin-bottom: 30px !important;
       }
 
+      
       .image-section {
-        height: 277px !important;
+        max-height: 324px !important;
+        height: calc(33.333vw - 96px) !important;
         @include MQ(MQ-980) {
-          height: calc(50vw - 189px) !important;
+          max-height: none !important;
+          height: calc(50vw - 80.5px) !important;
         }
       }
 
-      @include MQ(MQ-768) {
+      @include MQ(MQ-980) {
         width: calc(50% - 20px) !important;
         margin-left: 20px;
       }
@@ -381,15 +384,10 @@
         width: 100% !important;
         margin-left: 0px;
       }
-      @include MQ(MQ-768) {
-        .image-section {
-          max-height: none;
-          height: calc(50vw - 25.5px) !important;
-        }
-      }
+      
       @include MQ(MQ-600) {
         .image-section {
-          height: 61vw !important;
+          height: calc(100vw - 106px) !important;
         }
       }
     }
