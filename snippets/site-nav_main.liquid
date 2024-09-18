@@ -14,7 +14,7 @@
         <a
           href=" {{ link.url}}"
           title=" {{ link.title | escape }}"
-          class="site-nav__link none-980"
+          class="site-nav__link none-980 first-link"
           data-meganav-type="parent"
           aria-controls="MenuParent-{{ parent_index }}"
           aria-expanded="false"
@@ -31,7 +31,7 @@
         <a
           href=" {{ link.url}}"
           title=" {{ link.title | escape }}"
-          class="site-nav__link block-980"
+          class="site-nav__link block-980 "
           data-meganav-type="parent"
           aria-controls="MenuParent-{{ parent_index }}"
           aria-expanded="false"
@@ -39,7 +39,7 @@
             {%- if link.active %}aria-current="page" {% endif -%}
           {% endunless %}
         >
-          <span>{{ link.title | escape }}</span>
+          {{ link.title | escape }}
         </a>
         <button class="accordion-toggle  block-980">
           <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
@@ -173,7 +173,7 @@
         <a
           href=" {{ link.url}}"
           title="{{ link.title | escape }}"
-          class="{% if linkTitle contains 'support' %}site-nav__link none-980{%endif%}"
+          class="{% if linkTitle contains 'support' %}site-nav__link none-980{%endif%} first-link"
         >
           {{ link.title | escape }}
         </a>
