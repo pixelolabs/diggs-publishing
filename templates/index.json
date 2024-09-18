@@ -1,11 +1,20 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "HeroBanner": {
       "type": "home-hero-banner",
       "settings": {
         "color_scheme": "scheme-1",
-        "backgroundImage": "shopify:\/\/shop_images\/hero-baby.webp",
-        "backgroundImageMobile": "shopify:\/\/shop_images\/hero-baby.webp",
+        "backgroundImage": "shopify:\/\/shop_images\/ihiewd.webp",
+        "backgroundImageMobile": "shopify:\/\/shop_images\/ihiewd.webp",
         "pretitle": "Welcome to Diggs Publishing",
         "pretitle_color": "",
         "title": "Diverse Children’s Books collections",
