@@ -16,7 +16,7 @@
         "title": "Are you ready?",
         "description": "<p>Engage and inspire your students with Author  visits for grades PK-8!<\/p>",
         "buttonText1": "Book Now",
-        "buttonLink1": "#",
+        "buttonLink1": "https:\/\/calendly.com\/authorksd\/onsite-reading",
         "button_bg": "green",
         "content_alignment": "left",
         "height": false
@@ -62,7 +62,11 @@
         "content": "As a children's book author, I offer various types of school visits to meet the unique needs of different schools and grade levels. My author visits have been shown to have a profound impact on students, improving literacy, encouraging reading for pleasure, inspiring reluctant readers, enthusing pupils in their own writing, giving confidence, broadening knowledge of literature, allowing pupils to meet a favorite author, and providing an opportunity for children to ask questions. Additionally, author visits have a positive impact on teachers who can gain professionally and personally from the experience, providing new insights into literature, new methods for encouraging pupil engagement, and renewed enthusiasm for promoting reading for pleasure.",
         "buttonText": "",
         "buttonLink": "",
-        "section_class": ""
+        "section_class": "",
+        "paddingtop": 50,
+        "paddingtopmobile": 50,
+        "paddingbottom": 26,
+        "paddingbottomMobile": 26
       }
     },
     "half_image_half_content_gL8kEy": {
