@@ -54,7 +54,7 @@
     height: 214px;
     top: -158px;
     @include MQ(MQ-1330) {
-      top: -145px;
+      top: -137px;
     }
     @include MQ(MQ-768) {
       height: 155px;
@@ -145,6 +145,9 @@
           @include MQ(MQ-1100) {
             margin-right: -250px;
           }
+          @include MQ(MQ-980) {
+            margin-right: -100px;
+          }
           @include MQ(MQ-768) {
             width: 100%;
             max-width: 722px;
@@ -212,6 +215,9 @@
           }
           @include MQ(MQ-1100) {
             margin-left: -250px;
+          }
+          @include MQ(MQ-980) {
+            margin-right: -100px;
           }
           @include MQ(MQ-768) {
             width: 100%;
@@ -1020,6 +1026,9 @@ display: none;
         }
         @include MQ(MQ-1100) {
           margin-right: -250px;
+        }
+        @include MQ(MQ-980) {
+          margin-right: -100px;
         }
         @include MQ(MQ-768) {
           width: 100%;
