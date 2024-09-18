@@ -2241,7 +2241,8 @@ jQuery(function () {
         $(".main-header").addClass("active");
         $(".main-header").addClass("gradient");
       } else {
-        $(".main-header").removeClass("active"); // $(".main-header").removeClass("gradient");
+        $(".main-header").removeClass("active");
+        $(".main-header").removeClass("gradient");
       } // Add transparent header from index page when sub menu open
       // if ($("body").hasClass("fixed-header")) {
       //     $("body").removeClass("transparent-header");
