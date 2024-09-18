@@ -32,16 +32,18 @@
             <a href="mailto:{{ settings.email }}" title="mail id"> {{ settings.email }}</a>
           </li>
         {% endif %}
-        <li>
-          <div class="icon">{% include 'icon-address-contact' %}</div>
-          {% if settings.addresslink != blank %}
-            <a href="{{ settings.addresslink }}" title="address" target="_blank">
-          {% endif %}
-          <p>{{ settings.address }}</p>
-          {% if settings.addresslink != blank %}
-            </a>
-          {% endif %}
-        </li>
+        {% if settings.address != blank %}
+          <li>
+            <div class="icon">{% include 'icon-address-contact' %}</div>
+            {% if settings.addresslink != blank %}
+              <a href="{{ settings.addresslink }}" title="address" target="_blank">
+            {% endif %}
+            <p>{{ settings.address }}</p>
+            {% if settings.addresslink != blank %}
+              </a>
+            {% endif %}
+          </li>
+        {% endif %}
       </ul>
     </div>
     <div class="form-section text-left">
