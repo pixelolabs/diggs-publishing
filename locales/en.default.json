@@ -23,7 +23,9 @@
       "alt_text": {
         "share_on_facebook": "Share on Facebook",
         "share_on_twitter": "Share on X",
-        "share_on_pinterest": "Pin on Pinterest"
+        "share_on_pinterest": "Pin on Pinterest",
+         "share_on_instagram": "Share on Instagram",
+          "share_on_linkedin": "Share on Linkedin"
       },
       "links": {
         "twitter": "X (Twitter)",

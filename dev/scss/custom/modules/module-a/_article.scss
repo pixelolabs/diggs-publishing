@@ -456,9 +456,24 @@
       }
       ul {
         li {
+          margin-right: 15px;
+          &:last-child {
+            margin-right: 0;
+          }
           a {
             display: block;
             position: relative;
+            &:hover {
+              svg {
+                path:nth-child(1) {
+                  fill: $color-pink;
+                }
+                path:nth-child(2),
+                path:nth-child(3) {
+                  fill: $color-white;
+                }
+              }
+            }
             svg {
               position: relative;
               top: 3px;
@@ -635,7 +650,7 @@
   .artical-date-author {
     display: flex;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
     // flex-wrap: wrap;
     @include MQ(MQ-768) {
       flex-direction: column;
@@ -994,6 +1009,9 @@
       width: 422px;
       height: 700px;
       z-index: 1;
+      @include MQ(MQ-1200) {
+        left: auto;
+      }
     }
   }
   &:before {

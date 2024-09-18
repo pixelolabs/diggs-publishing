@@ -38,29 +38,41 @@
   //   padding-bottom: 160px;
   // }
   &:before {
-    background: url(cream-wave.svg) repeat-x top / 100%;
-    height: 200px;
+    background: url(cream-wave.svg) repeat-x center / 100%;
+    // height: 200px;
     width: 100%;
     position: absolute;
     left: 0;
-    top: -120px;
+    // top: -120px;
     content: "";
-    background-size: contain;
+    // background-size: contain;
     z-index: 2;
+    height: 214px;
+    top: -158px;
     // filter: brightness(0) saturate(100%) invert(100%) sepia(56%) saturate(587%)
     // hue-rotate(316deg) brightness(105%) contrast(114%);
-    @include MQ(MQ-1440) {
-      height: 114px;
-      top: -95px;
-      background-size: cover;
+    // @include MQ(MQ-1440) {
+    //   height: 114px;
+    //   top: -95px;
+    //   background-size: cover;
+    // }
+    // @include MQ(MQ-768) {
+    //   height: 75px;
+    //   top: -60px;
+    //   background-size: cover;
+    // }
+    @include MQ(MQ-1330) {
+      top: -145px;
+    }
+    @include MQ(MQ-980) {
+      height: 155px;
+      top: -100px;
     }
     @include MQ(MQ-768) {
-      height: 75px;
-      top: -60px;
-      background-size: cover;
-    }
-    @include MQ(MQ-500) {
       height: 65px;
+      top: -55px;
+      background-size: cover;
+      background-position: left;
     }
   }
   &:after {
@@ -574,7 +586,7 @@
         display: flex;
 
         align-items: center;
-        margin-top: 30px;
+        margin-top: 21px;
         flex-wrap: wrap;
         @include MQ(MQ-480) {
           flex-direction: column;
@@ -584,7 +596,7 @@
           display: flex;
           align-items: center;
           margin-right: 39px;
-          margin-bottom: 20px;
+          margin-bottom: 15px;
           svg {
             width: 13.5px;
             height: 15px;
@@ -605,7 +617,7 @@
           // margin-left: 39px;
           display: flex;
           align-items: center;
-          margin-bottom: 20px;
+          margin-bottom: 15px;
           @include MQ(MQ-480) {
             margin-left: 0;
             margin-top: 20px;

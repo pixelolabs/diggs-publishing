@@ -2307,6 +2307,17 @@
       },
       {
         "type": "checkbox",
+        "id": "share_insta",
+        "label": "Share on Instagram"
+      },
+      {
+        "type": "checkbox",
+        "id": "share_linkedin",
+        "label": "Share on Linkedin"
+      },
+    
+      {
+        "type": "checkbox",
         "id": "copy_link",
         "label": "Print"
       }

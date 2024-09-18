@@ -74,6 +74,9 @@
         &:hover {
           background: $color-white !important;
           color: $color-black !important;
+          span {
+            color: $color-black !important;
+          }
         }
       }
       .btn--quick-view {

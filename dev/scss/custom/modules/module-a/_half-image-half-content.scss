@@ -52,9 +52,9 @@
     // height: 176px;
     // top: -128px;
     height: 214px;
-    top: -160px;
+    top: -158px;
     @include MQ(MQ-1330) {
-      top: -130px;
+      top: -145px;
     }
     @include MQ(MQ-980) {
       height: 155px;
