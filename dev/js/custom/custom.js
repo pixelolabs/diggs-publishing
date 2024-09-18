@@ -154,7 +154,8 @@ var productSectionSlider = new Swiper(".js__article-slider", {
         slidesPerView: 5,
         breakpoints: {
             0: {
-                slidesPerView: 2
+                slidesPerView: 2,
+                spaceBetween: 90
             },
             601: {
                 slidesPerView: 3,
