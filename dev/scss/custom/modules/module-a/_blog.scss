@@ -534,7 +534,14 @@
         // display: none;
       }
       @include MQ(MQ-980) {
+        width: 500px;
+      }
+      @include MQ(MQ-840) {
+        width: 400px;
+      }
+      @include MQ(MQ-768) {
         width: 100%;
+
         margin-right: 0;
       }
       // .image-section {

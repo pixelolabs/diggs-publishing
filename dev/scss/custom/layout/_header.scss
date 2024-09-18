@@ -91,12 +91,16 @@
   }
   .swiper-initialized {
     overflow: hidden;
-    padding-left: 170px;
+   padding-left:   170px;
     @include MQ(MQ-768) {
-      padding-left: 122px;
+      width: calc(100% - 122px);
+      margin-left: 122px;
+      padding-left: 0px;
     }
     @include MQ(MQ-480) {
-      padding-left: 110px;
+      //padding-left: 110px;
+      width: calc(100% - 110px);
+      margin-left: 110px;
     }
     .swiper-slide {
       display: flex !important;
