@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "innerBanner": {
@@ -128,7 +137,7 @@
         "title": "When an unknown printer took a galley of type and scrambled",
         "content": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took<\/p>",
         "buttonText": "Book Now",
-        "buttonLink": "shopify:\/\/pages\/author-visits",
+        "buttonLink": "shopify:\/\/pages\/author-visits-old",
         "bgColor": "#648fff"
       }
     }
