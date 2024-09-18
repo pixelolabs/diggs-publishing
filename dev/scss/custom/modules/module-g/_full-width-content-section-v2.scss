@@ -225,9 +225,13 @@
       animation-duration: 10s;
       animation-iteration-count: infinite;
       @include MQ(MQ-768) {
-        width: 57px;
-        height: 40px;
+        width: 100px;
+        height: 70px;
         top: 70px;
+        right: 50px;
+      }
+      @include MQ(MQ-480) {
+        right: 30px;
       }
     }
   }

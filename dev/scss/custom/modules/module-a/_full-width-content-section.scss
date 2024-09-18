@@ -61,11 +61,27 @@
     height: 900px;
     content: "";
     position: absolute;
-
+    // -webkit-transform: rotate(35.9deg);
+    // transform: rotate(35.9deg);
+    // top: -129px;
+    // left: -148px;
     top: -42px;
     left: -13px;
     z-index: 0;
     background: url(thread-multi-white.webp) no-repeat center / 100%;
+    @include MQ(MQ-1100) {
+      width: 620px;
+      height: 773px;
+      content: "";
+      position: absolute;
+      left: 0px;
+      z-index: 0;
+      bottom: 0px;
+      top: -129px;
+      left: -148px;
+
+      transform: rotate(35.9deg);
+    }
     @include MQ(MQ-768) {
       display: none;
     }
