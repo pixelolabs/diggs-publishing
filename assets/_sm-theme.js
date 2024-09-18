@@ -2855,17 +2855,19 @@ var thirdOptionVariantValue = "";
 var selectedVariantID;
 $(document).ready(function ($) {
   /*Sold out*/
-  var soldOutProduct = $(".js__sold_product").attr("data-items");
-  var soldOutHours = $(".js__sold_product").attr("data-hours");
+  try {
+    var soldOutProduct = $(".js__sold_product").attr("data-items");
+    var soldOutHours = $(".js__sold_product").attr("data-hours");
 
-  if (soldOutProduct != "" && soldOutHours != "") {
-    var arraySoldOutProduct = soldOutProduct.split(",");
-    var arraySoldOutHours = soldOutHours.split(",");
-    var randomProduct = Math.floor(Math.random() * arraySoldOutProduct.length);
-    var randomHour = Math.floor(Math.random() * arraySoldOutHours.length);
-    $(".js__sold_product").find(".items-count").html(arraySoldOutProduct[randomProduct]);
-    $(".js__sold_product").find(".hours-num").html(arraySoldOutHours[randomHour]);
-  }
+    if (soldOutProduct != "" && soldOutHours != "") {
+      var arraySoldOutProduct = soldOutProduct.split(",");
+      var arraySoldOutHours = soldOutHours.split(",");
+      var randomProduct = Math.floor(Math.random() * arraySoldOutProduct.length);
+      var randomHour = Math.floor(Math.random() * arraySoldOutHours.length);
+      $(".js__sold_product").find(".items-count").html(arraySoldOutProduct[randomProduct]);
+      $(".js__sold_product").find(".hours-num").html(arraySoldOutHours[randomHour]);
+    }
+  } catch (_unused) {}
   /* if no varient then active class added in product image section*/
 
 
@@ -2944,12 +2946,12 @@ $(document).ready(function ($) {
       if (optionType == FilterType) {
         imageFilter(optionValue);
       }
-    } catch (_unused) {} // button  - Sold out and add to cart
+    } catch (_unused2) {} // button  - Sold out and add to cart
 
 
     try {
       SoldOutUnavailableOnColorSwatches(colorSelected);
-    } catch (_unused2) {} //color swatch - sold out working
+    } catch (_unused3) {} //color swatch - sold out working
 
   });
   $(".js__pdp-variant-select li.active").click();
@@ -3229,7 +3231,7 @@ $(document).ready(function ($) {
 
     try {
       colorSelected = colorSelected.toLowerCase();
-    } catch (_unused3) {}
+    } catch (_unused4) {}
   }
 
   function setColorSwatchOutofStock(prodColor, prodQuantity, prodAvailability) {
