@@ -147,7 +147,7 @@
         "content": "<p>Bring a unique learning experience to your school or community event with an author visit that promotes social and emotional learning through engaging storytelling. Perfect for enhancing curriculum themes around diversity, body safety, self-esteem, and self-respect, these visits offer interactive sessions that inspire young minds to discover and discuss important topics.<\/p>",
         "buttonText": "Book Now",
         "buttonLink": "https:\/\/calendly.com\/authorksd\/onsite-reading",
-        "buttonLinkTarget": false,
+        "buttonLinkTarget": true,
         "bgColor": "#8babff"
       }
     }
