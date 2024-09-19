@@ -56,7 +56,7 @@
         >
         {%- if show_tags_with_limits -%}
           <ul class="tags-wrapper">
-            {% for tag in articleRelated.tags limit: 1 %}
+            {% for tag in articleRelated.tags %}
               {% assign current = current_tags %}
               {% if current_tags == tag %}
                 <li class="tags">
