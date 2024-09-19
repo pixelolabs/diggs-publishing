@@ -36,6 +36,7 @@
             "description": "<p>As an author dedicated to promoting literacy and body safety education. I offer a range of programs that can be tailored to meet your specific needs.<br\/>My goal is to collaborate with you to align my books and presentations with your objectives and to complement the topics you are already teaching your students from PK - 8th grade.<br\/><br\/>My books cover a range of important themes such as confidence, manners, facing fears, overcoming obstacles, problem-solving, consent, and body safety. Almost all of my books are written in rhyme, making them engaging and useful for children learning to read.<\/p><p><br\/>I aim to make your experience with me a positive one, and seek to leave everyone feeling good about my visit to your school. In addition to school visits, I also offer readings of my books for preschools.<br\/><br\/>If you're interested in more information or booking a school visit, library visit, or speaking engagement, please don't hesitate to reach out via my contact form.<\/p>",
             "buttonText": "",
             "buttonLink": "",
+            "buttonLinkTarget": false,
             "background_color": "transparent-bg",
             "fontSize": false,
             "center": false
@@ -83,6 +84,7 @@
             "description": "<p>The Body Safety Wise presentation is a PK-8 curriculum that teaches students about body safety, consent, and boundaries. It includes an engaging introduction, a book reading, giveaways, book signing, and a brief Q&A.<br\/><br\/><strong>Benefits<\/strong><\/p><p>Promote and raise awareness about the importance of body safety education and literacy in your community through social media, school events, and other platforms.<br\/><br\/>Agree to at least one interview, or photoshoot, promoting body safety education and literacy.<br\/><br\/>Submit any feedback you have received from your community, report on your activities as an ambassador, including any events or activities you have hosted, any social media posts you have made, and any feedback you have received from your community.<\/p>",
             "buttonText": "Book Now",
             "buttonLink": "https:\/\/calendly.com\/authorksd\/onsite-reading",
+            "buttonLinkTarget": true,
             "background_color": "transparent-bg",
             "fontSize": false,
             "center": false
@@ -99,6 +101,7 @@
             "description": "<p>General Assembly Style Visit: These presentations are 45-60 minutes in length for elementary-aged children, usually in a classroom or library setting. This program is perfect for large groups of children PK-8. It includes an engaging introduction, a reading of selected books, giveaways, book signing, and a brief Q&A with the children.<br\/><br\/><strong>Benefits<\/strong><br\/><br\/>Promote and raise awareness about the importance of body safety education and literacy in your community through social media, school events, and other platforms.<br\/><br\/>Agree to at least one interview, or photoshoot, promoting body safety education and literacy.<br\/><br\/>Submit any feedback you have received from your community, report on your activities as an ambassador, including any events or activities you have hosted, any social media posts you have made, and any feedback you have received from your community.<\/p>",
             "buttonText": "Book Now",
             "buttonLink": "https:\/\/calendly.com\/authorksd\/onsite-reading",
+            "buttonLinkTarget": false,
             "background_color": "transparent-bg",
             "fontSize": false,
             "center": false
@@ -115,6 +118,7 @@
             "description": "<p>Customer visits are tailored to meet your school's unique needs. I provide engaging presentations for students in K-8, which include an interactive book reading, exciting giveaways, book signing, and a brief Q&A session..<br\/><br\/><strong>Benefits<\/strong><br\/><br\/>Promote and raise awareness about the importance of body safety education and literacy in your community through social media, school events, and other platforms.<br\/><br\/>Agree to at least one interview, or photoshoot, promoting body safety education and literacy.<br\/><br\/>Submit any feedback you have received from your community, report on your activities as an ambassador, including any events or activities you have hosted, any social media posts you have made, and any feedback you have received from your community.<\/p>",
             "buttonText": "Book Now",
             "buttonLink": "https:\/\/calendly.com\/authorksd\/onsite-reading",
+            "buttonLinkTarget": false,
             "background_color": "transparent-bg",
             "fontSize": false,
             "center": false
@@ -143,6 +147,7 @@
         "content": "<p>Bring a unique learning experience to your school or community event with an author visit that promotes social and emotional learning through engaging storytelling. Perfect for enhancing curriculum themes around diversity, body safety, self-esteem, and self-respect, these visits offer interactive sessions that inspire young minds to discover and discuss important topics.<\/p>",
         "buttonText": "Book Now",
         "buttonLink": "https:\/\/calendly.com\/authorksd\/onsite-reading",
+        "buttonLinkTarget": true,
         "bgColor": "#8babff"
       }
     }

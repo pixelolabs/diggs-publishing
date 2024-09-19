@@ -49,7 +49,12 @@
         "product_quantity_enable": false,
         "enable_payment_button": true,
         "onetimeText": "",
-        "subscribeText": ""
+        "subscribeText": "",
+        "show_sold_in": true,
+        "item_prd": "3,5,6,7,8,10,12,15",
+        "item_prds": "sold in last",
+        "hours_prs": "10,15,16,17,18,20,25,35",
+        "item_hours": "hours"
       }
     },
     "product_tab_section_g4EUiU": {
@@ -176,7 +181,6 @@
     "product_full_width_content_section_v2_bWNnmF": {
       "type": "product-full-width-content-section-v2",
       "settings": {
-        "icon": "{{ product.metafields.custom.full_width_content_icon.value }}",
         "title": "{{ product.metafields.custom.full_width_content_title.value }}",
         "description": "{{ product.metafields.custom.full_width_content_description | metafield_tag }}",
         "btnText": "{{ product.metafields.custom.full_width_content_button_text.value }}",
@@ -185,6 +189,7 @@
     },
     "product_reviews_section_HHXAiU": {
       "type": "product-reviews-section",
+      "disabled": true,
       "settings": {
       }
     },

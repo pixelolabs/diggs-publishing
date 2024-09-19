@@ -15,7 +15,7 @@
         "title": "Cart",
         "bannerImage": "shopify:\/\/shop_images\/Rectangle_2871_2x_259cdd64-c965-43a0-9eb6-bb12fe6f4d4c.jpg",
         "bannerImageM": "shopify:\/\/shop_images\/Rectangle_2871_2x_2.webp",
-        "description": "",
+        "description": "<p>Review your items, adjust quantities, and proceed to checkout when you're ready.<\/p>",
         "coupon_code_enable": true,
         "coupon_title": "Coupon Code",
         "coupon_content": "Coupon code will be applied on the checkout page"
