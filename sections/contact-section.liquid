@@ -47,13 +47,12 @@
       </ul>
     </div>
     <div class="form-section text-left">
-      <h2 class="medium ">{{ section.settings.title }}</h2>
       {%- assign formId = 'ContactForm' -%}
       {% form 'contact', id: formId %}
         {% include 'form-status', form: form, form_id: formId %}
-        <div class="half-and-half">
-          <div class="half">
-            <label for="{{ formId }}-subject"> How can we help you? *</label>
+        <div class="flex">
+          <div class="input-field half-width-col">
+            <label for="Subject"> How can we help you? *</label>
             <input
               type="text"
               id="{{ formId }}-subject"
@@ -62,8 +61,8 @@
               name="contact[Enquiry_Subject]"
             >
           </div>
-          <div class="half">
-            <label for="{{ formId }}-name"> Full Name *</label>
+          <div class="input-field half-width-col">
+            <label for="Full-name"> Full Name *</label>
             <input
               placeholder="How can we help you? *"
               type="text"
@@ -73,10 +72,8 @@
               value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}"
             >
           </div>
-        </div>
-        <div class="half-and-half">
-          <div class="half">
-            <label for="{{ formId }}-email"> Email Address *</label>
+          <div class="input-field half-width-col">
+            <label for="Email"> Email Address *</label>
             <input
               placeholder="Email Address*"
               class="email-field"
@@ -103,9 +100,8 @@
               </span>
             {%- endif -%}
           </div>
-
-          <div class="half">
-            <label for="{{ formId }}-phone"> Mobile Number *</label>
+          <div class="input-field half-width-col">
+            <label for="Mobile-number"> Mobile Number *</label>
             <input
               type="tel"
               id="{{ formId }}-phone"
@@ -116,23 +112,27 @@
               value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}"
             >
           </div>
+          <div class="textarea-field full-width-col">
+            <label for="Message"> Message</label>
+            <textarea
+              placeholder="Message"
+              rows="10"
+              id="{{ formId }}-message"
+              name="contact[{{ 'contact.form.message' | t }}]"
+            >
+              {% if form.body %}
+                {{ form.body }}{% endif %}
+            </textarea>
+          </div>
+          <div class="submit-field full-width-col">
+            <button
+              type="submit"
+              class="btn--primary"
+            >
+              Submit Now
+            </button>
+          </div>
         </div>
-        <label for="{{ formId }}-message"> Message</label>
-        <textarea
-          placeholder="Message"
-          rows="10"
-          id="{{ formId }}-message"
-          name="contact[{{ 'contact.form.message' | t }}]"
-        >
-          {% if form.body %}
-            {{ form.body }}{% endif %}
-        </textarea>
-        <button
-          type="submit"
-          class="btn--primary"
-        >
-          Submit Now
-        </button>
       {% endform %}
     </div>
   </div>
