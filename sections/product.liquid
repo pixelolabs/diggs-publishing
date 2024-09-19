@@ -33,19 +33,42 @@
     {%- endunless -%}
 
     <div class="container-1260 flex-wrap">
-      {% comment %}
+    
         <div class=" block-980">
-          <span class="product__pre-title hide"></span>
-          <h2 class="h1 product__title uppercase">
-            {% if product.metafields.product.display_name != blank %}
-              {{ product.metafields.product.display_name }}
-            {% else %}
-              {{ product.title }}
-            {% endif %}
-          </h2>
-          <p>Enhances your sleep & offers nutritional support</p>
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+           
+            {%- when 'title' -%}
+              <h2 class="h2 medium js__pdp-title uppercase">
+                {{ product.title | escape }}
+              </h2>
+              {% if section.settings.show_sold_in %}
+                <div data-soldOut-product class="sold_product js__sold_product" data-items="{{ section.settings.item_prd }}" data-hours="{{ section.settings.hours_prs }}">
+                    <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="fire" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-fire fa-w-12 fa-2x"><path fill="currentColor" d="M216 24.01c0-23.8-31.16-33.11-44.15-13.04C76.55 158.25 200 238.73 200 288c0 22.06-17.94 40-40 40s-40-17.94-40-40V182.13c0-19.39-21.86-30.76-37.73-19.68C30.75 198.38 0 257.28 0 320c0 105.87 86.13 192 192 192s192-86.13 192-192c0-170.29-168-192.85-168-295.99zM192 464c-79.4 0-144-64.6-144-144 0-28.66 8.56-64.71 24-88v56c0 48.52 39.48 88 88 88s88-39.48 88-88c0-64.27-88-120-64-208 40 88 152 121.77 152 240 0 79.4-64.6 144-144 144z" class=""></path></svg>
+                    <span class="items-count">2</span>
+                    {{section.settings.item_prds }}
+                    <span class="hours-num">8</span>
+                    {{section.settings.item_hours}}
+                </div>
+                {% endif %}
+
+            {% when 'price' %}
+              <div
+                class="product-single__prices js__product-single__prices"
+                itemprop="price"
+                content="{{ current_variant.price | divided_by: 100.00 }}"
+              >
+                {% if product.price < product.compare_at_price %}
+                  <s>{{ product.compare_at_price | money_without_trailing_zeros }}</s>
+                  <span>{{ product.price | money_without_trailing_zeros }}</span>
+                {% else %}
+                  <span> {{ product.price | money_without_trailing_zeros }}</span>
+                {% endif %}
+              </div>
+            {%- endcase -%}
+          {% endfor %}
         </div>
-      {% endcomment %}
+    
       <!-- Left Product Image Slider Section -->
 
       <div class="left-section">
@@ -68,7 +91,8 @@
               {%- when '@app' -%}
                 {% render block %}
               {%- when 'title' -%}
-                <h1 class="h2 medium js__pdp-title uppercase">
+                <div class="none-980">
+                <h1 class="h2 medium js__pdp-title uppercase ">
                   {{ product.title | escape }}
                 </h1>
 
@@ -80,9 +104,11 @@
                       <span class="hours-num">8</span>
                       {{section.settings.item_hours}}
                   </div>
+              
                   {% endif %}
-
+                </div>
               {% when 'price' %}
+                <div class="none-980">
                 <div
                   class="product-single__prices js__product-single__prices"
                   itemprop="price"
@@ -94,6 +120,7 @@
                   {% else %}
                     <span> {{ product.price | money_without_trailing_zeros }}</span>
                   {% endif %}
+                </div>
                 </div>
                 <!-- Product Short Description -->
               {% when 'description' %}
