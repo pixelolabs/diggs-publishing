@@ -430,20 +430,20 @@ var articleSectionSlider = new Swiper(".js__article-slider", {
     });
     /* GLOBAL
     Scroll to particular Div with # value */
-    // $('a[href^="#"]').on("click", function(event) {
-    //     var target = $(this.getAttribute("href"));
-    //     if (target.length) {
-    //         event.preventDefault();
-    //         $(".tab-head").hide();
-    //         $("html, body")
-    //             .stop()
-    //             .animate({
-    //                     scrollTop: target.offset().top - 150,
-    //                 },
-    //                 1000
-    //             );
-    //     }
-    // });
+    $('a[href^="#"]').on("click", function(event) {
+        var target = $(this.getAttribute("href"));
+        if (target.length) {
+            event.preventDefault();
+            $(".tab-head").hide();
+            $("html, body")
+                .stop()
+                .animate({
+                        scrollTop: target.offset().top - 150,
+                    },
+                    1000
+                );
+        }
+    });
 
     /* accordion working about content in small screen*/
     $(".js__accordian")

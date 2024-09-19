@@ -618,7 +618,8 @@
       position: relative;
       padding-bottom: 0 !important;
       float: right;
-      top: -30px;
+      // top: -30px;
+      margin-bottom: 20px;
       @include MQ(MQ-980) {
         float: none;
         left: 0;

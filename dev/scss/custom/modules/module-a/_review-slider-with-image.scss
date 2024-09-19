@@ -15,7 +15,7 @@
     // top: -118px;
     top: -96px;
     content: "";
-    z-index: 3;
+    z-index: 5;
   }
 
   &::after {
@@ -44,7 +44,7 @@
       content: "";
       transform: rotate(12deg);
       opacity: 0.4;
-      z-index: 3;
+      z-index: 5;
       // display: none;
       @include MQ(MQ-1100) {
         top: 0;
@@ -191,7 +191,7 @@
       position: absolute;
       content: "";
       left: 325px;
-      top: -4px;
+      top: 10px;
       background: url("star-large.webp") no-repeat center / 100%;
       animation-name: starRotate;
       animation-duration: 5s;
@@ -246,7 +246,7 @@
     flex: none;
     position: relative;
     margin-right: -190px;
-    z-index: 4;
+    z-index: 6;
     @include MQ(MQ-1280) {
       margin-right: 70px;
       width: 500px;

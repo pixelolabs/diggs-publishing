@@ -228,7 +228,7 @@ textarea.input--error {
     &::after {
       content: "";
       position: absolute;
-      
+
       width: 15px;
       height: 15px;
       right: 0;
@@ -599,7 +599,6 @@ textarea.input--error {
     }
   }
 
- 
   &__tags-status {
     z-index: 2;
     position: absolute;
@@ -853,7 +852,6 @@ textarea.input--error {
     margin-left: 0px;
     transform: rotate(180deg);
   }
-  
 }
 
 /* Video Popup and Play Button */
@@ -1026,7 +1024,7 @@ textarea.input--error {
       &:-webkit-autofill:hover,
       &:-webkit-autofill:focus,
       &:-webkit-autofill:active {
-        -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+        -webkit-box-shadow: 0 0 0 30px #ffc82b inset !important;
         -webkit-text-fill-color: $color-black;
         font-family: var(--font-family-primary) !important;
         font-size: 14px;

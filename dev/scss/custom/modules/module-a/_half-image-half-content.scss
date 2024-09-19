@@ -10,7 +10,27 @@
     content: "";
     z-index: 0;
   }
-
+  &.blue-wave {
+    .container-1260 {
+      &:before {
+        @include MQ(MQ-768) {
+          right: 0;
+          left: auto;
+          top: 20px;
+          background: url(icon-cloud.webp) no-repeat center / 100%;
+          -webkit-animation: 10s linear infinite;
+          animation: 10s linear infinite;
+          -webkit-animation-name: animateCloud;
+          animation-name: animateCloud;
+          width: 46px;
+          height: 36px;
+          position: absolute;
+          content: "";
+          display: block;
+        }
+      }
+    }
+  }
   &.blue-wave::before {
     // background: url("wave-sky-blue.svg") repeat-x left / 100%;
     background: url(wave-blue.svg) repeat-x top / 100%;
@@ -254,6 +274,7 @@
     }
   }
 }
+
 .half-image-half-content {
   position: relative;
   // z-index: 1;
@@ -301,6 +322,7 @@
     }
 
     position: relative;
+
     &::after {
       position: absolute;
       content: "";
@@ -313,9 +335,10 @@
       animation-duration: 5s;
       animation-iteration-count: infinite;
       animation-direction: alternate;
-      @include MQ(MQ-768) {
-        display: none;
-      }
+      // @include MQ(MQ-768) {
+      //   width: 21px;
+      //   height: 21px;
+      // }
     }
   }
   .video-section {
