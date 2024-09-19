@@ -57,10 +57,11 @@
         {%- if show_tags_with_limits -%}
           <ul class="tags-wrapper">
             {% for tag in articleRelated.tags limit: 1 %}
+              {% comment %} {% assign%} {% endcomment %}
               {% if current_tags contains tag %}
                 <li class="tags">
                   <span class="tag">
-                    {{- tag -}}
+                    {{- current_tags -}}
                   </span>
                 </li>
               {% else %}
