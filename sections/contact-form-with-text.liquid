@@ -22,7 +22,7 @@
             <div class="input-field half-width-col">
               <label for="Full-name"> Full Name *</label>
               <input
-                placeholder="How can we help you? *"
+                placeholder="Full Name *"
                 type="text"
                 id="{{ formId }}-name"
                 name="contact[{{ 'contact.form.name' | t }}]"
@@ -78,8 +78,7 @@
                 id="{{ formId }}-message"
                 name="contact[{{ 'contact.form.message' | t }}]"
               >
-                {% if form.body %}
-                  {{ form.body }}{% endif %}
+                {% if form.body %}{{ form.body }}{% endif %}
               </textarea>
             </div>
             <div class="submit-field full-width-col">
@@ -117,6 +116,7 @@
     </div>
   </div>
 </div>
+
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('ContactForm').addEventListener('submit', function (event) {
@@ -139,12 +139,15 @@
       });
 
       if (formIsValid) {
+        console.log('Form is valid, submitting...');
         event.target.submit();
+      } else {
+        console.log('Form is invalid, not submitting.');
       }
     });
 
     function resetErrorMessages() {
-      const errorMessages = document.querySelectorAll('.error-message');
+      const errorMessages = document.querySelectorAll('.input-error-message');
       errorMessages.forEach((errorMessage) => {
         errorMessage.parentNode.removeChild(errorMessage);
       });
