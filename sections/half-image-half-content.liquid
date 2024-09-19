@@ -225,6 +225,7 @@
                   title="Read More About {{ block.settings.buttonText }}"
                   aria-label="Read More About {{ block.settings.buttonText }}"
                   class="btn--primary green"
+                  target="{% if block.settings.buttonLinkTarget == true %} _blank {% else %} _self {% endif %}"
                 >
                   {{ block.settings.buttonText }}
                 </a>
