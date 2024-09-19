@@ -59,6 +59,7 @@
 
   <div class="article-template">
     <div class="container-1240 content">
+      <h2 class="article-title">{{ article.title }}</h2>
       <div class="tags">
         {% for tag in article.tags %}
           <a href="{{blog.url}}/tagged/{{ tag | handleize }}" class="tag">{{ tag }}</a>
