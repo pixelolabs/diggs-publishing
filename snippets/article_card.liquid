@@ -57,16 +57,17 @@
         {%- if show_tags_with_limits -%}
           {% assign full_url = request.host | append: request.path %}
           <ul class="tags-wrapper">
-            {% for tag in articleRelated.tags limit: 1 %}
-              {% assign current = current_tags %}
-              {% unless full_url contains '/tagged' %}
+            {% unless full_url contains '/tagged' %}
+              {% for tag in articleRelated.tags limit: 1 %}
+                {% assign current = current_tags %}
                 <li class="tags">
                   <span class="tag">
                     {{- tag -}}
                   </span>
                 </li>
-              {% endunless %}
-
+              {% endfor %}
+            {% endunless %}
+            {% for tag in articleRelated.tags %}
               {% if current_tags contains tag %}
                 <li class="tags">
                   <span class="tag">
