@@ -1,19 +1,8 @@
 <div
   class="product-wrapper"
 >
-  <a class="full-link" href="{{productRelated.url}}"> </a>
-   <!-- Custom Tags -->
-   {% if show_tags %}
-    <span class="product-card__tags-status">
-      {% include 'product_tags' with productRelated %}
-
-      {% if productRelated.compare_at_price > productRelated.price %}
-        <span class="tag sale">Sale</span>
-      {% endif %}
-    </span>
-  {% endif %}
   <div class="image-section">
-  
+    <a href="{{productRelated.url}}">
       {% if productRelated.images.size > 1 %}
         <img
           class="js__product-image-{{productRelated.id}} first-img"
@@ -38,9 +27,18 @@
           loading="lazy"
         >
       {% endif %}
-   
+    </a>
 
-   
+    <!-- Custom Tags -->
+    {% if show_tags %}
+      <span class="product-card__tags-status">
+        {% include 'product_tags' with productRelated %}
+
+        {% if productRelated.compare_at_price > productRelated.price %}
+          <span class="tag sale">Sale</span>
+        {% endif %}
+      </span>
+    {% endif %}
     
     {% if show_fav %}
     <!-- Swym Wishlist Plus EPI Button -->
@@ -65,13 +63,13 @@
 
     {% if show_title %}
       <h3 class="h5 product-card__product-title">
-     
+        <a href="{{productRelated.url}}">
           {% if productRelated.metafields.productInfo.product_name != blank %}
             {{ productRelated.metafields.prodctInfo.product_name }}
           {% else %}
             {{ productRelated.title }}
           {% endif %}
-       
+        </a>
       </h3>
     {% endif %}
     {% if productRelated.metafields.product.short_description != blank %}
