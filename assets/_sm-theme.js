@@ -1535,11 +1535,13 @@ jQuery(function () {
         $(".js__price-popup-" + vID).show();
 
         if (variantSoldout == "true") {
+          $("j.s__modal-popup-qty-" + pID).hide();
           $(".js__modal-popup-addtocart-" + pID).attr("disabled", "disabled"); //update the text for the add to cart button to sold out
 
           $(".js__modal-popup-addtocart-" + pID).html("Soldout"); //hide the price if it's sold out
         } else {
-          //update the text for the button to add to cart, if not sold out
+          $(".js__modal-popup-qty-" + pID).show(); //update the text for the button to add to cart, if not sold out
+
           $(".js__modal-popup-addtocart-" + pID).html("Add to Cart"); // if not sold out, then remove the attr disabled
 
           $(".js__modal-popup-addtocart-" + pID).removeAttr("disabled");
