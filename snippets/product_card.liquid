@@ -2,6 +2,16 @@
   class="product-wrapper"
 >
   <a href="{{productRelated.url}}"> </a>
+   <!-- Custom Tags -->
+   {% if show_tags %}
+    <span class="product-card__tags-status">
+      {% include 'product_tags' with productRelated %}
+
+      {% if productRelated.compare_at_price > productRelated.price %}
+        <span class="tag sale">Sale</span>
+      {% endif %}
+    </span>
+  {% endif %}
   <div class="image-section">
   
       {% if productRelated.images.size > 1 %}
@@ -30,16 +40,7 @@
       {% endif %}
    
 
-    <!-- Custom Tags -->
-    {% if show_tags %}
-      <span class="product-card__tags-status">
-        {% include 'product_tags' with productRelated %}
-
-        {% if productRelated.compare_at_price > productRelated.price %}
-          <span class="tag sale">Sale</span>
-        {% endif %}
-      </span>
-    {% endif %}
+   
     
     {% if show_fav %}
     <!-- Swym Wishlist Plus EPI Button -->
