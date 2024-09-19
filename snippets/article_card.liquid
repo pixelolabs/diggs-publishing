@@ -56,8 +56,14 @@
         >
         {%- if show_tags_with_limits -%}
           <ul class="tags-wrapper">
-            {% for tag in articleRelated.tags %}
+            {% for tag in articleRelated.tags limit: 1 %}
               {% if current_tags contains tag %}
+                <li class="tags">
+                  <span class="tag">
+                    {{- tag -}}
+                  </span>
+                </li>
+              {% else %}
                 <li class="tags">
                   <span class="tag">
                     {{- tag -}}
