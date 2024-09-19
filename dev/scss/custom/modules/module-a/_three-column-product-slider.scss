@@ -86,8 +86,8 @@
           margin-top: 10px;
         }
         @include MQ(MQ-480) {
-         width: auto !important;
-         height: 37px !important;
+          width: auto !important;
+          height: 37px !important;
           span {
             display: block !important;
           }
@@ -176,7 +176,8 @@
     &:hover {
       .product-wrapper {
         .content {
-          margin-top: -67px;
+          // margin-top: -67px;
+          transform: translateY(-67px);
         }
         &::before {
           opacity: 1;
@@ -199,7 +200,7 @@
         height: calc(100vw - 72px);
         max-height: 368px;
       }
-      
+
       img {
         @include img-object-cover;
         visibility: visible !important;
@@ -233,6 +234,7 @@
       }
       padding: 35px 24px 30px;
       margin-bottom: -67px;
+      transform: translateY(0px);
       @include MQ(MQ-350) {
         padding-bottom: 20px;
       }
@@ -251,19 +253,19 @@
       .tag {
         display: inline-block;
         margin-right: 10px;
-        background: $color-black !important;
-        color: $color-white !important;
-        font-size: 12px;
-        font-weight: bold;
+        width: fit-content !important;
+        font-size: 10px;
+        font-weight: 500;
         font-stretch: normal;
         font-style: normal;
-        line-height: normal;
-        letter-spacing: 0.09px;
+        line-height: 1.5;
+        letter-spacing: 1px;
         margin-right: 10px;
         text-align: center;
         text-transform: uppercase;
-        padding: 8px 16px;
-        border-radius: 50px;
+        padding: 6px 8px 4.5px !important;
+        border: solid 1px $color-yellow !important;
+        background: $color-white !important;
         font-family: var(--font-family-primary);
         &:last-child {
           margin-right: 0px;

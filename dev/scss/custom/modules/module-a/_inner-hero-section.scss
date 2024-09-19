@@ -73,10 +73,15 @@
     z-index: 1;
     top: 167px;
     background: url("thread-hero-white-2.webp") no-repeat center / 100%;
-    @include MQ(MQ-480) {
-      top: 167px;
+    @include MQ(MQ-768) {
       width: 98px;
-      height: 360px;
+      bottom: 0;
+      height: 206px;
+      top: auto;
+      background: url("thread-hero-white-2.webp") no-repeat top / 100%;
+    }
+    @include MQ(MQ-480) {
+      display: none;
     }
   }
   .container-1240 {
@@ -88,17 +93,17 @@
       content: "";
       position: absolute;
       top: -90px;
-      z-index: 1;
+      z-index: -1;
       right: 0;
       left: 0;
       margin: 0 auto;
-      background: url("icon-off-white-cloud.png") no-repeat center / 100%;
+      background: url("big-cloud.svg") no-repeat center / 100%;
       animation: 10s linear infinite;
       animation-name: animateCloud;
       @include MQ(MQ-768) {
         top: -20px;
         left: auto;
-        right: 20px;
+        right: 50px;
         width: 53px;
         height: 70px;
         background: url("kite.svg") no-repeat center / 100%;
