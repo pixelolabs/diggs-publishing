@@ -1535,7 +1535,7 @@ jQuery(function () {
         $(".js__price-popup-" + vID).show();
 
         if (variantSoldout == "true") {
-          $("j.s__modal-popup-qty-" + pID).hide();
+          $(".js__modal-popup-qty-" + pID).hide();
           $(".js__modal-popup-addtocart-" + pID).attr("disabled", "disabled"); //update the text for the add to cart button to sold out
 
           $(".js__modal-popup-addtocart-" + pID).html("Soldout"); //hide the price if it's sold out
