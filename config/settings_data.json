@@ -73,6 +73,7 @@
     "paramobilelineheight": "1.57",
     "paramobileletterspacing": "normal",
     "inputs_border_color": "#3b2900",
+    "inputs_text_color": "#3b2900",
     "show_input_label": true,
     "inputsfontsize": 12,
     "inputslineheight": "1.17",
