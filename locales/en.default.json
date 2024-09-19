@@ -47,8 +47,27 @@
       "previous": "Previous page"
     },
     "search": {
-      "search": "Search",
-      "reset": "Clear search term"
+      "no_results": "Проверете начина на изписване или опитайте с други думи.",
+      "empty_search_message": "Полето за търсене не може да бъде празно",
+      "results_with_count": {
+        "one": "{{ count }} резултат за „{{ terms }}“",
+        "other": "{{ count }} резултата за „{{ terms }}“"
+      },
+      "title": "Търсене в сайта ни",
+      "placeholder": "Търсене",
+      "submit": "Изпрати",
+      "close": "Затваряне на търсенето",
+      "heading": {
+        "one": "Резултат от търсенето",
+        "other": "Резултати от търсенето"
+      },
+      "search_for": "Търсене за",
+      "products": "Продукти",
+      "loading": "Зареждане",
+      "clear_search_term": "Изчисти думата за търсене",
+      "number_of_results": "{{ result_number }} от {{ results_count }}",
+      "number_of_results_found": "Открити са {{ results_count }} резултата",
+      "one_result_found": "Открит е 1 резултат"
     },
     "cart": {
       "view": "View cart ({{ count }})",
