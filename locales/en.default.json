@@ -47,27 +47,27 @@
       "previous": "Previous page"
     },
     "search": {
-      "no_results": "Проверете начина на изписване или опитайте с други думи.",
-      "empty_search_message": "Полето за търсене не може да бъде празно",
+      "no_results": "Try checking your spelling or using different words.",
+      "empty_search_message": "Search field cannot be empty",
       "results_with_count": {
-        "one": "{{ count }} резултат за „{{ terms }}“",
-        "other": "{{ count }} резултата за „{{ terms }}“"
+        "one": "{{ count }} result for “{{ terms }}”",
+        "other": "{{ count }} results for “{{ terms }}”"
       },
-      "title": "Търсене в сайта ни",
-      "placeholder": "Търсене",
-      "submit": "Изпрати",
-      "close": "Затваряне на търсенето",
+      "title": "Search our site",
+      "placeholder": "Search",
+      "submit": "Submit",
+      "close": "Close search",
       "heading": {
-        "one": "Резултат от търсенето",
-        "other": "Резултати от търсенето"
+        "one": "Search result",
+        "other": "Search results"
       },
-      "search_for": "Търсене за",
-      "products": "Продукти",
-      "loading": "Зареждане",
-      "clear_search_term": "Изчисти думата за търсене",
-      "number_of_results": "{{ result_number }} от {{ results_count }}",
-      "number_of_results_found": "Открити са {{ results_count }} резултата",
-      "one_result_found": "Открит е 1 резултат"
+      "search_for": "Search for",
+      "products": "Products",
+      "loading": "Loading",
+      "clear_search_term": "Clear search term",
+      "number_of_results": "{{ result_number }} of {{ results_count }}",
+      "number_of_results_found": "{{ results_count }} results found",
+      "one_result_found": "1 result found"
     },
     "cart": {
       "view": "View cart ({{ count }})",
