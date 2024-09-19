@@ -211,14 +211,28 @@ header {
       padding: 0 !important;
       .first-link {
         padding: 30px 25px;
+        align-items: center;
+
         @include MQ(MQ-1100) {
           padding: 30px 20px;
         }
+        @include MQ(MQ-980) {
+          font-size: 20px !important;
+          letter-spacing: 1px !important;
+        }
+        // svg {
+        //   top: 4px;
+        // }
         &:after {
           display: none;
         }
         span {
           position: relative;
+          // line-height: 1;
+          height: 20px;
+          @include MQ(MQ-980) {
+            height: auto;
+          }
           &:after {
             content: "";
             position: absolute;
@@ -571,7 +585,11 @@ header {
           }
           .site-nav__link {
             display: flex;
-            align-items: center;
+            // align-items: center;
+            svg {
+              position: relative;
+              margin-left: 3px;
+            }
           }
           .big-nav {
             // z-index: 9;
@@ -1256,9 +1274,10 @@ header {
           }
           .site-nav__link {
             display: flex;
-            align-items: center;
+            // align-items: center;
             svg {
               margin-left: 3px;
+              position: relative;
               path {
                 stroke: $color-white;
               }
@@ -1562,6 +1581,12 @@ header {
           }
         }
         li.has-big-nav {
+          .site-nav__link {
+            svg {
+              position: relative;
+              margin-left: 3px;
+            }
+          }
           .big-nav {
             // display: none;
             // position: absolute;

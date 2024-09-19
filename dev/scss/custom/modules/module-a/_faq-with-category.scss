@@ -99,7 +99,7 @@
         background-image: linear-gradient(to bottom, #fff8e3 0%, #fff8e1 100%);
         font-family: var(--font-family-primary);
         font-size: 14px;
-        font-weight: 600;
+        font-weight: 500;
         line-height: 1.29;
         letter-spacing: 1px;
         width: 100%;
@@ -146,6 +146,8 @@
         border: 0 !important;
         margin-bottom: 0;
         padding-top: 0;
+        font-size: 14px;
+        line-height: 1.57;
         &:last-child {
           padding-bottom: 0;
         }

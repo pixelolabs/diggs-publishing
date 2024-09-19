@@ -136,9 +136,9 @@
       background: url("icon-cloud.webp") no-repeat center / 100%;
       animation: 10s linear infinite;
       animation-name: animateCloud;
-      @include MQ(MQ-480) {
-        width: 40px;
-        height: 32px;
+      @include MQ(MQ-768) {
+        width: 50px;
+        height: 41px;
         top: auto;
         bottom: -47px;
         right: 25px;
@@ -160,7 +160,6 @@
         margin-bottom: 7px;
       }
     }
-   
   }
 }
 
@@ -248,7 +247,7 @@
     padding: 0 20px;
   }
   padding: 60px 0 200px 0px;
- 
+
   position: relative;
   background: $color-off-white-light;
   z-index: 3;
@@ -305,7 +304,7 @@
   }
   &::before {
     // background: url("graphic-wave-inner-banner.svg") repeat left / 2065px;
-    background: url(yellow-wave.webp) repeat-x top/100%;
+    background: url(body-default-wave.svg) repeat-x top/100%;
     background-size: contain;
     height: 200px;
     width: 100%;
@@ -314,8 +313,8 @@
     top: -125px;
     content: "";
     z-index: 2;
-    filter: brightness(0) saturate(100%) invert(100%) sepia(56%) saturate(587%)
-      hue-rotate(316deg) brightness(105%) contrast(114%);
+    // filter: brightness(0) saturate(100%) invert(100%) sepia(56%) saturate(587%)
+    //   hue-rotate(316deg) brightness(105%) contrast(114%);
     @include MQ(MQ-1440) {
       height: 114px;
       top: -97px;
@@ -381,7 +380,6 @@
         margin-bottom: 30px !important;
       }
 
-      
       .image-section {
         max-height: 324px !important;
         height: calc(33.333vw - 96px) !important;
@@ -399,7 +397,7 @@
         width: 100% !important;
         margin-left: 0px;
       }
-      
+
       @include MQ(MQ-600) {
         .image-section {
           height: calc(100vw - 106px) !important;
@@ -620,7 +618,7 @@
         span {
           border: none !important;
         }
-       // background: url("icon-arrow-right.png") no-repeat center / 8px !important;
+        // background: url("icon-arrow-right.png") no-repeat center / 8px !important;
       }
       .prev {
         margin-right: 10px;

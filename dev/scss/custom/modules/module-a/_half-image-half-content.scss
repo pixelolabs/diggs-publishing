@@ -13,14 +13,18 @@
 
   &.blue-wave::before {
     // background: url("wave-sky-blue.svg") repeat-x left / 100%;
-    background: url(wave-transparent.svg) repeat-x center / 100%;
+    background: url(wave-blue.svg) repeat-x top / 100%;
     // height: 176px;
     // top: -128px;
     height: 214px;
     top: -162px;
-    filter: brightness(0) saturate(100%) invert(100%) sepia(89%) saturate(7072%)
-      hue-rotate(175deg) brightness(108%) contrast(103%);
+    // filter: brightness(0) saturate(100%) invert(100%) sepia(89%) saturate(7072%)
+    //   hue-rotate(175deg) brightness(108%) contrast(103%);
+    // filter: brightness(0) saturate(100%) invert(100%) sepia(58%) saturate(1843%)
+    //   hue-rotate(173deg) brightness(103%) contrast(103%);
+
     @include MQ(MQ-1440) {
+      background: url(wave-blue.svg) repeat-x center / 100%;
       // height: 200px;
       top: -140px;
     }
@@ -41,8 +45,8 @@
     //   background-size: cover;
     // }
     @include MQ(MQ-768) {
-      height: 65px;
-      top: -55px;
+      height: 119px;
+      top: -61px;
       background-size: cover;
       background-position: left;
     }
@@ -546,7 +550,10 @@
       animation-direction: alternate;
       width: 37px;
       height: 47px;
-      z-index: -1;
+      z-index: 0;
+      @include MQ(MQ-980) {
+        bottom: -70px;
+      }
       @include MQ(MQ-768) {
         display: none;
       }
@@ -875,6 +882,12 @@
 .body-safety-1,
 .author-visit-1 {
   overflow-x: clip;
+  &:before {
+    z-index: 2;
+  }
+  .content:before {
+    z-index: 3;
+  }
   @include MQ(MQ-768) {
     margin-bottom: -20px;
   }
@@ -1054,7 +1067,7 @@
   }
   .transparent-wave {
     &:before {
-     // background-image: url(yellow-wave-2.svg);
+      // background-image: url(yellow-wave-2.svg);
       top: -70px;
       transform: rotate(1.35deg);
     }

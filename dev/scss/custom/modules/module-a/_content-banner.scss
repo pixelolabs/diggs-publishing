@@ -6,7 +6,7 @@
     padding: 0 12px;
   }
   &::before {
-    background: url("yellow-wave.webp") repeat left / 1327px;
+    background: url("yellow-wave.webp") repeat-x left / 1327px;
     height: 156.5px;
     width: 100%;
     position: absolute;
@@ -118,9 +118,7 @@
       z-index: 1;
       top: 34px;
       background: url("icon-vector.webp") no-repeat center / 100%;
-      animation-name: blink;
-      animation-duration: 3s;
-      animation-iteration-count: infinite;
+
       // animation-direction: alternate;
       @include MQ(MQ-768) {
         display: none;
@@ -175,9 +173,7 @@
       z-index: 1;
       top: -3px;
       background: url("icon-vector.webp") no-repeat center / 100%;
-      animation-name: blink;
-      animation-duration: 3s;
-      animation-iteration-count: infinite;
+
       @include MQ(MQ-768) {
         display: none;
       }
