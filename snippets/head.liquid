@@ -24,7 +24,7 @@
   &ndash; {{ shop.name }}
 {%- endunless -%}
 {%- endcapture -%}
-<title>{{ seo_title | strip }}</title>
+<title meta="{{ meta_tags }}">{{ seo_title | strip }}</title>
 
 {%- if page_description -%}
   <meta name="description" content="{{ page_description | escape }}">
