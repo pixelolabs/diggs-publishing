@@ -17,6 +17,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    color: $color-pink;
     @include MQ(MQ-480) {
       margin-bottom: 10px;
     }
@@ -28,10 +29,11 @@
     }
     span{
       margin: 0 5px;
+
     }
   }
   .inner {
-    background: $color-off-white-light;
+    background: #fffff6;
     padding: 45px 0 210px;
     position: relative;
     // &::before {
@@ -105,15 +107,20 @@
   }
 
   h1,
-  .h2 {
+  h2 {
     margin-bottom: 20px;
+   
     @include MQ(MQ-980) {
       // text-align: center;
       // margin-bottom: 0px;
       max-width: 100%;
-      line-height: normal !important;
-      margin-bottom: 10px !important;
-      font-size: 23px !important;
+      
+    }
+  }
+  h1{
+    font-size:40px;
+    @include MQ(MQ-480) {
+      font-size:30px;
     }
   }
   .description {
@@ -123,14 +130,12 @@
       margin-bottom: 0;
     }
     p {
-      font-size: 15px;
+     
       font-weight: normal;
       line-height: 1.33;
       letter-spacing: normal;
       display: inline;
-      @include MQ(MQ-480) {
-        font-size: 14px;
-      }
+      
     }
     a,
     .more-link {
@@ -371,7 +376,7 @@
       width: 100%;
       max-width: 100%;
       padding-left: 0px;
-      margin-top: 0px;
+      margin-top: 15px;
     }
     // @include MQ(MQ-480) {
     //   margin-top: 15px;
@@ -489,7 +494,7 @@
       color: $color-black;
       margin-bottom: 12.3px;
       @include MQ(MQ-480) {
-        font-size: 10px;
+        font-size: 11px;
       }
     }
   }
@@ -613,7 +618,7 @@
 
         @include MQ(MQ-480) {
           margin-bottom: 10.3px;
-          font-size: 10px;
+          font-size: 11px;
           min-width: fit-content;
           padding: 11px !important;
           // margin-right: 0;
@@ -808,7 +813,7 @@
       letter-spacing: 1px;
       color: $color-black;
       @include MQ(MQ-768) {
-        font-size: 10px;
+        font-size: 11px;
       }
     }
   }
@@ -907,9 +912,7 @@
   padding: 15px 0 00px;
   //   height: 620px;
   overflow: hidden;
-  @include MQ(MQ-480) {
-    padding: 9px 0 00px;
-  }
+ 
   // @include MQ(MQ-980) {
   //   display: none;
   // }
@@ -1573,7 +1576,7 @@
         max-height: none !important;
         min-height: auto !important;
         font-family: var(--font-family-primary) !important;
-        font-size: 10px !important;
+        font-size: 11px !important;
         font-weight: 500 !important;
         font-stretch: normal;
         font-style: normal;
