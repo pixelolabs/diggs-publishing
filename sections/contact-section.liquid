@@ -65,10 +65,9 @@
           <div class="half">
             <label for="{{ formId }}-name"> Full Name *</label>
             <input
-              placeholder="How can we help you? *"
               type="text"
               id="{{ formId }}-name"
-              name="contact[{{ 'contact.form.name' | t }}]"
+              name="contact[name]"
               aria-required="true"
               value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}"
             >
@@ -110,7 +109,7 @@
               type="tel"
               id="{{ formId }}-phone"
               placeholder="Phone Number"
-              name="contact[Phone]"
+              name="contact[phone]"
               pattern="[0-9\-]*"
               aria-required="true"
               value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}"
@@ -122,7 +121,7 @@
           placeholder="Message"
           rows="10"
           id="{{ formId }}-message"
-          name="contact[{{ 'contact.form.message' | t }}]"
+          name="contact[message]"
         >
           {% if form.body %}
             {{ form.body }}{% endif %}
@@ -137,7 +136,6 @@
     </div>
   </div>
 </div>
-
 {% schema %}
 {
   "name": "Contact Section",

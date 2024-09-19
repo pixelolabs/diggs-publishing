@@ -104,9 +104,8 @@
   .thumb-images {
     position: relative;
     width: 84px;
-    height: 84px;
     margin: 0 auto;
-    margin-bottom: 34px;
+    margin-bottom: 20px;
     opacity: 0;
     img {
       @include img-object-contain;
