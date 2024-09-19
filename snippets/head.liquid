@@ -13,9 +13,11 @@
 {%- else -%}
   {{ page_title }}
 {%- endif -%}
+{%comment%}
 {%- if current_tags -%}
   {%- assign meta_tags = current_tags | join: ', ' -%} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags -}}
 {%- endif -%}
+ {%endcomment%}
 {%- if current_page != 1 -%}
   &ndash; {{ 'general.meta.page' | t: page: current_page }}
 {%- endif -%}
