@@ -1537,10 +1537,10 @@ jQuery(function () {
         if (variantSoldout == "true") {
           $(".js__modal-popup-addtocart-" + pID).attr("disabled", "disabled"); //update the text for the add to cart button to sold out
 
-          $(".js__modal-popup-addtocart-text-" + pID).html("Soldout"); //hide the price if it's sold out
+          $(".js__modal-popup-addtocart-" + pID).html("Soldout"); //hide the price if it's sold out
         } else {
           //update the text for the button to add to cart, if not sold out
-          $(".js__modal-popup-addtocart-text-" + pID).html("Add to Cart"); // if not sold out, then remove the attr disabled
+          $(".js__modal-popup-addtocart-" + pID).html("Add to Cart"); // if not sold out, then remove the attr disabled
 
           $(".js__modal-popup-addtocart-" + pID).removeAttr("disabled");
         } // update the variant ID for the data-variant-id
