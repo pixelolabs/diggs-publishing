@@ -1,9 +1,8 @@
 <div
   class="product-wrapper"
 >
-  <a href="{{productRelated.url}}">
   <div class="image-section">
-   
+    <a href="{{productRelated.url}}">
       {% if productRelated.images.size > 1 %}
         <img
           class="js__product-image-{{productRelated.id}} first-img"
@@ -28,7 +27,7 @@
           loading="lazy"
         >
       {% endif %}
-   
+    </a>
 
     <!-- Custom Tags -->
     {% if show_tags %}
@@ -64,13 +63,13 @@
 
     {% if show_title %}
       <h3 class="h5 product-card__product-title">
-      
+        <a href="{{productRelated.url}}">
           {% if productRelated.metafields.productInfo.product_name != blank %}
             {{ productRelated.metafields.prodctInfo.product_name }}
           {% else %}
             {{ productRelated.title }}
           {% endif %}
-       
+        </a>
       </h3>
     {% endif %}
     {% if productRelated.metafields.product.short_description != blank %}
@@ -102,26 +101,27 @@
   {% endif %}
 {% endfor %}
 {% if all_out_of_stock %}
-  <button
+  <a
     class="btn--atc"
     title="{{ productRelated.title }}"
     href="javascript:;"
     
     title="Shop {{productRelated.title}}"
     data-id="{{productRelated.id}}"
-    >Sold Out</button
+    >Sold Out</a
   >
         {% else %}
-        <button
+        <a
           class="btn--atc js__card-add-to-cart"
           href="javascript:;"
           
           title="Shop {{productRelated.title}}"
           data-variant-id="{{current_variant.id}}"
-          >Add To Cart</button>
+          >Add To Cart</a
+        >
        
 {% endif %}
-    <button
+    <a
       class="btn--quick-view rimary js__quick-view-click"
       title="{{ productRelated.title }}"
       href="javascript:;"
@@ -130,8 +130,8 @@
       data-slider_main="{%- for img in productRelated.images -%}{{- img | img_url: '355x355' -}}|{%- endfor -%}"
       data-slider_thumb="{%- for img in productRelated.images -%}{{- img | img_url: '150x150' -}}|{%- endfor -%}"
       data-var_images="{%- for var in productRelated.variants -%}{{- var.image | img_url: '150x150' -}}|{%- endfor -%}"
-      ><span>Quick View</span></button></div>
+      ><span>Quick View</span></a
+    ></div>
     {% endif %}
-  </a>
   </div>
 </div>
