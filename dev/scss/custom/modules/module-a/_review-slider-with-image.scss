@@ -1,6 +1,6 @@
 .review-slider-with-image {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   background: $color-off-white;
   // background: #fff8e3;
   overflow-x: clip;
@@ -15,7 +15,7 @@
     // top: -118px;
     top: -96px;
     content: "";
-    z-index: 1;
+    z-index: 3;
   }
 
   &::after {
@@ -44,7 +44,7 @@
       content: "";
       transform: rotate(12deg);
       opacity: 0.4;
-      z-index: 1;
+      z-index: 3;
       // display: none;
       @include MQ(MQ-1100) {
         top: 0;
@@ -199,7 +199,7 @@
       animation-direction: alternate;
       width: 30px;
       height: 35px;
-      z-index: 2;
+      z-index: 3;
       @include MQ(MQ-768) {
         top: 0;
         right: 0;
@@ -231,7 +231,6 @@
         color: $color-orange;
         margin-bottom: 20px;
         @include MQ(MQ-480) {
-        
           margin-bottom: 10px;
         }
       }
@@ -247,6 +246,7 @@
     flex: none;
     position: relative;
     margin-right: -190px;
+    z-index: 4;
     @include MQ(MQ-1280) {
       margin-right: 70px;
       width: 500px;
@@ -281,7 +281,6 @@
       @include MQ(MQ-1280) {
         width: 500px;
         height: 424px;
-      
       }
       @include MQ(MQ-980) {
         width: 500px;

@@ -20,6 +20,7 @@ footer {
     left: 0;
     top: -125px;
     background-size: contain;
+    z-index: 5;
 
     @include MQ(MQ-1280) {
       top: -100px;
@@ -48,6 +49,7 @@ footer {
     top: -70px;
     left: 25%;
     background-size: contain;
+    z-index: 5;
     @include MQ(MQ-480) {
       width: 60px;
       height: 45px;
@@ -250,6 +252,7 @@ footer {
       top: -30px;
       right: 18%;
       background-size: contain;
+      // z-index: 5;
       @include MQ(MQ-480) {
         width: 45.95px;
         height: 37.98px;

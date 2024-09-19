@@ -122,14 +122,26 @@
     }
     &:hover,
     &:focus {
-      filter: brightness(0) saturate(100%) invert(20%) sepia(100%)
-        saturate(2354%) hue-rotate(304deg) brightness(92%) contrast(97%);
+      svg {
+        path:nth-child(1) {
+          fill: $color-black;
+        }
+        path:nth-child(2) {
+          stroke: $color-white;
+        }
+        path:nth-child(3) {
+          stroke: $color-white;
+        }
+      }
     }
     svg {
       width: 20px;
       height: 20px;
       position: relative;
       top: 2px;
+      path {
+        fill: transparent;
+      }
       @include MQ(MQ-480) {
         width: 16px;
         height: 16px;
@@ -450,7 +462,7 @@ header {
       border: 2px solid $color-black !important;
       @include MQ(MQ-980) {
         max-width: 100%;
-        padding: 10px 52px 12px 16px;
+        padding: 11px 52px 12px 16px;
         border: 1px solid $color-black !important;
         height: 40px;
         background-color: transparent !important;
@@ -464,7 +476,7 @@ header {
 
         color: $color-black;
         @include MQ(MQ-980) {
-          font-size: 12px;
+          font-size: 14px;
           color: $color-black !important;
         }
       }

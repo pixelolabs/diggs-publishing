@@ -64,6 +64,7 @@
           <a href="{{blog.url}}/tagged/{{ tag | handleize }}" class="tag">{{ tag }}</a>
         {% endfor %}
       </div>
+      <h2 class="article-main-title">{{ article.title }}</h2>
       <div class="artical-date-author">
         {% if section.settings.blog_show_date %}
           <div class="date-category-section">
@@ -117,7 +118,7 @@
           {% endif %}
         </div>
         {% if section.settings.link != blank %}
-          <a href="{{ section.settings.linkUrl }}" class="link--primary">{{ section.settings.link }}</a>
+          <a href="{{ section.settings.linkUrl }}" class="link--primary ipad-none">{{ section.settings.link }}</a>
         {% endif %}
       </div>
 
@@ -155,6 +156,9 @@
           </div>
         </div>
       </div>
+      {% if section.settings.link != blank %}
+        <a href="{{ section.settings.linkUrl }}" class="link--primary ipad-block">{{ section.settings.link }}</a>
+      {% endif %}
     </div>
   </div>
 
