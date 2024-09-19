@@ -59,13 +59,14 @@
           <ul class="tags-wrapper">
             {% for tag in articleRelated.tags %}
               {% assign current = current_tags %}
-              {% if current_page is blog %}
+              {% unless full_url contains '/tagged' %}
                 <li class="tags">
                   <span class="tag">
                     {{- tag -}}
                   </span>
                 </li>
-              {% endif %}
+              {% endunless %}
+
               {% if current_tags contains tag %}
                 <li class="tags">
                   <span class="tag">
