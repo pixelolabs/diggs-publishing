@@ -20,6 +20,7 @@
               title="Read More About {{ section.settings.title }}"
               aria-label="Read More About {{ section.settings.title }}"
               class="btn--primary yellow"
+              target="{% if section.settings.buttonLinkTarget == true %} _blank {% else %} _self {% endif %}"
             >
               {{ section.settings.buttonText -}}
             </a>
@@ -64,6 +65,12 @@
       "type": "url",
       "id": "buttonLink",
       "label": "Button Link"
+    },
+    {
+      "type": "checkbox",
+      "id": "buttonLinkTarget",
+      "label": "Button Link Target",
+      "info": "Check the box to target the new tab of the browser"
     },
     {
       "type": "header",
