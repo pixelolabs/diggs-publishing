@@ -59,7 +59,7 @@
           <ul class="tags-wrapper">
             {% unless full_url contains '/tagged' %}
               {% for tag in articleRelated.tags limit: 1 %}
-                {% assign current = current_tags %}
+                {% comment %} {% assign current = current_tags %} {% endcomment %}
                 <li class="tags">
                   <span class="tag">
                     {{- tag -}}
@@ -71,7 +71,7 @@
               {% if current_tags contains tag %}
                 <li class="tags">
                   <span class="tag">
-                    {{- current -}}
+                    {{- tag -}}
                   </span>
                 </li>
               {% endif %}
