@@ -160,7 +160,7 @@
         {% if productData.available %}
           <div class="product__actions flex">
             <div class="btn-quantity-outer flex">
-              <div class="action action--qty">
+              <div class="action action--qty js__modal-popup-qty-{{productData.id}}">
                 <div class="qty js__popup-quantity quantity-outer">
                   <button class="minus-qty js-plus-minus-qty" data-type="minus">{% render 'icon-minus' %}</button>
                   <input
@@ -175,7 +175,8 @@
                 </div>
               </div>
               <div class="action action--atc">
-                <button data-id="{{productData.id}}" class="btn--primary yellow js__modal-popup-addtocart js__modal-popup-addtocart-{{productData.id}}">Add To Cart
+                {%- assign current_variant = productData.selected_or_first_available_variant -%}
+                <button data-variant-id="{{current_variant.id}}"  data-id="{{productData.id}}" class="btn--primary yellow js__modal-popup-addtocart js__modal-popup-addtocart-{{productData.id}}">Add To Cart
                 </button>
               </div>
             </div>

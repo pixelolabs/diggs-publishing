@@ -1535,12 +1535,14 @@ jQuery(function () {
         $(".js__price-popup-" + vID).show();
 
         if (variantSoldout == "true") {
+          $(".js__modal-popup-qty-" + pID).hide();
           $(".js__modal-popup-addtocart-" + pID).attr("disabled", "disabled"); //update the text for the add to cart button to sold out
 
-          $(".js__modal-popup-addtocart-text-" + pID).html("Soldout"); //hide the price if it's sold out
+          $(".js__modal-popup-addtocart-" + pID).html("Soldout"); //hide the price if it's sold out
         } else {
-          //update the text for the button to add to cart, if not sold out
-          $(".js__modal-popup-addtocart-text-" + pID).html("Add to Cart"); // if not sold out, then remove the attr disabled
+          $(".js__modal-popup-qty-" + pID).show(); //update the text for the button to add to cart, if not sold out
+
+          $(".js__modal-popup-addtocart-" + pID).html("Add to Cart"); // if not sold out, then remove the attr disabled
 
           $(".js__modal-popup-addtocart-" + pID).removeAttr("disabled");
         } // update the variant ID for the data-variant-id
@@ -1587,8 +1589,11 @@ jQuery(function () {
   // })
 
   $(document).on("click", ".js__modal-popup-addtocart", function (e) {
+    console.log("click");
     var pID = $(this).attr("data-id");
+    console.log("pID" + pID);
     var selectedVariantID = $(this).attr("data-variant-id");
+    console.log("pID" + selectedVariantID);
     var quantity = parseInt($(".js-quantity-selector-" + pID).val());
     var recharge = $(".js__rc_radio_options-" + pID).html();
     var items = [];
@@ -1619,6 +1624,7 @@ jQuery(function () {
 
     CartJS.addItems(items, {
       success: function success(response, textStatus, jqXHR) {
+        console.log("success");
         $(".modal-quick-view").hide();
 
         if (getglobalLib("Mini_Cart") == "yes") {
@@ -1631,6 +1637,7 @@ jQuery(function () {
       // Define an error callback to display an error message.
       error: function error(jqXHR, textStatus, errorThrown) {
         showCartErrorMessage();
+        console.log("error");
       }
     });
   });
@@ -2541,10 +2548,11 @@ $(document).ready(function ($) {
     shortSwipes: true,
     spaceBetween: 12,
     loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true
-    },
+
+    /* pagination: {
+         el: ".swiper-pagination",
+         clickable: true,
+     },*/
     navigation: {
       nextEl: ".swiper-button-next-pdp",
       prevEl: ".swiper-button-prev-pdp"

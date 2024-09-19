@@ -17,6 +17,9 @@
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    @include MQ(MQ-480) {
+      margin-bottom: 10px;
+    }
     svg{
      flex: none;
      width: 20px;
@@ -295,6 +298,9 @@
       position: relative;
       top: 0;
     }
+    @include MQ(MQ-480) {
+      padding-bottom: 10px;
+    }
   }
   &__media-outer {
     * {
@@ -365,7 +371,7 @@
       width: 100%;
       max-width: 100%;
       padding-left: 0px;
-      margin-top: 25px;
+      margin-top: 0px;
     }
     // @include MQ(MQ-480) {
     //   margin-top: 15px;
@@ -391,6 +397,9 @@
   .product-single__prices {
     width: auto;
     margin-bottom: 24px;
+    @include MQ(MQ-480) {
+      margin-bottom: 20px;
+    }
     span,
     s {
       font-size: 21px;
@@ -898,6 +907,9 @@
   padding: 15px 0 00px;
   //   height: 620px;
   overflow: hidden;
+  @include MQ(MQ-480) {
+    padding: 9px 0 00px;
+  }
   // @include MQ(MQ-980) {
   //   display: none;
   // }

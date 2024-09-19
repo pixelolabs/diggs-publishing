@@ -84,10 +84,10 @@ $(document).ready(function($) {
             shortSwipes: true,
             spaceBetween: 12,
             loop: true,
-            pagination: {
+           /* pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
-            },
+            },*/
             navigation: {
                 nextEl: ".swiper-button-next-pdp",
                 prevEl: ".swiper-button-prev-pdp",
