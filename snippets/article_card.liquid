@@ -58,6 +58,13 @@
           <ul class="tags-wrapper">
             {% for tag in articleRelated.tags %}
               {% assign current = current_tags %}
+              {% if current_page contains blog %}
+                <li class="tags">
+                  <span class="tag">
+                    {{- tag -}}
+                  </span>
+                </li>
+              {% endif %}
               {% if current_tags contains tag %}
                 <li class="tags">
                   <span class="tag">
