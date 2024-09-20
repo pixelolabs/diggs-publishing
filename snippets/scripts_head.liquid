@@ -1,11 +1,11 @@
-{% comment %} AOS Style 
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">{% endcomment %}
+{% comment %}
+  AOS Style
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+{% endcomment %}
 {{ 'aos.css' | asset_url | stylesheet_tag }}
-
 
 {% comment %} Font script calling {% endcomment %}
 {{ settings.fontScript }}
-
 
 {% comment %}
   <script>
@@ -75,7 +75,6 @@
   <script src="{{ 'splide-extension-auto-scroll.min.js' | asset_url }}" defer="defer"></script>
 {% endcomment %}
 
-
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",
@@ -110,6 +109,7 @@
       --color-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
     {% if scheme.settings.background_gradient != empty %}
       --gradient-background: {{ scheme.settings.background_gradient }};
+      background:{{ scheme.settings.background_gradient }}
     {% else %}
       --gradient-background: {{ scheme.settings.background }};
     {% endif %}
@@ -152,9 +152,9 @@
      --font-family-secondary: {{ settings.headingFontCode }};
      --font-family-pretitle: {{ settings.subheadingFontCode }};
      --font-family-button: {{ settings.buttonFontCode }};
-     
 
-     
+
+
     --buttons-radius: {{ settings.buttons_radius }}px;
     --buttons-radius-outset: {% if settings.buttons_radius > 0 %}{{ settings.buttons_radius | plus: settings.buttons_border_thickness }}{% else %}0{% endif %}px;
     --buttons-border-width: {% if settings.buttons_border_opacity > 0 %}{{ settings.buttons_border_thickness }}{% else %}0{% endif %}px;
@@ -175,9 +175,9 @@
     --buttons-mobile-fontsize:{{  settings.buttonmobilefontsize }}px;
     --buttons-mobile-lineheight:{{  settings.buttonmobilelineheight }};
     --buttons-mobile-letterspacing:{{  settings.buttonmobileletterspacing }};
-    
-    
-   
+
+
+
     --pretitle-desktop-fontsize:{{  settings.pretitlefontsize }}px;
     --pretitle-desktop-lineheight:{{  settings.pretitlelineheight }};
     --pretitle-desktop-letterspacing:{{  settings.pretitleletterspacing }};
@@ -304,7 +304,7 @@
     --h6-mobile-fontsize:{{  settings.heading6mobilefontsize }}px;
     --h6-mobile-lineheight:{{  settings.heading6mobilelineheight }};
     --h6-mobile-letterspacing:{{  settings.heading6mobileletterspacing }};
-    
+
     --para-mobile-fontsize:{{  settings.paramobilefontsize }}px;
     --para-mobile-lineheight:{{  settings.paramobilelineheight }};
     --para-mobile-letterspacing:{{  settings.paramobileletterspacing }};
