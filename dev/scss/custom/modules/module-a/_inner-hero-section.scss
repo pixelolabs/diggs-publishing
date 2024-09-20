@@ -153,6 +153,20 @@
       }
     }
   }
+
+  &.contact{
+    .container-1240 {
+   
+      &::after {
+       
+        @include MQ(MQ-768) {
+         display: none;
+        }
+      }
+    
+    
+    }
+  }
   .content {
     max-width: 490px;
     width: 100%;
