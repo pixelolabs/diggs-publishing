@@ -43,39 +43,30 @@
           {% if section.blocks.size > 0 %}
             <ul class="cards-rows-outer">
               {% for block in section.blocks %}
+                {% assign product = all_products[section.settings.product] %}
+                
+                {% if product != blank %}
+                  {%- assign current_variant= product.selected_or_first_available_variant -%}
                 <li class="cards flex">
-                  <div class="background-div" style="background:{{ block.settings.cardColor }};"></div>
-                  {% if block.settings.icon != blank %}
-                    <div class="icon-section" style="background:{{ block.settings.cardColor }};">
-                      {{ block.settings.icon | image_url: width: 100 | image_tag: loading: 'lazy', widths: '100x100' }}
-                    </div>
-                  {% endif %}
-                  {% if block.settings.title != blank or block.settings.carddescription != blank %}
+                  <div class="background-div"></div>
+                 
+                 
                     <div class="content">
-                      {% if block.settings.title != blank %}
-                        <h3>{{ block.settings.title }}</h3>
-                      {% endif %}
-                      {% if block.settings.carddescription != blank %}
-                        <div class="description">
-                          {{ block.settings.carddescription }}
-                        </div>
-                      {% endif %}
+                    
+                        <h3>{{ product.title }}</h3>
+                   
+                         <span>{{ current_variant.price | money }}</span>
                     </div>
-                  {% endif %}
+                 
                 </li>
+              {% endif %}
               {% endfor %}
             </ul>
           {% endif %}
-          {% if section.settings.bottomdescription != blank %}
-            <div class="bottom-description">
-              {{ section.settings.bottomdescription }}
-            </div>
-          {% endif %}
-          {% if section.settings.btnText != blank and section.settings.btnLink != blank %}
-            <a class="btn--primary" href="{{ section.settings.btnLink }}" title="{{ section.settings.btnText }}">
-              {{- section.settings.btnText -}}
-            </a>
-          {% endif %}
+          <a class="btn--primary" href="{{ section.settings.btnLink }}" title="{{ section.settings.btnText }}">
+            {{- section.settings.btnText -}}
+          </a>
+          
         </div>
       </div>
     </div>
