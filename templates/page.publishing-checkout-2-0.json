@@ -1,0 +1,147 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "innerBanner": {
+      "type": "inner-hero-section",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/publishing-mentoring-banner.png",
+        "mobileImage": "shopify:\/\/shop_images\/publishing-mentoring-banner.png",
+        "title": "Children’s Book Mentoring Young Minds",
+        "description": "<p>Every writer begins as a storyteller. Hone your skills and craft stories that leave a mark.<\/p>",
+        "buttonText1": "Book Now",
+        "buttonLink1": "shopify:\/\/pages\/ambassador-program",
+        "button_bg": "green",
+        "content_alignment": "left",
+        "height": false
+      }
+    },
+    "four_column_icon_content_section_jXnQbQ": {
+      "type": "four-column-icon-content-section",
+      "blocks": {
+        "cards_pTdtHF": {
+          "type": "cards",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Done-For-You-Books.svg",
+            "title": "Done-For-You-Books",
+            "description": ""
+          }
+        },
+        "cards_zt3aVh": {
+          "type": "cards",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Book-Publishing.svg",
+            "title": "Book Publishing",
+            "description": ""
+          }
+        },
+        "cards_8dfF6E": {
+          "type": "cards",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Translations.svg",
+            "title": "Spanish Translations",
+            "description": ""
+          }
+        },
+        "cards_PNfgrE": {
+          "type": "cards",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Mentoring.svg",
+            "title": "Mentoring",
+            "description": ""
+          }
+        },
+        "cards_bmqQCP": {
+          "type": "cards",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Book-Reviews.svg",
+            "title": "Book Reviews",
+            "description": ""
+          }
+        },
+        "cards_6yXU6P": {
+          "type": "cards",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Confidence_Building.svg",
+            "title": "Marketing Plans",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "cards_pTdtHF",
+        "cards_zt3aVh",
+        "cards_8dfF6E",
+        "cards_PNfgrE",
+        "cards_bmqQCP",
+        "cards_6yXU6P"
+      ],
+      "settings": {
+        "heading": "Publishing Services",
+        "paddingtop": 140,
+        "paddingtopmobile": 90,
+        "paddingbottom": 140,
+        "paddingbottomMobile": 80
+      }
+    },
+    "half_image_half_product_section_DxxwEF": {
+      "type": "half-image-half-product-section",
+      "blocks": {
+        "product_WwykBY": {
+          "type": "product",
+          "settings": {
+            "product": "body-safety-bundle-i-three-book-set"
+          }
+        },
+        "product_jqebQx": {
+          "type": "product",
+          "settings": {
+            "product": "60-minutes-consultation"
+          }
+        },
+        "product_fxg8Cr": {
+          "type": "product",
+          "settings": {
+            "product": "backpack"
+          }
+        },
+        "product_H7pVh8": {
+          "type": "product",
+          "settings": {
+            "product": "body-safety-bundle-i-three-book-set"
+          }
+        }
+      },
+      "block_order": [
+        "product_WwykBY",
+        "product_jqebQx",
+        "product_fxg8Cr",
+        "product_H7pVh8"
+      ],
+      "settings": {
+        "heading": "Service option",
+        "subTitle": "",
+        "description": "<p>A great book deserves to be read, and with the right marketing strategy, it will be. It's all about connecting with the readers in the right way, the right time.<\/p>",
+        "image": "shopify:\/\/shop_images\/Vector_9f50d425-929a-45de-aa21-cf04700ae8e7.png",
+        "image_position": "left",
+        "wave_color": "blue-wave",
+        "paddingtop": 99,
+        "paddingtopmobile": 80,
+        "paddingbottom": 120,
+        "paddingbottomMobile": 100
+      }
+    }
+  },
+  "order": [
+    "innerBanner",
+    "four_column_icon_content_section_jXnQbQ",
+    "half_image_half_product_section_DxxwEF"
+  ]
+}
