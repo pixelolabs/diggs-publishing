@@ -41,7 +41,7 @@
         {% endif %}
         <div class="card-rows-content">
           {% if section.blocks.size > 0 %}
-            <ul class="cards-rows-outer cards-product-card">
+            <ul class="cards-rows-outer cards-product-card js__item-product-card">
               {% for block in section.blocks %}
                 {% assign product = all_products[block.settings.product] %}
                 
