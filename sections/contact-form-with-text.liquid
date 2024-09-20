@@ -117,41 +117,7 @@
     </div>
   </div>
 </div>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('ContactForm').addEventListener('submit', function (event) {
-      console.log("here");
-      event.preventDefault();
 
-      resetErrorMessages();
-
-      let formIsValid = true;
-      const inputFields = document.querySelectorAll('input[aria-required="true"]');
-
-      inputFields.forEach((input) => {
-        const value = input.value.trim();
-        if (value === '') {
-          const errorMessage = document.createElement('span');
-          errorMessage.textContent = 'This field is required.';
-          errorMessage.classList.add('input-error-message');
-          input.parentNode.appendChild(errorMessage);
-          formIsValid = false;
-        }
-      });
-
-      if (formIsValid) {
-        event.target.submit();
-      }
-    });
-
-    function resetErrorMessages() {
-      const errorMessages = document.querySelectorAll('.error-message');
-      errorMessages.forEach((errorMessage) => {
-        errorMessage.parentNode.removeChild(errorMessage);
-      });
-    }
-  });
-</script>
 
 {% schema %}
 {
