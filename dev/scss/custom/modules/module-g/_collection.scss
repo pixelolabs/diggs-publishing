@@ -251,7 +251,7 @@
 
   position: relative;
   background: $color-off-white-light;
-  z-index: 3;
+  z-index: 2;
   @include MQ(MQ-768) {
     padding-bottom: 150px;
   }
@@ -720,7 +720,7 @@
   padding-bottom: 33px;
   text-align: center;
   position: relative;
- 
+
   z-index: 5;
   /*
   .outer {
@@ -741,7 +741,7 @@
     justify-content: center;
     width: calc(100% + 30px);
     margin-left: -30px;
-margin-bottom: -30px;
+    margin-bottom: -30px;
     li {
       width: 111px;
       height: 71px;
@@ -749,7 +749,8 @@ margin-bottom: -30px;
       background: $color-white;
       margin-bottom: 30px;
       border: 1px solid #ffe69f;
-      &.active,&:hover {
+      &.active,
+      &:hover {
         background: #fbe195;
       }
       a {
