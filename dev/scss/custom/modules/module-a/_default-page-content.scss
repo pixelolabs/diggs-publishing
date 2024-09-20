@@ -3,23 +3,17 @@
   position: relative;
   &:before {
     background: url(body-default-wave.svg) repeat-x center / 100%;
-    // height: 200px;
+
     width: 100%;
     position: absolute;
     left: 0;
-    // top: -125px;
+
     content: "";
     height: 214px;
     top: -158px;
-    // background-size: contain;
+
     z-index: 2;
-    // filter: brightness(0) saturate(100%) invert(100%) sepia(56%) saturate(587%)
-    //   hue-rotate(316deg) brightness(105%) contrast(114%);
-    // @include MQ(MQ-1440) {
-    //   height: 114px;
-    //   top: -97px;
-    //   background-size: cover;
-    // }
+
     @media (min-width: 1440px) {
       height: 260px;
       top: -190px;
@@ -32,9 +26,6 @@
       top: -100px;
     }
     @include MQ(MQ-768) {
-      // height: 88px;
-      // top: -54px;
-      // background-size: cover;
       height: 91px;
       top: -66px;
       background-size: cover;

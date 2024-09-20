@@ -1,59 +1,90 @@
 .half-image-half-cards-section {
   padding-top: 150px;
   position: relative;
-  &::before {
-    background: url(wave-transparent.svg) repeat-x center / 100%;
-    // height: 176px;
-    // top: -128px;
+  &:before {
+    background: url(body-default-wave.svg) repeat-x center / 100%;
+
     width: 100%;
-    height: 214px;
-    top: -160px;
     position: absolute;
+    left: 0;
+
     content: "";
+    height: 214px;
+    top: -158px;
+
     z-index: 2;
+
+    @media (min-width: 1440px) {
+      height: 260px;
+      top: -190px;
+    }
     @include MQ(MQ-1330) {
-      top: -130px;
+      top: -145px;
     }
     @include MQ(MQ-980) {
       height: 155px;
-      top: -97px;
+      top: -100px;
     }
-    @include MQ(MQ-480) {
-      height: 65px;
-      top: -55px;
+    @include MQ(MQ-768) {
+      height: 91px;
+      top: -66px;
       background-size: cover;
       background-position: left;
     }
   }
-  &::after {
-    width: 82px;
-    height: 81px;
-    content: "";
+  // &::after {
+  //   width: 82px;
+  //   height: 81px;
+  //   content: "";
+  //   position: absolute;
+  //   left: 37%;
+  //   z-index: 10;
+  //   top: -80px;
+  //   background: url(ufo.webp) no-repeat center / 100%;
+  //   animation-name: flow;
+  //   animation-duration: 10s;
+  //   animation-iteration-count: infinite;
+  // }
+  &:after {
     position: absolute;
-    left: 37%;
-    z-index: 10;
-    top: -80px;
-    background: url(ufo.webp) no-repeat center / 100%;
-    animation-name: flow;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
+    content: "";
+    background: url(graphic-orange-thread.svg) no-repeat right / 100%;
+    width: 282px;
+    height: 325px;
+    right: -6px;
+    top: -68px;
+    z-index: 1;
+    @include MQ(MQ-980) {
+      right: 0;
+    }
+    @include MQ(MQ-768) {
+      width: 150px;
+      height: 200px;
+      right: 0;
+    }
   }
 
   .container-1260 {
     position: relative;
     &:after {
-      position: absolute;
+      width: 82px;
+      height: 81px;
       content: "";
-      background: url(graphic-orange-thread.svg) no-repeat right / 100%;
-      width: 282px;
-      height: 325px;
-      right: -10%;
-      top: -242px;
-      z-index: -1;
+      position: absolute;
+      left: 37%;
+      z-index: 10;
+      top: -280px;
+      background: url(ufo.webp) no-repeat center / 100%;
+      animation-name: flow;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      @include MQ(MQ-1330) {
+        top: -250px;
+      }
       @include MQ(MQ-768) {
-        width: 150px;
-        height: 200px;
-        right: 0;
+        top: -145px;
+        width: 62px;
+        height: 62px;
       }
     }
     &:before {
@@ -96,8 +127,11 @@
       height: 52px;
     }
     h3 {
-      font-size: 18px;
+      font-size: 23px;
       margin-top: 7px;
+      @include MQ(MQ-768) {
+        font-size: 18px;
+      }
     }
     .description {
       margin-top: 14px;
@@ -108,6 +142,8 @@
   }
   .bottom-description {
     margin-top: 49px;
+    max-width: 543px;
+    width: 100%;
     h3 {
       font-size: 30px;
       @include MQ(MQ-768) {
@@ -238,9 +274,39 @@
       }
     }
     .card-rows-content {
+      position: relative;
       @include MQ(MQ-980) {
         margin-top: 100px;
       }
+      &:after {
+        width: 41px;
+        margin: 0 auto;
+        height: 50px;
+        content: "";
+        position: absolute;
+        right: 0;
+        left: 0;
+        z-index: 1;
+        bottom: -120px;
+        background: url(star-large.webp) no-repeat center / 100%;
+        -webkit-animation-name: starRotate;
+        animation-name: starRotate;
+        -webkit-animation-duration: 5s;
+        animation-duration: 5s;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;
+        @include MQ(MQ-980) {
+          bottom: -85px;
+        }
+        @include MQ(MQ-768) {
+          bottom: -55px;
+          height: 40px;
+          width: 31px;
+        }
+      }
+
       .cards {
         background: $color-white;
         border: solid 1px rgba(255, 200, 43, 0.36);
