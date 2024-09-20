@@ -41,17 +41,17 @@
         {% endif %}
         <div class="card-rows-content">
           {% if section.blocks.size > 0 %}
-            <ul class="cards-rows-outer">
+            <ul class="cards-rows-outer cards-product-card">
               {% for block in section.blocks %}
                 {% assign product = all_products[block.settings.product] %}
                 
                 {% if product != blank %}
                   {%- assign current_variant= product.selected_or_first_available_variant -%}
-                <li class="cards flex">
+                <li class="cards">
                   <div class="background-div"></div>
                  
                  
-                    <div class="content">
+                    <div class="content flex">
                     
                         <h3>{{ product.title }}</h3>
                    
