@@ -201,15 +201,15 @@
         "content": "<p>Explore our varied collections and take a creative journey through the pages of one-of-a-kind books. There's something for everyone, from children's book lovers to gift seekers.<br\/><\/p>",
         "buttonText": "Shop The Collection",
         "buttonLink": "shopify:\/\/collections\/books",
-        "bgColor": "#53aa42"
+        "buttonLinkTarget": false,
+        "bgColor": "#77c85a"
       }
     },
     "contact_form_with_text_Ey44NQ": {
       "type": "contact-form-with-text",
       "settings": {
         "title": "Reach out to us",
-        "address": "<p>3558 Round Barn Blvd, Suite\u2028200 Santa Rosa, CA 95403<\/p>",
-        "bgColor": "#53aa42"
+        "bgColor": "#77c85a"
       }
     }
   },

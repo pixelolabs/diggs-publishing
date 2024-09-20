@@ -97,25 +97,29 @@
         "product_WwykBY": {
           "type": "product",
           "settings": {
-            "product": "body-safety-bundle-i-three-book-set"
+            "product": "body-safety-bundle-i-three-book-set",
+            "cardColor": "#d51f91"
           }
         },
         "product_jqebQx": {
           "type": "product",
           "settings": {
-            "product": "60-minutes-consultation"
+            "product": "60-minutes-consultation",
+            "cardColor": "#81c573"
           }
         },
         "product_fxg8Cr": {
           "type": "product",
           "settings": {
-            "product": "backpack"
+            "product": "backpack",
+            "cardColor": "#ff6520"
           }
         },
         "product_H7pVh8": {
           "type": "product",
           "settings": {
-            "product": "body-safety-bundle-i-three-book-set"
+            "product": "body-safety-bundle-i-three-book-set",
+            "cardColor": "#49d1ef"
           }
         }
       },
