@@ -95,6 +95,7 @@
             "description": "<p>In a world filled with countless stories, Diggs Publishing celebrates the unique tales that often go untold. Dive into our universe, where each page brings to life characters that truly reflect the world’s diverse tapestry.<\/p>",
             "buttonText": "Read More",
             "buttonLink": "shopify:\/\/pages\/about-me",
+            "buttonLinkTarget": false,
             "background_color": "blue",
             "fontSize": false,
             "center": false
@@ -232,6 +233,7 @@
         "image": "shopify:\/\/shop_images\/kids-images.webp",
         "buttonText": "Read More",
         "buttonLink": "shopify:\/\/pages\/author-visits",
+        "buttonLinkTarget": false,
         "bgColor": "#77c85a"
       }
     }
