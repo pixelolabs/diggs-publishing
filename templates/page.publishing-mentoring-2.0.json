@@ -19,7 +19,8 @@
         "buttonText1": "Book Now",
         "buttonLink1": "shopify:\/\/pages\/ambassador-program",
         "button_bg": "green",
-        "content_alignment": "left"
+        "content_alignment": "left",
+        "height": false
       }
     },
     "half_image_half_content_HzBwiK": {
@@ -36,6 +37,7 @@
             "description": "<p>You can expect an engaging and informative experience tailored to your specific needs and goals during the one-hour Children's Book Mentoring Session with Krystaelynne Diggs. The goal of this mentoring session is to provide you with knowledge, inspiration, and confidence to continue your journey in the world of children's literature.<\/p>",
             "buttonText": "Book Now",
             "buttonLink": "shopify:\/\/pages\/ambassador-program",
+            "buttonLinkTarget": false,
             "background_color": "transparent-bg",
             "fontSize": false,
             "center": false
@@ -46,7 +48,7 @@
         "image_hyh9bK"
       ],
       "settings": {
-        "section_class": "",
+        "section_class": "ufo",
         "image_position": "left",
         "wave_color": "transparent-wave",
         "paddingtop": 0,
@@ -155,6 +157,7 @@
             "description": "<p>Begin your authorial adventure with the guidance of Krystaelynne Diggs' mentoring sessions. Whether you're starting fresh or refining a manuscript, our tailored approach ensures your stories reach their fullest potential. Revel in the synergy of expert insight, individualized feedback, and a nurturing ambiance. Dive deep into the world of children's literature. Illuminate young minds and hearts with your unique tales.<\/p>",
             "buttonText": "Book Now",
             "buttonLink": "https:\/\/calendly.com\/authorksd\/author-meeting-w-krystaelynne?month=2024-09",
+            "buttonLinkTarget": false,
             "background_color": "transparent-bg",
             "fontSize": false,
             "center": false
