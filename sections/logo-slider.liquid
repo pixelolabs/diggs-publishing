@@ -14,7 +14,7 @@
   }
 {%- endstyle -%}
 {% if section.blocks.size > 0 %}
-  <div class="logo-slider section-{{ section.id }}-padding {% if section.settings.color_scheme != blank %}color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endif %}">
+  <div class="logo-slider section-{{ section.id }}-padding color-{{ section.settings.color_scheme }}">
     <div class="container-1260">
       {% if section.settings.title != blank %}
         <h2 class="medium">
@@ -55,7 +55,8 @@
     {
       "type": "color_scheme",
       "id": "color_scheme",
-      "label": "t:sections.all.colors.label"
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
     },
     {
       "type": "text",
