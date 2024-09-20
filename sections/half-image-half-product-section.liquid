@@ -84,7 +84,7 @@
 
 {% schema %}
 {
-  "name": "Half Image Half Cards",
+  "name": "Half Image Half Product",
   "settings": [
     {
       "type": "text",
@@ -220,43 +220,20 @@
   ],
   "blocks": [
     {
-      "type": "card",
-      "name": "Cards",
+      "type": "product",
+      "name": "products",
       "settings": [
         {
-          "type": "image_picker",
-          "id": "icon",
-          "label": "Icon",
-          "info": "100 x 100px Recommended"
-        },
-
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Title"
-        },
-        {
-          "type": "richtext",
-          "id": "carddescription",
-          "label": "Description"
-        },
-
-        {
-          "type": "header",
-          "content": "Extra Settings"
-        },
-
-        {
-          "type": "color",
-          "id": "cardColor",
-          "label": "Cards Border Colors"
+          "type": "product",
+          "id": "product",
+          "label": "Product"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Half Image Half Cards Row"
+      "name": "Half Image Half Product Row"
     }
   ]
 }
