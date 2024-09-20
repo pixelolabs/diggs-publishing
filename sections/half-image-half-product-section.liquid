@@ -48,7 +48,7 @@
                 {% if product != blank %}
                   {%- assign current_variant= product.selected_or_first_available_variant -%}
                 <li class="cards">
-                  <div class="background-div"></div>
+                  <div class="background-div" style="background:{{ block.settings.cardColor }};"></div>
                  
                  
                     <div class="content flex">
@@ -198,6 +198,11 @@
           "type": "product",
           "id": "product",
           "label": "Product"
+        },
+        {
+          "type": "color",
+          "id": "cardColor",
+          "label": "Cards Border Colors"
         }
       ]
     }
