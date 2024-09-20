@@ -62,7 +62,7 @@
     font-family: var(--font-family-primary);
     font-size: 14px;
     line-height: 1.25;
-    margin-bottom: 10px;
+    margin-bottom: 10px !important;
     font-weight: 500;
     letter-spacing: normal;
   }
@@ -644,7 +644,7 @@ textarea.input--error {
       letter-spacing: normal;
       // text-transform: capitalize;
       text-align: center;
-      margin-right: 5px;
+      margin-right: 10px;
       &:last-child {
         margin-right: 0;
       }
