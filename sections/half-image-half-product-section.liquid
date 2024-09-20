@@ -43,7 +43,7 @@
           {% if section.blocks.size > 0 %}
             <ul class="cards-rows-outer">
               {% for block in section.blocks %}
-                {% assign product = all_products[section.settings.product] %}
+                {% assign product = all_products[block.settings.product] %}
                 
                 {% if product != blank %}
                   {%- assign current_variant= product.selected_or_first_available_variant -%}
