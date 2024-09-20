@@ -14,7 +14,7 @@
   }
 {%- endstyle -%}
 {% if section.blocks.size > 0 %}
-  <div class="logo-slider section-{{ section.id }}-padding {% if section.settings.color_scheme != blank %}color-{{ section.settings.color_scheme }}{% endif %}">
+  <div class="logo-slider section-{{ section.id }}-padding {% if section.settings.color_scheme != blank %}color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endif %}">
     <div class="container-1260">
       {% if section.settings.title != blank %}
         <h2 class="medium">
