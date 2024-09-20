@@ -1861,7 +1861,8 @@ jQuery(function () {
     });
     CartJS.addItems(items, {
       success: function success(response, textStatus, jqXHR) {
-        $(".modal-quick-view").hide();
+        $(".js__item-product-card li").removeClass("active");
+        $(".js__publishing-add-to-cart").attr("disabled", "disabled");
 
         if (getglobalLib("Mini_Cart") == "yes") {
           /* Show message */
