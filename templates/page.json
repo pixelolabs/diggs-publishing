@@ -19,23 +19,22 @@
         "buttonText1": "{{ page.metafields.custom.hero_banner_button_text.value }}",
         "buttonLink1": "{{ page.metafields.custom.hero_banner_button_link.value }}",
         "button_bg": "pink",
-        "content_alignment": "left",
-        "height": false
+        "content_alignment": "left"
       }
     },
-    "page_default_content_G7caag": {
+    "page_default_content_6YCngU": {
       "type": "page-default-content",
       "settings": {
         "section_class": "",
-        "paddingtop": 0,
-        "paddingtopmobile": 0,
-        "paddingbottom": 150,
-        "paddingbottomMobile": 100
+        "paddingtop": 72,
+        "paddingtopmobile": 60,
+        "paddingbottom": 171,
+        "paddingbottomMobile": 120
       }
     }
   },
   "order": [
     "innerBanner",
-    "page_default_content_G7caag"
+    "page_default_content_6YCngU"
   ]
 }
