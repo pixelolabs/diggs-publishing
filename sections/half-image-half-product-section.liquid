@@ -47,7 +47,7 @@
                 
                 {% if product != blank %}
                   {%- assign current_variant= product.selected_or_first_available_variant -%}
-                <li class="cards">
+                <li class="cards" data-id="{{ current_variant.id }}">
                   <div class="background-div" style="background:{{ block.settings.cardColor }};"></div>
                  
                  
