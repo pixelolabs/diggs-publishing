@@ -20,7 +20,8 @@
         "buttonLink1": "",
         "button_bg": "pink",
         "content_alignment": "left",
-        "height": true
+        "height": true,
+        "section_class": "contact"
       }
     },
     "contact_section_RHMnDG": {
