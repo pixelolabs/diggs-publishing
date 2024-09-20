@@ -8,6 +8,7 @@
     height: 122px;
     left: 0;
     top: -81px;
+    z-index: 2;
     background: url(sky-blue-wave.png) repeat-x top / 100%;
     @include MQ(MQ-980) {
       top: -50px;

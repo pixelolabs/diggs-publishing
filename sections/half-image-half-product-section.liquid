@@ -1,0 +1,232 @@
+{%- style -%}
+  .section-{{ section.id }}-padding{
+      padding-top: {{ section.settings.paddingtop | round: 0 }}px;
+      padding-bottom: {{ section.settings.paddingbottom | round: 0 }}px;
+    }
+
+
+    @media screen and (max-width: 768px) {
+    .section-{{ section.id }}-padding{
+      padding-top: {{ section.settings.paddingtopmobile | round: 0 }}px;
+      padding-bottom: {{ section.settings.paddingbottomMobile | round: 0 }}px;
+    }
+
+  }
+{%- endstyle -%}
+{% if section.settings.heading != blank %}
+  <div class="half-image-half-cards-section section-{{ section.id }}-padding  {% if section.settings.image_position == 'right' %} section-row-right {% endif %}{% if section.settings.wave_color == 'yellow-wave' %} yellow-wave{% elsif section.settings.wave_color == 'transparent-wave' %} transparent-wave {% elsif section.settings.wave_color == 'blue-wave' %} blue-wave{% else %} no-wave {% endif %}">
+    <div class="container-1260">
+      <div class="top-header">
+        <h2>{{ section.settings.heading }}</h2>
+        {% if section.settings.subTitle != blank %}
+          <h3>{{ section.settings.subTitle }}</h3>
+        {% endif %}
+        {% if section.settings.description != blank %}
+          <div class="description">
+            {{ section.settings.description }}
+          </div>
+        {% endif %}
+      </div>
+      <div class="half-image-half-cards flex">
+        {% if section.settings.image != blank %}
+          <div class="image-wrapper">
+            <div
+              class="image-section"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              {{ section.settings.image | image_url: width: 1262 | image_tag: loading: 'lazy', widths: '1262x1000' }}
+            </div>
+          </div>
+        {% endif %}
+        <div class="card-rows-content">
+          {% if section.blocks.size > 0 %}
+            <ul class="cards-rows-outer">
+              {% for block in section.blocks %}
+                <li class="cards flex">
+                  <div class="background-div" style="background:{{ block.settings.cardColor }};"></div>
+                  {% if block.settings.icon != blank %}
+                    <div class="icon-section" style="background:{{ block.settings.cardColor }};">
+                      {{ block.settings.icon | image_url: width: 100 | image_tag: loading: 'lazy', widths: '100x100' }}
+                    </div>
+                  {% endif %}
+                  {% if block.settings.title != blank or block.settings.carddescription != blank %}
+                    <div class="content">
+                      {% if block.settings.title != blank %}
+                        <h3>{{ block.settings.title }}</h3>
+                      {% endif %}
+                      {% if block.settings.carddescription != blank %}
+                        <div class="description">
+                          {{ block.settings.carddescription }}
+                        </div>
+                      {% endif %}
+                    </div>
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          {% if section.settings.bottomdescription != blank %}
+            <div class="bottom-description">
+              {{ section.settings.bottomdescription }}
+            </div>
+          {% endif %}
+          {% if section.settings.btnText != blank and section.settings.btnLink != blank %}
+            <a class="btn--primary" href="{{ section.settings.btnLink }}" title="{{ section.settings.btnText }}">
+              {{- section.settings.btnText -}}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Half Image Half Product",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "header",
+      "content": "Top Header Content"
+    },
+    {
+      "type": "text",
+      "id": "subTitle",
+      "label": "Sub Title"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "1262 x 1000px Recommended"
+    },
+    
+
+    {
+      "type": "header",
+      "content": "Extra Settings"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image Position Left or Right",
+      "options": [
+        {
+          "value": "right",
+          "label": "Right"
+        },
+        {
+          "value": "left",
+          "label": "Left"
+        }
+      ],
+      "default": "left"
+    },
+
+    {
+      "type": "select",
+      "id": "wave_color",
+      "label": "Wave color",
+      "options": [
+        {
+          "value": "transparent-wave",
+          "label": "Transparent"
+        },
+        {
+          "value": "yellow-wave",
+          "label": "Yellow"
+        },
+        {
+          "value": "blue-wave",
+          "label": "Blue"
+        }
+      ],
+      "default": "blue-wave"
+    },
+    {
+      "type": "header",
+      "content": "Top/Bottom Section Space"
+    },
+    {
+      "type": "range",
+      "id": "paddingtop",
+      "min": 0,
+      "max": 300,
+      "step": 3,
+      "unit": "px",
+      "label": "Padding Top (Desktop)",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "paddingtopmobile",
+      "min": 0,
+      "max": 140,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top (Mobile)",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "paddingbottom",
+      "min": 0,
+      "max": 300,
+      "step": 3,
+      "unit": "px",
+      "label": "Padding Bottom (Desktop)",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "paddingbottomMobile",
+      "min": 0,
+      "max": 140,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom (Mobile)",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "products",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Half Image Half Product Row"
+    }
+  ]
+}
+{% endschema %}
+<script>
+  jQuery(document).ready(function ($) {
+      $(".cards-rows-outer li").each(function() {
+
+      });
+  });
+  .card-rows-content .cards:before{
+      background:{{ block.settings.cardColor  }}
+    }
+</script>
