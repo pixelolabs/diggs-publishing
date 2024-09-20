@@ -1847,6 +1847,7 @@ jQuery(function () {
     var id = $(this).attr("data-id");
     $(this).addClass("active");
     $(".js__card-add-to-cart").attr("data-variant-id", id);
+    $(".js__card-add-to-cart").removeAttr("disabled");
   });
 });
 "use strict";
