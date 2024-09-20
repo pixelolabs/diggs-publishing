@@ -1846,8 +1846,35 @@ jQuery(function () {
     $(".js__item-product-card li").removeClass("active");
     var id = $(this).attr("data-id");
     $(this).addClass("active");
-    $(".js__card-add-to-cart").attr("data-variant-id", id);
-    $(".js__card-add-to-cart").removeAttr("disabled");
+    $(".js__publishing-add-to-cart").attr("data-variant-id", id);
+    $(".js__publishing-add-to-cart").removeAttr("disabled");
+  });
+  $(document).on("click", ".js__publishing-add-to-cart", function (e) {
+    var selectedVariantID = $(this).attr("data-variant-id");
+    var quantity = 1;
+    var items = [];
+    /* For the main item */
+
+    items.push({
+      id: selectedVariantID,
+      quantity: quantity
+    });
+    CartJS.addItems(items, {
+      success: function success(response, textStatus, jqXHR) {
+        $(".modal-quick-view").hide();
+
+        if (getglobalLib("Mini_Cart") == "yes") {
+          /* Show message */
+          setTimeout(openMiniCart, 500);
+        } else {
+          window.location = "/cart";
+        }
+      },
+      // Define an error callback to display an error message.
+      error: function error(jqXHR, textStatus, errorThrown) {
+        showCartErrorMessage();
+      }
+    });
   });
 });
 "use strict";
