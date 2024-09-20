@@ -1840,6 +1840,15 @@ jQuery(document).ready(function ($) {
     });
   });
 })(jQuery);
+
+jQuery(function () {
+  $(".js__item-product-card li").on('click', function () {
+    $(".js__item-product-card li").removeClass("active");
+    var id = $(this).attr("data-id");
+    $(this).addClass("active");
+    $(".js__card-add-to-cart").attr("data-variant-id", id);
+  });
+});
 "use strict";
 
 var showCartMessage = true;
