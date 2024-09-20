@@ -53,7 +53,7 @@
         "wave_color": "transparent-wave",
         "paddingtop": 0,
         "paddingtopmobile": 0,
-        "paddingbottom": 0,
+        "paddingbottom": 162,
         "paddingbottomMobile": 0
       }
     },
