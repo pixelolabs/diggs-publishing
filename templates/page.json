@@ -23,10 +23,10 @@
         "height": false
       }
     },
-    "four_column_icon_content_section_NkPmLe": {
-      "type": "four-column-icon-content-section",
+    "page_default_content_G7caag": {
+      "type": "page-default-content",
       "settings": {
-        "heading": "",
+        "section_class": "",
         "paddingtop": 0,
         "paddingtopmobile": 0,
         "paddingbottom": 0,
@@ -36,6 +36,6 @@
   },
   "order": [
     "innerBanner",
-    "four_column_icon_content_section_NkPmLe"
+    "page_default_content_G7caag"
   ]
 }
