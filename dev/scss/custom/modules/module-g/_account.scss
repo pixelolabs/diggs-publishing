@@ -57,6 +57,9 @@
     text-decoration: underline !important;
     position: relative;
     text-transform: capitalize;
+    &:hover{
+      color: $color-orange;
+    }
   }
   &__wrapper {
     margin-top: 60px;
@@ -74,6 +77,10 @@
         margin-left: 0px;
         margin-top: 50px;
       }
+    }
+    .link--primary--small{
+      margin-top: 10px !important;
+      display: inline-block;
     }
     strong {
       font-weight: 600;

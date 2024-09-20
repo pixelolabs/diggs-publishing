@@ -19,7 +19,8 @@
         "buttonText1": "Order Now",
         "buttonLink1": "shopify:\/\/pages\/publishing-checkout",
         "button_bg": "green",
-        "content_alignment": "left"
+        "content_alignment": "left",
+        "height": false
       }
     },
     "half_image_half_content_FXTpyc": {
@@ -36,6 +37,7 @@
             "description": "<p>Understanding the publishing process is essential for turning your manuscript into a published book. Krystaelynne will demystify the world of publishing, guiding you through manuscript development, editing, design, and even marketing strategies. You'll learn the ins and outs of the industry, empowering you to make informed decisions about your work.<\/p>",
             "buttonText": "Book Here",
             "buttonLink": "shopify:\/\/pages\/publishing-checkout",
+            "buttonLinkTarget": false,
             "background_color": "transparent-bg",
             "fontSize": false,
             "center": false
@@ -52,6 +54,7 @@
             "description": "<p>Are you ready to take your children's book writing to the next level? It all begins with a single step. Make an appointment with Krystaelynne Sanders Diggs for a mentoring session today to realize your full potential as a children's book author. Krystaelynne is here to help you succeed, whether you have a specific project in mind or simply want to improve your skills. Don't pass up this chance to transform your storytelling and leave a lasting impression on young readers. Your journey has just begun.<br\/><\/p>",
             "buttonText": "Book Here",
             "buttonLink": "shopify:\/\/pages\/publishing-checkout",
+            "buttonLinkTarget": false,
             "background_color": "transparent-bg",
             "fontSize": false,
             "center": false
@@ -63,7 +66,7 @@
         "image_aipNnV"
       ],
       "settings": {
-        "section_class": "",
+        "section_class": "ufo",
         "image_position": "left",
         "wave_color": "transparent-wave",
         "paddingtop": 0,
@@ -166,7 +169,6 @@
       "type": "contact-form-with-text",
       "settings": {
         "title": "Reach out to us",
-        "address": "<p>3558 Round Barn Blvd, Suite\u2028200 Santa Rosa, CA 95403<\/p>",
         "bgColor": ""
       }
     }

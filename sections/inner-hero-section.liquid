@@ -20,7 +20,7 @@
   }
   }
 {%- endstyle -%}
-<div class="inner-hero-section {% if section.settings.height == true %} max-height{% endif %} {% if section.settings.smallHeight == true %} small {% endif %} section-{{ section.id }}-padding color-{{ section.settings.color_scheme }}">
+<div class="inner-hero-section {{ section.settings.section_class }} {% if section.settings.height == true %} max-height{% endif %} {% if section.settings.smallHeight == true %} small {% endif %} section-{{ section.id }}-padding color-{{ section.settings.color_scheme }}">
   {% if section.settings.image != blank %}
     <div class="image-section {% if section.settings.gradient == true %} gradient{%endif%}">
       <picture>
@@ -169,6 +169,11 @@
       "type": "checkbox",
       "id": "height",
       "label": "Increase Height of The Banner by 100px in Mobile"
+    },
+    {
+      "type": "text",
+      "id": "section_class",
+      "label": "Add custom class"
     }
   ],
   "presets": [

@@ -59,7 +59,7 @@
     .content {
       &::before {
         top: auto;
-        bottom: 60px;
+        bottom: 80px;
         left: 60px;
         content: "";
         z-index: 3;
@@ -276,12 +276,12 @@
     }
     p {
       font-size: 16px;
-      font-weight: 500;
+      font-weight: 400;
       line-height: 1;
     }
     span {
       font-size: 16px;
-      font-weight: 500;
+      font-weight: 300;
       margin: 0 10px;
       line-height: 1;
       display: inline-block;
@@ -327,7 +327,7 @@
     #customer_register_link,
     .wsaio_form {
       font-size: 13px;
-      font-weight: 500;
+      font-weight: 400;
       font-stretch: normal;
       font-style: normal;
       line-height: normal;
@@ -339,6 +339,9 @@
       text-decoration: underline !important;
       position: relative;
       text-transform: capitalize;
+      &:hover{
+        color: $color-orange;
+      }
     }
     .wsaio_form {
       margin-left: 15px;

@@ -275,6 +275,7 @@
     }
     .card-rows-content {
       position: relative;
+      width: 100%;
       @include MQ(MQ-980) {
         margin-top: 100px;
       }
@@ -354,6 +355,76 @@
           margin-top: 8px;
         }
       }
+
+      .cards-product-card {
+        li {
+          cursor: pointer;
+          width: 100%;
+          .content {
+            position: relative;
+            justify-content: space-between;
+            width: 100%;
+            padding-right: 37px;
+            @include MQ(MQ-480) {
+              flex-direction: column;
+            }
+            &::before {
+              width: 18px;
+              height: 18px;
+              border: 1px solid $color-black;
+              border-radius: 50%;
+              right: 0;
+              top: 0;
+              position: absolute;
+              content: "";
+            }
+            &::after {
+              width: 10px;
+              height: 10px;
+              background: $color-black;
+              border-radius: 50%;
+              right: 5px;
+              top: 5px;
+              content: "";
+              position: absolute;
+              display: none;
+            }
+          }
+          &.active {
+            .content {
+              &::after {
+                display: block;
+              }
+            }
+          }
+          .price {
+            flex: none;
+            margin-left: 10px;
+            font-family: var(--font-family-secondary);
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 18px; /* 100% */
+            letter-spacing: 0.36px;
+            text-transform: uppercase;
+            @include MQ(MQ-480) {
+              margin: 20px 0 0;
+            }
+          }
+        }
+      }
     }
+  }
+  .btn--cart {
+    &::before {
+      background: url("icon-shopping-bag.svg") no-repeat center / 100%;
+      width: 17px;
+      height: 17px;
+      top: calc(50% - 8.5px);
+      right: 31px;
+    }
+  }
+  .btn--primary[disabled] {
+    pointer-events: none;
+    opacity: 0.5;
   }
 }
