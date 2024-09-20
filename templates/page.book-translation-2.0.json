@@ -82,6 +82,7 @@
         "content": "<p>Every captivating story deserves to spread its enchantment. With the depth and richness of the Spanish language, your story has the potential to touch many more hearts.<\/p>",
         "buttonText": "Translate Now",
         "buttonLink": "shopify:\/\/pages\/publishing-checkout",
+        "buttonLinkTarget": false,
         "bgColor": "#c192ff"
       }
     },
@@ -147,6 +148,7 @@
             "description": "<p>Every entrancing story deserves to spread its magic. And with the depth and richness of the Spanish language, your tale has the potential to leave an indelible mark on many more hearts.<\/p>",
             "buttonText": "Start Today",
             "buttonLink": "shopify:\/\/pages\/publishing-checkout",
+            "buttonLinkTarget": false,
             "background_color": "transparent-bg",
             "fontSize": false,
             "center": false
@@ -162,7 +164,7 @@
         "wave_color": "transparent-wave",
         "paddingtop": 0,
         "paddingtopmobile": 0,
-        "paddingbottom": 0,
+        "paddingbottom": 159,
         "paddingbottomMobile": 0
       }
     },
@@ -180,6 +182,7 @@
             "description": "<p>Think of how many emotions, dreams, and aspirations your story might awaken if told in Spanish.<\/p>",
             "buttonText": "Let’s Begin",
             "buttonLink": "shopify:\/\/pages\/publishing-checkout",
+            "buttonLinkTarget": false,
             "background_color": "blue",
             "fontSize": false,
             "center": false
@@ -203,7 +206,6 @@
       "type": "contact-form-with-text",
       "settings": {
         "title": "Reach out to us",
-        "address": "<p>3558 Round Barn Blvd, Suite<br\/>200 Santa Rosa, CA 95403<\/p>",
         "bgColor": "#dcf7ff"
       }
     }
