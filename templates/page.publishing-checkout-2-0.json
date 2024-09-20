@@ -90,10 +90,58 @@
         "paddingbottom": 140,
         "paddingbottomMobile": 80
       }
+    },
+    "half_image_half_product_section_DxxwEF": {
+      "type": "half-image-half-product-section",
+      "blocks": {
+        "product_WwykBY": {
+          "type": "product",
+          "settings": {
+            "product": "body-safety-bundle-i-three-book-set"
+          }
+        },
+        "product_jqebQx": {
+          "type": "product",
+          "settings": {
+            "product": "60-minutes-consultation"
+          }
+        },
+        "product_fxg8Cr": {
+          "type": "product",
+          "settings": {
+            "product": "backpack"
+          }
+        },
+        "product_H7pVh8": {
+          "type": "product",
+          "settings": {
+            "product": "body-safety-bundle-i-three-book-set"
+          }
+        }
+      },
+      "block_order": [
+        "product_WwykBY",
+        "product_jqebQx",
+        "product_fxg8Cr",
+        "product_H7pVh8"
+      ],
+      "settings": {
+        "heading": "Service option",
+        "subTitle": "",
+        "description": "<p>A great book deserves to be read, and with the right marketing strategy, it will be. It's all about connecting with the readers in the right way, the right time.<\/p>",
+        "image": "shopify:\/\/shop_images\/Vector_9f50d425-929a-45de-aa21-cf04700ae8e7.png",
+        "image_position": "left",
+        "wave_color": "blue-wave",
+        "paddingtop": 99,
+        "paddingtopmobile": 80,
+        "paddingbottom": 120,
+        "paddingbottomMobile": 100
+      }
     }
   },
   "order": [
     "innerBanner",
-    "four_column_icon_content_section_jXnQbQ"
+    "four_column_icon_content_section_jXnQbQ",
+    "half_image_half_product_section_DxxwEF"
   ]
 }
