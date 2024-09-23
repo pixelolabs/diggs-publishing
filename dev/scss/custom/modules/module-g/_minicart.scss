@@ -132,6 +132,11 @@
       margin-right: 16px;
       width: 20px;
       height: 20px;
+      background: url("icon-cross.svg") no-repeat center / 100%;
+      &:hover{
+        background: url("icon-cross-hover.svg") no-repeat center / 100%;
+          
+      }
       &:hover{
         svg{
           path{

@@ -116,6 +116,9 @@
     margin-top: 55px;
     position: relative;
     z-index: 3;
+    @include MQ(MQ-600) {
+      max-width: 400px;
+    }
     @include MQ(MQ-480) {
       margin-top: 35px;
     }

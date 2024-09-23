@@ -7,6 +7,15 @@
 * made to this file may be overwritten.
 * ------------------------------------------------------------
 */
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "articleMain": {
@@ -14,10 +23,11 @@
       "settings": {
         "blog_show_date": true,
         "show_share_buttons": true,
+        "contentTitle": "{{ article.metafields.custom.content_title_secondary_title_.value }}",
         "pretitle": "Recent Blogs",
         "recommendedHeading": "Latest Blogs",
         "link": "View All",
-        "linkUrl": "shopify:\/\/blogs\/blog"
+        "linkUrl": "shopify://blogs/blog"
       }
     },
     "article_three_column_product_section_BGkkr7": {

@@ -7,20 +7,30 @@
 * made to this file may be overwritten.
 * ------------------------------------------------------------
 */
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "innerBanner": {
       "type": "inner-hero-section",
       "settings": {
-        "image": "shopify:\/\/shop_images\/publishing-mentoring-banner.png",
-        "mobileImage": "shopify:\/\/shop_images\/publishing-mentoring-banner.png",
+        "image": "shopify://shop_images/publishing-mentoring-banner.png",
+        "mobileImage": "shopify://shop_images/publishing-mentoring-banner.png",
         "title": "Children’s Book Mentoring Young Minds",
-        "description": "<p>Every writer begins as a storyteller. Hone your skills and craft stories that leave a mark.<\/p>",
+        "description": "<p>Every writer begins as a storyteller. Hone your skills and craft stories that leave a mark.</p>",
         "buttonText1": "Book Now",
-        "buttonLink1": "shopify:\/\/pages\/ambassador-program",
+        "buttonLink1": "shopify://pages/ambassador-program",
         "button_bg": "green",
         "content_alignment": "left",
-        "height": false
+        "height": false,
+        "section_class": ""
       }
     },
     "half_image_half_content_HzBwiK": {
@@ -29,14 +39,14 @@
         "image_hyh9bK": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/author-meeting.png",
+            "image": "shopify://shop_images/author-meeting.png",
             "showVideo": false,
             "video": "",
             "pretitle": "",
             "title": "Your Unique Children's Book Journey",
-            "description": "<p>You can expect an engaging and informative experience tailored to your specific needs and goals during the one-hour Children's Book Mentoring Session with Krystaelynne Diggs. The goal of this mentoring session is to provide you with knowledge, inspiration, and confidence to continue your journey in the world of children's literature.<\/p>",
+            "description": "<p>You can expect an engaging and informative experience tailored to your specific needs and goals during the one-hour Children's Book Mentoring Session with Krystaelynne Diggs. The goal of this mentoring session is to provide you with knowledge, inspiration, and confidence to continue your journey in the world of children's literature.</p>",
             "buttonText": "Book Now",
-            "buttonLink": "shopify:\/\/pages\/ambassador-program",
+            "buttonLink": "shopify://pages/ambassador-program",
             "buttonLinkTarget": false,
             "background_color": "transparent-bg",
             "fontSize": false,
@@ -53,8 +63,8 @@
         "wave_color": "transparent-wave",
         "paddingtop": 0,
         "paddingtopmobile": 0,
-        "paddingbottom": 0,
-        "paddingbottomMobile": 0
+        "paddingbottom": 159,
+        "paddingbottomMobile": 100
       }
     },
     "four_column_icon_content_section_jXnQbQ": {
@@ -63,65 +73,65 @@
         "cards_pTdtHF": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Tailored_Guidance.svg",
+            "icon": "shopify://shop_images/Tailored_Guidance.svg",
             "title": "Tailored Guidance",
-            "description": "<p>Each story is as unique as its teller. Our sessions are crafted to cater to your specific needs, ensuring your narrative shines its brightest.<\/p>"
+            "description": "<p>Each story is as unique as its teller. Our sessions are crafted to cater to your specific needs, ensuring your narrative shines its brightest.</p>"
           }
         },
         "cards_zt3aVh": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Expert_Insight.svg",
+            "icon": "shopify://shop_images/Expert_Insight.svg",
             "title": "Expert Insight",
-            "description": "<p>Leverage the depth of Krystaelynne Diggs' experience. Drawing from her success in children's literature, she offers unparalleled insights, guiding your manuscript to its best version.<\/p>"
+            "description": "<p>Leverage the depth of Krystaelynne Diggs' experience. Drawing from her success in children's literature, she offers unparalleled insights, guiding your manuscript to its best version.</p>"
           }
         },
         "cards_8dfF6E": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Genuine_Feedback_4b80cc23-6db6-4867-b471-d7665d6359c7.svg",
+            "icon": "shopify://shop_images/Genuine_Feedback_4b80cc23-6db6-4867-b471-d7665d6359c7.svg",
             "title": "Genuine Feedback",
-            "description": "<p>Constructive criticism is growth in disguise. Recognize your strengths, address areas for improvement, and mold your narrative into a captivating tale.<\/p>"
+            "description": "<p>Constructive criticism is growth in disguise. Recognize your strengths, address areas for improvement, and mold your narrative into a captivating tale.</p>"
           }
         },
         "cards_PNfgrE": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Conquering_Challenges.svg",
+            "icon": "shopify://shop_images/Conquering_Challenges.svg",
             "title": "Conquering Challenges",
-            "description": "<p>The realm of children's literature is enchanting yet intricate. Navigate its challenges with our support, ensuring your story is both compelling and suitable for young readers.<\/p>"
+            "description": "<p>The realm of children's literature is enchanting yet intricate. Navigate its challenges with our support, ensuring your story is both compelling and suitable for young readers.</p>"
           }
         },
         "cards_bmqQCP": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Personal_Touch.svg",
+            "icon": "shopify://shop_images/Personal_Touch.svg",
             "title": "Personal Touch",
-            "description": "<p>Our sessions respect your individual pace, preferences, and passion, fostering a harmonious path to your book's completion.<\/p>"
+            "description": "<p>Our sessions respect your individual pace, preferences, and passion, fostering a harmonious path to your book's completion.</p>"
           }
         },
         "cards_6yXU6P": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Confidence_Building.svg",
+            "icon": "shopify://shop_images/Confidence_Building.svg",
             "title": "Confidence Building",
-            "description": "<p>Beyond the technicalities of writing, lies the heart of a storyteller. Let us bolster your confidence, empowering you to narrate tales that the world yearns to hear.<\/p>"
+            "description": "<p>Beyond the technicalities of writing, lies the heart of a storyteller. Let us bolster your confidence, empowering you to narrate tales that the world yearns to hear.</p>"
           }
         },
         "cards_XCXazM": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Making_a_Mark.svg",
+            "icon": "shopify://shop_images/Making_a_Mark.svg",
             "title": "Making a Mark",
-            "description": "<p>The magic of children's books lies in their influence. We emphasize creating narratives that not only entertain but leave a lasting impact on youthful minds.<\/p>"
+            "description": "<p>The magic of children's books lies in their influence. We emphasize creating narratives that not only entertain but leave a lasting impact on youthful minds.</p>"
           }
         },
         "cards_L8rKpN": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Championing_Diversity.svg",
+            "icon": "shopify://shop_images/Championing_Diversity.svg",
             "title": "Championing Diversity",
-            "description": "<p>Diggs Publishing champions a world where every child sees a reflection of themselves in the stories they cherish. We urge authors to weave diverse tales, filling the shelves with varied, relatable characters.<\/p>"
+            "description": "<p>Diggs Publishing champions a world where every child sees a reflection of themselves in the stories they cherish. We urge authors to weave diverse tales, filling the shelves with varied, relatable characters.</p>"
           }
         }
       },
@@ -149,14 +159,14 @@
         "image_fjkmb3": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/children-with-book.png",
+            "image": "shopify://shop_images/children-with-book.png",
             "showVideo": false,
             "video": "",
             "pretitle": "",
             "title": "Your Children's Book Journey Starts Here",
-            "description": "<p>Begin your authorial adventure with the guidance of Krystaelynne Diggs' mentoring sessions. Whether you're starting fresh or refining a manuscript, our tailored approach ensures your stories reach their fullest potential. Revel in the synergy of expert insight, individualized feedback, and a nurturing ambiance. Dive deep into the world of children's literature. Illuminate young minds and hearts with your unique tales.<\/p>",
+            "description": "<p>Begin your authorial adventure with the guidance of Krystaelynne Diggs' mentoring sessions. Whether you're starting fresh or refining a manuscript, our tailored approach ensures your stories reach their fullest potential. Revel in the synergy of expert insight, individualized feedback, and a nurturing ambiance. Dive deep into the world of children's literature. Illuminate young minds and hearts with your unique tales.</p>",
             "buttonText": "Book Now",
-            "buttonLink": "https:\/\/calendly.com\/authorksd\/author-meeting-w-krystaelynne?month=2024-09",
+            "buttonLink": "https://calendly.com/authorksd/author-meeting-w-krystaelynne?month=2024-09",
             "buttonLinkTarget": false,
             "background_color": "transparent-bg",
             "fontSize": false,

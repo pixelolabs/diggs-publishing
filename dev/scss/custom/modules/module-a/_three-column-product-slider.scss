@@ -481,15 +481,20 @@
       top: calc(50% - 9.5px);
       z-index: 10;
       cursor: pointer;
+    
+          background: url("icon-arrow-slide-black.svg") no-repeat center / 100%;
       @include MQ(MQ-600) {
         // display: none;
         right: -22px;
+      height: 24.25px;
+      width: 15px;
         svg {
           width: 24.25px;
           height: 15px;
         }
       }
       &:hover {
+        filter: brightness(0) saturate(100%) invert(48%) sepia(35%) saturate(4056%) hue-rotate(346deg) brightness(102%) contrast(101%);
         svg {
           path {
             fill: $color-orange;

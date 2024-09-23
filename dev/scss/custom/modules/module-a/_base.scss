@@ -52,6 +52,13 @@
                 top: 21px;
                 right: 18px;
                 z-index: 7;
+                width: 20px;
+      height: 20px;
+                background: url("icon-cross.svg") no-repeat center / 100%;
+                &:hover{
+                  background: url("icon-cross-hover.svg") no-repeat center / 100%;
+                    
+                }
                 &:hover{
                     svg{
                       path{

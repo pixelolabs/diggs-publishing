@@ -1403,5 +1403,33 @@ jQuery(function() {
             },
         });
     })
+
+    /*Product share it*/
+    $(".js__share-product").on('click', function() {
+     
+ // Create a "hidden" input
+ var aux = document.createElement("input");
+
+ // Assign it the value of the specified element
+ aux.setAttribute("value",window.location.origin+"/"+$(this).attr("data-href"));
+
+ // Append it to the body
+ document.body.appendChild(aux);
+
+ // Highlight its content
+ aux.select();
+
+ // Copy the highlighted text
+ document.execCommand("copy");
+
+ // Remove it from the body
+ document.body.removeChild(aux)
+
+ $(this).addClass("copied");
+ setTimeout(function() {
+    $(".js__share-product").removeClass("copied");
+}, 2000);
+    })
+    
 })
 
