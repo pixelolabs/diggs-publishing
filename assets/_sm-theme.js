@@ -1892,7 +1892,10 @@ jQuery(function () {
     document.execCommand("copy"); // Remove it from the body
 
     document.body.removeChild(aux);
-    $(this).attr("title", "Copied");
+    $(this).addClass("Copied");
+    setTimeout(function () {
+      $(this).removeClass("Copied");
+    }, 2000);
   });
 });
 "use strict";
