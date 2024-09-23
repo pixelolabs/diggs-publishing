@@ -13,14 +13,14 @@
       "type": "home-hero-banner",
       "settings": {
         "color_scheme": "scheme-1",
-        "backgroundImage": "shopify:\/\/shop_images\/Untitled_design-3.webp",
-        "backgroundImageMobile": "shopify:\/\/shop_images\/Untitled_design-3.webp",
+        "backgroundImage": "shopify://shop_images/Untitled_design-3.webp",
+        "backgroundImageMobile": "shopify://shop_images/Untitled_design-3.webp",
         "pretitle": "Welcome to Diggs Publishing",
         "pretitle_color": "",
         "title": "Diverse Children’s Books collections",
-        "description": "<p>In a word filled with countless stories, Diggs Publishing celebrates the unique tales that often go untold.<\/p>",
+        "description": "<p>In a word filled with countless stories, Diggs Publishing celebrates the unique tales that often go untold.</p>",
         "buttonText": "Order Now",
-        "buttonLink": "shopify:\/\/collections\/books",
+        "buttonLink": "shopify://collections/books",
         "bluegradient": false
       }
     },
@@ -28,9 +28,9 @@
       "type": "content-banner",
       "settings": {
         "title": "95% of child sexual abuse is preventable through education.",
-        "description": "<p>Child molestation research and prevention institute<\/p>",
-        "image1": "shopify:\/\/shop_images\/child-with-glasses.webp",
-        "image2": "shopify:\/\/shop_images\/child-with-kite.webp"
+        "description": "<p>Child molestation research and prevention institute</p>",
+        "image1": "shopify://shop_images/child-with-glasses.webp",
+        "image2": "shopify://shop_images/child-with-kite.webp"
       }
     },
     "three_column_product_slider_KnYRxa": {
@@ -78,7 +78,7 @@
         "pretitle": "Best Deals",
         "title": "Latest Books Collection",
         "buttonText": "VIEW ALL",
-        "buttonLink": "shopify:\/\/collections"
+        "buttonLink": "shopify://collections"
       }
     },
     "half_image_half_content_MaYr7A": {
@@ -87,14 +87,14 @@
         "image_U6JiFN": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Screenshot_2024-08-26_at_4.48.17_PM.png",
+            "image": "shopify://shop_images/Screenshot_2024-08-26_at_4.48.17_PM.png",
             "showVideo": true,
-            "video": "https:\/\/youtu.be\/xpG6R261b_c?si=vu4KL9_nTs_j-OPQ",
+            "video": "https://youtu.be/xpG6R261b_c?si=vu4KL9_nTs_j-OPQ",
             "pretitle": "Krystaelynne Sanders Diggs",
             "title": "My Mission is to prevent child sexual abuse",
-            "description": "<p>In a world filled with countless stories, Diggs Publishing celebrates the unique tales that often go untold. Dive into our universe, where each page brings to life characters that truly reflect the world’s diverse tapestry.<\/p>",
+            "description": "<p>In a world filled with countless stories, Diggs Publishing celebrates the unique tales that often go untold. Dive into our universe, where each page brings to life characters that truly reflect the world’s diverse tapestry.</p>",
             "buttonText": "Read More",
-            "buttonLink": "shopify:\/\/pages\/about-me",
+            "buttonLink": "shopify://pages/about-me",
             "buttonLinkTarget": false,
             "background_color": "blue",
             "fontSize": false,
@@ -111,7 +111,7 @@
         "wave_color": "blue-wave",
         "paddingtop": 0,
         "paddingtopmobile": 0,
-        "paddingbottom": 0,
+        "paddingbottom": 60,
         "paddingbottomMobile": 0
       }
     },
@@ -122,21 +122,21 @@
           "type": "review",
           "settings": {
             "name": "TRICIA HENLEY",
-            "description": "<p>You won't be disappointed in buying this book. It is perfect for parents to teach our young ones what is appropriate and not appropriate touching. With this time in age, this book is a great introduction to that subject. Well worth the price! You will love this book.<\/p>"
+            "description": "<p>You won't be disappointed in buying this book. It is perfect for parents to teach our young ones what is appropriate and not appropriate touching. With this time in age, this book is a great introduction to that subject. Well worth the price! You will love this book.</p>"
           }
         },
         "review_3NiegC": {
           "type": "review",
           "settings": {
             "name": "DENEA",
-            "description": "<p>I purchased this book for mv daughter, we both enjoyed it. illustrations are very inviting for kids, and it explains safe touching, to enlighten kids on their body is THEIRS. I recommend it because this is a kid friendly way to help teach our small loved ones the importance of safe touch.<\/p>"
+            "description": "<p>I purchased this book for mv daughter, we both enjoyed it. illustrations are very inviting for kids, and it explains safe touching, to enlighten kids on their body is THEIRS. I recommend it because this is a kid friendly way to help teach our small loved ones the importance of safe touch.</p>"
           }
         },
         "review_EJFUni": {
           "type": "review",
           "settings": {
             "name": "MARKEISHA",
-            "description": "<p>This book is illustrated beautifully and provides a simple way to introduce the topic of \"touch\" without making it uncomfortable to your children. Must buy as a gift and for your own children! Just beautiful!<\/p>"
+            "description": "<p>This book is illustrated beautifully and provides a simple way to introduce the topic of \"touch\" without making it uncomfortable to your children. Must buy as a gift and for your own children! Just beautiful!</p>"
           }
         }
       },
@@ -148,7 +148,7 @@
       "settings": {
         "pretitle": "Latest Reviews",
         "title": "What customers say about us",
-        "image": "shopify:\/\/shop_images\/About_introduction.webp",
+        "image": "shopify://shop_images/About_introduction.webp",
         "paddingtop": 0,
         "paddingtopmobile": 0,
         "paddingbottom": 80,
@@ -161,39 +161,39 @@
         "logo_hAHcqH": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/c1.png",
-            "link": "http:\/\/kidsagain.org",
+            "image": "shopify://shop_images/c1.png",
+            "link": "http://kidsagain.org",
             "title": ""
           }
         },
         "logo_qmTtnb": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/c2.png",
-            "link": "https:\/\/sohlv.org",
+            "image": "shopify://shop_images/c2.png",
+            "link": "https://sohlv.org",
             "title": ""
           }
         },
         "logo_nfBUJE": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/c3.png",
-            "link": "https:\/\/www.journey2self.net",
+            "image": "shopify://shop_images/c3.png",
+            "link": "https://www.journey2self.net",
             "title": ""
           }
         },
         "logo_8icidq": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/c4.png",
-            "link": "https:\/\/roomredux.org\/?_ga=2.54568173.710467861.1662813947-313543959.1662529482",
+            "image": "shopify://shop_images/c4.png",
+            "link": "https://roomredux.org/?_ga=2.54568173.710467861.1662813947-313543959.1662529482",
             "title": ""
           }
         },
         "logo_jCikGR": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/c5.png",
+            "image": "shopify://shop_images/c5.png",
             "link": "",
             "title": ""
           }
@@ -202,8 +202,8 @@
           "type": "logo",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/kids-2_4.png",
-            "link": "https:\/\/www.bearapy.org",
+            "image": "shopify://shop_images/kids-2_4.png",
+            "link": "https://www.bearapy.org",
             "title": ""
           }
         }
@@ -230,9 +230,9 @@
       "settings": {
         "title": "Every writer starts as a storyteller. Explore the journey of author Krystaelynne Sanders Diggs",
         "content": "",
-        "image": "shopify:\/\/shop_images\/kids-images.webp",
+        "image": "shopify://shop_images/kids-images.webp",
         "buttonText": "Read More",
-        "buttonLink": "shopify:\/\/pages\/author-visits",
+        "buttonLink": "shopify://pages/author-visits",
         "buttonLinkTarget": false,
         "bgColor": "#77c85a"
       }
