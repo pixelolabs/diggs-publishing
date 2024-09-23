@@ -6,6 +6,7 @@
         namespace = 'plugin_' + pluginName;
 
         function Plugin(element) {
+            console.log("$(element)"+$(element).html())
             this.headerSearch = $(element);
             this.headerSearchForm = this.headerSearch.find('.header-search__form');
             this.headerInput = this.headerSearch.find('.header-search__input');
