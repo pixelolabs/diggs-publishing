@@ -14,7 +14,7 @@
       "settings": {
         "blog_show_date": true,
         "show_share_buttons": true,
-        "contentTitle": "{{ article.title }}{{ article.metafields.custom.content_title_secondary_title_.value }}",
+        "contentTitle": "{{ article.metafields.custom.content_title_secondary_title_.value }}",
         "pretitle": "Recent Blogs",
         "recommendedHeading": "Latest Blogs",
         "link": "View All",
