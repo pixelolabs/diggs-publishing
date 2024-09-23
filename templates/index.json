@@ -111,8 +111,8 @@
         "wave_color": "blue-wave",
         "paddingtop": 0,
         "paddingtopmobile": 0,
-        "paddingbottom": 60,
-        "paddingbottomMobile": 0
+        "paddingbottom": 30,
+        "paddingbottomMobile": 50
       }
     },
     "review_slider_with_image_EptAbU": {
