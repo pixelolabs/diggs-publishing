@@ -7,6 +7,7 @@
 
         function Plugin(element) {
             console.log("$(element)"+$(element).html())
+            console.log("window.router"+window.router)
             this.headerSearch = $(element);
             this.headerSearchForm = this.headerSearch.find('.header-search__form');
             this.headerInput = this.headerSearch.find('.header-search__input');
