@@ -491,3 +491,162 @@
 {{search}}
 </script>
 </div>
+
+
+<style>
+
+.quickSearchResultsWrap {
+  background-color: #fff;
+  z-index: 11;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
+  padding: 15px 10px 15px
+}
+
+.quickSearchResultsWrap .custom-scrollbar {
+  max-height: -moz-calc(100vh - 150px);
+  max-height: -webkit-calc(100vh - 150px);
+  max-height: -ms-calc(100vh - 150px);
+  max-height: calc(100vh - 150px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  webkit-overflow-scrolling: touch
+}
+
+.quickSearchResultsWrap .custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #f4f4f4
+}
+
+.quickSearchResultsWrap .custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  background-color: #f4f4f4
+}
+
+.quickSearchResultsWrap .custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--color_slick_arrow)
+}
+
+.quickSearchResultsWrap .header-search__trending {
+  margin-bottom: 15px
+}
+
+.quickSearchResultsWrap .box-title {
+  font-size: var(--font_size);
+  line-height: var(--font_size_plus8);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: #232323;
+  border-bottom: 1px solid var(--border_bt_sidebar);
+  padding-bottom: 5px;
+  margin-bottom: 15px
+}
+
+.quickSearchResultsWrap .list-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -5px
+}
+
+.quickSearchResultsWrap .list-item .item {
+  padding: 0 5px;
+  margin-bottom: 10px
+}
+
+.quickSearchResultsWrap .list-item .highlight {
+  display: block;
+  background-color: #f7f7f7;
+  color: #868686;
+  padding: 7px 12px 5px;
+  cursor: pointer
+}
+
+.quickSearchResultsWrap .list-item .highlight .fa {
+  margin-right: 6px
+}
+
+.quickSearchResultsWrap .products-grid {
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  overflow: auto
+}
+
+.quickSearchResultsWrap .products-grid .grid-item {
+  margin-top: 5px;
+  margin-bottom: 15px
+}
+
+.quickSearchResultsWrap .products-grid .product-top .compare-button {
+  display: none
+}
+
+.quickSearchResultsWrap .product-item .product-image img {
+  min-height: initial
+}
+
+.quickSearchResultsWrap .product-item .product-image .product-grid-image {
+  min-height: initial
+}
+
+.quickSearchResultsWrap .product-item .product-bottom {
+  text-align: left;
+}
+
+.custom_width.style_product_grid_4 .quickSearchResultsWrap .product-bottom {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.quickSearchResultsWrap .product-item .product-bottom .product-vendor {
+  color: var(--color_vendor);
+}
+
+.quickSearchResultsWrap .product-item .action {
+  display: none !important
+}
+
+.quickSearchResultsWrap .product-item .product-title {
+  word-break: break-word;
+  max-height: initial;
+  white-space: normal;
+  text-overflow: initial;
+  display: -webkit-box;
+}
+
+.quickSearchResultsWrap .header-search__results .text-center {
+  border-top: 1px solid var(--border_bt_sidebar)
+}
+
+.quickSearchResultsWrap .text-results {
+  display: block;
+  font-weight: 600;
+  color: #3c3c3c;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  padding: 6px 0 4px
+}
+
+.quickSearchResultsWrap .text-results:hover {
+  color: #178dc9
+}
+
+.quickSearchResultsWrap .text-results.header-search__see-more {
+  margin-top: 15px
+}
+
+</style>
