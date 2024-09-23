@@ -1336,9 +1336,7 @@ jQuery(document).ready(function ($) {
       }, 500);
 
       if ($(this).parent(".tab-content").css("display") == "block") {
-        if ($(this).parent(".tab-content").children(".accordion-con").css("display") == "none") {
-          $(this).parent(".tab-content").children(".accordion-con").css("display") == "block";
-        }
+        $(this).parent(".tab-content").children(".accordion-con").css("display") == "block";
       }
     } else {
       $(".accordion-con").slideUp();
