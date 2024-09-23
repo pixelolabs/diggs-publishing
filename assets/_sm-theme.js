@@ -1319,6 +1319,12 @@ jQuery(document).ready(function ($) {
   $(document).on("click", ".js___accordion", function (e) {
     e.preventDefault();
 
+    if ($(this).parent(".tab-content").css("display") == "block") {
+      if ($(this).parent(".tab-content").children(".accordion-con").css("display") == "none") {
+        $(this).parent(".tab-content").children(".accordion-con").css("display") == "block";
+      }
+    }
+
     if ($(this).parent(".tab-content").children(".accordion-con").css("display") == "none") {
       $(".accordion-con").slideUp();
       $(".accordion-con").removeClass("active");
@@ -1334,10 +1340,6 @@ jQuery(document).ready(function ($) {
       $('html,body').animate({
         scrollTop: $(this).offset().top - 120
       }, 500);
-
-      if ($(this).parent(".tab-content").css("display") == "block") {
-        $(this).parent(".tab-content").children(".accordion-con").css("display") == "block";
-      }
     } else {
       $(".accordion-con").slideUp();
       $(".accordion-con").removeClass("active"); // $(".tab-content").removeClass("active");
