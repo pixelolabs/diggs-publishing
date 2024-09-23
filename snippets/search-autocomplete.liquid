@@ -94,7 +94,8 @@
                     type: this.searchMode
                 }
             }).then(function(data) {
-                console.log("data['results']"+data['results']);
+                console.log("data['results']"+data['results_count']);
+                console.log("data['title_heading']"+data['title_heading']);
                 self.headerSearchResults.html(self.searchResultsTemplate({
                     is_show: true,
                     is_loading: false,
