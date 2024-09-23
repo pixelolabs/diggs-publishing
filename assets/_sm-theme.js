@@ -1334,6 +1334,10 @@ jQuery(document).ready(function ($) {
       $('html,body').animate({
         scrollTop: $(this).offset().top - 120
       }, 500);
+
+      if ($(this).parent(".tab-content").css("display") == "block") {
+        $(this).parent(".tab-content").children(".accordion-con").css("display") == "block";
+      }
     } else {
       $(".accordion-con").slideUp();
       $(".accordion-con").removeClass("active"); // $(".tab-content").removeClass("active");
@@ -1341,10 +1345,6 @@ jQuery(document).ready(function ($) {
       $(this).parent(".tab-content").children(".accordion-link").removeClass("active"); // $(this).parent(".tab-content").removeClass("active");
 
       $(this).parent(".tab-content").children(".accordion-con").removeClass("active");
-    }
-
-    if ($(this).parent(".tab-content").css("display") == "block") {
-      $(this).parent(".tab-content").children(".accordion-con").css("display") == "block";
     }
   });
 });
@@ -1876,26 +1876,6 @@ jQuery(function () {
         showCartErrorMessage();
       }
     });
-  });
-  /*Product share it*/
-
-  $(".js__share-product").on('click', function () {
-    // Create a "hidden" input
-    var aux = document.createElement("input"); // Assign it the value of the specified element
-
-    aux.setAttribute("value", window.location.origin + "/" + $(this).attr("data-href")); // Append it to the body
-
-    document.body.appendChild(aux); // Highlight its content
-
-    aux.select(); // Copy the highlighted text
-
-    document.execCommand("copy"); // Remove it from the body
-
-    document.body.removeChild(aux);
-    $(this).addClass("copied");
-    setTimeout(function () {
-      $(".js__share-product").removeClass("copied");
-    }, 2000);
   });
 });
 "use strict";
