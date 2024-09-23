@@ -103,6 +103,7 @@
     "copy_link": true,
     "favicon": "shopify://shop_images/diggs-favicon.png",
     "search_3": "Your search for",
+    "enable_multilang_shopify": false,
     "hidden_default": true,
     "popup_newsletter_expire": "2",
     "popup_newsletter_delay": "20",
