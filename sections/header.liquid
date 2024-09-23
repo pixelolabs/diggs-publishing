@@ -95,21 +95,13 @@
               <div class="container-830">
                 {% comment %} <a href="javascript:;" class=" toggle-icon"> {% include 'icon-search' %}</a> {% endcomment %}
 
-                <form action="{{ routes.search_url }}" method="get" class="search-bar" role="search">
-                  <input type="hidden" name="options[prefix]" value="last">
-                      <input type="search" name="q" 
-                      {% if settings.enable_multilang %} data-translate="general.search.placeholder" translate-item="placeholder"{% endif %} 
-                      placeholder="{% if settings.layout_style == 'layout_style_surfup' %}{{ 'general.search.placeholder3' | t }}{% else %}{{ 'general.search.placeholder' | t }}{% endif %}" 
-                      class="input-group-field header-search__input" aria-label="Search Site" autocomplete="off">
-                  <button type="submit" class="btn icon-search" aria-label="Search Icon">
-                      {% render 'icon-search' %}
-                  </button>
-                  {% if settings.header_style_mobile == 'header_mobile_3' %}
-                  <button type="button" title="close" class="close close-search close-search-style-3 inv-btn" style="display: none;">
-                      {% render 'icon-close' %}
-                  </button>
-                  {% endif %}
-              </form>       
+                <form method="get" action="/search" class="flex-align-center relative" data-form-type="">
+                  <input type="hidden" name="type" value="product">
+
+                  <input class="search header-search__input" type="search" placeholder="Search Products" aria-label="Search" name="q">
+
+                  <input type="submit" aria-label="Submit" class="submit btn-submit" value="Search">
+                </form>
               </div>
               <button aria-label="close" id="search-close" class="close">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
