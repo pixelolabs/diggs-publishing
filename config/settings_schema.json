@@ -2277,6 +2277,132 @@
       ]
     },
     {
+        "name": "Add On Search Form",
+        "settings": [
+          {
+            "type": "header",
+            "content": "Search Page"
+          },
+          {
+            "type": "checkbox",
+            "id": "enable_search",
+            "label": "Enable Search?",
+            "default": true
+          },
+          {
+            "type": "text",
+            "id": "search_1",
+            "label": "Your search for (no results html)",
+            "default": "Your search for"
+          },
+          {
+            "type": "text",
+            "id": "search_2",
+            "label": "did not yield any results (no results html)",
+            "default": "did not yield any results."
+          },
+          {
+            "type": "text",
+            "id": "search_3",
+            "label": "Your search for (results for html)",
+            "default": "Your search for"
+          },
+          {
+            "type": "text",
+            "id": "search_4",
+            "label": "revealed the following (results for html)",
+            "default": "revealed the following:"
+          },
+          {
+            "type": "header",
+            "content": "Trending"
+          },
+          {
+            "type": "checkbox",
+            "id": "enable_search_trending",
+            "label": "Enable",
+            "default": true
+          },
+          {
+            "type": "text",
+            "id": "trending_search_title",
+            "label": "Title",
+            "default": "trending",
+            "info": "==================="
+          },
+          {
+            "type": "text",
+            "id": "trending_search_item_1",
+            "label": "Search Item 1",
+            "default": "dempus"
+          },
+          {
+            "type": "text",
+            "id": "trending_search_item_2",
+            "label": "Search Item 2",
+            "default": "sample"
+          },
+          {
+            "type": "text",
+            "id": "trending_search_item_3",
+            "label": "Search Item 3",
+            "default": "magnis"
+          },
+          {
+            "type": "text",
+            "id": "trending_search_item_4",
+            "label": "Search Item 4",
+            "default": "loremous saliduar"
+          },
+          {
+            "type": "text",
+            "id": "trending_search_item_5",
+            "label": "Search Item 5",
+            "default": "naminos"
+          },
+          {
+            "type": "text",
+            "id": "trending_search_item_6",
+            "label": "Search Item 6",
+            "default": "dinterdum",
+            "info": "==================="
+          },
+          {
+            "type": "header",
+            "content": "Popular Products"
+          },
+          {
+            "type": "checkbox",
+            "id": "enable_search_popular_products",
+            "label": "Enable",
+            "default": true
+          },
+          {
+            "type": "text",
+            "id": "popular_products_search_title",
+            "label": "Title",
+            "default": "Popular Products",
+            "info": "==================="
+          },
+          {
+            "type": "collection",
+            "id": "popular_products_collection",
+            "label": "Collection to use",
+            "info": "==================="
+          },
+          {
+            "type": "range",
+            "id": "popular_products_limit",
+            "label": "Number of new products to show",
+            "min": 3,
+            "max": 6,
+            "step": 1,
+            "default": 3
+          }
+        ]
+      },
+     
+    {
       "name": "Add On Newsletter Popup",
       "settings": [
         {
