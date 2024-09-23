@@ -1341,10 +1341,10 @@ jQuery(document).ready(function ($) {
       $(this).parent(".tab-content").children(".accordion-link").removeClass("active"); // $(this).parent(".tab-content").removeClass("active");
 
       $(this).parent(".tab-content").children(".accordion-con").removeClass("active");
-    }
 
-    if ($(this).parent(".tab-content").css("display") == "block") {
-      $(this).parent(".tab-content").children(".accordion-con").css("display") == "block";
+      if ($(this).parent(".tab-content").css("display") == "block") {
+        $(this).parent(".tab-content").children(".accordion-con").css("display") == "block";
+      }
     }
   });
 });

@@ -123,7 +123,7 @@
       z-index: 1;
       top: 37%;
       background: url(rocket.webp) no-repeat center / 100%;
-      animation: fly 10s 0.5s ease-in infinite;
+      animation: fly 7s ease-in infinite;
       @include MQ(MQ-980) {
         display: none;
       }
@@ -184,6 +184,9 @@
         width: 20px;
         height: 20px;
         cursor: pointer;
+        path {
+          stroke-width: 1.2px;
+        }
 
         @include MQ(MQ-768) {
           width: 15px;
@@ -199,6 +202,10 @@
         height: 20px;
         width: 20px;
         cursor: pointer;
+        path {
+          stroke-width: 1.3px;
+        }
+
         @include MQ(MQ-768) {
           width: 15px;
           height: 15px;

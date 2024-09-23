@@ -164,7 +164,7 @@
         z-index: 1;
         bottom: 8px;
         background: url("rocket.webp") no-repeat center / 100%;
-        animation: fly 10s 0.5s ease-in infinite;
+        animation: fly 7s ease-in infinite;
         @include MQ(MQ-768) {
           display: none;
         }

@@ -1,5 +1,5 @@
 .product-tab-section {
-  padding: 24px 0 75px;
+  padding: 24px 0 175px;
   background: $color-off-white-light;
   position: relative;
   @include MQ(MQ-600) {
@@ -52,7 +52,6 @@
   }
 
   .pdp-tab-head {
-    
     border-bottom: solid 1px $color-black;
     display: flex;
     li {
@@ -119,12 +118,12 @@
       padding-right: 0;
     }
     .tab-content {
-      &.active {
-        // display: block !important;
-        .accordion-con {
-          display: block !important;
-        }
-      }
+      // &.active {
+
+      //   .accordion-con {
+      //     display: block !important;
+      //   }
+      // }
       @include MQ(MQ-980) {
         display: block !important;
         border: 1px solid $color-black;
@@ -135,13 +134,13 @@
         }
       }
       .accordion-con {
-        display: block !important;
+        display: block;
         @include MQ(MQ-980) {
-          display: none !important;
+          display: none;
         }
-        &.active {
-          display: block !important;
-        }
+        // &.active {
+        //   display: block !important;
+        // }
       }
     }
     .accordion-link {
@@ -717,8 +716,6 @@
       //     }
       //   }
       // }
-
-    
 
       .accordion-link {
         display: none;

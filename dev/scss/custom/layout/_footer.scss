@@ -3,7 +3,7 @@ footer {
   position: relative;
   overflow-x: clip;
   background-color: $color-yellow;
-  z-index: 3 !important;
+  // z-index: 3 !important;
   // margin-top: 233px;
   // @include MQ(MQ-768) {
   //   margin-top: 180px;
@@ -51,10 +51,11 @@ footer {
     background-size: contain;
     z-index: 5;
     @include MQ(MQ-480) {
-      width: 60px;
-      height: 45px;
-      top: -44px;
-      display: none;
+      width: 81px;
+      height: 65px;
+
+      top: -57px;
+      left: 20%;
     }
   }
   .top-section {
@@ -239,6 +240,27 @@ footer {
       display: none;
     }
   }
+  // .container-1306 {
+  //   position: relative;
+  //   &:after {
+  //     position: absolute;
+  //     content: "";
+  //     width: 60px;
+  //     height: 45px;
+  //     background: url(icon-cloud.webp) no-repeat center / 100%;
+  //     animation: 10s linear infinite;
+  //     animation-name: animateCloud;
+  //     top: -30px;
+  //     right: 18%;
+  //     background-size: contain;
+  //     // z-index: 5;
+  //     @include MQ(MQ-480) {
+  //       width: 45.95px;
+  //       height: 37.98px;
+  //       top: -35px;
+  //     }
+  //   }
+  // }
   .main-footer {
     position: relative;
     &:after {
@@ -252,6 +274,7 @@ footer {
       top: -30px;
       right: 18%;
       background-size: contain;
+      z-index: 5;
       // z-index: 5;
       @include MQ(MQ-480) {
         width: 45.95px;

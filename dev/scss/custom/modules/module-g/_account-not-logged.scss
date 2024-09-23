@@ -210,7 +210,7 @@
         z-index: 1;
         bottom: -16px;
         background: url("rocket.webp") no-repeat center / 100%;
-        animation: fly 10s 0.5s ease-in infinite;
+        animation: fly 7s ease-in infinite;
         @include MQ(MQ-768) {
           width: 50px;
           height: 50px;
@@ -339,7 +339,7 @@
       text-decoration: underline !important;
       position: relative;
       text-transform: capitalize;
-      &:hover{
+      &:hover {
         color: $color-orange;
       }
     }
