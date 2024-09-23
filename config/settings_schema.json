@@ -2401,6 +2401,79 @@
           }
         ]
       },
+      {
+        "name": "Add On Multiple Languages",
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "enable_multilang_shopify",
+            "label": "Enable Multi Languages",
+            "default": true
+          },
+          {
+            "type": "text",
+            "id": "lange_1",
+            "label": "Language 1",
+            "default": "German"
+          },
+          {
+            "type": "image",
+            "id": "i-lang-1.png",
+            "label": "Language 1 Icon"
+          },
+          {
+            "type": "text",
+            "id": "lange_2",
+            "label": "Language 2",
+            "default": "English"
+          },
+          {
+            "type": "image",
+            "id": "i-lang-2.png",
+            "label": "Language 2 Icon"
+          },
+          {
+            "type": "text",
+            "id": "lange_3",
+            "label": "Language 3"
+          },
+          {
+            "type": "image",
+            "id": "i-lang-3.png",
+            "label": "Language 3 Icon"
+          },
+          {
+            "type": "text",
+            "id": "lange_4",
+            "label": "Language 4"
+          },
+          {
+            "type": "image",
+            "id": "i-lang-4.png",
+            "label": "Language 4 Icon"
+          },
+          {
+            "type": "text",
+            "id": "lange_5",
+            "label": "Language 5"
+          },
+          {
+            "type": "image",
+            "id": "i-lang-5.png",
+            "label": "Language 5 Icon"
+          },
+          {
+            "type": "text",
+            "id": "lange_6",
+            "label": "Language 6"
+          },
+          {
+            "type": "image",
+            "id": "i-lang-6.png",
+            "label": "Language 6 Icon"
+          }
+        ]
+      },
      
     {
       "name": "Add On Newsletter Popup",
