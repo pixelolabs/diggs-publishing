@@ -1343,7 +1343,7 @@ jQuery(document).ready(function ($) {
       $(this).parent(".tab-content").children(".accordion-con").removeClass("active");
 
       if ($(this).parent(".tab-content").css("display") == "block") {
-        $(this).parent(".tab-content").children(".accordion-con").css("display") == "block";
+        $(this).parent(".main-tab-content").children(".accordion-con").css("display") == "block";
       }
     }
   });
