@@ -1894,7 +1894,7 @@ jQuery(function () {
     document.body.removeChild(aux);
     $(this).addClass("copied");
     setTimeout(function () {
-      $(this).removeClass("copied");
+      $(".js__share-product").removeClass("copied");
     }, 2000);
   });
 });
