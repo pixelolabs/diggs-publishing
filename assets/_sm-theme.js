@@ -1880,7 +1880,8 @@ jQuery(function () {
   /*Product share it*/
 
   $(".js__share-product").on('click', function () {
-    // Create a "hidden" input
+    console.log("window.location.origin" + window.location.origin); // Create a "hidden" input
+
     var aux = document.createElement("input"); // Assign it the value of the specified element
 
     aux.setAttribute("value", $(this).attr("data-href")); // Append it to the body
