@@ -1,0 +1,2425 @@
+
+[
+    {
+      "name": "theme_info",
+      "theme_name": "PixelVerse",
+      "theme_author": "Dolly",
+      "theme_version": "1.0.0",
+      "theme_documentation_url": "https:\/\/help.shopify.com\/en\/manual\/online-store\/os\/using-themes",
+      "theme_support_url": "https:\/\/support.shopify.com\/"
+    },
+    {
+      "name": "Font Setting",
+      "settings": [
+        {
+          "type": "html",
+          "id": "fontScript",
+          "label": "Font Script"
+        },
+        {
+          "type": "text",
+          "id": "bodyFontCode",
+          "label": "Body Font Code"
+        },
+        {
+          "type": "text",
+          "id": "headingFontCode",
+          "label": "Heading Font Code"
+        },
+        {
+          "type": "text",
+          "id": "subheadingFontCode",
+          "label": "PreTitle/Subheading Font Code"
+        }
+        ,
+        {
+          "type": "text",
+          "id": "buttonFontCode",
+          "label": "Button Font Code"
+        }
+      ]
+    },
+    
+    {
+      "name": "t:settings_schema.colors.name",
+      "settings": [
+        {
+          "type": "color_scheme_group",
+          "id": "color_schemes",
+          "definition": [
+            {
+              "type": "color",
+              "id": "background",
+              "label": "t:settings_schema.colors.settings.background.label",
+              "default": "#FFFFFF"
+            },
+            {
+              "type": "color_background",
+              "id": "background_gradient",
+              "label": "t:settings_schema.colors.settings.background_gradient.label",
+              "info": "t:settings_schema.colors.settings.background_gradient.info"
+            },
+            {
+              "type": "color",
+              "id": "text",
+              "label": "t:settings_schema.colors.settings.text.label",
+              "default": "#1a1b1b"
+            },
+            {
+              "type": "header",
+              "content": "Buttons"
+            },
+            {
+              "type": "color",
+              "id": "button",
+              "label": "t:settings_schema.colors.settings.button_background.label",
+              "default": "#1a1b1b"
+            },
+            {
+              "type": "color",
+              "id": "button_label",
+              "label": "t:settings_schema.colors.settings.button_label.label",
+              "default": "#FFFFFF"
+            },
+            {
+              "type": "color",
+              "id": "secondary_button_label",
+              "label": "t:settings_schema.colors.settings.secondary_button_label.label",
+              "default": "#1a1b1b"
+            },
+            {
+              "type": "color",
+              "id": "shadow",
+              "label": "t:settings_schema.colors.settings.shadow.label",
+              "default": "#1a1b1b"
+            }
+          ],
+          "role": {
+            "text": "text",
+            "background": {
+              "solid": "background",
+              "gradient": "background_gradient"
+            },
+            "links": "secondary_button_label",
+            "icons": "text",
+            "primary_button": "button",
+            "on_primary_button": "button_label",
+            "primary_button_border": "button",
+            "secondary_button": "background",
+            "on_secondary_button": "secondary_button_label",
+            "secondary_button_border": "secondary_button_label"
+          }
+        }
+      ]
+    },
+    {
+      "name": "t:settings_schema.buttons.name",
+      "settings": [
+        {
+          "type": "header",
+          "content": "t:settings_schema.global.settings.header__border.content"
+        },
+        {
+          "type": "range",
+          "id": "buttons_minimum_width",
+          "min": 100,
+          "max": 400,
+          "step": 5,
+          "unit": "px",
+          "label": "Button Min width",
+          "default": 170
+        },
+        {
+          "type": "range",
+          "id": "buttons_border_thickness",
+          "min": 0,
+          "max": 12,
+          "step": 1,
+          "unit": "px",
+          "label": "t:settings_schema.global.settings.thickness.label",
+          "default": 1
+        },
+        {
+          "type": "range",
+          "id": "buttons_border_opacity",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "t:settings_schema.global.settings.opacity.label",
+          "default": 100
+        },
+        {
+          "type": "range",
+          "id": "buttons_radius",
+          "min": 0,
+          "max": 40,
+          "step": 2,
+          "unit": "px",
+          "label": "t:settings_schema.global.settings.corner_radius.label",
+          "default": 0
+        },
+        {
+          "type": "header",
+          "content": "t:settings_schema.global.settings.header__shadow.content"
+        },
+        {
+          "type": "range",
+          "id": "buttons_shadow_opacity",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "t:settings_schema.global.settings.opacity.label",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "buttons_shadow_horizontal_offset",
+          "min": -12,
+          "max": 12,
+          "step": 2,
+          "unit": "px",
+          "label": "t:settings_schema.global.settings.horizontal_offset.label",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "buttons_shadow_vertical_offset",
+          "min": -12,
+          "max": 12,
+          "step": 2,
+          "unit": "px",
+          "label": "t:settings_schema.global.settings.vertical_offset.label",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "buttons_shadow_blur",
+          "min": 0,
+          "max": 20,
+          "step": 5,
+          "unit": "px",
+          "label": "t:settings_schema.global.settings.blur.label",
+          "default": 0
+        },
+        {
+          "type": "header",
+          "content": "Font Setting"
+        },
+        {
+          "type": "range",
+          "id": "buttonfontsize",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Font Size ",
+          "default": 16
+        },
+        {
+          "type": "text",
+          "id": "buttonlineheight",
+          "label": "Line Height",
+          "default": "normal"
+        },
+        {
+          "type": "text",
+          "id": "buttonletterspacing",
+          "label": "Letter Spacing",
+          "default": "normal"
+        },
+        {
+          "type": "select",
+          "id": "buttonfontweight",
+          "options": [
+            { "value": "100", "label": "100" },
+            { "value": "200", "label": "200" },
+            { "value": "300", "label": "300" },
+            { "value": "400", "label": "400" },
+            { "value": "500", "label": "500" },
+            { "value": "600", "label": "600" },
+            { "value": "700", "label": "700" },
+            { "value": "800", "label": "800" },
+            { "value": "900", "label": "900" }
+          ],
+          "label": "Font Weight",
+          "default": "400"
+        },
+        {
+          "type": "select",
+          "id": "buttonfontstyle",
+          "options": [
+            { "value": "normal", "label": "normal" },
+            { "value": "italic", "label": "italic" }
+          ],
+          "label": "Font Style",
+          "default": "normal"
+        },
+        {
+          "type": "select",
+          "id": "buttontexttransform",
+          "options": [
+            { "value": "capitalize", "label": "capitalize" },
+            { "value": "uppercase", "label": "uppercase" },
+            { "value": "lowercase", "label": "lowercase" }
+          ],
+          "label": "Text Transform",
+          "default": "capitalize"
+        },
+        {
+          "type": "header",
+          "content": "Button Mobile Font"
+        },
+        {
+          "type": "range",
+          "id": "buttonmobilefontsize",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Font Size ",
+          "default": 16
+        },
+        {
+          "type": "text",
+          "id": "buttonmobilelineheight",
+          "label": "Line Height",
+          "default": "normal"
+        },
+        {
+          "type": "text",
+          "id": "buttonmobileletterspacing",
+          "label": "Letter Spacing",
+          "default": "normal"
+        }
+      ]
+    },
+    {
+      "name": "t:settings_schema.typography.name",
+      "settings": [
+        {
+          "type": "header",
+          "content": "t:settings_schema.typography.settings.header__1.content"
+        },
+        {
+          "type": "header",
+          "content": "Desktop Font"
+        },
+        {
+          "type": "header",
+          "content": "PreTitle"
+        },
+        {
+          "type": "range",
+          "id": "pretitlefontsize",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Font Size ",
+          "default": 14
+        },
+        {
+          "type": "text",
+          "id": "pretitlelineheight",
+          "label": "Line Height",
+          "default": "normal"
+        },
+        {
+          "type": "text",
+          "id": "pretitleletterspacing",
+          "label": "Letter Spacing",
+          "default": "normal"
+        },
+        {
+          "type": "select",
+          "id": "pretitlefontweight",
+          "options": [
+            { "value": "100", "label": "100" },
+            { "value": "200", "label": "200" },
+            { "value": "300", "label": "300" },
+            { "value": "400", "label": "400" },
+            { "value": "500", "label": "500" },
+            { "value": "600", "label": "600" },
+            { "value": "700", "label": "700" },
+            { "value": "800", "label": "800" },
+            { "value": "900", "label": "900" }
+          ],
+          "label": "Font Weight",
+          "default": "400"
+        },
+        {
+          "type": "select",
+          "id": "pretitlefontstyle",
+          "options": [
+            { "value": "normal", "label": "normal" },
+            { "value": "italic", "label": "italic" }
+          ],
+          "label": "Font Style",
+          "default": "normal"
+        },
+        {
+          "type": "select",
+          "id": "pretitletexttransform",
+          "options": [
+            { "value": "capitalize", "label": "capitalize" },
+            { "value": "uppercase", "label": "uppercase" },
+            { "value": "lowercase", "label": "lowercase" }
+          ],
+          "label": "Text Transform",
+          "default": "capitalize"
+        },
+        {
+          "type": "header",
+          "content": "H1 Font"
+        },
+        {
+          "type": "range",
+          "id": "heading1fontsize",
+          "min": 10,
+          "max": 150,
+          "step": 2,
+          "unit": "px",
+         "label": "Font Size ",
+          "default": 30
+        },
+        {
+          "type": "text",
+          "id": "heading1lineheight",
+          "label": "Line Height",
+          "default": "normal"
+        },
+        {
+          "type": "text",
+          "id": "heading1letterspacing",
+          "label": "Letter Spacing",
+          "default": "normal"
+        },
+        {
+          "type": "select",
+          "id": "heading1fontweight",
+          "options": [
+            { "value": "100", "label": "100" },
+            { "value": "200", "label": "200" },
+            { "value": "300", "label": "300" },
+            { "value": "400", "label": "400" },
+            { "value": "500", "label": "500" },
+            { "value": "600", "label": "600" },
+            { "value": "700", "label": "700" },
+            { "value": "800", "label": "800" },
+            { "value": "900", "label": "900" }
+          ],
+          "label": "Font Weight",
+          "default": "400"
+        },
+        {
+          "type": "select",
+          "id": "heading1fontstyle",
+          "options": [
+            { "value": "normal", "label": "normal" },
+            { "value": "italic", "label": "italic" }
+          ],
+          "label": "Font Style",
+          "default": "normal"
+        },
+        {
+          "type": "select",
+          "id": "heading1texttransform",
+          "options": [
+            { "value": "capitalize", "label": "capitalize" },
+            { "value": "uppercase", "label": "uppercase" },
+            { "value": "lowercase", "label": "lowercase" }
+          ],
+          "label": "Text Transform",
+          "default": "capitalize"
+        },
+        
+  
+        {
+          "type": "header",
+          "content": "H2 Font"
+        },
+        {
+          "type": "range",
+          "id": "heading2fontsize",
+          "min": 10,
+          "max": 150,
+          "step": 2,
+          "unit": "px",
+         "label": "Font Size ",
+          "default": 30
+        },
+        {
+          "type": "text",
+          "id": "heading2lineheight",
+          "label": "Line Height",
+          "default": "normal"
+        },
+        {
+          "type": "text",
+          "id": "heading2letterspacing",
+          "label": "Letter Spacing",
+          "default": "normal"
+        },
+        {
+          "type": "select",
+          "id": "heading2fontweight",
+          "options": [
+            { "value": "100", "label": "100" },
+            { "value": "200", "label": "200" },
+            { "value": "300", "label": "300" },
+            { "value": "400", "label": "400" },
+            { "value": "500", "label": "500" },
+            { "value": "600", "label": "600" },
+            { "value": "700", "label": "700" },
+            { "value": "800", "label": "800" },
+            { "value": "900", "label": "900" }
+          ],
+          "label": "Font Weight",
+          "default": "400"
+        },
+        {
+          "type": "select",
+          "id": "heading2fontstyle",
+          "options": [
+            { "value": "normal", "label": "normal" },
+            { "value": "italic", "label": "italic" }
+          ],
+          "label": "Font Style",
+          "default": "normal"
+        },
+        {
+          "type": "select",
+          "id": "heading2texttransform",
+          "options": [
+            { "value": "capitalize", "label": "capitalize" },
+            { "value": "uppercase", "label": "uppercase" },
+            { "value": "lowercase", "label": "lowercase" }
+          ],
+          "label": "Text Transform",
+          "default": "capitalize"
+        },
+        
+        {
+          "type": "header",
+          "content": "H2 Medium Font"
+        },
+        {
+          "type": "range",
+          "id": "heading2mediumfontsize",
+          "min": 10,
+          "max": 150,
+          "step": 2,
+          "unit": "px",
+         "label": "Font Size ",
+          "default": 30
+        },
+        {
+          "type": "text",
+          "id": "heading2mediumlineheight",
+          "label": "Line Height",
+          "default": "normal"
+        },
+        {
+          "type": "text",
+          "id": "heading2mediumletterspacing",
+          "label": "Letter Spacing",
+          "default": "normal"
+        },
+        {
+          "type": "select",
+          "id": "heading2mediumfontweight",
+          "options": [
+            { "value": "100", "label": "100" },
+            { "value": "200", "label": "200" },
+            { "value": "300", "label": "300" },
+            { "value": "400", "label": "400" },
+            { "value": "500", "label": "500" },
+            { "value": "600", "label": "600" },
+            { "value": "700", "label": "700" },
+            { "value": "800", "label": "800" },
+            { "value": "900", "label": "900" }
+          ],
+          "label": "Font Weight",
+          "default": "400"
+        },
+        {
+          "type": "select",
+          "id": "heading2mediumfontstyle",
+          "options": [
+            { "value": "normal", "label": "normal" },
+            { "value": "italic", "label": "italic" }
+          ],
+          "label": "Font Style",
+          "default": "normal"
+        },
+        {
+          "type": "select",
+          "id": "heading2mediumtexttransform",
+          "options": [
+            { "value": "capitalize", "label": "capitalize" },
+            { "value": "uppercase", "label": "uppercase" },
+            { "value": "lowercase", "label": "lowercase" }
+          ],
+          "label": "Text Transform",
+          "default": "capitalize"
+        },
+        
+        {
+          "type": "header",
+          "content": "H2 Small Font"
+        },
+        {
+          "type": "range",
+          "id": "heading2smallfontsize",
+          "min": 10,
+          "max": 150,
+          "step": 2,
+          "unit": "px",
+         "label": "Font Size ",
+          "default": 30
+        },
+        {
+          "type": "text",
+          "id": "heading2smalllineheight",
+          "label": "Line Height",
+          "default": "normal"
+        },
+        {
+          "type": "text",
+          "id": "heading2smallletterspacing",
+          "label": "Letter Spacing",
+          "default": "normal"
+        },
+        {
+          "type": "select",
+          "id": "heading2smallfontweight",
+          "options": [
+            { "value": "100", "label": "100" },
+            { "value": "200", "label": "200" },
+            { "value": "300", "label": "300" },
+            { "value": "400", "label": "400" },
+            { "value": "500", "label": "500" },
+            { "value": "600", "label": "600" },
+            { "value": "700", "label": "700" },
+            { "value": "800", "label": "800" },
+            { "value": "900", "label": "900" }
+          ],
+          "label": "Font Weight",
+          "default": "400"
+        },
+        {
+          "type": "select",
+          "id": "heading2smallfontstyle",
+          "options": [
+            { "value": "normal", "label": "normal" },
+            { "value": "italic", "label": "italic" }
+          ],
+          "label": "Font Style",
+          "default": "normal"
+        },
+        {
+          "type": "select",
+          "id": "heading2smalltexttransform",
+          "options": [
+            { "value": "capitalize", "label": "capitalize" },
+            { "value": "uppercase", "label": "uppercase" },
+            { "value": "lowercase", "label": "lowercase" }
+          ],
+          "label": "Text Transform",
+          "default": "capitalize"
+        },
+        {
+          "type": "header",
+          "content": "H3 Font"
+        },
+        {
+          "type": "range",
+          "id": "heading3fontsize",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+         "label": "Font Size ",
+          "default": 20
+        },
+        {
+          "type": "text",
+          "id": "heading3lineheight",
+          "label": "Line Height",
+          "default": "normal"
+        },
+        {
+          "type": "text",
+          "id": "heading3letterspacing",
+          "label": "Letter Spacing",
+          "default": "normal"
+        },
+        {
+          "type": "select",
+          "id": "heading3fontweight",
+          "options": [
+            { "value": "100", "label": "100" },
+            { "value": "200", "label": "200" },
+            { "value": "300", "label": "300" },
+            { "value": "400", "label": "400" },
+            { "value": "500", "label": "500" },
+            { "value": "600", "label": "600" },
+            { "value": "700", "label": "700" },
+            { "value": "800", "label": "800" },
+            { "value": "900", "label": "900" }
+          ],
+          "label": "Font Weight",
+          "default": "400"
+        },
+        {
+          "type": "select",
+          "id": "heading3fontstyle",
+          "options": [
+            { "value": "normal", "label": "normal" },
+            { "value": "italic", "label": "italic" }
+          ],
+          "label": "Font Style",
+          "default": "normal"
+        },
+        {
+          "type": "select",
+          "id": "heading3texttransform",
+          "options": [
+            { "value": "capitalize", "label": "capitalize" },
+            { "value": "uppercase", "label": "uppercase" },
+            { "value": "lowercase", "label": "lowercase" }
+          ],
+          "label": "Text Transform",
+          "default": "capitalize"
+        },
+        {
+          "type": "header",
+          "content": "H4 Font"
+        },
+        {
+          "type": "range",
+          "id": "heading4fontsize",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Font Size ",
+          "default": 18
+        },
+        {
+          "type": "text",
+          "id": "heading4lineheight",
+          "label": "Line Height",
+          "default": "normal"
+        },
+        {
+          "type": "text",
+          "id": "heading4letterspacing",
+          "label": "Letter Spacing",
+          "default": "normal"
+        },
+        {
+          "type": "select",
+          "id": "heading4fontweight",
+          "options": [
+            { "value": "100", "label": "100" },
+            { "value": "200", "label": "200" },
+            { "value": "300", "label": "300" },
+            { "value": "400", "label": "400" },
+            { "value": "500", "label": "500" },
+            { "value": "600", "label": "600" },
+            { "value": "700", "label": "700" },
+            { "value": "800", "label": "800" },
+            { "value": "900", "label": "900" }
+          ],
+          "label": "Font Weight",
+          "default": "400"
+        },
+        {
+          "type": "select",
+          "id": "heading4fontstyle",
+          "options": [
+            { "value": "normal", "label": "normal" },
+            { "value": "italic", "label": "italic" }
+          ],
+          "label": "Font Style",
+          "default": "normal"
+        },
+        {
+          "type": "select",
+          "id": "heading4texttransform",
+          "options": [
+            { "value": "capitalize", "label": "capitalize" },
+            { "value": "uppercase", "label": "uppercase" },
+            { "value": "lowercase", "label": "lowercase" }
+          ],
+          "label": "Text Transform",
+          "default": "capitalize"
+        },
+        {
+          "type": "header",
+          "content": "H5 Font"
+        },
+        {
+          "type": "range",
+          "id": "heading5fontsize",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Font Size ",
+          "default": 16
+        },
+        {
+          "type": "text",
+          "id": "heading5lineheight",
+          "label": "Line Height",
+          "default": "normal"
+        },
+        {
+          "type": "text",
+          "id": "heading5letterspacing",
+          "label": "Letter Spacing",
+          "default": "normal"
+        },
+        {
+          "type": "select",
+          "id": "heading5fontweight",
+          "options": [
+            { "value": "100", "label": "100" },
+            { "value": "200", "label": "200" },
+            { "value": "300", "label": "300" },
+            { "value": "400", "label": "400" },
+            { "value": "500", "label": "500" },
+            { "value": "600", "label": "600" },
+            { "value": "700", "label": "700" },
+            { "value": "800", "label": "800" },
+            { "value": "900", "label": "900" }
+          ],
+          "label": "Font Weight",
+          "default": "400"
+        },
+        {
+          "type": "select",
+          "id": "heading5fontstyle",
+          "options": [
+            { "value": "normal", "label": "normal" },
+            { "value": "italic", "label": "italic" }
+          ],
+          "label": "Font Style",
+          "default": "normal"
+        },
+        {
+          "type": "select",
+          "id": "heading5texttransform",
+          "options": [
+            { "value": "capitalize", "label": "capitalize" },
+            { "value": "uppercase", "label": "uppercase" },
+            { "value": "lowercase", "label": "lowercase" }
+          ],
+          "label": "Text Transform",
+          "default": "capitalize"
+        },
+        {
+          "type": "header",
+          "content": "H6 Font"
+        },
+        {
+          "type": "range",
+          "id": "heading6fontsize",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Font Size ",
+          "default": 14
+        },
+        {
+          "type": "text",
+          "id": "heading6lineheight",
+          "label": "Line Height",
+          "default": "normal"
+        },
+        {
+          "type": "text",
+          "id": "heading6letterspacing",
+          "label": "Letter Spacing",
+          "default": "normal"
+        },
+        {
+          "type": "select",
+          "id": "heading6fontweight",
+          "options": [
+            { "value": "100", "label": "100" },
+            { "value": "200", "label": "200" },
+            { "value": "300", "label": "300" },
+            { "value": "400", "label": "400" },
+            { "value": "500", "label": "500" },
+            { "value": "600", "label": "600" },
+            { "value": "700", "label": "700" },
+            { "value": "800", "label": "800" },
+            { "value": "900", "label": "900" }
+          ],
+          "label": "Font Weight",
+          "default": "400"
+        },
+        {
+          "type": "select",
+          "id": "heading6fontstyle",
+          "options": [
+            { "value": "normal", "label": "normal" },
+            { "value": "italic", "label": "italic" }
+          ],
+          "label": "Font Style",
+          "default": "normal"
+        },
+        {
+          "type": "select",
+          "id": "heading6texttransform",
+          "options": [
+            { "value": "capitalize", "label": "capitalize" },
+            { "value": "uppercase", "label": "uppercase" },
+            { "value": "lowercase", "label": "lowercase" }
+          ],
+          "label": "Text Transform",
+          "default": "capitalize"
+        },
+        {
+          "type": "header",
+          "content": "Para Font"
+        },
+        {
+          "type": "range",
+          "id": "parafontsize",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Font Size ",
+          "default": 16
+        },
+        {
+          "type": "text",
+          "id": "paralineheight",
+          "label": "Line Height",
+          "default": "normal"
+        },
+        {
+          "type": "text",
+          "id": "paraletterspacing",
+          "label": "Letter Spacing",
+          "default": "normal"
+        },
+        {
+          "type": "select",
+          "id": "parafontweight",
+          "options": [
+            { "value": "100", "label": "100" },
+            { "value": "200", "label": "200" },
+            { "value": "300", "label": "300" },
+            { "value": "400", "label": "400" },
+            { "value": "500", "label": "500" },
+            { "value": "600", "label": "600" },
+            { "value": "700", "label": "700" },
+            { "value": "800", "label": "800" },
+            { "value": "900", "label": "900" }
+          ],
+          "label": "Font Weight",
+          "default": "400"
+        },
+        {
+          "type": "select",
+          "id": "parafontstyle",
+          "options": [
+            { "value": "normal", "label": "normal" },
+            { "value": "italic", "label": "italic" }
+          ],
+          "label": "Font Style",
+          "default": "normal"
+        },
+        {
+          "type": "select",
+          "id": "paratexttransform",
+          "options": [
+            { "value": "capitalize", "label": "capitalize" },
+            { "value": "uppercase", "label": "uppercase" },
+            { "value": "lowercase", "label": "lowercase" }
+          ],
+          "label": "Text Transform",
+          "default": "capitalize"
+        },
+        {
+          "type": "header",
+          "content": "Para Medium Font"
+        },
+        {
+          "type": "range",
+          "id": "paramediumfontsize",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Font Size ",
+          "default": 16
+        },
+        {
+          "type": "text",
+          "id": "paramediumlineheight",
+          "label": "Line Height",
+          "default": "normal"
+        },
+        {
+          "type": "text",
+          "id": "paramediumletterspacing",
+          "label": "Letter Spacing",
+          "default": "normal"
+        },
+        {
+          "type": "select",
+          "id": "paramediumfontweight",
+          "options": [
+            { "value": "100", "label": "100" },
+            { "value": "200", "label": "200" },
+            { "value": "300", "label": "300" },
+            { "value": "400", "label": "400" },
+            { "value": "500", "label": "500" },
+            { "value": "600", "label": "600" },
+            { "value": "700", "label": "700" },
+            { "value": "800", "label": "800" },
+            { "value": "900", "label": "900" }
+          ],
+          "label": "Font Weight",
+          "default": "400"
+        },
+        {
+          "type": "select",
+          "id": "paramediumfontstyle",
+          "options": [
+            { "value": "normal", "label": "normal" },
+            { "value": "italic", "label": "italic" }
+          ],
+          "label": "Font Style",
+          "default": "normal"
+        },
+        {
+          "type": "select",
+          "id": "paramediumtexttransform",
+          "options": [
+            { "value": "capitalize", "label": "capitalize" },
+            { "value": "uppercase", "label": "uppercase" },
+            { "value": "lowercase", "label": "lowercase" }
+          ],
+          "label": "Text Transform",
+          "default": "capitalize"
+        },
+        {
+          "type": "header",
+          "content": "Para Small Font"
+        },
+        {
+          "type": "range",
+          "id": "parasmallfontsize",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Font Size ",
+          "default": 16
+        },
+        {
+          "type": "text",
+          "id": "parasmalllineheight",
+          "label": "Line Height",
+          "default": "normal"
+        },
+        {
+          "type": "text",
+          "id": "parasmallletterspacing",
+          "label": "Letter Spacing",
+          "default": "normal"
+        },
+        {
+          "type": "select",
+          "id": "parasmallfontweight",
+          "options": [
+            { "value": "100", "label": "100" },
+            { "value": "200", "label": "200" },
+            { "value": "300", "label": "300" },
+            { "value": "400", "label": "400" },
+            { "value": "500", "label": "500" },
+            { "value": "600", "label": "600" },
+            { "value": "700", "label": "700" },
+            { "value": "800", "label": "800" },
+            { "value": "900", "label": "900" }
+          ],
+          "label": "Font Weight",
+          "default": "400"
+        },
+        {
+          "type": "select",
+          "id": "parasmallfontstyle",
+          "options": [
+            { "value": "normal", "label": "normal" },
+            { "value": "italic", "label": "italic" }
+          ],
+          "label": "Font Style",
+          "default": "normal"
+        },
+        {
+          "type": "select",
+          "id": "parasmalltexttransform",
+          "options": [
+            { "value": "capitalize", "label": "capitalize" },
+            { "value": "uppercase", "label": "uppercase" },
+            { "value": "lowercase", "label": "lowercase" }
+          ],
+          "label": "Text Transform",
+          "default": "capitalize"
+        },
+        {
+          "type": "header",
+          "content": "Para X-Small Font"
+        },
+        {
+          "type": "range",
+          "id": "paraxsmallfontsize",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Font Size ",
+          "default": 16
+        },
+        {
+          "type": "text",
+          "id": "paraxsmalllineheight",
+          "label": "Line Height",
+          "default": "normal"
+        },
+        {
+          "type": "text",
+          "id": "paraxsmallletterspacing",
+          "label": "Letter Spacing",
+          "default": "normal"
+        },
+        {
+          "type": "select",
+          "id": "paraxsmallfontweight",
+          "options": [
+            { "value": "100", "label": "100" },
+            { "value": "200", "label": "200" },
+            { "value": "300", "label": "300" },
+            { "value": "400", "label": "400" },
+            { "value": "500", "label": "500" },
+            { "value": "600", "label": "600" },
+            { "value": "700", "label": "700" },
+            { "value": "800", "label": "800" },
+            { "value": "900", "label": "900" }
+          ],
+          "label": "Font Weight",
+          "default": "400"
+        },
+        {
+          "type": "select",
+          "id": "paraxsmallfontstyle",
+          "options": [
+            { "value": "normal", "label": "normal" },
+            { "value": "italic", "label": "italic" }
+          ],
+          "label": "Font Style",
+          "default": "normal"
+        },
+        {
+          "type": "select",
+          "id": "paraxsmalltexttransform",
+          "options": [
+            { "value": "capitalize", "label": "capitalize" },
+            { "value": "uppercase", "label": "uppercase" },
+            { "value": "lowercase", "label": "lowercase" }
+          ],
+          "label": "Text Transform",
+          "default": "capitalize"
+        },
+        {
+          "type": "header",
+          "content": "Pretitle Mobile Font"
+        },
+        {
+          "type": "range",
+          "id": "pretitlemobilefontsize",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Font Size ",
+          "default": 14
+        },
+        {
+          "type": "text",
+          "id": "pretitlemobilelineheight",
+          "label": "Line Height",
+          "default": "normal"
+        },
+        {
+          "type": "text",
+          "id": "pretitlemobileletterspacing",
+          "label": "Letter Spacing",
+          "default": "normal"
+        },
+        
+        {
+          "type": "header",
+          "content": "H1 Mobile Font"
+        },
+        {
+          "type": "range",
+          "id": "heading1mobilefontsize",
+          "min": 10,
+          "max": 150,
+          "step": 2,
+          "unit": "px",
+          "label": "Font Size ",
+          "default": 30
+        },
+        {
+          "type": "text",
+          "id": "heading1mobilelineheight",
+          "label": "Line Height",
+          "default": "normal"
+        },
+        {
+          "type": "text",
+          "id": "heading1mobileletterspacing",
+          "label": "Letter Spacing",
+          "default": "normal"
+        },
+        {
+          "type": "header",
+          "content": "H2 Mobile Font"
+        },
+        {
+          "type": "range",
+          "id": "heading2mobilefontsize",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Font Size ",
+          "default": 24
+        },
+        {
+          "type": "text",
+          "id": "heading2mobilelineheight",
+          "label": "Line Height",
+          "default": "normal"
+        },
+        {
+          "type": "text",
+          "id": "heading2mobileletterspacing",
+          "label": "Letter Spacing",
+          "default": "normal"
+        },
+        {
+          "type": "header",
+          "content": "H2 Medium Mobile Font"
+        },
+        {
+          "type": "range",
+          "id": "heading2mediummobilefontsize",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Font Size ",
+          "default": 24
+        },
+        {
+          "type": "text",
+          "id": "heading2mediummobilelineheight",
+          "label": "Line Height",
+          "default": "normal"
+        },
+        {
+          "type": "text",
+          "id": "heading2mediummobileletterspacing",
+          "label": "Letter Spacing",
+          "default": "normal"
+        },
+        {
+          "type": "header",
+          "content": "H2 Small Mobile Font"
+        },
+        {
+          "type": "range",
+          "id": "heading2smallmobilefontsize",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Font Size ",
+          "default": 24
+        },
+        {
+          "type": "text",
+          "id": "heading2smallmobilelineheight",
+          "label": "Line Height",
+          "default": "normal"
+        },
+        {
+          "type": "text",
+          "id": "heading2smallmobileletterspacing",
+          "label": "Letter Spacing",
+          "default": "normal"
+        },
+        {
+          "type": "header",
+          "content": "H3 Mobile Font"
+        },
+        {
+          "type": "range",
+          "id": "heading3mobilefontsize",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Font Size ",
+          "default": 16
+        },
+        {
+          "type": "text",
+          "id": "heading3mobilelineheight",
+          "label": "Line Height",
+          "default": "normal"
+        },
+        {
+          "type": "text",
+          "id": "heading3mobileletterspacing",
+          "label": "Letter Spacing",
+          "default": "normal"
+        },
+        {
+          "type": "header",
+          "content": "H4 Mobile Font"
+        },
+        {
+          "type": "range",
+          "id": "heading4mobilefontsize",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Font Size ",
+          "default": 18
+        },
+        {
+          "type": "text",
+          "id": "heading4mobilelineheight",
+          "label": "Line Height",
+          "default": "normal"
+        },
+        {
+          "type": "text",
+          "id": "heading4mobileletterspacing",
+          "label": "Letter Spacing",
+          "default": "normal"
+        },
+        {
+          "type": "header",
+          "content": "H5 Mobile Font"
+        },
+        {
+          "type": "range",
+          "id": "heading5mobilefontsize",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Font Size ",
+          "default": 16
+        },
+        {
+          "type": "text",
+          "id": "heading5mobilelineheight",
+          "label": "Line Height",
+          "default": "normal"
+        },
+        {
+          "type": "text",
+          "id": "heading5mobileletterspacing",
+          "label": "Letter Spacing",
+          "default": "normal"
+        },
+        {
+          "type": "header",
+          "content": "H6 Mobile Font"
+        },
+        {
+          "type": "range",
+          "id": "heading6mobilefontsize",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Font Size ",
+          "default": 14
+        },
+        {
+          "type": "text",
+          "id": "heading6mobilelineheight",
+          "label": "Line Height",
+          "default": "normal"
+        },
+        {
+          "type": "text",
+          "id": "heading6mobileletterspacing",
+          "label": "Letter Spacing",
+          "default": "normal"
+        },
+        {
+          "type": "header",
+          "content": "Para Mobile Font"
+        },
+        {
+          "type": "range",
+          "id": "paramobilefontsize",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Font Size ",
+          "default": 16
+        },
+        {
+          "type": "text",
+          "id": "paramobilelineheight",
+          "label": "Line Height",
+          "default": "normal"
+        },
+        {
+          "type": "text",
+          "id": "paramobileletterspacing",
+          "label": "Letter Spacing",
+          "default": "normal"
+        },
+      ]
+    },
+    {
+      "name": "t:settings_schema.inputs.name",
+      "settings": [
+        {
+          "type": "header",
+          "content": "t:settings_schema.global.settings.header__border.content"
+        },
+        {
+          "type": "range",
+          "id": "inputs_border_thickness",
+          "min": 0,
+          "max": 12,
+          "step": 1,
+          "unit": "px",
+          "label": "t:settings_schema.global.settings.thickness.label",
+          "default": 1
+        },
+        {
+          "type": "color",
+          "id": "inputs_border_color",
+          "label": "Border Color",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "inputs_background_color",
+          "label": "Background Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "range",
+          "id": "inputs_radius",
+          "min": 0,
+          "max": 40,
+          "step": 2,
+          "unit": "px",
+          "label": "t:settings_schema.global.settings.corner_radius.label",
+          "default": 0
+        },
+        {
+          "type": "header",
+          "content": "t:settings_schema.global.settings.header__shadow.content"
+        },
+        {
+          "type": "range",
+          "id": "inputs_shadow_opacity",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "t:settings_schema.global.settings.opacity.label",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "inputs_shadow_horizontal_offset",
+          "min": -12,
+          "max": 12,
+          "step": 2,
+          "unit": "px",
+          "label": "t:settings_schema.global.settings.horizontal_offset.label",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "inputs_shadow_vertical_offset",
+          "min": -12,
+          "max": 12,
+          "step": 2,
+          "unit": "px",
+          "label": "t:settings_schema.global.settings.vertical_offset.label",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "inputs_shadow_blur",
+          "min": 0,
+          "max": 20,
+          "step": 5,
+          "unit": "px",
+          "label": "t:settings_schema.global.settings.blur.label",
+          "default": 0
+        },
+        {
+          "type": "color",
+          "id": "inputs_text_color",
+          "label": "Text Color",
+          "default": "#000000"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_input_label",
+          "label": "Show Input Label",
+          "default": true
+        },
+  
+        {
+          "type": "header",
+          "content": "Font Setting"
+        },
+        {
+          "type": "select",
+          "id": "inputsfontfamily",
+          "options": [
+            { "value": "font-family-primary", "label": "Primary" },
+            { "value": "font-family-secondary", "label": "secondary" },
+            { "value": "font-family-pretitle", "label": "PreTitle" },
+            { "value": "font-family-button", "label": "Button" }
+          ],
+          "label": "Font Family",
+          "default": "font-family-primary"
+        },
+        {
+          "type": "range",
+          "id": "inputsfontsize",
+          "min": 10,
+          "max": 150,
+          "step": 2,
+          "unit": "px",
+          "label": "Font Size ",
+          "default": 14
+        },
+        {
+          "type": "text",
+          "id": "inputslineheight",
+          "label": "Line Height",
+          "default": "normal"
+        },
+        {
+          "type": "text",
+          "id": "inputsletterspacing",
+          "label": "Letter Spacing",
+          "default": "normal"
+        },
+        {
+          "type": "select",
+          "id": "inputsfontweight",
+          "options": [
+            { "value": "100", "label": "100" },
+            { "value": "200", "label": "200" },
+            { "value": "300", "label": "300" },
+            { "value": "400", "label": "400" },
+            { "value": "500", "label": "500" },
+            { "value": "600", "label": "600" },
+            { "value": "700", "label": "700" },
+            { "value": "800", "label": "800" },
+            { "value": "900", "label": "900" }
+          ],
+          "label": "Font Weight",
+          "default": "400"
+        },
+        {
+          "type": "select",
+          "id": "inputsfontstyle",
+          "options": [
+            { "value": "normal", "label": "normal" },
+            { "value": "italic", "label": "italic" }
+          ],
+          "label": "Font Style",
+          "default": "normal"
+        },
+        {
+          "type": "select",
+          "id": "inputstexttransform",
+          "options": [
+            { "value": "capitalize", "label": "capitalize" },
+            { "value": "uppercase", "label": "uppercase" },
+            { "value": "lowercase", "label": "lowercase" }
+          ],
+          "label": "Text Transform",
+          "default": "capitalize"
+        }
+      ]
+    },
+    {
+      "name": "t:settings_schema.cards.name",
+      "settings": [
+        {
+          "type": "select",
+          "id": "card_style",
+          "options": [
+            {
+              "value": "standard",
+              "label": "t:settings_schema.cards.settings.style.options__1.label"
+            },
+            {
+              "value": "card",
+              "label": "t:settings_schema.cards.settings.style.options__2.label"
+            }
+          ],
+          "default": "standard",
+          "label": "t:settings_schema.cards.settings.style.label"
+        },
+        {
+          "type": "range",
+          "id": "card_image_padding",
+          "min": 0,
+          "max": 20,
+          "step": 2,
+          "unit": "px",
+          "label": "t:settings_schema.global.settings.image_padding.label",
+          "default": 0
+        },
+        {
+          "type": "select",
+          "id": "card_text_alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:settings_schema.global.settings.text_alignment.options__1.label"
+            },
+            {
+              "value": "center",
+              "label": "t:settings_schema.global.settings.text_alignment.options__2.label"
+            },
+            {
+              "value": "right",
+              "label": "t:settings_schema.global.settings.text_alignment.options__3.label"
+            }
+          ],
+          "default": "left",
+          "label": "t:settings_schema.global.settings.text_alignment.label"
+        },
+        {
+          "type": "color_scheme",
+          "id": "card_color_scheme",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-2"
+        },
+        {
+          "type": "header",
+          "content": "t:settings_schema.global.settings.header__border.content"
+        },
+        {
+          "type": "range",
+          "id": "card_border_thickness",
+          "min": 0,
+          "max": 24,
+          "step": 1,
+          "unit": "px",
+          "label": "t:settings_schema.global.settings.thickness.label",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "card_border_opacity",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "t:settings_schema.global.settings.opacity.label",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "card_corner_radius",
+          "min": 0,
+          "max": 40,
+          "step": 2,
+          "unit": "px",
+          "label": "t:settings_schema.global.settings.corner_radius.label",
+          "default": 0
+        },
+        {
+          "type": "header",
+          "content": "t:settings_schema.global.settings.header__shadow.content"
+        },
+        {
+          "type": "range",
+          "id": "card_shadow_opacity",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "t:settings_schema.global.settings.opacity.label",
+          "default": 10
+        },
+        {
+          "type": "range",
+          "id": "card_shadow_horizontal_offset",
+          "min": -40,
+          "max": 40,
+          "step": 2,
+          "unit": "px",
+          "label": "t:settings_schema.global.settings.horizontal_offset.label",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "card_shadow_vertical_offset",
+          "min": -40,
+          "max": 40,
+          "step": 2,
+          "unit": "px",
+          "label": "t:settings_schema.global.settings.vertical_offset.label",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "card_shadow_blur",
+          "min": 0,
+          "max": 40,
+          "step": 5,
+          "unit": "px",
+          "label": "t:settings_schema.global.settings.blur.label",
+          "default": 0
+        }
+      ]
+    },
+    {
+      "name": "t:settings_schema.collection_cards.name",
+      "settings": [
+        {
+          "type": "select",
+          "id": "collection_card_style",
+          "options": [
+            {
+              "value": "standard",
+              "label": "t:settings_schema.collection_cards.settings.style.options__1.label"
+            },
+            {
+              "value": "card",
+              "label": "t:settings_schema.collection_cards.settings.style.options__2.label"
+            }
+          ],
+          "default": "standard",
+          "label": "t:settings_schema.collection_cards.settings.style.label"
+        },
+        {
+          "type": "range",
+          "id": "collection_card_image_padding",
+          "min": 0,
+          "max": 20,
+          "step": 2,
+          "unit": "px",
+          "label": "t:settings_schema.global.settings.image_padding.label",
+          "default": 0
+        },
+        {
+          "type": "select",
+          "id": "collection_card_text_alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:settings_schema.global.settings.text_alignment.options__1.label"
+            },
+            {
+              "value": "center",
+              "label": "t:settings_schema.global.settings.text_alignment.options__2.label"
+            },
+            {
+              "value": "right",
+              "label": "t:settings_schema.global.settings.text_alignment.options__3.label"
+            }
+          ],
+          "default": "left",
+          "label": "t:settings_schema.global.settings.text_alignment.label"
+        },
+        {
+          "type": "color_scheme",
+          "id": "collection_card_color_scheme",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-2"
+        },
+        {
+          "type": "header",
+          "content": "t:settings_schema.global.settings.header__border.content"
+        },
+        {
+          "type": "range",
+          "id": "collection_card_border_thickness",
+          "min": 0,
+          "max": 24,
+          "step": 1,
+          "unit": "px",
+          "label": "t:settings_schema.global.settings.thickness.label",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "collection_card_border_opacity",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "t:settings_schema.global.settings.opacity.label",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "collection_card_corner_radius",
+          "min": 0,
+          "max": 40,
+          "step": 2,
+          "unit": "px",
+          "label": "t:settings_schema.global.settings.corner_radius.label",
+          "default": 0
+        },
+        {
+          "type": "header",
+          "content": "t:settings_schema.global.settings.header__shadow.content"
+        },
+        {
+          "type": "range",
+          "id": "collection_card_shadow_opacity",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "t:settings_schema.global.settings.opacity.label",
+          "default": 10
+        },
+        {
+          "type": "range",
+          "id": "collection_card_shadow_horizontal_offset",
+          "min": -40,
+          "max": 40,
+          "step": 2,
+          "unit": "px",
+          "label": "t:settings_schema.global.settings.horizontal_offset.label",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "collection_card_shadow_vertical_offset",
+          "min": -40,
+          "max": 40,
+          "step": 2,
+          "unit": "px",
+          "label": "t:settings_schema.global.settings.vertical_offset.label",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "collection_card_shadow_blur",
+          "min": 0,
+          "max": 40,
+          "step": 5,
+          "unit": "px",
+          "label": "t:settings_schema.global.settings.blur.label",
+          "default": 0
+        }
+      ]
+    },
+    {
+      "name": "t:settings_schema.blog_cards.name",
+      "settings": [
+        {
+          "type": "select",
+          "id": "blog_card_style",
+          "options": [
+            {
+              "value": "standard",
+              "label": "t:settings_schema.blog_cards.settings.style.options__1.label"
+            },
+            {
+              "value": "card",
+              "label": "t:settings_schema.blog_cards.settings.style.options__2.label"
+            }
+          ],
+          "default": "standard",
+          "label": "t:settings_schema.blog_cards.settings.style.label"
+        },
+        {
+          "type": "range",
+          "id": "blog_card_image_padding",
+          "min": 0,
+          "max": 20,
+          "step": 2,
+          "unit": "px",
+          "label": "t:settings_schema.global.settings.image_padding.label",
+          "default": 0
+        },
+        {
+          "type": "select",
+          "id": "blog_card_text_alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:settings_schema.global.settings.text_alignment.options__1.label"
+            },
+            {
+              "value": "center",
+              "label": "t:settings_schema.global.settings.text_alignment.options__2.label"
+            },
+            {
+              "value": "right",
+              "label": "t:settings_schema.global.settings.text_alignment.options__3.label"
+            }
+          ],
+          "default": "left",
+          "label": "t:settings_schema.global.settings.text_alignment.label"
+        },
+        {
+          "type": "color_scheme",
+          "id": "blog_card_color_scheme",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-2"
+        },
+        {
+          "type": "header",
+          "content": "t:settings_schema.global.settings.header__border.content"
+        },
+        {
+          "type": "range",
+          "id": "blog_card_border_thickness",
+          "min": 0,
+          "max": 24,
+          "step": 1,
+          "unit": "px",
+          "label": "t:settings_schema.global.settings.thickness.label",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "blog_card_border_opacity",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "t:settings_schema.global.settings.opacity.label",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "blog_card_corner_radius",
+          "min": 0,
+          "max": 40,
+          "step": 2,
+          "unit": "px",
+          "label": "t:settings_schema.global.settings.corner_radius.label",
+          "default": 0
+        },
+        {
+          "type": "header",
+          "content": "t:settings_schema.global.settings.header__shadow.content"
+        },
+        {
+          "type": "range",
+          "id": "blog_card_shadow_opacity",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "t:settings_schema.global.settings.opacity.label",
+          "default": 10
+        },
+        {
+          "type": "range",
+          "id": "blog_card_shadow_horizontal_offset",
+          "min": -40,
+          "max": 40,
+          "step": 2,
+          "unit": "px",
+          "label": "t:settings_schema.global.settings.horizontal_offset.label",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "blog_card_shadow_vertical_offset",
+          "min": -40,
+          "max": 40,
+          "step": 2,
+          "unit": "px",
+          "label": "t:settings_schema.global.settings.vertical_offset.label",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "blog_card_shadow_blur",
+          "min": 0,
+          "max": 40,
+          "step": 5,
+          "unit": "px",
+          "label": "t:settings_schema.global.settings.blur.label",
+          "default": 0
+        }
+      ]
+    },
+    {
+      "name": "t:settings_schema.drawers.name",
+      "settings": [
+        {
+          "type": "header",
+          "content": "t:settings_schema.global.settings.header__border.content"
+        },
+        {
+          "type": "range",
+          "id": "drawer_border_thickness",
+          "min": 0,
+          "max": 24,
+          "step": 1,
+          "unit": "px",
+          "label": "t:settings_schema.global.settings.thickness.label",
+          "default": 1
+        },
+        {
+          "type": "range",
+          "id": "drawer_border_opacity",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "t:settings_schema.global.settings.opacity.label",
+          "default": 10
+        },
+        {
+          "type": "header",
+          "content": "t:settings_schema.global.settings.header__shadow.content"
+        },
+        {
+          "type": "range",
+          "id": "drawer_shadow_opacity",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "t:settings_schema.global.settings.opacity.label",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "drawer_shadow_horizontal_offset",
+          "min": -40,
+          "max": 40,
+          "step": 2,
+          "unit": "px",
+          "label": "t:settings_schema.global.settings.horizontal_offset.label",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "drawer_shadow_vertical_offset",
+          "min": -40,
+          "max": 40,
+          "step": 2,
+          "unit": "px",
+          "label": "t:settings_schema.global.settings.vertical_offset.label",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "drawer_shadow_blur",
+          "min": 0,
+          "max": 40,
+          "step": 5,
+          "unit": "px",
+          "label": "t:settings_schema.global.settings.blur.label",
+          "default": 0
+        }
+      ]
+    },
+  
+   
+   
+    {
+      "name": "Header",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Support Menu Order Page Link"
+        },
+        {
+          "type": "text",
+          "id": "trackLinkText",
+          "label": "Order Track Link Text"
+        },
+        {
+          "type": "url",
+          "id": "trackLink",
+          "label": "Order Track Link"
+        }
+      ]
+    },
+    
+    {
+      "name": "Frequently Bought Together Products",
+      "settings": [
+        {
+          "type": "text",
+          "id": "freqBoughtTitle",
+          "label": "Title"
+        },
+        {
+          "type": "product",
+          "id": "product_1",
+          "label": "Product 1"
+        },
+        {
+          "type": "product",
+          "id": "product_2",
+          "label": "Product 2"
+        }
+      ]
+    },
+    {
+      "name": "Cart",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Free Shipping"
+        },
+        {
+          "type": "text",
+          "id": "freeShippingThresholdValue",
+          "label": "Threshold Value"
+        },
+        {
+          "type": "text",
+          "id": "freeShippingMsg",
+          "label": "Free Shipping Message (When the value is reached)"
+        },
+        {
+          "type": "header",
+          "content": "Compatible Products"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "btnText",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "btnLink",
+          "label": "Button Link"
+        },
+        {
+          "type": "product",
+          "id": "product1",
+          "label": "Product 1"
+        },
+        {
+          "type": "product",
+          "id": "product2",
+          "label": "Product 2"
+        },
+        {
+          "type": "product",
+          "id": "product3",
+          "label": "Product 3"
+        },
+        {
+          "type": "product",
+          "id": "product4",
+          "label": "Product 4"
+        }
+      ]
+    },
+    {
+      "name": "Contact Information",
+      "settings": [
+        {
+          "type": "text",
+          "id": "email",
+          "label": "Email"
+        },
+        {
+          "type": "text",
+          "id": "textnumber",
+          "label": "Contact Number"
+        },
+        {
+          "type": "richtext",
+          "id": "address",
+          "label": "Address"
+        },
+        {
+          "type": "url",
+          "id": "addresslink",
+          "label": "Address Link"
+        }
+        
+      ]
+    },
+    
+    {
+      "name": "Social media",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Social accounts"
+        },
+        {
+          "type": "text",
+          "id": "social_facebook_link",
+          "label": "Facebook",
+          "info": "https:\/\/facebook.com\/shopify"
+        },
+        {
+          "type": "text",
+          "id": "social_twitter_link",
+          "label": "Twitter",
+          "info": "http:\/\/twitter.com\/shopify"
+        },
+        {
+          "type": "text",
+          "id": "social_instagram_link",
+          "label": "Instagram",
+          "info": "http:\/\/instagram.com\/shopify"
+        },
+        {
+          "type": "text",
+          "id": "social_tiktok_link",
+          "label":"Tiktok",
+          "info": "http:\/\/tiktok.com"
+        },
+        {
+          "type": "text",
+          "id": "social_youtube_link",
+          "label": "YouTube",
+          "info": "http:\/\/youtube.com"
+        },
+        {
+          "type": "text",
+          "id": "social_linkedin_link",
+          "label": "Linkedin",
+          "info": "http:\/\/linkedin.com"
+        },
+        {
+          "type": "header",
+          "content": "Sharing options"
+        },
+        {
+          "type": "checkbox",
+          "id": "share_facebook",
+          "label":  "Share on Facebook"
+        },
+        {
+          "type": "checkbox",
+          "id": "share_twitter",
+          "label": "Tweet on Twitter"
+        },
+        {
+          "type": "checkbox",
+          "id": "share_pinterest",
+          "label": "Share on Pinterest"
+        },
+        {
+          "type": "checkbox",
+          "id": "share_insta",
+          "label": "Share on Instagram"
+        },
+        {
+          "type": "checkbox",
+          "id": "share_linkedin",
+          "label": "Share on Linkedin"
+        },
+      
+        {
+          "type": "checkbox",
+          "id": "copy_link",
+          "label": "Print"
+        }
+      ]
+    },
+    {
+      "name": "Favicon",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "favicon",
+          "label": "Favicon image",
+          "info": "Will be scaled down to 32 x 32px"
+        }
+      ]
+    },
+    {
+      "name": "Add On Newsletter Popup",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "display_popup_newsletter",
+          "label": "Display Newsletter Popup?",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "hidden_default",
+          "label": "Hidden default?",
+          "default": false
+        },
+        {
+          "type": "select",
+          "id": "when_to_show",
+          "label": "When To Show",
+          "options": [
+            {
+              "value": "first_time",
+              "label": "With 'No, thanks' Option"
+            },
+            {
+              "value": "all_the_time",
+              "label": "Without 'No, thanks' Option"
+            }
+          ],
+          "default": "first_time",
+          "info": "Default Value: With 'No, thanks' Option"
+        },
+        {
+          "type": "text",
+          "id": "popup_newsletter_expire",
+          "label": "Newsletter Popup shows again after (days)",
+          "default": "1"
+        },
+        {
+          "type": "text",
+          "id": "popup_newsletter_delay",
+          "label": "Newsletter Popup Delay Time (seconds)",
+          "default": "5"
+        },
+        {
+          "type": "image_picker",
+          "id": "newsletter",
+          "label": "Upload a new newsletter image"
+        },
+        {
+          "type": "text",
+          "id": "popup_newsletter_title",
+          "label": "Newsletter Popup Title"
+        },
+        {
+          "type": "textarea",
+          "id": "popup_newsletter_des",
+          "label": "Newsletter Popup Descriptions"
+        },
+        {
+          "type": "text",
+          "id": "popup_newsletter_text_note",
+          "label": "Popup Newsletter Text Note"
+        },
+        {
+          "type": "text",
+          "id": "newssletter_success_text",
+          "label": "Successfully Subscribed Text",
+          "default": "You have successfully subscribed!"
+        },
+        {
+          "type": "text",
+          "id": "newssletter_error_text",
+          "label": "Error Subscribed Text",
+          "default": "This email has been registered",
+          "info": "Use Advanced Marketing app with Avada. Discount 30% for 3 months. Coupon code: ELLA [(How to setup)](https:\/\/help.avada.io\/en\/article\/how-to-setup-avada-newsletter-popup-for-ella-theme-users-1t7wsgl)"
+        },
+        {
+          "type": "header",
+          "content": "Newsletter Toolbar"
+        },
+        {
+          "type": "checkbox",
+          "id": "display_newsletter_toolbar",
+          "label": "Enable?",
+          "default": true
+        },
+        {
+          "type": "select",
+          "id": "position_toolbar",
+          "label": "Position",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "left"
+        },
+        {
+          "type": "text",
+          "id": "text_toolbar",
+          "label": "Text",
+          "default": "Newsletter"
+        },
+        {
+          "type": "color",
+          "id": "color_icon_toolbar",
+          "label": "Color Icon",
+          "default": "#a7a7a7"
+        },
+        {
+          "type": "color",
+          "id": "color_hover_icon_toolbar",
+          "label": "Color Icon Hover",
+          "default": "#505050"
+        },
+        {
+          "type": "color",
+          "id": "color_text_toolbar",
+          "label": "Color Text",
+          "default": "#202020"
+        },
+        {
+          "type": "color",
+          "id": "color_hover_text_toolbar",
+          "label": "Color Text Hover",
+          "default": "#202020"
+        },
+        {
+          "type": "header",
+          "content": "Social"
+        },
+        {
+          "type": "checkbox",
+          "id": "display_popup_social",
+          "label": "Display Social Media?",
+          "default": true
+        }
+      ]
+    }
+  ]
+  
