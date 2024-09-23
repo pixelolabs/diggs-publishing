@@ -47,8 +47,7 @@
 <script src="{{'theme.js' | asset_url}}" defer="defer"></script>
 <!-- Vendor Styles -->
 {{ '_sm-style-vendor.css' | asset_url | stylesheet_tag }}
-<!-- Lity CSS -->
-{{ 'lity.css' | asset_url | stylesheet_tag }}
+
 
 <!-- For customer templates only -->
 {%- if request.page_type contains 'customers/' -%}
