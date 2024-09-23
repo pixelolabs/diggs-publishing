@@ -471,7 +471,8 @@ h6,
     animation-duration: 10s;
     animation-iteration-count: infinite;
     @include MQ(MQ-480) {
-      display: none;
+      width: 62px;
+      height: 61px;
     }
   }
   &:before {
@@ -1774,7 +1775,7 @@ body.boost-sd__search-opening {
   }
 
   50% {
-    transform: translate(10px, 10px);
+    transform: translate(12px, 12px);
   }
   100% {
     transform: translate(0px, 0px);

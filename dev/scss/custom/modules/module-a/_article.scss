@@ -2,9 +2,9 @@
   .inner-hero-section {
     padding-top: 60px !important;
     align-items: center;
-    &:before {
-      bottom: 188px;
-    }
+    // &:before {
+    //   bottom: 188px;
+    // }
     .container-1240 {
       &:before {
         right: 156px;
@@ -166,9 +166,9 @@
         text-align: left;
         color: #3b2900;
         text-transform: none;
-        @include MQ(MQ-480) {
-          font-size: 14px;
-        }
+        // @include MQ(MQ-480) {
+        //   font-size: 14px;
+        // }
       }
     }
     p {
@@ -328,9 +328,11 @@
       animation-direction: alternate;
       width: 41px;
       height: 50px;
-      z-index: 2;
+      z-index: -1;
       @include MQ(MQ-480) {
-        display: none;
+        width: 31px;
+        height: 40px;
+        right: 0;
       }
     }
 
@@ -442,7 +444,10 @@
     animation-duration: 10s;
     animation-iteration-count: infinite;
     @include MQ(MQ-480) {
-      display: none;
+      width: 62px;
+      height: 61px;
+      left: 38%;
+      top: -100px;
     }
   }
   @include MQ(MQ-768) {

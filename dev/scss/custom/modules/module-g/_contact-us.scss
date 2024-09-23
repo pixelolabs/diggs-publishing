@@ -82,7 +82,9 @@
       animation-duration: 10s;
       animation-iteration-count: infinite;
       @include MQ(MQ-480) {
-        display: none;
+        width: 62px;
+        height: 61px;
+        top: -105px;
       }
     }
   }
@@ -233,7 +235,7 @@
       right: 23px;
       bottom: -50px;
       background: url(rocket.webp) no-repeat center / 100%;
-      animation: fly 10s 0.5s ease-in infinite;
+      animation: fly 7s ease-in infinite;
       width: 82px;
       height: 85px;
       z-index: -1;

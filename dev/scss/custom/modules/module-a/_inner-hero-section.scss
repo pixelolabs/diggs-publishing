@@ -44,7 +44,7 @@
       width: 267.6px;
     }
     @include MQ(MQ-768) {
-      bottom: 60px;
+      bottom: 80px;
       width: 200.6px;
     }
     @include MQ(MQ-480) {
@@ -154,23 +154,20 @@
     }
   }
 
-  &.contact{
+  &.contact {
     .container-1240 {
-   
       &::after {
-       
         @include MQ(MQ-768) {
-         display: none;
+          display: none;
         }
       }
-    
-    
     }
   }
   .content {
     max-width: 490px;
     width: 100%;
     position: relative;
+
     .btn--primary {
       margin-top: 20px;
     }

@@ -279,6 +279,9 @@
   position: relative;
   // z-index: 1;
   padding: 0px 0 160px;
+  @include MQ(MQ-768) {
+    padding-bottom: 100px;
+  }
   &.bg-blue {
     background-color: $color-sky-blue;
   }
@@ -335,10 +338,9 @@
       animation-duration: 5s;
       animation-iteration-count: infinite;
       animation-direction: alternate;
-      // @include MQ(MQ-768) {
-      //   width: 21px;
-      //   height: 21px;
-      // }
+      @include MQ(MQ-480) {
+        display: none;
+      }
     }
   }
   .video-section {
@@ -780,7 +782,9 @@
       top: -57px;
     }
     @include MQ(MQ-480) {
-      display: none;
+      width: 62px;
+      height: 61px;
+      top: -65px;
     }
   }
   // &:before {
@@ -923,7 +927,7 @@
     right: 0;
     left: 0;
     margin: 0 auto;
-    transform: translate(-100%, -12px);
+    // transform: translate(-100%, -12px);
     z-index: 2;
     top: -90px;
     background: url(ufo.webp) no-repeat center / 100%;
@@ -934,7 +938,9 @@
       top: -57px;
     }
     @include MQ(MQ-480) {
-      display: none;
+      width: 62px;
+      height: 61px;
+      top: -65px;
     }
   }
   .half-image-half-content {

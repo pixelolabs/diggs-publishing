@@ -45,7 +45,9 @@
     animation-duration: 10s;
     animation-iteration-count: infinite;
     @include MQ(MQ-480) {
-      display: none;
+      width: 62px;
+      height: 61px;
+      top: -90px;
     }
   }
   @include MQ(MQ-980) {
@@ -98,7 +100,13 @@
       top: 0px;
       left: unset;
       transform: rotate(-4.65deg);
-      z-index: 0;
+      z-index: -1;
+      animation: none;
+      @include MQ(MQ-480) {
+        width: 134px;
+        height: 115px;
+        z-index: -1;
+      }
     }
     .container-1240 {
       &:before {
@@ -118,7 +126,8 @@
           top: -140px;
         }
         @include MQ(MQ-480) {
-          display: none;
+          width: 62px;
+          height: 61px;
         }
       }
       &::after {
