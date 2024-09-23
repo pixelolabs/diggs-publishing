@@ -32,6 +32,35 @@
 
     }
   }
+  .share-product{
+    width: 30px;
+    height: 30px;
+    background: url("icon-share.svg") no-repeat center / 20px $color-light-yellow;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+    @include MQ(MQ-980) {
+      display: none;
+    }
+    &.copied::after {
+      position: absolute;
+      top: -15px;
+      right: -8px;
+      display: block;
+      content: "Copied!";
+      font-size: 0.75em;
+      padding: 2px 3px;
+      color: #fff;
+      background-color: $color-green;
+      border-radius: 3px;
+      opacity: 0;
+      will-change: opacity, transform;
+      animation: showcopied 1.5s ease;
+    }
+    
+    
+  }
   .inner {
     background: #fffff6;
     padding: 45px 0 210px;
@@ -368,15 +397,17 @@
   }
   &__information {
     width: 50%;
-    max-width: 575px;
+    max-width: 615px;
     padding-left: 50px;
     z-index: 3;
     position: relative;
+    padding-right: 40px;
 
     @include MQ(MQ-980) {
       width: 100%;
       max-width: 100%;
       padding-left: 0px;
+      padding-right: 0;
       margin-top: 15px;
     }
     // @include MQ(MQ-480) {
@@ -1899,5 +1930,20 @@
     @include MQ(MQ-768) {
       display: none;
     }
+  }
+}
+
+@keyframes showcopied {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  85% {
+    opacity: 1;
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-15px);
   }
 }
