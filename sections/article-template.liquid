@@ -64,7 +64,9 @@
           <a href="{{blog.url}}/tagged/{{ tag | handleize }}" class="tag">{{ tag }}</a>
         {% endfor %}
       </div>
-      <h2 class="article-main-title">{{ article.title }}</h2>
+      {% if section.settings.contentTitle != blank %}
+        <h2 class="article-main-title">{{ section.settings.contentTitle }}</h2>
+      {% endif %}
       <div class="artical-date-author">
         {% if section.settings.blog_show_date %}
           <div class="date-category-section">
