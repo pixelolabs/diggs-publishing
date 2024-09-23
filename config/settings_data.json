@@ -9,7 +9,7 @@
 */
 {
   "current": {
-    "fontScript": "<link rel=\"preconnect\" href=\"https:\/\/fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https:\/\/fonts.gstatic.com\" crossorigin=\"\">\n<link href=\"https:\/\/fonts.googleapis.com\/css2?family=Over+the+Rainbow&amp;display=swap\" rel=\"stylesheet\">\n<link href=\"https:\/\/fonts.googleapis.com\/css2?family=Luckiest+Guy&amp;display=swap\" rel=\"stylesheet\">\n<link href=\"https:\/\/fonts.googleapis.com\/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap\" rel=\"stylesheet\">",
+    "fontScript": "<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin=\"\">\n<link href=\"https://fonts.googleapis.com/css2?family=Over+the+Rainbow&amp;display=swap\" rel=\"stylesheet\">\n<link href=\"https://fonts.googleapis.com/css2?family=Luckiest+Guy&amp;display=swap\" rel=\"stylesheet\">\n<link href=\"https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap\" rel=\"stylesheet\">",
     "bodyFontCode": "\"Roboto\", sans-serif;",
     "headingFontCode": "\"Luckiest Guy\", cursive;",
     "subheadingFontCode": "\"Over the Rainbow\", cursive;",
@@ -79,12 +79,6 @@
     "inputsletterspacing": "1px",
     "inputsfontweight": "500",
     "inputstexttransform": "capitalize",
-    "tag1": "best seller",
-    "tagLabel1": "best seller",
-    "tagColor1": "#fcefef",
-    "tag2": "",
-    "tag3": "",
-    "product_recommendation_limit": "2",
     "freqBoughtTitle": "YOU MAY ALSO LIKE",
     "product_1": "boogie-the-strong-booger-1",
     "product_2": "boogie-the-strong-booger-ebook-1",
@@ -95,10 +89,9 @@
     "product2": "baby-s-big-plans",
     "product3": "bebe-de-piel-morena",
     "product4": "donation-where-hands-go-the-power-of-no",
-    "freeProduct1": "free-gift",
     "email": "author@ksdiggs.com",
     "textnumber": "",
-    "address": "<p>3558 Round Barn Blvd, Suite 200 Santa Rosa, CA 95403<\/p>",
+    "address": "<p>3558 Round Barn Blvd, Suite 200 Santa Rosa, CA 95403</p>",
     "social_facebook_link": "#",
     "social_twitter_link": "#",
     "social_instagram_link": "#",
@@ -108,13 +101,21 @@
     "share_twitter": true,
     "share_pinterest": true,
     "copy_link": true,
-    "favicon": "shopify:\/\/shop_images\/diggs-favicon.png",
+    "favicon": "shopify://shop_images/diggs-favicon.png",
+    "search_3": "Your search for",
     "hidden_default": true,
     "popup_newsletter_expire": "2",
     "popup_newsletter_delay": "20",
     "popup_newsletter_title": "Join Our Mailing List",
     "popup_newsletter_des": "Sign Up for exclusive updates,  <br>new arrivals & insider-only discounts",
     "popup_newsletter_text_note": "No, thanks",
+    "tag1": "best seller",
+    "tagLabel1": "best seller",
+    "tagColor1": "#fcefef",
+    "tag2": "",
+    "tag3": "",
+    "product_recommendation_limit": "2",
+    "freeProduct1": "free-gift",
     "emailAddress": "shop@store.com",
     "number": "1-888-819-4640",
     "type_body_font": "poppins_n4",
@@ -125,7 +126,7 @@
           "title": "404",
           "subtitle": "Page not found",
           "buttonText": "Button Text",
-          "buttonUrl": "\/"
+          "buttonUrl": "/"
         }
       },
       "article-template": {
@@ -142,7 +143,7 @@
           "announcement_wHQAmg": {
             "type": "announcement",
             "settings": {
-              "header_text": "<p>Free Shipping on all orders over $50. <a href=\"\/collections\" target=\"_blank\" title=\"All collections\">Shop Now<\/a><\/p>",
+              "header_text": "<p>Free Shipping on all orders over $50. <a href=\"/collections\" target=\"_blank\" title=\"All collections\">Shop Now</a></p>",
               "announcement_link": "",
               "announcement_link_text": ""
             }
@@ -150,8 +151,8 @@
           "announcement_UWp6dr": {
             "type": "announcement",
             "settings": {
-              "header_text": "<p>Sale! On the Newsest Collection<\/p>",
-              "announcement_link": "shopify:\/\/products\/cocoa-butter-baby",
+              "header_text": "<p>Sale! On the Newsest Collection</p>",
+              "announcement_link": "shopify://products/cocoa-butter-baby",
               "announcement_link_text": "Shop Now"
             }
           }
@@ -185,7 +186,7 @@
           "product_FnVzGG"
         ],
         "settings": {
-          "logo": "shopify:\/\/shop_images\/diggs-logo.png",
+          "logo": "shopify://shop_images/diggs-logo.png",
           "nav_menu": "main-menu-2-0",
           "loginMenu": "",
           "bottommobileMenu": ""
@@ -197,85 +198,85 @@
           "insta_7dMYGF": {
             "type": "insta",
             "settings": {
-              "instaImage": "shopify:\/\/shop_images\/IMG_9095.jpg",
-              "InstaLink": "https:\/\/www.instagram.com\/p\/Ctj3FWNv1MB\/"
+              "instaImage": "shopify://shop_images/IMG_9095.jpg",
+              "InstaLink": "https://www.instagram.com/p/Ctj3FWNv1MB/"
             }
           },
           "insta_chghia": {
             "type": "insta",
             "settings": {
-              "instaImage": "shopify:\/\/shop_images\/IMG_9098.jpg",
-              "InstaLink": "https:\/\/www.instagram.com\/p\/CpGM9PbvoTS\/"
+              "instaImage": "shopify://shop_images/IMG_9098.jpg",
+              "InstaLink": "https://www.instagram.com/p/CpGM9PbvoTS/"
             }
           },
           "insta_T8ye9F": {
             "type": "insta",
             "settings": {
-              "instaImage": "shopify:\/\/shop_images\/IMG_9093.jpg",
-              "InstaLink": "https:\/\/www.instagram.com\/p\/CvYYYcnPm42\/"
+              "instaImage": "shopify://shop_images/IMG_9093.jpg",
+              "InstaLink": "https://www.instagram.com/p/CvYYYcnPm42/"
             }
           },
           "insta_c4q4h6": {
             "type": "insta",
             "settings": {
-              "instaImage": "shopify:\/\/shop_images\/IMG_9097.jpg",
-              "InstaLink": "https:\/\/www.instagram.com\/p\/ChNhdl_PNJv\/"
+              "instaImage": "shopify://shop_images/IMG_9097.jpg",
+              "InstaLink": "https://www.instagram.com/p/ChNhdl_PNJv/"
             }
           },
           "insta_hyjYMk": {
             "type": "insta",
             "settings": {
-              "instaImage": "shopify:\/\/shop_images\/IMG_9096.jpg",
-              "InstaLink": "https:\/\/www.instagram.com\/p\/CdT4sc7vv8K\/?img_index=1"
+              "instaImage": "shopify://shop_images/IMG_9096.jpg",
+              "InstaLink": "https://www.instagram.com/p/CdT4sc7vv8K/?img_index=1"
             }
           },
           "insta_TqpBnJ": {
             "type": "insta",
             "settings": {
-              "instaImage": "shopify:\/\/shop_images\/IMG_9099.jpg",
-              "InstaLink": "https:\/\/www.instagram.com\/p\/ClIMC4nL4p4\/?img_index=2"
+              "instaImage": "shopify://shop_images/IMG_9099.jpg",
+              "InstaLink": "https://www.instagram.com/p/ClIMC4nL4p4/?img_index=2"
             }
           },
           "insta_Kg6wp8": {
             "type": "insta",
             "settings": {
-              "instaImage": "shopify:\/\/shop_images\/IMG_9114-min.jpg",
-              "InstaLink": "https:\/\/www.instagram.com\/p\/Cr7HbplJucw\/"
+              "instaImage": "shopify://shop_images/IMG_9114-min.jpg",
+              "InstaLink": "https://www.instagram.com/p/Cr7HbplJucw/"
             }
           },
           "insta_3WPgLg": {
             "type": "insta",
             "settings": {
-              "instaImage": "shopify:\/\/shop_images\/IMG_9101-min.jpg",
-              "InstaLink": "https:\/\/www.instagram.com\/p\/CrEqtHZvNH1\/"
+              "instaImage": "shopify://shop_images/IMG_9101-min.jpg",
+              "InstaLink": "https://www.instagram.com/p/CrEqtHZvNH1/"
             }
           },
           "insta_96VQ9Y": {
             "type": "insta",
             "settings": {
-              "instaImage": "shopify:\/\/shop_images\/IMG_9105-min.jpg",
+              "instaImage": "shopify://shop_images/IMG_9105-min.jpg",
               "InstaLink": ""
             }
           },
           "insta_X3fLCU": {
             "type": "insta",
             "settings": {
-              "instaImage": "shopify:\/\/shop_images\/IMG_9102.jpg",
-              "InstaLink": "https:\/\/www.instagram.com\/p\/CxOUkLtvrDN\/"
+              "instaImage": "shopify://shop_images/IMG_9102.jpg",
+              "InstaLink": "https://www.instagram.com/p/CxOUkLtvrDN/"
             }
           },
           "insta_4UjNKX": {
             "type": "insta",
             "settings": {
-              "instaImage": "shopify:\/\/shop_images\/IMG_9109-min.webp",
-              "InstaLink": "https:\/\/www.instagram.com\/p\/CuK_0zOP_ZD\/"
+              "instaImage": "shopify://shop_images/IMG_9109-min.webp",
+              "InstaLink": "https://www.instagram.com/p/CuK_0zOP_ZD/"
             }
           },
           "insta_Vf9pAm": {
             "type": "insta",
             "settings": {
-              "instaImage": "shopify:\/\/shop_images\/IMG_9100-min.webp",
-              "InstaLink": "https:\/\/www.instagram.com\/p\/CpGM9PbvoTS\/"
+              "instaImage": "shopify://shop_images/IMG_9100-min.webp",
+              "InstaLink": "https://www.instagram.com/p/CpGM9PbvoTS/"
             }
           }
         },
@@ -295,13 +296,13 @@
         ],
         "settings": {
           "sstext": "Follow Us",
-          "logo": "shopify:\/\/shop_images\/KsDiggs_Logo.png",
+          "logo": "shopify://shop_images/KsDiggs_Logo.png",
           "newsTitle": "Our Newsletter",
-          "description": "<p>Sign up for the latest book offers and exclusives.<\/p>",
+          "description": "<p>Sign up for the latest book offers and exclusives.</p>",
           "footerMenu": "footer-2-0",
           "legalMenu": "footer-legal-menu-2-0",
           "creditText": "Designed by PixeloLabs",
-          "credit": "https:\/\/www.pixelolabs.com\/"
+          "credit": "https://www.pixelolabs.com/"
         }
       },
       "inner-hero-section": {
@@ -321,7 +322,7 @@
         "type": "blog-template",
         "settings": {
           "show_featured_article": true,
-          "featured_article": "blog\/what-age-should-kids-learn-about-consent",
+          "featured_article": "blog/what-age-should-kids-learn-about-consent",
           "featured_article2": "",
           "blogItems": 10
         }
@@ -332,13 +333,13 @@
     ],
     "blocks": {
       "11724500921838622758": {
-        "type": "shopify:\/\/apps\/frequently-bought\/blocks\/app-embed-block\/b1a8cbea-c844-4842-9529-7c62dbab1b1f",
+        "type": "shopify://apps/frequently-bought/blocks/app-embed-block/b1a8cbea-c844-4842-9529-7c62dbab1b1f",
         "disabled": false,
         "settings": {
         }
       },
       "855628211100114053": {
-        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {
         }
