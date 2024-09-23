@@ -14,10 +14,11 @@
       "settings": {
         "blog_show_date": true,
         "show_share_buttons": true,
+        "contentTitle": "{{ article.title }}",
         "pretitle": "Recent Blogs",
         "recommendedHeading": "Latest Blogs",
         "link": "View All",
-        "linkUrl": "shopify:\/\/blogs\/blog"
+        "linkUrl": "shopify://blogs/blog"
       }
     },
     "article_three_column_product_section_BGkkr7": {
