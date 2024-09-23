@@ -1892,6 +1892,7 @@ jQuery(function () {
     document.execCommand("copy"); // Remove it from the body
 
     document.body.removeChild(aux);
+    $(this).attr("title", "Copied");
   });
 });
 "use strict";
