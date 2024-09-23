@@ -84,10 +84,10 @@
 
         Plugin.prototype._doCompleteSearch = function(event) {
             var self = this;
-            console.log("window.router"+window.router)
+           
             $.ajax({
                 method: 'GET',
-                url: window.router + '/search?view=json',
+                url: '/search?view=json',
                 dataType: 'json',
                 data: {
                     q: this.headerInput.val() + '*',
