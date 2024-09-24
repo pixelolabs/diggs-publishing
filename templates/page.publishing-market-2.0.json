@@ -7,15 +7,6 @@
 * made to this file may be overwritten.
 * ------------------------------------------------------------
 */
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "innerBanner": {
@@ -26,7 +17,7 @@
         "title": "Tailored Marketing Plans",
         "description": "<p>Your story is unique, and your marketing strategy should reflect that. Diggs Publishing recognizes the importance of individuality. Allow us to assist you in discovering and connecting with your niche audience in a way that is as unique as your story.</p>",
         "buttonText1": "Reach your Audience",
-        "buttonLink1": "shopify://blogs/blog",
+        "buttonLink1": "shopify://pages/publishing-checkout",
         "button_bg": "pink",
         "content_alignment": "left",
         "height": false,
