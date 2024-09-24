@@ -7,6 +7,15 @@
 * made to this file may be overwritten.
 * ------------------------------------------------------------
 */
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin language editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "general": {
     "password_page": {
@@ -46,7 +55,10 @@
     },
     "search": {
       "search": "Search",
-      "reset": "Clear search term"
+      "reset": "Clear search term",
+      "no_results": "no results",
+      "heading_results": "Product Results",
+      "view_results": "See all results"
     },
     "cart": {
       "view": "View cart ({{ count }})",
