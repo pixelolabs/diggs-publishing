@@ -12,7 +12,7 @@
             <div class="input-field half-width-col">
               <label for="Subject"> How can we help you? *</label>
               <input
-                type="text"
+                type="text" class="input-field-text"
                 id="{{ formId }}-subject"
                 placeholder="Subject*"
                 aria-required="true"
@@ -23,7 +23,7 @@
               <label for="Full-name"> Full Name *</label>
               <input
                 placeholder="How can we help you? *"
-                type="text"
+                type="text" class="input-field-text"
                 id="{{ formId }}-name"
                 name="contact[name]"
                 aria-required="true"
@@ -34,7 +34,7 @@
               <label for="Email"> Email Address *</label>
               <input
                 placeholder="Email Address*"
-                class="email-field"
+                class="email-field" class="input-field-text"
                 type="email"
                 id="{{ formId }}-email"
                 name="contact[email]"
@@ -62,7 +62,7 @@
               <label for="Mobile-number"> Mobile Number *</label>
               <input
                 type="tel"
-                id="{{ formId }}-phone"
+                id="{{ formId }}-phone" class="input-field-text"
                 placeholder="Phone Number"
                 name="contact[phone]"
                 pattern="[0-9\-]*"
@@ -146,7 +146,7 @@
       resetErrorMessages();
 
       let formIsValid = true;
-      const inputFields = document.querySelectorAll('input[aria-required="true"]');
+      const inputFields = document.querySelectorAll('.input-field-text[aria-required="true"]');
 
       inputFields.forEach((input) => {
         const value = input.value.trim();
