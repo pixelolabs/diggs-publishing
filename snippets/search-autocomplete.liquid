@@ -96,6 +96,7 @@
             }).then(function(data) {
                 console.log("data['results']"+data['results_count']);
                 console.log("data['title_heading']"+data['title_heading']);
+                console.log("self.headerSearchResults.html"+self.headerSearchResults)
                 self.headerSearchResults.html(self.searchResultsTemplate({
                     is_show: true,
                     is_loading: false,
