@@ -9,6 +9,11 @@
         #a6c2f8 50.13%,
         #6398ff 98.37%
       );
+      .content {
+        &:before {
+          display: none;
+        }
+      }
     }
   }
   .hero-banner {
@@ -304,7 +309,7 @@
             bottom: -46px;
             right: auto;
           }
-          background: url("star-large-white.webp") no-repeat center / 100%;
+          background: url("star-large-white.svg") no-repeat center / 100%;
           animation-name: wstarRotate;
           animation-duration: 5s;
           animation-iteration-count: infinite;

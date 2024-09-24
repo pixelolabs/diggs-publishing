@@ -7,7 +7,7 @@
     #5abe50 100%
   );
   padding-top: 180px !important;
-  padding-bottom: 108px !important;
+  padding-bottom: 180px !important;
   min-height: 550px;
   position: relative;
   display: flex;
@@ -133,7 +133,7 @@
         right: auto;
         width: 16px;
         height: 22px;
-        background: url(star-large-white.webp) no-repeat center/100%;
+        background: url(star-large-white.svg) no-repeat center/100%;
         animation-name: wstarRotate;
         animation-duration: 5s;
         animation-iteration-count: infinite;

@@ -32,7 +32,7 @@
     z-index: 2;
   }
 
-  .back-button{
+  .back-button {
     margin-bottom: 30px;
     display: inline-block;
     font-size: 12px;
@@ -47,10 +47,10 @@
     padding-left: 16px;
     text-transform: uppercase;
     background: url("icon-left-arrow.svg") no-repeat left center/ 7px;
-    &:hover{
-      filter: brightness(0) saturate(100%) invert(50%) sepia(60%) saturate(3783%) hue-rotate(347deg) brightness(105%) contrast(102%);
+    &:hover {
+      filter: brightness(0) saturate(100%) invert(50%) sepia(60%)
+        saturate(3783%) hue-rotate(347deg) brightness(105%) contrast(102%);
     }
-    
   }
   padding: 52px 0 135px;
   background: $color-off-white-light;
@@ -172,9 +172,8 @@
         right: 17px;
         top: calc(50% - 8.5px);
         background: url("icon-cross.webp") no-repeat center / 17px;
-        &:hover{
+        &:hover {
           background: url("icon-cross-hover.svg") no-repeat center / 17px;
-          
         }
         @include MQ(MQ-980) {
           right: 16px;
@@ -623,7 +622,7 @@
         top: -51px;
         z-index: 2;
         left: 74px;
-        background: url("star-large-white.webp") no-repeat center / 100%;
+        background: url("star-large-white.svg") no-repeat center / 100%;
         animation-name: wstarRotate;
         animation-duration: 5s;
         animation-iteration-count: infinite;
@@ -667,7 +666,6 @@
   }
   .cart__quantity-selector,
   .quantity-selector {
-   
     border: none;
     text-align: center;
     font-family: var(--font-family-primary);
@@ -700,11 +698,11 @@
       height: 19px;
       width: 19px;
     }
-    &:hover{
+    &:hover {
       background: $color-black;
-svg path{
-  stroke: $color-white;
-}
+      svg path {
+        stroke: $color-white;
+      }
     }
   }
 }

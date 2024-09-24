@@ -213,8 +213,12 @@ header {
         padding: 30px 25px;
         align-items: center;
 
+        @include MQ(MQ-1225) {
+          padding: 30px 15px;
+          font-size: 16px !important;
+        }
         @include MQ(MQ-1100) {
-          padding: 30px 20px;
+          padding: 30px 15px;
         }
         @include MQ(MQ-980) {
           font-size: 20px !important;
@@ -268,6 +272,9 @@ header {
     transition: 0.3s ease all;
     @include MQ(MQ-1280) {
       padding-left: 200px;
+    }
+    @include MQ(MQ-1225) {
+      padding-left: 153px;
     }
 
     @include MQ(MQ-980) {
@@ -623,7 +630,7 @@ header {
               // left: 157px;
               // bottom: 0;
               // z-index: 1;
-              // background: url(star-large-white.webp) no-repeat center/24px;
+              // background: url(star-large-white.svg) no-repeat center/24px;
               // animation-name: wstarRotate;
               // animation-duration: 5s;
               // animation-iteration-count: infinite;
@@ -760,7 +767,7 @@ header {
                 // left: 157px;
                 // bottom: 0;
                 // z-index: 1;
-                // background: url(star-large-white.webp) no-repeat center/24px;
+                // background: url(star-large-white.svg) no-repeat center/24px;
                 // animation-name: wstarRotate;
                 // animation-duration: 5s;
                 // animation-iteration-count: infinite;

@@ -599,6 +599,10 @@ header {
       width: 200px;
       height: 136px;
     }
+    @include MQ(MQ-1225) {
+      width: 160px;
+      height: 106px;
+    }
 
     img {
       @include img-object-cover;

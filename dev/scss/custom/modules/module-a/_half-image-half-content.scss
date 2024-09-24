@@ -266,10 +266,13 @@
     .half-image-half-content {
       &::before {
         right: 0px;
-        top: -315px;
+        top: -87px;
         width: 284px;
         height: 642px;
         background: url("thread-yellow.webp") no-repeat center / 100%;
+        @include MQ(MQ-1720) {
+          top: -315px;
+        }
       }
     }
   }
@@ -331,7 +334,7 @@
       content: "";
       left: 161px;
       top: -82px;
-      background: url("star-large-white.webp") repeat center / 100%;
+      background: url("star-large-white.svg") repeat center / 100%;
       width: 31.4px;
       height: 38.2px;
       animation-name: wstarRotate;

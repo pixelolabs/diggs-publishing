@@ -67,6 +67,35 @@
   //   animation-timing-function: linear;
   //   animation-name: kites;
   // }
+  &.solid-bg {
+    svg {
+      display: none;
+    }
+    &:before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      left: 0;
+      top: -96px;
+      height: 129px;
+      z-index: 15;
+      background: url(orange-solid-wave.svg) repeat-x top / 100%;
+      @include MQ(MQ-1440) {
+        background: url(orange-solid-wave.svg) repeat-x center / 1452px;
+        // top: -15px;
+        height: 109px;
+      }
+      @include MQ(MQ-768) {
+        height: 65px;
+        top: -55px;
+        background-size: cover;
+        background-position: left;
+      }
+    }
+    .contact-form-with-text {
+      background: #ff8b4c;
+    }
+  }
 }
 .contact-form-with-text {
   position: relative;
@@ -107,7 +136,7 @@
     content: "";
     position: absolute;
     right: 0;
-    z-index: 1;
+    z-index: 0;
     top: -58px;
     background: url(thread-white-2.svg) no-repeat center / 100%;
     // @include MQ(MQ-980) {
@@ -123,20 +152,16 @@
     padding-bottom: 136px;
     position: relative;
     &::after {
-      width: 124px;
-      height: 85px;
+      width: 81px;
+      height: 84px;
       content: "";
       position: absolute;
       right: 0;
       top: 90px;
       z-index: 2;
-      background: url(planet-orange.svg) no-repeat center/100%;
-      -webkit-animation-name: rotate;
-      animation-name: rotate;
-      -webkit-animation-duration: 10s;
-      animation-duration: 10s;
-      -webkit-animation-iteration-count: infinite;
-      animation-iteration-count: infinite;
+      // background: url(planet-orange.svg) no-repeat center/100%;
+      background: url(graphic-rocket.svg) no-repeat center / 100%;
+      animation: fly 7s ease-in infinite;
       display: none;
       @include MQ(MQ-980) {
         display: block;
@@ -145,9 +170,10 @@
       }
       @include MQ(MQ-768) {
         // right: 00px;
-        width: 90px;
-        height: 75px;
+        width: 60px;
+        height: 64px;
         transform: none;
+        top: 40px;
       }
       @include MQ(MQ-480) {
         right: 10px;
@@ -279,7 +305,7 @@
       top: -35.5px;
       z-index: 1;
       right: 0px;
-      background: url(rocket.webp) no-repeat center / 100%;
+      background: url(graphic-rocket.svg) no-repeat center / 100%;
       animation: fly 7s ease-in infinite;
       @include MQ(MQ-980) {
         display: none;
@@ -296,13 +322,13 @@
     ul {
       li,
       a {
-        margin-bottom: 20px;
+        margin-bottom: 26px;
         letter-spacing: 0.02em;
         font-weight: 400;
         .title {
           font-size: 14px;
           display: block;
-          margin-bottom: 10px;
+          margin-bottom: 13px;
           letter-spacing: 1px;
           font-weight: 700;
         }
