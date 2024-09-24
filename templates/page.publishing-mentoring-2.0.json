@@ -183,7 +183,7 @@
       "settings": {
         "title": "Reach out to us",
         "bgColor": "",
-        "solidBg": true
+        "solidBg": false
       }
     }
   },
