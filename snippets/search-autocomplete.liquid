@@ -18,7 +18,7 @@
             this.searchTrending = $(".quickSearchResultsWrap .header-search__trending .item");
             this.trending = $(".header-search__trending");
             this.searchWrapper = this.headerSearch.find('.quickSearchResultsWrap');
-console.log("this.headerSearch.find('.header-search__results-wrapper')"+this.headerSearch.find('.header-search__results-wrapper'));
+
             this.headerInput.focus(function(e){
                 e.stopPropagation();
                 
@@ -96,7 +96,7 @@ console.log("this.headerSearch.find('.header-search__results-wrapper')"+this.hea
             }).then(function(data) {
                 console.log("data['results']"+data['results_count']);
                 console.log("data['title_heading']"+data['title_heading']);
-                headerSearchResults.html(self.searchResultsTemplate({
+                self.headerSearchResults.html(self.searchResultsTemplate({
                     is_show: true,
                     is_loading: false,
                     results: data['results'],
@@ -106,7 +106,7 @@ console.log("this.headerSearch.find('.header-search__results-wrapper')"+this.hea
                     title_heading: data['title_heading'],
                     results_url: (data['url'] + '&type=' + self.searchMode)
                 }));
-console.log(" self.headerSearchResults.html"+ self.headerSearchResults.html())
+                console.log("this.headerSearch.find('.header-search__results-wrapper')"+this.headerSearch.find('.header-search__results-wrapper'));
                 self.PopularProducts.hide();
 
 
