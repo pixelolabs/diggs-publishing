@@ -37,7 +37,7 @@
             "title": "Personalized Marketing: Making Your Book Shine",
             "description": "<p>Diggs Publishing believes that each author's journey is unique. That is why we specialize in developing customized marketing strategies that resonate with your unique story and connect you with your target audience. Diggs Publishing is here to tailor a plan that works specifically for you, whether you're launching a new book, looking to expand your readership, or looking for new marketing approaches.</p>",
             "buttonText": "Order Now",
-            "buttonLink": "shopify://collections/all",
+            "buttonLink": "shopify://pages/publishing-checkout",
             "buttonLinkTarget": false,
             "background_color": "transparent-bg",
             "fontSize": false,
