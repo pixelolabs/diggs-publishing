@@ -2,32 +2,31 @@
   class="product-wrapper"
 >
   <div class="image-section">
-    <a href="{{productRelated.url}}">
-      {% if productRelated.images.size > 1 %}
-        <img
-          class="js__product-image-{{productRelated.id}} first-img"
-          data-src="{{  productRelated.images[0] | img_url: '558x558' }}"
-          src="{{  productRelated.images[0] | img_url: '558x558' }}"
-          alt="{{ productRelated.featured_image.alt | escape }}"
-          loading="lazy"
-        >
-        <img
-          class="hover-img"
-          data-src="{{  productRelated.images[1] | img_url: '558x558' }}"
-          src="{{  productRelated.images[1] | img_url: '558x558' }}"
-          alt="{{ productRelated.featured_image.alt | escape  }}"
-          loading="lazy"
-        >
-      {% else %}
-        <img
-          class="js__product-image-{{productRelated.id}}"
-          src="{{  productRelated.images[0] | img_url: '558x558' }}"
-          data-src="{{ productRelated.images[0] | img_url: '558x558' }}"
-          alt="{{ productRelated.featured_image.alt | escape }}"
-          loading="lazy"
-        >
-      {% endif %}
-    </a>
+    {% comment %} <a href="{{productRelated.url}}"> {% endcomment %}
+    {% if productRelated.images.size > 1 %}
+      <img
+        class="js__product-image-{{productRelated.id}} first-img"
+        data-src="{{  productRelated.images[0] | img_url: '558x558' }}"
+        src="{{  productRelated.images[0] | img_url: '558x558' }}"
+        alt="{{ productRelated.featured_image.alt | escape }}"
+        loading="lazy"
+      >
+      <img
+        class="hover-img"
+        data-src="{{  productRelated.images[1] | img_url: '558x558' }}"
+        src="{{  productRelated.images[1] | img_url: '558x558' }}"
+        alt="{{ productRelated.featured_image.alt | escape  }}"
+        loading="lazy"
+      >
+    {% else %}
+      <img
+        class="js__product-image-{{productRelated.id}}"
+        src="{{  productRelated.images[0] | img_url: '558x558' }}"
+        data-src="{{ productRelated.images[0] | img_url: '558x558' }}"
+        alt="{{ productRelated.featured_image.alt | escape }}"
+        loading="lazy"
+      >
+    {% endif %}
 
     <!-- Custom Tags -->
     {% if show_tags %}
@@ -39,21 +38,21 @@
         {% endif %}
       </span>
     {% endif %}
-    
+
     {% if show_fav %}
-    <!-- Swym Wishlist Plus EPI Button -->
-    <button
-      data-with-epi="true"
-      class="swym-button swym-add-to-wishlist-view-product product_{{productRelated.id}}"
-      data-swaction="addToWishlist"
-      data-product-id="{{productRelated.id | json}}"
-      data-variant-id="{{productRelated.variants[0].id}}"
-      data-product-url="{{ shop.url }}{{ productRelated.url }}"
-    >
-      {% include 'icon-heart' -%}
-      {%- include 'icon-heart-filled' %}
-    </button>
-  {% endif %}
+      <!-- Swym Wishlist Plus EPI Button -->
+      <button
+        data-with-epi="true"
+        class="swym-button swym-add-to-wishlist-view-product product_{{productRelated.id}}"
+        data-swaction="addToWishlist"
+        data-product-id="{{productRelated.id | json}}"
+        data-variant-id="{{productRelated.variants[0].id}}"
+        data-product-url="{{ shop.url }}{{ productRelated.url }}"
+      >
+        {% include 'icon-heart' -%}
+        {%- include 'icon-heart-filled' %}
+      </button>
+    {% endif %}
   </div>
 
   <div class="content">
@@ -81,13 +80,12 @@
         {% if productRelated.variants.size > 1 %}
           <span class="starting">Starting at </span> <span> {{ productRelated.price_min | money }} </span>
         {% else %}
-        {% if productRelated.compare_at_price_min > productRelated.price %}
-          <s>
-            {{ productRelated.compare_at_price_min | money }}
-          </s>
-        {% endif %}
+          {% if productRelated.compare_at_price_min > productRelated.price %}
+            <s>
+              {{ productRelated.compare_at_price_min | money }}
+            </s>
+          {% endif %}
           <span> {{ productRelated.price | money }}</span>
-         
         {% endif %}
       </span>
     {% endif %}
@@ -95,43 +93,43 @@
     {% if show_secondary_button %}
       <div class="btn--wrapper flex">
         {% assign all_out_of_stock = true %}
-{% for variant in productRelated.variants %}
-  {% if variant.available %}
-    {% assign all_out_of_stock = false %}
-  {% endif %}
-{% endfor %}
-{% if all_out_of_stock %}
-  <a
-    class="btn--atc"
-    title="{{ productRelated.title }}"
-    href="javascript:;"
-    
-    title="Shop {{productRelated.title}}"
-    data-id="{{productRelated.id}}"
-    >Sold Out</a
-  >
+        {% for variant in productRelated.variants %}
+          {% if variant.available %}
+            {% assign all_out_of_stock = false %}
+          {% endif %}
+        {% endfor %}
+        {% if all_out_of_stock %}
+          <a
+            class="btn--atc"
+            title="{{ productRelated.title }}"
+            href="javascript:;"
+
+            title="Shop {{productRelated.title}}"
+            data-id="{{productRelated.id}}"
+            >Sold Out</a
+          >
         {% else %}
+          <a
+            class="btn--atc js__card-add-to-cart"
+            href="javascript:;"
+
+            title="Shop {{productRelated.title}}"
+            data-variant-id="{{current_variant.id}}"
+            >Add To Cart</a
+          >
+        {% endif %}
         <a
-          class="btn--atc js__card-add-to-cart"
+          class="btn--quick-view rimary js__quick-view-click"
+          title="{{ productRelated.title }}"
           href="javascript:;"
-          
           title="Shop {{productRelated.title}}"
-          data-variant-id="{{current_variant.id}}"
-          >Add To Cart</a
+          data-id="{{productRelated.id}}"
+          data-slider_main="{%- for img in productRelated.images -%}{{- img | img_url: '355x355' -}}|{%- endfor -%}"
+          data-slider_thumb="{%- for img in productRelated.images -%}{{- img | img_url: '150x150' -}}|{%- endfor -%}"
+          data-var_images="{%- for var in productRelated.variants -%}{{- var.image | img_url: '150x150' -}}|{%- endfor -%}"
+          ><span>Quick View</span></a
         >
-       
-{% endif %}
-    <a
-      class="btn--quick-view rimary js__quick-view-click"
-      title="{{ productRelated.title }}"
-      href="javascript:;"
-      title="Shop {{productRelated.title}}"
-      data-id="{{productRelated.id}}"
-      data-slider_main="{%- for img in productRelated.images -%}{{- img | img_url: '355x355' -}}|{%- endfor -%}"
-      data-slider_thumb="{%- for img in productRelated.images -%}{{- img | img_url: '150x150' -}}|{%- endfor -%}"
-      data-var_images="{%- for var in productRelated.variants -%}{{- var.image | img_url: '150x150' -}}|{%- endfor -%}"
-      ><span>Quick View</span></a
-    ></div>
+      </div>
     {% endif %}
   </div>
 </div>
