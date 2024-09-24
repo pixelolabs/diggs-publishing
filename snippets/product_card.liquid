@@ -12,7 +12,7 @@
   </style>
   <a class="outer-link" href="{{productRelated.url}}"></a>
   <div class="image-section">
-    <div class="image-wrapper">
+    <span>
       {% if productRelated.images.size > 1 %}
         <img
           class="js__product-image-{{productRelated.id}} first-img"
@@ -37,7 +37,7 @@
           loading="lazy"
         >
       {% endif %}
-    </div>
+    </span>
     <!-- Custom Tags -->
     {% if show_tags %}
       <span class="product-card__tags-status">
