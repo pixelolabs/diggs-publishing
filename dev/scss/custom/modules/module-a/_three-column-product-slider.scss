@@ -25,8 +25,10 @@
     }
     .btn--wrapper {
       margin-top: 30px;
+      position: relative;
+      z-index: 7;
     }
-    &__product-title a {
+    &__product-title {
       font-size: 16px;
       font-family: var(--font-family-primary);
       line-height: 1.44;
@@ -87,7 +89,7 @@
         }
         @include MQ(MQ-480) {
           width: auto !important;
-          height: 37px !important;
+          height: auto !important;
           span {
             display: block !important;
           }
@@ -100,8 +102,124 @@
       padding: 0;
       height: 100%;
       border: none;
-      background-image: linear-gradient(178deg, #d51f91 2%, #ee35a9 98%);
+      background-image: linear-gradient(178deg, #d51f91 2%, #d51f91 98%);
+      // &::before {
+      //   content: "";
+      //   display: block;
+      //   width: 100%;
+      //   position: absolute;
+      //   height: 100%;
+      //   bottom: -2px;
+      //   left: 0;
+      //   z-index: 5;
+      //   background: linear-gradient(
+      //     180.22deg,
+      //     rgba(213, 31, 145, 0) -0.64%,
+      //     #d51f91 59.13%
+      //   );
+
+      //   opacity: 0;
+      //   visibility: hidden;
+      //   transition: 0.35s ease;
+      // }
+      .outer-link {
+        height: 100%;
+        z-index: 2 !important;
+      }
+      &::after {
+        display: none !important;
+      }
+      z-index: 2;
+      position: relative;
+      &:hover {
+        .outer-link {
+          height: calc(100% - 90px);
+          @include MQ(MQ-1100) {
+            height: 70%;
+          }
+          @include MQ(MQ-980) {
+            height: 80%;
+          }
+          @include MQ(MQ-480) {
+            height: 70%;
+          }
+        }
+        .image-section {
+          img {
+            display: none;
+            // &.hover-img {
+            //   display: block;
+            //   opacity: 1;
+            // }
+            &:last-child {
+              display: block;
+            }
+          }
+        }
+        .product-card__price,
+        .link--primary {
+          opacity: 1;
+        }
+
+        h3 {
+          // color: $color-dark-gray;
+          text-decoration: underline;
+        }
+      }
+    }
+    &:nth-child(2n) {
       &::before {
+        border: 2px solid $color-orange;
+      }
+      .product-wrapper {
+        background-image: linear-gradient(178deg, #ff6520 2%, #ff6520 98%);
+        .image-section {
+          &::before {
+            background: linear-gradient(
+              180.22deg,
+              #d51f9100 -3.64%,
+              #ff6520 84.13%
+            );
+          }
+        }
+      }
+    }
+    &:nth-child(3n) {
+      &::before {
+        border: 2px solid $color-green;
+      }
+      .product-wrapper {
+        background-image: linear-gradient(178deg, #5fbf50 2%, #5fbf50 98%);
+        .image-section {
+          &::before {
+            background: linear-gradient(
+              180.22deg,
+              #d51f9100 -3.64%,
+              #5fbf50 84.13%
+            );
+          }
+        }
+      }
+    }
+    &:hover {
+      .product-wrapper {
+        .content {
+          // margin-top: -67px;
+          transform: translateY(-67px);
+        }
+        .image-section::before {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+    .image-section {
+      overflow: visible !important;
+
+      &:after {
+        display: none !important;
+      }
+      &:before {
         content: "";
         display: block;
         width: 100%;
@@ -112,86 +230,21 @@
         z-index: 5;
         background: linear-gradient(
           180.22deg,
-          rgba(213, 31, 145, 0) -0.64%,
-          #d51f91 59.13%
+          rgba(213, 31, 145, 0) -3.64%,
+          #d51f91 84.13%
         );
 
         opacity: 0;
         visibility: hidden;
         transition: 0.35s ease;
       }
-      &::after {
-        display: none !important;
-      }
-      z-index: 2;
-      position: relative;
-      &:hover {
-        .image-section {
-          img {
-            display: none;
-            &:last-child {
-              display: block;
-            }
-          }
-        }
-        .product-card__price,
-        .link--primary {
-          opacity: 1;
-        }
-        h3 {
-          color: $color-dark-gray;
-        }
-      }
-    }
-    &:nth-child(2n) {
-      &::before {
-        border: 2px solid $color-orange;
-      }
-      .product-wrapper {
-        background-image: linear-gradient(178deg, #ff6520 2%, #ff6520 98%);
-        &::before {
-          background: linear-gradient(
-            180.22deg,
-            #d51f9100 -0.64%,
-            #ff6520 59.13%
-          );
-        }
-      }
-    }
-    &:nth-child(3n) {
-      &::before {
-        border: 2px solid $color-green;
-      }
-      .product-wrapper {
-        background-image: linear-gradient(178deg, #5fbf50 2%, #5fbf50 98%);
-        &::before {
-          background: linear-gradient(
-            180.22deg,
-            #d51f9100 -0.64%,
-            #5fbf50 59.13%
-          );
-        }
-      }
-    }
-    &:hover {
-      .product-wrapper {
-        .content {
-          // margin-top: -67px;
-          transform: translateY(-67px);
-        }
-        &::before {
-          opacity: 1;
-          visibility: visible;
-        }
-      }
-    }
-    .image-section {
-      overflow: hidden !important;
+      // overflow: hidden !important;
       position: relative !important;
       // height: 304px;
       max-height: 362px;
       height: calc(33.333vw - 84.66px);
       width: 100%;
+      z-index: 0;
       @include MQ(MQ-1024) {
         height: calc(50vw - 101.5px);
         max-height: none;
@@ -228,7 +281,7 @@
     .content {
       position: relative;
       transition: 0.6s ease all;
-      z-index: 5;
+      // z-index: 0;
       * {
         color: $color-white;
       }
@@ -246,7 +299,7 @@
       }
     }
     &__tags-status {
-      z-index: 2;
+      z-index: 6;
       position: absolute;
       left: 16px !important;
       top: 16px !important;
@@ -481,20 +534,21 @@
       top: calc(50% - 9.5px);
       z-index: 10;
       cursor: pointer;
-    
-          background: url("icon-arrow-slide-black.svg") no-repeat center / 100%;
+
+      background: url("icon-arrow-slide-black.svg") no-repeat center / 100%;
       @include MQ(MQ-600) {
         // display: none;
         right: -22px;
-      height: 24.25px;
-      width: 15px;
+        height: 24.25px;
+        width: 15px;
         svg {
           width: 24.25px;
           height: 15px;
         }
       }
       &:hover {
-        filter: brightness(0) saturate(100%) invert(48%) sepia(35%) saturate(4056%) hue-rotate(346deg) brightness(102%) contrast(101%);
+        filter: brightness(0) saturate(100%) invert(48%) sepia(35%)
+          saturate(4056%) hue-rotate(346deg) brightness(102%) contrast(101%);
         svg {
           path {
             fill: $color-orange;
