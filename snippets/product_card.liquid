@@ -1,33 +1,33 @@
 <div
   class="product-wrapper"
 >
-  <a class="outer-link" href="{{productRelated.url}}"></a>
   <div class="image-section">
-    {% comment %} <a href="{{productRelated.url}}"> {% endcomment %}
-    {% if productRelated.images.size > 1 %}
-      <img
-        class="js__product-image-{{productRelated.id}} first-img"
-        data-src="{{  productRelated.images[0] | img_url: '558x558' }}"
-        src="{{  productRelated.images[0] | img_url: '558x558' }}"
-        alt="{{ productRelated.featured_image.alt | escape }}"
-        loading="lazy"
-      >
-      <img
-        class="hover-img"
-        data-src="{{  productRelated.images[1] | img_url: '558x558' }}"
-        src="{{  productRelated.images[1] | img_url: '558x558' }}"
-        alt="{{ productRelated.featured_image.alt | escape  }}"
-        loading="lazy"
-      >
-    {% else %}
-      <img
-        class="js__product-image-{{productRelated.id}}"
-        src="{{  productRelated.images[0] | img_url: '558x558' }}"
-        data-src="{{ productRelated.images[0] | img_url: '558x558' }}"
-        alt="{{ productRelated.featured_image.alt | escape }}"
-        loading="lazy"
-      >
-    {% endif %}
+    <a href="{{productRelated.url}}">
+      {% if productRelated.images.size > 1 %}
+        <img
+          class="js__product-image-{{productRelated.id}} first-img"
+          data-src="{{  productRelated.images[0] | img_url: '558x558' }}"
+          src="{{  productRelated.images[0] | img_url: '558x558' }}"
+          alt="{{ productRelated.featured_image.alt | escape }}"
+          loading="lazy"
+        >
+        <img
+          class="hover-img"
+          data-src="{{  productRelated.images[1] | img_url: '558x558' }}"
+          src="{{  productRelated.images[1] | img_url: '558x558' }}"
+          alt="{{ productRelated.featured_image.alt | escape  }}"
+          loading="lazy"
+        >
+      {% else %}
+        <img
+          class="js__product-image-{{productRelated.id}}"
+          src="{{  productRelated.images[0] | img_url: '558x558' }}"
+          data-src="{{ productRelated.images[0] | img_url: '558x558' }}"
+          alt="{{ productRelated.featured_image.alt | escape }}"
+          loading="lazy"
+        >
+      {% endif %}
+    </a>
 
     <!-- Custom Tags -->
     {% if show_tags %}
@@ -63,13 +63,13 @@
 
     {% if show_title %}
       <h3 class="h5 product-card__product-title">
-        {% comment %} <a href="{{productRelated.url}}"> {% endcomment %}
-        {% if productRelated.metafields.productInfo.product_name != blank %}
-          {{ productRelated.metafields.prodctInfo.product_name }}
-        {% else %}
-          {{ productRelated.title }}
-        {% endif %}
-        {% comment %} </a> {% endcomment %}
+        <a href="{{productRelated.url}}">
+          {% if productRelated.metafields.productInfo.product_name != blank %}
+            {{ productRelated.metafields.prodctInfo.product_name }}
+          {% else %}
+            {{ productRelated.title }}
+          {% endif %}
+        </a>
       </h3>
     {% endif %}
     {% if productRelated.metafields.product.short_description != blank %}
