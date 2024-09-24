@@ -96,7 +96,7 @@
             }).then(function(data) {
                 console.log("data['results']"+data['results_count']);
                 console.log("data['title_heading']"+data['title_heading']);
-                headerSearchResults.html(searchResultsTemplate({
+                headerSearchResults.html(self.searchResultsTemplate({
                     is_show: true,
                     is_loading: false,
                     results: data['results'],
@@ -104,9 +104,9 @@
                     results_count: data['results_count'],
                     results_label: data['results_label'],
                     title_heading: data['title_heading'],
-                    results_url: (data['url'] + '&type=' + searchMode)
+                    results_url: (data['url'] + '&type=' + self.searchMode)
                 }));
-console.log(" self.headerSearchResults.html"+ headerSearchResults.html())
+console.log(" self.headerSearchResults.html"+ self.headerSearchResults.html())
                 self.PopularProducts.hide();
 
 
