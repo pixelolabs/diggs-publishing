@@ -1,6 +1,6 @@
 <!-- Header -->
-<header>
-  <div class="main-header js__main-header">
+<header data-ajax-search>
+  <div class="main-header js__main-header ">
     <div class="container-1400 flex-align-center">
       <div class="header-logo relative">
         <a href="{{ routes.root_url }}" itemprop="url" title="{{shop.name}}">
@@ -91,7 +91,7 @@
               {% include 'icon-search' %}
             </button>
 
-            <div class="header-search-section js__header-search-section header-search__form " data-ajax-search >
+            <div class="header-search-section js__header-search-section header-search__form "  >
               <div class="container-830">
                 {% comment %} <a href="javascript:;" class=" toggle-icon"> {% include 'icon-search' %}</a> {% endcomment %}
 
@@ -154,54 +154,7 @@
   <!-- Mini Cart -->
   <div id="cart_overlay"></div>
   {% include 'cart_drawer' %}
-</header>
-{% schema %}
-{
-  "name": "Header",
-  "settings": [
-    {
-      "type": "image_picker",
-      "id": "logo",
-      "label": "Logo",
-      "info": "188 x 40px Recommended"
-    },
-    {
-      "type": "image_picker",
-      "id": "whiteLogo",
-      "label": "White Logo"
-    },
-    {
-      "type": "link_list",
-      "id": "nav_menu",
-      "label": "Main Menu"
-    },
-    {
-      "type": "link_list",
-      "id": "loginMenu",
-      "label": "Login Menu"
-    },
-    {
-      "type": "link_list",
-      "id": "bottommobileMenu",
-      "label": "Mobile Bottom Menu"
-    }
-  ],
-  "blocks": [
-    {
-      "type": "product",
-      "name": "Product",
-      "settings": [
-        {
-          "type": "product",
-          "id": "product",
-          "label": "Product"
-        }
-      ]
-    }
-  ]
-}
-{% endschema %}
-
+  
 
 <div class="quickSearchResultsWrap" style="display: none;">
   <div class="custom-scrollbar">
@@ -492,6 +445,54 @@
 {{search}}
 </script>
 </div>
+
+</header>
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo",
+      "info": "188 x 40px Recommended"
+    },
+    {
+      "type": "image_picker",
+      "id": "whiteLogo",
+      "label": "White Logo"
+    },
+    {
+      "type": "link_list",
+      "id": "nav_menu",
+      "label": "Main Menu"
+    },
+    {
+      "type": "link_list",
+      "id": "loginMenu",
+      "label": "Login Menu"
+    },
+    {
+      "type": "link_list",
+      "id": "bottommobileMenu",
+      "label": "Mobile Bottom Menu"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
 
 
 <style>
