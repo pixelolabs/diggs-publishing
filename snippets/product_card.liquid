@@ -73,11 +73,13 @@
 
     {% if show_title %}
       <h3 class="h5 product-card__product-title">
-        {% if productRelated.metafields.productInfo.product_name != blank %}
-          {{ productRelated.metafields.prodctInfo.product_name }}
-        {% else %}
-          {{ productRelated.title }}
-        {% endif %}
+        <a href="{{productRelated.url}}">
+          {% if productRelated.metafields.productInfo.product_name != blank %}
+            {{ productRelated.metafields.prodctInfo.product_name }}
+          {% else %}
+            {{ productRelated.title }}
+          {% endif %}
+        </a>
       </h3>
     {% endif %}
     {% if productRelated.metafields.product.short_description != blank %}
