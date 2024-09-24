@@ -20,7 +20,8 @@
         "buttonLink1": "{{ page.metafields.custom.hero_banner_button_link.value }}",
         "button_bg": "pink",
         "content_alignment": "left",
-        "height": false
+        "height": false,
+        "section_class": ""
       }
     },
     "home_hero_banner_U4TPf8": {
@@ -209,7 +210,8 @@
       "type": "contact-form-with-text",
       "settings": {
         "title": "Reach out to us",
-        "bgColor": "#77c85a"
+        "bgColor": "#77c85a",
+        "solidBg": true
       }
     }
   },
