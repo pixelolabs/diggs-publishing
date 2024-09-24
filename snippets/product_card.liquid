@@ -12,7 +12,7 @@
   </style>
   <a class="outer-link" href="{{productRelated.url}}"></a>
   <div class="image-section">
-    <a href="{{productRelated.url}}">
+    <span>
       {% if productRelated.images.size > 1 %}
         <img
           class="js__product-image-{{productRelated.id}} first-img"
@@ -37,7 +37,7 @@
           loading="lazy"
         >
       {% endif %}
-    </a>
+    </span>
 
     <!-- Custom Tags -->
     {% if show_tags %}
