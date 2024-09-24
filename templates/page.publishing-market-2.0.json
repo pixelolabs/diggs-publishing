@@ -7,20 +7,30 @@
 * made to this file may be overwritten.
 * ------------------------------------------------------------
 */
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "innerBanner": {
       "type": "inner-hero-section",
       "settings": {
-        "image": "shopify:\/\/shop_images\/publishing-market-banner.png",
-        "mobileImage": "shopify:\/\/shop_images\/publishing-market-banner.png",
+        "image": "shopify://shop_images/publishing-market-banner.png",
+        "mobileImage": "shopify://shop_images/publishing-market-banner.png",
         "title": "Tailored Marketing Plans",
-        "description": "<p>Your story is unique, and your marketing strategy should reflect that. Diggs Publishing recognizes the importance of individuality. Allow us to assist you in discovering and connecting with your niche audience in a way that is as unique as your story.<\/p>",
+        "description": "<p>Your story is unique, and your marketing strategy should reflect that. Diggs Publishing recognizes the importance of individuality. Allow us to assist you in discovering and connecting with your niche audience in a way that is as unique as your story.</p>",
         "buttonText1": "Reach your Audience",
-        "buttonLink1": "shopify:\/\/blogs\/blog",
+        "buttonLink1": "shopify://blogs/blog",
         "button_bg": "pink",
         "content_alignment": "left",
-        "height": false
+        "height": false,
+        "section_class": ""
       }
     },
     "half_image_half_content_4cFq3j": {
@@ -29,14 +39,14 @@
         "image_mrdaLk": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image_c4cfaf74-6a3e-478f-af1a-c5d1ea65b2b4.png",
+            "image": "shopify://shop_images/image_c4cfaf74-6a3e-478f-af1a-c5d1ea65b2b4.png",
             "showVideo": false,
             "video": "",
             "pretitle": "",
             "title": "Personalized Marketing: Making Your Book Shine",
-            "description": "<p>Diggs Publishing believes that each author's journey is unique. That is why we specialize in developing customized marketing strategies that resonate with your unique story and connect you with your target audience. Diggs Publishing is here to tailor a plan that works specifically for you, whether you're launching a new book, looking to expand your readership, or looking for new marketing approaches.<\/p>",
+            "description": "<p>Diggs Publishing believes that each author's journey is unique. That is why we specialize in developing customized marketing strategies that resonate with your unique story and connect you with your target audience. Diggs Publishing is here to tailor a plan that works specifically for you, whether you're launching a new book, looking to expand your readership, or looking for new marketing approaches.</p>",
             "buttonText": "Order Now",
-            "buttonLink": "shopify:\/\/collections\/all",
+            "buttonLink": "shopify://collections/all",
             "buttonLinkTarget": false,
             "background_color": "transparent-bg",
             "fontSize": false,
@@ -63,19 +73,19 @@
         "cards_qKLXFf": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Vector.png",
+            "icon": "shopify://shop_images/Vector.png",
             "title": "Finding the Right Readers",
-            "description": "<p>We'll do the research to find out who will love your book the most. By understanding who they are, we can help you target them more effectively.<\/p>",
+            "description": "<p>We'll do the research to find out who will love your book the most. By understanding who they are, we can help you target them more effectively.</p>",
             "btnText": "Read More",
-            "btnLink": "shopify:\/\/collections\/books"
+            "btnLink": "shopify://collections/books"
           }
         },
         "cards_HizBmG": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Vector_1.png",
+            "icon": "shopify://shop_images/Vector_1.png",
             "title": "Covering All Bases",
-            "description": "<p>We'll do the research to find out who will love your book the most. By understanding who they are, we can help you target them more effectively.<\/p>",
+            "description": "<p>We'll do the research to find out who will love your book the most. By understanding who they are, we can help you target them more effectively.</p>",
             "btnText": "",
             "btnLink": ""
           }
@@ -83,9 +93,9 @@
         "cards_bDq3Bw": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Vector_2.png",
+            "icon": "shopify://shop_images/Vector_2.png",
             "title": "Online Presence",
-            "description": "<p>Beyond just a review, expect comprehensive insights. From thematic depths, narrative arcs, to the intricacies of character dynamics, we will guide you through every detail.<\/p>",
+            "description": "<p>Beyond just a review, expect comprehensive insights. From thematic depths, narrative arcs, to the intricacies of character dynamics, we will guide you through every detail.</p>",
             "btnText": "",
             "btnLink": ""
           }
@@ -93,9 +103,9 @@
         "cards_rAnzAa": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Vector_3.png",
+            "icon": "shopify://shop_images/Vector_3.png",
             "title": "Real tips forreal results",
-            "description": "<p>We'll do the research to find out who will love your book the most. By understanding who they are, we can help you target them more effectively.<\/p>",
+            "description": "<p>We'll do the research to find out who will love your book the most. By understanding who they are, we can help you target them more effectively.</p>",
             "btnText": "",
             "btnLink": ""
           }
@@ -103,9 +113,9 @@
         "cards_9yn6nG": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Vector_4.png",
+            "icon": "shopify://shop_images/Vector_4.png",
             "title": "Adapting as we go",
-            "description": "<p>Beyond just a review, expect comprehensive insights. From thematic depths, narrative arcs, to the intricacies of character dynamics, we will guide you through every detail.<\/p>",
+            "description": "<p>Beyond just a review, expect comprehensive insights. From thematic depths, narrative arcs, to the intricacies of character dynamics, we will guide you through every detail.</p>",
             "btnText": "",
             "btnLink": ""
           }
@@ -133,14 +143,14 @@
         "image_MfqFH8": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/children-book-banner.png",
+            "image": "shopify://shop_images/children-book-banner.png",
             "showVideo": false,
             "video": "",
             "pretitle": "",
             "title": "Your Book, Your Way: Customized Marketing Solutions",
-            "description": "<p>A great book deserves to be read, and with the right marketing strategy, it will be. It's all about connecting with the readers in the right way, the right time.<\/p>",
+            "description": "<p>A great book deserves to be read, and with the right marketing strategy, it will be. It's all about connecting with the readers in the right way, the right time.</p>",
             "buttonText": "Let’s get Start",
-            "buttonLink": "shopify:\/\/pages\/publishing-checkout",
+            "buttonLink": "shopify://pages/publishing-checkout",
             "buttonLinkTarget": false,
             "background_color": "transparent-bg",
             "fontSize": false,
@@ -165,9 +175,9 @@
       "type": "full-width-content-section",
       "settings": {
         "title": "Discover the Art of Book Marketing",
-        "content": "<p>As an author, your journey does not end with the last sentence. In fact, this is only the beginning. Diggs Publishing recognizes the importance of not only crafting compelling stories but also ensuring that they reach the right audience.<\/p>",
+        "content": "<p>As an author, your journey does not end with the last sentence. In fact, this is only the beginning. Diggs Publishing recognizes the importance of not only crafting compelling stories but also ensuring that they reach the right audience.</p>",
         "buttonText": "Order Now",
-        "buttonLink": "shopify:\/\/pages\/publishing-checkout",
+        "buttonLink": "shopify://pages/publishing-checkout",
         "buttonLinkTarget": false,
         "bgColor": "#d1acff"
       }
@@ -176,7 +186,8 @@
       "type": "contact-form-with-text",
       "settings": {
         "title": "Reach out to us",
-        "bgColor": "#d1acff"
+        "bgColor": "#d1acff",
+        "solidBg": true
       }
     }
   },

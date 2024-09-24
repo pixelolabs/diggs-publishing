@@ -191,7 +191,8 @@
       "type": "contact-form-with-text",
       "settings": {
         "title": "Reach out to us",
-        "bgColor": ""
+        "bgColor": "",
+        "solidBg": false
       }
     }
   },
