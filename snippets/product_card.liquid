@@ -12,30 +12,32 @@
   </style>
   <a class="outer-link" href="{{productRelated.url}}"></a>
   <div class="image-section">
-    {% if productRelated.images.size > 1 %}
-      <img
-        class="js__product-image-{{productRelated.id}} first-img"
-        data-src="{{  productRelated.images[0] | img_url: '558x558' }}"
-        src="{{  productRelated.images[0] | img_url: '558x558' }}"
-        alt="{{ productRelated.featured_image.alt | escape }}"
-        loading="lazy"
-      >
-      <img
-        class="hover-img"
-        data-src="{{  productRelated.images[1] | img_url: '558x558' }}"
-        src="{{  productRelated.images[1] | img_url: '558x558' }}"
-        alt="{{ productRelated.featured_image.alt | escape  }}"
-        loading="lazy"
-      >
-    {% else %}
-      <img
-        class="js__product-image-{{productRelated.id}}"
-        src="{{  productRelated.images[0] | img_url: '558x558' }}"
-        data-src="{{ productRelated.images[0] | img_url: '558x558' }}"
-        alt="{{ productRelated.featured_image.alt | escape }}"
-        loading="lazy"
-      >
-    {% endif %}
+    <a href="{{productRelated.url}}">
+      {% if productRelated.images.size > 1 %}
+        <img
+          class="js__product-image-{{productRelated.id}} first-img"
+          data-src="{{  productRelated.images[0] | img_url: '558x558' }}"
+          src="{{  productRelated.images[0] | img_url: '558x558' }}"
+          alt="{{ productRelated.featured_image.alt | escape }}"
+          loading="lazy"
+        >
+        <img
+          class="hover-img"
+          data-src="{{  productRelated.images[1] | img_url: '558x558' }}"
+          src="{{  productRelated.images[1] | img_url: '558x558' }}"
+          alt="{{ productRelated.featured_image.alt | escape  }}"
+          loading="lazy"
+        >
+      {% else %}
+        <img
+          class="js__product-image-{{productRelated.id}}"
+          src="{{  productRelated.images[0] | img_url: '558x558' }}"
+          data-src="{{ productRelated.images[0] | img_url: '558x558' }}"
+          alt="{{ productRelated.featured_image.alt | escape }}"
+          loading="lazy"
+        >
+      {% endif %}
+    </a>
 
     <!-- Custom Tags -->
     {% if show_tags %}
