@@ -15,7 +15,7 @@
                   {{
                     block.settings.instaImage
                     | image_url: width: 270
-                     | image_tag: loading: 'lazy', widths: '270x270'
+                    | image_tag: loading: 'lazy', widths: '270x270'
                   }}
                 </a>
               </li>
@@ -127,6 +127,38 @@
         </div>
         <div class="footer-cartoon">
           <img src="{{ "footer_cartoon.webp" |asset_url}}" alt="cartoon-figures">
+          <picture>
+            <!-- Mobile and tablet sizes -->
+            <source
+              media="(max-width: 767px)"
+              srcset="
+                {{ footer_cartoon.webp | image_url: width: 375 }} 375w,
+                {{ footer_cartoon.webp | image_url: width: 550 }} 550w,
+                {{ footer_cartoon.webp | image_url: width: 750 }} 750w
+              "
+              sizes="100vw"
+            >
+
+            <!-- Desktop sizes -->
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                {{ footer_cartoon.webp | image_url: width: 1000 }} 1000w,
+                {{ footer_cartoon.webp | image_url: width: 1400 }} 1400w,
+                 {{ footer_cartoon.webp | image_url: width: 1800 }} 1800w,
+                 {{ footer_cartoon.webp | image_url: width: 2400 }} 2400w,
+                 {{ footer_cartoon.webp | image_url: width: 3000 }} 3000w
+              "
+              sizes="100vw"
+            >
+
+            <!-- Fallback image -->
+            {{
+              footer_cartoon.webp
+              | image_url: width: 1800
+              | image_tag: loading: 'lazy', width: footer_cartoon.webp.width, height: footer_cartoon.webp.height
+            }}
+          </picture>
         </div>
       </div>
     </div>
