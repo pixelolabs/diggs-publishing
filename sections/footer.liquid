@@ -132,8 +132,8 @@
             <source
               media="(max-width: 767px)"
               srcset="
-                {{ footer_cartoon.webp | image_url: width: 375 }} 375w,
-                {{ footer_cartoon.webp | image_url: width: 550 }} 550w,
+                {{ footer_cartoon.webp | asset_url: width: 375 }} 375w,
+                {{ footer_cartoon.webp | asset_url: width: 550 }} 550w,
                 {{ footer_cartoon.webp | image_url: width: 750 }} 750w
               "
               sizes="100vw"
