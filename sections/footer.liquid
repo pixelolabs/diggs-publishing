@@ -153,11 +153,7 @@
             >
 
             <!-- Fallback image -->
-            {{
-              footer_cartoon.webp
-              | image_url: width: 1800
-              | image_tag: loading: 'lazy', width: footer_cartoon.webp.width, height: footer_cartoon.webp.height
-            }}
+            <img src="{{ "footer_cartoon.webp" |asset_url}}" alt="cartoon-figures">
           </picture>
         </div>
       </div>
