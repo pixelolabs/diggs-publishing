@@ -125,6 +125,7 @@
             {% endif %}
           </div>
         </div>
+        {% if section.settings.cartoonimage != blank %}
         <div class="footer-cartoon">
           {% comment %} <img src="{{ "footer_cartoon.webp" |asset_url}}" alt="cartoon-figures"> {% endcomment %}
           <picture>
@@ -164,6 +165,7 @@
             }}
           </picture>
         </div>
+      {% endif %}
       </div>
     </div>
   </div>
