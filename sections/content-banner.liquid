@@ -82,31 +82,6 @@
 
       {% if section.settings.image2 != blank %}
         <div class="right-image">
-          {% assign mobile_image2 = section.settings.image2 %}
-          {% assign tablet_image2 = section.settings.image2 %}
-          {% assign desktop_image2 = section.settings.image2 %}
-          {% assign mobile_width = 600 %}
-          {% assign tablet_width = 800 %}
-          {% assign desktop_width = 1000 %}
-
-          {% if forloop.first %}
-            {{
-              mobile_image2
-              | image_url: width: mobile_width, format: 'webp'
-              | preload_tag: as: 'image', media: '(max-width: 767px)'
-            }}
-            {{
-              tablet_image2
-              | image_url: width: tablet_width, format: 'webp'
-              | preload_tag: as: 'image', media: '(min-width: 768px) and (max-width: 1023px)'
-            }}
-            {{
-              desktop_image2
-              | image_url: width: desktop_width, format: 'webp'
-              | preload_tag: as: 'image', media: '(min-width: 1024px)'
-            }}
-          {% endif %}
-
           <picture>
             <!-- Mobile sizes WebP -->
             <!-- Mobile and tablet sizes -->
@@ -137,7 +112,7 @@
             <!-- Fallback image -->
             {{
               section.settings.image2
-              | image_url: width: 1800
+              | image_url: width: 1000
               | image_tag: loading: 'lazy', width: section.settings.image2.width, height: section.settings.image2.height
             }}
           </picture>
