@@ -55,7 +55,13 @@
                     <!-- Desktop sizes -->
                     <source
                       media="(min-width: 768px)"
-                      srcset="{{ block.settings.image | image_url: width: 1000 }} 1000w,"
+                      srcset="
+                        {{ block.settings.image | image_url: width: 1000 }} 1000w,
+                        {{ block.settings.image | image_url: width: 1400 }} 1400w,
+                         {{ block.settings.image | image_url: width: 1800 }} 1800w,
+                         {{ block.settings.image | image_url: width: 2400 }} 2400w,
+                         {{ block.settings.image | image_url: width: 3000 }} 3000w
+                      "
                       sizes="100vw"
                     >
 
