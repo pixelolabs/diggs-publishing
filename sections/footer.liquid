@@ -15,7 +15,7 @@
                   {{
                     block.settings.instaImage
                     | image_url: width: 270
-                     | image_tag: loading: 'lazy', widths: '270x270'
+                    | image_tag: loading: 'lazy', widths: '270x270'
                   }}
                 </a>
               </li>
@@ -125,9 +125,47 @@
             {% endif %}
           </div>
         </div>
+        {% if section.settings.cartoonimage != blank %}
         <div class="footer-cartoon">
-          <img src="{{ "footer_cartoon.webp" |asset_url}}" alt="cartoon-figures">
+          {% comment %} <img src="{{ "footer_cartoon.webp" |asset_url}}" alt="cartoon-figures"> {% endcomment %}
+          <picture>
+            <!-- Mobile and tablet sizes -->
+            <source
+              media="(max-width: 767px)"
+              srcset="
+                {{ section.settings.cartoonimage | asset_url: width: 375 }} 375w,
+                {{ section.settings.cartoonimage | asset_url: width: 550 }} 550w,
+                {{ section.settings.cartoonimage | image_url: width: 750 }} 750w
+              "
+              sizes="100vw"
+            >
+
+            <!-- Desktop sizes -->
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                {{section.settings.cartoonimage | image_url: width: 1000 }} 1000w,
+                {{ section.settings.cartoonimage | image_url: width: 1400 }} 1400w,
+                 {{ section.settings.cartoonimage | image_url: width: 1800 }} 1800w,
+                 {{ section.settings.cartoonimage | image_url: width: 2400 }} 2400w,
+                 {{ section.settings.cartoonimage | image_url: width: 3000 }} 3000w
+              "
+              sizes="100vw"
+            >
+
+            <!-- Fallback image -->
+            <!-- Fallback image -->
+            {{
+              section.settings.cartoonimage
+              | image_url: width: 1800
+              | image_tag:
+                loading: 'lazy',
+                width: section.settings.cartoonimage.width,
+                height: section.settings.cartoonimage.height
+            }}
+          </picture>
         </div>
+      {% endif %}
       </div>
     </div>
   </div>
@@ -180,6 +218,11 @@
       "type": "url",
       "id": "credit",
       "label": "Credit Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "cartoonimage",
+      "label": "Footer Graphic"
     }
   ],
 

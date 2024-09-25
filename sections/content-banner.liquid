@@ -7,81 +7,66 @@
     <div class="box">
       {% if section.settings.image1 != blank %}
         <div class="left-image">
-          {% assign mobile_image1 = section.settings.image1 %}
-          {% assign tablet_image1 = section.settings.image1 %}
-          {% assign desktop_image1 = section.settings.image1 %}
-          {% assign mobile_width = 600 %}
-          {% assign tablet_width = 800 %}
-          {% assign desktop_width = 1000 %}
+          {% comment %}
+            {% assign mobile_image1 = section.settings.image1 %}
+            {% assign tablet_image1 = section.settings.image1 %}
+            {% assign desktop_image1 = section.settings.image1 %}
+            {% assign mobile_width = 600 %}
+            {% assign tablet_width = 800 %}
+            {% assign desktop_width = 1000 %}
 
-          {% if forloop.first %}
-            {{
-              mobile_image1
-              | image_url: width: mobile_width, format: 'webp'
-              | preload_tag: as: 'image', media: '(max-width: 767px)'
-            }}
-            {{
-              tablet_image1
-              | image_url: width: tablet_width, format: 'webp'
-              | preload_tag: as: 'image', media: '(min-width: 768px) and (max-width: 1023px)'
-            }}
-            {{
-              desktop_image1
-              | image_url: width: desktop_width, format: 'webp'
-              | preload_tag: as: 'image', media: '(min-width: 1024px)'
-            }}
-          {% endif %}
+            {% if forloop.first %}
+              {{
+                mobile_image1
+                | image_url: width: mobile_width, format: 'webp'
+                | preload_tag: as: 'image', media: '(max-width: 767px)'
+              }}
+              {{
+                tablet_image1
+                | image_url: width: tablet_width, format: 'webp'
+                | preload_tag: as: 'image', media: '(min-width: 768px) and (max-width: 1023px)'
+              }}
+              {{
+                desktop_image1
+                | image_url: width: desktop_width, format: 'webp'
+                | preload_tag: as: 'image', media: '(min-width: 1024px)'
+              }}
+            {% endif %}
+          {% endcomment %}
 
           <picture>
             <!-- Mobile sizes WebP -->
+            <!-- Mobile and tablet sizes -->
             <source
-              type="image/webp"
               media="(max-width: 767px)"
               srcset="
-                {{ mobile_image1 | image_url: width: 375, format: 'webp' }} 375w,
-                {{ mobile_image1 | image_url: width: mobile_width, format: 'webp' }} {{ mobile_width }}w
+                {{ section.settings.image1 | asset_url: width: 375 }} 375w,
+                {{ section.settings.image1 | asset_url: width: 550 }} 550w,
+                {{ section.settings.image1 | image_url: width: 750 }} 750w
               "
               sizes="100vw"
             >
 
-            <!-- Tablet sizes WebP -->
+            <!-- Desktop sizes -->
             <source
-              type="image/webp"
-              media="(min-width: 768px) and (max-width: 1023px)"
+              media="(min-width: 768px)"
               srcset="
-                {{ tablet_image1 | image_url: width: 768, format: 'webp' }} 768w,
-                {{ tablet_image1 | image_url: width: tablet_width, format: 'webp' }} {{ tablet_width }}w
+                {{section.settings.image1 | image_url: width: 1000 }} 1000w,
+                {{ section.settings.image1 | image_url: width: 1400 }} 1400w,
+                 {{ section.settings.image1 | image_url: width: 1800 }} 1800w,
+                 {{ section.settings.image1 | image_url: width: 2400 }} 2400w,
+                 {{ section.settings.image1 | image_url: width: 3000 }} 3000w
               "
               sizes="100vw"
             >
 
-            <!-- Desktop sizes WebP -->
-            <source
-              type="image/webp"
-              media="(min-width: 1024px)"
-              srcset="
-                {{ desktop_image1 | image_url: width: 1000, format: 'webp' }} 1000w,
-                {{ desktop_image1 | image_url: width: desktop_width, format: 'webp' }} {{ desktop_width }}w
-              "
-              sizes="100vw"
-            >
-
-            <!-- Fallback for non-WebP support -->
-            <img
-              src="{{ mobile_image1 | image_url: width: mobile_width }}"
-              srcset="
-                {{ mobile_image1 | image_url: width: mobile_width }} {{ mobile_width }}w,
-                {{ tablet_image1 | image_url: width: tablet_width }} {{ tablet_width }}w,
-                {{ desktop_image1 | image_url: width: desktop_width }} {{ desktop_width }}w
-              "
-              sizes="(max-width: 767px) 100vw, (max-width: 1023px) 100vw, 100vw"
-              width="{{ mobile_width }}"
-              height="{{ mobile_width | divided_by: mobile_image1.aspect_ratio | round }}"
-              loading="lazy"
-              decoding="async"
- alt="{{ section.settings.title | escape }}"
-              style="width: 100%;  display: block;"
-            >
+            <!-- Fallback image -->
+            <!-- Fallback image -->
+            {{
+              section.settings.image1
+              | image_url: width: 1000
+              | image_tag: loading: 'lazy', width: section.settings.image1.width, height: section.settings.image1.height
+            }}
           </picture>
         </div>
       {% endif %}
@@ -97,81 +82,39 @@
 
       {% if section.settings.image2 != blank %}
         <div class="right-image">
-          {% assign mobile_image2 = section.settings.image2 %}
-          {% assign tablet_image2 = section.settings.image2 %}
-          {% assign desktop_image2 = section.settings.image2 %}
-          {% assign mobile_width = 600 %}
-          {% assign tablet_width = 800 %}
-          {% assign desktop_width = 1000 %}
-
-          {% if forloop.first %}
-            {{
-              mobile_image2
-              | image_url: width: mobile_width, format: 'webp'
-              | preload_tag: as: 'image', media: '(max-width: 767px)'
-            }}
-            {{
-              tablet_image2
-              | image_url: width: tablet_width, format: 'webp'
-              | preload_tag: as: 'image', media: '(min-width: 768px) and (max-width: 1023px)'
-            }}
-            {{
-              desktop_image2
-              | image_url: width: desktop_width, format: 'webp'
-              | preload_tag: as: 'image', media: '(min-width: 1024px)'
-            }}
-          {% endif %}
-
           <picture>
             <!-- Mobile sizes WebP -->
+            <!-- Mobile and tablet sizes -->
             <source
-              type="image/webp"
               media="(max-width: 767px)"
               srcset="
-                {{ mobile_image2 | image_url: width: 375, format: 'webp' }} 375w,
-                {{ mobile_image2 | image_url: width: mobile_width, format: 'webp' }} {{ mobile_width }}w
+                {{ section.settings.image2 | asset_url: width: 375 }} 375w,
+                {{ section.settings.image2 | asset_url: width: 550 }} 550w,
+                {{ section.settings.image2 | image_url: width: 750 }} 750w
               "
               sizes="100vw"
             >
 
-            <!-- Tablet sizes WebP -->
+            <!-- Desktop sizes -->
             <source
-              type="image/webp"
-              media="(min-width: 768px) and (max-width: 1023px)"
+              media="(min-width: 768px)"
               srcset="
-                {{ tablet_image2 | image_url: width: 768, format: 'webp' }} 768w,
-                {{ tablet_image2 | image_url: width: tablet_width, format: 'webp' }} {{ tablet_width }}w
+                {{section.settings.image2 | image_url: width: 1000 }} 1000w,
+                {{ section.settings.image2 | image_url: width: 1400 }} 1400w,
+                 {{ section.settings.image2 | image_url: width: 1800 }} 1800w,
+                 {{ section.settings.image2 | image_url: width: 2400 }} 2400w,
+                 {{ section.settings.image2 | image_url: width: 3000 }} 3000w
               "
               sizes="100vw"
             >
 
-            <!-- Desktop sizes WebP -->
-            <source
-              type="image/webp"
-              media="(min-width: 1024px)"
-              srcset="
-                {{ desktop_image2 | image_url: width: 1000, format: 'webp' }} 1000w,
-                {{ desktop_image2 | image_url: width: desktop_width, format: 'webp' }} {{ desktop_width }}w
-              "
-              sizes="100vw"
-            >
-
-            <!-- Fallback for non-WebP support -->
-            <img
-              src="{{ mobile_image2 | image_url: width: mobile_width }}"
-              srcset="
-                {{ mobile_image2 | image_url: width: mobile_width }} {{ mobile_width }}w,
-                {{ tablet_image2 | image_url: width: tablet_width }} {{ tablet_width }}w,
-                {{ desktop_image2 | image_url: width: desktop_width }} {{ desktop_width }}w
-              "
-              sizes="(max-width: 767px) 100vw, (max-width: 1023px) 100vw, 100vw"
-              width="{{ mobile_width }}"
-              height="{{ mobile_width | divided_by: mobile_image2.aspect_ratio | round }}"
-              loading="lazy"
-              decoding="async"
-              alt="{{ section.settings.title | escape }}"
-              style="width: 100%; height: auto; display: block;"
-            >
+            <!-- Fallback image -->
+            <!-- Fallback image -->
+            {{
+              section.settings.image2
+              | image_url: width: 1000
+              | image_tag: loading: 'lazy', width: section.settings.image2.width, height: section.settings.image2.height
+            }}
           </picture>
         </div>
       {% endif %}

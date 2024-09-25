@@ -33,11 +33,48 @@
                   class="image-section"
                   target="_blank"
                 >
-                  <img
-                    class="lazyload"
-                    data-src="{{ block.settings.image | img_url: 'large' }}"
-                    alt="{{block.settings.title}}"
-                  >
+                  {% comment %}
+                    <img
+                      class="lazyload"
+                      data-src="{{ block.settings.image | img_url: 'large' }}"
+                      alt="{{block.settings.title}}"
+                    >
+                  {% endcomment %}
+                  <picture>
+                    <!-- Mobile and tablet sizes -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        {{ block.settings.image | image_url: width: 375 }} 375w,
+                        {{ block.settings.image | image_url: width: 550 }} 550w,
+                        {{ block.settings.image | image_url: width: 750 }} 750w
+                      "
+                      sizes="100vw"
+                    >
+
+                    <!-- Desktop sizes -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        {{ block.settings.image | image_url: width: 1000 }} 1000w,
+                        {{ block.settings.image | image_url: width: 1400 }} 1400w,
+                         {{ block.settings.image | image_url: width: 1800 }} 1800w,
+                         {{ block.settings.image | image_url: width: 2400 }} 2400w,
+                         {{ block.settings.image | image_url: width: 3000 }} 3000w
+                      "
+                      sizes="100vw"
+                    >
+
+                    <!-- Fallback image -->
+                    {{
+                      block.settings.image
+                      | image_url: width: 1800
+                      | image_tag:
+                        loading: 'lazy',
+                        width: block.settings.image.width,
+                        height: block.settings.image.height
+                    }}
+                  </picture>
                 </a>
               {% endif %}
             </div>
