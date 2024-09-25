@@ -113,7 +113,8 @@
           </li>
           <li>
             <a role="button" class="js__cart-expand js__update-cart-icon cart" href="javascript:;" title="cart">
-              {%- include 'icon-cart' %}
+              <span class="cart-icon"></span>
+              {% comment %} {%- include 'icon-cart' %} {% endcomment %}
               <span class="js__ajax-cart-count cart-count"> {{ cart.item_count }}</span>
             </a>
           </li>
