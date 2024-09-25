@@ -172,7 +172,11 @@
               {{
                 section.settings.image
                 | image_url: width: 1800
-                | image_tag: loading: 'lazy', width: section.settings.image.width, height: section.settings.image.height
+                | image_tag:
+                  loading: 'lazy',
+                  width: section.settings.image.width,
+                  height: section.settings.image.height,
+                  alt: section.settings.title
               }}
             </picture>
             {% comment %}
