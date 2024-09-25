@@ -350,10 +350,37 @@ header {
       &:after {
         display: none;
       }
+      span.cart-icon {
+        width: 100%;
+        height: 100%;
+        background: url(icon-cart.svg) no-repeat center/100%;
+      }
+      &:hover,
+      &:focus {
+        span.cart-icon {
+          width: 100%;
+          height: 100%;
+          background: url(icon-cart-hover.svg) no-repeat center/100%;
+        }
+      }
     }
     .user {
       &:after {
         display: none;
+      }
+      span.account-icon {
+        width: 100%;
+        height: 100%;
+        background: url(icon-account.svg) no-repeat center/100%;
+        display: block;
+      }
+      &:hover,
+      &:focus {
+        span.account-icon {
+          width: 100%;
+          height: 100%;
+          background: url(icon-account-hover.svg) no-repeat center/100%;
+        }
       }
     }
     .cart-count {

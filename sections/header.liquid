@@ -88,7 +88,8 @@
         <ul class="right-nav flex-align-center">
           <li class=" search-li none-980">
             <button aria-label="search" class="js__search search-icon" title="Search">
-              {% include 'icon-search' %}
+              <span class="search-icon-inner"></span>
+              {% comment %} {% include 'icon-search' %} {% endcomment %}
             </button>
 
             <div class="header-search-section js__header-search-section">
@@ -104,26 +105,31 @@
                 </form>
               </div>
               <button aria-label="close" id="search-close" class="close">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                  <path d="M9.902 18.786a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12.601 7.085l-5.4 5.4M7.201 7.085l5.4 5.4" stroke="#3B2900" stroke-width="1.326" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                {% comment %}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M9.902 18.786a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12.601 7.085l-5.4 5.4M7.201 7.085l5.4 5.4" stroke="#3B2900" stroke-width="1.326" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                {% endcomment %}
+                <span class="close-icon"></span>
               </button>
             </div>
           </li>
           <li>
             <a role="button" class="js__cart-expand js__update-cart-icon cart" href="javascript:;" title="cart">
-              {%- include 'icon-cart' %}
+              <span class="cart-icon"></span>
+              {% comment %} {%- include 'icon-cart' %} {% endcomment %}
               <span class="js__ajax-cart-count cart-count"> {{ cart.item_count }}</span>
             </a>
           </li>
           <li class="account">
             {% if customer %}
               <a href="/account" title="My Account" class="user site-nav__link">
-                {% include 'icon-account' %}
+                {% comment %} {% include 'icon-account' %} {% endcomment %}
+                <span class="account-icon"></span>
               </a>
             {% else %}
               <a href="/account/login" title="Log In" class="user site-nav__link">
-                {% include 'icon-account' %}
+                <span class="account-icon"></span>
               </a>
             {% endif %}
           </li>
