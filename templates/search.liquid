@@ -88,7 +88,7 @@
     <ul class="collection__product-list flex-wrap">
       {% for item in search.results %}
         {% if item.object_type == 'product' %}
-        {% unless item.object_type.tags contains 'publishing-services' %}
+        {% unless item.tags contains 'publishing-services' %}
       <li class="grid__item product-card">
       
           {% include 'product_Card'  with  productRelated: item , show_price: true, show_tags: true, show_auto_tags: true, show_title: true, show_fav: false, show_secondary_button: true %}
