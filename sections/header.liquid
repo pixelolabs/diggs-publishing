@@ -408,14 +408,14 @@
 
                           <div class="price-box">
                               {{#if on_sale}}
-                              <div class="price-sale">
+                              <div class="price-sale product-card__price">
                                   <span class="old-price">{{ compare_at_price }}</span>
                                   <span class="special-price">
                                       {{ price }}
                                   </span>
                               </div>
                               {{else}}
-                              <div class="price-regular">
+                              <div class="price-regular product-card__price">
                                   <span>{{ price }}</span>
                               </div>
                               {{/if}}
