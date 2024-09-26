@@ -1,25 +1,30 @@
 .account-section {
   position: relative;
   padding-top: 205px;
-  background-image: linear-gradient(98deg, #5ebe55 1%, #a8d24e 51%, #5abe50 101%);
-  .inner{
-  &::before {
-    background: url("graphic-wave-inner-banner.svg") repeat left / 2065px;
-    height: 114px;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: -90px;
-    content: "";
-    z-index: 2;
+  background-image: linear-gradient(
+    98deg,
+    #5ebe55 1%,
+    #a8d24e 51%,
+    #5abe50 101%
+  );
+  .inner {
+    &::before {
+      background: url("graphic-wave-inner-banner.svg") repeat left / 2065px;
+      height: 114px;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: -90px;
+      content: "";
+      z-index: 2;
+    }
+    padding: 52px 0 180px;
+    @include MQ(MQ-480) {
+      padding: 52px 0 80px;
+    }
+    background: $color-off-white-light;
+    position: relative;
   }
-  padding: 52px 0 180px;
-  @include MQ(MQ-480) {
-    padding: 52px 0 80px;
-  }
-  background: $color-off-white-light;
-  position: relative;
-}
   .order-detail-info {
     margin-bottom: -20px;
     h4 {
@@ -27,7 +32,6 @@
     }
   }
   .heading-section {
-  
     position: relative;
     #customer_logout_link,
     .link--primary--small {
@@ -39,7 +43,7 @@
       margin-top: 10px;
     }
   }
-  h1{
+  h1 {
     text-align: left !important;
   }
   #customer_logout_link,
@@ -57,7 +61,7 @@
     text-decoration: underline !important;
     position: relative;
     text-transform: capitalize;
-    &:hover{
+    &:hover {
       color: $color-orange;
     }
   }
@@ -78,13 +82,13 @@
         margin-top: 50px;
       }
     }
-    .link--primary--small{
+    .link--primary--small {
       margin-top: 10px !important;
       display: inline-block;
     }
     strong {
       font-weight: 600;
-      
+
       color: $color-black;
     }
     text-transform: capitalize;
@@ -330,7 +334,6 @@
 .account-section__links {
   display: flex;
 
-  
   margin-top: 10px;
   a {
     margin-top: 0px !important;

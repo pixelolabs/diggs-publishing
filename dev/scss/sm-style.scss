@@ -4,37 +4,52 @@
 // partials
 @import "custom/partials/variables";
 // --------------------------------------------------
-@import "custom/modules/module-a/hero-banner";
-@import "custom/modules/module-a/collection-products-slider";
-@import "custom/modules/module-a/article";
-@import "custom/modules/module-a/error-page";
-@import "custom/modules/module-a/blog";
-@import "custom/modules/module-a/three-column-video-card";
-@import "custom/modules/module-a/listing";
-@import "custom/modules/module-a/inner-hero-simple";
-@import "custom/modules/module-a/full-width-content";
-@import "custom/modules/module-a/full-width-image-and-content";
-@import "custom/modules/module-a/inner-hero-section";
-@import "custom/modules/module-a/three-column-cards-section";
+@import "custom/modules/hero-banner";
+@import "custom/modules/collection-products-slider";
+@import "custom/modules/article";
+@import "custom/modules/error-page";
+@import "custom/modules/blog";
+@import "custom/modules/three-column-video-card";
+@import "custom/modules/listing";
+@import "custom/modules/inner-hero-simple";
+@import "custom/modules/full-width-content";
+@import "custom/modules/full-width-image-and-content";
+@import "custom/modules/inner-hero-section";
+@import "custom/modules/three-column-cards-section";
 
 // FAQ's
-@import "custom/modules/module-a/faq-accordion";
-@import "custom/modules/module-a/faq-with-category";
+@import "custom/modules/faq-accordion";
+@import "custom/modules/faq-with-category";
+@import "custom/modules/left-sidebar";
+@import "custom/modules/three-column-product-slider";
+@import "custom/modules/article-list";
+@import "custom/modules/right-sidebar";
+@import "custom/modules/base";
+@import "custom/modules/default-page-content";
+@import "custom/modules/content-banner";
+@import "custom/modules/half-image-half-content";
+@import "custom/modules/review-slider-with-image";
+@import "custom/modules/logo-slider";
+@import "custom/modules/full-width-content-section";
 
-@import "custom/modules/module-a/left-sidebar";
-@import "custom/modules/module-a/three-column-product-slider";
-@import "custom/modules/module-a/article-list";
-@import "custom/modules/module-a/right-sidebar";
+// module-n
+@import "custom/modules/full-width-CTA";
+@import "custom/modules/contact-form-with-text";
+@import "custom/modules/full-width-CTA-V2";
+@import "custom/modules/ambassador-program-registration-form";
+@import "custom/modules/four-column-icon-content-section";
+@import "custom/modules/half-image-half-cards-section";
+@import "custom/modules/two-column-content-banner";
 
-@import "custom/modules/module-a/base";
-// @import "custom/modules-a/collection";
-
-// @import "custom/modules-a/minicart";
-// @import "custom/modules-a/product";
-
-@import "custom/modules/module-a/default-page-content";
-@import "custom/modules/module-a/content-banner";
-@import "custom/modules/module-a/half-image-half-content";
-@import "custom/modules/module-a/review-slider-with-image";
-@import "custom/modules/module-a/logo-slider";
-@import "custom/modules/module-a/full-width-content-section";
+// module-g
+@import "custom/modules/minicart";
+@import "custom/modules/product";
+@import "custom/modules/collection";
+@import "custom/modules/account";
+@import "custom/modules/account-not-logged";
+@import "custom/modules/account-address";
+@import "custom/modules/cart";
+@import "custom/modules/pdp-tab-section";
+@import "custom/modules/three-column-product-slider-v2";
+@import "custom/modules/full-width-content-section-v2";
+@import "custom/modules/contact-us";
