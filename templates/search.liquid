@@ -157,7 +157,9 @@
 {% if search.performed %}
 {% for item in search.results %}
   {% if item.object_type == 'product' %}
+    {% unless item.tags contains 'publishing-services' %}
       {% render 'product-modal', productData: item %}
+    {% endunless %}
     {% endif %}
   {% endfor %}
   {% endif %}
