@@ -183,7 +183,9 @@
     </div>
   </div>
   {% for productRelated in collection.products %}
+    {% unless productRelated.tags contains 'publishing-services' %}
       {% render 'product-modal', productData: productRelated %}
+    {% endunless %}
     {% endfor %}
 {% endpaginate %}
 
