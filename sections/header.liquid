@@ -1,6 +1,6 @@
 <!-- Header -->
-<header>
-  <div class="main-header js__main-header">
+<header data-ajax-search>
+  <div class="main-header js__main-header ">
     <div class="container-1400 flex-align-center">
       <div class="header-logo relative">
         <a href="{{ routes.root_url }}" itemprop="url" title="{{shop.name}}">
@@ -85,23 +85,24 @@
             {% endif %}
           </nav>
         </div>
-        <ul class="right-nav flex-align-center">
+        <ul class="right-nav flex-align-center" >
           <li class=" search-li none-980">
             <button aria-label="search" class="js__search search-icon" title="Search">
               {% include 'icon-search' %}
             </button>
 
-            <div class="header-search-section js__header-search-section">
+            <div class="header-search-section js__header-search-section search-form header-search__form "  >
               <div class="container-830">
                 {% comment %} <a href="javascript:;" class=" toggle-icon"> {% include 'icon-search' %}</a> {% endcomment %}
 
-                <form method="get" action="/search" class="flex-align-center relative" data-form-type="">
-                  <input type="hidden" name="type" value="product">
+                <form method="get" action="/search" class="flex-align-center relative" role="search" data-form-type="">
+                  <input type="hidden" name="options[prefix]" value="last">
 
-                  <input class="search" type="search" placeholder="Search Products" aria-label="Search" name="q">
+                  <input class="search header-search__input" type="search" placeholder="Search Products" aria-label="Search" name="q">
 
                   <input type="submit" aria-label="Submit" class="submit btn-submit" value="Search">
                 </form>
+                
               </div>
               <button aria-label="close" id="search-close" class="close">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -153,6 +154,298 @@
   <!-- Mini Cart -->
   <div id="cart_overlay"></div>
   {% include 'cart_drawer' %}
+  
+
+<div class="quickSearchResultsWrap" style="display: none;">
+  <div class="custom-scrollbar">
+      <div class="container">
+          {% if settings.enable_search_trending %}
+          <div class="header-block header-search__trending">
+              <div class="box-title">
+                  {% render 'multilang' with settings.trending_search_title %}
+              </div>
+
+              <ul class="list-item">
+                  {% if settings.trending_search_item_1 != blank %}
+                  
+                  {% assign handle_1 = settings.trending_search_item_1 | split: '|' | first | strip | handleize %}
+
+                  <li class="item">
+                      <a href="{{ routes.search_url }}?q={{handle_1}}*&amp;type=product" title="" class="highlight">
+                          {% if settings.layout_style == 'layout_style_surfup' %}
+                              {% render 'multilang' with settings.trending_search_item_1 %}
+                              {% render 'icon-search' %}
+                          {% else %}
+                              <i class="fa fa-search" aria-hidden="true"></i>
+                              {% render 'multilang' with settings.trending_search_item_1 %}
+                          {% endif %}
+                      </a>
+                  </li>
+                  {% endif %}
+
+                  {% if settings.trending_search_item_2 != blank %}
+
+                  {% assign handle_2 = settings.trending_search_item_2 | split: '|' | first | strip | handleize %}
+
+                  <li class="item">
+                      <a href="{{ routes.search_url }}?q={{handle_2}}*&amp;type=product" title="" class="highlight">
+                          {% if settings.layout_style == 'layout_style_surfup' %}
+                              {% render 'multilang' with settings.trending_search_item_2 %}
+                              {% render 'icon-search' %}
+                          {% else %}
+                              <i class="fa fa-search" aria-hidden="true"></i>
+                              {% render 'multilang' with settings.trending_search_item_2 %}
+                          {% endif %}
+                      </a>
+                  </li>
+                  {% endif %}
+
+                  {% if settings.trending_search_item_3 != blank %}
+
+                  {% assign handle_3 = settings.trending_search_item_3 | split: '|' | first | strip | handleize %}
+                  <li class="item">
+                      <a href="{{ routes.search_url }}?q={{handle_3}}*&amp;type=product" title="" class="highlight">
+                          {% if settings.layout_style == 'layout_style_surfup' %}
+                              {% render 'multilang' with settings.trending_search_item_3 %}
+                              {% render 'icon-search' %}
+                          {% else %}
+                              <i class="fa fa-search" aria-hidden="true"></i>
+                              {% render 'multilang' with settings.trending_search_item_3 %}
+                          {% endif %}
+                      </a>
+                  </li>
+                  {% endif %}
+
+                  {% if settings.trending_search_item_4 != blank %}
+
+                  {% assign handle_4 = settings.trending_search_item_4 | split: '|' | first | strip | handleize %}
+                  <li class="item">
+                      <a href="{{ routes.search_url }}?q={{handle_4}}*&amp;type=product" title="" class="highlight">
+                          {% if settings.layout_style == 'layout_style_surfup' %}
+                              {% render 'multilang' with settings.trending_search_item_4 %}
+                              {% render 'icon-search' %}
+                          {% else %}
+                              <i class="fa fa-search" aria-hidden="true"></i>
+                              {% render 'multilang' with settings.trending_search_item_4 %}
+                          {% endif %}
+                      </a>
+                  </li>
+                  {% endif %}
+
+                  {% if settings.trending_search_item_5 != blank %}
+
+                  {% assign handle_5 = settings.trending_search_item_5 | split: '|' | first | strip | handleize %}
+                  <li class="item">
+                      <a href="{{ routes.search_url }}?q={{handle_5}}*&amp;type=product" title="" class="highlight">
+                          {% if settings.layout_style == 'layout_style_surfup' %}
+                              {% render 'multilang' with settings.trending_search_item_5 %}
+                              {% render 'icon-search' %}
+                          {% else %}
+                              <i class="fa fa-search" aria-hidden="true"></i>
+                              {% render 'multilang' with settings.trending_search_item_5 %}
+                          {% endif %}
+                      </a>
+                  </li>
+                  {% endif %}
+
+                  {% if settings.trending_search_item_6 != blank %}
+
+                  {% assign handle_6 = settings.trending_search_item_6 | split: '|' | first | strip | handleize %}
+                  <li class="item">
+                      <a href="{{ routes.search_url }}?q={{handle_6}}*&amp;type=product" title="" class="highlight">
+                          {% if settings.layout_style == 'layout_style_surfup' %}
+                              {% render 'multilang' with settings.trending_search_item_6 %}
+                              {% render 'icon-search' %}
+                          {% else %}
+                              <i class="fa fa-search" aria-hidden="true"></i>
+                              {% render 'multilang' with settings.trending_search_item_6 %}
+                          {% endif %}
+                      </a>
+                  </li>
+                  {% endif %}
+              </ul>
+          </div>
+          {% endif %}
+
+          {% if settings.enable_search_popular_products %}
+          <div class="header-block header-search__product">
+              <div class="box-title">
+                  {% render 'multilang' with settings.popular_products_search_title %}
+              </div>
+
+              <div class="search__products">
+                  <div class="products-grid row">
+                      {% for product in collections[settings.popular_products_collection].products limit:settings.popular_products_limit %}
+                      <div class="grid-item col-6 col-sm-4">
+                          {% if settings.layout_style == 'layout_style_1170' %}
+                              {% render 'product-grid-item-style-2' with product as product %}
+                          {% elsif settings.layout_style == 'layout_style_fullwidth' %}
+                              {% render 'product-grid-item-style-3' with product as product %}
+                          {% elsif settings.layout_style == 'layout_style_suppermarket' %}
+                              {% render 'product-grid-item-style-4' with product as product %}
+                          {% else %}
+                              {% render 'sidebar-product-grid' with product as product %}
+                          {% endif %}
+                      </div>
+                      {% endfor %}
+                  </div>                    
+              </div>
+          </div>
+          {% endif %}
+          <div class="results-col">
+              <div class="header-search__results-wrapper"></div>
+              <div class="popular-products">
+                  <div class="box-title">Current Offers</div>
+                  {% comment %} <ul>
+                      {% assign popularProducts = collections.all.products | sort: 'popularity' | reverse %}
+                      {% for product in popularProducts limit:3 %}
+                        <li>{{ product.title }}</li>
+                      {% endfor %}
+                    </ul> {% endcomment %}
+                    <div class="search-sale-container">
+                      {% assign shuffledProducts = collections.all.products | shuffle %}
+                          {% assign displayedProducts = 0 %}
+
+                          {% for product in shuffledProducts %}
+                          {% if product.compare_at_price_max > product.price %}
+                              {% assign productCount = 0 %}
+                              {% for variant in product.variants %}
+                              {% assign productCount = productCount | plus: variant.inventory_quantity %}
+                              {% endfor %}
+                              {% if productCount > 0 %}
+                              <div class="search-sale-products">
+                                  <a href="{{ product.url }}">
+                                  <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}" />
+                                  </a>
+                                  <a class="product-title" href="{{ product.url }}">{{ product.title }}</a>
+                                  <div class="price-box">
+                                  <div class="price-sale">
+                                      <span class="old-price">{{ product.price | money }}</span>
+                                      <span class="special-price">{{ product.compare_at_price_max | money }}</span>
+                                  </div>
+                                  </div>
+                              </div>
+                              {% assign displayedProducts = displayedProducts | plus: 1 %}
+                              {% endif %}
+                              {% if displayedProducts >= 3 %}
+                              {% break %}
+                              {% endif %}
+                          {% endif %}
+                          {% endfor %}
+                  </div>                             
+              </div>
+          </div>
+          <div class="collections-col">
+              <div class="box-title">Our Collections</div>
+              <ul>
+                  {% assign search_menu = 'search-menu' %}
+                  {% for link in linklists[search_menu].links %}
+                      <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                  {% endfor %}
+              <ul>
+
+              <div class="box-title" style="margin-top: 30px;">Latest Blogs</div>
+              <ul>
+                  {% assign search_blog_menu = 'search-blog-menu' %}
+                  {% for link in linklists[search_blog_menu].links %}
+                      <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                  {% endfor %}
+              <ul>
+                                       
+          </div>            
+      </div>
+  </div>
+</div>
+</div>
+
+{% capture search %}
+{% raw %}{{#if is_loading}}{% endraw %}
+<div class="header-search__results">
+  <div class="header-search__spinner-container">
+      <div class="loading-modal modal"><div></div><div></div><div></div><div></div></div>
+  </div>
+</div>
+
+{% raw %}{{else}}{% endraw %}
+
+{% raw %}{{#if is_show}}{% endraw %}
+<div class="header-search__results header-block">
+  {% raw %}
+  {{#if has_results}}
+  <div class="box-title">
+      {{ title_heading }}
+  </div>
+
+  <div class="search__products">
+      <div class="products-grid row">
+          {{#each results}}
+
+          <div class="grid-item col-6 col-sm-4 col{% endraw %}{{settings.popular_products_limit}} {% if settings.layout_style == 'layout_style_fullwidth' or settings.layout_style == 'layout_style_suppermarket' %}{% raw %} col-5{% endraw %}{% endif %}{% raw %}">
+              <div class="inner product-item">
+                  <div class="inner-top">
+                      <div class="product-top">
+                          <div class="product-image">
+                              <a href="{{url}}" class="product-grid-image">
+                                  <img src="{{image}}" alt="{{image_alt}}">                                               
+                              </a>
+                          </div>
+                      </div>
+
+                      <div class="product-bottom">
+
+                          {% endraw %}{% if settings.show_vendor %}{% raw %}
+                          <div class="product-vendor">
+                              {{vendor}}
+                          </div>
+                          {% endraw %}{% endif %}{% raw %}
+
+                          <a class="product-title" href="{{url}}">
+                              {{title}}
+                          </a>
+
+                          <div class="price-box">
+                              {{#if on_sale}}
+                              <div class="price-sale">
+                                  <span class="old-price">{{ compare_at_price }}</span>
+                                  <span class="special-price">
+                                      {{ price }}
+                                  </span>
+                              </div>
+                              {{else}}
+                              <div class="price-regular">
+                                  <span>{{ price }}</span>
+                              </div>
+                              {{/if}}
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          {{/each}}
+      </div>              
+  </div>
+  
+  <div class="text-center">            
+      <a href="{{results_url}}" class="text-results header-search__see-more" data-results-count="{{results_count}}">
+          {{results_label}} ({{results_count}})
+      </a>
+  </div>
+  {{else}}
+
+  <p class="header-search__no-results text-results">{{ results_label }}</p>
+  {{/if}}
+  {% endraw %}
+</div>
+{% raw %}{{/if}}{% endraw %}
+{% raw %}{{/if}}{% endraw %}
+{% endcapture %} 
+
+<script id="search-results-template" type="text/template7">
+{{search}}
+</script>
+</div>
+
 </header>
 {% schema %}
 {
@@ -200,3 +493,162 @@
   ]
 }
 {% endschema %}
+
+
+<style>
+
+.quickSearchResultsWrap {
+  background-color: #fff;
+  z-index: 11;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
+  padding: 15px 10px 15px
+}
+
+.quickSearchResultsWrap .custom-scrollbar {
+  max-height: -moz-calc(100vh - 150px);
+  max-height: -webkit-calc(100vh - 150px);
+  max-height: -ms-calc(100vh - 150px);
+  max-height: calc(100vh - 150px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  webkit-overflow-scrolling: touch
+}
+
+.quickSearchResultsWrap .custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #f4f4f4
+}
+
+.quickSearchResultsWrap .custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  background-color: #f4f4f4
+}
+
+.quickSearchResultsWrap .custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--color_slick_arrow)
+}
+
+.quickSearchResultsWrap .header-search__trending {
+  margin-bottom: 15px
+}
+
+.quickSearchResultsWrap .box-title {
+  font-size: var(--font_size);
+  line-height: var(--font_size_plus8);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: #232323;
+  border-bottom: 1px solid var(--border_bt_sidebar);
+  padding-bottom: 5px;
+  margin-bottom: 15px
+}
+
+.quickSearchResultsWrap .list-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -5px
+}
+
+.quickSearchResultsWrap .list-item .item {
+  padding: 0 5px;
+  margin-bottom: 10px
+}
+
+.quickSearchResultsWrap .list-item .highlight {
+  display: block;
+  background-color: #f7f7f7;
+  color: #868686;
+  padding: 7px 12px 5px;
+  cursor: pointer
+}
+
+.quickSearchResultsWrap .list-item .highlight .fa {
+  margin-right: 6px
+}
+
+.quickSearchResultsWrap .products-grid {
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  overflow: auto
+}
+
+.quickSearchResultsWrap .products-grid .grid-item {
+  margin-top: 5px;
+  margin-bottom: 15px
+}
+
+.quickSearchResultsWrap .products-grid .product-top .compare-button {
+  display: none
+}
+
+.quickSearchResultsWrap .product-item .product-image img {
+  min-height: initial
+}
+
+.quickSearchResultsWrap .product-item .product-image .product-grid-image {
+  min-height: initial
+}
+
+.quickSearchResultsWrap .product-item .product-bottom {
+  text-align: left;
+}
+
+.custom_width.style_product_grid_4 .quickSearchResultsWrap .product-bottom {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.quickSearchResultsWrap .product-item .product-bottom .product-vendor {
+  color: var(--color_vendor);
+}
+
+.quickSearchResultsWrap .product-item .action {
+  display: none !important
+}
+
+.quickSearchResultsWrap .product-item .product-title {
+  word-break: break-word;
+  max-height: initial;
+  white-space: normal;
+  text-overflow: initial;
+  display: -webkit-box;
+}
+
+.quickSearchResultsWrap .header-search__results .text-center {
+  border-top: 1px solid var(--border_bt_sidebar)
+}
+
+.quickSearchResultsWrap .text-results {
+  display: block;
+  font-weight: 600;
+  color: #3c3c3c;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  padding: 6px 0 4px
+}
+
+.quickSearchResultsWrap .text-results:hover {
+  color: #178dc9
+}
+
+.quickSearchResultsWrap .text-results.header-search__see-more {
+  margin-top: 15px
+}
+
+</style>

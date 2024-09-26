@@ -46,7 +46,10 @@
     },
     "search": {
       "search": "Search",
-      "reset": "Clear search term"
+      "reset": "Clear search term",
+      "no_results": "no results",
+      "heading_results": "Product Results",
+      "view_results": "See all results"
     },
     "cart": {
       "view": "View cart ({{ count }})",
