@@ -143,6 +143,7 @@
         "blocks": {
           "announcement_wHQAmg": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "header_text": "<p>Free Shipping on all orders over $50. <a href=\"/collections\" target=\"_blank\" title=\"All collections\">Shop Now</a></p>",
               "announcement_link": "",
@@ -151,6 +152,7 @@
           },
           "announcement_UWp6dr": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "header_text": "<p>Sale! On the Newsest Collection</p>",
               "announcement_link": "shopify://products/cocoa-butter-baby",
