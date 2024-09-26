@@ -305,11 +305,12 @@
                     <div class="search-sale-container">
                       {% assign shuffledProducts = collections.all.products | shuffle %}
                           {% assign displayedProducts = 0 %}
-                          rr{{ displayedProducts }}rr
+                         
                           {% for product in shuffledProducts %}
+                            dd{{ displayedProducts }}dd
                           {% if product.compare_at_price_max > product.price %}
                               {% assign productCount = 0 %}
-                              dd{{ displayedProducts }}dd
+                            
                               {% for variant in product.variants %}
                               {% assign productCount = productCount | plus: variant.inventory_quantity %}
                               {% endfor %}
