@@ -20,6 +20,78 @@
   
       <!-- Lazy load external script -->
       <script async defer src="https://tools.luckyorange.com/core/lo.js?site-id=8894106a"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          function formatEuroPrices() {
+            // Select all price elements
+            const priceElements = document.querySelectorAll('.product-card__price span');
+  
+            priceElements.forEach(function (element) {
+              let priceText = element.textContent.trim();
+  
+              // Check if the price text starts with the Euro symbol
+              if (priceText.startsWith('€')) {
+                // Remove the Euro symbol temporarily
+                priceText = priceText.substring(1);
+  
+                // Replace the comma with a dot
+                priceText = priceText.replace(',', '.');
+  
+                // Add the Euro symbol back and update the element
+                element.textContent = '€' + priceText;
+              }
+            });
+  
+            pdpPriceElements = document.querySelectorAll('.product-single__prices span');
+  
+            pdpPriceElements.forEach(function (element) {
+              let priceText = element.textContent.trim();
+  
+              // Check if the price text starts with the Euro symbol
+              if (priceText.startsWith('€')) {
+                // Remove the Euro symbol temporarily
+                priceText = priceText.substring(1);
+  
+                // Replace the comma with a dot
+                priceText = priceText.replace(',', '.');
+  
+                // Add the Euro symbol back and update the element
+                element.textContent = '€' + priceText;
+              }
+            });
+  
+            pdpComPriceElements = document.querySelectorAll('.product-single__prices s');
+  
+            pdpComPriceElements.forEach(function (element) {
+              let priceText = element.textContent.trim();
+  
+              // Check if the price text starts with the Euro symbol
+              if (priceText.startsWith('€')) {
+                // Remove the Euro symbol temporarily
+                priceText = priceText.substring(1);
+  
+                // Replace the comma with a dot
+                priceText = priceText.replace(',', '.');
+  
+                // Add the Euro symbol back and update the element
+                element.textContent = '€' + priceText;
+              }
+            });
+          }
+  
+          // Run the formatting function when the page loads
+          formatEuroPrices();
+  
+          // If you're using AJAX to update prices, you might need to run this function again after price updates
+          // For example, if you're using Shopify's Ajax API:
+          if (typeof Shopify !== 'undefined' && Shopify.onItemAdded) {
+            Shopify.onItemAdded = function () {
+              formatEuroPrices();
+              // ... any other code you want to run when an item is added ...
+            };
+          }
+        });
+      </script>
     </head>
   
     <body class="template-{{ request.page_type | handle }} transparent-header">
