@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "innerBanner": {
@@ -17,13 +26,13 @@
       "type": "home-hero-banner",
       "settings": {
         "color_scheme": "scheme-1",
-        "backgroundImage": "shopify:\/\/shop_images\/book-la.png",
+        "backgroundImage": "shopify://shop_images/book-la.png",
         "pretitle": "Welcome to Diggs Publishing",
         "pretitle_color": "#ff6520",
         "title": "WHERE DIVERSE STORIES COME TO LIFE!",
-        "description": "<p>In a word filled with countless stories, Diggs Publishing celebrates the unique tales thaIn a world filled with countless stories, Diggs Publishing celebrates the unique tales that often go untold. Dive into our universe, where each page brings to life characters that truly reflect the world's diverse tapestry.<\/p>",
+        "description": "<p>In a word filled with countless stories, Diggs Publishing celebrates the unique tales thaIn a world filled with countless stories, Diggs Publishing celebrates the unique tales that often go untold. Dive into our universe, where each page brings to life characters that truly reflect the world's diverse tapestry.</p>",
         "buttonText": "Join Now",
-        "buttonLink": "shopify:\/\/pages\/about-us",
+        "buttonLink": "shopify://pages/about-us",
         "bluegradient": true
       }
     },
@@ -33,17 +42,17 @@
         "column_eUCJa7": {
           "type": "column",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/our-vision.svg",
+            "icon": "shopify://shop_images/our-vision.svg",
             "title": "Our Vision",
-            "description": "<p>Every child, regardless of background, deserves to see themselves as the hero of their own story. At Diggs Publishing, we endeavor to make that vision a reality by fostering a rich collection of inclusive and diverse children's literature<\/p>"
+            "description": "<p>Every child, regardless of background, deserves to see themselves as the hero of their own story. At Diggs Publishing, we endeavor to make that vision a reality by fostering a rich collection of inclusive and diverse children's literature</p>"
           }
         },
         "column_qVK7fz": {
           "type": "column",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/our-mission.svg",
+            "icon": "shopify://shop_images/our-mission.svg",
             "title": "Our Mission",
-            "description": "<p>Every child, regardless of background, deserves to see themselves as the hero of their own story. At Diggs Publishing, we endeavor to make that vision a reality by fostering a rich collection of inclusive and diverse children's literature<\/p>"
+            "description": "<p>Every child, regardless of background, deserves to see themselves as the hero of their own story. At Diggs Publishing, we endeavor to make that vision a reality by fostering a rich collection of inclusive and diverse children's literature</p>"
           }
         }
       },
@@ -51,7 +60,8 @@
         "column_eUCJa7",
         "column_qVK7fz"
       ],
-      "settings": {}
+      "settings": {
+      }
     },
     "three_column_card_section_XXU9Pt": {
       "type": "three-column-card-section",
@@ -59,51 +69,51 @@
         "cards_WrVRyg": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Vector1.svg",
+            "icon": "shopify://shop_images/Vector1.svg",
             "title": "Done-for- You Children's Books",
-            "description": "<p>Turn your vision into a heartwarming tale with our collaborative approach, weaving magic through words and illustrations<\/p>",
+            "description": "<p>Turn your vision into a heartwarming tale with our collaborative approach, weaving magic through words and illustrations</p>",
             "btnText": "Read more",
-            "btnLink": "shopify:\/\/pages\/done-for-you-books-2-0"
+            "btnLink": "shopify://pages/done-for-you-books"
           }
         },
         "cards_nAdtpL": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Vector-1.svg",
+            "icon": "shopify://shop_images/Vector-1.svg",
             "title": "BookTranslations",
-            "description": "<p>Bridge cultural gaps and introduce your story to a global stage, one language at a time.<\/p>",
+            "description": "<p>Bridge cultural gaps and introduce your story to a global stage, one language at a time.</p>",
             "btnText": "read more",
-            "btnLink": "shopify:\/\/pages\/book-translation-2-0"
+            "btnLink": "shopify://pages/book-translation"
           }
         },
         "cards_pq7FmH": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Vector-2.svg",
+            "icon": "shopify://shop_images/Vector-2.svg",
             "title": "ComprehensiveBook Review",
-            "description": "<p>Constructive feedback torefine your narrative and enhance its resonance.<\/p>",
+            "description": "<p>Constructive feedback torefine your narrative and enhance its resonance.</p>",
             "btnText": "read more",
-            "btnLink": "shopify:\/\/pages\/book-review-2-0"
+            "btnLink": "shopify://pages/book-review"
           }
         },
         "cards_y3HC6R": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Vector-3.svg",
+            "icon": "shopify://shop_images/Vector-3.svg",
             "title": "Tailored Marketing Plans",
-            "description": "<p>Your story is unique. Your marketing plan should be too. Let us help you find your niche audience.<\/p>",
+            "description": "<p>Your story is unique. Your marketing plan should be too. Let us help you find your niche audience.</p>",
             "btnText": "read more",
-            "btnLink": "shopify:\/\/pages\/publishing-market-2-0"
+            "btnLink": "shopify://pages/tailored-marketing-plans"
           }
         },
         "cards_xWbaVw": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Vector-4.svg",
+            "icon": "shopify://shop_images/Vector-4.svg",
             "title": "Children's Book Mentoring",
-            "description": "<p>Bridge cultural gaps and introduce your story to a global stage, one language at a time.<\/p>",
+            "description": "<p>Bridge cultural gaps and introduce your story to a global stage, one language at a time.</p>",
             "btnText": "Read more",
-            "btnLink": "shopify:\/\/pages\/publishing-mentoring-2-0"
+            "btnLink": "shopify://pages/children-book-mentoring"
           }
         }
       },
@@ -129,7 +139,7 @@
         "logo_kQMRzL": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Kids_Again.png",
+            "image": "shopify://shop_images/Kids_Again.png",
             "link": "",
             "title": "Kids Again"
           }
@@ -137,7 +147,7 @@
         "logo_k4YVLX": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Journey_2_self.png",
+            "image": "shopify://shop_images/Journey_2_self.png",
             "link": "",
             "title": "Journey 2 self"
           }
@@ -145,7 +155,7 @@
         "logo_iXVRUQ": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Signs_of_Hope.png",
+            "image": "shopify://shop_images/Signs_of_Hope.png",
             "link": "",
             "title": "signs of Hope"
           }
@@ -153,7 +163,7 @@
         "logo_QDi4X9": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Room_Redux.png",
+            "image": "shopify://shop_images/Room_Redux.png",
             "link": "",
             "title": "Room Redux"
           }
@@ -161,7 +171,7 @@
         "logo_74VDYq": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Vivid_Bound.png",
+            "image": "shopify://shop_images/Vivid_Bound.png",
             "link": "",
             "title": "Vivid bound"
           }
@@ -187,9 +197,9 @@
       "type": "full-width-content-section",
       "settings": {
         "title": "Dive into Our Book Collection",
-        "content": "<p>Explore our varied collections and take a creative journey through the pages of one-of-a-kind books. There's something for everyone, from children's book lovers to gift seekers.<br\/><\/p>",
+        "content": "<p>Explore our varied collections and take a creative journey through the pages of one-of-a-kind books. There's something for everyone, from children's book lovers to gift seekers.<br/></p>",
         "buttonText": "Shop The Collection",
-        "buttonLink": "shopify:\/\/collections\/books",
+        "buttonLink": "shopify://collections/books",
         "bgColor": "#53aa42"
       }
     },
@@ -197,7 +207,7 @@
       "type": "contact-form-with-text",
       "settings": {
         "title": "Reach out to us",
-        "address": "<p>3558 Round Barn Blvd, Suite\u2028200 Santa Rosa, CA 95403<\/p>",
+        "address": "<p>3558 Round Barn Blvd, Suite 200 Santa Rosa, CA 95403</p>",
         "bgColor": "#53aa42"
       }
     }
