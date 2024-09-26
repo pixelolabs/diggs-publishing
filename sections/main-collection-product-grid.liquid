@@ -1,5 +1,8 @@
 {%- assign limit = 12 -%}
 {% paginate collection.products by limit %}
+
+
+
   <div class="collection" data-section-id="{{ section.id }}" data-section-type="collection-template">
     <div
       class="collection-section"
@@ -125,11 +128,14 @@
         </div>
         <ul class="collection__product-list flex">
           {% for productRelated in collection.products %}
+            
+     {% unless productRelated.tags contains 'publishing-services' %}
             <li class="product-card">
               {% include 'product_Card'  with  productRelated: productRelated , show_price: true, show_tags: true, show_auto_tags: true, show_title: true, show_fav: false, show_secondary_button: true %}
             
             </li>
-           
+          {% endunless %}
+
           {% else %}
             {% comment %}
               Add default products to help with onboarding for collections/all only.
@@ -177,7 +183,9 @@
     </div>
   </div>
   {% for productRelated in collection.products %}
+    {% unless productRelated.tags contains 'publishing-services' %}
       {% render 'product-modal', productData: productRelated %}
+    {% endunless %}
     {% endfor %}
 {% endpaginate %}
 

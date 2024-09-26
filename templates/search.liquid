@@ -87,11 +87,15 @@
     <h2 class="visually-hidden">{{ 'general.search.heading' | t: count: search.results_count }}</h2>
     <ul class="collection__product-list flex-wrap">
       {% for item in search.results %}
-      <li class="grid__item product-card">
         {% if item.object_type == 'product' %}
+        {% unless item.tags contains 'publishing-services' %}
+      <li class="grid__item product-card">
+      
           {% include 'product_Card'  with  productRelated: item , show_price: true, show_tags: true, show_auto_tags: true, show_title: true, show_fav: false, show_secondary_button: true %}
-        
+      </li>
+        {% endunless %}
           {% else %}
+          <li class="grid__item product-card">
         <div class="product-wrapper" title="{{ item.title }}" href="{{ item.url }}" tabindex="0">
           <div class=" hide blog-content" id="blog-content-{{ item.id }}">{{ item.content }}</div>
           {% assign defaultImage = 'dummy-image.webp' | asset_url %}
@@ -131,8 +135,9 @@
               </h4>
           </div>
         </div>
-        {% endif %}
       </li>
+        {% endif %}
+      
       {% endfor %}
     </ul>
   </div>
@@ -152,7 +157,9 @@
 {% if search.performed %}
 {% for item in search.results %}
   {% if item.object_type == 'product' %}
+    {% unless item.tags contains 'publishing-services' %}
       {% render 'product-modal', productData: item %}
+    {% endunless %}
     {% endif %}
   {% endfor %}
   {% endif %}
