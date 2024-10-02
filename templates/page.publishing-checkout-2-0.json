@@ -12,12 +12,12 @@
     "innerBanner": {
       "type": "inner-hero-section",
       "settings": {
-        "image": "shopify:\/\/shop_images\/publishing-mentoring-banner.png",
-        "mobileImage": "shopify:\/\/shop_images\/publishing-mentoring-banner.png",
+        "image": "shopify://shop_images/publishing-mentoring-banner.png",
+        "mobileImage": "shopify://shop_images/publishing-mentoring-banner.png",
         "title": "Children’s Book Mentoring Young Minds",
-        "description": "<p>Every writer begins as a storyteller. Hone your skills and craft stories that leave a mark.<\/p>",
+        "description": "<p>Every writer begins as a storyteller. Hone your skills and craft stories that leave a mark.</p>",
         "buttonText1": "Book Now",
-        "buttonLink1": "shopify:\/\/pages\/ambassador-program",
+        "buttonLink1": "shopify://pages/ambassador-program",
         "button_bg": "green",
         "content_alignment": "left",
         "height": false
@@ -29,7 +29,7 @@
         "cards_pTdtHF": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Done-For-You-Books.svg",
+            "icon": "shopify://shop_images/Done-For-You-Books.svg",
             "title": "Done-For-You-Books",
             "description": ""
           }
@@ -37,7 +37,7 @@
         "cards_zt3aVh": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Book-Publishing.svg",
+            "icon": "shopify://shop_images/Book-Publishing.svg",
             "title": "Book Publishing",
             "description": ""
           }
@@ -45,7 +45,7 @@
         "cards_8dfF6E": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Translations.svg",
+            "icon": "shopify://shop_images/Translations.svg",
             "title": "Spanish Translations",
             "description": ""
           }
@@ -53,7 +53,7 @@
         "cards_PNfgrE": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Mentoring.svg",
+            "icon": "shopify://shop_images/Mentoring.svg",
             "title": "Mentoring",
             "description": ""
           }
@@ -61,7 +61,7 @@
         "cards_bmqQCP": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Book-Reviews.svg",
+            "icon": "shopify://shop_images/Book-Reviews.svg",
             "title": "Book Reviews",
             "description": ""
           }
@@ -69,7 +69,7 @@
         "cards_6yXU6P": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Confidence_Building.svg",
+            "icon": "shopify://shop_images/Confidence_Building.svg",
             "title": "Marketing Plans",
             "description": ""
           }
@@ -97,7 +97,7 @@
         "product_WwykBY": {
           "type": "product",
           "settings": {
-            "product": "body-safety-bundle-i-three-book-set",
+            "product": "body-safety-bundle-i-three-book-set-childrens-books-about-body-safety",
             "cardColor": "#d51f91"
           }
         },
@@ -118,7 +118,7 @@
         "product_H7pVh8": {
           "type": "product",
           "settings": {
-            "product": "body-safety-bundle-i-three-book-set",
+            "product": "body-safety-bundle-i-three-book-set-childrens-books-about-body-safety",
             "cardColor": "#49d1ef"
           }
         }
@@ -132,8 +132,8 @@
       "settings": {
         "heading": "Service option",
         "subTitle": "",
-        "description": "<p>A great book deserves to be read, and with the right marketing strategy, it will be. It's all about connecting with the readers in the right way, the right time.<\/p>",
-        "image": "shopify:\/\/shop_images\/Vector_9f50d425-929a-45de-aa21-cf04700ae8e7.png",
+        "description": "<p>A great book deserves to be read, and with the right marketing strategy, it will be. It's all about connecting with the readers in the right way, the right time.</p>",
+        "image": "shopify://shop_images/Vector_9f50d425-929a-45de-aa21-cf04700ae8e7.png",
         "image_position": "left",
         "wave_color": "blue-wave",
         "paddingtop": 99,
