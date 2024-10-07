@@ -12,12 +12,12 @@
     "innerBanner": {
       "type": "inner-hero-section",
       "settings": {
-        "image": "shopify:\/\/shop_images\/book-translation-banner.png",
-        "mobileImage": "shopify:\/\/shop_images\/book-translation-banner.png",
+        "image": "shopify://shop_images/book-translation-banner.png",
+        "mobileImage": "shopify://shop_images/book-translation-banner.png",
         "title": "BOOK TRANSLATIONS",
-        "description": "<p>Widen Your Horizon: Your Story, Reverberated in Spanish Melodies.<\/p>",
+        "description": "<p>Widen Your Horizon: Your Story, Reverberated in Spanish Melodies.</p>",
         "buttonText1": "Reach your Audience",
-        "buttonLink1": "shopify:\/\/pages\/publishing-checkout",
+        "buttonLink1": "shopify://pages/publishing-checkout-old",
         "button_bg": "pink",
         "content_alignment": "left",
         "height": false
@@ -29,27 +29,27 @@
         "card_zQGxhr": {
           "type": "card",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/touch_of_authenticity.svg",
+            "icon": "shopify://shop_images/touch_of_authenticity.svg",
             "title": "A Touch of Authenticity",
-            "carddescription": "<p>Esther is not just a translator; she's a storyteller. With every project, she goes beyond the words, ensuring the heart and soul of your tale remains as poignant in Spanish as in its original language.<\/p>",
+            "carddescription": "<p>Esther is not just a translator; she's a storyteller. With every project, she goes beyond the words, ensuring the heart and soul of your tale remains as poignant in Spanish as in its original language.</p>",
             "cardColor": "#d51f91"
           }
         },
         "card_j6rKgj": {
           "type": "card",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/profiund_passion.svg",
+            "icon": "shopify://shop_images/profiund_passion.svg",
             "title": "Profound Passion",
-            "carddescription": "<p>Esther's deep love for children's literature means she's<br\/>committed to preserving the nuances, emotions, and subtleties that make your story unique.<\/p>",
+            "carddescription": "<p>Esther's deep love for children's literature means she's<br/>committed to preserving the nuances, emotions, and subtleties that make your story unique.</p>",
             "cardColor": "#81c573"
           }
         },
         "card_4aTiwg": {
           "type": "card",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/perfect_partnership.svg",
+            "icon": "shopify://shop_images/perfect_partnership.svg",
             "title": "The Perfect Partnership",
-            "carddescription": "<p>Working with Esther means collaborating with one of the best. Her commitment, expertise, and innate understanding of the Spanish language guarantee a translation that does justice to your narrative.<\/p>",
+            "carddescription": "<p>Working with Esther means collaborating with one of the best. Her commitment, expertise, and innate understanding of the Spanish language guarantee a translation that does justice to your narrative.</p>",
             "cardColor": "#ff6520"
           }
         }
@@ -63,7 +63,7 @@
         "heading": "Meet Esther Barriga",
         "subTitle": "Our Linguistic Maestro",
         "description": "",
-        "image": "shopify:\/\/shop_images\/esther.jpg",
+        "image": "shopify://shop_images/esther.jpg",
         "bottomdescription": "",
         "btnText": "",
         "btnLink": "",
@@ -79,9 +79,9 @@
       "type": "full-width-content-section",
       "settings": {
         "title": "Cast a Wider Spell with Spanish",
-        "content": "<p>Every captivating story deserves to spread its enchantment. With the depth and richness of the Spanish language, your story has the potential to touch many more hearts.<\/p>",
+        "content": "<p>Every captivating story deserves to spread its enchantment. With the depth and richness of the Spanish language, your story has the potential to touch many more hearts.</p>",
         "buttonText": "Translate Now",
-        "buttonLink": "shopify:\/\/pages\/publishing-checkout",
+        "buttonLink": "shopify://pages/publishing-checkout-old",
         "buttonLinkTarget": false,
         "bgColor": "#c192ff"
       }
@@ -92,9 +92,9 @@
         "cards_8FhKgm": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/A_Vast_Audience.svg",
+            "icon": "shopify://shop_images/A_Vast_Audience.svg",
             "title": "A Vast Audience",
-            "description": "<p>Spanish is among the most spoken languages, connecting you to a plethora of readers, each waiting for their next favorite narrative.<\/p>",
+            "description": "<p>Spanish is among the most spoken languages, connecting you to a plethora of readers, each waiting for their next favorite narrative.</p>",
             "btnText": "",
             "btnLink": ""
           }
@@ -102,9 +102,9 @@
         "cards_FKBC3R": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/The_Rising_Tide.svg",
+            "icon": "shopify://shop_images/The_Rising_Tide.svg",
             "title": "The Rising Tide",
-            "description": "<p>As more and more people embrace bilingualism and the beauty of diverse stories, the appetite for children's literature in Spanish continues to soar.<\/p>",
+            "description": "<p>As more and more people embrace bilingualism and the beauty of diverse stories, the appetite for children's literature in Spanish continues to soar.</p>",
             "btnText": "",
             "btnLink": ""
           }
@@ -112,9 +112,9 @@
         "cards_DgH4jt": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Narrative_Nuances.svg",
+            "icon": "shopify://shop_images/Narrative_Nuances.svg",
             "title": "Narrative Nuances",
-            "description": "<p>Crafting your story in Spanish means infusing it with layers of profound traditions, histories, and emotions intrinsic to the language.soar.<\/p>",
+            "description": "<p>Crafting your story in Spanish means infusing it with layers of profound traditions, histories, and emotions intrinsic to the language.soar.</p>",
             "btnText": "",
             "btnLink": ""
           }
@@ -140,14 +140,14 @@
         "image_4DYBgf": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/estherand.jpg",
+            "image": "shopify://shop_images/estherand.jpg",
             "showVideo": false,
             "video": "",
             "pretitle": "",
             "title": "One Language, Infinite Echoe",
-            "description": "<p>Every entrancing story deserves to spread its magic. And with the depth and richness of the Spanish language, your tale has the potential to leave an indelible mark on many more hearts.<\/p>",
+            "description": "<p>Every entrancing story deserves to spread its magic. And with the depth and richness of the Spanish language, your tale has the potential to leave an indelible mark on many more hearts.</p>",
             "buttonText": "Start Today",
-            "buttonLink": "shopify:\/\/pages\/publishing-checkout",
+            "buttonLink": "shopify://pages/publishing-checkout-old",
             "buttonLinkTarget": false,
             "background_color": "transparent-bg",
             "fontSize": false,
@@ -174,14 +174,14 @@
         "image_c68wgB": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/general_assembly.webp",
+            "image": "shopify://shop_images/general_assembly.webp",
             "showVideo": false,
             "video": "",
             "pretitle": "",
             "title": "Begin a New Narrative Journey",
-            "description": "<p>Think of how many emotions, dreams, and aspirations your story might awaken if told in Spanish.<\/p>",
+            "description": "<p>Think of how many emotions, dreams, and aspirations your story might awaken if told in Spanish.</p>",
             "buttonText": "Let’s Begin",
-            "buttonLink": "shopify:\/\/pages\/publishing-checkout",
+            "buttonLink": "shopify://pages/publishing-checkout-old",
             "buttonLinkTarget": false,
             "background_color": "blue",
             "fontSize": false,

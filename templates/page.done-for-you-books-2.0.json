@@ -7,15 +7,6 @@
 * made to this file may be overwritten.
 * ------------------------------------------------------------
 */
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "innerBanner": {
@@ -26,7 +17,7 @@
         "title": "Done-For-You Children's Book",
         "description": "<p>Turn your vision into a heartwarming tale with our collaborative approach, weaving magic through words and illustrations.<br/></p>",
         "buttonText1": "Order Now",
-        "buttonLink1": "shopify://pages/publishing-checkout",
+        "buttonLink1": "shopify://pages/publishing-checkout-old",
         "button_bg": "green",
         "content_alignment": "left",
         "height": false,
@@ -46,7 +37,7 @@
             "title": "Craft Your Children's Book with Confidence",
             "description": "<p>Understanding the publishing process is essential for turning your manuscript into a published book. Krystaelynne will demystify the world of publishing, guiding you through manuscript development, editing, design, and even marketing strategies. You'll learn the ins and outs of the industry, empowering you to make informed decisions about your work.</p>",
             "buttonText": "Book Here",
-            "buttonLink": "shopify://pages/publishing-checkout",
+            "buttonLink": "shopify://pages/publishing-checkout-old",
             "buttonLinkTarget": false,
             "background_color": "transparent-bg",
             "fontSize": false,
@@ -63,7 +54,7 @@
             "title": "Elevate Your Children's Book with Personalized Mentorship",
             "description": "<p>Are you ready to take your children's book writing to the next level? It all begins with a single step. Make an appointment with Krystaelynne Sanders Diggs for a mentoring session today to realize your full potential as a children's book author. Krystaelynne is here to help you succeed, whether you have a specific project in mind or simply want to improve your skills. Don't pass up this chance to transform your storytelling and leave a lasting impression on young readers. Your journey has just begun.<br/></p>",
             "buttonText": "Book Here",
-            "buttonLink": "shopify://pages/publishing-checkout",
+            "buttonLink": "shopify://pages/publishing-checkout-old",
             "buttonLinkTarget": false,
             "background_color": "transparent-bg",
             "fontSize": false,
@@ -166,7 +157,7 @@
         "image": "shopify://shop_images/children-with-book.png",
         "bottomdescription": "<h3>Let’s create magic together. Connect now.</h3>",
         "btnText": "Book Now",
-        "btnLink": "shopify://pages/publishing-checkout",
+        "btnLink": "shopify://pages/publishing-checkout-old",
         "image_position": "left",
         "wave_color": "transparent-wave",
         "paddingtop": 102,

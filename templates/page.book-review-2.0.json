@@ -7,15 +7,6 @@
 * made to this file may be overwritten.
 * ------------------------------------------------------------
 */
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "innerBanner": {
@@ -26,7 +17,7 @@
         "title": "Comprehensive Book Review",
         "description": "<p>Constructive feedback to refine your narrative and enhancem its resonance.</p>",
         "buttonText1": "Order Your Book Review",
-        "buttonLink1": "shopify://pages/publishing-checkout",
+        "buttonLink1": "shopify://pages/publishing-checkout-old",
         "button_bg": "green",
         "content_alignment": "left",
         "height": false,
@@ -183,7 +174,7 @@
         "title": "Embark on the Road to Excellence",
         "content": "<p>Writing is an art, and like all arts, it thrives on feedback, introspection, and growth. If you're ready to see your children's book manuscript shine in its brightest light, let our team be your beacon. Refine, redefine, and realize your story's full potential. Begin your journey to literary brilliance today.</p>",
         "buttonText": "Shop Now",
-        "buttonLink": "shopify://pages/publishing-checkout",
+        "buttonLink": "shopify://pages/publishing-checkout-old",
         "buttonLinkTarget": false,
         "bgColor": "#81c573"
       }

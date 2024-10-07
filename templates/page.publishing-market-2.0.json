@@ -7,15 +7,6 @@
 * made to this file may be overwritten.
 * ------------------------------------------------------------
 */
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "innerBanner": {
@@ -26,7 +17,7 @@
         "title": "Tailored Marketing Plans",
         "description": "<p>Your story is unique, and your marketing strategy should reflect that. Diggs Publishing recognizes the importance of individuality. Allow us to assist you in discovering and connecting with your niche audience in a way that is as unique as your story.</p>",
         "buttonText1": "Reach your Audience",
-        "buttonLink1": "shopify://pages/publishing-checkout",
+        "buttonLink1": "shopify://pages/publishing-checkout-old",
         "button_bg": "pink",
         "content_alignment": "left",
         "height": false,
@@ -46,7 +37,7 @@
             "title": "Personalized Marketing: Making Your Book Shine",
             "description": "<p>Diggs Publishing believes that each author's journey is unique. That is why we specialize in developing customized marketing strategies that resonate with your unique story and connect you with your target audience. Diggs Publishing is here to tailor a plan that works specifically for you, whether you're launching a new book, looking to expand your readership, or looking for new marketing approaches.</p>",
             "buttonText": "Order Now",
-            "buttonLink": "shopify://pages/publishing-checkout",
+            "buttonLink": "shopify://pages/publishing-checkout-old",
             "buttonLinkTarget": false,
             "background_color": "transparent-bg",
             "fontSize": false,
@@ -150,7 +141,7 @@
             "title": "Your Book, Your Way: Customized Marketing Solutions",
             "description": "<p>A great book deserves to be read, and with the right marketing strategy, it will be. It's all about connecting with the readers in the right way, the right time.</p>",
             "buttonText": "Let’s get Started",
-            "buttonLink": "shopify://pages/publishing-checkout",
+            "buttonLink": "shopify://pages/publishing-checkout-old",
             "buttonLinkTarget": false,
             "background_color": "transparent-bg",
             "fontSize": false,
@@ -177,7 +168,7 @@
         "title": "Discover the Art of Book Marketing",
         "content": "<p>As an author, your journey does not end with the last sentence. In fact, this is only the beginning. Diggs Publishing recognizes the importance of not only crafting compelling stories but also ensuring that they reach the right audience.</p>",
         "buttonText": "Order Now",
-        "buttonLink": "shopify://pages/publishing-checkout",
+        "buttonLink": "shopify://pages/publishing-checkout-old",
         "buttonLinkTarget": false,
         "bgColor": "#d1acff"
       }
