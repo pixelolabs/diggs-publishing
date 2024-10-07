@@ -1,14 +1,23 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "innerBanner": {
       "type": "inner-hero-section",
       "settings": {
-        "image": "shopify:\/\/shop_images\/childrens-book.jpg",
-        "mobileImage": "shopify:\/\/shop_images\/m-childrens-book.jpg",
+        "image": "shopify://shop_images/childrens-book.jpg",
+        "mobileImage": "shopify://shop_images/m-childrens-book.jpg",
         "title": "Done-For-You Children's Book",
-        "description": "<p>Turn your vision into a heartwarming tale with our collaborative approach, weaving magic through words and illustrations.<br\/><\/p>",
+        "description": "<p>Turn your vision into a heartwarming tale with our collaborative approach, weaving magic through words and illustrations.<br/></p>",
         "buttonText1": "Order Now",
-        "buttonLink1": "shopify:\/\/pages\/publishing-checkout",
+        "buttonLink1": "shopify://pages/publishing-checkout-old",
         "button_bg": "green",
         "content_alignment": "left"
       }
@@ -19,14 +28,14 @@
         "image_fdRpnE": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/6a7b283c7eb3cdbc7a746d26b1641195.png",
+            "image": "shopify://shop_images/6a7b283c7eb3cdbc7a746d26b1641195.png",
             "showVideo": false,
             "video": "",
             "pretitle": "",
             "title": "Craft Your Children's Book with Confidence",
-            "description": "<p>Understanding the publishing process is essential for turning your manuscript into a published book. Krystaelynne will demystify the world of publishing, guiding you through manuscript development, editing, design, and even marketing strategies. You'll learn the ins and outs of the industry, empowering you to make informed decisions about your work.<\/p>",
+            "description": "<p>Understanding the publishing process is essential for turning your manuscript into a published book. Krystaelynne will demystify the world of publishing, guiding you through manuscript development, editing, design, and even marketing strategies. You'll learn the ins and outs of the industry, empowering you to make informed decisions about your work.</p>",
             "buttonText": "Book Here",
-            "buttonLink": "shopify:\/\/pages\/publishing-checkout",
+            "buttonLink": "shopify://pages/publishing-checkout-old",
             "background_color": "transparent-bg",
             "fontSize": false,
             "center": false
@@ -35,14 +44,14 @@
         "image_aipNnV": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/138e9e5a56d1f337db94a6d44239a389.png",
+            "image": "shopify://shop_images/138e9e5a56d1f337db94a6d44239a389.png",
             "showVideo": false,
             "video": "",
             "pretitle": "",
             "title": "Elevate Your Children's Book with Personalized Mentorship",
-            "description": "<p>Are you ready to take your children's book writing to the next level? It all begins with a single step. Make an appointment with Krystaelynne Sanders Diggs for a mentoring session today to realize your full potential as a children's book author. Krystaelynne is here to help you succeed, whether you have a specific project in mind or simply want to improve your skills. Don't pass up this chance to transform your storytelling and leave a lasting impression on young readers. Your journey has just begun.<br\/><\/p>",
+            "description": "<p>Are you ready to take your children's book writing to the next level? It all begins with a single step. Make an appointment with Krystaelynne Sanders Diggs for a mentoring session today to realize your full potential as a children's book author. Krystaelynne is here to help you succeed, whether you have a specific project in mind or simply want to improve your skills. Don't pass up this chance to transform your storytelling and leave a lasting impression on young readers. Your journey has just begun.<br/></p>",
             "buttonText": "Book Here",
-            "buttonLink": "shopify:\/\/pages\/publishing-checkout",
+            "buttonLink": "shopify://pages/publishing-checkout-old",
             "background_color": "transparent-bg",
             "fontSize": false,
             "center": false
@@ -69,9 +78,9 @@
         "cards_iFJdxJ": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Vectord.svg",
+            "icon": "shopify://shop_images/Vectord.svg",
             "title": "Co-creative Process",
-            "description": "<p>Join Krystaelynne in a collaborative journey. Share your vision, your passion, and your unique perspectives.<\/p>",
+            "description": "<p>Join Krystaelynne in a collaborative journey. Share your vision, your passion, and your unique perspectives.</p>",
             "btnText": "",
             "btnLink": ""
           }
@@ -79,9 +88,9 @@
         "cards_7ghW6m": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/The_Rising_Tide.svg",
+            "icon": "shopify://shop_images/The_Rising_Tide.svg",
             "title": "Stunning Visuals",
-            "description": "<p>Complementing the engaging narrative, our artists create vivid illustrations that pull young readers into the heart of your story.<\/p>",
+            "description": "<p>Complementing the engaging narrative, our artists create vivid illustrations that pull young readers into the heart of your story.</p>",
             "btnText": "",
             "btnLink": ""
           }
@@ -89,9 +98,9 @@
         "cards_CLYQkK": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Vectorc.svg",
+            "icon": "shopify://shop_images/Vectorc.svg",
             "title": "Editorial Excellence",
-            "description": "<p>Perfecting the tale with finesse and precision to ensure every word, sentence, and paragraph flows seamlessly.<\/p>",
+            "description": "<p>Perfecting the tale with finesse and precision to ensure every word, sentence, and paragraph flows seamlessly.</p>",
             "btnText": "",
             "btnLink": ""
           }
@@ -117,18 +126,18 @@
         "card_PeQX8E": {
           "type": "card",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/touch_of_authenticity.svg",
+            "icon": "shopify://shop_images/touch_of_authenticity.svg",
             "title": "Turn Dreams into Legacy",
-            "carddescription": "<p>Your story deserves to be told. Let Krystaelynne Sanders Diggs and the Diggs Publishing team be the ones to share it with the world. Ready to embark on this literary journey?<\/p>",
+            "carddescription": "<p>Your story deserves to be told. Let Krystaelynne Sanders Diggs and the Diggs Publishing team be the ones to share it with the world. Ready to embark on this literary journey?</p>",
             "cardColor": "#d51f91"
           }
         },
         "card_JfDdEj": {
           "type": "card",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/profiund_passion.svg",
+            "icon": "shopify://shop_images/profiund_passion.svg",
             "title": "Seize the Moment",
-            "carddescription": "<p>Dive into the world of children's literature with us.<\/p>",
+            "carddescription": "<p>Dive into the world of children's literature with us.</p>",
             "cardColor": "#81c573"
           }
         }
@@ -140,11 +149,11 @@
       "settings": {
         "heading": "Why Settle for Ordinary?",
         "subTitle": "",
-        "description": "<p>In the vast world of children's literature, make your mark with a story that stands out – a story that resonates, educates, and fascinates. With Krystaelynne and the Diggs Publishing team by your side, every page turned will be an unforgettable adventure for young readers.<\/p>",
-        "image": "shopify:\/\/shop_images\/children-with-book.png",
-        "bottomdescription": "<h3>Let’s create magic together. Connect now.<\/h3>",
+        "description": "<p>In the vast world of children's literature, make your mark with a story that stands out – a story that resonates, educates, and fascinates. With Krystaelynne and the Diggs Publishing team by your side, every page turned will be an unforgettable adventure for young readers.</p>",
+        "image": "shopify://shop_images/children-with-book.png",
+        "bottomdescription": "<h3>Let’s create magic together. Connect now.</h3>",
         "btnText": "Book Your Session Now",
-        "btnLink": "shopify:\/\/pages\/publishing-checkout",
+        "btnLink": "shopify://pages/publishing-checkout-old",
         "image_position": "left",
         "wave_color": "transparent-wave",
         "paddingtop": 102,
@@ -157,7 +166,7 @@
       "type": "contact-form-with-text",
       "settings": {
         "title": "Reach out to us",
-        "address": "<p>3558 Round Barn Blvd, Suite\u2028200 Santa Rosa, CA 95403<\/p>",
+        "address": "<p>3558 Round Barn Blvd, Suite 200 Santa Rosa, CA 95403</p>",
         "bgColor": ""
       }
     }

@@ -12,12 +12,12 @@
     "innerBanner": {
       "type": "inner-hero-section",
       "settings": {
-        "image": "shopify:\/\/shop_images\/book-review.jpg",
-        "mobileImage": "shopify:\/\/shop_images\/m-book-review.jpg",
+        "image": "shopify://shop_images/book-review.jpg",
+        "mobileImage": "shopify://shop_images/m-book-review.jpg",
         "title": "Comprehensive Book Review",
-        "description": "<p>Constructive feedback to refine your narrative and enhancem its resonance.<\/p>",
+        "description": "<p>Constructive feedback to refine your narrative and enhancem its resonance.</p>",
         "buttonText1": "Order Your Book Review",
-        "buttonLink1": "shopify:\/\/pages\/about-us",
+        "buttonLink1": "shopify://pages/about-us",
         "button_bg": "green",
         "content_alignment": "left"
       }
@@ -28,14 +28,14 @@
         "image_m3MNaG": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/e0a2c48e7e904d600b190ec863aea9c3.png",
+            "image": "shopify://shop_images/e0a2c48e7e904d600b190ec863aea9c3.png",
             "showVideo": false,
             "video": "",
             "pretitle": "",
             "title": "Turning Your Vision into a Masterpiece",
-            "description": "<p>Every author dreams of sharing their perfect story with the world. However, every masterpiece goes through stages of refinement and growth. It's this journey of perfection that truly shapes a story's soul.<\/p>",
+            "description": "<p>Every author dreams of sharing their perfect story with the world. However, every masterpiece goes through stages of refinement and growth. It's this journey of perfection that truly shapes a story's soul.</p>",
             "buttonText": "Order Now",
-            "buttonLink": "shopify:\/\/pages\/about-me",
+            "buttonLink": "shopify://pages/about-me",
             "background_color": "transparent-bg",
             "fontSize": false,
             "center": false
@@ -61,9 +61,9 @@
         "cards_rdkkfk": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Vector_1de0518a-01dc-4248-8ea4-fc1edc16b90a.svg",
+            "icon": "shopify://shop_images/Vector_1de0518a-01dc-4248-8ea4-fc1edc16b90a.svg",
             "title": "A Passionate Storyteller",
-            "description": "<p>Our team isn't just comprised of reviewers. We are creators, storytellers, and most importantly, lovers of children's narratives. Our insights come from a place of passion, expertise, and genuine care for nurturing stories.<\/p>",
+            "description": "<p>Our team isn't just comprised of reviewers. We are creators, storytellers, and most importantly, lovers of children's narratives. Our insights come from a place of passion, expertise, and genuine care for nurturing stories.</p>",
             "btnText": "",
             "btnLink": ""
           }
@@ -71,9 +71,9 @@
         "cards_QJ7NgT": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Vector.svg",
+            "icon": "shopify://shop_images/Vector.svg",
             "title": "Personalized Review",
-            "description": "<p>With us, your manuscript isn't just another book. We delve deep, understanding your vision, appreciating your voice, and offering feedback that aligns with your story's essence.<\/p>",
+            "description": "<p>With us, your manuscript isn't just another book. We delve deep, understanding your vision, appreciating your voice, and offering feedback that aligns with your story's essence.</p>",
             "btnText": "",
             "btnLink": ""
           }
@@ -81,9 +81,9 @@
         "cards_GANVDg": {
           "type": "cards",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Vector_f7e31356-c39e-4c9d-a55b-31336bdc61dd.svg",
+            "icon": "shopify://shop_images/Vector_f7e31356-c39e-4c9d-a55b-31336bdc61dd.svg",
             "title": "Detailed Feedback",
-            "description": "<p>Beyond just a review, expect comprehensive insights. From thematic depths, narrative arcs, to the intricacies of character dynamics, we will guide you through every detail.<\/p>",
+            "description": "<p>Beyond just a review, expect comprehensive insights. From thematic depths, narrative arcs, to the intricacies of character dynamics, we will guide you through every detail.</p>",
             "btnText": "",
             "btnLink": ""
           }
@@ -109,36 +109,36 @@
         "card_T8Gy8Q": {
           "type": "card",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/touch_of_authenticity.svg",
+            "icon": "shopify://shop_images/touch_of_authenticity.svg",
             "title": "Narrative Nuances",
-            "carddescription": "<p>Crafting a story that flows seamlessly, captivating young readers from the first page to the last, requires meticulous attention. Our keen eyes ensure your tale maintains that mesmerizing rhythm.<\/p>",
+            "carddescription": "<p>Crafting a story that flows seamlessly, captivating young readers from the first page to the last, requires meticulous attention. Our keen eyes ensure your tale maintains that mesmerizing rhythm.</p>",
             "cardColor": "#d51f91"
           }
         },
         "card_cdyNbJ": {
           "type": "card",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/profiund_passion.svg",
+            "icon": "shopify://shop_images/profiund_passion.svg",
             "title": "Creating Memorable Characters",
-            "carddescription": "<p>Every child deserves a hero they can root for,relate to, and remember. Your characters will be assessed for depth, growth, and their ability to resonate with young hearts.<\/p>",
+            "carddescription": "<p>Every child deserves a hero they can root for,relate to, and remember. Your characters will be assessed for depth, growth, and their ability to resonate with young hearts.</p>",
             "cardColor": "#81c573"
           }
         },
         "card_nqW646": {
           "type": "card",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/perfect_partnership.svg",
+            "icon": "shopify://shop_images/perfect_partnership.svg",
             "title": "Constructive Critique",
-            "carddescription": "<p>Feedback isn't just about pointing out flaws. It's about celebrating what works, understanding what doesn't, and envisioning how it can be better. Every suggestion aims to refine, reshape, and rejuvenate your narrative.<\/p>",
+            "carddescription": "<p>Feedback isn't just about pointing out flaws. It's about celebrating what works, understanding what doesn't, and envisioning how it can be better. Every suggestion aims to refine, reshape, and rejuvenate your narrative.</p>",
             "cardColor": "#ff6520"
           }
         },
         "card_jhdxpG": {
           "type": "card",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/perfect_partnership.svg",
+            "icon": "shopify://shop_images/perfect_partnership.svg",
             "title": "Empowering Your Voice",
-            "carddescription": "<p>Each story has a unique voice, a distinct echo. Our goal is to amplify that voice, ensuring it reaches its full potential and resonates with its intended audience.<\/p>",
+            "carddescription": "<p>Each story has a unique voice, a distinct echo. Our goal is to amplify that voice, ensuring it reaches its full potential and resonates with its intended audience.</p>",
             "cardColor": "#49d1ef"
           }
         }
@@ -153,7 +153,7 @@
         "heading": "The Journey to Perfection",
         "subTitle": "",
         "description": "",
-        "image": "shopify:\/\/shop_images\/Vector_9f50d425-929a-45de-aa21-cf04700ae8e7.png",
+        "image": "shopify://shop_images/Vector_9f50d425-929a-45de-aa21-cf04700ae8e7.png",
         "bottomdescription": "",
         "btnText": "",
         "btnLink": "",
@@ -169,9 +169,9 @@
       "type": "full-width-content-section",
       "settings": {
         "title": "Embark on the Road to Excellence",
-        "content": "<p>Writing is an art, and like all arts, it thrives on feedback, introspection, and growth. If you're ready to see your children's book manuscript shine in its brightest light, let our team be your beacon. Refine, redefine, and realize your story's full potential. Begin your journey to literary brilliance today.<\/p>",
+        "content": "<p>Writing is an art, and like all arts, it thrives on feedback, introspection, and growth. If you're ready to see your children's book manuscript shine in its brightest light, let our team be your beacon. Refine, redefine, and realize your story's full potential. Begin your journey to literary brilliance today.</p>",
         "buttonText": "Shop Now",
-        "buttonLink": "shopify:\/\/pages\/publishing-checkout",
+        "buttonLink": "shopify://pages/publishing-checkout-old",
         "bgColor": "#81c573"
       }
     }
