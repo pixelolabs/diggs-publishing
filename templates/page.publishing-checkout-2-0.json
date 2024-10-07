@@ -20,7 +20,8 @@
         "buttonLink1": "shopify://pages/ambassador-program",
         "button_bg": "green",
         "content_alignment": "left",
-        "height": false
+        "height": false,
+        "section_class": ""
       }
     },
     "four_column_icon_content_section_jXnQbQ": {
@@ -94,40 +95,40 @@
     "half_image_half_product_section_DxxwEF": {
       "type": "half-image-half-product-section",
       "blocks": {
-        "product_WwykBY": {
+        "product_bA7N6K": {
           "type": "product",
           "settings": {
-            "product": "body-safety-bundle-i-three-book-set-childrens-books-about-body-safety",
-            "cardColor": "#d51f91"
+            "product": "done-for-you-childrens-books-24-pages",
+            "cardColor": ""
           }
         },
-        "product_jqebQx": {
+        "product_UKNMUi": {
           "type": "product",
           "settings": {
-            "product": "60-minutes-consultation",
-            "cardColor": "#81c573"
+            "product": "tailored-marketing-plans",
+            "cardColor": ""
           }
         },
-        "product_fxg8Cr": {
+        "product_4w43Gp": {
           "type": "product",
           "settings": {
-            "product": "backpack",
-            "cardColor": "#ff6520"
+            "product": "book-translations",
+            "cardColor": ""
           }
         },
-        "product_H7pVh8": {
+        "product_gGmEkC": {
           "type": "product",
           "settings": {
-            "product": "body-safety-bundle-i-three-book-set-childrens-books-about-body-safety",
-            "cardColor": "#49d1ef"
+            "product": "comprehensive-book-review-1",
+            "cardColor": ""
           }
         }
       },
       "block_order": [
-        "product_WwykBY",
-        "product_jqebQx",
-        "product_fxg8Cr",
-        "product_H7pVh8"
+        "product_bA7N6K",
+        "product_UKNMUi",
+        "product_4w43Gp",
+        "product_gGmEkC"
       ],
       "settings": {
         "heading": "Service option",
