@@ -74,22 +74,6 @@
     "half_image_half_content_gL8kEy": {
       "type": "half-image-half-content",
       "blocks": {
-        "image_RE3W6R": {
-          "type": "image",
-          "settings": {
-            "showVideo": false,
-            "video": "",
-            "pretitle": "",
-            "title": "",
-            "description": "",
-            "buttonText": "",
-            "buttonLink": "",
-            "buttonLinkTarget": false,
-            "background_color": "blue",
-            "fontSize": false,
-            "center": false
-          }
-        },
         "image_bnffq7": {
           "type": "image",
           "settings": {
@@ -143,7 +127,6 @@
         }
       },
       "block_order": [
-        "image_RE3W6R",
         "image_bnffq7",
         "image_z8xpBV",
         "image_Lzqtrz"
