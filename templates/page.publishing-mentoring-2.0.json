@@ -1,21 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "innerBanner": {
@@ -23,7 +14,7 @@
       "settings": {
         "image": "shopify://shop_images/publishing-mentoring-banner.png",
         "mobileImage": "shopify://shop_images/publishing-mentoring-banner.png",
-        "title": "Children’s Book Mentoring Young Minds",
+        "title": "Children’s Book Mentoring",
         "description": "<p>Every writer begins as a storyteller. Hone your skills and craft stories that leave a mark.</p>",
         "buttonText1": "Book Now",
         "buttonLink1": "https://calendly.com/authorksd/1hour",
