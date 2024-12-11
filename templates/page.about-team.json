@@ -8,15 +8,15 @@
  * ------------------------------------------------------------
  */
 {
-    "sections": {
-      "innerBanner": {
-        "type": "inner-hero-section",
-        "settings": {
-         
-        }
+  "sections": {
+    "innerBanner": {
+      "type": "inner-hero-section",
+      "settings": {
+        
       }
-    },
-    "order": [
-      "innerBanner"
-    ]
-  }
+    }
+  },
+  "order": [
+    "innerBanner"
+  ]
+}
