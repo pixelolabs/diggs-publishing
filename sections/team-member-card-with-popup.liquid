@@ -69,6 +69,11 @@
                     <div class="popup-content" style="border: 1px solid {{ block.settings.borderColor }};">
                         <span class="close-popup">&times;</span>
                         <div class="popup-text-content">
+                        {% if block.settings.teamimage != blank %}
+                            <div class="team-image">
+                            {{ block.settings.teamimage | image_url: width: 1000 | image_tag: loading: 'lazy', widths: '1000x1000' }}
+                            </div>
+                        {% endif %}
                         {% if block.settings.title != blank or block.settings.carddescription != blank %}
                             <div class="content">
                             {% if block.settings.title != blank %}
@@ -77,11 +82,6 @@
                             {% if block.settings.designation != blank %}
                                 <p class="designation">{{ block.settings.designation }}</p>
                             {% endif %}
-                            {% if block.settings.teamimage != blank %}
-                            <div class="team-image">
-                            {{ block.settings.teamimage | image_url: width: 1000 | image_tag: loading: 'lazy', widths: '1000x1000' }}
-                            </div>
-                        {% endif %}
                             {% if block.settings.carddescription != blank %}
                                 <div class="text-wrap">
                                 {{ block.settings.carddescription }}
