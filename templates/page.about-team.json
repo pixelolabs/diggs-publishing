@@ -73,7 +73,7 @@
         "image_position": "left",
         "wave_color": "blue-wave",
         "paddingtop": 72,
-        "paddingtopmobile": 0,
+        "paddingtopmobile": 40,
         "paddingbottom": 201,
         "paddingbottomMobile": 0
       }
