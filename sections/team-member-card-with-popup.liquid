@@ -42,7 +42,7 @@
           {% if section.blocks.size > 0 %}
             <ul class="cards-rows-outer">
               {% for block in section.blocks %}
-                <li class="cards flex">
+                <li class="cards flex" id="block-{{ block.id }}">
                   <div class="background-div" style="border: 2px solid {{ block.settings.borderColor }};"></div>
                   {% if block.settings.teamimage != blank %}
                     <div class="icon-section">
@@ -114,31 +114,29 @@
 
 <script>
 $(document).ready(function () {
-  // Cache elements
-  const $readMoreBtn = $(".read-more-btn");
-  const $popupContainer = $(".popup-container");
-  const $popupContent = $(".popup-text-content");
-  const $closePopup = $(".close-popup");
+  // Attach event handlers to each block
+  $(".cards").each(function () {
+    const $block = $(this); // The specific block
+    const $readMoreBtn = $block.find(".read-more-btn");
+    const $popupContainer = $block.find(".popup-container");
+    const $closePopup = $block.find(".close-popup");
 
-  // Set the full content into the popup
-  const fullContent = $(".text-content").html();
-  $popupContent.html(fullContent);
+    // Show the popup for the specific block
+    $readMoreBtn.on("click", function () {
+      $popupContainer.fadeIn(); // Open the popup
+    });
 
-  // Show the popup when "Read More" is clicked
-  $readMoreBtn.on("click", function () {
-    $popupContainer.fadeIn().css("display","flex");
-  });
+    // Close the popup for the specific block
+    $closePopup.on("click", function () {
+      $popupContainer.fadeOut(); // Close the popup
+    });
 
-  // Close the popup when the close button is clicked
-  $closePopup.on("click", function () {
-    $popupContainer.fadeOut();
-  });
-
-  // Close the popup when clicking outside the popup content
-  $popupContainer.on("click", function (e) {
-    if ($(e.target).is($popupContainer)) {
-      $popupContainer.fadeOut();
-    }
+    // Close the popup when clicking outside the popup content
+    $popupContainer.on("click", function (e) {
+      if ($(e.target).is($popupContainer)) {
+        $popupContainer.fadeOut(); // Close the popup
+      }
+    });
   });
 });
 </script>
