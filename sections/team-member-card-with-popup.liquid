@@ -50,7 +50,7 @@
                   <div class="background-div" style="border: 2px solid {{ block.settings.borderColor }};"></div>
                   {% if block.settings.teamimage != blank %}
                     <div class="icon-section">
-                      {{ block.settings.teamimage | image_url: width: 100 | image_tag: loading: 'lazy', widths: '100x100' }}
+                      {{ block.settings.teamimage | image_url: master | image_tag: loading: 'lazy', widths: '100x100' }}
                     </div>
                   {% endif %}
                   {% if block.settings.title != blank or block.settings.carddescription != blank %}
