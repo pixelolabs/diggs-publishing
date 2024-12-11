@@ -44,9 +44,9 @@
             <ul class="cards-rows-outer">
               {% for block in section.blocks %}
                 <li class="cards flex">
-                  <div class="background-div" style="background:{{ block.settings.cardColor }};"></div>
+                  <div class="background-div" style="border-color:{{ block.settings.borderColor }};"></div>
                   {% if block.settings.teamimage != blank %}
-                    <div class="icon-section" style="background:{{ block.settings.cardColor }};">
+                    <div class="icon-section">
                       {{ block.settings.teamimage | image_url: width: 100 | image_tag: loading: 'lazy', widths: '100x100' }}
                     </div>
                   {% endif %}
@@ -253,7 +253,7 @@
 
         {
           "type": "color",
-          "id": "cardColor",
+          "id": "borderColor",
           "label": "Cards Border Colors"
         }
       ]
