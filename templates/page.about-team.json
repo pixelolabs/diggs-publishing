@@ -24,6 +24,20 @@
     },
     "team_member_card_with_popup_cntEBD": {
       "type": "team-member-card-with-popup",
+      "blocks": {
+        "card_6cniYX": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify://shop_images/author_visits_readings.webp",
+            "title": "Sara Johnson",
+            "carddescription": "<p>Sarah Johnson is our Creative Director at Diggs Publishing, bringing over a decade of experience in children's literature and educational content. With a passion for storytelling and a keen eye for design, Sarah plays a pivotal role in shaping our publications to be both engaging and impactful. Her innovative ideas and collaborative spirit inspire the team to push creative boundaries while ensuring that our mission of empowering children through literature remains at the forefront. Outside of work, Sarah enjoys hiking and volunteering at local literacy programs, further demonstrating her commitment to fostering a love of reading in young minds.</p>",
+            "cardColor": "#d51f91"
+          }
+        }
+      },
+      "block_order": [
+        "card_6cniYX"
+      ],
       "settings": {
         "heading": "Meet out fully remote teamdedicated to helping your business",
         "subTitle": "",
