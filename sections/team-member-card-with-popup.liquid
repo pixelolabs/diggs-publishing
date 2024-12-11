@@ -3,7 +3,9 @@
       padding-top: {{ section.settings.paddingtop | round: 0 }}px;
       padding-bottom: {{ section.settings.paddingbottom | round: 0 }}px;
     }
-
+    .background-div{
+        border-color:{{ block.settings.borderColor }};
+    }
 
     @media screen and (max-width: 768px) {
     .section-{{ section.id }}-padding{
@@ -44,7 +46,7 @@
             <ul class="cards-rows-outer">
               {% for block in section.blocks %}
                 <li class="cards flex">
-                  <div class="background-div" style="border-color:{{ block.settings.borderColor }};"></div>
+                  <div class="background-div"></div>
                   {% if block.settings.teamimage != blank %}
                     <div class="icon-section">
                       {{ block.settings.teamimage | image_url: width: 100 | image_tag: loading: 'lazy', widths: '100x100' }}
