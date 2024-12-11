@@ -12,6 +12,8 @@
     "innerBanner": {
       "type": "inner-hero-section",
       "settings": {
+        "image": "shopify://shop_images/About_Teams_Banner.webp",
+        "mobileImage": "shopify://shop_images/About_Teams_Banner.webp",
         "title": "About Teams",
         "description": "<p>Every writer starts as a storyteller. Explore the journey of author Krystaelynne Sanders Diggs, dedicated to empowering young minds through the magic of storytelling.</p>",
         "buttonText1": "",
