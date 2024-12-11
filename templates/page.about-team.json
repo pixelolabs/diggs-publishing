@@ -8,16 +8,23 @@
  * ------------------------------------------------------------
  */
 {
-    "sections": {
-      "innerBanner": {
-        "type": "inner-hero-section",
-        "settings": {
-         
-        }
+  "sections": {
+    "innerBanner": {
+      "type": "inner-hero-section",
+      "settings": {
+        "image": "shopify://shop_images/school_visit_banner-5.jpg",
+        "title": "About Teams",
+        "description": "<p>Every writer starts as a storyteller. Explore the journey of author Krystaelynne Sanders Diggs, dedicated to empowering young minds through the magic of storytelling.</p>",
+        "buttonText1": "",
+        "buttonLink1": "",
+        "button_bg": "pink",
+        "content_alignment": "left",
+        "height": false,
+        "section_class": "about-team-banner"
       }
-    },
-    "order": [
-      "innerBanner"
-    ]
-  }
-  
+    }
+  },
+  "order": [
+    "innerBanner"
+  ]
+}
