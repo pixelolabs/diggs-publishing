@@ -70,7 +70,7 @@
                         <span class="close-popup">&times;</span>
                         <div class="popup-text-content">
                         {% if block.settings.teamimage != blank %}
-                            <div class="icon-section">
+                            <div class="team-image">
                             {{ block.settings.teamimage | image_url: width: 1000 | image_tag: loading: 'lazy', widths: '1000x1000' }}
                             </div>
                         {% endif %}
