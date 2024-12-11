@@ -67,7 +67,7 @@
                   {% endif %}
                   <div class="popup-container hidden">
                     <div class="popup-content" style="border: 1px solid {{ block.settings.borderColor }};">
-                        <span class="close-popup">&times;</span>
+                        <span class="close-popup">{% render 'icon-close-circle' %}</span>
                         <div class="popup-text-content">
                         {% if block.settings.teamimage != blank %}
                             <div class="team-image">
