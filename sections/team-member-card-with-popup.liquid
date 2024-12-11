@@ -117,6 +117,37 @@
   </div>
 {% endif %}
 
+<script>
+$(document).ready(function () {
+  // Cache elements
+  const $readMoreBtn = $(".read-more-btn");
+  const $popupContainer = $(".popup-container");
+  const $popupContent = $(".popup-text-content");
+  const $closePopup = $(".close-popup");
+
+  // Set the full content into the popup
+  const fullContent = $(".text-content").html();
+  $popupContent.html(fullContent);
+
+  // Show the popup when "Read More" is clicked
+  $readMoreBtn.on("click", function () {
+    $popupContainer.fadeIn();
+  });
+
+  // Close the popup when the close button is clicked
+  $closePopup.on("click", function () {
+    $popupContainer.fadeOut();
+  });
+
+  // Close the popup when clicking outside the popup content
+  $popupContainer.on("click", function (e) {
+    if ($(e.target).is($popupContainer)) {
+      $popupContainer.fadeOut();
+    }
+  });
+});
+</script>
+
 {% schema %}
 {
   "name": "Team Cards with Popup",
