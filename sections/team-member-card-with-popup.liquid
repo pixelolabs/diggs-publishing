@@ -45,9 +45,9 @@
               {% for block in section.blocks %}
                 <li class="cards flex">
                   <div class="background-div" style="background:{{ block.settings.cardColor }};"></div>
-                  {% if block.settings.icon != blank %}
+                  {% if block.settings.teamimage != blank %}
                     <div class="icon-section" style="background:{{ block.settings.cardColor }};">
-                      {{ block.settings.icon | image_url: width: 100 | image_tag: loading: 'lazy', widths: '100x100' }}
+                      {{ block.settings.teamimage | image_url: width: 100 | image_tag: loading: 'lazy', widths: '100x100' }}
                     </div>
                   {% endif %}
                   {% if block.settings.title != blank or block.settings.carddescription != blank %}
@@ -225,9 +225,9 @@
       "settings": [
         {
           "type": "image_picker",
-          "id": "icon",
-          "label": "Icon",
-          "info": "100 x 100px Recommended"
+          "id": "teamimage",
+          "label": "Team Image",
+          "info": "308 x 400px Recommended"
         },
 
         {
