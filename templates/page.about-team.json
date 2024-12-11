@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "innerBanner": {
+      "type": "inner-hero-section",
+      "settings": {
+        
+      }
+    }
+  },
+  "order": [
+    "innerBanner"
+  ]
+}
