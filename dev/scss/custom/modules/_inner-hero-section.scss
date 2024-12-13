@@ -215,6 +215,9 @@
   // about team page orange gradient overlay 
 
   &.orange-gradient-overlay{
+    &:before{
+      z-index: 4;
+    }
     .image-section::before{
       content: '';
       position: absolute;
@@ -225,7 +228,7 @@
       background: linear-gradient(270deg, rgba(255, 101, 32, 0) 1.22%, rgba(255, 101, 32, 0.75) 80.83%);
       background-blend-mode: overlay;
       z-index: 2;
-  }
+    }
   }
 }
 // }
