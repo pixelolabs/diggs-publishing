@@ -27,17 +27,6 @@
         {% endif %}
       </div>
       <div class="half-image-half-cards flex">
-        {% if section.settings.image != blank %}
-          <div class="image-wrapper">
-            <div
-              class="image-section"
-              data-aos="fade-up"
-              data-aos-duration="2000"
-            >
-              {{ section.settings.image | image_url: width: 1262 | image_tag: loading: 'lazy', widths: '1262x1000' }}
-            </div>
-          </div>
-        {% endif %}
         <div class="card-rows-content">
           {% if section.blocks.size > 0 %}
             <ul class="cards-rows-outer">
@@ -96,16 +85,7 @@
               {% endfor %}
             </ul>
           {% endif %}
-          {% if section.settings.bottomdescription != blank %}
-            <div class="bottom-description">
-              {{ section.settings.bottomdescription }}
-            </div>
-          {% endif %}
-          {% if section.settings.btnText != blank and section.settings.btnLink != blank %}
-            <a class="btn--primary" href="{{ section.settings.btnLink }}" title="{{ section.settings.btnText }}">
-              {{- section.settings.btnText -}}
-            </a>
-          {% endif %}
+          
         </div>
       </div>
     </div>
