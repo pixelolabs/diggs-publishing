@@ -144,12 +144,19 @@
       .content {
         margin: 0 auto;
         text-align: center;
+        p{
+          margin-left: auto;
+          margin-right: auto;
+        }
       }
     }
     &.right--align {
       .content {
         text-align: right;
         margin-left: auto;
+        p{
+          margin-left: auto;
+        }
       }
     }
   }
@@ -203,6 +210,22 @@
     padding-top: 100px !important;
     padding-bottom: 100px !important;
     min-height: 340px;
+  }
+
+  // about team page orange gradient overlay 
+
+  &.orange-gradient-overlay{
+    .image-section::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(270deg, rgba(255, 101, 32, 0) 1.22%, rgba(255, 101, 32, 0.75) 80.83%);
+      background-blend-mode: overlay;
+      z-index: 2;
+  }
   }
 }
 // }

@@ -13,7 +13,7 @@
   }
 {%- endstyle -%}
 {% if section.settings.heading != blank %}
-  <div class="team-cards-with-popup section-{{ section.id }}-padding  {% if section.settings.image_position == 'right' %} section-row-right {% endif %}{% if section.settings.wave_color == 'yellow-wave' %} yellow-wave{% elsif section.settings.wave_color == 'transparent-wave' %} transparent-wave {% elsif section.settings.wave_color == 'blue-wave' %} blue-wave{% else %} no-wave {% endif %}">
+  <div class="team-cards-with-popup section-{{ section.id }}-padding ">
     <div class="container-1260">
       <div class="top-header">
         <h2>{{ section.settings.heading }}</h2>
@@ -27,17 +27,6 @@
         {% endif %}
       </div>
       <div class="half-image-half-cards flex">
-        {% if section.settings.image != blank %}
-          <div class="image-wrapper">
-            <div
-              class="image-section"
-              data-aos="fade-up"
-              data-aos-duration="2000"
-            >
-              {{ section.settings.image | image_url: width: 1262 | image_tag: loading: 'lazy', widths: '1262x1000' }}
-            </div>
-          </div>
-        {% endif %}
         <div class="card-rows-content">
           {% if section.blocks.size > 0 %}
             <ul class="cards-rows-outer">
@@ -96,19 +85,11 @@
               {% endfor %}
             </ul>
           {% endif %}
-          {% if section.settings.bottomdescription != blank %}
-            <div class="bottom-description">
-              {{ section.settings.bottomdescription }}
-            </div>
-          {% endif %}
-          {% if section.settings.btnText != blank and section.settings.btnLink != blank %}
-            <a class="btn--primary" href="{{ section.settings.btnLink }}" title="{{ section.settings.btnText }}">
-              {{- section.settings.btnText -}}
-            </a>
-          {% endif %}
+          
         </div>
       </div>
     </div>
+    <div class="team-cards-with-popup-after"></div>
   </div>
 {% endif %}
 
@@ -155,84 +136,11 @@ $(document).ready(function () {
       "content": "Top Header Content"
     },
     {
-      "type": "text",
-      "id": "subTitle",
-      "label": "Sub Title"
-    },
-    {
       "type": "richtext",
       "id": "description",
       "label": "Description"
     },
-
-    {
-      "type": "image_picker",
-      "id": "image",
-      "label": "Image",
-      "info": "1262 x 1000px Recommended"
-    },
-    {
-      "type": "header",
-      "content": "Bottom Content"
-    },
-    {
-      "type": "richtext",
-      "id": "bottomdescription",
-      "label": "Bottom Description"
-    },
-    {
-      "type": "text",
-      "id": "btnText",
-      "label": "Button Text"
-    },
-    {
-      "type": "url",
-      "id": "btnLink",
-      "label": "Button Link"
-    },
-
-    {
-      "type": "header",
-      "content": "Extra Settings"
-    },
-    {
-      "type": "select",
-      "id": "image_position",
-      "label": "Image Position Left or Right",
-      "options": [
-        {
-          "value": "right",
-          "label": "Right"
-        },
-        {
-          "value": "left",
-          "label": "Left"
-        }
-      ],
-      "default": "left"
-    },
-
-    {
-      "type": "select",
-      "id": "wave_color",
-      "label": "Wave color",
-      "options": [
-        {
-          "value": "transparent-wave",
-          "label": "Transparent"
-        },
-        {
-          "value": "yellow-wave",
-          "label": "Yellow"
-        },
-        {
-          "value": "blue-wave",
-          "label": "Blue"
-        }
-      ],
-      "default": "blue-wave"
-    },
-    {
+   {
       "type": "header",
       "content": "Top/Bottom Section Space"
     },
@@ -285,7 +193,7 @@ $(document).ready(function () {
         {
           "type": "image_picker",
           "id": "teamimage",
-          "label": "Team Image",
+          "label": "Image",
           "info": "400 x 400px Recommended"
         },
 
