@@ -19,7 +19,7 @@
         "buttonText1": "",
         "buttonLink1": "",
         "button_bg": "pink",
-        "content_alignment": "left",
+        "content_alignment": "center",
         "height": false,
         "section_class": "orange-gradient-overlay"
       }
