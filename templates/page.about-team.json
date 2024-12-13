@@ -12,8 +12,8 @@
     "innerBanner": {
       "type": "inner-hero-section",
       "settings": {
-        "image": "shopify://shop_images/About_Teams_Banner.webp",
-        "mobileImage": "shopify://shop_images/About_Teams_Banner.webp",
+        "image": "shopify://shop_images/About_Teams_Banner_1.webp",
+        "mobileImage": "shopify://shop_images/About_Teams_Banner_1.webp",
         "title": "About Teams",
         "description": "<p>Every writer starts as a storyteller. Explore the journey of author Krystaelynne Sanders Diggs, dedicated to empowering young minds through the magic of storytelling.</p>",
         "buttonText1": "",
@@ -21,7 +21,7 @@
         "button_bg": "pink",
         "content_alignment": "left",
         "height": false,
-        "section_class": ""
+        "section_class": "orange-gradient-overlay"
       }
     },
     "team_member_card_with_popup_cntEBD": {
