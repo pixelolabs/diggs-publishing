@@ -13,7 +13,7 @@
   }
 {%- endstyle -%}
 {% if section.settings.heading != blank %}
-  <div class="team-cards-with-popup section-{{ section.id }}-padding  {% if section.settings.image_position == 'right' %} section-row-right {% endif %}{% if section.settings.wave_color == 'yellow-wave' %} yellow-wave{% elsif section.settings.wave_color == 'transparent-wave' %} transparent-wave {% elsif section.settings.wave_color == 'blue-wave' %} blue-wave{% else %} no-wave {% endif %}">
+  <div class="team-cards-with-popup section-{{ section.id }}-padding ">
     <div class="container-1260">
       <div class="top-header">
         <h2>{{ section.settings.heading }}</h2>
@@ -139,27 +139,7 @@ $(document).ready(function () {
       "id": "description",
       "label": "Description"
     },
-    {
-      "type": "select",
-      "id": "wave_color",
-      "label": "Wave color",
-      "options": [
-        {
-          "value": "transparent-wave",
-          "label": "Transparent"
-        },
-        {
-          "value": "yellow-wave",
-          "label": "Yellow"
-        },
-        {
-          "value": "blue-wave",
-          "label": "Blue"
-        }
-      ],
-      "default": "blue-wave"
-    },
-    {
+   {
       "type": "header",
       "content": "Top/Bottom Section Space"
     },
