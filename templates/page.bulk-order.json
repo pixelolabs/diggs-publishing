@@ -12,10 +12,10 @@
     "innerBanner": {
       "type": "inner-hero-section",
       "settings": {
-        "image": "shopify://shop_images/About_Teams_Banner_1.webp",
-        "mobileImage": "shopify://shop_images/About_Teams_Banner_1.webp",
-        "title": "About Teams",
-        "description": "<p>Every writer starts as a storyteller. Explore the journey of author Krystaelynne Sanders Diggs, dedicated to empowering young minds through the magic of storytelling.</p>",
+        "image": "shopify://shop_images/Banner_04ea4f20-7087-4d4f-a10e-18898f9e36bb.png",
+        "mobileImage": "shopify://shop_images/Banner_04ea4f20-7087-4d4f-a10e-18898f9e36bb.png",
+        "title": "Bulk Orders Request",
+        "description": "<p>Unlock exclusive savings on bulk orders—contact us today!</p>",
         "buttonText1": "",
         "buttonLink1": "",
         "button_bg": "pink",
@@ -24,57 +24,23 @@
         "section_class": "orange-gradient-overlay"
       }
     },
-    "team_member_card_with_popup_cntEBD": {
-      "type": "team-member-card-with-popup",
-      "blocks": {
-        "card_6cniYX": {
-          "type": "card",
-          "settings": {
-            "teamimage": "shopify://shop_images/Krystaelynne_Sanders_Diggs.webp",
-            "title": "Sara Johnson",
-            "designation": "Coordinator",
-            "carddescription": "<p>Sarah Johnson is our Creative Director at Diggs Publishing, bringing over a decade of experience in children's literature and educational content. With a passion for storytelling and a keen eye for design, Sarah plays a pivotal role in shaping our publications to be both engaging and impactful. Her innovative ideas and collaborative spirit inspire the team to push creative boundaries while ensuring that our mission of empowering children through literature remains at the forefront. Outside of work, Sarah enjoys hiking and volunteering at local literacy programs, further demonstrating her commitment to fostering a love of reading in young minds.</p><p>As an author dedicated to promoting literacy and body safety education. I offer a range of programs that can be tailored to meet your specific needs. <br/>My goal is to collaborate with you to align my books and presentations with your objectives and to complement the topics you are already teaching your students from PK - 8th grade.</p><p>My books cover a range of important themes such as confidence, manners, facing fears, overcoming obstacles, problem-solving, consent, and body safety. Almost all of my books are written in rhyme, making them engaging and useful for children learning to read. I aim to make your experience with me a positive one, and seek to leave everyone feeling good about my visit to your school. In addition to school visits, I also offer readings of my books for preschools.  If you're interested in more information or booking a school visit, library visit, or speaking engagement, please don't hesitate to reach out via my contact form.  consent, and body safety. Almost all of my books are written in rhyme, making them engaging and useful for children learning to read. I aim to make your experience with me a positive one, and seek to leave everyone feeling good about my visit to your school. </p><p>As an author dedicated to promoting literacy and body safety education. I offer a range of programs that can be tailored to meet your specific needs. <br/>My goal is to collaborate with you to align my books and presentations with your objectives and to complement the topics you are already teaching your students from PK - 8th grade.</p><p>My books cover a range of important themes such as confidence, manners, facing fears, overcoming obstacles, problem-solving, consent, and body safety. Almost all of my books are written in rhyme, making them engaging and useful for children learning to read. I aim to make your experience with me a positive one, and seek to leave everyone feeling good about my visit to your school. In addition to school visits, I also offer readings of my books for preschools.  If you're interested in more information or booking a school visit, library visit, or speaking engagement, please don't hesitate to reach out via my contact form.  consent, and body safety. Almost all of my books are written in rhyme, making them engaging and useful for children learning to read. I aim to make your experience with me a positive one, and seek to leave everyone feeling good about my visit to your school. </p>",
-            "borderColor": "#d51f91"
-          }
-        },
-        "card_R7gAbm": {
-          "type": "card",
-          "settings": {
-            "teamimage": "shopify://shop_images/Krystaelynne_Sanders_Diggs.webp",
-            "title": "Sara Johnson",
-            "designation": "Coordinator",
-            "carddescription": "<p>Sarah Johnson is our Creative Director at Diggs Publishing, bringing over a decade of experience in children's literature and educational content. With a passion for storytelling and a keen eye for design, Sarah plays a pivotal role in shaping our publications to be both engaging and impactful. Her innovative ideas and collaborative spirit inspire the team to push creative boundaries while ensuring that our mission of empowering children through literature remains at the forefront. Outside of work, Sarah enjoys hiking and volunteering at local literacy programs, further demonstrating her commitment to fostering a love of reading in young minds.</p><p>As an author dedicated to promoting literacy and body safety education. I offer a range of programs that can be tailored to meet your specific needs. <br/>My goal is to collaborate with you to align my books and presentations with your objectives and to complement the topics you are already teaching your students from PK - 8th grade.</p><p>My books cover a range of important themes such as confidence, manners, facing fears, overcoming obstacles, problem-solving, consent, and body safety. Almost all of my books are written in rhyme, making them engaging and useful for children learning to read. I aim to make your experience with me a positive one, and seek to leave everyone feeling good about my visit to your school. In addition to school visits, I also offer readings of my books for preschools.  If you're interested in more information or booking a school visit, library visit, or speaking engagement, please don't hesitate to reach out via my contact form.  consent, and body safety. Almost all of my books are written in rhyme, making them engaging and useful for children learning to read. I aim to make your experience with me a positive one, and seek to leave everyone feeling good about my visit to your school. </p>",
-            "borderColor": "#9747ff"
-          }
-        },
-        "card_WXGWnk": {
-          "type": "card",
-          "settings": {
-            "teamimage": "shopify://shop_images/Krystaelynne_Sanders_Diggs.webp",
-            "title": "Sara Johnson",
-            "designation": "Coordinator",
-            "carddescription": "<p>Sarah Johnson is our Creative Director at Diggs Publishing, bringing over a decade of experience in children's literature and educational content. With a passion for storytelling and a keen eye for design, Sarah plays a pivotal role in shaping our publications to be both engaging and impactful. Her innovative ideas and collaborative spirit inspire the team to push creative boundaries while ensuring that our mission of empowering children through literature remains at the forefront. Outside of work, Sarah enjoys hiking and volunteering at local literacy programs, further demonstrating her commitment to fostering a love of reading in young minds.</p>",
-            "borderColor": "#5fbf50"
-          }
-        }
-      },
-      "block_order": [
-        "card_6cniYX",
-        "card_R7gAbm",
-        "card_WXGWnk"
-      ],
+    "full_width_cta_MHj76B": {
+      "type": "full-width-cta",
       "settings": {
-        "heading": "Meet out fully remote teamdedicated to helping your business",
-        "description": "<p>Diggs Publishing is dedicated to sharing unique and diverse stories that often go untold, focusing on empowering children through literature. Our mission is to prevent child sexual abuse by providing educational resources that foster understanding of body safety and appropriate boundaries.</p>",
-        "paddingtop": 72,
-        "paddingtopmobile": 40,
-        "paddingbottom": 201,
-        "paddingbottomMobile": 120
+        "title": "INTERESTED IN BULK ORDERS?",
+        "content": "I believe books have the power to transform lives. I offer deep discounts—up to 15% in savings—on bulk book purchases so you can get those books into more hands. To request a quote on orders of 200 or more copies, or to place an order, please complete the contact from below. Bulk orders are not eligible for free shipping",
+        "buttonText": "Contact Me",
+        "buttonLink": "shopify://pages/contact-us",
+        "section_class": "",
+        "paddingtop": 100,
+        "paddingtopmobile": 100,
+        "paddingbottom": 140,
+        "paddingbottomMobile": 100
       }
     }
   },
   "order": [
     "innerBanner",
-    "team_member_card_with_popup_cntEBD"
+    "full_width_cta_MHj76B"
   ]
 }
