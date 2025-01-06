@@ -14,8 +14,8 @@
       "settings": {
         "image": "shopify://shop_images/About_Teams_Banner_1.webp",
         "mobileImage": "shopify://shop_images/About_Teams_Banner_1.webp",
-        "title": "About Teams",
-        "description": "<p>Every writer starts as a storyteller. Explore the journey of author Krystaelynne Sanders Diggs, dedicated to empowering young minds through the magic of storytelling.</p>",
+        "title": "About Us",
+        "description": "",
         "buttonText1": "",
         "buttonLink1": "",
         "button_bg": "pink",
@@ -30,9 +30,9 @@
         "card_6cniYX": {
           "type": "card",
           "settings": {
-            "teamimage": "shopify://shop_images/Krystaelynne_Sanders_Diggs.webp",
-            "title": "Sara Johnson",
-            "designation": "Coordinator",
+            "teamimage": "shopify://shop_images/Screenshot_2025-01-06_at_6.14.30_PM.png",
+            "title": "Krystaelynne Sanders Diggs",
+            "designation": "Chief Executive Officer",
             "carddescription": "<p>Sarah Johnson is our Creative Director at Diggs Publishing, bringing over a decade of experience in children's literature and educational content. With a passion for storytelling and a keen eye for design, Sarah plays a pivotal role in shaping our publications to be both engaging and impactful. Her innovative ideas and collaborative spirit inspire the team to push creative boundaries while ensuring that our mission of empowering children through literature remains at the forefront. Outside of work, Sarah enjoys hiking and volunteering at local literacy programs, further demonstrating her commitment to fostering a love of reading in young minds.</p><p>As an author dedicated to promoting literacy and body safety education. I offer a range of programs that can be tailored to meet your specific needs. <br/>My goal is to collaborate with you to align my books and presentations with your objectives and to complement the topics you are already teaching your students from PK - 8th grade.</p><p>My books cover a range of important themes such as confidence, manners, facing fears, overcoming obstacles, problem-solving, consent, and body safety. Almost all of my books are written in rhyme, making them engaging and useful for children learning to read. I aim to make your experience with me a positive one, and seek to leave everyone feeling good about my visit to your school. In addition to school visits, I also offer readings of my books for preschools.  If you're interested in more information or booking a school visit, library visit, or speaking engagement, please don't hesitate to reach out via my contact form.  consent, and body safety. Almost all of my books are written in rhyme, making them engaging and useful for children learning to read. I aim to make your experience with me a positive one, and seek to leave everyone feeling good about my visit to your school. </p><p>As an author dedicated to promoting literacy and body safety education. I offer a range of programs that can be tailored to meet your specific needs. <br/>My goal is to collaborate with you to align my books and presentations with your objectives and to complement the topics you are already teaching your students from PK - 8th grade.</p><p>My books cover a range of important themes such as confidence, manners, facing fears, overcoming obstacles, problem-solving, consent, and body safety. Almost all of my books are written in rhyme, making them engaging and useful for children learning to read. I aim to make your experience with me a positive one, and seek to leave everyone feeling good about my visit to your school. In addition to school visits, I also offer readings of my books for preschools.  If you're interested in more information or booking a school visit, library visit, or speaking engagement, please don't hesitate to reach out via my contact form.  consent, and body safety. Almost all of my books are written in rhyme, making them engaging and useful for children learning to read. I aim to make your experience with me a positive one, and seek to leave everyone feeling good about my visit to your school. </p>",
             "borderColor": "#d51f91"
           }
@@ -40,10 +40,10 @@
         "card_R7gAbm": {
           "type": "card",
           "settings": {
-            "teamimage": "shopify://shop_images/Krystaelynne_Sanders_Diggs.webp",
-            "title": "Sara Johnson",
-            "designation": "Coordinator",
-            "carddescription": "<p>Sarah Johnson is our Creative Director at Diggs Publishing, bringing over a decade of experience in children's literature and educational content. With a passion for storytelling and a keen eye for design, Sarah plays a pivotal role in shaping our publications to be both engaging and impactful. Her innovative ideas and collaborative spirit inspire the team to push creative boundaries while ensuring that our mission of empowering children through literature remains at the forefront. Outside of work, Sarah enjoys hiking and volunteering at local literacy programs, further demonstrating her commitment to fostering a love of reading in young minds.</p><p>As an author dedicated to promoting literacy and body safety education. I offer a range of programs that can be tailored to meet your specific needs. <br/>My goal is to collaborate with you to align my books and presentations with your objectives and to complement the topics you are already teaching your students from PK - 8th grade.</p><p>My books cover a range of important themes such as confidence, manners, facing fears, overcoming obstacles, problem-solving, consent, and body safety. Almost all of my books are written in rhyme, making them engaging and useful for children learning to read. I aim to make your experience with me a positive one, and seek to leave everyone feeling good about my visit to your school. In addition to school visits, I also offer readings of my books for preschools.  If you're interested in more information or booking a school visit, library visit, or speaking engagement, please don't hesitate to reach out via my contact form.  consent, and body safety. Almost all of my books are written in rhyme, making them engaging and useful for children learning to read. I aim to make your experience with me a positive one, and seek to leave everyone feeling good about my visit to your school. </p>",
+            "teamimage": "shopify://shop_images/Screenshot_2025-01-06_at_6.12.14_PM.png",
+            "title": "Megan Gorie",
+            "designation": "Publishing Coordinator",
+            "carddescription": "<p>Born and raised in sunny South Florida, Megan Gorie is the Publishing Coordinator at Diggs Publishing. She is a proud graduate of the University of Central Florida, where she studied English on a creative writing track. Here, she interned at <em>The Florida Review </em>as an editorial intern, and after graduating went on to study at the Columbia Publishing Course at Oxford University. When she is not diving into the world of children’s books, Megan is writing short stories, playing goalie for her adult soccer league, traveling the world, or hanging out with her pet tortoise Poptart (yes he is as cool as his name is). Megan’s favorite book is <em>She Who Became the Sun</em> by Shelley Parker-Chan, and her go-to celebratory phrase is “Huzzah!”</p>",
             "borderColor": "#9747ff"
           }
         },
@@ -51,22 +51,32 @@
           "type": "card",
           "settings": {
             "teamimage": "shopify://shop_images/Krystaelynne_Sanders_Diggs.webp",
-            "title": "Sara Johnson",
-            "designation": "Coordinator",
-            "carddescription": "<p>Sarah Johnson is our Creative Director at Diggs Publishing, bringing over a decade of experience in children's literature and educational content. With a passion for storytelling and a keen eye for design, Sarah plays a pivotal role in shaping our publications to be both engaging and impactful. Her innovative ideas and collaborative spirit inspire the team to push creative boundaries while ensuring that our mission of empowering children through literature remains at the forefront. Outside of work, Sarah enjoys hiking and volunteering at local literacy programs, further demonstrating her commitment to fostering a love of reading in young minds.</p>",
+            "title": "Tiana Williams",
+            "designation": "Marketing Communications Associate",
+            "carddescription": "<p>Tiana Williams, a Northern NJ native now based in Baltimore is an extremely passionate publishing professional. A proud Bowie State University graduate with a BA in English and a concentration in creative writing, she’s dedicated to championing authentic Black voices and stories. Tiana's previous internship experiences with Penguin Random House cemented her adoration for publishing. From advocating for Black authors to sharing her reading adventures on bookstagram (@teeturnedthepage), Tiana’s all in when it comes to literature. Outside of reading, Tiana loves binge watching <em>RuPaul's Drag Race</em> and exploring small businesses. Her favorite books to swoon over include <em>The Love Songs of W.E.B. DuBois</em> by Honoree Fanonne Jeffers and <em>This Could Be Us</em> by Kennedy Ryan.</p>",
             "borderColor": "#5fbf50"
+          }
+        },
+        "card_hT7HXH": {
+          "type": "card",
+          "settings": {
+            "teamimage": "shopify://shop_images/Krystaelynne_Sanders_Diggs.webp",
+            "title": "Itzel Saucedo",
+            "designation": "Marketing Assistant",
+            "carddescription": "<p>Itzel Saucedo is the Marketing Assistant at Diggs Publishing. Itzel earned her degree at California State University, Chico in Journalism and Public Relations. After graduating, Itzel returned back to Sonoma County to live near her family again. One of her favorite books is Lighlark by Alex Aster. In her free time, you can find her reading a book, watching a movie or show, going on hikes, and exploring Sonoma County. Fun fact about Itzel, she is a first-generation college graduate and she used to do baile folkórico when she was younger. </p>",
+            "borderColor": "#db9222"
           }
         }
       },
       "block_order": [
         "card_6cniYX",
         "card_R7gAbm",
-        "card_WXGWnk"
+        "card_WXGWnk",
+        "card_hT7HXH"
       ],
       "settings": {
-        "heading": "Meet out fully remote teamdedicated to helping your business",
-        "description": "<p>Diggs Publishing is dedicated to sharing unique and diverse stories that often go untold, focusing on empowering children through literature. Our mission is to prevent child sexual abuse by providing educational resources that foster understanding of body safety and appropriate boundaries.</p>",
-        "wave_color": "blue-wave",
+        "heading": "Meet our team",
+        "description": "",
         "paddingtop": 72,
         "paddingtopmobile": 40,
         "paddingbottom": 201,
