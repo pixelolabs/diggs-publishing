@@ -12,10 +12,10 @@
     "innerBanner": {
       "type": "inner-hero-section",
       "settings": {
-        "image": "shopify://shop_images/Banner_04ea4f20-7087-4d4f-a10e-18898f9e36bb.png",
-        "mobileImage": "shopify://shop_images/Banner_04ea4f20-7087-4d4f-a10e-18898f9e36bb.png",
+        "image": "shopify://shop_images/Screenshot_2025-01-07_at_2.40.50_PM.png",
+        "mobileImage": "shopify://shop_images/Screenshot_2025-01-07_at_2.40.50_PM.png",
         "title": "Bulk Orders Request",
-        "description": "<p>Unlock exclusive savings on bulk orders—contact us today!</p>",
+        "description": "<p>Looking to make a big impact? We provide both wholesale and bulk order pricing for booksellers, organizations, schools, and non-profits!</p>",
         "buttonText1": "",
         "buttonLink1": "",
         "button_bg": "pink",
