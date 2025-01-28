@@ -48,16 +48,16 @@
             "product": "where-hands-go-an-introduction-to-safe-and-unsafe-touch"
           }
         },
+        "product_f9QRjW": {
+          "type": "product",
+          "settings": {
+            "product": "where-hands-go-an-introduction-to-safe-and-unsafe-touch-boy"
+          }
+        },
         "product_RbJU3i": {
           "type": "product",
           "settings": {
             "product": "a-girl-named-rainbow"
-          }
-        },
-        "product_7w7YGy": {
-          "type": "product",
-          "settings": {
-            "product": "where-hands-go-the-power-of-no-childrens-book-for-body-safety"
           }
         },
         "product_WCmKJP": {
@@ -70,8 +70,8 @@
       "block_order": [
         "product_QdJg9b",
         "product_kqjaAK",
+        "product_f9QRjW",
         "product_RbJU3i",
-        "product_7w7YGy",
         "product_WCmKJP"
       ],
       "settings": {
