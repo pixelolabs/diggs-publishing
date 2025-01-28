@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "HeroBanner": {
@@ -48,16 +48,16 @@
             "product": "where-hands-go-an-introduction-to-safe-and-unsafe-touch"
           }
         },
-        "product_7w7YGy": {
-          "type": "product",
-          "settings": {
-            "product": "where-hands-go-the-power-of-no-childrens-book-for-body-safety"
-          }
-        },
         "product_RbJU3i": {
           "type": "product",
           "settings": {
             "product": "a-girl-named-rainbow"
+          }
+        },
+        "product_7w7YGy": {
+          "type": "product",
+          "settings": {
+            "product": "where-hands-go-the-power-of-no-childrens-book-for-body-safety"
           }
         },
         "product_WCmKJP": {
@@ -70,8 +70,8 @@
       "block_order": [
         "product_QdJg9b",
         "product_kqjaAK",
-        "product_7w7YGy",
         "product_RbJU3i",
+        "product_7w7YGy",
         "product_WCmKJP"
       ],
       "settings": {
