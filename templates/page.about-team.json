@@ -71,9 +71,9 @@
           "type": "card",
           "settings": {
             "teamimage": "shopify://shop_images/Screenshot_2025-01-06_at_6.24.09_PM.png",
-            "title": "",
+            "title": "Diggs Publishing Fulfillment Team",
             "designation": "",
-            "carddescription": "",
+            "carddescription": "<p>Our fulfillment team is the backbone of Diggs Publishing, making sure every book reaches the hands of those who need it most. Their dedication, attention to detail, and hard work keep us moving forward, ensuring that our mission to educate and empower children never slows down. Without them, none of this would be possible. </p>",
             "borderColor": ""
           }
         }
