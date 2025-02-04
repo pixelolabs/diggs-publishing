@@ -145,32 +145,23 @@
           "announcement_cD8xjQ": {
             "type": "announcement",
             "settings": {
-              "header_text": "",
-              "announcement_link": "",
-              "announcement_link_text": ""
+              "header_text": "<p>Celebrate This Black History Month with 25% <strong>OFF</strong>! Use code</p>",
+              "announcement_link": "https://ksdiggs.com/discount/DIGGSBHM25",
+              "announcement_link_text": "DIGGSBHM25"
             }
           },
           "announcement_wHQAmg": {
             "type": "announcement",
             "settings": {
-              "header_text": "<p>Free Shipping on all orders over $50. <a href=\"/collections\" target=\"_blank\" title=\"All collections\">Shop Now</a></p>",
-              "announcement_link": "",
-              "announcement_link_text": ""
-            }
-          },
-          "announcement_UWp6dr": {
-            "type": "announcement",
-            "settings": {
-              "header_text": "<p>Sale! On the Newsest Collection</p>",
-              "announcement_link": "shopify://products/cocoa-butter-baby",
-              "announcement_link_text": "Shop Now"
+              "header_text": "<p>Free Shipping on all orders over $50.</p>",
+              "announcement_link": "https://ksdiggs.com/collections/all",
+              "announcement_link_text": "Shop Now!"
             }
           }
         },
         "block_order": [
           "announcement_cD8xjQ",
-          "announcement_wHQAmg",
-          "announcement_UWp6dr"
+          "announcement_wHQAmg"
         ],
         "settings": {
           "show_announcement": true
