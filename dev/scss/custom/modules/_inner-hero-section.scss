@@ -213,7 +213,14 @@
   }
 
   // about team page orange gradient overlay
-
+  &.no-graphics {
+    .container-1240 {
+      &::after,
+      &::before {
+        display: none;
+      }
+    }
+  }
   &.orange-gradient-overlay {
     &:before {
       z-index: 4;
