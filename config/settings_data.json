@@ -142,12 +142,12 @@
       "announcement": {
         "type": "announcement",
         "blocks": {
-          "announcement_cD8xjQ": {
+          "announcement_iTX7Dh": {
             "type": "announcement",
             "settings": {
-              "header_text": "<p>Celebrate This Black History Month with 25% <strong>OFF</strong>! Use code</p>",
-              "announcement_link": "https://ksdiggs.com/discount/DIGGSBHM25",
-              "announcement_link_text": "DIGGSBHM25"
+              "header_text": "<p>Happy <strong>Women's History Month</strong>! The Wise Empowerment Box Set is</p>",
+              "announcement_link": "shopify://products/wise-empowerment-box-set",
+              "announcement_link_text": "HERE!"
             }
           },
           "announcement_wHQAmg": {
@@ -160,7 +160,7 @@
           }
         },
         "block_order": [
-          "announcement_cD8xjQ",
+          "announcement_iTX7Dh",
           "announcement_wHQAmg"
         ],
         "settings": {
