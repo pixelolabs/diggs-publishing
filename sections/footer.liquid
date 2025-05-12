@@ -51,10 +51,15 @@
                   class="image-section"
                   title="{{ block.settings.InstaLink }}"
                 >
+                   {% assign imageAlt = block.settings.instaImage.alt %}
+                    {% if imageAlt == blank %}
+                      {% assign imageAlt = shop.name %}
+                    {% endif %}
                   {{
                     block.settings.instaImage
                     | image_url: width: 270
-                    | image_tag: loading: 'lazy', widths: '270x270'
+                    | image_tag: loading: 'lazy', widths: '270x270',
+                    alt:imageAlt
                   }}
                 </a>
               </li>
