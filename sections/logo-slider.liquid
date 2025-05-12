@@ -26,8 +26,12 @@
           {% for block in section.blocks %}
             <div class="swiper-slide">
               {% if block.settings.image != blank %}
+                 {% assign imageUrl = block.settings.link %}
+                    {% if imageUrl == blank %}
+                      {% assign imageUrl = shop.url %}
+                    {% endif %}
                 <a
-                  href="{{ block.settings.link }}"
+                  href="{{ imageUrl }}"
                   title="Read More About {{ block.settings.title }}"
                   aria-label="Read More About {{ block.settings.title }}"
                   class="image-section"
@@ -40,31 +44,10 @@
                       alt="{{block.settings.title}}"
                     >
                   {% endcomment %}
-                  <picture>
-                    <!-- Mobile and tablet sizes -->
-                    <source
-                      media="(max-width: 767px)"
-                      srcset="
-                        {{ block.settings.image | image_url: width: 375 }} 375w,
-                        {{ block.settings.image | image_url: width: 550 }} 550w,
-                        {{ block.settings.image | image_url: width: 750 }} 750w
-                      "
-                      sizes="100vw"
-                    >
-
-                    <!-- Desktop sizes -->
-                    <source
-                      media="(min-width: 768px)"
-                      srcset="
-                        {{ block.settings.image | image_url: width: 1000 }} 1000w,
-                        {{ block.settings.image | image_url: width: 1400 }} 1400w,
-                         {{ block.settings.image | image_url: width: 1800 }} 1800w,
-                         {{ block.settings.image | image_url: width: 2400 }} 2400w,
-                         {{ block.settings.image | image_url: width: 3000 }} 3000w
-                      "
-                      sizes="100vw"
-                    >
-
+                   {% assign imageAlt = block.settings.image.alt %}
+                    {% if imageAlt == blank %}
+                      {% assign imageAlt = shop.name %}
+                    {% endif %}
                     <!-- Fallback image -->
                     {{
                       block.settings.image
@@ -72,9 +55,11 @@
                       | image_tag:
                         loading: 'lazy',
                         width: block.settings.image.width,
-                        height: block.settings.image.height
+                        height: block.settings.image.height,
+                        alt:imageAlt
+
                     }}
-                  </picture>
+                  
                 </a>
               {% endif %}
             </div>

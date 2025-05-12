@@ -6,16 +6,25 @@
           {%- for block in section.blocks limit: 6 %}
             {% if block.settings.instaImage != blank %}
               <li>
+                {% assign imageUrl = block.settings.InstaLink %}
+                    {% if imageUrl == blank %}
+                      {% assign imageUrl = shop.url %}
+                    {% endif %}
                 <a
-                  href="{{ block.settings.InstaLink }}"
+                  href="{{ imageUrl }}"
                   target="_blank"
                   class="image-section"
                   title="{{ block.settings.InstaLink }}"
                 >
+                  {% assign imageAlt = block.settings.instaImage.alt %}
+                    {% if imageAlt == blank %}
+                      {% assign imageAlt = shop.name %}
+                    {% endif %}
                   {{
                     block.settings.instaImage
                     | image_url: width: 270
-                    | image_tag: loading: 'lazy', widths: '270x270'
+                    | image_tag: loading: 'lazy', widths: '270x270',
+                    alt:imageAlt
                   }}
                 </a>
               </li>
@@ -40,16 +49,26 @@
           {% for block in section.blocks offset: 6 %}
             {% if block.settings.instaImage != blank %}
               <li>
+                 {% assign imageUrl = block.settings.InstaLink %}
+                    {% if imageUrl == blank %}
+                      {% assign imageUrl = shop.url %}
+                    {% endif %}
                 <a
-                  href="{{ block.settings.InstaLink }}"
+                  href="{{ imageUrl }}"
+              
                   target="_blank"
                   class="image-section"
                   title="{{ block.settings.InstaLink }}"
                 >
+                   {% assign imageAlt = block.settings.instaImage.alt %}
+                    {% if imageAlt == blank %}
+                      {% assign imageAlt = shop.name %}
+                    {% endif %}
                   {{
                     block.settings.instaImage
                     | image_url: width: 270
-                    | image_tag: loading: 'lazy', widths: '270x270'
+                    | image_tag: loading: 'lazy', widths: '270x270',
+                    alt:imageAlt
                   }}
                 </a>
               </li>

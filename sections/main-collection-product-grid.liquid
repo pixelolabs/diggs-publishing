@@ -25,12 +25,17 @@
                     class=""
                   >
                     {% if block.settings.icon != blank %}
+                   {% assign imageAlt = block.settings.title %}
+                    {% if imageAlt == blank %}
+                      {% assign imageAlt = Collection.title %}
+                    {% endif %}
                       <div class="icon">
+
                         {% comment %} <img src="{{ 'Books.png' | asset_url }}"> {% endcomment %}
                         {{
                           block.settings.icon
                           | image_url: width: 200
-                          | image_tag: loading: 'lazy', widths: '200x200'
+                          | image_tag: loading: 'lazy', widths: '200x200', alt:imageAlt
                         }}
                       </div>
                     {% else %}
