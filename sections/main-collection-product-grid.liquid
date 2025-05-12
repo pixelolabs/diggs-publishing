@@ -30,7 +30,7 @@
                         {{
                           block.settings.icon
                           | image_url: width: 200
-                          | image_tag: loading: 'lazy', widths: '200x200'
+                          | image_tag: loading: 'lazy', widths: '200x200', alt:block.settings.title
                         }}
                       </div>
                     {% else %}
