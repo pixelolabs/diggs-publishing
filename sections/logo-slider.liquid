@@ -26,8 +26,12 @@
           {% for block in section.blocks %}
             <div class="swiper-slide">
               {% if block.settings.image != blank %}
+                 {% assign imageUrl = block.settings.link %}
+                    {% if imageUrl == blank %}
+                      {% assign imageUrl = shop.url %}
+                    {% endif %}
                 <a
-                  href="{{ block.settings.link }}"
+                  href="{{ imageUrl }}"
                   title="Read More About {{ block.settings.title }}"
                   aria-label="Read More About {{ block.settings.title }}"
                   class="image-section"
