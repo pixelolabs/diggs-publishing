@@ -6,8 +6,12 @@
           {%- for block in section.blocks limit: 6 %}
             {% if block.settings.instaImage != blank %}
               <li>
+                {% assign imageUrl = block.settings.InstaLink %}
+                    {% if imageUrl == blank %}
+                      {% assign imageUrl = shop.url %}
+                    {% endif %}
                 <a
-                  href="{{ block.settings.InstaLink }}"
+                  href="{{ imageUrl }}"
                   target="_blank"
                   class="image-section"
                   title="{{ block.settings.InstaLink }}"
@@ -45,8 +49,13 @@
           {% for block in section.blocks offset: 6 %}
             {% if block.settings.instaImage != blank %}
               <li>
+                 {% assign imageUrl = block.settings.InstaLink %}
+                    {% if imageUrl == blank %}
+                      {% assign imageUrl = shop.url %}
+                    {% endif %}
                 <a
-                  href="{{ block.settings.InstaLink }}"
+                  href="{{ imageUrl }}"
+              
                   target="_blank"
                   class="image-section"
                   title="{{ block.settings.InstaLink }}"
