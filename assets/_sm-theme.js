@@ -1443,6 +1443,8 @@ jQuery(function () {
     e.stopImmediatePropagation();
     var id = $(this).attr("data-id"); //Executed after SWYM has loaded all necessary resources.
 
+    var productTItle = $(this).attr("title");
+    $(".js__popup-product-name-" + id).html(productTItle);
     $(".js__popup-variant-select-" + id + " li:first-child").click(); // show modal pop up
 
     $("#modal-" + id).show();
