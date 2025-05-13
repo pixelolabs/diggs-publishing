@@ -1469,7 +1469,7 @@ header {
                   // color: $color-black;
                 }
                 &:last-child {
-                  padding: 0;
+                  padding: 0 !important;
                 }
               }
             }

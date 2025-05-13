@@ -817,7 +817,7 @@ jQuery(function () {
     // centeredSlides: true,
     // resistance: false,
     threshold: 5,
-    // loop:true,
+    loop: false,
     resistance: false,
     shortSwipes: true,
     longSwipes: false,
@@ -846,7 +846,7 @@ jQuery(function () {
     // centeredSlides: true,
     // resistance: false,
     threshold: 5,
-    loop: true,
+    loop: false,
     resistance: false,
     shortSwipes: true,
     longSwipes: false,
@@ -873,7 +873,7 @@ jQuery(function () {
     spaceBetween: 14,
     // centeredSlides: true,
     // resistance: false,
-    loop: true,
+    loop: false,
     resistance: false,
     shortSwipes: true,
     longSwipes: false,
@@ -935,7 +935,7 @@ jQuery(function () {
     clickable: true,
     resistance: false,
     shortSwipes: false,
-    loop: true,
+    loop: false,
     grabCursor: false
   }, _defineProperty(_Swiper, "slidesPerView", 5), _defineProperty(_Swiper, "breakpoints", {
     0: {
@@ -959,7 +959,7 @@ jQuery(function () {
     slidesPerView: 1,
     resistance: false,
     threshold: 5,
-    loop: true,
+    loop: false,
     spaceBetween: 30,
     // autoplay: {
     //     delay: 10000,
@@ -974,7 +974,7 @@ jQuery(function () {
     slidesPerView: "auto",
     spaceBetween: 20,
     threshold: 1,
-    loop: true
+    loop: false
   }, _defineProperty(_Swiper2, "threshold", 5), _defineProperty(_Swiper2, "breakpoints", {
     1920: {
       slidesPerView: "auto"
@@ -986,7 +986,7 @@ jQuery(function () {
   var productSlider = new Swiper(".js__small-product-slider", (_Swiper3 = {
     slidesPerView: 3,
     spaceBetween: 25,
-    loop: true,
+    loop: false,
     threshold: 5
   }, _defineProperty(_Swiper3, "threshold", 1), _defineProperty(_Swiper3, "breakpoints", {
     '1025': {
@@ -1443,6 +1443,8 @@ jQuery(function () {
     e.stopImmediatePropagation();
     var id = $(this).attr("data-id"); //Executed after SWYM has loaded all necessary resources.
 
+    var productTItle = $(this).attr("title");
+    $(".js__popup-product-name-" + id).html(productTItle);
     $(".js__popup-variant-select-" + id + " li:first-child").click(); // show modal pop up
 
     $("#modal-" + id).show();
@@ -1529,7 +1531,7 @@ jQuery(function () {
 
       if (optionName.trim() == option.trim()) {
         $(".js__price-popup-price-" + pID).hide();
-        $(".js__price-popup-" + vID).show();
+        $(".js__price-popup-" + vID).css("display", "flex");
 
         if (variantSoldout == "true") {
           $(".js__modal-popup-qty-" + pID).hide();
@@ -1749,7 +1751,7 @@ jQuery(document).ready(function ($) {
     // clickable: true,
     resistance: false,
     shortSwipes: false,
-    loop: true,
+    loop: false,
     // grabCursor: false,
     // threshold: 1,
     speed: 4000,
@@ -2602,7 +2604,7 @@ $(document).ready(function ($) {
     resistance: false,
     shortSwipes: true,
     spaceBetween: 12,
-    loop: true,
+    loop: false,
 
     /* pagination: {
          el: ".swiper-pagination",
@@ -2984,7 +2986,7 @@ $(document).ready(function ($) {
       pdpThumbnail = new Swiper(".js__pdp-thumbnail-slider", {
         resistance: false,
         shortSwipes: true,
-        loop: true,
+        loop: false,
         slidesPerView: 'auto',
         freeMode: true,
         watchSlidesProgress: true,
@@ -3002,7 +3004,7 @@ $(document).ready(function ($) {
       clickable: false,
       resistance: false,
       shortSwipes: true,
-      loop: true,
+      loop: false,
       spaceBetween: 15,
       navigation: {
         nextEl: ".swiper-button-next-pdp",

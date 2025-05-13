@@ -16,32 +16,20 @@
       z-index: 7;
     }
   </style>
-  <a class="outer-link" href="{{productRelated.url}}"></a>
+  <a class="outer-link" href="{{productRelated.url}}" title="Read More About {{productRelated.title}}"></a>
   <div class="image-section">
     <span>
+      {% assign imageAlt = productRelated.featured_image.alt %}
+      {% if imageAlt == blank %}
+       {% assign imageAlt = productRelated.title %}
+      {% endif %}
       {% if productRelated.images.size > 1 %}
-        <img
-          class="js__product-image-{{productRelated.id}} first-img"
-          data-src="{{  productRelated.images[0] | img_url: '558x558' }}"
-          src="{{  productRelated.images[0] | img_url: '558x558' }}"
-          alt="{{ productRelated.featured_image.alt | escape }}"
-          loading="lazy"
-        >
-        <img
-          class="hover-img"
-          data-src="{{  productRelated.images[1] | img_url: '558x558' }}"
-          src="{{  productRelated.images[1] | img_url: '558x558' }}"
-          alt="{{ productRelated.featured_image.alt | escape  }}"
-          loading="lazy"
-        >
+        {% include 'image_code_small'  with  mobileImage:  productRelated.images[0], tabletImage:  productRelated.images[0], desktopImage:  productRelated.images[0], imageAlt:  imageAlt %}
+        {% include 'image_code_small'  with  mobileImage:  productRelated.images[1], tabletImage:  productRelated.images[1], desktopImage:  productRelated.images[1], imageAlt:  imageAlt %}
+      
       {% else %}
-        <img
-          class="js__product-image-{{productRelated.id}}"
-          src="{{  productRelated.images[0] | img_url: '558x558' }}"
-          data-src="{{ productRelated.images[0] | img_url: '558x558' }}"
-          alt="{{ productRelated.featured_image.alt | escape }}"
-          loading="lazy"
-        >
+        {% include 'image_code_small'  with  mobileImage:  productRelated.images[0], tabletImage:  productRelated.images[0], desktopImage:  productRelated.images[0], imageAlt:  imageAlt %}
+     
       {% endif %}
     </span>
 

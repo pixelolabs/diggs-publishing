@@ -4,8 +4,6 @@
 {% endcomment %}
 {{ 'aos.css' | asset_url | stylesheet_tag }}
 
-{% comment %} Font script calling {% endcomment %}
-{{ settings.fontScript }}
 
 {% comment %}
   <script>
@@ -42,8 +40,7 @@
 {{ '_sm-global.css' | asset_url | stylesheet_tag }}
 
 {{ '_sm-style.css' | asset_url | stylesheet_tag }}
-{{ '_sm-style-1.css' | asset_url | stylesheet_tag }}
-{{ '_sm-style-2.css' | asset_url | stylesheet_tag }}
+
 
 <!-- Custom Scripts -->
 {{ '_sm-theme.js' | asset_url | script_tag }}
@@ -65,17 +62,7 @@
 {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer="defer"></script>
 
-<!-- Fancybox CSS -->
-{% comment %}
-  {{ 'fancyBox.css' | asset_url | stylesheet_tag }}
-  {{ 'fancyBox.js' | asset_url | script_tag }}
-{% endcomment %}
 
-{% comment %}
-  {{ 'splide.min' | asset_url | stylesheet_tag }}
-  <script src="{{ 'splide.min.js' | asset_url }}" defer="defer"></script>
-  <script src="{{ 'splide-extension-auto-scroll.min.js' | asset_url }}" defer="defer"></script>
-{% endcomment %}
 
 <script type="application/ld+json">
   {

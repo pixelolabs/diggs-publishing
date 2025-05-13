@@ -434,6 +434,7 @@
   .product-single__prices {
     width: auto;
     margin-bottom: 24px;
+    display: flex;
     @include MQ(MQ-480) {
       margin-bottom: 20px;
     }
@@ -451,11 +452,12 @@
       }
     }
     s {
-      margin-right: 20.6px;
+      margin-left: 20.6px;
       color: #a1a1a1;
+      order: 2;
       //   opacity: 0.5;
       @include MQ(MQ-480) {
-        margin-right: 18px;
+        margin-left: 18px;
       }
     }
   }

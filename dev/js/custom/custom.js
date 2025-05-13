@@ -27,7 +27,7 @@ jQuery(function() {
         // centeredSlides: true,
         // resistance: false,
         threshold:5,
-        // loop:true,
+         loop:false,
         resistance: false,
         shortSwipes: true,
         longSwipes: false,
@@ -59,7 +59,7 @@ var articleSectionSlider = new Swiper(".js__article-slider", {
     // centeredSlides: true,
     // resistance: false,
     threshold:5,
-    loop:true,
+    loop:false,
     resistance: false,
     shortSwipes: true,
     longSwipes: false,
@@ -93,7 +93,7 @@ var articleSectionSlider = new Swiper(".js__article-slider", {
         // centeredSlides: true,
         // resistance: false,
         
-        loop:true,
+        loop:false,
         resistance: false,
         shortSwipes: true,
         longSwipes: false,
@@ -160,7 +160,7 @@ var articleSectionSlider = new Swiper(".js__article-slider", {
         clickable: true,
         resistance: false,
         shortSwipes: false,
-        loop: true,
+        loop: false,
         grabCursor: false,
         slidesPerView: 5,
         breakpoints: {
@@ -234,7 +234,7 @@ var articleSectionSlider = new Swiper(".js__article-slider", {
 
         resistance: false,
         threshold:5,
-        loop: true,
+        loop: false,
         spaceBetween: 30,
         // autoplay: {
         //     delay: 10000,
@@ -252,7 +252,7 @@ var articleSectionSlider = new Swiper(".js__article-slider", {
         slidesPerView: "auto",
         spaceBetween: 20,
         threshold: 1,
-        loop: true,
+        loop: false,
         threshold:5,
         breakpoints: {
 
@@ -270,7 +270,7 @@ var articleSectionSlider = new Swiper(".js__article-slider", {
     var productSlider = new Swiper(".js__small-product-slider", {
         slidesPerView: 3,
         spaceBetween: 25,
-        loop: true,
+        loop: false,
         threshold:5,
         threshold: 1,
         breakpoints: {
@@ -840,9 +840,10 @@ jQuery(function() {
         var id = $(this).attr("data-id");
         //Executed after SWYM has loaded all necessary resources.
       
-
+      var productTItle=$(this).attr("title")
+      $(".js__popup-product-name-" + id).html(productTItle)
        
-        
+       
 
         $(".js__popup-variant-select-" + id + " li:first-child").click();
         // show modal pop up
@@ -978,7 +979,7 @@ console.log("pID"+pID)
             if (optionName.trim() == option.trim()) {
                
                 $(".js__price-popup-price-"+pID).hide();
-                $(".js__price-popup-"+vID).show();
+                $(".js__price-popup-"+vID).css("display","flex");
                 if (variantSoldout == "true") {
                     $(".js__modal-popup-qty-"+ pID).hide();
                     $(".js__modal-popup-addtocart-" + pID).attr("disabled", "disabled");
@@ -1258,7 +1259,7 @@ jQuery(document).ready(function($) {
         // clickable: true,
         resistance: false,
         shortSwipes: false,
-        loop: true,
+        loop: false,
         // grabCursor: false,
         // threshold: 1,
         speed: 4000,

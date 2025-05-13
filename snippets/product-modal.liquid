@@ -42,12 +42,8 @@
       <div class="product__information">
         <!-- Hide in Small Screen Devices -->
 
-        <h2 class="h2 medium  js__popup-product-name">
-          {% if productData.metafields.product.display_name != blank %}
-            {{ productData.metafields.product.display_name }}
-          {% else %}
-            {{ productData.title }}
-          {% endif %}
+        <h2 class="h2 medium  js__popup-product-name-{{ productData.id }}">
+         
         </h2>
         {% for variant in productData.variants %}
         <div

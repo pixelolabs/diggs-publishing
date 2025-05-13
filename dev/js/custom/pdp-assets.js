@@ -83,7 +83,7 @@ $(document).ready(function($) {
             resistance: false,
             shortSwipes: true,
             spaceBetween: 12,
-            loop: true,
+            loop: false,
            /* pagination: {
                 el: ".swiper-pagination",
                 clickable: true,

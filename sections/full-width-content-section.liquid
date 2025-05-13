@@ -22,7 +22,7 @@
               class="btn--primary yellow"
               target="{% if section.settings.buttonLinkTarget == true %} _blank {% else %} _self {% endif %}"
             >
-              {{ section.settings.buttonText -}}
+              {{ section.settings.buttonText -}}<span class="sr-only"> About {{section.settings.title}}</span>
             </a>
           {% endif %}
         </div>

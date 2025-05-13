@@ -280,7 +280,7 @@
           -webkit-animation-direction: alternate-reverse;
           animation-timing-function: linear;
           animation-name: kites;
-
+         display: none;
           @include MQ(MQ-480) {
             width: 54px;
             height: 70px;
