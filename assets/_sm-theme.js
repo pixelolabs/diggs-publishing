@@ -1749,7 +1749,7 @@ jQuery(document).ready(function ($) {
     // clickable: true,
     resistance: false,
     shortSwipes: false,
-    loop: true,
+    loop: false,
     // grabCursor: false,
     // threshold: 1,
     speed: 4000,
