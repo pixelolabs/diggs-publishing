@@ -57,13 +57,13 @@
       {% else %}
         {% if section.settings.image != blank %}
           <div class="image-section">
-            <picture>
-              <source
-                media="(max-width: 480px)"
-                srcset="{% if section.settings.mobileImage != blank %}{{ section.settings.mobileImage | img_url: '750x1100' }}   {% endif %}"
-              >
-              <img src="{{ section.settings.image | img_url: '2496x1300' }}" alt="{{ block.settings.image.alt}}">
-            </picture>
+            {% assign imageAlt = section.settings.image.alt %}
+      {% if imageAlt == blank %}
+        {% assign imageAlt = section.settings.title %}
+      {% endif %}
+      {% include 'image_code'  with  mobileImage:  section.settings.mobileImage, tabletImage:  section.settings.image, desktopImage:  section.settings.image, imageAlt:  imageAlt %}
+
+           
           </div>
         {% endif %}
       {% endif %}
