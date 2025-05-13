@@ -817,7 +817,7 @@ jQuery(function () {
     // centeredSlides: true,
     // resistance: false,
     threshold: 5,
-    // loop:true,
+    loop: false,
     resistance: false,
     shortSwipes: true,
     longSwipes: false,
@@ -846,7 +846,7 @@ jQuery(function () {
     // centeredSlides: true,
     // resistance: false,
     threshold: 5,
-    loop: true,
+    loop: false,
     resistance: false,
     shortSwipes: true,
     longSwipes: false,
@@ -873,7 +873,7 @@ jQuery(function () {
     spaceBetween: 14,
     // centeredSlides: true,
     // resistance: false,
-    loop: true,
+    loop: false,
     resistance: false,
     shortSwipes: true,
     longSwipes: false,
@@ -935,7 +935,7 @@ jQuery(function () {
     clickable: true,
     resistance: false,
     shortSwipes: false,
-    loop: true,
+    loop: false,
     grabCursor: false
   }, _defineProperty(_Swiper, "slidesPerView", 5), _defineProperty(_Swiper, "breakpoints", {
     0: {
@@ -959,7 +959,7 @@ jQuery(function () {
     slidesPerView: 1,
     resistance: false,
     threshold: 5,
-    loop: true,
+    loop: false,
     spaceBetween: 30,
     // autoplay: {
     //     delay: 10000,
@@ -974,7 +974,7 @@ jQuery(function () {
     slidesPerView: "auto",
     spaceBetween: 20,
     threshold: 1,
-    loop: true
+    loop: false
   }, _defineProperty(_Swiper2, "threshold", 5), _defineProperty(_Swiper2, "breakpoints", {
     1920: {
       slidesPerView: "auto"
@@ -986,7 +986,7 @@ jQuery(function () {
   var productSlider = new Swiper(".js__small-product-slider", (_Swiper3 = {
     slidesPerView: 3,
     spaceBetween: 25,
-    loop: true,
+    loop: false,
     threshold: 5
   }, _defineProperty(_Swiper3, "threshold", 1), _defineProperty(_Swiper3, "breakpoints", {
     '1025': {
