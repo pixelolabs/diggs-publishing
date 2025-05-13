@@ -23,13 +23,12 @@
 <div class="inner-hero-section {{ section.settings.section_class }} {% if section.settings.height == true %} max-height{% endif %} {% if section.settings.smallHeight == true %} small {% endif %} section-{{ section.id }}-padding color-{{ section.settings.color_scheme }}">
   {% if section.settings.image != blank %}
     <div class="image-section {% if section.settings.gradient == true %} gradient{%endif%}">
-      <picture>
-        <source
-          media="(max-width: 480px)"
-          srcset="{% if section.settings.mobileImage != blank %}{{ section.settings.mobileImage | img_url: '750x1400' }}   {% endif %}"
-        >
-        {{ section.settings.image | image_url: width: 2880 | image_tag: loading: 'lazy', widths: '2880x1620' }}
-      </picture>
+       {% assign imageAlt = section.settings.image.alt %}
+      {% if imageAlt == blank %}
+        {% assign imageAlt = section.settings.title %}
+      {% endif %}
+      {% include 'image_code_medium'  with  mobileImage:  section.settings.mobileImage, tabletImage:  section.settings.image, desktopImage:  section.settings.image, imageAlt:  imageAlt %}
+      
     </div>
   {% endif %}
   {% comment %} {% endif %} {% endcomment %}

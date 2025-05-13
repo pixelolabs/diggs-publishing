@@ -6,33 +6,13 @@
           <li class="column">
             {% if block.settings.icon != blank %}
               <div class="icon-section">
-                {% comment %} {{ block.settings.icon | image_url: width: 100 | image_tag: loading: 'lazy', widths: '100x100' }} {% endcomment %}
-                <picture>
-                  <!-- Mobile and tablet sizes -->
-                  <source
-                    media="(max-width: 767px)"
-                    srcset="
-                      {{ block.settings.icon | image_url: width: 375 }} 375w,
-                      {{ block.settings.icon | image_url: width: 550 }} 550w,
-                      {{ block.settings.icon | image_url: width: 750 }} 750w
-                    "
-                    sizes="100vw"
-                  >
-
-                  <!-- Desktop sizes -->
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="                      {{ block.settings.icon | image_url: width: 1000 }} 1000w,"
-                    sizes="100vw"
-                  >
-
-                  <!-- Fallback image -->
-                  {{
-                    block.settings.icon
-                    | image_url: width: 1800
-                    | image_tag: loading: 'lazy', width: block.settings.icon.width, height: block.settings.icon.height
-                  }}
-                </picture>
+               {% assign imageAlt = block.settings.icon %}
+      {% if imageAlt == blank %}
+        {% assign imageAlt = block.settings.title %}
+      {% endif %}
+                
+                 {{ block.settings.icon | image_url: width: 120 | image_tag: loading: 'lazy', widths: '120x120', alt:imageAlt }}
+             
               </div>
             {% endif %}
             <h2 class="h3">{{ block.settings.title }}</h2>

@@ -129,7 +129,7 @@
                   <div class="description">
                     <p>{{ product.description | strip_html | truncate: 150 }}</p>
                   
-                    <div class="js__pdp-view-details more-link">Learn More</div>
+                    <div class="js__pdp-view-details more-link">Learn More<span class="sr-only"> About {{product.title }}</span></div>
                   </div>
                 {%- endif -%}
             {%- endcase -%}

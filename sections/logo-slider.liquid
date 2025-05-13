@@ -49,16 +49,8 @@
                       {% assign imageAlt = shop.name %}
                     {% endif %}
                     <!-- Fallback image -->
-                    {{
-                      block.settings.image
-                      | image_url: width: 1800
-                      | image_tag:
-                        loading: 'lazy',
-                        width: block.settings.image.width,
-                        height: block.settings.image.height,
-                        alt:imageAlt
+                      {{ block.settings.image | image_url: width: 240 | image_tag: loading: 'lazy', widths: '240x240', alt:imageAlt }}
 
-                    }}
                   
                 </a>
               {% endif %}
