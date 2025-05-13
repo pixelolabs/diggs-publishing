@@ -49,11 +49,16 @@
           {% if variantColor == '' %}
             {% assign variantColor = 'all' %}
           {% endif %}
+
+           {% assign imageAlt = media.alt %}
+          {% if imageAlt == blank %}
+           {% assign imageAlt = product.title %}
+         {% endif %}
           {% case media.media_type %}
             {% when 'image' %}
               <div class="{{variantColor}} swiper-slide slide" data-alt="{{variantColor}}">
                 <div class="image-section">
-                  <img src="{{ media.src | img_url: 'master' }}" alt="{{ media.alt | escape }}">
+                  <img src="{{ media.src | img_url: 'master' }}" alt="{{imageAlt }}">
                 </div>
               </div>
             {% when 'video' %}
@@ -88,11 +93,15 @@
             {% if variantColor == '' %}
               {% assign variantColor = 'all' %}
             {% endif %}
+             {% assign imageAlt = media.alt %}
+          {% if imageAlt == blank %}
+           {% assign imageAlt = product.title %}
+         {% endif %}
             {% case media.media_type %}
               {% when 'image' %}
                 <div class="{{variantColor}} swiper-slide slide" data-alt="{{variantColor}}">
                   <div class="image-section">
-                    <img src="{{ media.src | img_url: 'master' }}" alt="{{ media.alt | escape }}">
+                    <img src="{{ media.src | img_url: 'master' }}" alt="{{ imageAlt }}">
                   </div>
                 </div>
               {% when 'video' %}
