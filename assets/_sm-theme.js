@@ -2602,7 +2602,7 @@ $(document).ready(function ($) {
     resistance: false,
     shortSwipes: true,
     spaceBetween: 12,
-    loop: true,
+    loop: false,
 
     /* pagination: {
          el: ".swiper-pagination",
@@ -2984,7 +2984,7 @@ $(document).ready(function ($) {
       pdpThumbnail = new Swiper(".js__pdp-thumbnail-slider", {
         resistance: false,
         shortSwipes: true,
-        loop: true,
+        loop: false,
         slidesPerView: 'auto',
         freeMode: true,
         watchSlidesProgress: true,
@@ -3002,7 +3002,7 @@ $(document).ready(function ($) {
       clickable: false,
       resistance: false,
       shortSwipes: true,
-      loop: true,
+      loop: false,
       spaceBetween: 15,
       navigation: {
         nextEl: ".swiper-button-next-pdp",
