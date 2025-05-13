@@ -10,7 +10,7 @@
 {
   "current": {
     "fontScript": "",
-    "bodyFontCode": "\"Roboto\", sans-serif;",
+    "bodyFontCode": "\"Roboto\", arial;",
     "headingFontCode": "\"Luckiest Guy\", arial;",
     "subheadingFontCode": "\"Over the Rainbow\", arial;",
     "buttonFontCode": "\"ReallyBetter\", sans-serif;",
