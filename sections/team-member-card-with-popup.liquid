@@ -67,7 +67,11 @@
                         <div class="popup-text-content">
                         {% if block.settings.teamimage != blank %}
                             <div class="team-image">
-                            {{ block.settings.teamimage | image_url: width: 1000 | image_tag: loading: 'lazy', widths: '1000x1000' }}
+                             {% assign imageAlt = block.settings.teamimage.alt %}
+      {% if imageAlt == blank %}
+        {% assign imageAlt = lock.settings.title %}
+      {% endif %}
+      {% include 'image_code_small'  with  mobileImage:  block.settings.teamimage, tabletImage:  block.settings.teamimage, desktopImage:  block.settings.teamimage, imageAlt:  imageAlt %}
                             </div>
                         {% endif %}
                         {% if block.settings.title != blank or block.settings.carddescription != blank %}
