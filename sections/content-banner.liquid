@@ -7,67 +7,10 @@
     <div class="box">
       {% if section.settings.image1 != blank %}
         <div class="left-image">
-          {% comment %}
-            {% assign mobile_image1 = section.settings.image1 %}
-            {% assign tablet_image1 = section.settings.image1 %}
-            {% assign desktop_image1 = section.settings.image1 %}
-            {% assign mobile_width = 600 %}
-            {% assign tablet_width = 800 %}
-            {% assign desktop_width = 1000 %}
-
-            {% if forloop.first %}
-              {{
-                mobile_image1
-                | image_url: width: mobile_width, format: 'webp'
-                | preload_tag: as: 'image', media: '(max-width: 767px)'
-              }}
-              {{
-                tablet_image1
-                | image_url: width: tablet_width, format: 'webp'
-                | preload_tag: as: 'image', media: '(min-width: 768px) and (max-width: 1023px)'
-              }}
-              {{
-                desktop_image1
-                | image_url: width: desktop_width, format: 'webp'
-                | preload_tag: as: 'image', media: '(min-width: 1024px)'
-              }}
-            {% endif %}
-          {% endcomment %}
-
-          <picture>
-            <!-- Mobile sizes WebP -->
-            <!-- Mobile and tablet sizes -->
-            <source
-              media="(max-width: 767px)"
-              srcset="
-                {{ section.settings.image1 | asset_url: width: 375 }} 375w,
-                {{ section.settings.image1 | asset_url: width: 550 }} 550w,
-                {{ section.settings.image1 | image_url: width: 750 }} 750w
-              "
-              sizes="100vw"
-            >
-
-            <!-- Desktop sizes -->
-            <source
-              media="(min-width: 768px)"
-              srcset="
-                {{section.settings.image1 | image_url: width: 1000 }} 1000w,
-                {{ section.settings.image1 | image_url: width: 1400 }} 1400w,
-                 {{ section.settings.image1 | image_url: width: 1800 }} 1800w,
-                 {{ section.settings.image1 | image_url: width: 2400 }} 2400w,
-                 {{ section.settings.image1 | image_url: width: 3000 }} 3000w
-              "
-              sizes="100vw"
-            >
-
-            <!-- Fallback image -->
-            <!-- Fallback image -->
-            {{
-              section.settings.image1
-              | image_url: width: 1000
-              | image_tag: loading: 'lazy', width: section.settings.image1.width, height: section.settings.image1.height
-            }}
-          </picture>
+           {{ section.settings.image1 | image_url: width: 340 | image_tag: loading: 'lazy', widths: '340x340', alt:section.settings.title }}
+       
+           
+       
         </div>
       {% endif %}
 
@@ -82,40 +25,7 @@
 
       {% if section.settings.image2 != blank %}
         <div class="right-image">
-          <picture>
-            <!-- Mobile sizes WebP -->
-            <!-- Mobile and tablet sizes -->
-            <source
-              media="(max-width: 767px)"
-              srcset="
-                {{ section.settings.image2 | asset_url: width: 375 }} 375w,
-                {{ section.settings.image2 | asset_url: width: 550 }} 550w,
-                {{ section.settings.image2 | image_url: width: 750 }} 750w
-              "
-              sizes="100vw"
-            >
-
-            <!-- Desktop sizes -->
-            <source
-              media="(min-width: 768px)"
-              srcset="
-                {{section.settings.image2 | image_url: width: 1000 }} 1000w,
-                {{ section.settings.image2 | image_url: width: 1400 }} 1400w,
-                 {{ section.settings.image2 | image_url: width: 1800 }} 1800w,
-                 {{ section.settings.image2 | image_url: width: 2400 }} 2400w,
-                 {{ section.settings.image2 | image_url: width: 3000 }} 3000w
-              "
-              sizes="100vw"
-            >
-
-            <!-- Fallback image -->
-            <!-- Fallback image -->
-            {{
-              section.settings.image2
-              | image_url: width: 1000
-              | image_tag: loading: 'lazy', width: section.settings.image2.width, height: section.settings.image2.height
-            }}
-          </picture>
+          {{ section.settings.image2 | image_url: width: 340 | image_tag: loading: 'lazy', widths: '340x340', alt:section.settings.title }}
         </div>
       {% endif %}
     </div>
