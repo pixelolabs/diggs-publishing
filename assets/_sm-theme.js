@@ -1529,7 +1529,7 @@ jQuery(function () {
 
       if (optionName.trim() == option.trim()) {
         $(".js__price-popup-price-" + pID).hide();
-        $(".js__price-popup-" + vID).show();
+        $(".js__price-popup-" + vID).css("display", "flex");
 
         if (variantSoldout == "true") {
           $(".js__modal-popup-qty-" + pID).hide();
