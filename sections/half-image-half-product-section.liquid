@@ -35,7 +35,11 @@
               data-aos="fade-up"
               data-aos-duration="2000"
             >
-              {{ section.settings.image | image_url: width: 1262 | image_tag: loading: 'lazy', widths: '1262x1000' }}
+               {% assign imageAlt = section.settings.image.alt %}
+      {% if imageAlt == blank %}
+        {% assign imageAlt = section.settings.heading %}
+      {% endif %}
+      {% include 'image_code_medium'  with  mobileImage:  section.settings.image, tabletImage:  section.settings.image, desktopImage:  section.settings.image, imageAlt:  imageAlt %}
             </div>
           </div>
         {% endif %}
