@@ -10,9 +10,9 @@
 {
   "current": {
     "fontScript": "",
-    "bodyFontCode": "\"Roboto\", sans-serif;",
-    "headingFontCode": "\"Luckiest Guy\", cursive;",
-    "subheadingFontCode": "\"Over the Rainbow\", cursive;",
+    "bodyFontCode": "\"Roboto\", arial;",
+    "headingFontCode": "\"Luckiest Guy\", arial;",
+    "subheadingFontCode": "\"Over the Rainbow\", arial;",
     "buttonFontCode": "\"ReallyBetter\", sans-serif;",
     "buttons_minimum_width": 200,
     "buttons_border_thickness": 0,
