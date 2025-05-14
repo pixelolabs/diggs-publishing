@@ -93,9 +93,9 @@
                 {% render block %}
               {%- when 'title' -%}
                 <div class="none-980">
-                <h2 >
+                <span class="h2" >
                   {{ product.title | escape }}
-                </h2>
+                </span>
 
                 {% if section.settings.show_sold_in %}
                   <div data-soldOut-product class="sold_product js__sold_product" data-items="{{ section.settings.item_prd }}" data-hours="{{ section.settings.hours_prs }}">
