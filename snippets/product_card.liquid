@@ -66,13 +66,13 @@
     </div>
 
     {% if show_title %}
-      <h3 class="h5 product-card__product-title">
+      <span class="h5 product-card__product-title">
         {% if productRelated.metafields.productInfo.product_name != blank %}
           {{ productRelated.metafields.prodctInfo.product_name }}
         {% else %}
           {{ productRelated.title }}
         {% endif %}
-      </h3>
+      </span>
     {% endif %}
     {% if productRelated.metafields.product.short_description != blank %}
       <span class="sub-title">{{ productRelated.metafields.product.short_description }}</span>
