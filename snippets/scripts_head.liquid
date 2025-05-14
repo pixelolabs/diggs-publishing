@@ -62,32 +62,6 @@
 {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer="defer"></script>
 
-
-
-<script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "WebSite",
-    "name": "{{ shop.name }}",
-    "url": "{{ shop.url }}"
-  }
-</script>
-
-<script type="application/ld+json">
-  {
-    "@type": "Organization",
-    "@context": "http://schema.org/",
-    "name": "{{ shop.name }}",
-    "logo": {
-      "@type": "imageObject",
-      "url": "https:{{ 'logo.png' | asset_img_url: '300x240' | split: '?' | first }}",
-      "height": "300px",
-      "width": "240px"
-    },
-    "url": "{{ shop.url }}"
-  }
-</script>
-
 {% style %}
   {% for scheme in settings.color_schemes -%}
     {% assign scheme_classes = scheme_classes | append: ', .color-' | append: scheme.id %}
