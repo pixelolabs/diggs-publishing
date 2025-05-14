@@ -77,7 +77,7 @@
                         {% if block.settings.title != blank or block.settings.carddescription != blank %}
                             <div class="content">
                             {% if block.settings.title != blank %}
-                                <h3>{{ block.settings.title }}</h3>
+                                <span class="h3">{{ block.settings.title }}</span>
                             {% endif %}
                             {% if block.settings.designation != blank %}
                                 <p class="designation">{{ block.settings.designation }}</p>
@@ -232,23 +232,6 @@ $(document).ready(function () {
         {
           "type": "color",
           "id": "borderColor",
-          "label": "Cards Border Colors"
-        }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "Team member card with popup"
-    }
-  ]
-}
-{% endschema %}
-<script>
-  jQuery(document).ready(function ($) {
-  });
-</script>
-or",
           "label": "Cards Border Colors"
         }
       ]
