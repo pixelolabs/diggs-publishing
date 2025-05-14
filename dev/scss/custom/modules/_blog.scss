@@ -571,10 +571,13 @@
           line-height: 1.44;
         }
       }
-      h3 {
+
+      
+      .h3,h3 {
         padding-bottom: 0;
         padding-top: 0;
         max-width: 500px;
+        display: block;
       }
       &:before {
         left: 15px;

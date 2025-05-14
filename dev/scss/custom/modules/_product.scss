@@ -136,9 +136,9 @@
   }
 
   h1,
-  h2 {
+  h2,.h2 {
     margin-bottom: 20px;
-   
+   display: block;
     @include MQ(MQ-980) {
       // text-align: center;
       // margin-bottom: 0px;

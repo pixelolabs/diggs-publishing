@@ -142,7 +142,7 @@
         margin-left: auto;
         margin-right: auto;
       }
-      h3 {
+      h3,.h3 {
         font-size: 23px;
         margin-top: 7px;
         @include MQ(MQ-768) {
@@ -160,7 +160,7 @@
       margin-top: 49px;
       max-width: 543px;
       width: 100%;
-      h3 {
+      h3,.h3 {
         font-size: 30px;
         @include MQ(MQ-768) {
           font-size: 24px;
@@ -392,7 +392,7 @@
             @include MQ($MQ-767) {
                 width: 100%;
             }
-            h3{
+            h3,.h3{
                 font-size: 30px;
                 @include MQ($MQ-480) {
                     font-size: 22px;
@@ -493,6 +493,8 @@
                     }
                     .content{
                         width: 100%;
+                        .h3{display: block;}
+                    
                         .designation{
                           margin: 7px 0 0 0;
                         }
