@@ -28,11 +28,24 @@
 {%- endcapture -%}
 <title meta="{{ meta_tags }}">{{ seo_title | strip }}</title>
 
-{%- if page_description -%}
+{%- if template == 'blog' -%}
+ <!-- This is a blog listing page -->
+  <meta name="description" content="{{ page_description | escape }} {% if request.path contains '/tagged/' %}- Tags: {{ request.path | split: '/tagged/' | last }}{% endif %}">
+  {%- elsif template == 'list-collections' -%}
+  <!-- This is the main collection page (collections page) -->
+  <meta name="description" content="{{ page_description | escape }} - Explore our product collections">
+  {%- elsif page_description -%}
   <meta name="description" content="{{ page_description | escape }}">
 {%- endif -%}
 
-<!-- No-Index Pages -->
-{% if handle contains '2-0' %}
-  <meta name="robots" content="noindex">
+{% comment %}
+canonical URL
+{% endcomment %}
+
+{% if template contains 'collection' and current_tags %}
+  <link rel="canonical" href="{{ collection.url }}">
 {% endif %}
+{% if template contains 'blog' and current_tags %}
+  <link rel="canonical" href="{{ blog.url }}">
+{% endif %}
+
