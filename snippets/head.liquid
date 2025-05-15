@@ -26,7 +26,7 @@
   &ndash; {{ shop.name }}
 {%- endunless -%}
 {%- endcapture -%}
-<title meta="{{ meta_tags }}">{{ seo_title | strip }}</title>
+<title des="{{ page_description }}" meta="{{ meta_tags }}">{{ seo_title | strip }}</title>
 
 {%- if template == 'blog' -%}
  <!-- This is a blog listing page -->
