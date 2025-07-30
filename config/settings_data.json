@@ -150,14 +150,6 @@
               "announcement_link_text": "Going to therapy available now 🌟"
             }
           },
-          "announcement_DzaeRx": {
-            "type": "announcement",
-            "settings": {
-              "header_text": "",
-              "announcement_link": "",
-              "announcement_link_text": ""
-            }
-          },
           "announcement_wHQAmg": {
             "type": "announcement",
             "settings": {
@@ -169,7 +161,6 @@
         },
         "block_order": [
           "announcement_iTX7Dh",
-          "announcement_DzaeRx",
           "announcement_wHQAmg"
         ],
         "settings": {
