@@ -153,7 +153,7 @@
           "announcement_wHQAmg": {
             "type": "announcement",
             "settings": {
-              "header_text": "<p>Free Shipping on all orders over $50.</p>",
+              "header_text": "<p>Free Shipping on U.S. orders over $50!</p>",
               "announcement_link": "https://ksdiggs.com/collections/all",
               "announcement_link_text": "Shop Now!"
             }
