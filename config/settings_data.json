@@ -157,11 +157,20 @@
               "announcement_link": "https://ksdiggs.com/collections/all",
               "announcement_link_text": "Shop Now!"
             }
+          },
+          "announcement_kXWJLC": {
+            "type": "announcement",
+            "settings": {
+              "header_text": "<p>Use code SAFESCHOOL15 for Back to School savings! 📚</p>",
+              "announcement_link": "shopify://collections/books",
+              "announcement_link_text": "SAFESCHOOL15"
+            }
           }
         },
         "block_order": [
           "announcement_iTX7Dh",
-          "announcement_wHQAmg"
+          "announcement_wHQAmg",
+          "announcement_kXWJLC"
         ],
         "settings": {
           "show_announcement": true
